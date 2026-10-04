@@ -22,6 +22,7 @@ const state = {
   selected: null,
   related: new Set(),
   detailMin: false,
+  saved: new Set(),
   compare: [],
 };
 
@@ -39,6 +40,7 @@ async function init() {
   $("#origin-name").textContent = model.origin.name;
   $("#country-list").textContent = model.countries.map((c) => c.name).join(", ");
   renderDataNote();
+  loadShortlist();
 
   map = createMap("map");
   addOriginMarker();
@@ -104,6 +106,8 @@ function updateLabelMode() {
 /* ---------- filtering ---------- */
 
 function passes(l) {
+  // The shortlist ignores the filters so saved places never disappear.
+  if (state.show === "saved") return state.saved.has(l.id);
   if (state.show !== "all" && l.type !== state.show) return false;
   if (travel(l).min > state.maxTime) return false;
   if (!state.prices.has(l.price)) return false;
@@ -135,9 +139,10 @@ function applyFilters() {
   const n = visible.length;
   const nb = visible.filter((l) => l.type === "base").length;
   $("#result-count").textContent = `${n} place${n === 1 ? "" : "s"} · ${nb} feeder town${nb === 1 ? "" : "s"}`;
-  $("#results").innerHTML = n
-    ? visible.map(resultItem).join("")
-    : `<li class="empty">Nothing matches. Try a longer travel time or more price levels.</li>`;
+  const emptyText = state.show === "saved"
+    ? "Nothing saved yet. Open a resort or town and tap Save."
+    : "Nothing matches. Try a longer travel time or more price levels.";
+  $("#results").innerHTML = n ? visible.map(resultItem).join("") : `<li class="empty">${emptyText}</li>`;
 }
 
 function resultItem(l) {
@@ -151,7 +156,7 @@ function resultItem(l) {
   }
   return `<li><button type="button" class="result ${l.type}${l.id === state.selected ? " is-active" : ""}" data-id="${l.id}">
     <i class="dot ${l.type}"></i>
-    <span class="r-main"><span class="r-name">${esc(l.name)}</span><span class="r-sub">${sub}</span></span>
+    <span class="r-main"><span class="r-name">${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
     <span class="r-side"><span class="r-time">${mins(t.min)}</span><span class="r-price">${price(l.price)}</span></span>
   </button></li>`;
 }
@@ -270,6 +275,7 @@ function renderDetail(l) {
       <h2>${esc(l.name)}</h2>
       <p class="character">${esc(l.character)}</p>
       <div class="d-actions">
+        <button type="button" class="icon-btn save-icon" data-save="${l.id}" aria-pressed="${state.saved.has(l.id)}" aria-label="Save to shortlist" title="Save to shortlist"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6z" fill="var(--star-fill, none)" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></button>
         <button type="button" class="icon-btn" id="detail-min" aria-expanded="${!state.detailMin}" aria-label="${state.detailMin ? "Expand details" : "Minimise details"}" title="${state.detailMin ? "Expand" : "Minimise"}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <button type="button" class="icon-btn" id="detail-close" aria-label="Close details" title="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
       </div>
@@ -316,7 +322,9 @@ function renderDetail(l) {
   }
 
   const inCompare = state.compare.includes(l.id);
+  const isSaved = state.saved.has(l.id);
   const foot = `<footer class="d-foot">
+      <button type="button" class="secondary save-btn" data-save="${l.id}" aria-pressed="${isSaved}">${isSaved ? "Saved" : "Save"}</button>
       <button type="button" class="secondary" data-compare="${l.id}" aria-pressed="${inCompare}">${inCompare ? "In compare" : "Add to compare"}</button>
     </footer>`;
 
@@ -451,11 +459,29 @@ function renderCompareTable() {
 /* ---------- controls ---------- */
 
 function bindControls() {
-  $$(".segmented button").forEach((b) => b.addEventListener("click", () => {
-    state.show = b.dataset.show;
-    $$(".segmented button").forEach((x) => x.setAttribute("aria-pressed", x === b));
-    applyFilters();
-  }));
+  $$(".segmented button").forEach((b) => b.addEventListener("click", () => setShow(b.dataset.show)));
+  $("#show-saved").addEventListener("click", () => setShow(state.show === "saved" ? "all" : "saved"));
+
+  $("#saved-compare").addEventListener("click", () => {
+    state.compare = [...state.saved].slice(0, MAX_COMPARE);
+    renderCompareBar();
+    openCompare();
+  });
+  $("#saved-share").addEventListener("click", shareShortlist);
+  $("#saved-clear").addEventListener("click", (e) => {
+    // Two taps to clear, so one slip does not lose the list.
+    const b = e.currentTarget;
+    if (b.dataset.armed !== "1") {
+      b.dataset.armed = "1";
+      b.textContent = "Tap again to clear";
+      setTimeout(() => { b.dataset.armed = ""; b.textContent = "Clear"; }, 3000);
+      return;
+    }
+    b.dataset.armed = "";
+    b.textContent = "Clear";
+    state.saved.clear();
+    shortlistChanged();
+  });
 
   const time = $("#f-time");
   const showTime = () => {
@@ -487,8 +513,9 @@ function bindControls() {
 
   // Delegated actions used by the detail panel, compare bar and table.
   document.addEventListener("click", (e) => {
-    const t = e.target.closest("[data-select],[data-compare],[data-pair],#detail-close,#detail-min,.detail.is-min .d-head");
+    const t = e.target.closest("[data-select],[data-compare],[data-pair],[data-save],#detail-close,#detail-min,.detail.is-min .d-head");
     if (!t) return;
+    if (t.dataset.save) return toggleSaved(t.dataset.save);
     if (t.id === "detail-close") return clearSelection();
     if (t.id === "detail-min" || t.classList.contains("d-head")) {
       state.detailMin = !state.detailMin;
@@ -548,6 +575,81 @@ function setSidebar(open) {
     map.resize();
   }
   $("#sidebar-toggle").setAttribute("aria-expanded", open);
+}
+
+/* ---------- shortlist ---------- */
+
+const SAVED_KEY = "skibase.shortlist";
+
+function setShow(show) {
+  state.show = show;
+  $$(".segmented button").forEach((x) => x.setAttribute("aria-pressed", x.dataset.show === show));
+  const saved = show === "saved";
+  $("#show-saved").setAttribute("aria-pressed", saved);
+  $(".filters").hidden = saved;
+  $("#shortlist-tools").hidden = !saved;
+  applyFilters();
+}
+
+function loadShortlist() {
+  try {
+    for (const id of JSON.parse(localStorage.getItem(SAVED_KEY) || "[]")) {
+      if (model.byId.has(id)) state.saved.add(id);
+    }
+  } catch { /* storage blocked: start empty */ }
+
+  // A shared link (?list=a,b,c) adds its places to this browser's shortlist.
+  const shared = new URLSearchParams(location.search).get("list");
+  if (shared) {
+    for (const id of shared.split(",")) if (model.byId.has(id)) state.saved.add(id);
+    history.replaceState(null, "", location.pathname + location.hash);
+    persistShortlist();
+    setShow("saved");
+  }
+  shortlistChanged(false);
+}
+
+function persistShortlist() {
+  try { localStorage.setItem(SAVED_KEY, JSON.stringify([...state.saved])); } catch { /* not saved */ }
+}
+
+function toggleSaved(id) {
+  state.saved.has(id) ? state.saved.delete(id) : state.saved.add(id);
+  shortlistChanged();
+}
+
+function shortlistChanged(persist = true) {
+  if (persist) persistShortlist();
+  const n = state.saved.size;
+  $("#saved-count").textContent = n;
+  $("#saved-compare").disabled = n < 2;
+  $("#saved-compare").textContent = n > MAX_COMPARE ? `Compare first ${MAX_COMPARE}` : "Compare";
+  $("#saved-share").disabled = n === 0;
+  $("#saved-link").hidden = true;
+  for (const [id, { el }] of markers) el.classList.toggle("is-saved", state.saved.has(id));
+  for (const b of $$("[data-save]")) {
+    const on = state.saved.has(b.dataset.save);
+    b.setAttribute("aria-pressed", on);
+    if (b.classList.contains("save-btn")) b.textContent = on ? "Saved" : "Save";
+  }
+  applyFilters();
+}
+
+async function shareShortlist() {
+  const url = `${location.origin}${location.pathname}?list=${[...state.saved].join(",")}`;
+  const btn = $("#saved-share");
+  try {
+    await navigator.clipboard.writeText(url);
+    btn.textContent = "Link copied";
+  } catch {
+    // Clipboard refused: show the link so it can be copied by hand.
+    const input = $("#saved-link");
+    input.value = url;
+    input.hidden = false;
+    input.select();
+    btn.textContent = "Copy the link below";
+  }
+  setTimeout(() => { btn.textContent = "Copy link"; }, 2500);
 }
 
 function renderDataNote() {

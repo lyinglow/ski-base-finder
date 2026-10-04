@@ -25,6 +25,7 @@ Any static host works (GitHub Pages, Netlify, Vercel, an S3 bucket). Opening `in
 - **Click a resort** to see "Stay lower, ski here": every cheaper place with quick access, how many minutes away, by car, bus, train or lift, how many price bands cheaper, and how many metres lower.
 - **Click a feeder town** to see every resort within reach, nearest first.
 - **Compare** up to four places side by side. One button pairs a resort with its cheaper bases. The best value in each row is highlighted.
+- **Save a shortlist.** Tap the star or Save on any place. Your shortlist stays in your browser, shows as stars on the map, and can be compared or shared as a link.
 - **Share a place.** The address bar updates (`#fr-megeve`), so a link opens straight to it.
 
 ## How it is built
