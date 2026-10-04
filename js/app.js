@@ -14,7 +14,8 @@ const MAX_COMPARE = 4;
 
 const state = {
   show: "all",
-  maxTime: 180,
+  maxTime: 300,
+  maxHop: 60,
   prices: new Set([1, 2, 3]),
   sizes: new Set(["small", "medium", "large", "huge"]),
   family: false,
@@ -140,6 +141,7 @@ function passes(l) {
   if (state.show === "saved") return state.saved.has(l.id);
   if (state.show !== "all" && l.type !== state.show) return false;
   if (travel(l).min > state.maxTime) return false;
+  if (l.type === "base" && reachable(l, model.byId)[0].link.min > state.maxHop) return false;
   if (!state.prices.has(l.price)) return false;
   if (state.family && !l.family) return false;
   if (state.carFree && !l.carFree) return false;
@@ -543,10 +545,18 @@ function bindControls() {
   const time = $("#f-time");
   const showTime = () => {
     state.maxTime = +time.value;
-    $("#f-time-out").textContent = state.maxTime >= 180 ? "Any" : mins(state.maxTime);
+    $("#f-time-out").textContent = state.maxTime >= 300 ? "Any" : mins(state.maxTime);
   };
   time.addEventListener("input", () => { showTime(); applyFilters(); });
   showTime();
+
+  const hop = $("#f-hop");
+  const showHop = () => {
+    state.maxHop = +hop.value;
+    $("#f-hop-out").textContent = state.maxHop >= 60 ? "Any" : mins(state.maxHop);
+  };
+  hop.addEventListener("input", () => { showHop(); applyFilters(); });
+  showHop();
 
   const chipSet = (sel, set, parse) => $$(`${sel} button`).forEach((b) => b.addEventListener("click", () => {
     const v = parse(b.dataset.v);

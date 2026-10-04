@@ -17,7 +17,7 @@ const BASEMAPS = {
 };
 
 // Looking south-east from above Geneva toward Mont Blanc.
-export const HOME_VIEW = { center: [6.6, 45.92], zoom: 8.75, pitch: 55, bearing: 128 };
+export const HOME_VIEW = { center: [6.45, 45.55], zoom: 8.05, pitch: 52, bearing: 140 };
 const EXAGGERATION = 1.35;
 
 function style() {

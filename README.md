@@ -4,7 +4,7 @@ A 3D map that helps you choose where to stay for a ski trip from Geneva.
 
 It shows ski resorts and the cheaper, lower towns around them on the same map. Click a resort and it shows you where else you could stay, how long the daily hop is, and how much you save. Click a town and it shows which resorts you can reach from it.
 
-France is live: 47 ski areas and 20 feeder towns, from the big names to small local hills. Switzerland and Italy are planned.
+France is live: 70 ski areas and 28 feeder towns, from Haute-Savoie down to the Hautes-Alpes, big names and small local hills alike. Switzerland and Italy are planned.
 
 ## Run it
 
@@ -21,7 +21,7 @@ Any static host works (GitHub Pages, Netlify, Vercel, an S3 bucket). Opening `in
 
 - **See the land.** Satellite or topo map draped over real elevation. Drag to pan, right-drag or two-finger drag to tilt and rotate.
 - **Tell the two kinds of place apart.** Blue triangles are resorts. Amber circles are feeder towns.
-- **Filter** by time from the airport, price to stay, ski area size, family-friendly, and whether it works without a car.
+- **Filter** by time from the airport (up to 5 hours), the daily hop from a feeder town to the slopes, price to stay, ski area size, family-friendly, and whether it works without a car.
 - **Click a resort** to see "Stay lower, ski here": every cheaper place with quick access, how many minutes away, by car, bus, train or lift, how many price bands cheaper, and how many metres lower.
 - **Click a feeder town** to see every resort within reach, nearest first.
 - **Compare** up to four places side by side. One button pairs a resort with its cheaper bases. The best value in each row is highlighted.

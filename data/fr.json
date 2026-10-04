@@ -1728,6 +1728,798 @@
       "links": []
     },
     {
+      "id": "fr-valloire",
+      "type": "resort",
+      "name": "Valloire",
+      "region": "Savoie",
+      "coords": [
+        6.4294,
+        45.1653
+      ],
+      "altitude": 1430,
+      "topAltitude": 2600,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Galibier-Thabor",
+        "pisteKm": 150
+      },
+      "character": "Lively, real village with a church square and shops. Linked to Valmeinier.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 205,
+          "min": 150
+        }
+      },
+      "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-valmeinier",
+      "type": "resort",
+      "name": "Valmeinier",
+      "region": "Savoie",
+      "coords": [
+        6.485,
+        45.1867
+      ],
+      "altitude": 1800,
+      "topAltitude": 2600,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Galibier-Thabor",
+        "pisteKm": 150
+      },
+      "character": "Quiet, high station on the cheaper side of Galibier-Thabor.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 205,
+          "min": 155
+        }
+      },
+      "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
+      "links": [
+        {
+          "to": "fr-valloire",
+          "min": 20,
+          "by": [
+            "lift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-orelle",
+      "type": "resort",
+      "name": "Orelle",
+      "region": "Savoie",
+      "coords": [
+        6.5383,
+        45.21
+      ],
+      "altitude": 900,
+      "topAltitude": 3230,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Les 3 Vallées",
+        "pisteKm": 600
+      },
+      "character": "Tiny valley village with a long gondola up to Val Thorens. The cheapest door into the 3 Vallées.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 195,
+          "min": 140
+        }
+      },
+      "transfer": "Train to Saint-Michel-de-Maurienne, then taxi.",
+      "links": [
+        {
+          "to": "fr-val-thorens",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Orelle gondola"
+        }
+      ]
+    },
+    {
+      "id": "fr-karellis",
+      "type": "resort",
+      "name": "Les Karellis",
+      "region": "Savoie",
+      "coords": [
+        6.4067,
+        45.2264
+      ],
+      "altitude": 1600,
+      "topAltitude": 2520,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Les Karellis",
+        "pisteKm": 60
+      },
+      "snowAdjust": 100,
+      "snowNote": "North-facing slopes that hold snow well.",
+      "character": "Friendly, family-run resort high above the valley. No through traffic.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 200,
+          "min": 150
+        }
+      },
+      "transfer": "Car recommended. Bus from Saint-Jean-de-Maurienne.",
+      "links": []
+    },
+    {
+      "id": "fr-la-toussuire",
+      "type": "resort",
+      "name": "La Toussuire",
+      "region": "Savoie",
+      "coords": [
+        6.2633,
+        45.2558
+      ],
+      "altitude": 1800,
+      "topAltitude": 2620,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Les Sybelles",
+        "pisteKm": 310
+      },
+      "character": "Big, open, sunny area. Good value family skiing.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 190,
+          "min": 140
+        }
+      },
+      "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-le-corbier",
+      "type": "resort",
+      "name": "Le Corbier",
+      "region": "Savoie",
+      "coords": [
+        6.2464,
+        45.2386
+      ],
+      "altitude": 1550,
+      "topAltitude": 2620,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Les Sybelles",
+        "pisteKm": 310
+      },
+      "character": "Car-free, ski-in ski-out blocks in the middle of Les Sybelles.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 190,
+          "min": 140
+        }
+      },
+      "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
+      "links": [
+        {
+          "to": "fr-la-toussuire",
+          "min": 10,
+          "by": [
+            "lift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-aussois",
+      "type": "resort",
+      "name": "Aussois",
+      "region": "Savoie",
+      "coords": [
+        6.7419,
+        45.2289
+      ],
+      "altitude": 1500,
+      "topAltitude": 2750,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Aussois",
+        "pisteKm": 55
+      },
+      "character": "Sunny, authentic village facing the Vanoise peaks.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 235,
+          "min": 175
+        }
+      },
+      "transfer": "Train to Modane, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-la-norma",
+      "type": "resort",
+      "name": "La Norma",
+      "region": "Savoie",
+      "coords": [
+        6.6997,
+        45.1975
+      ],
+      "altitude": 1350,
+      "topAltitude": 2750,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "La Norma",
+        "pisteKm": 65
+      },
+      "character": "Car-free family resort in a forest bowl above Modane.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 230,
+          "min": 170
+        }
+      },
+      "transfer": "Train to Modane, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-val-cenis",
+      "type": "resort",
+      "name": "Val Cenis",
+      "region": "Savoie",
+      "coords": [
+        6.8803,
+        45.2867
+      ],
+      "altitude": 1400,
+      "topAltitude": 2800,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Val Cenis",
+        "pisteKm": 125
+      },
+      "character": "Chain of old villages in the upper Maurienne. Long, easy runs and few crowds.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 245,
+          "min": 185
+        }
+      },
+      "transfer": "Train to Modane, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-bonneval",
+      "type": "resort",
+      "name": "Bonneval-sur-Arc",
+      "region": "Savoie",
+      "coords": [
+        7.0447,
+        45.3719
+      ],
+      "altitude": 1800,
+      "topAltitude": 3000,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Bonneval-sur-Arc",
+        "pisteKm": 25
+      },
+      "character": "One of France's prettiest stone villages. High, snowy and tiny.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 260,
+          "min": 200
+        }
+      },
+      "transfer": "Train to Modane, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-alpe-dhuez",
+      "type": "resort",
+      "name": "Alpe d'Huez",
+      "region": "Isère",
+      "coords": [
+        6.0694,
+        45.0919
+      ],
+      "altitude": 1860,
+      "topAltitude": 3330,
+      "townSize": "large",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Alpe d'Huez Grand Domaine",
+        "pisteKm": 250
+      },
+      "character": "Huge, sunny area with very long runs, including the 16 km Sarenne. Lively at night.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 210,
+          "min": 170
+        }
+      },
+      "transfer": "Train to Grenoble, then bus about 1h30.",
+      "links": []
+    },
+    {
+      "id": "fr-vaujany",
+      "type": "resort",
+      "name": "Vaujany",
+      "region": "Isère",
+      "coords": [
+        6.0758,
+        45.1564
+      ],
+      "altitude": 1250,
+      "topAltitude": 3330,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Alpe d'Huez Grand Domaine",
+        "pisteKm": 250
+      },
+      "character": "Quiet village with a big cable car straight into the Alpe d'Huez area.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 210,
+          "min": 170
+        }
+      },
+      "transfer": "Train to Grenoble, then bus.",
+      "links": [
+        {
+          "to": "fr-alpe-dhuez",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Vaujany cable car"
+        }
+      ]
+    },
+    {
+      "id": "fr-les-2-alpes",
+      "type": "resort",
+      "name": "Les 2 Alpes",
+      "region": "Isère",
+      "coords": [
+        6.1222,
+        45.0083
+      ],
+      "altitude": 1650,
+      "topAltitude": 3600,
+      "townSize": "medium",
+      "price": 2,
+      "family": false,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Les 2 Alpes",
+        "pisteKm": 200
+      },
+      "snowAdjust": 200,
+      "snowNote": "Glacier skiing above 3000 m.",
+      "character": "Long, narrow ski area topped by a glacier. Big party scene.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 215,
+          "min": 175
+        }
+      },
+      "transfer": "Train to Grenoble, then bus about 1h45.",
+      "links": []
+    },
+    {
+      "id": "fr-la-grave",
+      "type": "resort",
+      "name": "La Grave",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.3053,
+        45.0461
+      ],
+      "altitude": 1450,
+      "topAltitude": 3550,
+      "townSize": "small",
+      "price": 2,
+      "family": false,
+      "levels": [
+        "expert"
+      ],
+      "skiArea": {
+        "name": "La Grave",
+        "pisteKm": 10
+      },
+      "character": "Legendary off-piste with one lift and almost no grooming. For strong skiers with a guide.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 230,
+          "min": 185
+        }
+      },
+      "transfer": "Car recommended.",
+      "links": []
+    },
+    {
+      "id": "fr-chamrousse",
+      "type": "resort",
+      "name": "Chamrousse",
+      "region": "Isère",
+      "coords": [
+        5.8767,
+        45.125
+      ],
+      "altitude": 1650,
+      "topAltitude": 2250,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Chamrousse",
+        "pisteKm": 90
+      },
+      "character": "Grenoble's local resort with Olympic history and big views.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 165,
+          "min": 130
+        }
+      },
+      "transfer": "Train to Grenoble, then bus 1h.",
+      "links": []
+    },
+    {
+      "id": "fr-sept-laux",
+      "type": "resort",
+      "name": "Les Sept Laux",
+      "region": "Isère",
+      "coords": [
+        5.9944,
+        45.2569
+      ],
+      "altitude": 1350,
+      "topAltitude": 2400,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Les Sept Laux",
+        "pisteKm": 120
+      },
+      "character": "Good value area between Grenoble and Chambéry, busy at weekends.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 150,
+          "min": 115
+        }
+      },
+      "transfer": "Car recommended. Bus from Grenoble.",
+      "links": []
+    },
+    {
+      "id": "fr-villard-de-lans",
+      "type": "resort",
+      "name": "Villard-de-Lans",
+      "region": "Isère",
+      "coords": [
+        5.5517,
+        45.0711
+      ],
+      "altitude": 1050,
+      "topAltitude": 2050,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner"
+      ],
+      "skiArea": {
+        "name": "Villard-Corrençon",
+        "pisteKm": 125
+      },
+      "character": "Family town on the Vercors plateau with big cross-country trails.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 185,
+          "min": 140
+        }
+      },
+      "transfer": "Train to Grenoble, then bus 1h.",
+      "links": []
+    },
+    {
+      "id": "fr-serre-chevalier",
+      "type": "resort",
+      "name": "Serre Chevalier",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.5536,
+        44.9431
+      ],
+      "altitude": 1350,
+      "topAltitude": 2800,
+      "townSize": "large",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Serre Chevalier",
+        "pisteKm": 250
+      },
+      "character": "Long valley of villages and larch forests. Good skiing in bad weather.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 300,
+          "min": 225
+        }
+      },
+      "transfer": "Train to Briançon, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-montgenevre",
+      "type": "resort",
+      "name": "Montgenèvre",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.7231,
+        44.9311
+      ],
+      "altitude": 1860,
+      "topAltitude": 2700,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Voie Lactée (Milky Way)",
+        "pisteKm": 400
+      },
+      "snowAdjust": 150,
+      "snowNote": "Catches storms coming from Italy.",
+      "character": "Border village linked to the Italian Milky Way area. Very snowy.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 295,
+          "min": 220
+        }
+      },
+      "transfer": "Train to Oulx in Italy, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-puy-saint-vincent",
+      "type": "resort",
+      "name": "Puy-Saint-Vincent",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.4847,
+        44.8222
+      ],
+      "altitude": 1400,
+      "topAltitude": 2750,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Puy-Saint-Vincent",
+        "pisteKm": 75
+      },
+      "snowAdjust": 100,
+      "snowNote": "North-facing slopes that hold snow well.",
+      "character": "Quiet family resort at the gate of the Écrins park. Great value and good snow.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 320,
+          "min": 245
+        }
+      },
+      "transfer": "Train to L'Argentière-les-Écrins, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-vars",
+      "type": "resort",
+      "name": "Vars",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.7006,
+        44.5717
+      ],
+      "altitude": 1850,
+      "topAltitude": 2750,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Forêt Blanche",
+        "pisteKm": 185
+      },
+      "character": "High, sunny resort in the southern Alps, linked to Risoul.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 360,
+          "min": 270
+        }
+      },
+      "transfer": "Train to Embrun or Montdauphin, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-risoul",
+      "type": "resort",
+      "name": "Risoul",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.6328,
+        44.6228
+      ],
+      "altitude": 1850,
+      "topAltitude": 2750,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Forêt Blanche",
+        "pisteKm": 185
+      },
+      "character": "Car-free, purpose-built village among larch trees. Good value.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 355,
+          "min": 265
+        }
+      },
+      "transfer": "Train to Montdauphin, then bus.",
+      "links": [
+        {
+          "to": "fr-vars",
+          "min": 20,
+          "by": [
+            "lift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-les-orres",
+      "type": "resort",
+      "name": "Les Orres",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.5547,
+        44.4939
+      ],
+      "altitude": 1650,
+      "topAltitude": 2720,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Les Orres",
+        "pisteKm": 100
+      },
+      "character": "Sunny family resort above Lake Serre-Ponçon.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 370,
+          "min": 280
+        }
+      },
+      "transfer": "Train to Embrun, then bus.",
+      "links": []
+    },
+    {
       "id": "fr-annecy",
       "type": "base",
       "name": "Annecy",
@@ -2891,6 +3683,442 @@
           "min": 40,
           "by": [
             "car"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-saint-jean-maurienne",
+      "type": "base",
+      "name": "Saint-Jean-de-Maurienne",
+      "region": "Savoie",
+      "coords": [
+        6.3536,
+        45.2775
+      ],
+      "altitude": 550,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "character": "Valley capital of the Maurienne. Station, shops and everyday prices.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 175,
+          "min": 125
+        }
+      },
+      "transfer": "Train via Chambéry about 2h30. Car 2h05.",
+      "links": [
+        {
+          "to": "fr-karellis",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-la-toussuire",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-le-corbier",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-valloire",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-valmeinier",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "TER and TGV trains"
+    },
+    {
+      "id": "fr-saint-michel",
+      "type": "base",
+      "name": "Saint-Michel-de-Maurienne",
+      "region": "Savoie",
+      "coords": [
+        6.4697,
+        45.2192
+      ],
+      "altitude": 710,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Small town at the foot of the Galibier road, with buses up to Valloire.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 190,
+          "min": 135
+        }
+      },
+      "transfer": "Train via Chambéry about 2h45. Car 2h15.",
+      "links": [
+        {
+          "to": "fr-orelle",
+          "min": 10,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-valloire",
+          "min": 20,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-valmeinier",
+          "min": 25,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-karellis",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-modane",
+      "type": "base",
+      "name": "Modane",
+      "region": "Savoie",
+      "coords": [
+        6.6614,
+        45.2008
+      ],
+      "altitude": 1060,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Border town with fast trains. Short bus rides to four quiet resorts.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 220,
+          "min": 160
+        }
+      },
+      "transfer": "Train via Chambéry about 3h. Car 2h40.",
+      "links": [
+        {
+          "to": "fr-aussois",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-la-norma",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-orelle",
+          "min": 15,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-val-cenis",
+          "min": 25,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "TER and TGV trains"
+    },
+    {
+      "id": "fr-grenoble",
+      "type": "base",
+      "name": "Grenoble",
+      "region": "Isère",
+      "coords": [
+        5.7245,
+        45.1885
+      ],
+      "altitude": 210,
+      "townSize": "large",
+      "price": 1,
+      "family": true,
+      "character": "Big university city. City life, cheap stays and buses to six ski areas.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 150,
+          "min": 110
+        }
+      },
+      "transfer": "Train or bus about 2h. Car 1h50.",
+      "links": [
+        {
+          "to": "fr-chamrousse",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-sept-laux",
+          "min": 45,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-villard-de-lans",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-vaujany",
+          "min": 70,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-alpe-dhuez",
+          "min": 75,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-2-alpes",
+          "min": 80,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-bourg-doisans",
+      "type": "base",
+      "name": "Le Bourg-d'Oisans",
+      "region": "Isère",
+      "coords": [
+        6.0306,
+        45.0558
+      ],
+      "altitude": 720,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Valley village at the foot of the Alpe d'Huez hairpins. Buses up to two big areas.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 200,
+          "min": 155
+        }
+      },
+      "transfer": "Bus from Grenoble 1h. Car 2h35.",
+      "links": [
+        {
+          "to": "fr-vaujany",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-alpe-dhuez",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-2-alpes",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-la-grave",
+          "min": 45,
+          "by": [
+            "car"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-briancon",
+      "type": "base",
+      "name": "Briançon",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.6433,
+        44.8994
+      ],
+      "altitude": 1326,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "character": "Fortified old town, the highest city in France. A gondola from town into Serre Chevalier.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 300,
+          "min": 225
+        }
+      },
+      "transfer": "Train via Grenoble about 5h. Car 3h45.",
+      "links": [
+        {
+          "to": "fr-serre-chevalier",
+          "min": 10,
+          "by": [
+            "lift"
+          ],
+          "note": "Prorel gondola from town"
+        },
+        {
+          "to": "fr-montgenevre",
+          "min": 20,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-puy-saint-vincent",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-argentiere",
+      "type": "base",
+      "name": "L'Argentière-les-Écrins",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.5578,
+        44.7928
+      ],
+      "altitude": 975,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Small station town below the Écrins. The cheapest base for Puy-Saint-Vincent.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 315,
+          "min": 240
+        }
+      },
+      "transfer": "Train via Grenoble about 5h. Car 4h.",
+      "links": [
+        {
+          "to": "fr-puy-saint-vincent",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-serre-chevalier",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-embrun",
+      "type": "base",
+      "name": "Embrun",
+      "region": "Hautes-Alpes",
+      "coords": [
+        6.495,
+        44.5639
+      ],
+      "altitude": 870,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Old hilltop town by Lake Serre-Ponçon. Central for three southern resorts.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 345,
+          "min": 260
+        }
+      },
+      "transfer": "Train via Grenoble about 5h. Car 4h20.",
+      "links": [
+        {
+          "to": "fr-les-orres",
+          "min": 25,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-risoul",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-vars",
+          "min": 35,
+          "by": [
+            "car",
+            "bus"
           ]
         }
       ],
