@@ -326,6 +326,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Car-free village with beginner zones and a kids' village at the door.",
       "skiArea": {
         "name": "Portes du Soleil",
         "pisteKm": 600,
@@ -374,6 +375,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Nursery slopes in the village centre, a short walk from most chalets.",
       "skiArea": {
         "name": "Portes du Soleil",
         "pisteKm": 600,
@@ -618,6 +620,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Compact, car-free village with the beginner area right outside.",
       "skiArea": {
         "name": "Grand Massif",
         "pisteKm": 265,
@@ -884,6 +887,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Gentle beginner areas at the foot of the village in Chinaillon.",
       "skiArea": {
         "name": "Le Grand-Bornand",
         "pisteKm": 90,
@@ -929,6 +933,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Small plateau village with easy slopes right beside it.",
       "skiArea": {
         "name": "Praz de Lys–Sommand",
         "pisteKm": 50,
@@ -1072,6 +1077,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Wide, gentle slopes run right through the village.",
       "skiArea": {
         "name": "Espace Diamant",
         "pisteKm": 192,
@@ -1111,6 +1117,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Small village with easy slopes right beside it.",
       "skiArea": {
         "name": "Espace Diamant",
         "pisteKm": 192,
@@ -1391,6 +1398,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Beginner areas with free lifts at the door of the main villages.",
       "skiArea": {
         "name": "Paradiski",
         "pisteKm": 425,
@@ -1429,6 +1437,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Beginner areas at the door in Arc 1800 and Arc 1600.",
       "skiArea": {
         "name": "Paradiski",
         "pisteKm": 425,
@@ -1519,6 +1528,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Family beginner area right in front of the village.",
       "skiArea": {
         "name": "Paradiski",
         "pisteKm": 425,
@@ -1610,6 +1620,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Beginner area with free lifts at the foot of the village.",
       "skiArea": {
         "name": "Espace Killy",
         "pisteKm": 300,
@@ -1649,6 +1660,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Free beginner lifts beside the lake in Tignes le Lac.",
       "skiArea": {
         "name": "Espace Killy",
         "pisteKm": 300,
@@ -1698,6 +1710,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Free beginner lifts beside the village in Courchevel 1850 and 1650.",
       "skiArea": {
         "name": "Les 3 Vallées",
         "pisteKm": 600,
@@ -1775,6 +1788,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Free beginner area in the middle of the resort, skis on at the door.",
       "skiArea": {
         "name": "Les 3 Vallées",
         "pisteKm": 600,
@@ -1812,6 +1826,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Beginner zones in the resort centre, ski-in ski-out.",
       "skiArea": {
         "name": "Les 3 Vallées",
         "pisteKm": 600,
@@ -1857,6 +1872,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Pedestrian village street with the beginner area at its foot.",
       "skiArea": {
         "name": "Grand Domaine",
         "pisteKm": 165,
@@ -1894,6 +1910,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Beginner area at the front of the village, sunny and gentle.",
       "skiArea": {
         "name": "Espace San Bernardo",
         "pisteKm": 160,
@@ -2006,6 +2023,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Beginner area at the foot of Valmeinier 1800.",
       "skiArea": {
         "name": "Galibier-Thabor",
         "pisteKm": 150,
@@ -2095,6 +2113,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Compact resort, beginner slopes beside the apartments.",
       "skiArea": {
         "name": "Les Karellis",
         "pisteKm": 60,
@@ -2133,6 +2152,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Gentle beginner slopes at the front of the village.",
       "skiArea": {
         "name": "Les Sybelles",
         "pisteKm": 310,
@@ -2169,6 +2189,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Car-free blocks with the beginner area at the door.",
       "skiArea": {
         "name": "Les Sybelles",
         "pisteKm": 310,
@@ -2214,6 +2235,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Beginner area at the edge of the village.",
       "skiArea": {
         "name": "Aussois",
         "pisteKm": 55,
@@ -2251,6 +2273,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Car-free village with beginner slopes at the door.",
       "skiArea": {
         "name": "La Norma",
         "pisteKm": 65,
@@ -2289,6 +2312,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Beginner areas beside the villages of Lanslevillard and Lanslebourg.",
       "skiArea": {
         "name": "Val Cenis",
         "pisteKm": 125,
@@ -2364,6 +2388,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Large, free beginner area just above the village centre.",
       "skiArea": {
         "name": "Alpe d'Huez Grand Domaine",
         "pisteKm": 250,
@@ -2447,6 +2472,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Free beginner lifts in the village centre.",
       "skiArea": {
         "name": "Les 2 Alpes",
         "pisteKm": 200,
@@ -2521,6 +2547,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Beginner slopes at the door in Roche Béranger and Recoin.",
       "skiArea": {
         "name": "Chamrousse",
         "pisteKm": 90,
@@ -2668,6 +2695,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Beginner slopes in the middle of the village.",
       "skiArea": {
         "name": "Voie Lactée (Milky Way)",
         "pisteKm": 400,
@@ -2707,6 +2735,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Beginner area at the foot of Puy-Saint-Vincent 1600.",
       "skiArea": {
         "name": "Puy-Saint-Vincent",
         "pisteKm": 75,
@@ -2746,6 +2775,7 @@
         "intermediate",
         "expert"
       ],
+      "easyStart": "Beginner area at the front of Vars Les Claux.",
       "skiArea": {
         "name": "Forêt Blanche",
         "pisteKm": 185,
@@ -2782,6 +2812,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Car-free village with the beginner area at the door.",
       "skiArea": {
         "name": "Forêt Blanche",
         "pisteKm": 185,
@@ -2827,6 +2858,7 @@
         "beginner",
         "intermediate"
       ],
+      "easyStart": "Beginner slopes at the foot of Les Orres 1650.",
       "skiArea": {
         "name": "Les Orres",
         "pisteKm": 100,

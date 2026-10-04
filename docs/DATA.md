@@ -59,6 +59,7 @@ Optional for resorts, to tune the snow rating:
 
 | Field | Meaning |
 | --- | --- |
+| `easyStart` | A short note, for resorts where a first-timer can walk from the village to the beginner slopes. Its presence puts the resort under the Absolute beginner button. |
 | `snowAdjust` | Metres added to the snow altitude, for places that hold snow better (or worse) than their height suggests: a glacier, a cold north-facing bowl. Keep it within ±500. |
 | `snowNote` | One short sentence on why, shown under the snow months. |
 | `snow` | Override a month outright: `{ "apr": "good" }`. Values `good`, `fair`, `poor`. |

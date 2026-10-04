@@ -23,6 +23,7 @@ const state = {
   carFree: false,
   months: new Set(["jan", "feb", "mar"]),
   snowSure: false,
+  beginner: false,
   vibes: new Set(), // empty means any vibe
   trip: { nights: 7, skiDays: 6, adults: 2, children: 0, transport: "shuttle" },
   skiAt: {},
@@ -163,6 +164,7 @@ function passes(l) {
   // The shortlist ignores the filters so saved places never disappear.
   if (state.show === "saved") return state.saved.has(l.id);
   if (state.show !== "all" && l.type !== state.show) return false;
+  if (state.beginner && !l.easyStart) return false; // resorts only, walk to the beginner slopes
   if (travel(l).min > state.maxTime) return false;
   if (l.type === "base" && reachable(l, model.byId)[0].link.min > state.maxHop) return false;
   if (!state.prices.has(l.price)) return false;
@@ -406,6 +408,7 @@ function renderDetail(l) {
         <span class="s-label">Ski area</span>
         <p><strong>${esc(l.skiArea.name)}</strong> · ${l.skiArea.pisteKm} km · ${SIZE_LABEL[l.skiSize]}</p>
         <p class="suits">Suits ${levelDots(l.levels)} ${l.levels.map((v) => LEVEL_LABEL[v]).join(", ")}</p>
+        ${l.easyStart ? `<p class="easy-start"><strong>Good for first-timers.</strong> ${esc(l.easyStart)}</p>` : ""}
       </section>`;
     const s = snowOf(l);
     body += `<section class="snow">
@@ -698,6 +701,11 @@ function bindControls() {
     applyFilters();
     if (state.selected) renderDetail(model.byId.get(state.selected));
   }));
+  $("#f-beginner").addEventListener("click", (e) => {
+    state.beginner = !state.beginner;
+    e.currentTarget.setAttribute("aria-pressed", state.beginner);
+    applyFilters();
+  });
   $("#f-snow").addEventListener("change", (e) => { state.snowSure = e.target.checked; applyFilters(); });
 
   $("#f-family").addEventListener("change", (e) => { state.family = e.target.checked; applyFilters(); });

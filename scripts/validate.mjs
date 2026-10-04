@@ -49,6 +49,8 @@ for (const c of index.countries) {
       need(l.topAltitude >= l.altitude, "topAltitude must be at or above altitude");
       need(l.skiArea?.name && l.skiArea.pisteKm > 0, "skiArea needs name and pisteKm");
       need(l.levels?.length && l.levels.every((v) => LEVELS.includes(v)), "levels invalid");
+      need(l.easyStart === undefined || (typeof l.easyStart === "string" && l.easyStart.length > 0),
+        "easyStart must be a short note");
       need(l.snowAdjust === undefined || (Number.isFinite(l.snowAdjust) && Math.abs(l.snowAdjust) <= 500),
         "snowAdjust must be a number of metres, at most 500 either way");
       for (const [m, v] of Object.entries(l.snow || {})) {

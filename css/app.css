@@ -136,6 +136,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   color: var(--muted);
 }
+.header-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; margin-right: -40px; }
+.header-btns .shortlist-btn { margin-top: 0; }
+.beginner-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--line); background: var(--panel); border-radius: 999px;
+  padding: 4px 11px 4px 9px; font-size: 14px; font-weight: 500;
+}
+.beginner-btn::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--run-green); }
+.beginner-btn[aria-pressed="true"] { border-color: var(--run-green); background: var(--good-soft); }
+.easy-start { margin: 6px 0 0; padding: 8px 10px; border-radius: 8px; background: var(--good-soft); font-size: 14px; }
+.easy-start strong { color: var(--good); }
 .shortlist-btn {
   margin-top: 12px; display: inline-flex; align-items: center; gap: 6px;
   border: 1px solid var(--line); background: var(--panel); border-radius: 999px;
