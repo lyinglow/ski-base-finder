@@ -17,6 +17,7 @@
       "topAltitude": 3842,
       "townSize": "large",
       "price": 3,
+      "stayPerPerson": 125,
       "family": false,
       "levels": [
         "intermediate",
@@ -24,7 +25,8 @@
       ],
       "skiArea": {
         "name": "Chamonix Mont-Blanc",
-        "pisteKm": 150
+        "pisteKm": 150,
+        "pass6": 340
       },
       "character": "Busy mountaineering town under Mont Blanc. Steep, high terrain and huge off-piste, spread over separate areas joined by bus.",
       "fromOrigin": {
@@ -56,7 +58,8 @@
       ],
       "skiArea": {
         "name": "Les Houches",
-        "pisteKm": 55
+        "pisteKm": 55,
+        "pass6": 230
       },
       "character": "Quiet village with tree-lined slopes, the sheltered choice on stormy days. Ten minutes from Chamonix.",
       "fromOrigin": {
@@ -90,6 +93,7 @@
       "topAltitude": 2353,
       "townSize": "medium",
       "price": 3,
+      "stayPerPerson": 150,
       "family": true,
       "levels": [
         "beginner",
@@ -97,7 +101,8 @@
       ],
       "skiArea": {
         "name": "Évasion Mont-Blanc",
-        "pisteKm": 445
+        "pisteKm": 445,
+        "pass6": 335
       },
       "character": "Smart medieval village with fur coats and fine dining. Gentle, scenic cruising across a very large area.",
       "fromOrigin": {
@@ -129,7 +134,8 @@
       ],
       "skiArea": {
         "name": "Évasion Mont-Blanc",
-        "pisteKm": 445
+        "pisteKm": 445,
+        "pass6": 335
       },
       "character": "Old spa town with a gondola straight into the Megève ski area. Real town life, lower prices than Megève.",
       "fromOrigin": {
@@ -178,7 +184,8 @@
       ],
       "skiArea": {
         "name": "Évasion Mont-Blanc",
-        "pisteKm": 445
+        "pisteKm": 445,
+        "pass6": 335
       },
       "character": "Sunny little village with the best Mont Blanc view in the area. Linked by lift to Megève.",
       "fromOrigin": {
@@ -219,7 +226,8 @@
       ],
       "skiArea": {
         "name": "Les Contamines-Hauteluce",
-        "pisteKm": 120
+        "pisteKm": 120,
+        "pass6": 280
       },
       "snowAdjust": 200,
       "snowNote": "Holds snow well for its height.",
@@ -254,7 +262,8 @@
       ],
       "skiArea": {
         "name": "Portes du Soleil",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 340
       },
       "character": "Lively market town that works all year. Big chalet scene, lots of English spoken, gateway to Avoriaz and Les Gets.",
       "fromOrigin": {
@@ -287,7 +296,8 @@
       ],
       "skiArea": {
         "name": "Portes du Soleil",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 340
       },
       "snowAdjust": 100,
       "snowNote": "High village, ski to the door.",
@@ -330,7 +340,8 @@
       ],
       "skiArea": {
         "name": "Portes du Soleil",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 340
       },
       "character": "Pretty, family-minded village with easy slopes on both sides. Linked to Morzine.",
       "fromOrigin": {
@@ -372,7 +383,8 @@
       ],
       "skiArea": {
         "name": "Portes du Soleil",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 340
       },
       "character": "Working farm village with direct lifts into the Swiss side of the Portes du Soleil.",
       "fromOrigin": {
@@ -404,7 +416,8 @@
       ],
       "skiArea": {
         "name": "Portes du Soleil",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 340
       },
       "character": "Quiet valley village with its own slopes and a free bus to Châtel.",
       "fromOrigin": {
@@ -444,7 +457,8 @@
       ],
       "skiArea": {
         "name": "Roc d'Enfer",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 170
       },
       "character": "Small, wild area loved by locals. No crowds and cheap passes. Morzine is 15 minutes up the road.",
       "fromOrigin": {
@@ -485,7 +499,8 @@
       ],
       "skiArea": {
         "name": "Thollon-les-Mémises",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 160
       },
       "character": "Balcony above Lake Geneva with views across to Switzerland. Simple, friendly and cheap.",
       "fromOrigin": {
@@ -516,7 +531,8 @@
       ],
       "skiArea": {
         "name": "Bernex Dent d'Oche",
-        "pisteKm": 25
+        "pisteKm": 25,
+        "pass6": 130
       },
       "character": "Tiny family hill above Évian. Good for a first week on skis.",
       "fromOrigin": {
@@ -549,7 +565,8 @@
       ],
       "skiArea": {
         "name": "Grand Massif",
-        "pisteKm": 265
+        "pisteKm": 265,
+        "pass6": 320
       },
       "snowAdjust": 200,
       "snowNote": "High north-facing bowl that holds snow well.",
@@ -584,7 +601,8 @@
       ],
       "skiArea": {
         "name": "Grand Massif",
-        "pisteKm": 265
+        "pisteKm": 265,
+        "pass6": 320
       },
       "character": "Listed stone village with shops and restaurants. Gondola up into the Grand Massif.",
       "fromOrigin": {
@@ -625,7 +643,8 @@
       ],
       "skiArea": {
         "name": "Grand Massif",
-        "pisteKm": 265
+        "pisteKm": 265,
+        "pass6": 320
       },
       "character": "Friendly wooded village, the quickest road access to the Grand Massif.",
       "fromOrigin": {
@@ -666,7 +685,8 @@
       ],
       "skiArea": {
         "name": "Grand Massif",
-        "pisteKm": 265
+        "pisteKm": 265,
+        "pass6": 320
       },
       "character": "Valley village with a gondola to a sunny beginner plateau. Cheapest way into the Grand Massif.",
       "fromOrigin": {
@@ -714,7 +734,8 @@
       ],
       "skiArea": {
         "name": "Grand Massif",
-        "pisteKm": 265
+        "pisteKm": 265,
+        "pass6": 320
       },
       "character": "Remote village at the head of the Giffre valley, linked to the Grand Massif by a long scenic run.",
       "fromOrigin": {
@@ -756,7 +777,8 @@
       ],
       "skiArea": {
         "name": "La Clusaz",
-        "pisteKm": 125
+        "pisteKm": 125,
+        "pass6": 270
       },
       "character": "Lively Aravis village with five connected mountains. Busy with Annecy and Geneva locals at weekends.",
       "fromOrigin": {
@@ -788,7 +810,8 @@
       ],
       "skiArea": {
         "name": "Le Grand-Bornand",
-        "pisteKm": 90
+        "pisteKm": 90,
+        "pass6": 245
       },
       "character": "Working farm village in Reblochon country. Very family-focused with good beginner zones.",
       "fromOrigin": {
@@ -829,7 +852,8 @@
       ],
       "skiArea": {
         "name": "Praz de Lys–Sommand",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 180
       },
       "snowAdjust": 100,
       "snowNote": "High plateau.",
@@ -862,7 +886,8 @@
       ],
       "skiArea": {
         "name": "Les Brasses",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 150
       },
       "character": "Low, local family area 40 minutes from Geneva. Best after a fresh fall.",
       "fromOrigin": {
@@ -893,7 +918,8 @@
       ],
       "skiArea": {
         "name": "Hirmentaz–Les Habères",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 150
       },
       "character": "Nearest real slopes to Geneva. Ideal for a day trip or a first week.",
       "fromOrigin": {
@@ -924,7 +950,8 @@
       ],
       "skiArea": {
         "name": "Le Semnoz",
-        "pisteKm": 15
+        "pisteKm": 15,
+        "pass6": 110
       },
       "character": "Small summit area above Annecy with lake and Mont Blanc views. A day-trip hill.",
       "fromOrigin": {
@@ -956,7 +983,8 @@
       ],
       "skiArea": {
         "name": "Espace Diamant",
-        "pisteKm": 192
+        "pisteKm": 192,
+        "pass6": 265
       },
       "snowAdjust": 150,
       "snowNote": "Open plateau with reliable snow.",
@@ -990,7 +1018,8 @@
       ],
       "skiArea": {
         "name": "Espace Diamant",
-        "pisteKm": 192
+        "pisteKm": 192,
+        "pass6": 265
       },
       "character": "Small family village, a cheaper door into the Espace Diamant.",
       "fromOrigin": {
@@ -1030,7 +1059,8 @@
       ],
       "skiArea": {
         "name": "Espace Diamant",
-        "pisteKm": 192
+        "pisteKm": 192,
+        "pass6": 265
       },
       "character": "Valley village five minutes below Megève, linked by lift to the Espace Diamant.",
       "fromOrigin": {
@@ -1078,7 +1108,8 @@
       ],
       "skiArea": {
         "name": "Arêches-Beaufort",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 190
       },
       "character": "Unspoilt Beaufortain village. Great off-piste and almost no new building.",
       "fromOrigin": {
@@ -1110,7 +1141,8 @@
       ],
       "skiArea": {
         "name": "Monts Jura (Crozet, Lélex, Mijoux)",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 175
       },
       "snowAdjust": 100,
       "snowNote": "Cold Jura climate.",
@@ -1143,7 +1175,8 @@
       ],
       "skiArea": {
         "name": "Les Rousses",
-        "pisteKm": 40
+        "pisteKm": 40,
+        "pass6": 170
       },
       "snowAdjust": 150,
       "snowNote": "Cold Jura climate.",
@@ -1176,7 +1209,8 @@
       ],
       "skiArea": {
         "name": "Savoie Grand Revard",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 130
       },
       "character": "Plateau above Chambéry and Aix-les-Bains. Mostly cross-country with some easy downhill.",
       "fromOrigin": {
@@ -1208,7 +1242,8 @@
       ],
       "skiArea": {
         "name": "Aillons-Margériaz",
-        "pisteKm": 50
+        "pisteKm": 50,
+        "pass6": 150
       },
       "character": "Small, low-key area in the Bauges nature park.",
       "fromOrigin": {
@@ -1241,7 +1276,8 @@
       ],
       "skiArea": {
         "name": "Paradiski",
-        "pisteKm": 425
+        "pisteKm": 425,
+        "pass6": 375
       },
       "character": "Ten villages spread across a huge, mostly intermediate area. Built for skiing first.",
       "fromOrigin": {
@@ -1274,7 +1310,8 @@
       ],
       "skiArea": {
         "name": "Paradiski",
-        "pisteKm": 425
+        "pisteKm": 425,
+        "pass6": 375
       },
       "character": "Purpose-built villages with a funicular from Bourg-Saint-Maurice station. Steep terrain up top.",
       "fromOrigin": {
@@ -1306,7 +1343,8 @@
       ],
       "skiArea": {
         "name": "Paradiski",
-        "pisteKm": 425
+        "pisteKm": 425,
+        "pass6": 375
       },
       "character": "Wooded, quieter corner of Paradiski. The Vanoise Express links Les Arcs and La Plagne here.",
       "fromOrigin": {
@@ -1354,7 +1392,8 @@
       ],
       "skiArea": {
         "name": "Paradiski",
-        "pisteKm": 425
+        "pisteKm": 425,
+        "pass6": 375
       },
       "character": "Old hamlet turned family resort on the La Plagne side of Paradiski.",
       "fromOrigin": {
@@ -1393,7 +1432,8 @@
       ],
       "skiArea": {
         "name": "Paradiski",
-        "pisteKm": 425
+        "pisteKm": 425,
+        "pass6": 375
       },
       "character": "Sunny, authentic back door into La Plagne. Much cheaper than the main resort.",
       "fromOrigin": {
@@ -1427,6 +1467,7 @@
       "topAltitude": 3456,
       "townSize": "large",
       "price": 3,
+      "stayPerPerson": 170,
       "family": false,
       "levels": [
         "intermediate",
@@ -1434,7 +1475,8 @@
       ],
       "skiArea": {
         "name": "Espace Killy",
-        "pisteKm": 300
+        "pisteKm": 300,
+        "pass6": 380
       },
       "snowAdjust": 150,
       "snowNote": "High, cold valley.",
@@ -1468,7 +1510,8 @@
       ],
       "skiArea": {
         "name": "Espace Killy",
-        "pisteKm": 300
+        "pisteKm": 300,
+        "pass6": 380
       },
       "snowAdjust": 300,
       "snowNote": "Grande Motte glacier.",
@@ -1503,6 +1546,7 @@
       "topAltitude": 3230,
       "townSize": "medium",
       "price": 3,
+      "stayPerPerson": 220,
       "family": true,
       "levels": [
         "beginner",
@@ -1511,7 +1555,8 @@
       ],
       "skiArea": {
         "name": "Les 3 Vallées",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 420
       },
       "character": "Very smart, very expensive. Perfect grooming and the gateway to the world's largest linked area.",
       "fromOrigin": {
@@ -1536,6 +1581,7 @@
       "topAltitude": 3230,
       "townSize": "medium",
       "price": 3,
+      "stayPerPerson": 160,
       "family": true,
       "levels": [
         "beginner",
@@ -1544,7 +1590,8 @@
       ],
       "skiArea": {
         "name": "Les 3 Vallées",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 420
       },
       "character": "Chalet-style village in the middle of the 3 Vallées. Strong British presence.",
       "fromOrigin": {
@@ -1569,6 +1616,7 @@
       "topAltitude": 3230,
       "townSize": "medium",
       "price": 3,
+      "stayPerPerson": 150,
       "family": false,
       "levels": [
         "intermediate",
@@ -1576,7 +1624,8 @@
       ],
       "skiArea": {
         "name": "Les 3 Vallées",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 420
       },
       "character": "Highest resort in Europe. Reliable snow, big parties, little charm.",
       "fromOrigin": {
@@ -1609,7 +1658,8 @@
       ],
       "skiArea": {
         "name": "Les 3 Vallées",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 420
       },
       "character": "Practical, value base in the 3 Vallées. Ski to Val Thorens in minutes.",
       "fromOrigin": {
@@ -1649,7 +1699,8 @@
       ],
       "skiArea": {
         "name": "Grand Domaine",
-        "pisteKm": 165
+        "pisteKm": 165,
+        "pass6": 290
       },
       "character": "Car-free family village built around one pedestrian street.",
       "fromOrigin": {
@@ -1681,7 +1732,8 @@
       ],
       "skiArea": {
         "name": "Espace San Bernardo",
-        "pisteKm": 160
+        "pisteKm": 160,
+        "pass6": 290
       },
       "character": "Sunny balcony facing the sun, linked over the border to La Thuile in Italy.",
       "fromOrigin": {
@@ -1713,7 +1765,8 @@
       ],
       "skiArea": {
         "name": "Sainte-Foy",
-        "pisteKm": 70
+        "pisteKm": 70,
+        "pass6": 230
       },
       "snowAdjust": 100,
       "snowNote": "North-east facing slopes.",
@@ -1748,7 +1801,8 @@
       ],
       "skiArea": {
         "name": "Galibier-Thabor",
-        "pisteKm": 150
+        "pisteKm": 150,
+        "pass6": 245
       },
       "character": "Lively, real village with a church square and shops. Linked to Valmeinier.",
       "fromOrigin": {
@@ -1780,7 +1834,8 @@
       ],
       "skiArea": {
         "name": "Galibier-Thabor",
-        "pisteKm": 150
+        "pisteKm": 150,
+        "pass6": 245
       },
       "character": "Quiet, high station on the cheaper side of Galibier-Thabor.",
       "fromOrigin": {
@@ -1820,7 +1875,8 @@
       ],
       "skiArea": {
         "name": "Les 3 Vallées",
-        "pisteKm": 600
+        "pisteKm": 600,
+        "pass6": 420
       },
       "character": "Tiny valley village with a long gondola up to Val Thorens. The cheapest door into the 3 Vallées.",
       "fromOrigin": {
@@ -1861,7 +1917,8 @@
       ],
       "skiArea": {
         "name": "Les Karellis",
-        "pisteKm": 60
+        "pisteKm": 60,
+        "pass6": 185
       },
       "snowAdjust": 100,
       "snowNote": "North-facing slopes that hold snow well.",
@@ -1895,7 +1952,8 @@
       ],
       "skiArea": {
         "name": "Les Sybelles",
-        "pisteKm": 310
+        "pisteKm": 310,
+        "pass6": 255
       },
       "character": "Big, open, sunny area. Good value family skiing.",
       "fromOrigin": {
@@ -1927,7 +1985,8 @@
       ],
       "skiArea": {
         "name": "Les Sybelles",
-        "pisteKm": 310
+        "pisteKm": 310,
+        "pass6": 255
       },
       "character": "Car-free, ski-in ski-out blocks in the middle of Les Sybelles.",
       "fromOrigin": {
@@ -1967,7 +2026,8 @@
       ],
       "skiArea": {
         "name": "Aussois",
-        "pisteKm": 55
+        "pisteKm": 55,
+        "pass6": 175
       },
       "character": "Sunny, authentic village facing the Vanoise peaks.",
       "fromOrigin": {
@@ -1999,7 +2059,8 @@
       ],
       "skiArea": {
         "name": "La Norma",
-        "pisteKm": 65
+        "pisteKm": 65,
+        "pass6": 180
       },
       "character": "Car-free family resort in a forest bowl above Modane.",
       "fromOrigin": {
@@ -2032,7 +2093,8 @@
       ],
       "skiArea": {
         "name": "Val Cenis",
-        "pisteKm": 125
+        "pisteKm": 125,
+        "pass6": 225
       },
       "character": "Chain of old villages in the upper Maurienne. Long, easy runs and few crowds.",
       "fromOrigin": {
@@ -2064,7 +2126,8 @@
       ],
       "skiArea": {
         "name": "Bonneval-sur-Arc",
-        "pisteKm": 25
+        "pisteKm": 25,
+        "pass6": 150
       },
       "character": "One of France's prettiest stone villages. High, snowy and tiny.",
       "fromOrigin": {
@@ -2097,7 +2160,8 @@
       ],
       "skiArea": {
         "name": "Alpe d'Huez Grand Domaine",
-        "pisteKm": 250
+        "pisteKm": 250,
+        "pass6": 340
       },
       "character": "Huge, sunny area with very long runs, including the 16 km Sarenne. Lively at night.",
       "fromOrigin": {
@@ -2130,7 +2194,8 @@
       ],
       "skiArea": {
         "name": "Alpe d'Huez Grand Domaine",
-        "pisteKm": 250
+        "pisteKm": 250,
+        "pass6": 340
       },
       "character": "Quiet village with a big cable car straight into the Alpe d'Huez area.",
       "fromOrigin": {
@@ -2171,7 +2236,8 @@
       ],
       "skiArea": {
         "name": "Les 2 Alpes",
-        "pisteKm": 200
+        "pisteKm": 200,
+        "pass6": 320
       },
       "snowAdjust": 200,
       "snowNote": "Glacier skiing above 3000 m.",
@@ -2204,7 +2270,8 @@
       ],
       "skiArea": {
         "name": "La Grave",
-        "pisteKm": 10
+        "pisteKm": 10,
+        "pass6": 280
       },
       "character": "Legendary off-piste with one lift and almost no grooming. For strong skiers with a guide.",
       "fromOrigin": {
@@ -2236,7 +2303,8 @@
       ],
       "skiArea": {
         "name": "Chamrousse",
-        "pisteKm": 90
+        "pisteKm": 90,
+        "pass6": 200
       },
       "character": "Grenoble's local resort with Olympic history and big views.",
       "fromOrigin": {
@@ -2268,7 +2336,8 @@
       ],
       "skiArea": {
         "name": "Les Sept Laux",
-        "pisteKm": 120
+        "pisteKm": 120,
+        "pass6": 200
       },
       "character": "Good value area between Grenoble and Chambéry, busy at weekends.",
       "fromOrigin": {
@@ -2299,7 +2368,8 @@
       ],
       "skiArea": {
         "name": "Villard-Corrençon",
-        "pisteKm": 125
+        "pisteKm": 125,
+        "pass6": 170
       },
       "character": "Family town on the Vercors plateau with big cross-country trails.",
       "fromOrigin": {
@@ -2332,7 +2402,8 @@
       ],
       "skiArea": {
         "name": "Serre Chevalier",
-        "pisteKm": 250
+        "pisteKm": 250,
+        "pass6": 300
       },
       "character": "Long valley of villages and larch forests. Good skiing in bad weather.",
       "fromOrigin": {
@@ -2365,7 +2436,8 @@
       ],
       "skiArea": {
         "name": "Voie Lactée (Milky Way)",
-        "pisteKm": 400
+        "pisteKm": 400,
+        "pass6": 320
       },
       "snowAdjust": 150,
       "snowNote": "Catches storms coming from Italy.",
@@ -2400,7 +2472,8 @@
       ],
       "skiArea": {
         "name": "Puy-Saint-Vincent",
-        "pisteKm": 75
+        "pisteKm": 75,
+        "pass6": 190
       },
       "snowAdjust": 100,
       "snowNote": "North-facing slopes that hold snow well.",
@@ -2435,7 +2508,8 @@
       ],
       "skiArea": {
         "name": "Forêt Blanche",
-        "pisteKm": 185
+        "pisteKm": 185,
+        "pass6": 250
       },
       "character": "High, sunny resort in the southern Alps, linked to Risoul.",
       "fromOrigin": {
@@ -2467,7 +2541,8 @@
       ],
       "skiArea": {
         "name": "Forêt Blanche",
-        "pisteKm": 185
+        "pisteKm": 185,
+        "pass6": 250
       },
       "character": "Car-free, purpose-built village among larch trees. Good value.",
       "fromOrigin": {
@@ -2507,7 +2582,8 @@
       ],
       "skiArea": {
         "name": "Les Orres",
-        "pisteKm": 100
+        "pisteKm": 100,
+        "pass6": 220
       },
       "character": "Sunny family resort above Lake Serre-Ponçon.",
       "fromOrigin": {

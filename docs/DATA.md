@@ -52,7 +52,7 @@ Extra fields for resorts:
 | --- | --- | --- |
 | `topAltitude` | metres | Highest lift. |
 | `levels` | array | Any of `beginner`, `intermediate`, `expert`. |
-| `skiArea` | object | `{ "name": "Évasion Mont-Blanc", "pisteKm": 445 }`. Use the whole linked area the pass covers. |
+| `skiArea` | object | `{ "name": "Évasion Mont-Blanc", "pisteKm": 445, "pass6": 335 }`. Use the whole linked area the pass covers. `pass6` is the adult 6-day lift pass in euros. |
 
 Optional for resorts, to tune the snow rating:
 
@@ -66,6 +66,7 @@ Optional for any place:
 
 | Field | Meaning |
 | --- | --- |
+| `stayPerPerson` | Euros per person per night, when a place costs clearly more or less than its price band's usual figure. |
 | `rail` | Name of the train service from the origin, for example `"Léman Express L3"`. Used for the "No car needed" badge. |
 
 ### A link
@@ -98,6 +99,11 @@ Write each link once, from the place you stay to the resort you ski. The app wor
   | Apr | 2300 m | 1900 m |
 
   For a trip across several months, the weakest month decides. A feeder town takes the best rating among the resorts it reaches. The heights live in `MONTHS` in `js/data.js`; Swiss or Italian resorts may need their own once those countries are added.
+- **Trip cost** for staying in one place and skiing one resort (see `js/cost.js`). All rates live under `costs` in `index.json`:
+  - Accommodation: `stayPerPerson`, or the price band's `perPerson`, × people × nights × the average `seasonFactor` of the chosen months.
+  - Lift passes: `pass6` ÷ 6 × ski days, children at `childPass` of the adult price.
+  - Airport: a shared shuttle per person (`base` + `perKm` × km, each way), or a hire car per day plus fuel and tolls.
+  - Daily trips: free by lift or by a bus of 20 minutes or less; a bus fare beyond that; fuel and parking when driving. A town with no bus or lift to the chosen resort is costed with a hire car.
 - **No car needed**: a base with `rail` and at least one bus, train or lift link; a resort whose `transfer` does not start with "Car".
 
 ## Checking your edits

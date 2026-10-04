@@ -4,19 +4,79 @@
     {
       "id": "GVA",
       "name": "Geneva Airport",
-      "coords": [6.1090, 46.2381]
+      "coords": [
+        6.109,
+        46.2381
+      ]
     }
   ],
   "defaultOrigin": "GVA",
   "countries": [
-    { "code": "FR", "name": "France", "file": "fr.json", "status": "live" },
-    { "code": "CH", "name": "Switzerland", "file": "ch.json", "status": "planned" },
-    { "code": "IT", "name": "Italy", "file": "it.json", "status": "planned" }
+    {
+      "code": "FR",
+      "name": "France",
+      "file": "fr.json",
+      "status": "live"
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "file": "ch.json",
+      "status": "planned"
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "file": "it.json",
+      "status": "planned"
+    }
   ],
   "priceBands": {
-    "1": { "label": "Budget", "symbol": "€", "guide": "about €70 to €120 a night" },
-    "2": { "label": "Mid", "symbol": "€€", "guide": "about €120 to €220 a night" },
-    "3": { "label": "Expensive", "symbol": "€€€", "guide": "€220+ a night" }
+    "1": {
+      "label": "Budget",
+      "symbol": "€",
+      "guide": "about €70 to €120 a night",
+      "perPerson": 45
+    },
+    "2": {
+      "label": "Mid",
+      "symbol": "€€",
+      "guide": "about €120 to €220 a night",
+      "perPerson": 80
+    },
+    "3": {
+      "label": "Expensive",
+      "symbol": "€€€",
+      "guide": "€220+ a night",
+      "perPerson": 140
+    }
   },
-  "priceNote": "Guide price for a double room or small apartment in peak season. Indicative only."
+  "priceNote": "Guide price for a double room or small apartment in peak season. Indicative only.",
+  "costs": {
+    "note": "Estimates for budgeting. Peak-season stays, 2025/26 lift pass prices, typical winter transfers. Flights, ski hire and food not included.",
+    "seasonFactor": {
+      "dec": 0.9,
+      "jan": 0.85,
+      "feb": 1.25,
+      "mar": 1.0,
+      "apr": 0.85
+    },
+    "childPass": 0.8,
+    "shuttle": {
+      "base": 15,
+      "perKm": 0.4
+    },
+    "car": {
+      "hirePerDay": 55,
+      "fuelPerKm": 0.14,
+      "tollPerKm": 0.07,
+      "seats": 5,
+      "slopeParking": 10,
+      "mountainKmPerMin": 0.7
+    },
+    "bus": {
+      "freeWithinMin": 20,
+      "farePerDay": 6
+    }
+  }
 }

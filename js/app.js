@@ -1,4 +1,5 @@
 import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
+import { tripCost, skiTarget } from "./cost.js";
 import { createMap, setBasemap, setTerrain, setLinks, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
@@ -22,6 +23,8 @@ const state = {
   carFree: false,
   months: new Set(["jan", "feb", "mar"]),
   snowSure: false,
+  trip: { nights: 7, skiDays: 6, adults: 2, children: 0, transport: "shuttle" },
+  skiAt: {},
   sort: "time",
   selected: null,
   related: new Set(),
@@ -102,6 +105,25 @@ function snowMonths(l) {
   }).join("")}</div>`;
 }
 
+/* ---------- trip cost ---------- */
+
+const money = (n) => "€" + (Math.round(n / 10) * 10).toLocaleString("en-GB");
+const tripOf = () => ({ ...state.trip, months: tripMonths() });
+// stay in `place`, ski `ski` (defaults to itself, or the chosen or nearest resort for a town).
+const costOf = (place, ski) => tripCost(place, ski || skiTarget(place, model, state.skiAt[place.id]), tripOf(), model);
+
+function costBreakdown(cost) {
+  const p = cost.parts;
+  const row = (label, v, note = "") => `<li><span>${label}${note ? `<small>${note}</small>` : ""}</span><b>${money(v)}</b></li>`;
+  const t = state.trip;
+  return `<ul class="cost-lines">
+    ${row("Accommodation", p.accommodation, `${t.nights} nights`)}
+    ${row("Lift passes", p.liftPasses, `${t.skiDays} days, ${esc(cost.ski.skiArea.name)}`)}
+    ${row("Airport transfers", p.airport, state.trip.transport === "car" || cost.needsCar ? "Hire car, fuel and tolls" : "Shared shuttle, return")}
+    ${row("Daily trips to the slopes", p.daily, cost.dailyHow)}
+  </ul>`;
+}
+
 function bestSkiFrom(place) {
   return reachable(place, model.byId).reduce(
     (best, r) => (!best || r.place.skiArea.pisteKm > best.place.skiArea.pisteKm ? r : best), null);
@@ -154,6 +176,7 @@ function sortKey(l) {
   switch (state.sort) {
     case "price": return [l.price, travel(l).min];
     case "altitude": return [-l.altitude, travel(l).min];
+    case "cost": return [costOf(l).total, travel(l).min];
     case "snow": return [-SNOW_RANK[snowOf(l)], -(l.type === "resort" ? snowAltitude(l) : snowAltitude(bestSnowFrom(l).place))];
     case "ski": return [-(l.skiArea?.pisteKm ?? bestSkiFrom(l)?.place.skiArea.pisteKm ?? 0), travel(l).min];
     default: return [travel(l).min, l.price];
@@ -179,6 +202,10 @@ function applyFilters() {
   $("#results").innerHTML = n ? visible.map(resultItem).join("") : `<li class="empty">${emptyText}</li>`;
 }
 
+function tripTitle(l) {
+  return l.type === "resort" ? `staying in ${l.name}` : `staying in ${l.name}, skiing ${skiTarget(l, model, state.skiAt[l.id]).name}`;
+}
+
 function resultItem(l) {
   const t = travel(l);
   let sub;
@@ -191,7 +218,7 @@ function resultItem(l) {
   return `<li><button type="button" class="result ${l.type}${l.id === state.selected ? " is-active" : ""}" data-id="${l.id}">
     <i class="dot ${l.type}"></i>
     <span class="r-main"><span class="r-name">${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
-    <span class="r-side"><span class="r-time">${mins(t.min)}</span><span class="r-price">${price(l.price)} ${flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
+    <span class="r-side"><span class="r-time">${mins(t.min)}</span><span class="r-price" title="Trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
   </button></li>`;
 }
 
@@ -276,8 +303,18 @@ function stat(label, value, note = "") {
   return `<div class="stat"><span class="s-label">${label}</span><span class="s-value">${value}</span>${note ? `<span class="s-note">${note}</span>` : ""}</div>`;
 }
 
-function placeRow({ place, link }, context) {
+// opts.vsResort: listing cheaper stays for a resort. opts.fromBase: listing resorts a town reaches.
+function placeRow({ place, link }, context, opts = {}) {
   let gain = "";
+  let cost = "";
+  if (opts.vsResort) {
+    const here = costOf(opts.vsResort).total;
+    const there = costOf(place, opts.vsResort).total;
+    cost = tripLine(there, here - there);
+  } else if (opts.fromBase) {
+    const there = costOf(opts.fromBase, place).total;
+    cost = tripLine(there, costOf(place).total - there, `staying in ${place.name}`);
+  }
   if (context) {
     const bands = context.price - place.price;
     const drop = context.altitude - place.altitude;
@@ -294,11 +331,39 @@ function placeRow({ place, link }, context) {
     <button type="button" class="lr-main" data-select="${place.id}">
       <i class="dot ${place.type}"></i>
       <span><span class="lr-name">${esc(place.name)} <em>${price(place.price)}</em></span>
-      <span class="lr-sub">${sub}</span>${gain}</span>
+      <span class="lr-sub">${sub}</span>${gain}${cost}</span>
     </button>
     <span class="lr-hop"><strong>${mins(link.min)}</strong><span>by ${modes(link.by)}</span>${link.note ? `<span>${esc(link.note)}</span>` : ""}</span>
     <button type="button" class="add" data-compare="${place.id}" aria-pressed="${inCompare}" title="Add to compare">${inCompare ? "Added" : "Compare"}</button>
   </li>`;
+}
+
+function tripLine(total, saving, vs = "") {
+  const save = saving >= 20
+    ? ` · <span class="save">saves ${money(saving)}${vs ? ` vs ${esc(vs)}` : ""}</span>`
+    : saving <= -20 ? ` · <span class="dearer">${money(-saving)} more${vs ? ` than ${esc(vs)}` : ""}</span>` : "";
+  return `<span class="trip-line">Trip ${money(total)}${save}</span>`;
+}
+
+function tripSection(l) {
+  const cost = costOf(l);
+  const t = state.trip;
+  const who = `${t.adults} adult${t.adults === 1 ? "" : "s"}${t.children ? `, ${t.children} child${t.children === 1 ? "" : "ren"}` : ""}`;
+  let picker = "";
+  if (l.type === "base") {
+    const options = reachable(l, model.byId);
+    picker = `<label class="ski-at" for="ski-at">Skiing at
+      <select id="ski-at" data-base="${l.id}">${options.map((r) =>
+        `<option value="${r.place.id}"${r.place.id === cost.ski.id ? " selected" : ""}>${esc(r.place.name)} (${mins(r.link.min)})</option>`).join("")}</select></label>`;
+  }
+  return `<section class="trip">
+      <span class="s-label">Trip cost</span>
+      <p class="trip-total"><strong>${money(cost.total)}</strong> <span>${money(cost.perPerson)} per person</span></p>
+      <p class="trip-who">${who}, ${t.nights} nights, ${t.skiDays} ski days, ${monthNames()}</p>
+      ${picker}
+      ${costBreakdown(cost)}
+      ${cost.needsCar && t.transport !== "car" ? `<p class="snow-note">No bus to ${esc(cost.ski.name)} from here, so this includes a hire car.</p>` : ""}
+    </section>`;
 }
 
 function renderDetail(l) {
@@ -324,7 +389,7 @@ function renderDetail(l) {
 
   const getting = `<p class="getting"><span class="s-label">Getting there</span>${esc(l.transfer)}${l.rail ? ` <span class="badge">${esc(l.rail)}</span>` : ""}${l.carFree ? ` <span class="badge good">No car needed</span>` : ""}</p>`;
 
-  let body = "";
+  let body = tripSection(l);
   if (l.type === "resort") {
     const cheaper = cheaperStays(l, model.byId);
     body += `<section class="ski">
@@ -343,7 +408,7 @@ function renderDetail(l) {
         <h3>Stay lower, ski here</h3>
         ${cheaper.length
           ? `<p class="hint">${cheaper.length} cheaper place${cheaper.length === 1 ? "" : "s"} to stay with quick access to ${esc(l.name)}.</p>
-             <ul class="link-list">${cheaper.map((c) => placeRow(c, l)).join("")}</ul>
+             <ul class="link-list">${cheaper.map((c) => placeRow(c, l, { vsResort: l })).join("")}</ul>
              <button type="button" class="primary wide" data-pair="${l.id}">Compare ${esc(l.name)} with these</button>`
           : `<p class="hint">No cheaper base within easy reach. Staying in the resort is the simple choice here.</p>`}
       </section>`;
@@ -365,7 +430,7 @@ function renderDetail(l) {
     body += `<section class="alt">
         <h3>Resorts within reach</h3>
         <p class="hint">${r.length} resort${r.length === 1 ? "" : "s"}, nearest in ${mins(r[0].link.min)}.${savings.length ? ` Cheaper than staying in ${savings.length} of them.` : ""}</p>
-        <ul class="link-list">${r.map((c) => placeRow(c)).join("")}</ul>
+        <ul class="link-list">${r.map((c) => placeRow(c, null, { fromBase: l })).join("")}</ul>
         <button type="button" class="primary wide" data-pair="${l.id}">Compare with nearest resorts</button>
       </section>`;
   }
@@ -426,6 +491,14 @@ function openCompare() {
   $("#compare").hidden = false;
 }
 
+// A town in the table is costed against a resort it reaches that is also in the table, if any.
+function compareCost(l, cols) {
+  if (l.type === "resort") return costOf(l);
+  const reach = new Set((l.links || []).map((k) => k.to));
+  const match = cols.find((c) => c.type === "resort" && reach.has(c.id));
+  return costOf(l, match);
+}
+
 function renderCompareTable() {
   const cols = state.compare.map((id) => model.byId.get(id));
   if (!cols.length) { $("#compare").hidden = true; return; }
@@ -438,6 +511,15 @@ function renderCompareTable() {
   };
 
   const rows = [
+    {
+      label: "Trip cost",
+      vals: cols.map((l) => compareCost(l, cols).total),
+      win: Math.min,
+      cell: (l) => {
+        const c = compareCost(l, cols);
+        return `${money(c.total)}<small>${l.type === "resort" ? "staying here" : `skiing ${esc(c.ski.name)}`}, ${money(c.perPerson)} each</small>`;
+      },
+    },
     {
       label: "From airport",
       vals: cols.map((l) => travel(l).min),
@@ -518,7 +600,7 @@ function renderCompareTable() {
 /* ---------- controls ---------- */
 
 function bindControls() {
-  $$(".segmented button").forEach((b) => b.addEventListener("click", () => setShow(b.dataset.show)));
+  $$("#show-seg button").forEach((b) => b.addEventListener("click", () => setShow(b.dataset.show)));
   $("#show-saved").addEventListener("click", () => setShow(state.show === "saved" ? "all" : "saved"));
 
   $("#saved-compare").addEventListener("click", () => {
@@ -573,6 +655,27 @@ function bindControls() {
     // Month choice changes every snow rating, so redraw open panels too.
     if (state.selected) renderDetail(model.byId.get(state.selected));
     if (!$("#compare").hidden) renderCompareTable();
+  });
+  const tripInputs = { nights: "#t-nights", skiDays: "#t-days", adults: "#t-adults", children: "#t-children" };
+  for (const [key, sel] of Object.entries(tripInputs)) {
+    $(sel).addEventListener("input", (e) => {
+      const el = e.target;
+      const v = Math.round(Number(el.value));
+      if (!Number.isFinite(v) || v < +el.min || v > +el.max) return; // wait for a valid number
+      state.trip[key] = v;
+      if (key === "nights" && state.trip.skiDays > v) { state.trip.skiDays = v; $("#t-days").value = v; }
+      tripChanged();
+    });
+  }
+  $$("#t-transport button").forEach((b) => b.addEventListener("click", () => {
+    state.trip.transport = b.dataset.v;
+    $$("#t-transport button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    tripChanged();
+  }));
+  document.addEventListener("change", (e) => {
+    if (e.target.id !== "ski-at") return;
+    state.skiAt[e.target.dataset.base] = e.target.value;
+    tripChanged();
   });
   $("#f-snow").addEventListener("change", (e) => { state.snowSure = e.target.checked; applyFilters(); });
 
@@ -657,7 +760,7 @@ const SAVED_KEY = "skibase.shortlist";
 
 function setShow(show) {
   state.show = show;
-  $$(".segmented button").forEach((x) => x.setAttribute("aria-pressed", x.dataset.show === show));
+  $$("#show-seg button").forEach((x) => x.setAttribute("aria-pressed", x.dataset.show === show));
   const saved = show === "saved";
   $("#show-saved").setAttribute("aria-pressed", saved);
   $(".filters").hidden = saved;
@@ -726,8 +829,18 @@ async function shareShortlist() {
   setTimeout(() => { btn.textContent = "Copy link"; }, 2500);
 }
 
+function tripChanged() {
+  applyFilters();
+  if (state.selected) {
+    const top = $("#detail").scrollTop;
+    renderDetail(model.byId.get(state.selected));
+    $("#detail").scrollTop = top;
+  }
+  if (!$("#compare").hidden) renderCompareTable();
+}
+
 function renderDataNote() {
   const bands = Object.values(model.priceBands).map((b) => `<li><b>${b.symbol}</b> ${b.label}: ${b.guide}</li>`).join("");
   $("#data-note").innerHTML = `<ul class="bands">${bands}</ul>
-    <p>${esc(model.index.priceNote)} ${model.notes.map(esc).join(" ")}</p>`;
+    <p>${esc(model.index.costs.note)} ${model.notes.map(esc).join(" ")}</p>`;
 }

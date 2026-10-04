@@ -21,13 +21,27 @@
         <p class="origin">From <strong id="origin-name">Geneva Airport</strong> · <span id="country-list">France</span></p>
       </header>
 
-      <div class="segmented" role="radiogroup" aria-label="Show">
+      <div class="segmented" id="show-seg" role="radiogroup" aria-label="Show">
         <button type="button" id="show-all" data-show="all" aria-pressed="true">All</button>
         <button type="button" id="show-resort" data-show="resort" aria-pressed="false"><i class="dot resort"></i>Resorts</button>
         <button type="button" id="show-base" data-show="base" aria-pressed="false"><i class="dot base"></i>Feeder towns</button>
       </div>
 
       <section class="filters" aria-label="Filters">
+        <div class="field">
+          <span class="label">Your trip</span>
+          <div class="trip-grid">
+            <label for="t-nights">Nights<input type="number" id="t-nights" min="1" max="21" value="7" inputmode="numeric"></label>
+            <label for="t-days">Ski days<input type="number" id="t-days" min="1" max="21" value="6" inputmode="numeric"></label>
+            <label for="t-adults">Adults<input type="number" id="t-adults" min="1" max="12" value="2" inputmode="numeric"></label>
+            <label for="t-children">Children<input type="number" id="t-children" min="0" max="12" value="0" inputmode="numeric"></label>
+          </div>
+          <div class="segmented two" id="t-transport" role="group" aria-label="Getting around">
+            <button type="button" id="t-shuttle" data-v="shuttle" aria-pressed="true">Shuttle and bus</button>
+            <button type="button" id="t-car" data-v="car" aria-pressed="false">Hire car</button>
+          </div>
+        </div>
+
         <div class="field">
           <label for="f-time">Max time from airport <output id="f-time-out">Any</output></label>
           <input type="range" id="f-time" min="20" max="300" step="10" value="300">
@@ -101,6 +115,7 @@
         <label class="sort" for="sort">Sort
           <select id="sort">
             <option value="time">Time from airport</option>
+            <option value="cost">Trip cost</option>
             <option value="price">Price</option>
             <option value="altitude">Altitude</option>
             <option value="ski">Ski area size</option>

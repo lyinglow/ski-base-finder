@@ -178,6 +178,37 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .toggle { display: flex; gap: 10px; align-items: center; font-size: 14px; cursor: pointer; }
 .toggle input { width: 18px; height: 18px; accent-color: var(--resort); margin: 0; }
 
+/* trip cost */
+.trip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.trip-grid label {
+  display: grid; gap: 3px; font-size: 11px; color: var(--muted);
+  text-transform: none; letter-spacing: 0; font-weight: 500;
+}
+.trip-grid input {
+  width: 100%; min-width: 0; padding: 6px 8px; font-size: 15px; font-weight: 600;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+  font-variant-numeric: tabular-nums;
+}
+.segmented.two { grid-template-columns: 1fr 1fr; }
+.trip { display: grid; gap: 6px; }
+.trip-total { margin: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.trip-total strong { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.trip-total span { color: var(--muted); font-size: 14px; }
+.trip-who { margin: 0; font-size: 13px; color: var(--muted); }
+.ski-at { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.ski-at select { flex: 1; min-width: 0; border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: 5px 8px; }
+.cost-lines { list-style: none; margin: 4px 0 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
+.cost-lines li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 14px;
+}
+.cost-lines li span { display: grid; min-width: 0; }
+.cost-lines small { color: var(--muted); font-size: 12px; }
+.cost-lines b { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.trip-line { font-size: 13px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.trip-line .save { color: var(--good); font-weight: 600; }
+.trip-line .dearer { color: var(--muted); }
+
 /* snow */
 .flake { font-style: normal; font-size: 12px; line-height: 1; }
 .flake.good { color: var(--snow-good); }
