@@ -32,6 +32,7 @@ const state = {
   selected: null,
   related: new Set(),
   detailMin: false,
+  tripOpen: false,
   saved: new Set(),
   compare: [],
 };
@@ -291,6 +292,7 @@ function select(id) {
   $("#map").classList.add("has-selection");
   drawLinks(pairs, id);
   state.detailMin = false;
+  closeTripSheet();
   renderDetail(l);
   applyFilters();
 
@@ -315,6 +317,7 @@ function clearSelection() {
   state.related = new Set();
   history.replaceState(null, "", location.pathname);
   $("#detail").hidden = true;
+  closeTripSheet();
   $("#map").classList.remove("has-selection");
   for (const { el } of markers.values()) el.classList.remove("is-selected", "is-related");
   drawLinks([]);
@@ -444,6 +447,47 @@ function staySection(l) {
     </section>`;
 }
 
+/* ---------- trip sheet: slides over the place panel ---------- */
+
+function tripTeaser(l) {
+  const cost = costOf(l);
+  const skiing = l.type === "base" ? ` · skiing ${esc(cost.ski.name)}` : "";
+  return `<button type="button" class="trip-teaser" data-trip="${l.id}">
+      <span class="s-label">Trip cost</span>
+      <span class="tt-total"><strong>${money(cost.total)}</strong> ${money(cost.perPerson)} per person${skiing}</span>
+      <span class="tt-go">Cost breakdown and places to stay <i aria-hidden="true">›</i></span>
+    </button>`;
+}
+
+function renderTripSheet(l) {
+  const s = $("#tripsheet");
+  const top = s.hidden ? 0 : s.scrollTop;
+  s.innerHTML = `<header class="d-head">
+      <span class="eyebrow">Trip and stay</span>
+      <h2>${esc(l.name)}</h2>
+      <div class="d-actions">
+        <button type="button" class="icon-btn" id="trip-back" aria-label="Back to ${esc(l.name)}" title="Back"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" class="icon-btn" id="trip-close" aria-label="Close" title="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      </div>
+    </header>
+    ${tripSection(l)}
+    ${staySection(l)}
+    <p class="snow-note">Change nights, people, dates or transport under Your trip in the side panel.</p>`;
+  s.hidden = false;
+  s.scrollTop = top;
+  s.classList.toggle("scrolled", top > 4);
+}
+
+function openTripSheet(id) {
+  state.tripOpen = true;
+  renderTripSheet(model.byId.get(id));
+}
+
+function closeTripSheet() {
+  state.tripOpen = false;
+  $("#tripsheet").hidden = true;
+}
+
 function tripSection(l) {
   const cost = costOf(l);
   const t = state.trip;
@@ -500,7 +544,7 @@ function renderDetail(l) {
 
   const getting = `<p class="getting"><span class="s-label">Getting there from Geneva</span>${esc(l.transfer)}${l.rail ? ` <span class="badge">${esc(l.rail)}</span>` : ""}${l.carFree ? ` <span class="badge good">No car needed</span>` : ""}</p>`;
 
-  let body = tripSection(l) + staySection(l);
+  let body = tripTeaser(l);
   if (l.type === "resort") {
     const cheaper = cheaperStays(l, model.byId);
     body += `<section class="ski">
@@ -557,6 +601,7 @@ function renderDetail(l) {
   const d = $("#detail");
   d.innerHTML = head + stats + getting + body + foot;
   d.classList.remove("scrolled");
+  if (state.tripOpen) renderTripSheet(l);
   d.classList.toggle("is-min", state.detailMin);
   d.hidden = false;
   d.scrollTop = 0;
@@ -791,7 +836,9 @@ function bindControls() {
   $("#f-months").addEventListener("click", () => {
     if (!state.trip.arrive) arriveInput.value = defaultArrive(); // follow the months until a date is picked
   });
-  $("#detail").addEventListener("scroll", (e) => e.currentTarget.classList.toggle("scrolled", e.currentTarget.scrollTop > 4));
+  for (const panel of [$("#detail"), $("#tripsheet")]) {
+    panel.addEventListener("scroll", (e) => e.currentTarget.classList.toggle("scrolled", e.currentTarget.scrollTop > 4));
+  }
   $$("#t-transport button").forEach((b) => b.addEventListener("click", () => {
     state.trip.transport = b.dataset.v;
     $$("#t-transport button").forEach((x) => x.setAttribute("aria-pressed", x === b));
@@ -831,8 +878,11 @@ function bindControls() {
 
   // Delegated actions used by the detail panel, compare bar and table.
   document.addEventListener("click", (e) => {
-    const t = e.target.closest("[data-select],[data-compare],[data-pair],[data-save],#detail-close,#detail-min,.detail.is-min .d-head");
+    const t = e.target.closest("[data-select],[data-compare],[data-pair],[data-save],[data-trip],#detail-close,#detail-min,#trip-back,#trip-close,.detail.is-min .d-head");
     if (!t) return;
+    if (t.dataset.trip) return openTripSheet(t.dataset.trip);
+    if (t.id === "trip-back") return closeTripSheet();
+    if (t.id === "trip-close") return clearSelection();
     if (t.dataset.save) return toggleSaved(t.dataset.save);
     if (t.id === "detail-close") return clearSelection();
     if (t.id === "detail-min" || t.classList.contains("d-head")) {
@@ -849,6 +899,7 @@ function bindControls() {
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
     if (!$("#compare").hidden) $("#compare").hidden = true;
+    else if (state.tripOpen) closeTripSheet();
     else if (state.selected) clearSelection();
   });
 
