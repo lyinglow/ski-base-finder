@@ -41,6 +41,7 @@ Fields for every place:
 | `townSize` | `small`, `medium`, `large` | Size of the place to stay, not the ski area. |
 | `price` | 1, 2 or 3 | Price band to stay. See `priceBands`. |
 | `family` | boolean | Good for families with young children. |
+| `vibes` | array | One to three of the keys under `vibes` in `index.json`: `lively`, `quiet`, `traditional`, `upmarket`, `skiin`, `town`. |
 | `character` | string | One or two plain sentences. What it feels like to stay there. |
 | `fromOrigin` | object | Travel per origin: `{ "GVA": { "km": 70, "min": 65 } }`. Add a key for each new airport. |
 | `transfer` | string | How to get there without your own car. Start with "Car" if a car is really needed. |

@@ -78,5 +78,31 @@
       "freeWithinMin": 20,
       "farePerDay": 6
     }
+  },
+  "vibes": {
+    "lively": {
+      "label": "Lively",
+      "hint": "Après-ski, bars and nightlife"
+    },
+    "quiet": {
+      "label": "Quiet",
+      "hint": "Calm evenings, early nights"
+    },
+    "traditional": {
+      "label": "Traditional",
+      "hint": "Old village of stone and wood"
+    },
+    "upmarket": {
+      "label": "Upmarket",
+      "hint": "Smart shops and fine dining"
+    },
+    "skiin": {
+      "label": "Ski-in ski-out",
+      "hint": "Purpose-built, skis on at the door"
+    },
+    "town": {
+      "label": "Town life",
+      "hint": "Real shops, restaurants and everyday prices"
+    }
   }
 }

@@ -26,6 +26,7 @@ Any static host works (GitHub Pages, Netlify, Vercel, an S3 bucket). Opening `in
 - **Click a feeder town** to see every resort within reach, nearest first.
 - **Compare** up to four places side by side. One button pairs a resort with its cheaper bases. The best value in each row is highlighted.
 - **See the trip cost.** Enter nights, ski days, adults, children, and shuttle or hire car. Every place shows a whole-trip total: accommodation, lift passes, airport transfers and daily trips to the slopes. Each cheaper place under a resort shows what you save by staying there. For a feeder town, pick which resort you plan to ski. Flights, ski hire and food are not included.
+- **Pick a vibe.** Lively, quiet, traditional, upmarket, ski-in ski-out or town life. Choose any number, or none for all.
 - **Check the snow.** Pick the months you are going. Every resort shows how snow-sure it is for those months (snow-sure, usually fine, risky), month by month in its panel. Feeder towns show the best snow they reach. Filter to snow-sure places only, or sort by snow.
 - **Save a shortlist.** Tap the star or Save on any place. Your shortlist stays in your browser, shows as stars on the map, and can be compared or shared as a link.
 - **Share a place.** The address bar updates (`#fr-megeve`), so a link opens straight to it.

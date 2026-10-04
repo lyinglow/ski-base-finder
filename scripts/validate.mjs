@@ -36,6 +36,8 @@ for (const c of index.countries) {
     need([1, 2, 3].includes(l.price), "price must be 1, 2 or 3");
     need(SIZES.includes(l.townSize), "townSize must be small, medium or large");
     need(typeof l.family === "boolean", "family must be true or false");
+    need(Array.isArray(l.vibes) && l.vibes.length > 0 && l.vibes.every((v) => v in (index.vibes || {})),
+      `vibes must list one or more of: ${Object.keys(index.vibes || {}).join(", ")}`);
     need(l.character, "character missing");
     const fromKeys = Object.keys(l.fromOrigin || {});
     need(fromKeys.length > 0, "fromOrigin missing");

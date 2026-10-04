@@ -23,6 +23,7 @@ const state = {
   carFree: false,
   months: new Set(["jan", "feb", "mar"]),
   snowSure: false,
+  vibes: new Set(), // empty means any vibe
   trip: { nights: 7, skiDays: 6, adults: 2, children: 0, transport: "shuttle" },
   skiAt: {},
   sort: "time",
@@ -166,6 +167,7 @@ function passes(l) {
   if (l.type === "base" && reachable(l, model.byId)[0].link.min > state.maxHop) return false;
   if (!state.prices.has(l.price)) return false;
   if (state.family && !l.family) return false;
+  if (state.vibes.size && !l.vibes.some((v) => state.vibes.has(v))) return false;
   if (state.carFree && !l.carFree) return false;
   if (state.snowSure && snowOf(l) !== "good") return false;
   if (l.type === "resort") return state.sizes.has(l.skiSize);
@@ -366,6 +368,13 @@ function tripSection(l) {
     </section>`;
 }
 
+function vibePills(l) {
+  return `<p class="vibes">${l.vibes.map((v) => {
+    const def = model.index.vibes[v];
+    return `<span class="vibe${state.vibes.has(v) ? " on" : ""}" title="${esc(def.hint)}">${esc(def.label)}</span>`;
+  }).join("")}</p>`;
+}
+
 function renderDetail(l) {
   const t = travel(l);
   const band = model.priceBands[l.price];
@@ -373,6 +382,7 @@ function renderDetail(l) {
       <span class="eyebrow"><i class="dot ${l.type}"></i>${typeLabel(l)} · ${esc(l.region)}</span>
       <h2>${esc(l.name)}</h2>
       <p class="character">${esc(l.character)}</p>
+      ${vibePills(l)}
       <div class="d-actions">
         <button type="button" class="icon-btn save-icon" data-save="${l.id}" aria-pressed="${state.saved.has(l.id)}" aria-label="Save to shortlist" title="Save to shortlist"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6z" fill="var(--star-fill, none)" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></button>
         <button type="button" class="icon-btn" id="detail-min" aria-expanded="${!state.detailMin}" aria-label="${state.detailMin ? "Expand details" : "Minimise details"}" title="${state.detailMin ? "Expand" : "Minimise"}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -575,6 +585,7 @@ function renderCompareTable() {
         return `${flake(s)} ${SNOW_LABEL[s]}<small>best nearby: ${esc(bestSnowFrom(l).place.name)}</small>`;
       },
     },
+    { label: "Vibe", cell: (l) => vibePills(l) },
     { label: "Town size", cell: (l) => SIZE_LABEL[l.townSize] },
     { label: "Family-friendly", cell: (l) => (l.family ? "Yes" : "Less so") },
     { label: "No car needed", cell: (l) => (l.carFree ? "Yes" : "Car helps") },
@@ -677,6 +688,16 @@ function bindControls() {
     state.skiAt[e.target.dataset.base] = e.target.value;
     tripChanged();
   });
+  // Vibe chips start all off: no choice means any vibe.
+  $("#f-vibe").innerHTML = Object.entries(model.index.vibes).map(([key, v]) =>
+    `<button type="button" id="f-vibe-${key}" data-v="${key}" aria-pressed="false" title="${esc(v.hint)}">${esc(v.label)}</button>`).join("");
+  $$("#f-vibe button").forEach((b) => b.addEventListener("click", () => {
+    const v = b.dataset.v;
+    state.vibes.has(v) ? state.vibes.delete(v) : state.vibes.add(v);
+    b.setAttribute("aria-pressed", state.vibes.has(v));
+    applyFilters();
+    if (state.selected) renderDetail(model.byId.get(state.selected));
+  }));
   $("#f-snow").addEventListener("change", (e) => { state.snowSure = e.target.checked; applyFilters(); });
 
   $("#f-family").addEventListener("change", (e) => { state.family = e.target.checked; applyFilters(); });

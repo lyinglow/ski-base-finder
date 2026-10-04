@@ -178,6 +178,16 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .toggle { display: flex; gap: 10px; align-items: center; font-size: 14px; cursor: pointer; }
 .toggle input { width: 18px; height: 18px; accent-color: var(--resort); margin: 0; }
 
+/* vibe */
+.label-note { text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 12px; margin-left: 4px; }
+.vibes { margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.vibe {
+  font-size: 12px; font-weight: 500; padding: 2px 9px; border-radius: 999px;
+  background: var(--panel-2); border: 1px solid var(--line); color: var(--ink); white-space: nowrap;
+}
+.vibe.on { border-color: var(--ink); }
+.compare .vibes { margin: 0; }
+
 /* trip cost */
 .trip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
 .trip-grid label {
@@ -368,7 +378,7 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 
 /* Minimised: just the name bar, so the map is clear. Tap the bar to expand. */
 .detail.is-min { bottom: auto; overflow: hidden; padding-block: 12px; cursor: pointer; }
-.detail.is-min > :not(.d-head), .detail.is-min .character { display: none; }
+.detail.is-min > :not(.d-head), .detail.is-min .character, .detail.is-min .vibes { display: none; }
 .detail.is-min .d-head h2 { font-size: 20px; }
 .detail.is-min .d-actions { top: 50%; transform: translateY(-50%); }
 .detail.is-min #detail-min svg { transform: rotate(180deg); }

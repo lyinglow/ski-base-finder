@@ -19,6 +19,10 @@
       "price": 3,
       "stayPerPerson": 125,
       "family": false,
+      "vibes": [
+        "lively",
+        "town"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -52,6 +56,10 @@
       "townSize": "small",
       "price": 2,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -95,6 +103,10 @@
       "price": 3,
       "stayPerPerson": 150,
       "family": true,
+      "vibes": [
+        "upmarket",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -128,6 +140,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -178,6 +194,10 @@
       "townSize": "small",
       "price": 2,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -220,6 +240,10 @@
       "townSize": "small",
       "price": 2,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -255,6 +279,11 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "lively",
+        "traditional",
+        "town"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -289,6 +318,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -334,6 +366,10 @@
       "townSize": "small",
       "price": 3,
       "family": true,
+      "vibes": [
+        "traditional",
+        "upmarket"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -376,6 +412,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -410,6 +449,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -451,6 +494,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -493,6 +539,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -526,6 +575,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner"
       ],
@@ -558,6 +610,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -594,6 +649,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -637,6 +695,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -679,6 +741,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -728,6 +793,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -770,6 +839,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "lively",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -804,6 +877,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -846,6 +922,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -881,6 +960,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner"
       ],
@@ -913,6 +995,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner"
       ],
@@ -945,6 +1030,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner"
       ],
@@ -977,6 +1065,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1012,6 +1103,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1053,6 +1148,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1102,6 +1200,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -1135,6 +1237,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1170,6 +1275,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner"
       ],
@@ -1204,6 +1312,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner"
       ],
@@ -1236,6 +1347,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1269,6 +1383,9 @@
       "townSize": "large",
       "price": 2,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -1303,6 +1420,10 @@
       "townSize": "large",
       "price": 2,
       "family": true,
+      "vibes": [
+        "skiin",
+        "lively"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -1337,6 +1458,10 @@
       "townSize": "small",
       "price": 2,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1386,6 +1511,10 @@
       "townSize": "small",
       "price": 2,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1427,6 +1556,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "intermediate"
       ],
@@ -1469,6 +1602,10 @@
       "price": 3,
       "stayPerPerson": 170,
       "family": false,
+      "vibes": [
+        "lively",
+        "upmarket"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -1504,6 +1641,10 @@
       "townSize": "medium",
       "price": 3,
       "family": true,
+      "vibes": [
+        "skiin",
+        "lively"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -1548,6 +1689,10 @@
       "price": 3,
       "stayPerPerson": 220,
       "family": true,
+      "vibes": [
+        "upmarket",
+        "lively"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -1583,6 +1728,10 @@
       "price": 3,
       "stayPerPerson": 160,
       "family": true,
+      "vibes": [
+        "upmarket",
+        "lively"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -1618,6 +1767,10 @@
       "price": 3,
       "stayPerPerson": 150,
       "family": false,
+      "vibes": [
+        "lively",
+        "skiin"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -1651,6 +1804,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -1693,6 +1849,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1726,6 +1886,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1759,6 +1923,9 @@
       "townSize": "small",
       "price": 2,
       "family": false,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -1794,6 +1961,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -1828,6 +1998,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet",
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1869,6 +2043,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -1911,6 +2088,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1946,6 +2126,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -1979,6 +2162,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -2020,6 +2206,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -2053,6 +2243,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -2086,6 +2280,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -2120,6 +2318,10 @@
       "townSize": "small",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -2153,6 +2355,10 @@
       "townSize": "large",
       "price": 2,
       "family": true,
+      "vibes": [
+        "lively",
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -2187,6 +2393,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -2230,6 +2440,9 @@
       "townSize": "medium",
       "price": 2,
       "family": false,
+      "vibes": [
+        "lively"
+      ],
       "levels": [
         "intermediate",
         "expert"
@@ -2265,6 +2478,10 @@
       "townSize": "small",
       "price": 2,
       "family": false,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "levels": [
         "expert"
       ],
@@ -2297,6 +2514,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -2330,6 +2550,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -2363,6 +2586,10 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
       "levels": [
         "beginner"
       ],
@@ -2395,6 +2622,10 @@
       "townSize": "large",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional",
+        "lively"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -2429,6 +2660,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "traditional"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -2465,6 +2699,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -2501,6 +2738,9 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate",
@@ -2535,6 +2775,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "skiin"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -2576,6 +2819,10 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
       "levels": [
         "beginner",
         "intermediate"
@@ -2608,6 +2855,10 @@
       "townSize": "large",
       "price": 2,
       "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
       "character": "Lakeside city with canals, an old town and real nightlife. Ski by day, city by night.",
       "fromOrigin": {
         "GVA": {
@@ -2663,6 +2914,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
       "character": "Market town at the foot of the Aravis. Supermarkets, cheese shops and local prices.",
       "fromOrigin": {
         "GVA": {
@@ -2703,6 +2958,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Real valley town with big views of Mont Blanc. Rail station and everyday prices.",
       "fromOrigin": {
         "GVA": {
@@ -2788,6 +3046,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "character": "Rail hub below Saint-Gervais. Trains up the Chamonix valley and a rack railway into the Les Houches slopes.",
       "fromOrigin": {
         "GVA": {
@@ -2860,6 +3121,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Plain industrial town on the motorway. Cheap beds and buses to four ski areas.",
       "fromOrigin": {
         "GVA": {
@@ -2932,6 +3196,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "character": "Old village at a crossroads between the Grand Massif and the Portes du Soleil.",
       "fromOrigin": {
         "GVA": {
@@ -2991,6 +3259,10 @@
       "townSize": "small",
       "price": 2,
       "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
       "character": "Calm village next to Morzine with its own lift into Avoriaz. Morzine access at lower prices.",
       "fromOrigin": {
         "GVA": {
@@ -3040,6 +3312,9 @@
       "townSize": "large",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Lakeside town with shops, markets and year-round life. Buses up to the Portes du Soleil.",
       "fromOrigin": {
         "GVA": {
@@ -3125,6 +3400,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "town",
+        "upmarket"
+      ],
       "character": "Elegant spa town on Lake Geneva. Ferries to Lausanne and quick access to the Chablais hills.",
       "fromOrigin": {
         "GVA": {
@@ -3181,6 +3460,9 @@
       "townSize": "large",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Geneva's French twin town. Cheapest beds near the airport and the main Léman Express hub.",
       "fromOrigin": {
         "GVA": {
@@ -3241,6 +3523,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Small administrative town in the Arve valley. Central for the Aravis and Grand Massif.",
       "fromOrigin": {
         "GVA": {
@@ -3294,6 +3579,10 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
       "character": "Medieval town and rail junction. Easy reach of the Aravis and the Chablais family hills.",
       "fromOrigin": {
         "GVA": {
@@ -3347,6 +3636,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "town",
+        "quiet"
+      ],
       "character": "Pays de Gex town at the foot of the Jura. Ten minutes from the Monts Jura lifts.",
       "fromOrigin": {
         "GVA": {
@@ -3386,6 +3679,10 @@
       "townSize": "medium",
       "price": 2,
       "family": true,
+      "vibes": [
+        "upmarket",
+        "town"
+      ],
       "character": "Spa town with a lake, casino and good restaurants. Between Geneva and the Jura slopes.",
       "fromOrigin": {
         "GVA": {
@@ -3424,6 +3721,9 @@
       "townSize": "large",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Former Olympic host city at the meeting of four valleys. Good value and good shops.",
       "fromOrigin": {
         "GVA": {
@@ -3493,6 +3793,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Small valley town at the foot of the 3 Vallées. Shuttle buses to every resort above it.",
       "fromOrigin": {
         "GVA": {
@@ -3574,6 +3877,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "character": "Quiet spa village with a gondola straight up to Méribel. 3 Vallées skiing at valley prices.",
       "fromOrigin": {
         "GVA": {
@@ -3613,6 +3919,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Small Tarentaise town with a station. Short bus rides up to La Plagne villages.",
       "fromOrigin": {
         "GVA": {
@@ -3667,6 +3976,10 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
       "character": "Lively valley town with a funicular to Les Arcs in seven minutes. Best-value base in the upper Tarentaise.",
       "fromOrigin": {
         "GVA": {
@@ -3738,6 +4051,10 @@
       "townSize": "large",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
       "character": "Historic capital of Savoie. City life and cheap stays, with small family areas 30 minutes away.",
       "fromOrigin": {
         "GVA": {
@@ -3777,6 +4094,9 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Valley capital of the Maurienne. Station, shops and everyday prices.",
       "fromOrigin": {
         "GVA": {
@@ -3839,6 +4159,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "character": "Small town at the foot of the Galibier road, with buses up to Valloire.",
       "fromOrigin": {
         "GVA": {
@@ -3894,6 +4217,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town"
+      ],
       "character": "Border town with fast trains. Short bus rides to four quiet resorts.",
       "fromOrigin": {
         "GVA": {
@@ -3950,6 +4276,10 @@
       "townSize": "large",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
       "character": "Big university city. City life, cheap stays and buses to six ski areas.",
       "fromOrigin": {
         "GVA": {
@@ -4022,6 +4352,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
       "character": "Valley village at the foot of the Alpe d'Huez hairpins. Buses up to two big areas.",
       "fromOrigin": {
         "GVA": {
@@ -4076,6 +4410,10 @@
       "townSize": "medium",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
       "character": "Fortified old town, the highest city in France. A gondola from town into Serre Chevalier.",
       "fromOrigin": {
         "GVA": {
@@ -4124,6 +4462,9 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "quiet"
+      ],
       "character": "Small station town below the Écrins. The cheapest base for Puy-Saint-Vincent.",
       "fromOrigin": {
         "GVA": {
@@ -4164,6 +4505,10 @@
       "townSize": "small",
       "price": 1,
       "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
       "character": "Old hilltop town by Lake Serre-Ponçon. Central for three southern resorts.",
       "fromOrigin": {
         "GVA": {
