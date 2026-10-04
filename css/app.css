@@ -13,6 +13,9 @@
   --base-soft: #fbf0dc;
   --good: #1f7a4a;
   --good-soft: #e3f3e9;
+  --snow-good: #1b8f5a;
+  --snow-fair: #c98a00;
+  --snow-poor: #c2412d;
   --star: #e0a400;
   --star-soft: #fdf4d6;
   --run-green: #2e9e5b;
@@ -39,6 +42,9 @@
     --base-soft: #3a2a10;
     --good: #6fd19a;
     --good-soft: #143224;
+    --snow-good: #5fd39a;
+    --snow-fair: #f0b43c;
+    --snow-poor: #f07a63;
     --star: #f5c33b;
     --star-soft: #3a2f0d;
     --run-black: #e6edf3;
@@ -58,6 +64,9 @@
   --base-soft: #3a2a10;
   --good: #6fd19a;
   --good-soft: #143224;
+  --snow-good: #5fd39a;
+  --snow-fair: #f0b43c;
+  --snow-poor: #f07a63;
   --star: #f5c33b;
   --star-soft: #3a2f0d;
   --run-black: #e6edf3;
@@ -166,6 +175,28 @@ input[type="range"] { width: 100%; accent-color: var(--resort); }
 
 .toggle { display: flex; gap: 10px; align-items: center; font-size: 14px; cursor: pointer; }
 .toggle input { width: 18px; height: 18px; accent-color: var(--resort); margin: 0; }
+
+/* snow */
+.flake { font-style: normal; font-size: 12px; line-height: 1; }
+.flake.good { color: var(--snow-good); }
+.flake.fair { color: var(--snow-fair); }
+.flake.poor { color: var(--snow-poor); }
+.months button { min-width: 46px; }
+.snow-key { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); }
+.snow-key span { display: inline-flex; gap: 4px; align-items: center; }
+.snow { display: grid; gap: 8px; }
+.snow-verdict { margin: 0; }
+.snow-note { margin: 0; font-size: 12.5px; color: var(--muted); }
+.snow-months { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.sm {
+  display: grid; justify-items: center; gap: 2px; padding: 6px 0 5px;
+  border-radius: 6px; background: var(--panel-2); border: 1.5px solid transparent;
+  font-size: 12px; color: var(--muted);
+}
+.sm b { font-weight: 600; }
+.sm .flake { font-size: 15px; }
+.sm.picked { border-color: var(--ink); color: var(--ink); background: var(--panel); }
+.link { border: 0; background: none; padding: 0; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
 /* shortlist */
 .shortlist-tools { display: grid; gap: 10px; }

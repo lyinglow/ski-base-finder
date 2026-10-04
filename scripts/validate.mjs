@@ -47,6 +47,12 @@ for (const c of index.countries) {
       need(l.topAltitude >= l.altitude, "topAltitude must be at or above altitude");
       need(l.skiArea?.name && l.skiArea.pisteKm > 0, "skiArea needs name and pisteKm");
       need(l.levels?.length && l.levels.every((v) => LEVELS.includes(v)), "levels invalid");
+      need(l.snowAdjust === undefined || (Number.isFinite(l.snowAdjust) && Math.abs(l.snowAdjust) <= 500),
+        "snowAdjust must be a number of metres, at most 500 either way");
+      for (const [m, v] of Object.entries(l.snow || {})) {
+        need(["dec", "jan", "feb", "mar", "apr"].includes(m) && ["good", "fair", "poor"].includes(v),
+          `snow.${m} must be good, fair or poor for dec to apr`);
+      }
     } else {
       need(l.links?.length > 0, "a base needs at least one link to a resort");
     }

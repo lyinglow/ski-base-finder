@@ -34,6 +34,18 @@
         </div>
 
         <div class="field">
+          <span class="label">When are you going?</span>
+          <div class="chips months" id="f-months">
+            <button type="button" id="f-m-dec" data-v="dec" aria-pressed="false">Dec</button>
+            <button type="button" id="f-m-jan" data-v="jan" aria-pressed="true">Jan</button>
+            <button type="button" id="f-m-feb" data-v="feb" aria-pressed="true">Feb</button>
+            <button type="button" id="f-m-mar" data-v="mar" aria-pressed="true">Mar</button>
+            <button type="button" id="f-m-apr" data-v="apr" aria-pressed="false">Apr</button>
+          </div>
+          <p class="snow-key"><span><i class="flake good">❄</i>Snow-sure</span><span><i class="flake fair">❄</i>Usually fine</span><span><i class="flake poor">❄</i>Risky</span></p>
+        </div>
+
+        <div class="field">
           <span class="label">Price to stay</span>
           <div class="chips" id="f-price">
             <button type="button" id="f-price-1" data-v="1" aria-pressed="true">€ Budget</button>
@@ -52,6 +64,10 @@
           </div>
         </div>
 
+        <label class="toggle" for="f-snow">
+          <input type="checkbox" id="f-snow">
+          <span>Snow-sure for my months</span>
+        </label>
         <label class="toggle" for="f-family">
           <input type="checkbox" id="f-family">
           <span>Family-friendly only</span>
@@ -80,6 +96,7 @@
             <option value="price">Price</option>
             <option value="altitude">Altitude</option>
             <option value="ski">Ski area size</option>
+            <option value="snow">Snow reliability</option>
           </select>
         </label>
       </div>

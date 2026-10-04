@@ -1,4 +1,4 @@
-import { loadData, cheaperStays, reachable } from "./data.js";
+import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
 import { createMap, setBasemap, setTerrain, setLinks, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
@@ -6,6 +6,7 @@ const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
+const SNOW_LABEL = { good: "Snow-sure", fair: "Usually fine", poor: "Risky" };
 const LEVEL_LABEL = { beginner: "Beginner", intermediate: "Intermediate", expert: "Expert" };
 const SIZE_LABEL = { small: "Small", medium: "Medium", large: "Large", huge: "Huge" };
 const MODE_LABEL = { car: "car", bus: "bus", train: "train", lift: "lift" };
@@ -18,6 +19,8 @@ const state = {
   sizes: new Set(["small", "medium", "large", "huge"]),
   family: false,
   carFree: false,
+  months: new Set(["jan", "feb", "mar"]),
+  snowSure: false,
   sort: "time",
   selected: null,
   related: new Set(),
@@ -71,6 +74,33 @@ function levelDots(levels = []) {
   }</span>`;
 }
 
+/* ---------- snow ---------- */
+
+const tripMonths = () => MONTHS.map((m) => m.key).filter((k) => state.months.has(k));
+const monthNames = () => {
+  const ks = tripMonths();
+  return ks.length === MONTHS.length ? "the whole season" : ks.map((k) => MONTHS.find((m) => m.key === k).label).join(", ");
+};
+const snowOf = (l) => snowFor(l, tripMonths(), model.byId);
+const flake = (rating, title = SNOW_LABEL[rating]) =>
+  `<i class="flake ${rating}" title="${esc(title)}" aria-label="${esc(title)}">❄</i>`;
+
+// Snow for the best resort a feeder town reaches, for the chosen months.
+function bestSnowFrom(place) {
+  return reachable(place, model.byId).reduce((best, r) => {
+    const a = SNOW_RANK[snowOf(r.place)], b = best ? SNOW_RANK[snowOf(best.place)] : -1;
+    return a > b || (a === b && r.link.min < best.link.min) ? r : best;
+  }, null);
+}
+
+function snowMonths(l) {
+  return `<div class="snow-months" role="list">${MONTHS.map((m) => {
+    const r = l.snow[m.key];
+    return `<span role="listitem" class="sm ${r}${state.months.has(m.key) ? " picked" : ""}" title="${m.label}: ${SNOW_LABEL[r]}">
+      <b>${m.label}</b>${flake(r)}</span>`;
+  }).join("")}</div>`;
+}
+
 function bestSkiFrom(place) {
   return reachable(place, model.byId).reduce(
     (best, r) => (!best || r.place.skiArea.pisteKm > best.place.skiArea.pisteKm ? r : best), null);
@@ -113,6 +143,7 @@ function passes(l) {
   if (!state.prices.has(l.price)) return false;
   if (state.family && !l.family) return false;
   if (state.carFree && !l.carFree) return false;
+  if (state.snowSure && snowOf(l) !== "good") return false;
   if (l.type === "resort") return state.sizes.has(l.skiSize);
   return reachable(l, model.byId).some((r) => state.sizes.has(r.place.skiSize));
 }
@@ -121,6 +152,7 @@ function sortKey(l) {
   switch (state.sort) {
     case "price": return [l.price, travel(l).min];
     case "altitude": return [-l.altitude, travel(l).min];
+    case "snow": return [-SNOW_RANK[snowOf(l)], -(l.type === "resort" ? snowAltitude(l) : snowAltitude(bestSnowFrom(l).place))];
     case "ski": return [-(l.skiArea?.pisteKm ?? bestSkiFrom(l)?.place.skiArea.pisteKm ?? 0), travel(l).min];
     default: return [travel(l).min, l.price];
   }
@@ -157,7 +189,7 @@ function resultItem(l) {
   return `<li><button type="button" class="result ${l.type}${l.id === state.selected ? " is-active" : ""}" data-id="${l.id}">
     <i class="dot ${l.type}"></i>
     <span class="r-main"><span class="r-name">${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
-    <span class="r-side"><span class="r-time">${mins(t.min)}</span><span class="r-price">${price(l.price)}</span></span>
+    <span class="r-side"><span class="r-time">${mins(t.min)}</span><span class="r-price">${price(l.price)} ${flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
   </button></li>`;
 }
 
@@ -298,6 +330,13 @@ function renderDetail(l) {
         <p><strong>${esc(l.skiArea.name)}</strong> · ${l.skiArea.pisteKm} km · ${SIZE_LABEL[l.skiSize]}</p>
         <p class="suits">Suits ${levelDots(l.levels)} ${l.levels.map((v) => LEVEL_LABEL[v]).join(", ")}</p>
       </section>`;
+    const s = snowOf(l);
+    body += `<section class="snow">
+        <span class="s-label">Snow</span>
+        <p class="snow-verdict ${s}">${flake(s)} <strong>${SNOW_LABEL[s]}</strong> for ${monthNames()}</p>
+        ${snowMonths(l)}
+        <p class="snow-note">Estimated from altitude: skiing up to ${l.topAltitude} m, village at ${l.altitude} m.${l.snowNote ? ` ${esc(l.snowNote)}` : ""}</p>
+      </section>`;
     body += `<section class="alt">
         <h3>Stay lower, ski here</h3>
         ${cheaper.length
@@ -313,6 +352,14 @@ function renderDetail(l) {
   } else {
     const r = reachable(l, model.byId);
     const savings = r.filter((x) => x.place.price > l.price);
+    const bs = bestSnowFrom(l);
+    const sr = snowOf(bs.place);
+    body += `<section class="snow">
+        <span class="s-label">Snow nearby</span>
+        <p class="snow-verdict ${sr}">${flake(sr)} <strong>${SNOW_LABEL[sr]}</strong> for ${monthNames()} at
+          <button type="button" class="link" data-select="${bs.place.id}">${esc(bs.place.name)}</button>, ${mins(bs.link.min)} away</p>
+        ${snowMonths(bs.place)}
+      </section>`;
     body += `<section class="alt">
         <h3>Resorts within reach</h3>
         <p class="hint">${r.length} resort${r.length === 1 ? "" : "s"}, nearest in ${mins(r[0].link.min)}.${savings.length ? ` Cheaper than staying in ${savings.length} of them.` : ""}</p>
@@ -434,6 +481,16 @@ function renderCompareTable() {
       cell: (l) => (l.type === "base" ? String(reachable(l, model.byId).filter((x) => x.link.min <= 30).length) : "—"),
     },
     { label: "Suits", cell: (l) => (l.levels ? levelDots(l.levels) : l.type === "base" ? "Depends on the resort" : "—") },
+    {
+      label: "Snow, your months",
+      vals: cols.map((l) => SNOW_RANK[snowOf(l)]),
+      win: Math.max,
+      cell: (l) => {
+        const s = snowOf(l);
+        if (l.type === "resort") return `${flake(s)} ${SNOW_LABEL[s]}<small>${monthNames()}</small>`;
+        return `${flake(s)} ${SNOW_LABEL[s]}<small>best nearby: ${esc(bestSnowFrom(l).place.name)}</small>`;
+      },
+    },
     { label: "Town size", cell: (l) => SIZE_LABEL[l.townSize] },
     { label: "Family-friendly", cell: (l) => (l.family ? "Yes" : "Less so") },
     { label: "No car needed", cell: (l) => (l.carFree ? "Yes" : "Car helps") },
@@ -501,6 +558,13 @@ function bindControls() {
   }));
   chipSet("#f-price", state.prices, Number);
   chipSet("#f-size", state.sizes, String);
+  chipSet("#f-months", state.months, String);
+  $("#f-months").addEventListener("click", () => {
+    // Month choice changes every snow rating, so redraw open panels too.
+    if (state.selected) renderDetail(model.byId.get(state.selected));
+    if (!$("#compare").hidden) renderCompareTable();
+  });
+  $("#f-snow").addEventListener("change", (e) => { state.snowSure = e.target.checked; applyFilters(); });
 
   $("#f-family").addEventListener("change", (e) => { state.family = e.target.checked; applyFilters(); });
   $("#f-carfree").addEventListener("change", (e) => { state.carFree = e.target.checked; applyFilters(); });

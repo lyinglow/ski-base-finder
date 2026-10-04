@@ -221,6 +221,8 @@
         "name": "Les Contamines-Hauteluce",
         "pisteKm": 120
       },
+      "snowAdjust": 200,
+      "snowNote": "Holds snow well for its height.",
       "character": "Traditional village at the end of a valley. Holds snow well for its height and stays calm at weekends.",
       "fromOrigin": {
         "GVA": {
@@ -287,6 +289,8 @@
         "name": "Portes du Soleil",
         "pisteKm": 600
       },
+      "snowAdjust": 100,
+      "snowNote": "High village, ski to the door.",
       "character": "Car-free, ski-in ski-out village on a cliff top. The most snow-sure base in the Portes du Soleil.",
       "fromOrigin": {
         "GVA": {
@@ -547,6 +551,8 @@
         "name": "Grand Massif",
         "pisteKm": 265
       },
+      "snowAdjust": 200,
+      "snowNote": "High north-facing bowl that holds snow well.",
       "character": "Car-free Bauhaus-designed resort in a high, snowy bowl. Ski to the door, little to do at night.",
       "fromOrigin": {
         "GVA": {
@@ -825,6 +831,8 @@
         "name": "Praz de Lys–Sommand",
         "pisteKm": 50
       },
+      "snowAdjust": 100,
+      "snowNote": "High plateau.",
       "character": "High, snow-sure plateau with easy slopes and long cross-country loops.",
       "fromOrigin": {
         "GVA": {
@@ -950,6 +958,8 @@
         "name": "Espace Diamant",
         "pisteKm": 192
       },
+      "snowAdjust": 150,
+      "snowNote": "Open plateau with reliable snow.",
       "character": "High, sunny pastures with wide easy runs. Olympic cross-country venue.",
       "fromOrigin": {
         "GVA": {
@@ -1102,6 +1112,8 @@
         "name": "Monts Jura (Crozet, Lélex, Mijoux)",
         "pisteKm": 50
       },
+      "snowAdjust": 100,
+      "snowNote": "Cold Jura climate.",
       "character": "Jura ridge looking straight down on Geneva and across to Mont Blanc. Thirty minutes from the airport.",
       "fromOrigin": {
         "GVA": {
@@ -1133,6 +1145,8 @@
         "name": "Les Rousses",
         "pisteKm": 40
       },
+      "snowAdjust": 150,
+      "snowNote": "Cold Jura climate.",
       "character": "Gentle Franco-Swiss area, better known for cross-country than downhill.",
       "fromOrigin": {
         "GVA": {
@@ -1422,6 +1436,8 @@
         "name": "Espace Killy",
         "pisteKm": 300
       },
+      "snowAdjust": 150,
+      "snowNote": "High, cold valley.",
       "character": "Big-name resort with serious terrain, late snow and a strong après scene.",
       "fromOrigin": {
         "GVA": {
@@ -1454,6 +1470,8 @@
         "name": "Espace Killy",
         "pisteKm": 300
       },
+      "snowAdjust": 300,
+      "snowNote": "Grande Motte glacier.",
       "character": "High, glacier-backed resort. One of the most snow-sure places in France.",
       "fromOrigin": {
         "GVA": {
@@ -1697,6 +1715,8 @@
         "name": "Sainte-Foy",
         "pisteKm": 70
       },
+      "snowAdjust": 100,
+      "snowNote": "North-east facing slopes.",
       "character": "Small, quiet resort with legendary off-piste and almost no queues.",
       "fromOrigin": {
         "GVA": {

@@ -22,6 +22,7 @@ export async function loadData() {
 
   for (const l of locations) {
     l.skiSize = l.skiArea ? skiSize(l.skiArea.pisteKm) : null;
+    if (l.type === "resort") l.snow = snowByMonth(l);
     // Car-free: a base needs a rail link plus bus, train or lift to a resort.
     // A resort counts unless its transfer note starts with "Car".
     const easyLinks = (l.links || []).some((k) => k.by.some((m) => m !== "car"));
@@ -43,6 +44,43 @@ async function getJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Could not load ${path} (${res.status})`);
   return res.json();
+}
+
+// Snow reliability by month, estimated from altitude.
+// "Snow altitude" leans toward the top lift, because most skiing happens up there,
+// but the village counts too: it decides whether you can ski back to the door.
+// A resort's optional snowAdjust (metres) credits glaciers, cold bowls and the like,
+// and an optional "snow" object in the data overrides any month outright.
+export const MONTHS = [
+  { key: "dec", label: "Dec", good: 2000, fair: 1500 },
+  { key: "jan", label: "Jan", good: 1600, fair: 1150 },
+  { key: "feb", label: "Feb", good: 1500, fair: 1100 },
+  { key: "mar", label: "Mar", good: 1800, fair: 1350 },
+  { key: "apr", label: "Apr", good: 2300, fair: 1900 },
+];
+export const SNOW_RANK = { good: 2, fair: 1, poor: 0 };
+
+export function snowAltitude(l) {
+  return Math.round(0.35 * l.altitude + 0.65 * l.topAltitude + (l.snowAdjust || 0));
+}
+
+function snowByMonth(l) {
+  const alt = snowAltitude(l);
+  const out = {};
+  for (const m of MONTHS) out[m.key] = alt >= m.good ? "good" : alt >= m.fair ? "fair" : "poor";
+  return { ...out, ...(l.snow || {}) };
+}
+
+// Rating for a trip across several months: the weakest month decides.
+export function snowFor(l, months, byId) {
+  if (l.type === "resort") {
+    return months.reduce((worst, m) => (SNOW_RANK[l.snow[m]] < SNOW_RANK[worst] ? l.snow[m] : worst), "good");
+  }
+  // A feeder town is as snow-sure as the best resort it reaches.
+  return reachable(l, byId).reduce((best, r) => {
+    const s = snowFor(r.place, months, byId);
+    return SNOW_RANK[s] > SNOW_RANK[best] ? s : best;
+  }, "poor");
 }
 
 export function skiSize(km) {
