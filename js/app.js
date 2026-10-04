@@ -21,6 +21,7 @@ const state = {
   sort: "time",
   selected: null,
   related: new Set(),
+  detailMin: false,
   compare: [],
 };
 
@@ -177,11 +178,12 @@ function select(id) {
   }
   $("#map").classList.add("has-selection");
   drawLinks(pairs, id);
+  state.detailMin = false;
   renderDetail(l);
   applyFilters();
 
   const narrow = matchMedia("(max-width: 899px)").matches;
-  if (narrow) closeSidebar();
+  if (narrow) setSidebar(false);
   // Frame the quick hops; far links still draw but should not pull the camera out.
   const near = pairs.filter(([, , k]) => k.min <= 35).flatMap(([a, b]) => [a.coords, b.coords]);
   const pts = near.length ? near : pairs.flatMap(([a, b]) => [a.coords, b.coords]);
@@ -267,7 +269,10 @@ function renderDetail(l) {
       <span class="eyebrow"><i class="dot ${l.type}"></i>${typeLabel(l)} · ${esc(l.region)}</span>
       <h2>${esc(l.name)}</h2>
       <p class="character">${esc(l.character)}</p>
-      <button type="button" class="close" id="detail-close" aria-label="Close details">×</button>
+      <div class="d-actions">
+        <button type="button" class="icon-btn" id="detail-min" aria-expanded="${!state.detailMin}" aria-label="${state.detailMin ? "Expand details" : "Minimise details"}" title="${state.detailMin ? "Expand" : "Minimise"}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" class="icon-btn" id="detail-close" aria-label="Close details" title="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      </div>
     </header>`;
 
   const stats = `<div class="stats">
@@ -317,6 +322,7 @@ function renderDetail(l) {
 
   const d = $("#detail");
   d.innerHTML = head + stats + getting + body + foot;
+  d.classList.toggle("is-min", state.detailMin);
   d.hidden = false;
   d.scrollTop = 0;
 }
@@ -481,9 +487,13 @@ function bindControls() {
 
   // Delegated actions used by the detail panel, compare bar and table.
   document.addEventListener("click", (e) => {
-    const t = e.target.closest("[data-select],[data-compare],[data-pair],#detail-close");
+    const t = e.target.closest("[data-select],[data-compare],[data-pair],#detail-close,#detail-min,.detail.is-min .d-head");
     if (!t) return;
     if (t.id === "detail-close") return clearSelection();
+    if (t.id === "detail-min" || t.classList.contains("d-head")) {
+      state.detailMin = !state.detailMin;
+      return renderDetail(model.byId.get(state.selected));
+    }
     if (t.dataset.select) { $("#compare").hidden = true; return select(t.dataset.select); }
     if (t.dataset.compare) return toggleCompare(t.dataset.compare);
     if (t.dataset.pair) return pairUp(t.dataset.pair);
@@ -514,16 +524,30 @@ function bindControls() {
 
   $("#reset-view").addEventListener("click", () => map.flyTo({ ...HOME_VIEW, duration: 1400 }));
 
-  $("#sidebar-toggle").addEventListener("click", () => {
-    const open = !$("#sidebar").classList.contains("open");
-    $("#sidebar").classList.toggle("open", open);
-    $("#sidebar-toggle").setAttribute("aria-expanded", open);
+  $("#sidebar-toggle").addEventListener("click", () => setSidebar(!sidebarOpen()));
+  $("#sidebar-hide").addEventListener("click", () => setSidebar(false));
+  // Switching between phone and desktop layouts starts with the panel in its default state.
+  matchMedia("(max-width: 899px)").addEventListener("change", () => {
+    $(".app").classList.remove("side-collapsed");
+    $("#sidebar").classList.remove("open");
+    map.resize();
   });
 }
 
-function closeSidebar() {
-  $("#sidebar").classList.remove("open");
-  $("#sidebar-toggle").setAttribute("aria-expanded", "false");
+// Phones: the panel is a sheet that slides up. Wider screens: it collapses to give the map full width.
+const isNarrow = () => matchMedia("(max-width: 899px)").matches;
+const sidebarOpen = () => (isNarrow()
+  ? $("#sidebar").classList.contains("open")
+  : !$(".app").classList.contains("side-collapsed"));
+
+function setSidebar(open) {
+  if (isNarrow()) {
+    $("#sidebar").classList.toggle("open", open);
+  } else {
+    $(".app").classList.toggle("side-collapsed", !open);
+    map.resize();
+  }
+  $("#sidebar-toggle").setAttribute("aria-expanded", open);
 }
 
 function renderDataNote() {

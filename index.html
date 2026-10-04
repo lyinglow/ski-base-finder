@@ -15,6 +15,7 @@
   <div class="app">
     <aside class="sidebar" id="sidebar" aria-label="Filters and places">
       <header class="brand">
+        <button type="button" id="sidebar-hide" class="icon-btn" aria-controls="sidebar" aria-label="Hide panel" title="Hide panel"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <h1>Ski Base Finder</h1>
         <p class="origin">From <strong id="origin-name">Geneva Airport</strong> · <span id="country-list">France</span></p>
       </header>
@@ -80,7 +81,7 @@
       <div id="map" aria-label="3D map of ski areas"></div>
 
       <div class="map-tools">
-        <button type="button" id="sidebar-toggle" class="tool only-mobile" aria-controls="sidebar" aria-expanded="false">Filters &amp; list</button>
+        <button type="button" id="sidebar-toggle" class="tool" aria-controls="sidebar" aria-expanded="false">Filters &amp; list</button>
         <div class="tool-group" role="group" aria-label="Map style">
           <button type="button" id="style-sat" class="tool" aria-pressed="true">Satellite</button>
           <button type="button" id="style-topo" class="tool" aria-pressed="false">Topo</button>

@@ -75,6 +75,16 @@ button { cursor: pointer; }
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.01em; text-wrap: balance; margin: 0; }
 
 .app { display: grid; grid-template-columns: var(--side) 1fr; height: 100%; }
+.app.side-collapsed { grid-template-columns: 0 1fr; }
+.app.side-collapsed .sidebar { visibility: hidden; padding: 0; border: 0; }
+.app:not(.side-collapsed) #sidebar-toggle { display: none; }
+
+.icon-btn {
+  width: 32px; height: 32px; flex: none; display: grid; place-items: center;
+  border: 0; border-radius: 50%; background: var(--panel-2); color: var(--ink); padding: 0;
+}
+.icon-btn:hover { background: var(--line); }
+.icon-btn svg { width: 16px; height: 16px; transition: transform .2s; }
 
 /* ---------- sidebar ---------- */
 .sidebar {
@@ -87,6 +97,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   padding: 20px 18px 16px;
   gap: 16px;
 }
+.brand { position: relative; padding-right: 40px; }
+.brand #sidebar-hide { position: absolute; top: -2px; right: 0; }
 .brand h1 { font-size: 30px; line-height: 1; font-weight: 700; }
 .origin { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
 .origin strong { color: var(--ink); font-weight: 600; }
@@ -254,10 +266,15 @@ input[type="range"] { width: 100%; accent-color: var(--resort); }
 .eyebrow { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
 .d-head h2 { font-size: 34px; line-height: 1.02; margin-top: 4px; font-weight: 700; }
 .character { margin: 8px 0 0; color: var(--muted); }
-.close {
-  position: absolute; top: -6px; right: -6px; width: 34px; height: 34px;
-  border: 0; border-radius: 50%; background: var(--panel-2); font-size: 22px; line-height: 1;
-}
+.d-head { padding-right: 76px; }
+.d-actions { position: absolute; top: -6px; right: -6px; display: flex; gap: 6px; }
+
+/* Minimised: just the name bar, so the map is clear. Tap the bar to expand. */
+.detail.is-min { bottom: auto; overflow: hidden; padding-block: 12px; cursor: pointer; }
+.detail.is-min > :not(.d-head), .detail.is-min .character { display: none; }
+.detail.is-min .d-head h2 { font-size: 24px; }
+.detail.is-min .d-actions { top: 50%; transform: translateY(-50%); }
+.detail.is-min #detail-min svg { transform: rotate(180deg); }
 
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .stat { background: var(--panel); padding: 9px 10px; display: grid; gap: 1px; min-width: 0; }
@@ -365,7 +382,8 @@ input[type="range"] { width: 100%; accent-color: var(--resort); }
 /* ---------- phones and small tablets ---------- */
 @media (max-width: 899px) {
   .app { grid-template-columns: 1fr; }
-  .only-mobile { display: inline-block; }
+  .app:not(.side-collapsed) #sidebar-toggle { display: inline-block; }
+  .brand #sidebar-hide svg { transform: rotate(-90deg); }
   .sidebar {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
     max-height: 82%; border-right: 0; border-radius: 16px 16px 0 0;
@@ -381,7 +399,9 @@ input[type="range"] { width: 100%; accent-color: var(--resort); }
   }
   .legend, .maplibregl-ctrl-top-right { display: none; }
   .compare-bar { bottom: 16px; }
-  .detail:not([hidden]) ~ .compare-bar { bottom: calc(58% + 10px); }
+  .detail.is-min { bottom: 0; padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .detail:not([hidden]):not(.is-min) ~ .compare-bar { bottom: calc(58% + 10px); }
+  .detail.is-min:not([hidden]) ~ .compare-bar { bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
   .compare { inset: 0; border-radius: 0; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .d-head h2 { font-size: 28px; }
