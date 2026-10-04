@@ -35,8 +35,24 @@
       "character": "Busy mountaineering town under Mont Blanc. Steep, high terrain and huge off-piste, spread over separate areas joined by bus.",
       "fromOrigin": {
         "GVA": {
-          "km": 88,
-          "min": 70
+          "km": 90,
+          "min": 75
+        },
+        "LYS": {
+          "km": 216,
+          "min": 125
+        },
+        "CMF": {
+          "km": 139,
+          "min": 90
+        },
+        "GNB": {
+          "km": 219,
+          "min": 125
+        },
+        "TRN": {
+          "km": 174,
+          "min": 115
         }
       },
       "transfer": "Shared shuttle about 1h15. Train via Saint-Gervais–Le Fayet.",
@@ -72,8 +88,24 @@
       "character": "Quiet village with tree-lined slopes, the sheltered choice on stormy days. Ten minutes from Chamonix.",
       "fromOrigin": {
         "GVA": {
-          "km": 80,
-          "min": 65
+          "km": 84,
+          "min": 70
+        },
+        "LYS": {
+          "km": 209,
+          "min": 120
+        },
+        "CMF": {
+          "km": 133,
+          "min": 85
+        },
+        "GNB": {
+          "km": 213,
+          "min": 120
+        },
+        "TRN": {
+          "km": 178,
+          "min": 120
         }
       },
       "transfer": "Shared shuttle about 1h. Mont-Blanc Express train stops here.",
@@ -119,8 +151,24 @@
       "character": "Smart medieval village with fur coats and fine dining. Gentle, scenic cruising across a very large area.",
       "fromOrigin": {
         "GVA": {
-          "km": 70,
-          "min": 65
+          "km": 78,
+          "min": 70
+        },
+        "LYS": {
+          "km": 171,
+          "min": 110
+        },
+        "CMF": {
+          "km": 93,
+          "min": 70
+        },
+        "GNB": {
+          "km": 159,
+          "min": 105
+        },
+        "TRN": {
+          "km": 203,
+          "min": 140
         }
       },
       "transfer": "Shared shuttle about 1h10. Bus from Sallanches station.",
@@ -156,8 +204,24 @@
       "character": "Old spa town with a gondola straight into the Megève ski area. Real town life, lower prices than Megève.",
       "fromOrigin": {
         "GVA": {
-          "km": 75,
-          "min": 65
+          "km": 77,
+          "min": 70
+        },
+        "LYS": {
+          "km": 182,
+          "min": 120
+        },
+        "CMF": {
+          "km": 104,
+          "min": 80
+        },
+        "GNB": {
+          "km": 170,
+          "min": 115
+        },
+        "TRN": {
+          "km": 193,
+          "min": 130
         }
       },
       "transfer": "Léman Express train to Le Fayet, then bus.",
@@ -210,8 +274,24 @@
       "character": "Sunny little village with the best Mont Blanc view in the area. Linked by lift to Megève.",
       "fromOrigin": {
         "GVA": {
-          "km": 65,
-          "min": 60
+          "km": 73,
+          "min": 65
+        },
+        "LYS": {
+          "km": 176,
+          "min": 115
+        },
+        "CMF": {
+          "km": 98,
+          "min": 75
+        },
+        "GNB": {
+          "km": 164,
+          "min": 110
+        },
+        "TRN": {
+          "km": 200,
+          "min": 135
         }
       },
       "transfer": "Shared shuttle about 1h. Bus from Sallanches.",
@@ -258,8 +338,24 @@
       "character": "Traditional village at the end of a valley. Holds snow well for its height and stays calm at weekends.",
       "fromOrigin": {
         "GVA": {
-          "km": 85,
-          "min": 75
+          "km": 86,
+          "min": 80
+        },
+        "LYS": {
+          "km": 190,
+          "min": 130
+        },
+        "CMF": {
+          "km": 112,
+          "min": 95
+        },
+        "GNB": {
+          "km": 178,
+          "min": 125
+        },
+        "TRN": {
+          "km": 202,
+          "min": 145
         }
       },
       "transfer": "Shared shuttle about 1h15. Bus from Le Fayet station.",
@@ -297,8 +393,24 @@
       "character": "Lively market town that works all year. Big chalet scene, lots of English spoken, gateway to Avoriaz and Les Gets.",
       "fromOrigin": {
         "GVA": {
-          "km": 75,
-          "min": 70
+          "km": 76,
+          "min": 80
+        },
+        "LYS": {
+          "km": 202,
+          "min": 130
+        },
+        "CMF": {
+          "km": 125,
+          "min": 95
+        },
+        "GNB": {
+          "km": 205,
+          "min": 130
+        },
+        "TRN": {
+          "km": 238,
+          "min": 170
         }
       },
       "transfer": "Shared shuttle about 1h15. Bus from Thonon or Cluses stations.",
@@ -337,8 +449,24 @@
       "character": "Car-free, ski-in ski-out village on a cliff top. The most snow-sure base in the Portes du Soleil.",
       "fromOrigin": {
         "GVA": {
-          "km": 85,
-          "min": 85
+          "km": 89,
+          "min": 95
+        },
+        "LYS": {
+          "km": 215,
+          "min": 145
+        },
+        "CMF": {
+          "km": 138,
+          "min": 110
+        },
+        "GNB": {
+          "km": 218,
+          "min": 145
+        },
+        "TRN": {
+          "km": 251,
+          "min": 185
         }
       },
       "transfer": "Shuttle to Morzine, then cable car or road up.",
@@ -384,8 +512,24 @@
       "character": "Pretty, family-minded village with easy slopes on both sides. Linked to Morzine.",
       "fromOrigin": {
         "GVA": {
-          "km": 65,
-          "min": 60
+          "km": 69,
+          "min": 70
+        },
+        "LYS": {
+          "km": 195,
+          "min": 120
+        },
+        "CMF": {
+          "km": 118,
+          "min": 85
+        },
+        "GNB": {
+          "km": 198,
+          "min": 120
+        },
+        "TRN": {
+          "km": 231,
+          "min": 160
         }
       },
       "transfer": "Shared shuttle about 1h. Bus from Cluses station.",
@@ -432,7 +576,23 @@
       "fromOrigin": {
         "GVA": {
           "km": 80,
-          "min": 85
+          "min": 90
+        },
+        "LYS": {
+          "km": 218,
+          "min": 150
+        },
+        "CMF": {
+          "km": 159,
+          "min": 120
+        },
+        "GNB": {
+          "km": 239,
+          "min": 155
+        },
+        "TRN": {
+          "km": 261,
+          "min": 195
         }
       },
       "transfer": "Shared shuttle about 1h30. Bus from Thonon station.",
@@ -468,8 +628,24 @@
       "character": "Quiet valley village with its own slopes and a free bus to Châtel.",
       "fromOrigin": {
         "GVA": {
-          "km": 80,
-          "min": 80
+          "km": 75,
+          "min": 85
+        },
+        "LYS": {
+          "km": 212,
+          "min": 140
+        },
+        "CMF": {
+          "km": 154,
+          "min": 110
+        },
+        "GNB": {
+          "km": 234,
+          "min": 145
+        },
+        "TRN": {
+          "km": 266,
+          "min": 200
         }
       },
       "transfer": "Shared shuttle about 1h20. Bus from Thonon or Évian.",
@@ -512,8 +688,24 @@
       "character": "Small, wild area loved by locals. No crowds and cheap passes. Morzine is 15 minutes up the road.",
       "fromOrigin": {
         "GVA": {
-          "km": 65,
-          "min": 65
+          "km": 66,
+          "min": 75
+        },
+        "LYS": {
+          "km": 204,
+          "min": 135
+        },
+        "CMF": {
+          "km": 131,
+          "min": 100
+        },
+        "GNB": {
+          "km": 211,
+          "min": 135
+        },
+        "TRN": {
+          "km": 244,
+          "min": 175
         }
       },
       "transfer": "Bus from Thonon station.",
@@ -557,8 +749,24 @@
       "character": "Balcony above Lake Geneva with views across to Switzerland. Simple, friendly and cheap.",
       "fromOrigin": {
         "GVA": {
-          "km": 65,
-          "min": 60
+          "km": 63,
+          "min": 75
+        },
+        "LYS": {
+          "km": 201,
+          "min": 135
+        },
+        "CMF": {
+          "km": 142,
+          "min": 105
+        },
+        "GNB": {
+          "km": 222,
+          "min": 140
+        },
+        "TRN": {
+          "km": 292,
+          "min": 200
         }
       },
       "transfer": "Train to Évian, then bus or taxi.",
@@ -592,8 +800,24 @@
       "character": "Tiny family hill above Évian. Good for a first week on skis.",
       "fromOrigin": {
         "GVA": {
-          "km": 60,
-          "min": 55
+          "km": 62,
+          "min": 75
+        },
+        "LYS": {
+          "km": 199,
+          "min": 135
+        },
+        "CMF": {
+          "km": 140,
+          "min": 105
+        },
+        "GNB": {
+          "km": 220,
+          "min": 140
+        },
+        "TRN": {
+          "km": 269,
+          "min": 200
         }
       },
       "transfer": "Train to Évian, then taxi.",
@@ -632,8 +856,24 @@
       "character": "Car-free Bauhaus-designed resort in a high, snowy bowl. Ski to the door, little to do at night.",
       "fromOrigin": {
         "GVA": {
-          "km": 70,
-          "min": 65
+          "km": 80,
+          "min": 80
+        },
+        "LYS": {
+          "km": 206,
+          "min": 130
+        },
+        "CMF": {
+          "km": 129,
+          "min": 95
+        },
+        "GNB": {
+          "km": 209,
+          "min": 130
+        },
+        "TRN": {
+          "km": 232,
+          "min": 165
         }
       },
       "transfer": "Shared shuttle about 1h10. Bus from Cluses station.",
@@ -669,8 +909,24 @@
       "character": "Listed stone village with shops and restaurants. Gondola up into the Grand Massif.",
       "fromOrigin": {
         "GVA": {
-          "km": 75,
-          "min": 65
+          "km": 67,
+          "min": 70
+        },
+        "LYS": {
+          "km": 193,
+          "min": 120
+        },
+        "CMF": {
+          "km": 116,
+          "min": 85
+        },
+        "GNB": {
+          "km": 196,
+          "min": 120
+        },
+        "TRN": {
+          "km": 229,
+          "min": 160
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -715,8 +971,24 @@
       "character": "Friendly wooded village, the quickest road access to the Grand Massif.",
       "fromOrigin": {
         "GVA": {
-          "km": 65,
-          "min": 55
+          "km": 64,
+          "min": 60
+        },
+        "LYS": {
+          "km": 190,
+          "min": 110
+        },
+        "CMF": {
+          "km": 113,
+          "min": 80
+        },
+        "GNB": {
+          "km": 193,
+          "min": 110
+        },
+        "TRN": {
+          "km": 216,
+          "min": 150
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -760,8 +1032,24 @@
       "character": "Valley village with a gondola to a sunny beginner plateau. Cheapest way into the Grand Massif.",
       "fromOrigin": {
         "GVA": {
-          "km": 65,
-          "min": 55
+          "km": 63,
+          "min": 65
+        },
+        "LYS": {
+          "km": 188,
+          "min": 115
+        },
+        "CMF": {
+          "km": 111,
+          "min": 80
+        },
+        "GNB": {
+          "km": 191,
+          "min": 115
+        },
+        "TRN": {
+          "km": 225,
+          "min": 155
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -814,8 +1102,24 @@
       "character": "Remote village at the head of the Giffre valley, linked to the Grand Massif by a long scenic run.",
       "fromOrigin": {
         "GVA": {
-          "km": 85,
+          "km": 72,
           "min": 75
+        },
+        "LYS": {
+          "km": 198,
+          "min": 125
+        },
+        "CMF": {
+          "km": 121,
+          "min": 90
+        },
+        "GNB": {
+          "km": 201,
+          "min": 125
+        },
+        "TRN": {
+          "km": 234,
+          "min": 165
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -861,8 +1165,24 @@
       "character": "Lively Aravis village with five connected mountains. Busy with Annecy and Geneva locals at weekends.",
       "fromOrigin": {
         "GVA": {
-          "km": 60,
-          "min": 55
+          "km": 58,
+          "min": 65
+        },
+        "LYS": {
+          "km": 159,
+          "min": 100
+        },
+        "CMF": {
+          "km": 82,
+          "min": 65
+        },
+        "GNB": {
+          "km": 162,
+          "min": 100
+        },
+        "TRN": {
+          "km": 241,
+          "min": 165
         }
       },
       "transfer": "Bus from Annecy station about 50 min.",
@@ -898,8 +1218,24 @@
       "character": "Working farm village in Reblochon country. Very family-focused with good beginner zones.",
       "fromOrigin": {
         "GVA": {
-          "km": 55,
-          "min": 55
+          "km": 56,
+          "min": 60
+        },
+        "LYS": {
+          "km": 159,
+          "min": 100
+        },
+        "CMF": {
+          "km": 82,
+          "min": 65
+        },
+        "GNB": {
+          "km": 162,
+          "min": 100
+        },
+        "TRN": {
+          "km": 246,
+          "min": 170
         }
       },
       "transfer": "Bus from Annecy station about 50 min.",
@@ -946,8 +1282,24 @@
       "character": "High, snow-sure plateau with easy slopes and long cross-country loops.",
       "fromOrigin": {
         "GVA": {
-          "km": 55,
-          "min": 55
+          "km": 62,
+          "min": 75
+        },
+        "LYS": {
+          "km": 190,
+          "min": 125
+        },
+        "CMF": {
+          "km": 120,
+          "min": 90
+        },
+        "GNB": {
+          "km": 200,
+          "min": 125
+        },
+        "TRN": {
+          "km": 234,
+          "min": 165
         }
       },
       "transfer": "Car recommended.",
@@ -981,8 +1333,24 @@
       "character": "Low, local family area 40 minutes from Geneva. Best after a fresh fall.",
       "fromOrigin": {
         "GVA": {
-          "km": 40,
-          "min": 40
+          "km": 48,
+          "min": 55
+        },
+        "LYS": {
+          "km": 176,
+          "min": 110
+        },
+        "CMF": {
+          "km": 107,
+          "min": 75
+        },
+        "GNB": {
+          "km": 187,
+          "min": 110
+        },
+        "TRN": {
+          "km": 235,
+          "min": 165
         }
       },
       "transfer": "Car recommended.",
@@ -1016,8 +1384,24 @@
       "character": "Nearest real slopes to Geneva. Ideal for a day trip or a first week.",
       "fromOrigin": {
         "GVA": {
-          "km": 45,
-          "min": 45
+          "km": 43,
+          "min": 55
+        },
+        "LYS": {
+          "km": 171,
+          "min": 105
+        },
+        "CMF": {
+          "km": 103,
+          "min": 70
+        },
+        "GNB": {
+          "km": 183,
+          "min": 105
+        },
+        "TRN": {
+          "km": 253,
+          "min": 170
         }
       },
       "transfer": "Car recommended.",
@@ -1051,8 +1435,24 @@
       "character": "Small summit area above Annecy with lake and Mont Blanc views. A day-trip hill.",
       "fromOrigin": {
         "GVA": {
-          "km": 60,
-          "min": 60
+          "km": 70,
+          "min": 65
+        },
+        "LYS": {
+          "km": 131,
+          "min": 80
+        },
+        "CMF": {
+          "km": 54,
+          "min": 45
+        },
+        "GNB": {
+          "km": 134,
+          "min": 80
+        },
+        "TRN": {
+          "km": 235,
+          "min": 170
         }
       },
       "transfer": "Car from Annecy, 30 min.",
@@ -1090,8 +1490,24 @@
       "character": "High, sunny pastures with wide easy runs. Olympic cross-country venue.",
       "fromOrigin": {
         "GVA": {
-          "km": 100,
-          "min": 90
+          "km": 101,
+          "min": 95
+        },
+        "LYS": {
+          "km": 170,
+          "min": 110
+        },
+        "CMF": {
+          "km": 92,
+          "min": 75
+        },
+        "GNB": {
+          "km": 159,
+          "min": 105
+        },
+        "TRN": {
+          "km": 231,
+          "min": 160
         }
       },
       "transfer": "Shared shuttle about 1h30. Bus from Albertville station.",
@@ -1128,8 +1544,24 @@
       "character": "Small family village, a cheaper door into the Espace Diamant.",
       "fromOrigin": {
         "GVA": {
-          "km": 95,
+          "km": 92,
           "min": 85
+        },
+        "LYS": {
+          "km": 163,
+          "min": 100
+        },
+        "CMF": {
+          "km": 85,
+          "min": 65
+        },
+        "GNB": {
+          "km": 151,
+          "min": 100
+        },
+        "TRN": {
+          "km": 223,
+          "min": 150
         }
       },
       "transfer": "Bus from Albertville station.",
@@ -1173,8 +1605,24 @@
       "character": "Valley village five minutes below Megève, linked by lift to the Espace Diamant.",
       "fromOrigin": {
         "GVA": {
-          "km": 80,
-          "min": 70
+          "km": 83,
+          "min": 80
+        },
+        "LYS": {
+          "km": 166,
+          "min": 105
+        },
+        "CMF": {
+          "km": 88,
+          "min": 65
+        },
+        "GNB": {
+          "km": 154,
+          "min": 100
+        },
+        "TRN": {
+          "km": 208,
+          "min": 145
         }
       },
       "transfer": "Bus from Sallanches station.",
@@ -1227,8 +1675,24 @@
       "character": "Unspoilt Beaufortain village. Great off-piste and almost no new building.",
       "fromOrigin": {
         "GVA": {
-          "km": 125,
+          "km": 121,
+          "min": 115
+        },
+        "LYS": {
+          "km": 164,
+          "min": 105
+        },
+        "CMF": {
+          "km": 85,
+          "min": 70
+        },
+        "GNB": {
+          "km": 152,
           "min": 100
+        },
+        "TRN": {
+          "km": 224,
+          "min": 155
         }
       },
       "transfer": "Car recommended. Bus from Albertville.",
@@ -1265,8 +1729,24 @@
       "character": "Jura ridge looking straight down on Geneva and across to Mont Blanc. Thirty minutes from the airport.",
       "fromOrigin": {
         "GVA": {
-          "km": 25,
-          "min": 30
+          "km": 13,
+          "min": 25
+        },
+        "LYS": {
+          "km": 139,
+          "min": 95
+        },
+        "CMF": {
+          "km": 101,
+          "min": 75
+        },
+        "GNB": {
+          "km": 181,
+          "min": 110
+        },
+        "TRN": {
+          "km": 269,
+          "min": 185
         }
       },
       "transfer": "Car or taxi, 30 min.",
@@ -1302,8 +1782,24 @@
       "character": "Gentle Franco-Swiss area, better known for cross-country than downhill.",
       "fromOrigin": {
         "GVA": {
-          "km": 50,
-          "min": 50
+          "km": 46,
+          "min": 45
+        },
+        "LYS": {
+          "km": 151,
+          "min": 110
+        },
+        "CMF": {
+          "km": 132,
+          "min": 95
+        },
+        "GNB": {
+          "km": 212,
+          "min": 130
+        },
+        "TRN": {
+          "km": 297,
+          "min": 200
         }
       },
       "transfer": "Car recommended. Train to La Cure from Nyon.",
@@ -1337,8 +1833,24 @@
       "character": "Plateau above Chambéry and Aix-les-Bains. Mostly cross-country with some easy downhill.",
       "fromOrigin": {
         "GVA": {
-          "km": 95,
-          "min": 80
+          "km": 97,
+          "min": 75
+        },
+        "LYS": {
+          "km": 107,
+          "min": 70
+        },
+        "CMF": {
+          "km": 29,
+          "min": 35
+        },
+        "GNB": {
+          "km": 111,
+          "min": 75
+        },
+        "TRN": {
+          "km": 228,
+          "min": 150
         }
       },
       "transfer": "Car from Chambéry, 30 min.",
@@ -1373,8 +1885,24 @@
       "character": "Small, low-key area in the Bauges nature park.",
       "fromOrigin": {
         "GVA": {
-          "km": 100,
-          "min": 85
+          "km": 88,
+          "min": 80
+        },
+        "LYS": {
+          "km": 113,
+          "min": 80
+        },
+        "CMF": {
+          "km": 35,
+          "min": 40
+        },
+        "GNB": {
+          "km": 116,
+          "min": 80
+        },
+        "TRN": {
+          "km": 226,
+          "min": 155
         }
       },
       "transfer": "Car from Chambéry, 40 min.",
@@ -1411,8 +1939,24 @@
       "character": "Ten villages spread across a huge, mostly intermediate area. Built for skiing first.",
       "fromOrigin": {
         "GVA": {
-          "km": 150,
+          "km": 157,
           "min": 140
+        },
+        "LYS": {
+          "km": 196,
+          "min": 125
+        },
+        "CMF": {
+          "km": 118,
+          "min": 85
+        },
+        "GNB": {
+          "km": 184,
+          "min": 120
+        },
+        "TRN": {
+          "km": 256,
+          "min": 170
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Aime, then bus.",
@@ -1450,8 +1994,24 @@
       "character": "Purpose-built villages with a funicular from Bourg-Saint-Maurice station. Steep terrain up top.",
       "fromOrigin": {
         "GVA": {
-          "km": 155,
-          "min": 145
+          "km": 175,
+          "min": 155
+        },
+        "LYS": {
+          "km": 214,
+          "min": 140
+        },
+        "CMF": {
+          "km": 136,
+          "min": 105
+        },
+        "GNB": {
+          "km": 203,
+          "min": 135
+        },
+        "TRN": {
+          "km": 275,
+          "min": 190
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Bourg-Saint-Maurice, then funicular.",
@@ -1487,8 +2047,24 @@
       "character": "Wooded, quieter corner of Paradiski. The Vanoise Express links Les Arcs and La Plagne here.",
       "fromOrigin": {
         "GVA": {
-          "km": 150,
-          "min": 145
+          "km": 156,
+          "min": 135
+        },
+        "LYS": {
+          "km": 195,
+          "min": 120
+        },
+        "CMF": {
+          "km": 117,
+          "min": 85
+        },
+        "GNB": {
+          "km": 183,
+          "min": 120
+        },
+        "TRN": {
+          "km": 256,
+          "min": 170
         }
       },
       "transfer": "Train to Landry, then bus.",
@@ -1542,8 +2118,24 @@
       "character": "Old hamlet turned family resort on the La Plagne side of Paradiski.",
       "fromOrigin": {
         "GVA": {
-          "km": 145,
-          "min": 140
+          "km": 153,
+          "min": 135
+        },
+        "LYS": {
+          "km": 192,
+          "min": 120
+        },
+        "CMF": {
+          "km": 114,
+          "min": 80
+        },
+        "GNB": {
+          "km": 180,
+          "min": 115
+        },
+        "TRN": {
+          "km": 252,
+          "min": 165
         }
       },
       "transfer": "Train to Aime, then bus.",
@@ -1587,8 +2179,24 @@
       "character": "Sunny, authentic back door into La Plagne. Much cheaper than the main resort.",
       "fromOrigin": {
         "GVA": {
-          "km": 150,
-          "min": 135
+          "km": 142,
+          "min": 125
+        },
+        "LYS": {
+          "km": 181,
+          "min": 110
+        },
+        "CMF": {
+          "km": 103,
+          "min": 75
+        },
+        "GNB": {
+          "km": 170,
+          "min": 110
+        },
+        "TRN": {
+          "km": 242,
+          "min": 160
         }
       },
       "transfer": "Train to Moûtiers, then bus.",
@@ -1637,8 +2245,24 @@
       "character": "Big-name resort with serious terrain, late snow and a strong après scene.",
       "fromOrigin": {
         "GVA": {
-          "km": 190,
-          "min": 175
+          "km": 183,
+          "min": 170
+        },
+        "LYS": {
+          "km": 222,
+          "min": 155
+        },
+        "CMF": {
+          "km": 144,
+          "min": 115
+        },
+        "GNB": {
+          "km": 210,
+          "min": 150
+        },
+        "TRN": {
+          "km": 283,
+          "min": 205
         }
       },
       "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
@@ -1677,8 +2301,24 @@
       "character": "High, glacier-backed resort. One of the most snow-sure places in France.",
       "fromOrigin": {
         "GVA": {
-          "km": 185,
-          "min": 170
+          "km": 181,
+          "min": 160
+        },
+        "LYS": {
+          "km": 220,
+          "min": 150
+        },
+        "CMF": {
+          "km": 142,
+          "min": 110
+        },
+        "GNB": {
+          "km": 208,
+          "min": 145
+        },
+        "TRN": {
+          "km": 281,
+          "min": 195
         }
       },
       "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
@@ -1726,8 +2366,24 @@
       "character": "Very smart, very expensive. Perfect grooming and the gateway to the world's largest linked area.",
       "fromOrigin": {
         "GVA": {
-          "km": 150,
-          "min": 135
+          "km": 148,
+          "min": 130
+        },
+        "LYS": {
+          "km": 187,
+          "min": 115
+        },
+        "CMF": {
+          "km": 109,
+          "min": 80
+        },
+        "GNB": {
+          "km": 175,
+          "min": 115
+        },
+        "TRN": {
+          "km": 248,
+          "min": 165
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -1765,8 +2421,24 @@
       "character": "Chalet-style village in the middle of the 3 Vallées. Strong British presence.",
       "fromOrigin": {
         "GVA": {
-          "km": 150,
-          "min": 140
+          "km": 141,
+          "min": 125
+        },
+        "LYS": {
+          "km": 180,
+          "min": 110
+        },
+        "CMF": {
+          "km": 102,
+          "min": 75
+        },
+        "GNB": {
+          "km": 168,
+          "min": 105
+        },
+        "TRN": {
+          "km": 240,
+          "min": 160
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -1804,8 +2476,24 @@
       "character": "Highest resort in Europe. Reliable snow, big parties, little charm.",
       "fromOrigin": {
         "GVA": {
-          "km": 165,
-          "min": 155
+          "km": 160,
+          "min": 140
+        },
+        "LYS": {
+          "km": 199,
+          "min": 125
+        },
+        "CMF": {
+          "km": 121,
+          "min": 90
+        },
+        "GNB": {
+          "km": 187,
+          "min": 125
+        },
+        "TRN": {
+          "km": 260,
+          "min": 175
         }
       },
       "transfer": "Shared shuttle about 2h45. Train to Moûtiers, then bus.",
@@ -1842,8 +2530,24 @@
       "character": "Practical, value base in the 3 Vallées. Ski to Val Thorens in minutes.",
       "fromOrigin": {
         "GVA": {
-          "km": 160,
-          "min": 145
+          "km": 151,
+          "min": 135
+        },
+        "LYS": {
+          "km": 190,
+          "min": 120
+        },
+        "CMF": {
+          "km": 112,
+          "min": 85
+        },
+        "GNB": {
+          "km": 178,
+          "min": 115
+        },
+        "TRN": {
+          "km": 251,
+          "min": 165
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -1889,8 +2593,24 @@
       "character": "Car-free family village built around one pedestrian street.",
       "fromOrigin": {
         "GVA": {
-          "km": 140,
-          "min": 125
+          "km": 134,
+          "min": 120
+        },
+        "LYS": {
+          "km": 173,
+          "min": 105
+        },
+        "CMF": {
+          "km": 95,
+          "min": 70
+        },
+        "GNB": {
+          "km": 161,
+          "min": 105
+        },
+        "TRN": {
+          "km": 233,
+          "min": 155
         }
       },
       "transfer": "Train to Moûtiers, then bus.",
@@ -1927,8 +2647,24 @@
       "character": "Sunny balcony facing the sun, linked over the border to La Thuile in Italy.",
       "fromOrigin": {
         "GVA": {
-          "km": 175,
-          "min": 160
+          "km": 173,
+          "min": 155
+        },
+        "LYS": {
+          "km": 213,
+          "min": 140
+        },
+        "CMF": {
+          "km": 135,
+          "min": 105
+        },
+        "GNB": {
+          "km": 201,
+          "min": 140
+        },
+        "TRN": {
+          "km": 273,
+          "min": 190
         }
       },
       "transfer": "Train to Bourg-Saint-Maurice, then bus.",
@@ -1965,8 +2701,24 @@
       "character": "Small, quiet resort with legendary off-piste and almost no queues.",
       "fromOrigin": {
         "GVA": {
-          "km": 170,
-          "min": 155
+          "km": 168,
+          "min": 160
+        },
+        "LYS": {
+          "km": 208,
+          "min": 145
+        },
+        "CMF": {
+          "km": 130,
+          "min": 105
+        },
+        "GNB": {
+          "km": 196,
+          "min": 140
+        },
+        "TRN": {
+          "km": 268,
+          "min": 195
         }
       },
       "transfer": "Train to Bourg-Saint-Maurice, then taxi.",
@@ -2002,8 +2754,24 @@
       "character": "Lively, real village with a church square and shops. Linked to Valmeinier.",
       "fromOrigin": {
         "GVA": {
-          "km": 205,
-          "min": 150
+          "km": 196,
+          "min": 130
+        },
+        "LYS": {
+          "km": 190,
+          "min": 110
+        },
+        "CMF": {
+          "km": 112,
+          "min": 75
+        },
+        "GNB": {
+          "km": 178,
+          "min": 110
+        },
+        "TRN": {
+          "km": 144,
+          "min": 105
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
@@ -2040,8 +2808,24 @@
       "character": "Quiet, high station on the cheaper side of Galibier-Thabor.",
       "fromOrigin": {
         "GVA": {
-          "km": 205,
-          "min": 155
+          "km": 192,
+          "min": 130
+        },
+        "LYS": {
+          "km": 186,
+          "min": 110
+        },
+        "CMF": {
+          "km": 108,
+          "min": 75
+        },
+        "GNB": {
+          "km": 174,
+          "min": 110
+        },
+        "TRN": {
+          "km": 140,
+          "min": 105
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
@@ -2085,8 +2869,24 @@
       "character": "Tiny valley village with a long gondola up to Val Thorens. The cheapest door into the 3 Vallées.",
       "fromOrigin": {
         "GVA": {
-          "km": 195,
-          "min": 140
+          "km": 185,
+          "min": 120
+        },
+        "LYS": {
+          "km": 179,
+          "min": 105
+        },
+        "CMF": {
+          "km": 101,
+          "min": 65
+        },
+        "GNB": {
+          "km": 167,
+          "min": 100
+        },
+        "TRN": {
+          "km": 123,
+          "min": 90
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then taxi.",
@@ -2133,8 +2933,24 @@
       "character": "Friendly, family-run resort high above the valley. No through traffic.",
       "fromOrigin": {
         "GVA": {
-          "km": 200,
-          "min": 150
+          "km": 183,
+          "min": 120
+        },
+        "LYS": {
+          "km": 177,
+          "min": 105
+        },
+        "CMF": {
+          "km": 99,
+          "min": 70
+        },
+        "GNB": {
+          "km": 165,
+          "min": 105
+        },
+        "TRN": {
+          "km": 150,
+          "min": 110
         }
       },
       "transfer": "Car recommended. Bus from Saint-Jean-de-Maurienne.",
@@ -2170,8 +2986,24 @@
       "character": "Big, open, sunny area. Good value family skiing.",
       "fromOrigin": {
         "GVA": {
-          "km": 190,
-          "min": 140
+          "km": 182,
+          "min": 120
+        },
+        "LYS": {
+          "km": 176,
+          "min": 105
+        },
+        "CMF": {
+          "km": 98,
+          "min": 70
+        },
+        "GNB": {
+          "km": 164,
+          "min": 100
+        },
+        "TRN": {
+          "km": 156,
+          "min": 115
         }
       },
       "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
@@ -2207,8 +3039,24 @@
       "character": "Car-free, ski-in ski-out blocks in the middle of Les Sybelles.",
       "fromOrigin": {
         "GVA": {
-          "km": 190,
+          "km": 187,
           "min": 140
+        },
+        "LYS": {
+          "km": 181,
+          "min": 125
+        },
+        "CMF": {
+          "km": 103,
+          "min": 90
+        },
+        "GNB": {
+          "km": 169,
+          "min": 120
+        },
+        "TRN": {
+          "km": 161,
+          "min": 135
         }
       },
       "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
@@ -2254,8 +3102,24 @@
       "character": "Sunny, authentic village facing the Vanoise peaks.",
       "fromOrigin": {
         "GVA": {
-          "km": 235,
-          "min": 175
+          "km": 203,
+          "min": 130
+        },
+        "LYS": {
+          "km": 197,
+          "min": 115
+        },
+        "CMF": {
+          "km": 118,
+          "min": 80
+        },
+        "GNB": {
+          "km": 185,
+          "min": 110
+        },
+        "TRN": {
+          "km": 123,
+          "min": 90
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -2292,8 +3156,24 @@
       "character": "Car-free family resort in a forest bowl above Modane.",
       "fromOrigin": {
         "GVA": {
-          "km": 230,
-          "min": 170
+          "km": 201,
+          "min": 130
+        },
+        "LYS": {
+          "km": 194,
+          "min": 115
+        },
+        "CMF": {
+          "km": 116,
+          "min": 80
+        },
+        "GNB": {
+          "km": 183,
+          "min": 115
+        },
+        "TRN": {
+          "km": 121,
+          "min": 90
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -2331,8 +3211,24 @@
       "character": "Chain of old villages in the upper Maurienne. Long, easy runs and few crowds.",
       "fromOrigin": {
         "GVA": {
-          "km": 245,
-          "min": 185
+          "km": 219,
+          "min": 145
+        },
+        "LYS": {
+          "km": 212,
+          "min": 130
+        },
+        "CMF": {
+          "km": 134,
+          "min": 95
+        },
+        "GNB": {
+          "km": 201,
+          "min": 125
+        },
+        "TRN": {
+          "km": 142,
+          "min": 110
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -2368,8 +3264,24 @@
       "character": "One of France's prettiest stone villages. High, snowy and tiny.",
       "fromOrigin": {
         "GVA": {
-          "km": 260,
-          "min": 200
+          "km": 237,
+          "min": 160
+        },
+        "LYS": {
+          "km": 231,
+          "min": 145
+        },
+        "CMF": {
+          "km": 153,
+          "min": 110
+        },
+        "GNB": {
+          "km": 219,
+          "min": 140
+        },
+        "TRN": {
+          "km": 160,
+          "min": 125
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -2407,8 +3319,24 @@
       "character": "Huge, sunny area with very long runs, including the 16 km Sarenne. Lively at night.",
       "fromOrigin": {
         "GVA": {
-          "km": 210,
-          "min": 170
+          "km": 215,
+          "min": 155
+        },
+        "LYS": {
+          "km": 154,
+          "min": 110
+        },
+        "CMF": {
+          "km": 131,
+          "min": 105
+        },
+        "GNB": {
+          "km": 106,
+          "min": 85
+        },
+        "TRN": {
+          "km": 195,
+          "min": 165
         }
       },
       "transfer": "Train to Grenoble, then bus about 1h30.",
@@ -2445,8 +3373,24 @@
       "character": "Quiet village with a big cable car straight into the Alpe d'Huez area.",
       "fromOrigin": {
         "GVA": {
-          "km": 210,
-          "min": 170
+          "km": 205,
+          "min": 155
+        },
+        "LYS": {
+          "km": 144,
+          "min": 100
+        },
+        "CMF": {
+          "km": 121,
+          "min": 100
+        },
+        "GNB": {
+          "km": 96,
+          "min": 75
+        },
+        "TRN": {
+          "km": 297,
+          "min": 205
         }
       },
       "transfer": "Train to Grenoble, then bus.",
@@ -2493,8 +3437,24 @@
       "character": "Long, narrow ski area topped by a glacier. Big party scene.",
       "fromOrigin": {
         "GVA": {
-          "km": 215,
-          "min": 175
+          "km": 219,
+          "min": 160
+        },
+        "LYS": {
+          "km": 158,
+          "min": 110
+        },
+        "CMF": {
+          "km": 135,
+          "min": 105
+        },
+        "GNB": {
+          "km": 110,
+          "min": 85
+        },
+        "TRN": {
+          "km": 178,
+          "min": 150
         }
       },
       "transfer": "Train to Grenoble, then bus about 1h45.",
@@ -2529,8 +3489,24 @@
       "character": "Legendary off-piste with one lift and almost no grooming. For strong skiers with a guide.",
       "fromOrigin": {
         "GVA": {
-          "km": 230,
-          "min": 185
+          "km": 290,
+          "min": 210
+        },
+        "LYS": {
+          "km": 168,
+          "min": 115
+        },
+        "CMF": {
+          "km": 205,
+          "min": 160
+        },
+        "GNB": {
+          "km": 120,
+          "min": 90
+        },
+        "TRN": {
+          "km": 154,
+          "min": 130
         }
       },
       "transfer": "Car recommended.",
@@ -2566,8 +3542,24 @@
       "character": "Grenoble's local resort with Olympic history and big views.",
       "fromOrigin": {
         "GVA": {
-          "km": 165,
-          "min": 130
+          "km": 174,
+          "min": 125
+        },
+        "LYS": {
+          "km": 128,
+          "min": 85
+        },
+        "CMF": {
+          "km": 90,
+          "min": 70
+        },
+        "GNB": {
+          "km": 80,
+          "min": 60
+        },
+        "TRN": {
+          "km": 266,
+          "min": 175
         }
       },
       "transfer": "Train to Grenoble, then bus 1h.",
@@ -2602,8 +3594,24 @@
       "character": "Good value area between Grenoble and Chambéry, busy at weekends.",
       "fromOrigin": {
         "GVA": {
-          "km": 150,
-          "min": 115
+          "km": 142,
+          "min": 100
+        },
+        "LYS": {
+          "km": 136,
+          "min": 85
+        },
+        "CMF": {
+          "km": 58,
+          "min": 50
+        },
+        "GNB": {
+          "km": 82,
+          "min": 65
+        },
+        "TRN": {
+          "km": 234,
+          "min": 155
         }
       },
       "transfer": "Car recommended. Bus from Grenoble.",
@@ -2638,8 +3646,24 @@
       "character": "Family town on the Vercors plateau with big cross-country trails.",
       "fromOrigin": {
         "GVA": {
-          "km": 185,
-          "min": 140
+          "km": 184,
+          "min": 135
+        },
+        "LYS": {
+          "km": 115,
+          "min": 75
+        },
+        "CMF": {
+          "km": 100,
+          "min": 80
+        },
+        "GNB": {
+          "km": 67,
+          "min": 50
+        },
+        "TRN": {
+          "km": 276,
+          "min": 185
         }
       },
       "transfer": "Train to Grenoble, then bus 1h.",
@@ -2676,8 +3700,24 @@
       "character": "Long valley of villages and larch forests. Good skiing in bad weather.",
       "fromOrigin": {
         "GVA": {
-          "km": 300,
-          "min": 225
+          "km": 261,
+          "min": 190
+        },
+        "LYS": {
+          "km": 197,
+          "min": 140
+        },
+        "CMF": {
+          "km": 177,
+          "min": 135
+        },
+        "GNB": {
+          "km": 150,
+          "min": 115
+        },
+        "TRN": {
+          "km": 125,
+          "min": 105
         }
       },
       "transfer": "Train to Briançon, then bus.",
@@ -2716,8 +3756,24 @@
       "character": "Border village linked to the Italian Milky Way area. Very snowy.",
       "fromOrigin": {
         "GVA": {
-          "km": 295,
-          "min": 220
+          "km": 239,
+          "min": 165
+        },
+        "LYS": {
+          "km": 233,
+          "min": 150
+        },
+        "CMF": {
+          "km": 155,
+          "min": 115
+        },
+        "GNB": {
+          "km": 170,
+          "min": 135
+        },
+        "TRN": {
+          "km": 105,
+          "min": 85
         }
       },
       "transfer": "Train to Oulx in Italy, then bus.",
@@ -2756,8 +3812,24 @@
       "character": "Quiet family resort at the gate of the Écrins park. Great value and good snow.",
       "fromOrigin": {
         "GVA": {
-          "km": 320,
-          "min": 245
+          "km": 275,
+          "min": 200
+        },
+        "LYS": {
+          "km": 229,
+          "min": 175
+        },
+        "CMF": {
+          "km": 191,
+          "min": 150
+        },
+        "GNB": {
+          "km": 181,
+          "min": 150
+        },
+        "TRN": {
+          "km": 140,
+          "min": 120
         }
       },
       "transfer": "Train to L'Argentière-les-Écrins, then bus.",
@@ -2794,8 +3866,24 @@
       "character": "High, sunny resort in the southern Alps, linked to Risoul.",
       "fromOrigin": {
         "GVA": {
-          "km": 360,
-          "min": 270
+          "km": 303,
+          "min": 235
+        },
+        "LYS": {
+          "km": 256,
+          "min": 210
+        },
+        "CMF": {
+          "km": 218,
+          "min": 185
+        },
+        "GNB": {
+          "km": 209,
+          "min": 185
+        },
+        "TRN": {
+          "km": 168,
+          "min": 155
         }
       },
       "transfer": "Train to Embrun or Montdauphin, then bus.",
@@ -2831,8 +3919,24 @@
       "character": "Car-free, purpose-built village among larch trees. Good value.",
       "fromOrigin": {
         "GVA": {
-          "km": 355,
-          "min": 265
+          "km": 298,
+          "min": 220
+        },
+        "LYS": {
+          "km": 252,
+          "min": 190
+        },
+        "CMF": {
+          "km": 213,
+          "min": 165
+        },
+        "GNB": {
+          "km": 204,
+          "min": 165
+        },
+        "TRN": {
+          "km": 163,
+          "min": 140
         }
       },
       "transfer": "Train to Montdauphin, then bus.",
@@ -2878,8 +3982,24 @@
       "character": "Sunny family resort above Lake Serre-Ponçon.",
       "fromOrigin": {
         "GVA": {
-          "km": 370,
-          "min": 280
+          "km": 297,
+          "min": 230
+        },
+        "LYS": {
+          "km": 235,
+          "min": 185
+        },
+        "CMF": {
+          "km": 212,
+          "min": 180
+        },
+        "GNB": {
+          "km": 188,
+          "min": 160
+        },
+        "TRN": {
+          "km": 180,
+          "min": 150
         }
       },
       "transfer": "Train to Embrun, then bus.",
@@ -2905,8 +4025,24 @@
       "character": "Lakeside city with canals, an old town and real nightlife. Ski by day, city by night.",
       "fromOrigin": {
         "GVA": {
-          "km": 45,
-          "min": 45
+          "km": 49,
+          "min": 50
+        },
+        "LYS": {
+          "km": 127,
+          "min": 75
+        },
+        "CMF": {
+          "km": 50,
+          "min": 40
+        },
+        "GNB": {
+          "km": 130,
+          "min": 75
+        },
+        "TRN": {
+          "km": 261,
+          "min": 165
         }
       },
       "transfer": "Bus from the airport about 1h. Car 45 min.",
@@ -2964,8 +4100,24 @@
       "character": "Market town at the foot of the Aravis. Supermarkets, cheese shops and local prices.",
       "fromOrigin": {
         "GVA": {
-          "km": 55,
-          "min": 50
+          "km": 64,
+          "min": 60
+        },
+        "LYS": {
+          "km": 148,
+          "min": 90
+        },
+        "CMF": {
+          "km": 71,
+          "min": 55
+        },
+        "GNB": {
+          "km": 151,
+          "min": 90
+        },
+        "TRN": {
+          "km": 235,
+          "min": 160
         }
       },
       "transfer": "Car 50 min. Bus from Annecy.",
@@ -3007,8 +4159,24 @@
       "character": "Real valley town with big views of Mont Blanc. Rail station and everyday prices.",
       "fromOrigin": {
         "GVA": {
-          "km": 60,
-          "min": 50
+          "km": 66,
+          "min": 60
+        },
+        "LYS": {
+          "km": 191,
+          "min": 110
+        },
+        "CMF": {
+          "km": 115,
+          "min": 75
+        },
+        "GNB": {
+          "km": 195,
+          "min": 110
+        },
+        "TRN": {
+          "km": 197,
+          "min": 135
         }
       },
       "transfer": "Léman Express L3 from Geneva about 1h20.",
@@ -3095,8 +4263,24 @@
       "character": "Rail hub below Saint-Gervais. Trains up the Chamonix valley and a rack railway into the Les Houches slopes.",
       "fromOrigin": {
         "GVA": {
-          "km": 70,
-          "min": 55
+          "km": 73,
+          "min": 60
+        },
+        "LYS": {
+          "km": 199,
+          "min": 115
+        },
+        "CMF": {
+          "km": 122,
+          "min": 80
+        },
+        "GNB": {
+          "km": 202,
+          "min": 115
+        },
+        "TRN": {
+          "km": 189,
+          "min": 125
         }
       },
       "transfer": "Léman Express L3 terminus, about 1h30 from Geneva.",
@@ -3170,8 +4354,24 @@
       "character": "Plain industrial town on the motorway. Cheap beds and buses to four ski areas.",
       "fromOrigin": {
         "GVA": {
-          "km": 45,
-          "min": 40
+          "km": 54,
+          "min": 50
+        },
+        "LYS": {
+          "km": 180,
+          "min": 100
+        },
+        "CMF": {
+          "km": 103,
+          "min": 70
+        },
+        "GNB": {
+          "km": 183,
+          "min": 100
+        },
+        "TRN": {
+          "km": 210,
+          "min": 140
         }
       },
       "transfer": "Léman Express L3 from Geneva about 1h.",
@@ -3246,8 +4446,24 @@
       "character": "Old village at a crossroads between the Grand Massif and the Portes du Soleil.",
       "fromOrigin": {
         "GVA": {
-          "km": 55,
-          "min": 45
+          "km": 51,
+          "min": 60
+        },
+        "LYS": {
+          "km": 184,
+          "min": 110
+        },
+        "CMF": {
+          "km": 107,
+          "min": 75
+        },
+        "GNB": {
+          "km": 187,
+          "min": 110
+        },
+        "TRN": {
+          "km": 220,
+          "min": 150
         }
       },
       "transfer": "Car 45 min.",
@@ -3309,8 +4525,24 @@
       "character": "Calm village next to Morzine with its own lift into Avoriaz. Morzine access at lower prices.",
       "fromOrigin": {
         "GVA": {
-          "km": 80,
-          "min": 70
+          "km": 78,
+          "min": 80
+        },
+        "LYS": {
+          "km": 204,
+          "min": 130
+        },
+        "CMF": {
+          "km": 127,
+          "min": 95
+        },
+        "GNB": {
+          "km": 207,
+          "min": 130
+        },
+        "TRN": {
+          "km": 240,
+          "min": 170
         }
       },
       "transfer": "Shuttle to Morzine about 1h15.",
@@ -3361,8 +4593,24 @@
       "character": "Lakeside town with shops, markets and year-round life. Buses up to the Portes du Soleil.",
       "fromOrigin": {
         "GVA": {
-          "km": 45,
-          "min": 45
+          "km": 42,
+          "min": 60
+        },
+        "LYS": {
+          "km": 177,
+          "min": 115
+        },
+        "CMF": {
+          "km": 118,
+          "min": 85
+        },
+        "GNB": {
+          "km": 198,
+          "min": 120
+        },
+        "TRN": {
+          "km": 269,
+          "min": 180
         }
       },
       "transfer": "Léman Express L1 direct from Geneva about 50 min.",
@@ -3450,8 +4698,24 @@
       "character": "Elegant spa town on Lake Geneva. Ferries to Lausanne and quick access to the Chablais hills.",
       "fromOrigin": {
         "GVA": {
-          "km": 50,
-          "min": 50
+          "km": 53,
+          "min": 65
+        },
+        "LYS": {
+          "km": 190,
+          "min": 125
+        },
+        "CMF": {
+          "km": 132,
+          "min": 95
+        },
+        "GNB": {
+          "km": 212,
+          "min": 130
+        },
+        "TRN": {
+          "km": 282,
+          "min": 190
         }
       },
       "transfer": "Léman Express L1 direct from Geneva about 1h.",
@@ -3509,8 +4773,24 @@
       "character": "Geneva's French twin town. Cheapest beds near the airport and the main Léman Express hub.",
       "fromOrigin": {
         "GVA": {
-          "km": 15,
-          "min": 20
+          "km": 17,
+          "min": 35
+        },
+        "LYS": {
+          "km": 147,
+          "min": 85
+        },
+        "CMF": {
+          "km": 89,
+          "min": 60
+        },
+        "GNB": {
+          "km": 169,
+          "min": 95
+        },
+        "TRN": {
+          "km": 245,
+          "min": 160
         }
       },
       "transfer": "Léman Express from Geneva about 20 min.",
@@ -3572,8 +4852,24 @@
       "character": "Small administrative town in the Arve valley. Central for the Aravis and Grand Massif.",
       "fromOrigin": {
         "GVA": {
-          "km": 35,
-          "min": 30
+          "km": 37,
+          "min": 45
+        },
+        "LYS": {
+          "km": 162,
+          "min": 90
+        },
+        "CMF": {
+          "km": 86,
+          "min": 60
+        },
+        "GNB": {
+          "km": 166,
+          "min": 90
+        },
+        "TRN": {
+          "km": 224,
+          "min": 145
         }
       },
       "transfer": "Léman Express L3 from Geneva about 45 min.",
@@ -3629,8 +4925,24 @@
       "character": "Medieval town and rail junction. Easy reach of the Aravis and the Chablais family hills.",
       "fromOrigin": {
         "GVA": {
-          "km": 30,
-          "min": 30
+          "km": 37,
+          "min": 45
+        },
+        "LYS": {
+          "km": 154,
+          "min": 85
+        },
+        "CMF": {
+          "km": 78,
+          "min": 50
+        },
+        "GNB": {
+          "km": 158,
+          "min": 85
+        },
+        "TRN": {
+          "km": 232,
+          "min": 150
         }
       },
       "transfer": "Léman Express from Geneva about 35 min.",
@@ -3686,8 +4998,24 @@
       "character": "Pays de Gex town at the foot of the Jura. Ten minutes from the Monts Jura lifts.",
       "fromOrigin": {
         "GVA": {
-          "km": 20,
+          "km": 16,
           "min": 25
+        },
+        "LYS": {
+          "km": 145,
+          "min": 95
+        },
+        "CMF": {
+          "km": 105,
+          "min": 75
+        },
+        "GNB": {
+          "km": 185,
+          "min": 110
+        },
+        "TRN": {
+          "km": 270,
+          "min": 185
         }
       },
       "transfer": "Car or bus 25 min.",
@@ -3729,8 +5057,24 @@
       "character": "Spa town with a lake, casino and good restaurants. Between Geneva and the Jura slopes.",
       "fromOrigin": {
         "GVA": {
-          "km": 20,
-          "min": 20
+          "km": 19,
+          "min": 30
+        },
+        "LYS": {
+          "km": 163,
+          "min": 100
+        },
+        "CMF": {
+          "km": 105,
+          "min": 75
+        },
+        "GNB": {
+          "km": 185,
+          "min": 110
+        },
+        "TRN": {
+          "km": 270,
+          "min": 180
         }
       },
       "transfer": "Car 20 min.",
@@ -3770,8 +5114,24 @@
       "character": "Former Olympic host city at the meeting of four valleys. Good value and good shops.",
       "fromOrigin": {
         "GVA": {
-          "km": 95,
+          "km": 97,
+          "min": 90
+        },
+        "LYS": {
+          "km": 139,
+          "min": 80
+        },
+        "CMF": {
+          "km": 61,
+          "min": 45
+        },
+        "GNB": {
+          "km": 127,
           "min": 75
+        },
+        "TRN": {
+          "km": 200,
+          "min": 130
         }
       },
       "transfer": "Train via Annecy or Chambéry about 2h. Car 1h15.",
@@ -3842,8 +5202,24 @@
       "character": "Small valley town at the foot of the 3 Vallées. Shuttle buses to every resort above it.",
       "fromOrigin": {
         "GVA": {
-          "km": 135,
-          "min": 115
+          "km": 124,
+          "min": 110
+        },
+        "LYS": {
+          "km": 163,
+          "min": 95
+        },
+        "CMF": {
+          "km": 85,
+          "min": 60
+        },
+        "GNB": {
+          "km": 151,
+          "min": 90
+        },
+        "TRN": {
+          "km": 224,
+          "min": 145
         }
       },
       "transfer": "Train via Annecy or Chambéry about 2h30. Car 2h.",
@@ -3926,8 +5302,24 @@
       "character": "Quiet spa village with a gondola straight up to Méribel. 3 Vallées skiing at valley prices.",
       "fromOrigin": {
         "GVA": {
-          "km": 140,
-          "min": 120
+          "km": 130,
+          "min": 115
+        },
+        "LYS": {
+          "km": 169,
+          "min": 100
+        },
+        "CMF": {
+          "km": 91,
+          "min": 65
+        },
+        "GNB": {
+          "km": 157,
+          "min": 95
+        },
+        "TRN": {
+          "km": 230,
+          "min": 150
         }
       },
       "transfer": "Train to Moûtiers, then bus 15 min.",
@@ -3968,8 +5360,24 @@
       "character": "Small Tarentaise town with a station. Short bus rides up to La Plagne villages.",
       "fromOrigin": {
         "GVA": {
-          "km": 145,
-          "min": 125
+          "km": 138,
+          "min": 120
+        },
+        "LYS": {
+          "km": 177,
+          "min": 105
+        },
+        "CMF": {
+          "km": 99,
+          "min": 70
+        },
+        "GNB": {
+          "km": 165,
+          "min": 105
+        },
+        "TRN": {
+          "km": 238,
+          "min": 155
         }
       },
       "transfer": "Train via Chambéry about 2h45. Car 2h.",
@@ -4026,8 +5434,24 @@
       "character": "Lively valley town with a funicular to Les Arcs in seven minutes. Best-value base in the upper Tarentaise.",
       "fromOrigin": {
         "GVA": {
-          "km": 155,
+          "km": 151,
           "min": 135
+        },
+        "LYS": {
+          "km": 190,
+          "min": 120
+        },
+        "CMF": {
+          "km": 112,
+          "min": 80
+        },
+        "GNB": {
+          "km": 178,
+          "min": 115
+        },
+        "TRN": {
+          "km": 251,
+          "min": 170
         }
       },
       "transfer": "Train via Chambéry about 3h. Car 2h15.",
@@ -4101,8 +5525,24 @@
       "character": "Historic capital of Savoie. City life and cheap stays, with small family areas 30 minutes away.",
       "fromOrigin": {
         "GVA": {
-          "km": 90,
-          "min": 65
+          "km": 95,
+          "min": 70
+        },
+        "LYS": {
+          "km": 89,
+          "min": 55
+        },
+        "CMF": {
+          "km": 11,
+          "min": 20
+        },
+        "GNB": {
+          "km": 92,
+          "min": 55
+        },
+        "TRN": {
+          "km": 214,
+          "min": 140
         }
       },
       "transfer": "Car 1h05. Train via Annecy.",
@@ -4143,8 +5583,24 @@
       "character": "Valley capital of the Maurienne. Station, shops and everyday prices.",
       "fromOrigin": {
         "GVA": {
-          "km": 175,
-          "min": 125
+          "km": 166,
+          "min": 105
+        },
+        "LYS": {
+          "km": 160,
+          "min": 90
+        },
+        "CMF": {
+          "km": 82,
+          "min": 55
+        },
+        "GNB": {
+          "km": 148,
+          "min": 85
+        },
+        "TRN": {
+          "km": 140,
+          "min": 100
         }
       },
       "transfer": "Train via Chambéry about 2h30. Car 2h05.",
@@ -4208,8 +5664,24 @@
       "character": "Small town at the foot of the Galibier road, with buses up to Valloire.",
       "fromOrigin": {
         "GVA": {
-          "km": 190,
-          "min": 135
+          "km": 178,
+          "min": 110
+        },
+        "LYS": {
+          "km": 172,
+          "min": 95
+        },
+        "CMF": {
+          "km": 94,
+          "min": 60
+        },
+        "GNB": {
+          "km": 160,
+          "min": 95
+        },
+        "TRN": {
+          "km": 130,
+          "min": 90
         }
       },
       "transfer": "Train via Chambéry about 2h45. Car 2h15.",
@@ -4266,8 +5738,24 @@
       "character": "Border town with fast trains. Short bus rides to four quiet resorts.",
       "fromOrigin": {
         "GVA": {
-          "km": 220,
-          "min": 160
+          "km": 195,
+          "min": 125
+        },
+        "LYS": {
+          "km": 189,
+          "min": 110
+        },
+        "CMF": {
+          "km": 111,
+          "min": 70
+        },
+        "GNB": {
+          "km": 177,
+          "min": 105
+        },
+        "TRN": {
+          "km": 116,
+          "min": 85
         }
       },
       "transfer": "Train via Chambéry about 3h. Car 2h40.",
@@ -4326,8 +5814,24 @@
       "character": "Big university city. City life, cheap stays and buses to six ski areas.",
       "fromOrigin": {
         "GVA": {
-          "km": 150,
-          "min": 110
+          "km": 151,
+          "min": 100
+        },
+        "LYS": {
+          "km": 92,
+          "min": 55
+        },
+        "CMF": {
+          "km": 66,
+          "min": 50
+        },
+        "GNB": {
+          "km": 45,
+          "min": 30
+        },
+        "TRN": {
+          "km": 243,
+          "min": 150
         }
       },
       "transfer": "Train or bus about 2h. Car 1h50.",
@@ -4402,8 +5906,24 @@
       "character": "Valley village at the foot of the Alpe d'Huez hairpins. Buses up to two big areas.",
       "fromOrigin": {
         "GVA": {
-          "km": 200,
-          "min": 155
+          "km": 202,
+          "min": 140
+        },
+        "LYS": {
+          "km": 141,
+          "min": 95
+        },
+        "CMF": {
+          "km": 118,
+          "min": 90
+        },
+        "GNB": {
+          "km": 93,
+          "min": 70
+        },
+        "TRN": {
+          "km": 182,
+          "min": 150
         }
       },
       "transfer": "Bus from Grenoble 1h. Car 2h35.",
@@ -4460,8 +5980,24 @@
       "character": "Fortified old town, the highest city in France. A gondola from town into Serre Chevalier.",
       "fromOrigin": {
         "GVA": {
-          "km": 300,
-          "min": 225
+          "km": 251,
+          "min": 175
+        },
+        "LYS": {
+          "km": 206,
+          "min": 150
+        },
+        "CMF": {
+          "km": 166,
+          "min": 125
+        },
+        "GNB": {
+          "km": 158,
+          "min": 125
+        },
+        "TRN": {
+          "km": 116,
+          "min": 95
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 3h45.",
@@ -4511,8 +6047,24 @@
       "character": "Small station town below the Écrins. The cheapest base for Puy-Saint-Vincent.",
       "fromOrigin": {
         "GVA": {
-          "km": 315,
-          "min": 240
+          "km": 267,
+          "min": 190
+        },
+        "LYS": {
+          "km": 221,
+          "min": 165
+        },
+        "CMF": {
+          "km": 183,
+          "min": 140
+        },
+        "GNB": {
+          "km": 173,
+          "min": 140
+        },
+        "TRN": {
+          "km": 132,
+          "min": 110
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 4h.",
@@ -4555,8 +6107,24 @@
       "character": "Old hilltop town by Lake Serre-Ponçon. Central for three southern resorts.",
       "fromOrigin": {
         "GVA": {
-          "km": 345,
-          "min": 260
+          "km": 298,
+          "min": 220
+        },
+        "LYS": {
+          "km": 223,
+          "min": 175
+        },
+        "CMF": {
+          "km": 214,
+          "min": 165
+        },
+        "GNB": {
+          "km": 176,
+          "min": 150
+        },
+        "TRN": {
+          "km": 163,
+          "min": 140
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 4h20.",

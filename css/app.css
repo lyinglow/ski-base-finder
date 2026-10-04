@@ -117,6 +117,11 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .brand h1 { font-size: 26px; line-height: 1; font-weight: 700; }
 .origin { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
 .origin strong { color: var(--ink); font-weight: 600; }
+p.origin { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+#origin { border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: 3px 6px; font-weight: 600; color: var(--ink); max-width: 100%; }
+.marker.origin { opacity: 0.55; }
+.marker.origin.is-current { opacity: 1; z-index: 2; }
+.marker.origin:not(.is-current) .tag { background: rgba(13, 20, 27, 0.6); }
 
 .segmented {
   display: grid;

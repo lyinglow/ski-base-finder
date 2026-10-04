@@ -34,6 +34,7 @@ export async function loadData() {
     countries: live,
     notes: files.map((f) => f.notes).filter(Boolean),
     origin: index.origins.find((o) => o.id === index.defaultOrigin),
+    origins: index.origins,
     priceBands: index.priceBands,
     locations,
     byId,

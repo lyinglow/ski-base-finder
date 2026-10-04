@@ -23,6 +23,7 @@ const state = {
   carFree: false,
   months: new Set(["jan", "feb", "mar"]),
   snowSure: false,
+  origin: "GVA",
   beginner: false,
   vibes: new Set(), // empty means any vibe
   trip: { nights: 7, skiDays: 6, adults: 2, children: 0, transport: "shuttle" },
@@ -46,13 +47,15 @@ init().catch((err) => {
 
 async function init() {
   model = await loadData();
-  $("#origin-name").textContent = model.origin.name;
+  $("#origin").innerHTML = model.origins.map((o) =>
+    `<option value="${o.id}"${o.id === state.origin ? " selected" : ""}>${esc(o.name)} (${o.id})</option>`).join("");
   $("#country-list").textContent = model.countries.map((c) => c.name).join(", ");
   renderDataNote();
   loadShortlist();
 
   map = createMap("map");
-  addOriginMarker();
+  for (const o of model.origins) addOriginMarker(o);
+  updateOriginMarkers();
   for (const l of model.locations) addMarker(l);
   map.on("zoom", updateLabelMode);
   updateLabelMode();
@@ -68,7 +71,8 @@ async function init() {
 
 const mins = (m) => (m < 60 ? `${m} min` : `${Math.floor(m / 60)}h${String(m % 60).padStart(2, "0")}`);
 const price = (p) => model.priceBands[p].symbol;
-const travel = (l) => l.fromOrigin[model.origin.id];
+const travel = (l) => l.fromOrigin[state.origin];
+const originName = () => model.origins.find((o) => o.id === state.origin).name;
 const typeLabel = (l) => (l.type === "resort" ? "Resort" : "Feeder town");
 const modes = (by) => by.map((m) => MODE_LABEL[m]).join(" or ");
 
@@ -130,7 +134,7 @@ function snowMonths(l) {
 /* ---------- trip cost ---------- */
 
 const money = (n) => "€" + (Math.round(n / 10) * 10).toLocaleString("en-GB");
-const tripOf = () => ({ ...state.trip, months: tripMonths() });
+const tripOf = () => ({ ...state.trip, months: tripMonths(), origin: state.origin });
 // stay in `place`, ski `ski` (defaults to itself, or the chosen or nearest resort for a town).
 const costOf = (place, ski) => tripCost(place, ski || skiTarget(place, model, state.skiAt[place.id]), tripOf(), model);
 
@@ -153,11 +157,28 @@ function bestSkiFrom(place) {
 
 /* ---------- markers ---------- */
 
-function addOriginMarker() {
-  const el = document.createElement("div");
+const originMarkers = new Map();
+
+function addOriginMarker(o) {
+  const el = document.createElement("button");
+  el.type = "button";
   el.className = "marker origin";
-  el.innerHTML = `<span class="pin"></span><span class="tag">${esc(model.origin.id)}</span>`;
-  new maplibregl.Marker({ element: el, opacityWhenCovered: "0.7" }).setLngLat(model.origin.coords).addTo(map);
+  el.title = `Fly into ${o.name}`;
+  el.innerHTML = `<span class="pin"></span><span class="tag">${esc(o.id)}</span>`;
+  el.addEventListener("click", (e) => { e.stopPropagation(); setOrigin(o.id); });
+  new maplibregl.Marker({ element: el, opacityWhenCovered: "0.7" }).setLngLat(o.coords).addTo(map);
+  originMarkers.set(o.id, el);
+}
+
+function updateOriginMarkers() {
+  for (const [id, el] of originMarkers) el.classList.toggle("is-current", id === state.origin);
+}
+
+function setOrigin(id) {
+  state.origin = id;
+  $("#origin").value = id;
+  updateOriginMarkers();
+  tripChanged();
 }
 
 function addMarker(l) {
@@ -181,11 +202,12 @@ function updateLabelMode() {
 /* ---------- filtering ---------- */
 
 function passes(l) {
+  if (!travel(l)) return false; // no route recorded from this airport
   // The shortlist ignores the filters so saved places never disappear.
   if (state.show === "saved") return state.saved.has(l.id);
   if (state.show !== "all" && l.type !== state.show) return false;
   if (state.beginner && !l.easyStart) return false; // resorts only, walk to the beginner slopes
-  if (travel(l).min > state.maxTime) return false;
+  if (state.maxTime < 300 && travel(l).min > state.maxTime) return false; // the top of the slider means any time
   if (l.type === "base" && reachable(l, model.byId)[0].link.min > state.maxHop) return false;
   if (!state.prices.has(l.price)) return false;
   if (state.family && !l.family) return false;
@@ -415,13 +437,13 @@ function renderDetail(l) {
     </header>`;
 
   const stats = `<div class="stats">
-      ${stat("From airport", mins(t.min), `${t.km} km`)}
+      ${stat(`From ${state.origin}`, mins(t.min), `${t.km} km`)}
       ${stat("Altitude", `${l.altitude} m`, l.topAltitude ? `top ${l.topAltitude} m` : "village")}
       ${stat("Price to stay", band.symbol, band.label)}
       ${stat("Town", SIZE_LABEL[l.townSize], l.family ? "Family-friendly" : "Better for adults")}
     </div>`;
 
-  const getting = `<p class="getting"><span class="s-label">Getting there</span>${esc(l.transfer)}${l.rail ? ` <span class="badge">${esc(l.rail)}</span>` : ""}${l.carFree ? ` <span class="badge good">No car needed</span>` : ""}</p>`;
+  const getting = `<p class="getting"><span class="s-label">Getting there from Geneva</span>${esc(l.transfer)}${l.rail ? ` <span class="badge">${esc(l.rail)}</span>` : ""}${l.carFree ? ` <span class="badge good">No car needed</span>` : ""}</p>`;
 
   let body = tripSection(l);
   if (l.type === "resort") {
@@ -728,6 +750,7 @@ function bindControls() {
     e.currentTarget.setAttribute("aria-pressed", state.beginner);
     applyFilters();
   });
+  $("#origin").addEventListener("change", (e) => setOrigin(e.target.value));
   $("#f-snow").addEventListener("change", (e) => { state.snowSure = e.target.checked; applyFilters(); });
 
   $("#f-family").addEventListener("change", (e) => { state.family = e.target.checked; applyFilters(); });

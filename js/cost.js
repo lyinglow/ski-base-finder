@@ -3,12 +3,12 @@
 
 import { reachable } from "./data.js";
 
-// trip: { nights, skiDays, adults, children, transport: "shuttle" | "car", months: ["jan", ...] }
+// trip: { origin: airport id, nights, skiDays, adults, children, transport: "shuttle" | "car", months: ["jan", ...] }
 // stay: where you sleep. ski: the resort you ski (same as stay when staying in a resort).
 export function tripCost(stay, ski, trip, model) {
   const c = model.index.costs;
   const people = trip.adults + trip.children;
-  const fromAirport = stay.fromOrigin[model.origin.id];
+  const fromAirport = stay.fromOrigin[trip.origin];
 
   // How you get from bed to lifts. A lift or same place costs nothing.
   const link = stay.id === ski.id ? null : (stay.links || []).find((k) => k.to === ski.id);

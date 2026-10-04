@@ -43,7 +43,7 @@ Fields for every place:
 | `family` | boolean | Good for families with young children. |
 | `vibes` | array | One to three of the keys under `vibes` in `index.json`: `lively`, `quiet`, `traditional`, `upmarket`, `skiin`, `town`. |
 | `character` | string | One or two plain sentences. What it feels like to stay there. |
-| `fromOrigin` | object | Travel per origin: `{ "GVA": { "km": 70, "min": 65 } }`. Add a key for each new airport. |
+| `fromOrigin` | object | Travel per origin: `{ "GVA": { "km": 70, "min": 65 } }`, one key per airport in `index.json`. Times come from the OSRM route planner, rerouted around passes closed in winter and scaled by 0.85 to match real journey times. A place with no key for an airport is hidden when that airport is picked. |
 | `transfer` | string | How to get there without your own car. Start with "Car" if a car is really needed. |
 | `links` | array | Resorts reachable from here. Required for bases, optional for resorts. |
 

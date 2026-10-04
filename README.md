@@ -21,6 +21,7 @@ Any static host works (GitHub Pages, Netlify, Vercel, an S3 bucket). Opening `in
 
 - **See the land.** Satellite or topo map draped over real elevation. Drag to pan, right-drag or two-finger drag to tilt and rotate.
 - **Tell the two kinds of place apart.** Blue triangles are resorts. Amber circles are feeder towns.
+- **Pick your airport.** Geneva, Lyon, Chambéry, Grenoble or Turin. Every drive time, filter and trip cost follows. Times are winter routes from a route planner, avoiding passes that close in winter (Iseran, Galibier, Petit-Saint-Bernard, Mont-Cenis and others).
 - **Filter** by time from the airport (up to 5 hours), the daily hop from a feeder town to the slopes, price to stay, ski area size, family-friendly, and whether it works without a car.
 - **Click a resort** to see "Stay lower, ski here": every cheaper place with quick access, how many minutes away, by car, bus, train or lift, how many price bands cheaper, and how many metres lower.
 - **Click a feeder town** to see every resort within reach, nearest first.

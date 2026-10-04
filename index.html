@@ -21,7 +21,9 @@
           <button type="button" id="show-saved" class="shortlist-btn" aria-pressed="false" title="Show your shortlist"><span aria-hidden="true">★</span> Shortlist <span class="count" id="saved-count">0</span></button>
           <button type="button" id="f-beginner" class="beginner-btn" aria-pressed="false" title="Only resorts where you can walk to the beginner slopes">Absolute beginner</button>
         </div>
-        <p class="origin">From <strong id="origin-name">Geneva Airport</strong> · <span id="country-list">France</span></p>
+        <p class="origin"><label for="origin">Flying into</label>
+          <select id="origin"><option value="GVA">Geneva Airport</option></select>
+          <span class="countries">· <span id="country-list">France</span></span></p>
       </header>
 
       <div class="segmented" id="show-seg" role="radiogroup" aria-label="Show">

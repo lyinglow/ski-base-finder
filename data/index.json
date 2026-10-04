@@ -8,6 +8,38 @@
         6.109,
         46.2381
       ]
+    },
+    {
+      "id": "LYS",
+      "name": "Lyon Saint-Exupéry",
+      "coords": [
+        5.0811,
+        45.7256
+      ]
+    },
+    {
+      "id": "CMF",
+      "name": "Chambéry Savoie",
+      "coords": [
+        5.8803,
+        45.6381
+      ]
+    },
+    {
+      "id": "GNB",
+      "name": "Grenoble Alpes-Isère",
+      "coords": [
+        5.3294,
+        45.3629
+      ]
+    },
+    {
+      "id": "TRN",
+      "name": "Turin Airport",
+      "coords": [
+        7.6497,
+        45.2008
+      ]
     }
   ],
   "defaultOrigin": "GVA",

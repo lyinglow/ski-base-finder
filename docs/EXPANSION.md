@@ -27,15 +27,12 @@ Close to Geneva and the natural next step.
 4. **Cross-border links**: La Thuile and La Rosière share a ski area. Cervinia and Zermatt too.
 5. Travel from Geneva goes through the Mont Blanc tunnel. Note the tunnel toll in `transfer`.
 
-## Step 3: More airports
+## Step 3: More airports (done)
 
-Italy is easier from Turin, central Switzerland from Zurich. The format already allows this.
+Geneva, Lyon, Chambéry, Grenoble and Turin are in. To add another (Zurich, Milan):
 
-1. Add the airport to `origins` in `index.json`: `{ "id": "TRN", "name": "Turin Airport", "coords": [7.6497, 45.2008] }`.
-2. Add a `TRN` key to `fromOrigin` for places it serves.
-3. In the app, add an origin picker next to "From Geneva Airport" that sets the origin id. Everything else already reads the origin from one place (`travel()` in `js/app.js`).
-
-Places without a time for the chosen origin should be hidden for that origin.
+1. Add it to `origins` in `index.json`.
+2. Work out winter drive times from it to every place and add them to each `fromOrigin`. The same route-planner method used for the current five works: take the planner's time, avoid passes closed in winter, scale by 0.85.
 
 ## Keeping the data fresh
 
