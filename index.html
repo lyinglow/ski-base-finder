@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ski Base Finder</title>
+  <meta name="description" content="Compare ski resorts near Geneva with cheaper feeder towns below them, on a 3D map.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Filters and places">
+      <header class="brand">
+        <h1>Ski Base Finder</h1>
+        <p class="origin">From <strong id="origin-name">Geneva Airport</strong> · <span id="country-list">France</span></p>
+      </header>
+
+      <div class="segmented" role="radiogroup" aria-label="Show">
+        <button type="button" id="show-all" data-show="all" aria-pressed="true">All</button>
+        <button type="button" id="show-resort" data-show="resort" aria-pressed="false"><i class="dot resort"></i>Resorts</button>
+        <button type="button" id="show-base" data-show="base" aria-pressed="false"><i class="dot base"></i>Feeder towns</button>
+      </div>
+
+      <section class="filters" aria-label="Filters">
+        <div class="field">
+          <label for="f-time">Max time from airport <output id="f-time-out">3h</output></label>
+          <input type="range" id="f-time" min="20" max="180" step="5" value="180">
+        </div>
+
+        <div class="field">
+          <span class="label">Price to stay</span>
+          <div class="chips" id="f-price">
+            <button type="button" id="f-price-1" data-v="1" aria-pressed="true">€ Budget</button>
+            <button type="button" id="f-price-2" data-v="2" aria-pressed="true">€€ Mid</button>
+            <button type="button" id="f-price-3" data-v="3" aria-pressed="true">€€€ High</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="label">Ski area size</span>
+          <div class="chips" id="f-size">
+            <button type="button" id="f-size-s" data-v="small" aria-pressed="true" title="Under 60 km of pistes">Small</button>
+            <button type="button" id="f-size-m" data-v="medium" aria-pressed="true" title="60 to 199 km">Medium</button>
+            <button type="button" id="f-size-l" data-v="large" aria-pressed="true" title="200 to 399 km">Large</button>
+            <button type="button" id="f-size-xl" data-v="huge" aria-pressed="true" title="400 km or more">Huge</button>
+          </div>
+        </div>
+
+        <label class="toggle" for="f-family">
+          <input type="checkbox" id="f-family">
+          <span>Family-friendly only</span>
+        </label>
+        <label class="toggle" for="f-carfree">
+          <input type="checkbox" id="f-carfree">
+          <span>Works without a car</span>
+        </label>
+      </section>
+
+      <div class="list-head">
+        <span id="result-count">0 places</span>
+        <label class="sort" for="sort">Sort
+          <select id="sort">
+            <option value="time">Time from airport</option>
+            <option value="price">Price</option>
+            <option value="altitude">Altitude</option>
+            <option value="ski">Ski area size</option>
+          </select>
+        </label>
+      </div>
+      <ol class="results" id="results"></ol>
+
+      <footer class="data-note" id="data-note"></footer>
+    </aside>
+
+    <main class="stage">
+      <div id="map" aria-label="3D map of ski areas"></div>
+
+      <div class="map-tools">
+        <button type="button" id="sidebar-toggle" class="tool only-mobile" aria-controls="sidebar" aria-expanded="false">Filters &amp; list</button>
+        <div class="tool-group" role="group" aria-label="Map style">
+          <button type="button" id="style-sat" class="tool" aria-pressed="true">Satellite</button>
+          <button type="button" id="style-topo" class="tool" aria-pressed="false">Topo</button>
+        </div>
+        <button type="button" id="toggle-3d" class="tool" aria-pressed="true">3D</button>
+        <button type="button" id="reset-view" class="tool">Reset view</button>
+      </div>
+
+      <div class="legend" aria-label="Legend">
+        <span><i class="mk resort"></i>Resort</span>
+        <span><i class="mk base"></i>Feeder town</span>
+        <span><i class="mk origin"></i>Airport</span>
+        <span><i class="ln road"></i>Drive</span>
+        <span><i class="ln lift"></i>Bus, train or lift</span>
+      </div>
+
+      <article class="detail" id="detail" hidden aria-live="polite"></article>
+
+      <div class="compare-bar" id="compare-bar" hidden>
+        <div class="compare-chips" id="compare-chips"></div>
+        <button type="button" id="compare-open" class="primary">Compare</button>
+      </div>
+
+      <section class="compare" id="compare" hidden aria-label="Compare places">
+        <header>
+          <h2>Side by side</h2>
+          <button type="button" id="compare-close" class="ghost">Close</button>
+        </header>
+        <div class="compare-scroll" id="compare-table"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

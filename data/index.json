@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "origins": [
+    {
+      "id": "GVA",
+      "name": "Geneva Airport",
+      "coords": [6.1090, 46.2381]
+    }
+  ],
+  "defaultOrigin": "GVA",
+  "countries": [
+    { "code": "FR", "name": "France", "file": "fr.json", "status": "live" },
+    { "code": "CH", "name": "Switzerland", "file": "ch.json", "status": "planned" },
+    { "code": "IT", "name": "Italy", "file": "it.json", "status": "planned" }
+  ],
+  "priceBands": {
+    "1": { "label": "Budget", "symbol": "€", "guide": "about €70 to €120 a night" },
+    "2": { "label": "Mid", "symbol": "€€", "guide": "about €120 to €220 a night" },
+    "3": { "label": "Expensive", "symbol": "€€€", "guide": "€220+ a night" }
+  },
+  "priceNote": "Guide price for a double room or small apartment in peak season. Indicative only."
+}

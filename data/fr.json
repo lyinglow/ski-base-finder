@@ -1,0 +1,2880 @@
+{
+  "country": "FR",
+  "name": "France",
+  "updated": "2026-10",
+  "notes": "Drive times are typical winter times with clear roads, not Saturday change-over traffic. Prices are indicative bands. Verify before booking.",
+  "locations": [
+    {
+      "id": "fr-chamonix",
+      "type": "resort",
+      "name": "Chamonix",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.8694,
+        45.9237
+      ],
+      "altitude": 1035,
+      "topAltitude": 3842,
+      "townSize": "large",
+      "price": 3,
+      "family": false,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Chamonix Mont-Blanc",
+        "pisteKm": 150
+      },
+      "character": "Busy mountaineering town under Mont Blanc. Steep, high terrain and huge off-piste, spread over separate areas joined by bus.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 88,
+          "min": 70
+        }
+      },
+      "transfer": "Shared shuttle about 1h15. Train via Saint-Gervais–Le Fayet.",
+      "links": []
+    },
+    {
+      "id": "fr-les-houches",
+      "type": "resort",
+      "name": "Les Houches",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7975,
+        45.8906
+      ],
+      "altitude": 1000,
+      "topAltitude": 1900,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Les Houches",
+        "pisteKm": 55
+      },
+      "character": "Quiet village with tree-lined slopes, the sheltered choice on stormy days. Ten minutes from Chamonix.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 80,
+          "min": 65
+        }
+      },
+      "transfer": "Shared shuttle about 1h. Mont-Blanc Express train stops here.",
+      "links": [
+        {
+          "to": "fr-chamonix",
+          "min": 15,
+          "by": [
+            "bus",
+            "train"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-megeve",
+      "type": "resort",
+      "name": "Megève",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6175,
+        45.8567
+      ],
+      "altitude": 1113,
+      "topAltitude": 2353,
+      "townSize": "medium",
+      "price": 3,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Évasion Mont-Blanc",
+        "pisteKm": 445
+      },
+      "character": "Smart medieval village with fur coats and fine dining. Gentle, scenic cruising across a very large area.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 70,
+          "min": 65
+        }
+      },
+      "transfer": "Shared shuttle about 1h10. Bus from Sallanches station.",
+      "links": []
+    },
+    {
+      "id": "fr-saint-gervais",
+      "type": "resort",
+      "name": "Saint-Gervais",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7125,
+        45.8925
+      ],
+      "altitude": 850,
+      "topAltitude": 2353,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Évasion Mont-Blanc",
+        "pisteKm": 445
+      },
+      "character": "Old spa town with a gondola straight into the Megève ski area. Real town life, lower prices than Megève.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 75,
+          "min": 65
+        }
+      },
+      "transfer": "Léman Express train to Le Fayet, then bus.",
+      "links": [
+        {
+          "to": "fr-megeve",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondola into the Évasion Mont-Blanc area"
+        },
+        {
+          "to": "fr-chamonix",
+          "min": 25,
+          "by": [
+            "car",
+            "train"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-combloux",
+      "type": "resort",
+      "name": "Combloux",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6403,
+        45.8967
+      ],
+      "altitude": 1000,
+      "topAltitude": 1853,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Évasion Mont-Blanc",
+        "pisteKm": 445
+      },
+      "character": "Sunny little village with the best Mont Blanc view in the area. Linked by lift to Megève.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 65,
+          "min": 60
+        }
+      },
+      "transfer": "Shared shuttle about 1h. Bus from Sallanches.",
+      "links": [
+        {
+          "to": "fr-megeve",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across to Megève"
+        }
+      ]
+    },
+    {
+      "id": "fr-les-contamines",
+      "type": "resort",
+      "name": "Les Contamines",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7275,
+        45.8217
+      ],
+      "altitude": 1164,
+      "topAltitude": 2500,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Les Contamines-Hauteluce",
+        "pisteKm": 120
+      },
+      "character": "Traditional village at the end of a valley. Holds snow well for its height and stays calm at weekends.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 85,
+          "min": 75
+        }
+      },
+      "transfer": "Shared shuttle about 1h15. Bus from Le Fayet station.",
+      "links": []
+    },
+    {
+      "id": "fr-morzine",
+      "type": "resort",
+      "name": "Morzine",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7089,
+        46.1793
+      ],
+      "altitude": 1000,
+      "topAltitude": 2466,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600
+      },
+      "character": "Lively market town that works all year. Big chalet scene, lots of English spoken, gateway to Avoriaz and Les Gets.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 75,
+          "min": 70
+        }
+      },
+      "transfer": "Shared shuttle about 1h15. Bus from Thonon or Cluses stations.",
+      "links": []
+    },
+    {
+      "id": "fr-avoriaz",
+      "type": "resort",
+      "name": "Avoriaz",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.774,
+        46.191
+      ],
+      "altitude": 1800,
+      "topAltitude": 2466,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600
+      },
+      "character": "Car-free, ski-in ski-out village on a cliff top. The most snow-sure base in the Portes du Soleil.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 85,
+          "min": 85
+        }
+      },
+      "transfer": "Shuttle to Morzine, then cable car or road up.",
+      "links": [
+        {
+          "to": "fr-morzine",
+          "min": 10,
+          "by": [
+            "lift"
+          ],
+          "note": "Prodains or Super-Morzine lifts"
+        }
+      ]
+    },
+    {
+      "id": "fr-les-gets",
+      "type": "resort",
+      "name": "Les Gets",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6697,
+        46.1586
+      ],
+      "altitude": 1172,
+      "topAltitude": 2002,
+      "townSize": "small",
+      "price": 3,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600
+      },
+      "character": "Pretty, family-minded village with easy slopes on both sides. Linked to Morzine.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 65,
+          "min": 60
+        }
+      },
+      "transfer": "Shared shuttle about 1h. Bus from Cluses station.",
+      "links": [
+        {
+          "to": "fr-morzine",
+          "min": 10,
+          "by": [
+            "lift",
+            "bus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-chatel",
+      "type": "resort",
+      "name": "Châtel",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.84,
+        46.2694
+      ],
+      "altitude": 1200,
+      "topAltitude": 2200,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600
+      },
+      "character": "Working farm village with direct lifts into the Swiss side of the Portes du Soleil.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 80,
+          "min": 85
+        }
+      },
+      "transfer": "Shared shuttle about 1h30. Bus from Thonon station.",
+      "links": []
+    },
+    {
+      "id": "fr-la-chapelle",
+      "type": "resort",
+      "name": "La Chapelle-d'Abondance",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7869,
+        46.2964
+      ],
+      "altitude": 1020,
+      "topAltitude": 1700,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600
+      },
+      "character": "Quiet valley village with its own slopes and a free bus to Châtel.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 80,
+          "min": 80
+        }
+      },
+      "transfer": "Shared shuttle about 1h20. Bus from Thonon or Évian.",
+      "links": [
+        {
+          "to": "fr-chatel",
+          "min": 10,
+          "by": [
+            "bus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-roc-denfer",
+      "type": "resort",
+      "name": "Roc d'Enfer",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6514,
+        46.2347
+      ],
+      "altitude": 1000,
+      "topAltitude": 1800,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Roc d'Enfer",
+        "pisteKm": 50
+      },
+      "character": "Small, wild area loved by locals. No crowds and cheap passes. Morzine is 15 minutes up the road.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 65,
+          "min": 65
+        }
+      },
+      "transfer": "Bus from Thonon station.",
+      "links": [
+        {
+          "to": "fr-morzine",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-thollon",
+      "type": "resort",
+      "name": "Thollon-les-Mémises",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7044,
+        46.3897
+      ],
+      "altitude": 1000,
+      "topAltitude": 2000,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Thollon-les-Mémises",
+        "pisteKm": 50
+      },
+      "character": "Balcony above Lake Geneva with views across to Switzerland. Simple, friendly and cheap.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 65,
+          "min": 60
+        }
+      },
+      "transfer": "Train to Évian, then bus or taxi.",
+      "links": []
+    },
+    {
+      "id": "fr-bernex",
+      "type": "resort",
+      "name": "Bernex",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6833,
+        46.36
+      ],
+      "altitude": 1000,
+      "topAltitude": 1900,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner"
+      ],
+      "skiArea": {
+        "name": "Bernex Dent d'Oche",
+        "pisteKm": 25
+      },
+      "character": "Tiny family hill above Évian. Good for a first week on skis.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 60,
+          "min": 55
+        }
+      },
+      "transfer": "Train to Évian, then taxi.",
+      "links": []
+    },
+    {
+      "id": "fr-flaine",
+      "type": "resort",
+      "name": "Flaine",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6892,
+        46.0058
+      ],
+      "altitude": 1600,
+      "topAltitude": 2500,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Grand Massif",
+        "pisteKm": 265
+      },
+      "character": "Car-free Bauhaus-designed resort in a high, snowy bowl. Ski to the door, little to do at night.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 70,
+          "min": 65
+        }
+      },
+      "transfer": "Shared shuttle about 1h10. Bus from Cluses station.",
+      "links": []
+    },
+    {
+      "id": "fr-samoens",
+      "type": "resort",
+      "name": "Samoëns",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7275,
+        46.0828
+      ],
+      "altitude": 720,
+      "topAltitude": 2500,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Grand Massif",
+        "pisteKm": 265
+      },
+      "character": "Listed stone village with shops and restaurants. Gondola up into the Grand Massif.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 75,
+          "min": 65
+        }
+      },
+      "transfer": "Bus from Cluses station.",
+      "links": [
+        {
+          "to": "fr-flaine",
+          "min": 40,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondola then skiing across the Grand Massif"
+        }
+      ]
+    },
+    {
+      "id": "fr-les-carroz",
+      "type": "resort",
+      "name": "Les Carroz",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6408,
+        46.0264
+      ],
+      "altitude": 1140,
+      "topAltitude": 2500,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Grand Massif",
+        "pisteKm": 265
+      },
+      "character": "Friendly wooded village, the quickest road access to the Grand Massif.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 65,
+          "min": 55
+        }
+      },
+      "transfer": "Bus from Cluses station.",
+      "links": [
+        {
+          "to": "fr-flaine",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Skiable link to Flaine"
+        }
+      ]
+    },
+    {
+      "id": "fr-morillon",
+      "type": "resort",
+      "name": "Morillon",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6789,
+        46.0836
+      ],
+      "altitude": 700,
+      "topAltitude": 2500,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Grand Massif",
+        "pisteKm": 265
+      },
+      "character": "Valley village with a gondola to a sunny beginner plateau. Cheapest way into the Grand Massif.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 65,
+          "min": 55
+        }
+      },
+      "transfer": "Bus from Cluses station.",
+      "links": [
+        {
+          "to": "fr-flaine",
+          "min": 45,
+          "by": [
+            "lift"
+          ]
+        },
+        {
+          "to": "fr-samoens",
+          "min": 5,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-sixt",
+      "type": "resort",
+      "name": "Sixt-Fer-à-Cheval",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7756,
+        46.0567
+      ],
+      "altitude": 760,
+      "topAltitude": 2500,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Grand Massif",
+        "pisteKm": 265
+      },
+      "character": "Remote village at the head of the Giffre valley, linked to the Grand Massif by a long scenic run.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 85,
+          "min": 75
+        }
+      },
+      "transfer": "Bus from Cluses station.",
+      "links": [
+        {
+          "to": "fr-samoens",
+          "min": 10,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-la-clusaz",
+      "type": "resort",
+      "name": "La Clusaz",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.4236,
+        45.9047
+      ],
+      "altitude": 1100,
+      "topAltitude": 2600,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "La Clusaz",
+        "pisteKm": 125
+      },
+      "character": "Lively Aravis village with five connected mountains. Busy with Annecy and Geneva locals at weekends.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 60,
+          "min": 55
+        }
+      },
+      "transfer": "Bus from Annecy station about 50 min.",
+      "links": []
+    },
+    {
+      "id": "fr-grand-bornand",
+      "type": "resort",
+      "name": "Le Grand-Bornand",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.4278,
+        45.9417
+      ],
+      "altitude": 1000,
+      "topAltitude": 2100,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Le Grand-Bornand",
+        "pisteKm": 90
+      },
+      "character": "Working farm village in Reblochon country. Very family-focused with good beginner zones.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 55,
+          "min": 55
+        }
+      },
+      "transfer": "Bus from Annecy station about 50 min.",
+      "links": [
+        {
+          "to": "fr-la-clusaz",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-praz-de-lys",
+      "type": "resort",
+      "name": "Praz de Lys–Sommand",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.59,
+        46.145
+      ],
+      "altitude": 1500,
+      "topAltitude": 2000,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Praz de Lys–Sommand",
+        "pisteKm": 50
+      },
+      "character": "High, snow-sure plateau with easy slopes and long cross-country loops.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 55,
+          "min": 55
+        }
+      },
+      "transfer": "Car recommended.",
+      "links": []
+    },
+    {
+      "id": "fr-les-brasses",
+      "type": "resort",
+      "name": "Les Brasses",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.47,
+        46.186
+      ],
+      "altitude": 900,
+      "topAltitude": 1500,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner"
+      ],
+      "skiArea": {
+        "name": "Les Brasses",
+        "pisteKm": 50
+      },
+      "character": "Low, local family area 40 minutes from Geneva. Best after a fresh fall.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 40,
+          "min": 40
+        }
+      },
+      "transfer": "Car recommended.",
+      "links": []
+    },
+    {
+      "id": "fr-hirmentaz",
+      "type": "resort",
+      "name": "Hirmentaz–Les Habères",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.459,
+        46.243
+      ],
+      "altitude": 1000,
+      "topAltitude": 1600,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner"
+      ],
+      "skiArea": {
+        "name": "Hirmentaz–Les Habères",
+        "pisteKm": 50
+      },
+      "character": "Nearest real slopes to Geneva. Ideal for a day trip or a first week.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 45,
+          "min": 45
+        }
+      },
+      "transfer": "Car recommended.",
+      "links": []
+    },
+    {
+      "id": "fr-semnoz",
+      "type": "resort",
+      "name": "Le Semnoz",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.1036,
+        45.7978
+      ],
+      "altitude": 1650,
+      "topAltitude": 1700,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner"
+      ],
+      "skiArea": {
+        "name": "Le Semnoz",
+        "pisteKm": 15
+      },
+      "character": "Small summit area above Annecy with lake and Mont Blanc views. A day-trip hill.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 60,
+          "min": 60
+        }
+      },
+      "transfer": "Car from Annecy, 30 min.",
+      "links": []
+    },
+    {
+      "id": "fr-les-saisies",
+      "type": "resort",
+      "name": "Les Saisies",
+      "region": "Savoie",
+      "coords": [
+        6.5317,
+        45.759
+      ],
+      "altitude": 1650,
+      "topAltitude": 2069,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Espace Diamant",
+        "pisteKm": 192
+      },
+      "character": "High, sunny pastures with wide easy runs. Olympic cross-country venue.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 100,
+          "min": 90
+        }
+      },
+      "transfer": "Shared shuttle about 1h30. Bus from Albertville station.",
+      "links": []
+    },
+    {
+      "id": "fr-crest-voland",
+      "type": "resort",
+      "name": "Crest-Voland",
+      "region": "Savoie",
+      "coords": [
+        6.504,
+        45.7943
+      ],
+      "altitude": 1230,
+      "topAltitude": 2069,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Espace Diamant",
+        "pisteKm": 192
+      },
+      "character": "Small family village, a cheaper door into the Espace Diamant.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 95,
+          "min": 85
+        }
+      },
+      "transfer": "Bus from Albertville station.",
+      "links": [
+        {
+          "to": "fr-les-saisies",
+          "min": 20,
+          "by": [
+            "lift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-praz-sur-arly",
+      "type": "resort",
+      "name": "Praz-sur-Arly",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.5717,
+        45.8361
+      ],
+      "altitude": 1036,
+      "topAltitude": 2069,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Espace Diamant",
+        "pisteKm": 192
+      },
+      "character": "Valley village five minutes below Megève, linked by lift to the Espace Diamant.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 80,
+          "min": 70
+        }
+      },
+      "transfer": "Bus from Sallanches station.",
+      "links": [
+        {
+          "to": "fr-megeve",
+          "min": 10,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-saisies",
+          "min": 35,
+          "by": [
+            "lift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-areches",
+      "type": "resort",
+      "name": "Arêches-Beaufort",
+      "region": "Savoie",
+      "coords": [
+        6.565,
+        45.6886
+      ],
+      "altitude": 1050,
+      "topAltitude": 2300,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Arêches-Beaufort",
+        "pisteKm": 50
+      },
+      "character": "Unspoilt Beaufortain village. Great off-piste and almost no new building.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 125,
+          "min": 100
+        }
+      },
+      "transfer": "Car recommended. Bus from Albertville.",
+      "links": []
+    },
+    {
+      "id": "fr-monts-jura",
+      "type": "resort",
+      "name": "Monts Jura",
+      "region": "Ain",
+      "coords": [
+        6.01,
+        46.285
+      ],
+      "altitude": 900,
+      "topAltitude": 1680,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Monts Jura (Crozet, Lélex, Mijoux)",
+        "pisteKm": 50
+      },
+      "character": "Jura ridge looking straight down on Geneva and across to Mont Blanc. Thirty minutes from the airport.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 25,
+          "min": 30
+        }
+      },
+      "transfer": "Car or taxi, 30 min.",
+      "links": []
+    },
+    {
+      "id": "fr-les-rousses",
+      "type": "resort",
+      "name": "Les Rousses",
+      "region": "Jura",
+      "coords": [
+        6.0633,
+        46.4847
+      ],
+      "altitude": 1100,
+      "topAltitude": 1680,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner"
+      ],
+      "skiArea": {
+        "name": "Les Rousses",
+        "pisteKm": 40
+      },
+      "character": "Gentle Franco-Swiss area, better known for cross-country than downhill.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 50,
+          "min": 50
+        }
+      },
+      "transfer": "Car recommended. Train to La Cure from Nyon.",
+      "links": []
+    },
+    {
+      "id": "fr-la-feclaz",
+      "type": "resort",
+      "name": "La Féclaz",
+      "region": "Savoie",
+      "coords": [
+        5.9853,
+        45.6439
+      ],
+      "altitude": 1350,
+      "topAltitude": 1550,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner"
+      ],
+      "skiArea": {
+        "name": "Savoie Grand Revard",
+        "pisteKm": 50
+      },
+      "character": "Plateau above Chambéry and Aix-les-Bains. Mostly cross-country with some easy downhill.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 95,
+          "min": 80
+        }
+      },
+      "transfer": "Car from Chambéry, 30 min.",
+      "links": []
+    },
+    {
+      "id": "fr-aillons",
+      "type": "resort",
+      "name": "Aillons-Margériaz",
+      "region": "Savoie",
+      "coords": [
+        6.095,
+        45.61
+      ],
+      "altitude": 1000,
+      "topAltitude": 1840,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Aillons-Margériaz",
+        "pisteKm": 50
+      },
+      "character": "Small, low-key area in the Bauges nature park.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 100,
+          "min": 85
+        }
+      },
+      "transfer": "Car from Chambéry, 40 min.",
+      "links": []
+    },
+    {
+      "id": "fr-la-plagne",
+      "type": "resort",
+      "name": "La Plagne",
+      "region": "Savoie",
+      "coords": [
+        6.6775,
+        45.5072
+      ],
+      "altitude": 1970,
+      "topAltitude": 3250,
+      "townSize": "large",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Paradiski",
+        "pisteKm": 425
+      },
+      "character": "Ten villages spread across a huge, mostly intermediate area. Built for skiing first.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 150,
+          "min": 140
+        }
+      },
+      "transfer": "Shared shuttle about 2h30. Train to Aime, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-les-arcs",
+      "type": "resort",
+      "name": "Les Arcs",
+      "region": "Savoie",
+      "coords": [
+        6.8297,
+        45.5717
+      ],
+      "altitude": 1800,
+      "topAltitude": 3226,
+      "townSize": "large",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Paradiski",
+        "pisteKm": 425
+      },
+      "character": "Purpose-built villages with a funicular from Bourg-Saint-Maurice station. Steep terrain up top.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 155,
+          "min": 145
+        }
+      },
+      "transfer": "Shared shuttle about 2h30. Train to Bourg-Saint-Maurice, then funicular.",
+      "links": []
+    },
+    {
+      "id": "fr-peisey",
+      "type": "resort",
+      "name": "Peisey-Vallandry",
+      "region": "Savoie",
+      "coords": [
+        6.76,
+        45.55
+      ],
+      "altitude": 1600,
+      "topAltitude": 3226,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Paradiski",
+        "pisteKm": 425
+      },
+      "character": "Wooded, quieter corner of Paradiski. The Vanoise Express links Les Arcs and La Plagne here.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 150,
+          "min": 145
+        }
+      },
+      "transfer": "Train to Landry, then bus.",
+      "links": [
+        {
+          "to": "fr-les-arcs",
+          "min": 15,
+          "by": [
+            "lift"
+          ]
+        },
+        {
+          "to": "fr-la-plagne",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Vanoise Express cable car"
+        }
+      ]
+    },
+    {
+      "id": "fr-montchavin",
+      "type": "resort",
+      "name": "Montchavin–Les Coches",
+      "region": "Savoie",
+      "coords": [
+        6.7375,
+        45.5592
+      ],
+      "altitude": 1250,
+      "topAltitude": 3250,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Paradiski",
+        "pisteKm": 425
+      },
+      "character": "Old hamlet turned family resort on the La Plagne side of Paradiski.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 145,
+          "min": 140
+        }
+      },
+      "transfer": "Train to Aime, then bus.",
+      "links": [
+        {
+          "to": "fr-la-plagne",
+          "min": 25,
+          "by": [
+            "lift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-champagny",
+      "type": "resort",
+      "name": "Champagny-en-Vanoise",
+      "region": "Savoie",
+      "coords": [
+        6.6911,
+        45.4561
+      ],
+      "altitude": 1250,
+      "topAltitude": 3250,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "levels": [
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Paradiski",
+        "pisteKm": 425
+      },
+      "character": "Sunny, authentic back door into La Plagne. Much cheaper than the main resort.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 150,
+          "min": 135
+        }
+      },
+      "transfer": "Train to Moûtiers, then bus.",
+      "links": [
+        {
+          "to": "fr-la-plagne",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondola up to La Plagne"
+        }
+      ]
+    },
+    {
+      "id": "fr-val-disere",
+      "type": "resort",
+      "name": "Val d'Isère",
+      "region": "Savoie",
+      "coords": [
+        6.9797,
+        45.4486
+      ],
+      "altitude": 1850,
+      "topAltitude": 3456,
+      "townSize": "large",
+      "price": 3,
+      "family": false,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Espace Killy",
+        "pisteKm": 300
+      },
+      "character": "Big-name resort with serious terrain, late snow and a strong après scene.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 190,
+          "min": 175
+        }
+      },
+      "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-tignes",
+      "type": "resort",
+      "name": "Tignes",
+      "region": "Savoie",
+      "coords": [
+        6.9056,
+        45.4683
+      ],
+      "altitude": 2100,
+      "topAltitude": 3456,
+      "townSize": "medium",
+      "price": 3,
+      "family": true,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Espace Killy",
+        "pisteKm": 300
+      },
+      "character": "High, glacier-backed resort. One of the most snow-sure places in France.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 185,
+          "min": 170
+        }
+      },
+      "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
+      "links": [
+        {
+          "to": "fr-val-disere",
+          "min": 15,
+          "by": [
+            "lift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-courchevel",
+      "type": "resort",
+      "name": "Courchevel",
+      "region": "Savoie",
+      "coords": [
+        6.6347,
+        45.4153
+      ],
+      "altitude": 1850,
+      "topAltitude": 3230,
+      "townSize": "medium",
+      "price": 3,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Les 3 Vallées",
+        "pisteKm": 600
+      },
+      "character": "Very smart, very expensive. Perfect grooming and the gateway to the world's largest linked area.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 150,
+          "min": 135
+        }
+      },
+      "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-meribel",
+      "type": "resort",
+      "name": "Méribel",
+      "region": "Savoie",
+      "coords": [
+        6.5656,
+        45.3967
+      ],
+      "altitude": 1450,
+      "topAltitude": 3230,
+      "townSize": "medium",
+      "price": 3,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Les 3 Vallées",
+        "pisteKm": 600
+      },
+      "character": "Chalet-style village in the middle of the 3 Vallées. Strong British presence.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 150,
+          "min": 140
+        }
+      },
+      "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-val-thorens",
+      "type": "resort",
+      "name": "Val Thorens",
+      "region": "Savoie",
+      "coords": [
+        6.58,
+        45.2981
+      ],
+      "altitude": 2300,
+      "topAltitude": 3230,
+      "townSize": "medium",
+      "price": 3,
+      "family": false,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Les 3 Vallées",
+        "pisteKm": 600
+      },
+      "character": "Highest resort in Europe. Reliable snow, big parties, little charm.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 165,
+          "min": 155
+        }
+      },
+      "transfer": "Shared shuttle about 2h45. Train to Moûtiers, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-les-menuires",
+      "type": "resort",
+      "name": "Les Menuires",
+      "region": "Savoie",
+      "coords": [
+        6.5378,
+        45.3233
+      ],
+      "altitude": 1850,
+      "topAltitude": 3230,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Les 3 Vallées",
+        "pisteKm": 600
+      },
+      "character": "Practical, value base in the 3 Vallées. Ski to Val Thorens in minutes.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 160,
+          "min": 145
+        }
+      },
+      "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
+      "links": [
+        {
+          "to": "fr-val-thorens",
+          "min": 15,
+          "by": [
+            "lift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-valmorel",
+      "type": "resort",
+      "name": "Valmorel",
+      "region": "Savoie",
+      "coords": [
+        6.4436,
+        45.4617
+      ],
+      "altitude": 1400,
+      "topAltitude": 2550,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Grand Domaine",
+        "pisteKm": 165
+      },
+      "character": "Car-free family village built around one pedestrian street.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 140,
+          "min": 125
+        }
+      },
+      "transfer": "Train to Moûtiers, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-la-rosiere",
+      "type": "resort",
+      "name": "La Rosière",
+      "region": "Savoie",
+      "coords": [
+        6.8494,
+        45.6278
+      ],
+      "altitude": 1850,
+      "topAltitude": 2800,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Espace San Bernardo",
+        "pisteKm": 160
+      },
+      "character": "Sunny balcony facing the sun, linked over the border to La Thuile in Italy.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 175,
+          "min": 160
+        }
+      },
+      "transfer": "Train to Bourg-Saint-Maurice, then bus.",
+      "links": []
+    },
+    {
+      "id": "fr-sainte-foy",
+      "type": "resort",
+      "name": "Sainte-Foy-Tarentaise",
+      "region": "Savoie",
+      "coords": [
+        6.9008,
+        45.5911
+      ],
+      "altitude": 1550,
+      "topAltitude": 2620,
+      "townSize": "small",
+      "price": 2,
+      "family": false,
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Sainte-Foy",
+        "pisteKm": 70
+      },
+      "character": "Small, quiet resort with legendary off-piste and almost no queues.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 170,
+          "min": 155
+        }
+      },
+      "transfer": "Train to Bourg-Saint-Maurice, then taxi.",
+      "links": []
+    },
+    {
+      "id": "fr-annecy",
+      "type": "base",
+      "name": "Annecy",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.1294,
+        45.8992
+      ],
+      "altitude": 448,
+      "townSize": "large",
+      "price": 2,
+      "family": true,
+      "character": "Lakeside city with canals, an old town and real nightlife. Ski by day, city by night.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 45,
+          "min": 45
+        }
+      },
+      "transfer": "Bus from the airport about 1h. Car 45 min.",
+      "links": [
+        {
+          "to": "fr-semnoz",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-grand-bornand",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-la-clusaz",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-megeve",
+          "min": 60,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-thones",
+      "type": "base",
+      "name": "Thônes",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.3247,
+        45.8814
+      ],
+      "altitude": 630,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Market town at the foot of the Aravis. Supermarkets, cheese shops and local prices.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 55,
+          "min": 50
+        }
+      },
+      "transfer": "Car 50 min. Bus from Annecy.",
+      "links": [
+        {
+          "to": "fr-la-clusaz",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-grand-bornand",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-sallanches",
+      "type": "base",
+      "name": "Sallanches",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6311,
+        45.9361
+      ],
+      "altitude": 550,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "character": "Real valley town with big views of Mont Blanc. Rail station and everyday prices.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 60,
+          "min": 50
+        }
+      },
+      "transfer": "Léman Express L3 from Geneva about 1h20.",
+      "links": [
+        {
+          "to": "fr-combloux",
+          "min": 10,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-megeve",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-praz-sur-arly",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-saint-gervais",
+          "min": 15,
+          "by": [
+            "car",
+            "train"
+          ]
+        },
+        {
+          "to": "fr-les-houches",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-chamonix",
+          "min": 30,
+          "by": [
+            "car",
+            "train"
+          ]
+        },
+        {
+          "to": "fr-les-carroz",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-flaine",
+          "min": 40,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Léman Express L3"
+    },
+    {
+      "id": "fr-le-fayet",
+      "type": "base",
+      "name": "Saint-Gervais–Le Fayet",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.7039,
+        45.9067
+      ],
+      "altitude": 580,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Rail hub below Saint-Gervais. Trains up the Chamonix valley and a rack railway into the Les Houches slopes.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 70,
+          "min": 55
+        }
+      },
+      "transfer": "Léman Express L3 terminus, about 1h30 from Geneva.",
+      "links": [
+        {
+          "to": "fr-saint-gervais",
+          "min": 10,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-houches",
+          "min": 12,
+          "by": [
+            "car",
+            "train"
+          ]
+        },
+        {
+          "to": "fr-combloux",
+          "min": 15,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-megeve",
+          "min": 20,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-contamines",
+          "min": 20,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-chamonix",
+          "min": 25,
+          "by": [
+            "car",
+            "train"
+          ]
+        }
+      ],
+      "rail": "Léman Express L3"
+    },
+    {
+      "id": "fr-cluses",
+      "type": "base",
+      "name": "Cluses",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.5794,
+        46.0603
+      ],
+      "altitude": 485,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "character": "Plain industrial town on the motorway. Cheap beds and buses to four ski areas.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 45,
+          "min": 40
+        }
+      },
+      "transfer": "Léman Express L3 from Geneva about 1h.",
+      "links": [
+        {
+          "to": "fr-les-carroz",
+          "min": 20,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-morillon",
+          "min": 20,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-samoens",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-flaine",
+          "min": 35,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-praz-de-lys",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-les-gets",
+          "min": 35,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "Léman Express L3"
+    },
+    {
+      "id": "fr-taninges",
+      "type": "base",
+      "name": "Taninges",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.59,
+        46.1081
+      ],
+      "altitude": 640,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Old village at a crossroads between the Grand Massif and the Portes du Soleil.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 55,
+          "min": 45
+        }
+      },
+      "transfer": "Car 45 min.",
+      "links": [
+        {
+          "to": "fr-morillon",
+          "min": 15,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-praz-de-lys",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-samoens",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-les-gets",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-morzine",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-montriond",
+      "type": "base",
+      "name": "Montriond",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.6949,
+        46.2041
+      ],
+      "altitude": 950,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "character": "Calm village next to Morzine with its own lift into Avoriaz. Morzine access at lower prices.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 80,
+          "min": 70
+        }
+      },
+      "transfer": "Shuttle to Morzine about 1h15.",
+      "links": [
+        {
+          "to": "fr-morzine",
+          "min": 5,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-avoriaz",
+          "min": 15,
+          "by": [
+            "lift",
+            "car"
+          ],
+          "note": "Ardent gondola"
+        },
+        {
+          "to": "fr-les-gets",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-thonon",
+      "type": "base",
+      "name": "Thonon-les-Bains",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.4794,
+        46.3705
+      ],
+      "altitude": 430,
+      "townSize": "large",
+      "price": 1,
+      "family": true,
+      "character": "Lakeside town with shops, markets and year-round life. Buses up to the Portes du Soleil.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 45,
+          "min": 45
+        }
+      },
+      "transfer": "Léman Express L1 direct from Geneva about 50 min.",
+      "links": [
+        {
+          "to": "fr-thollon",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-bernex",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-roc-denfer",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-la-chapelle",
+          "min": 40,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-morzine",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-gets",
+          "min": 45,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-chatel",
+          "min": 50,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-avoriaz",
+          "min": 55,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Léman Express L1"
+    },
+    {
+      "id": "fr-evian",
+      "type": "base",
+      "name": "Évian-les-Bains",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.59,
+        46.4008
+      ],
+      "altitude": 410,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "character": "Elegant spa town on Lake Geneva. Ferries to Lausanne and quick access to the Chablais hills.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 50,
+          "min": 50
+        }
+      },
+      "transfer": "Léman Express L1 direct from Geneva about 1h.",
+      "links": [
+        {
+          "to": "fr-thollon",
+          "min": 20,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-bernex",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-la-chapelle",
+          "min": 40,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-chatel",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "Léman Express L1"
+    },
+    {
+      "id": "fr-annemasse",
+      "type": "base",
+      "name": "Annemasse",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.2342,
+        46.1933
+      ],
+      "altitude": 430,
+      "townSize": "large",
+      "price": 1,
+      "family": true,
+      "character": "Geneva's French twin town. Cheapest beds near the airport and the main Léman Express hub.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 15,
+          "min": 20
+        }
+      },
+      "transfer": "Léman Express from Geneva about 20 min.",
+      "links": [
+        {
+          "to": "fr-les-brasses",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-hirmentaz",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-praz-de-lys",
+          "min": 50,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-la-clusaz",
+          "min": 55,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-les-gets",
+          "min": 55,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Léman Express hub"
+    },
+    {
+      "id": "fr-bonneville",
+      "type": "base",
+      "name": "Bonneville",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.4011,
+        46.0786
+      ],
+      "altitude": 450,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "character": "Small administrative town in the Arve valley. Central for the Aravis and Grand Massif.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 35,
+          "min": 30
+        }
+      },
+      "transfer": "Léman Express L3 from Geneva about 45 min.",
+      "links": [
+        {
+          "to": "fr-grand-bornand",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-la-clusaz",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-les-carroz",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-praz-de-lys",
+          "min": 40,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Léman Express L3"
+    },
+    {
+      "id": "fr-la-roche",
+      "type": "base",
+      "name": "La Roche-sur-Foron",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.3117,
+        46.0667
+      ],
+      "altitude": 550,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "character": "Medieval town and rail junction. Easy reach of the Aravis and the Chablais family hills.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 30,
+          "min": 30
+        }
+      },
+      "transfer": "Léman Express from Geneva about 35 min.",
+      "links": [
+        {
+          "to": "fr-les-brasses",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-grand-bornand",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-hirmentaz",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-la-clusaz",
+          "min": 40,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Léman Express L2 and L3"
+    },
+    {
+      "id": "fr-gex",
+      "type": "base",
+      "name": "Gex",
+      "region": "Ain",
+      "coords": [
+        6.0578,
+        46.3333
+      ],
+      "altitude": 620,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "character": "Pays de Gex town at the foot of the Jura. Ten minutes from the Monts Jura lifts.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 20,
+          "min": 25
+        }
+      },
+      "transfer": "Car or bus 25 min.",
+      "links": [
+        {
+          "to": "fr-monts-jura",
+          "min": 10,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-rousses",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-divonne",
+      "type": "base",
+      "name": "Divonne-les-Bains",
+      "region": "Ain",
+      "coords": [
+        6.1383,
+        46.3567
+      ],
+      "altitude": 480,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "character": "Spa town with a lake, casino and good restaurants. Between Geneva and the Jura slopes.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 20,
+          "min": 20
+        }
+      },
+      "transfer": "Car 20 min.",
+      "links": [
+        {
+          "to": "fr-les-rousses",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-monts-jura",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-albertville",
+      "type": "base",
+      "name": "Albertville",
+      "region": "Savoie",
+      "coords": [
+        6.3925,
+        45.6758
+      ],
+      "altitude": 345,
+      "townSize": "large",
+      "price": 1,
+      "family": true,
+      "character": "Former Olympic host city at the meeting of four valleys. Good value and good shops.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 95,
+          "min": 75
+        }
+      },
+      "transfer": "Train via Annecy or Chambéry about 2h. Car 1h15.",
+      "links": [
+        {
+          "to": "fr-crest-voland",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-areches",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-valmorel",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-les-saisies",
+          "min": 40,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-courchevel",
+          "min": 50,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-la-plagne",
+          "min": 55,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-moutiers",
+      "type": "base",
+      "name": "Moûtiers",
+      "region": "Savoie",
+      "coords": [
+        6.5317,
+        45.4844
+      ],
+      "altitude": 480,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "character": "Small valley town at the foot of the 3 Vallées. Shuttle buses to every resort above it.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 135,
+          "min": 115
+        }
+      },
+      "transfer": "Train via Annecy or Chambéry about 2h30. Car 2h.",
+      "links": [
+        {
+          "to": "fr-courchevel",
+          "min": 25,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-meribel",
+          "min": 25,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-valmorel",
+          "min": 25,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-champagny",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-menuires",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-la-plagne",
+          "min": 35,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-val-thorens",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-brides",
+      "type": "base",
+      "name": "Brides-les-Bains",
+      "region": "Savoie",
+      "coords": [
+        6.5683,
+        45.4528
+      ],
+      "altitude": 600,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Quiet spa village with a gondola straight up to Méribel. 3 Vallées skiing at valley prices.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 140,
+          "min": 120
+        }
+      },
+      "transfer": "Train to Moûtiers, then bus 15 min.",
+      "links": [
+        {
+          "to": "fr-meribel",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Olympe gondola"
+        },
+        {
+          "to": "fr-courchevel",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-aime",
+      "type": "base",
+      "name": "Aime-la-Plagne",
+      "region": "Savoie",
+      "coords": [
+        6.6497,
+        45.555
+      ],
+      "altitude": 690,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "character": "Small Tarentaise town with a station. Short bus rides up to La Plagne villages.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 145,
+          "min": 125
+        }
+      },
+      "transfer": "Train via Chambéry about 2h45. Car 2h.",
+      "links": [
+        {
+          "to": "fr-montchavin",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-la-plagne",
+          "min": 25,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-peisey",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-les-arcs",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-bourg",
+      "type": "base",
+      "name": "Bourg-Saint-Maurice",
+      "region": "Savoie",
+      "coords": [
+        6.7697,
+        45.6181
+      ],
+      "altitude": 810,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "character": "Lively valley town with a funicular to Les Arcs in seven minutes. Best-value base in the upper Tarentaise.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 155,
+          "min": 135
+        }
+      },
+      "transfer": "Train via Chambéry about 3h. Car 2h15.",
+      "links": [
+        {
+          "to": "fr-les-arcs",
+          "min": 7,
+          "by": [
+            "lift"
+          ],
+          "note": "Funicular from the station"
+        },
+        {
+          "to": "fr-peisey",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-sainte-foy",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-la-rosiere",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-tignes",
+          "min": 40,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-val-disere",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    },
+    {
+      "id": "fr-chambery",
+      "type": "base",
+      "name": "Chambéry",
+      "region": "Savoie",
+      "coords": [
+        5.9178,
+        45.5646
+      ],
+      "altitude": 270,
+      "townSize": "large",
+      "price": 1,
+      "family": true,
+      "character": "Historic capital of Savoie. City life and cheap stays, with small family areas 30 minutes away.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 90,
+          "min": 65
+        }
+      },
+      "transfer": "Car 1h05. Train via Annecy.",
+      "links": [
+        {
+          "to": "fr-la-feclaz",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "fr-aillons",
+          "min": 40,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "TER trains"
+    }
+  ]
+}
