@@ -391,6 +391,59 @@ function tripLine(total, saving, vs = "") {
   return `<span class="trip-line">Trip ${money(total)}${save}</span>`;
 }
 
+/* ---------- places to stay ---------- */
+
+const isoDate = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+const MONTH_INDEX = { dec: 11, jan: 0, feb: 1, mar: 2, apr: 3 };
+
+// First Saturday of the first chosen month, in the coming season.
+function defaultArrive() {
+  const today = new Date();
+  const m = MONTH_INDEX[tripMonths()[0]];
+  let year = today.getFullYear();
+  if (new Date(year, m + 1, 0) < today) year += 1;
+  const d = new Date(year, m, 1);
+  while (d.getDay() !== 6) d.setDate(d.getDate() + 1);
+  return isoDate(d);
+}
+
+function stayDates() {
+  const arrive = state.trip.arrive || defaultArrive();
+  const out = new Date(arrive + "T12:00:00");
+  out.setDate(out.getDate() + state.trip.nights);
+  return { arrive, leave: isoDate(out) };
+}
+
+function staySection(l) {
+  const { arrive, leave } = stayDates();
+  const t = state.trip;
+  const town = l.searchName || l.name;
+  const where = encodeURIComponent(`${town}, France`);
+  const guests = t.adults + t.children;
+  const kids = Array.from({ length: t.children }, () => "age=8").join("&");
+  const when = new Date(arrive + "T12:00:00").toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+  const g = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+  const links = [
+    ["Booking.com", "Hotels and apartments",
+      `https://www.booking.com/searchresults.html?ss=${where}&checkin=${arrive}&checkout=${leave}&group_adults=${t.adults}&group_children=${t.children}&no_rooms=1${kids ? "&" + kids : ""}`],
+    ["Airbnb", "Homes and chalets",
+      `https://www.airbnb.com/s/${encodeURIComponent(`${town}--France`)}/homes?checkin=${arrive}&checkout=${leave}&adults=${t.adults}&children=${t.children}`],
+    ["Abritel", "French holiday rentals (Vrbo)",
+      `https://www.abritel.fr/search?destination=${where}&startDate=${arrive}&endDate=${leave}&adults=${guests}`],
+    ["Ski apartment deals", "Pierre & Vacances, Maeva and others (web search)",
+      g(`${town} ski apartment and lift pass deal ${when}`)],
+    ["Package holidays", "Tour operators with flights or transfers (web search)",
+      g(`${town} ski package holiday ${when}`)],
+  ];
+  const fmt = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  return `<section class="stay">
+      <span class="s-label">Places to stay</span>
+      <p class="hint">${esc(town)}, ${fmt(arrive)} to ${fmt(leave)}, ${guests} guest${guests === 1 ? "" : "s"}. Opens in a new tab.</p>
+      <ul class="stay-links">${links.map(([name, what, url]) =>
+        `<li><a href="${url}" target="_blank" rel="noopener"><b>${esc(name)}</b><span>${esc(what)}</span><i aria-hidden="true">↗</i></a></li>`).join("")}</ul>
+    </section>`;
+}
+
 function tripSection(l) {
   const cost = costOf(l);
   const t = state.trip;
@@ -427,14 +480,16 @@ function renderDetail(l) {
   const head = `<header class="d-head">
       <span class="eyebrow"><i class="dot ${l.type}"></i>${typeLabel(l)} · ${esc(l.region)}</span>
       <h2>${esc(l.name)}</h2>
-      <p class="character">${esc(l.character)}</p>
-      ${vibePills(l)}
       <div class="d-actions">
         <button type="button" class="icon-btn save-icon" data-save="${l.id}" aria-pressed="${state.saved.has(l.id)}" aria-label="Save to shortlist" title="Save to shortlist"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6z" fill="var(--star-fill, none)" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></button>
         <button type="button" class="icon-btn" id="detail-min" aria-expanded="${!state.detailMin}" aria-label="${state.detailMin ? "Expand details" : "Minimise details"}" title="${state.detailMin ? "Expand" : "Minimise"}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <button type="button" class="icon-btn" id="detail-close" aria-label="Close details" title="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
       </div>
-    </header>`;
+    </header>
+    <div class="d-intro">
+      <p class="character">${esc(l.character)}</p>
+      ${vibePills(l)}
+    </div>`;
 
   const stats = `<div class="stats">
       ${stat(`From ${state.origin}`, mins(t.min), `${t.km} km`)}
@@ -445,7 +500,7 @@ function renderDetail(l) {
 
   const getting = `<p class="getting"><span class="s-label">Getting there from Geneva</span>${esc(l.transfer)}${l.rail ? ` <span class="badge">${esc(l.rail)}</span>` : ""}${l.carFree ? ` <span class="badge good">No car needed</span>` : ""}</p>`;
 
-  let body = tripSection(l);
+  let body = tripSection(l) + staySection(l);
   if (l.type === "resort") {
     const cheaper = cheaperStays(l, model.byId);
     body += `<section class="ski">
@@ -501,6 +556,7 @@ function renderDetail(l) {
 
   const d = $("#detail");
   d.innerHTML = head + stats + getting + body + foot;
+  d.classList.remove("scrolled");
   d.classList.toggle("is-min", state.detailMin);
   d.hidden = false;
   d.scrollTop = 0;
@@ -725,6 +781,17 @@ function bindControls() {
       tripChanged();
     });
   }
+  const arriveInput = $("#t-arrive");
+  arriveInput.value = defaultArrive();
+  arriveInput.addEventListener("change", () => {
+    state.trip.arrive = arriveInput.value || null; // empty goes back to the default
+    if (!arriveInput.value) arriveInput.value = defaultArrive();
+    tripChanged();
+  });
+  $("#f-months").addEventListener("click", () => {
+    if (!state.trip.arrive) arriveInput.value = defaultArrive(); // follow the months until a date is picked
+  });
+  $("#detail").addEventListener("scroll", (e) => e.currentTarget.classList.toggle("scrolled", e.currentTarget.scrollTop > 4));
   $$("#t-transport button").forEach((b) => b.addEventListener("click", () => {
     state.trip.transport = b.dataset.v;
     $$("#t-transport button").forEach((x) => x.setAttribute("aria-pressed", x === b));

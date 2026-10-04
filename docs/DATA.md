@@ -68,6 +68,7 @@ Optional for any place:
 
 | Field | Meaning |
 | --- | --- |
+| `searchName` | The name to use in accommodation searches, when the display name won't search well (for example `"Lélex"` for Monts Jura). |
 | `stayPerPerson` | Euros per person per night, when a place costs clearly more or less than its price band's usual figure. |
 | `rail` | Name of the train service from the origin, for example `"Léman Express L3"`. Used for the "No car needed" badge. |
 

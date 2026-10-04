@@ -224,6 +224,18 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .ski-at { display: flex; align-items: center; gap: 8px; font-size: 14px; }
 .ski-at select { flex: 1; min-width: 0; border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: 5px 8px; }
 .access { margin: 0; font-size: 14px; display: grid; gap: 2px; }
+.field .arrive { display: grid; gap: 3px; font-size: 11px; color: var(--muted); text-transform: none; letter-spacing: 0; font-weight: 500; }
+.arrive input { padding: 6px 8px; font-size: 15px; font-weight: 600; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+.stay { display: grid; gap: 8px; }
+.stay-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.stay-links a {
+  display: grid; grid-template-columns: 1fr auto; grid-template-areas: "name go" "what go"; gap: 1px 10px; align-items: center;
+  padding: 9px 12px; border-radius: 8px; background: var(--panel-2); color: var(--ink); text-decoration: none;
+}
+.stay-links a:hover { background: var(--line); }
+.stay-links b { grid-area: name; font-weight: 600; }
+.stay-links span { grid-area: what; font-size: 12.5px; color: var(--muted); }
+.stay-links i { grid-area: go; font-style: normal; color: var(--muted); }
 .cost-lines { list-style: none; margin: 4px 0 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
 .cost-lines li {
   display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
@@ -386,17 +398,25 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
   display: flex; flex-direction: column; gap: 16px;
 }
 .detail > * { flex-shrink: 0; }
-.d-head { position: relative; padding-right: 32px; }
+/* The title bar stays pinned while the panel scrolls, so close and minimise are always in reach. */
+.d-head {
+  position: sticky; top: -20px; z-index: 4;
+  margin: -20px -20px -8px; padding: 20px 114px 12px 20px;
+  background: var(--panel); border-radius: var(--radius) var(--radius) 0 0;
+  transition: box-shadow .15s;
+}
+.detail.scrolled .d-head { box-shadow: 0 1px 0 var(--line), 0 8px 14px -10px rgba(0, 0, 0, 0.35); }
 .eyebrow { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
 .d-head h2 { font-size: 28px; line-height: 1.02; margin-top: 4px; font-weight: 700; }
-.character { margin: 8px 0 0; color: var(--muted); }
-.d-head { padding-right: 114px; }
-.d-actions { position: absolute; top: -6px; right: -6px; display: flex; gap: 6px; }
+.character { margin: 0; color: var(--muted); }
+.d-intro .vibes { margin-top: 10px; }
+.d-actions { position: absolute; top: 14px; right: 14px; display: flex; gap: 6px; }
 
 /* Minimised: just the name bar, so the map is clear. Tap the bar to expand. */
 .detail.is-min { bottom: auto; overflow: hidden; padding-block: 12px; cursor: pointer; }
 .detail.is-min > :not(.d-head), .detail.is-min .character, .detail.is-min .vibes { display: none; }
 .detail.is-min .d-head h2 { font-size: 20px; }
+.detail.is-min .d-head { margin: -12px -20px; padding-block: 12px; }
 .detail.is-min .d-actions { top: 50%; transform: translateY(-50%); }
 .detail.is-min #detail-min svg { transform: rotate(180deg); }
 
