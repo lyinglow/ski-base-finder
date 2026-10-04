@@ -218,6 +218,7 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .trip-who { margin: 0; font-size: 13px; color: var(--muted); }
 .ski-at { display: flex; align-items: center; gap: 8px; font-size: 14px; }
 .ski-at select { flex: 1; min-width: 0; border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: 5px 8px; }
+.access { margin: 0; font-size: 14px; display: grid; gap: 2px; }
 .cost-lines { list-style: none; margin: 4px 0 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
 .cost-lines li {
   display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
@@ -427,6 +428,7 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .lr-main { grid-area: main; border: 0; background: none; padding: 0; text-align: left; display: flex; gap: 8px; align-items: baseline; min-width: 0; }
 .lr-main > span { display: grid; gap: 2px; min-width: 0; }
 .lr-name { font-weight: 600; }
+.lr-name em { white-space: nowrap; }
 .lr-name em { font-style: normal; color: var(--muted); font-weight: 500; margin-left: 4px; font-size: 13px; }
 .lr-main:hover .lr-name { text-decoration: underline; text-underline-offset: 3px; }
 .lr-sub { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }

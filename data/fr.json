@@ -349,7 +349,7 @@
           "by": [
             "lift"
           ],
-          "note": "Prodains or Super-Morzine lifts"
+          "note": "Prodains cable car or Super-Morzine gondola"
         }
       ]
     },
@@ -396,7 +396,8 @@
           "by": [
             "lift",
             "bus"
-          ]
+          ],
+          "note": "Chairlifts over Le Pléney, or the shuttle bus"
         }
       ]
     },
@@ -770,7 +771,8 @@
           "min": 45,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Gondola to Morillon 1100, then ski across the Grand Massif"
         },
         {
           "to": "fr-samoens",
@@ -1137,7 +1139,8 @@
           "min": 20,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts and pistes across the Espace Diamant"
         }
       ]
     },
@@ -1189,7 +1192,8 @@
           "min": 35,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts and pistes across the Espace Diamant"
         }
       ]
     },
@@ -1494,7 +1498,8 @@
           "min": 15,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts up to the Arc 1600 and 1800 slopes"
         },
         {
           "to": "fr-la-plagne",
@@ -1548,7 +1553,8 @@
           "min": 25,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts and pistes over to Plagne Bellecôte"
         }
       ]
     },
@@ -1682,7 +1688,8 @@
           "min": 15,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts and pistes over the Tovière ridge"
         }
       ]
     },
@@ -1846,7 +1853,8 @@
           "min": 15,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts and pistes up the valley"
         }
       ]
     },
@@ -2043,7 +2051,8 @@
           "min": 20,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts and pistes over the Crey du Quart"
         }
       ]
     },
@@ -2209,7 +2218,8 @@
           "min": 10,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts and pistes across Les Sybelles"
         }
       ]
     },
@@ -2832,7 +2842,8 @@
           "min": 20,
           "by": [
             "lift"
-          ]
+          ],
+          "note": "Chairlifts and pistes across the Forêt Blanche"
         }
       ]
     },

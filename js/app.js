@@ -72,6 +72,26 @@ const travel = (l) => l.fromOrigin[model.origin.id];
 const typeLabel = (l) => (l.type === "resort" ? "Resort" : "Feeder town");
 const modes = (by) => by.map((m) => MODE_LABEL[m]).join(" or ");
 
+// How you get from a feeder town (or linked village) up to the resort, in plain words.
+function accessShort(by) {
+  if (by.includes("lift")) return "lift";
+  if (by.includes("train")) return "train";
+  if (by.includes("bus")) return "bus";
+  return "car";
+}
+
+function accessText(link) {
+  const order = ["lift", "train", "bus", "car"];
+  const by = order.filter((m) => link.by.includes(m));
+  if (by.includes("lift")) {
+    const others = by.filter((m) => m !== "lift");
+    return `${link.note || "Lift link"}${others.length ? `, or ${others.map((m) => MODE_LABEL[m]).join(" or ")}` : ""}`;
+  }
+  if (by.length === 1 && by[0] === "car") return "Car only. No bus or lift from here.";
+  const words = by.map((m) => MODE_LABEL[m]).join(" or ");
+  return words[0].toUpperCase() + words.slice(1) + (link.note ? `. ${link.note}` : "");
+}
+
 function levelDots(levels = []) {
   return `<span class="levels" title="${levels.map((v) => LEVEL_LABEL[v]).join(", ")}">${
     ["beginner", "intermediate", "expert"]
@@ -337,7 +357,7 @@ function placeRow({ place, link }, context, opts = {}) {
       <span><span class="lr-name">${esc(place.name)} <em>${price(place.price)}</em></span>
       <span class="lr-sub">${sub}</span>${gain}${cost}</span>
     </button>
-    <span class="lr-hop"><strong>${mins(link.min)}</strong><span>by ${modes(link.by)}</span>${link.note ? `<span>${esc(link.note)}</span>` : ""}</span>
+    <span class="lr-hop"><strong>${mins(link.min)}</strong><span>${esc(accessText(link))}</span></span>
     <button type="button" class="add" data-compare="${place.id}" aria-pressed="${inCompare}" title="Add to compare">${inCompare ? "Added" : "Compare"}</button>
   </li>`;
 }
@@ -358,7 +378,9 @@ function tripSection(l) {
     const options = reachable(l, model.byId);
     picker = `<label class="ski-at" for="ski-at">Skiing at
       <select id="ski-at" data-base="${l.id}">${options.map((r) =>
-        `<option value="${r.place.id}"${r.place.id === cost.ski.id ? " selected" : ""}>${esc(r.place.name)} (${mins(r.link.min)})</option>`).join("")}</select></label>`;
+        `<option value="${r.place.id}"${r.place.id === cost.ski.id ? " selected" : ""}>${esc(r.place.name)} · ${mins(r.link.min)} by ${accessShort(r.link.by)}</option>`).join("")}</select></label>`;
+    const link = options.find((r) => r.place.id === cost.ski.id).link;
+    picker += `<p class="access"><span class="s-label">Getting up</span>${esc(accessText(link))} · ${mins(link.min)}</p>`;
   }
   return `<section class="trip">
       <span class="s-label">Trip cost</span>
