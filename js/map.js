@@ -37,6 +37,7 @@ function style() {
       dem,
       hillshadeDem: { type: "raster-dem", tiles: [TERRAIN_TILES], encoding: "terrarium", tileSize: 256, maxzoom: 14 },
       links: { type: "geojson", data: empty() },
+      reach: { type: "geojson", data: empty() },
     },
     layers: [
       { id: "satellite", type: "raster", source: "satellite" },
@@ -44,6 +45,11 @@ function style() {
       {
         id: "hillshade", type: "hillshade", source: "hillshadeDem",
         paint: { "hillshade-exaggeration": 0.35, "hillshade-shadow-color": "#0b1520" },
+      },
+      {
+        id: "reach-line", type: "line", source: "reach",
+        layout: { "line-cap": "round" },
+        paint: { "line-color": "#ffffff", "line-width": 2, "line-opacity": 0.85, "line-dasharray": [2, 2] },
       },
       {
         id: "links-casing", type: "line", source: "links",
@@ -93,6 +99,12 @@ export function setBasemap(map, name) {
   for (const id of Object.keys(BASEMAPS)) {
     map.setLayoutProperty(id, "visibility", id === name ? "visible" : "none");
   }
+}
+
+// Dashed line from the airport to the furthest place on show.
+export function setReach(map, features) {
+  const src = map.getSource("reach");
+  if (src) src.setData({ type: "FeatureCollection", features });
 }
 
 export function setLinks(map, features) {

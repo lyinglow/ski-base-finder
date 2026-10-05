@@ -19,6 +19,7 @@
         <h1>Ski Base Finder</h1>
         <div class="header-btns">
           <button type="button" id="show-saved" class="shortlist-btn" aria-pressed="false" title="Show your shortlist"><span aria-hidden="true">★</span> Shortlist <span class="count" id="saved-count">0</span></button>
+          <button type="button" id="share-plan" class="share-btn" title="Copy a link to this plan: shortlist, trip and filters">Share plan</button>
           <button type="button" id="f-beginner" class="beginner-btn" aria-pressed="false" title="Only resorts where you can walk to the beginner slopes">Absolute beginner</button>
         </div>
         <p class="origin"><label for="origin">Flying into</label>
@@ -125,10 +126,10 @@
       </section>
 
       <div class="shortlist-tools" id="shortlist-tools" hidden>
-        <p>Your shortlist is saved in this browser. Share it with the link.</p>
+        <p>Your shortlist and trip are saved in this browser. Use the plan link to open them on another device or share them.</p>
         <div class="tool-row">
           <button type="button" id="saved-compare" class="primary">Compare</button>
-          <button type="button" id="saved-share" class="secondary">Copy link</button>
+          <button type="button" id="saved-share" class="secondary">Copy plan link</button>
           <button type="button" id="saved-clear" class="ghost">Clear</button>
         </div>
         <input type="text" id="saved-link" readonly hidden aria-label="Shortlist link">
@@ -151,6 +152,8 @@
       <ol class="results" id="results"></ol>
 
       <footer class="data-note" id="data-note"></footer>
+      <p class="plan-note">Your plan is saved in this browser. <button type="button" id="plan-reset" class="link">Start a new plan</button></p>
+      <input type="text" id="plan-link" readonly hidden aria-label="Plan link">
     </aside>
 
     <main class="stage">

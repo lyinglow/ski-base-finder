@@ -1,7 +1,7 @@
 import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
 import { tripCost, skiTarget } from "./cost.js";
 import { fitScore, seasonState } from "./fit.js";
-import { createMap, setBasemap, setTerrain, setLinks, HOME_VIEW } from "./map.js";
+import { createMap, setBasemap, setTerrain, setLinks, setReach, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
 const $ = (s) => document.querySelector(s);
@@ -56,6 +56,7 @@ async function init() {
     `<option value="${o.id}"${o.id === state.origin ? " selected" : ""}>${esc(o.name)} (${o.id})</option>`).join("");
   $("#country-list").textContent = model.countries.map((c) => c.name).join(", ");
   setupCurrency();
+  restorePlan(); // last visit, or a shared plan link
   renderDataNote();
   loadShortlist();
 
@@ -66,11 +67,16 @@ async function init() {
   map.on("zoom", updateLabelMode);
   updateLabelMode();
 
+  map.once("load", () => { if (!state.selected) airportView(); updateReach(lastVisible); });
+  syncControls();
   bindControls();
+  syncControls(); // again for controls that bindControls builds (vibes, weeks)
   applyFilters();
 
+  // Reopen the place from a #link, or the one open last time.
   const fromHash = decodeURIComponent(location.hash.slice(1));
-  if (model.byId.has(fromHash)) map.once("load", () => select(fromHash));
+  const reopen = model.byId.has(fromHash) ? fromHash : planReopen;
+  if (reopen && model.byId.has(reopen)) map.once("load", () => select(reopen));
 }
 
 /* ---------- formatting ---------- */
@@ -203,6 +209,47 @@ function setOrigin(id) {
   $("#origin").value = id;
   updateOriginMarkers();
   tripChanged();
+  if (!state.selected) airportView(1400);
+}
+
+/* ---------- airport view: airport at the bottom, everywhere you can reach above it ---------- */
+
+let lastVisible = [];
+let reachMarker = null;
+
+function airportView(duration = 0) {
+  const origin = model.origins.find((o) => o.id === state.origin);
+  const places = (lastVisible.length ? lastVisible : model.locations).map((l) => l.coords);
+  if (!places.length) return;
+  // Face from the airport toward the middle of the places, so the airport sits at the bottom.
+  const c = places.reduce((a, p) => [a[0] + p[0] / places.length, a[1] + p[1] / places.length], [0, 0]);
+  const lat = (origin.coords[1] * Math.PI) / 180;
+  const bearing = (Math.atan2((c[0] - origin.coords[0]) * Math.cos(lat), c[1] - origin.coords[1]) * 180) / Math.PI;
+  const bounds = places.reduce((b, p) => b.extend(p), new maplibregl.LngLatBounds(origin.coords, origin.coords));
+  const narrow = matchMedia("(max-width: 899px)").matches;
+  const cam = map.cameraForBounds(bounds, {
+    bearing,
+    padding: narrow ? { top: 70, bottom: 60, left: 30, right: 30 } : { top: 80, bottom: 110, left: 60, right: 90 },
+  });
+  if (!cam) return;
+  const view = { ...cam, pitch: 45 };
+  duration ? map.flyTo({ ...view, duration }) : map.jumpTo(view);
+}
+
+// Line and label from the airport to the furthest place currently on show.
+function updateReach(visible) {
+  lastVisible = visible;
+  reachMarker?.remove();
+  reachMarker = null;
+  if (!map || state.selected || !visible.length) { if (map) setReach(map, []); return; }
+  const origin = model.origins.find((o) => o.id === state.origin);
+  const far = visible.reduce((a, b) => (travel(b).min > travel(a).min ? b : a));
+  setReach(map, [{ type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: [origin.coords, far.coords] } }]);
+  const el = document.createElement("span");
+  el.className = "minutes reach";
+  el.textContent = `Furthest: ${far.name} · ${mins(travel(far).min)}`;
+  const mid = [0, 1].map((i) => origin.coords[i] + (far.coords[i] - origin.coords[i]) * 0.55);
+  reachMarker = new maplibregl.Marker({ element: el }).setLngLat(mid).addTo(map);
 }
 
 function addMarker(l) {
@@ -272,6 +319,8 @@ function applyFilters() {
     ? "Nothing saved yet. Open a resort or town and tap Save."
     : "Nothing matches. Try a longer travel time or more price levels.";
   $("#results").innerHTML = n ? visible.map(resultItem).join("") : `<li class="empty">${emptyText}</li>`;
+  updateReach(visible);
+  savePlan();
 }
 
 function tripTitle(l) {
@@ -847,6 +896,19 @@ function bindControls() {
     openCompare();
   });
   $("#saved-share").addEventListener("click", shareShortlist);
+  $("#share-plan").addEventListener("click", (e) => copyPlanLink(e.currentTarget, $("#plan-link")));
+  $("#plan-reset").addEventListener("click", (e) => {
+    // Two taps, so one slip does not wipe a plan.
+    const b = e.currentTarget;
+    if (b.dataset.armed !== "1") {
+      b.dataset.armed = "1";
+      b.textContent = "Tap again to clear trip, filters and shortlist";
+      setTimeout(() => { b.dataset.armed = ""; b.textContent = "Start a new plan"; }, 3000);
+      return;
+    }
+    try { localStorage.removeItem(PLAN_KEY); localStorage.removeItem(SAVED_KEY); } catch { /* nothing saved */ }
+    location.href = location.pathname;
+  });
   $("#saved-clear").addEventListener("click", (e) => {
     // Two taps to clear, so one slip does not lose the list.
     const b = e.currentTarget;
@@ -878,7 +940,9 @@ function bindControls() {
   hop.addEventListener("input", () => { showHop(); applyFilters(); });
   showHop();
 
-  const chipSet = (sel, set, parse) => $$(`${sel} button`).forEach((b) => b.addEventListener("click", () => {
+  // Reads the set from state on each click, since a restored plan or a week pick can replace it.
+  const chipSet = (sel, key, parse) => $$(`${sel} button`).forEach((b) => b.addEventListener("click", () => {
+    const set = state[key];
     const v = parse(b.dataset.v);
     const on = set.has(v);
     if (on && set.size === 1) return; // keep at least one
@@ -886,9 +950,9 @@ function bindControls() {
     b.setAttribute("aria-pressed", !on);
     applyFilters();
   }));
-  chipSet("#f-price", state.prices, Number);
-  chipSet("#f-size", state.sizes, String);
-  chipSet("#f-months", state.months, String);
+  chipSet("#f-price", "prices", Number);
+  chipSet("#f-size", "sizes", String);
+  chipSet("#f-months", "months", String);
   $("#f-months").addEventListener("click", () => {
     // Month choice changes every snow rating, so redraw open panels too.
     if (state.selected) renderDetail(model.byId.get(state.selected));
@@ -1025,7 +1089,7 @@ function bindControls() {
     map.easeTo({ pitch: on ? 58 : 0, duration: 800 });
   });
 
-  $("#reset-view").addEventListener("click", () => map.flyTo({ ...HOME_VIEW, duration: 1400 }));
+  $("#reset-view").addEventListener("click", () => airportView(1400));
 
   $("#sidebar-toggle").addEventListener("click", () => setSidebar(!sidebarOpen()));
   $("#sidebar-hide").addEventListener("click", () => setSidebar(false));
@@ -1111,21 +1175,151 @@ function shortlistChanged(persist = true) {
   applyFilters();
 }
 
-async function shareShortlist() {
-  const url = `${location.origin}${location.pathname}?list=${[...state.saved].join(",")}`;
-  const btn = $("#saved-share");
+function shareShortlist() {
+  copyPlanLink($("#saved-share"), $("#saved-link"));
+}
+
+/* ---------- plan: saved in the browser, and as a link ---------- */
+
+const PLAN_KEY = "skibase.plan";
+let planReopen = null;
+let saveTimer = null;
+
+function planOf() {
+  return {
+    v: 1,
+    origin: state.origin,
+    currency: state.currency,
+    months: [...state.months],
+    trip: { ...state.trip },
+    skiAt: state.skiAt,
+    show: state.show,
+    maxTime: state.maxTime,
+    maxHop: state.maxHop,
+    prices: [...state.prices],
+    sizes: [...state.sizes],
+    vibes: [...state.vibes],
+    family: state.family,
+    carFree: state.carFree,
+    snowSure: state.snowSure,
+    beginner: state.beginner,
+    sort: state.sort,
+    saved: [...state.saved],
+    selected: state.selected,
+  };
+}
+
+addEventListener("pagehide", () => {
+  if (!model) return;
+  clearTimeout(saveTimer);
+  try { localStorage.setItem(PLAN_KEY, JSON.stringify(planOf())); } catch { /* storage blocked */ }
+});
+
+function savePlan() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    try { localStorage.setItem(PLAN_KEY, JSON.stringify(planOf())); } catch { /* storage blocked */ }
+  }, 300);
+}
+
+// Take what is valid from a stored or shared plan; ignore anything unknown.
+function applyPlan(p, { mergeSaved = false } = {}) {
+  if (!p || p.v !== 1) return;
+  const ids = (xs) => (Array.isArray(xs) ? xs.filter((id) => model.byId.has(id)) : []);
+  const num = (v, lo, hi, d) => (Number.isFinite(v) && v >= lo && v <= hi ? v : d);
+  if (model.origins.some((o) => o.id === p.origin)) state.origin = p.origin;
+  if (p.currency === "GBP" || p.currency === "EUR") state.currency = p.currency;
+  const months = (p.months || []).filter((m) => MONTHS.some((x) => x.key === m));
+  if (months.length) state.months = new Set(months);
+  const t = p.trip || {};
+  state.trip = {
+    nights: num(t.nights, 1, 21, 7),
+    skiDays: num(t.skiDays, 1, 21, 6),
+    adults: num(t.adults, 1, 12, 2),
+    childAges: (Array.isArray(t.childAges) ? t.childAges : []).filter((a) => Number.isInteger(a) && a >= 0 && a <= 17).slice(0, 8),
+    transport: t.transport === "car" ? "car" : "shuttle",
+    lessons: ["none", "kids", "all"].includes(t.lessons) ? t.lessons : "all",
+    hire: t.hire !== false,
+    week: model.index.weeks.some((w) => w.start === t.week) ? t.week : null,
+  };
+  state.skiAt = Object.fromEntries(Object.entries(p.skiAt || {}).filter(([b, r]) => model.byId.has(b) && model.byId.has(r)));
+  if (["all", "resort", "base", "saved"].includes(p.show)) state.show = p.show;
+  state.maxTime = num(p.maxTime, 20, 300, 300);
+  state.maxHop = num(p.maxHop, 5, 60, 60);
+  const prices = (p.prices || []).filter((x) => [1, 2, 3].includes(x));
+  if (prices.length) state.prices = new Set(prices);
+  const sizes = (p.sizes || []).filter((x) => ["small", "medium", "large", "huge"].includes(x));
+  if (sizes.length) state.sizes = new Set(sizes);
+  state.vibes = new Set((p.vibes || []).filter((v) => v in model.index.vibes));
+  state.family = p.family === true;
+  state.carFree = p.carFree === true;
+  state.snowSure = p.snowSure === true;
+  state.beginner = p.beginner === true;
+  if (["fit", "time", "cost", "price", "altitude", "ski", "snow"].includes(p.sort)) state.sort = p.sort;
+  if (mergeSaved) for (const id of ids(p.saved)) state.saved.add(id);
+  else state.saved = new Set(ids(p.saved));
+  planReopen = model.byId.has(p.selected) ? p.selected : null;
+}
+
+function restorePlan() {
+  try { applyPlan(JSON.parse(localStorage.getItem(PLAN_KEY) || "null")); } catch { /* storage blocked or bad data */ }
+  // A shared plan link replaces the settings and adds its shortlist to this browser's one.
+  const shared = new URLSearchParams(location.search).get("plan");
+  if (shared) {
+    try { applyPlan(decodePlan(shared), { mergeSaved: true }); } catch { /* bad link: keep what we have */ }
+    history.replaceState(null, "", location.pathname + location.hash);
+  }
+  try { localStorage.setItem(SAVED_KEY, JSON.stringify([...state.saved])); } catch { /* not saved */ }
+}
+
+const encodePlan = (p) => btoa(unescape(encodeURIComponent(JSON.stringify(p)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const decodePlan = (s) => JSON.parse(decodeURIComponent(escape(atob(s.replace(/-/g, "+").replace(/_/g, "/")))));
+
+async function copyPlanLink(btn, fallbackInput) {
+  const label = btn.textContent;
+  const url = `${location.origin}${location.pathname}?plan=${encodePlan(planOf())}`;
   try {
     await navigator.clipboard.writeText(url);
     btn.textContent = "Link copied";
   } catch {
     // Clipboard refused: show the link so it can be copied by hand.
-    const input = $("#saved-link");
-    input.value = url;
-    input.hidden = false;
-    input.select();
+    fallbackInput.value = url;
+    fallbackInput.hidden = false;
+    fallbackInput.select();
     btn.textContent = "Copy the link below";
   }
-  setTimeout(() => { btn.textContent = "Copy link"; }, 2500);
+  setTimeout(() => { btn.textContent = label; }, 2500);
+}
+
+// Put every control in line with the state (after restoring a plan).
+function syncControls() {
+  const pressed = (sel, on) => $$(sel).forEach((b) => b.setAttribute("aria-pressed", on(b.dataset.v ?? b.dataset.show)));
+  const t = state.trip;
+  $("#origin").value = state.origin;
+  $("#t-nights").value = t.nights;
+  $("#t-days").value = t.skiDays;
+  $("#t-adults").value = t.adults;
+  $("#t-kids").value = t.childAges.join(", ");
+  $("#t-hire").checked = t.hire;
+  if ($("#t-week").options.length) $("#t-week").value = t.week || "";
+  pressed("#t-lessons button", (v) => v === t.lessons);
+  pressed("#t-transport button", (v) => v === t.transport);
+  pressed("#f-months button", (v) => state.months.has(v));
+  pressed("#f-price button", (v) => state.prices.has(Number(v)));
+  pressed("#f-size button", (v) => state.sizes.has(v));
+  pressed("#f-vibe button", (v) => state.vibes.has(v));
+  pressed("#show-seg button", (v) => v === state.show);
+  $("#f-time").value = state.maxTime;
+  $("#f-hop").value = state.maxHop;
+  $("#f-family").checked = state.family;
+  $("#f-carfree").checked = state.carFree;
+  $("#f-snow").checked = state.snowSure;
+  $("#f-beginner").setAttribute("aria-pressed", state.beginner);
+  $("#sort").value = state.sort;
+  $("#show-saved").setAttribute("aria-pressed", state.show === "saved");
+  $(".filters").hidden = state.show === "saved";
+  $("#shortlist-tools").hidden = state.show !== "saved";
+  currencyChanged(false);
 }
 
 function tripChanged() {

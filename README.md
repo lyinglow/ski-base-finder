@@ -34,6 +34,8 @@ Any static host works (GitHub Pages, Netlify, Vercel, an S3 bucket). Opening `in
 - **Best match.** Every place gets a beginner and family fit score out of 100, with the reasons: walk to the beginner slopes, beginner terrain, English-speaking ski schools, children's ages, snow for your dates, transfer time. The list sorts by best match first.
 - **Pick a vibe.** Lively, quiet, traditional, upmarket, ski-in ski-out or town life. Choose any number, or none for all.
 - **Check the snow.** Pick the months you are going. Every resort shows how snow-sure it is for those months (snow-sure, usually fine, risky), month by month in its panel. Feeder towns show the best snow they reach. Filter to snow-sure places only, or sort by snow.
+- **Pick up where you left off.** Your shortlist, trip, filters, airport, currency and the place you had open are saved in your browser. Share plan copies a link that opens the same plan on any device, or for someone you are travelling with. Start a new plan clears it.
+- **See it from the airport.** The map opens looking out from your airport, which sits at the bottom of the screen, with a line to the furthest place on show and its drive time. Reset view and changing airport do the same.
 - **Save a shortlist.** Tap the star or Save on any place. Your shortlist stays in your browser, shows as stars on the map, and can be compared or shared as a link.
 - **Share a place.** The address bar updates (`#fr-megeve`), so a link opens straight to it.
 
