@@ -217,7 +217,12 @@ function addOriginMarker(o) {
   el.className = "marker origin";
   el.title = `Fly into ${o.name}`;
   el.innerHTML = `<span class="pin"></span><span class="tag">${esc(o.id)}</span>`;
-  el.addEventListener("click", (e) => { e.stopPropagation(); setOrigin(o.id); });
+  el.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (state.selected) clearSelection();
+    if (o.id === state.origin) airportView(1400);
+    else setOrigin(o.id);
+  });
   new maplibregl.Marker({ element: el, opacityWhenCovered: "0.7" }).setLngLat(o.coords).addTo(map);
   originMarkers.set(o.id, el);
 }
@@ -254,22 +259,31 @@ function updateSnowLayer() {
 let lastVisible = [];
 let reachMarker = null;
 
+// Look along the line from the airport to the furthest place on show:
+// the furthest place in the middle of the screen, the airport straight below it at the bottom centre.
 function airportView(duration = 0) {
   const origin = model.origins.find((o) => o.id === state.origin);
-  const places = (lastVisible.length ? lastVisible : model.locations).map((l) => l.coords);
+  const places = lastVisible.length ? lastVisible : model.locations.filter((l) => travel(l));
   if (!places.length) return;
-  // Face from the airport toward the middle of the places, so the airport sits at the bottom.
-  const c = places.reduce((a, p) => [a[0] + p[0] / places.length, a[1] + p[1] / places.length], [0, 0]);
+  const far = places.reduce((a, b) => (travel(b).min > travel(a).min ? b : a));
   const lat = (origin.coords[1] * Math.PI) / 180;
-  const bearing = (Math.atan2((c[0] - origin.coords[0]) * Math.cos(lat), c[1] - origin.coords[1]) * 180) / Math.PI;
-  const bounds = places.reduce((b, p) => b.extend(p), new maplibregl.LngLatBounds(origin.coords, origin.coords));
-  const narrow = matchMedia("(max-width: 899px)").matches;
-  const cam = map.cameraForBounds(bounds, {
-    bearing,
-    padding: narrow ? { top: 70, bottom: 60, left: 30, right: 30 } : { top: 80, bottom: 110, left: 60, right: 90 },
-  });
-  if (!cam) return;
-  const view = { ...cam, pitch: 45 };
+  const bearing = (Math.atan2((far.coords[0] - origin.coords[0]) * Math.cos(lat), far.coords[1] - origin.coords[1]) * 180) / Math.PI;
+
+  // Find the zoom that puts the airport near the bottom edge, by trying it out without drawing.
+  const start = { center: map.getCenter(), zoom: map.getZoom(), bearing: map.getBearing(), pitch: map.getPitch() };
+  const { clientHeight: h } = map.getContainer();
+  const target = h * 0.86; // airport this far down the screen
+  let zoom = 8;
+  for (let i = 0; i < 4; i++) {
+    map.jumpTo({ center: far.coords, zoom, bearing, pitch: 35 });
+    const y = map.project(origin.coords).y;
+    const drop = y - h / 2; // how far below the centre the airport lands
+    if (drop <= 0) break;
+    zoom += Math.log2((target - h / 2) / drop);
+  }
+  zoom = Math.max(6, Math.min(11, zoom));
+  map.jumpTo(start);
+  const view = { center: far.coords, zoom, bearing, pitch: 35 };
   duration ? map.flyTo({ ...view, duration }) : map.jumpTo(view);
 }
 
