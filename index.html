@@ -34,7 +34,13 @@
 
       <section class="filters" aria-label="Filters">
         <div class="field">
-          <span class="label">Your trip</span>
+          <div class="trip-head">
+            <span class="label">Your trip</span>
+            <div class="currency" id="currency" role="group" aria-label="Currency">
+              <button type="button" id="cur-gbp" data-v="GBP" aria-pressed="true">£</button>
+              <button type="button" id="cur-eur" data-v="EUR" aria-pressed="false">€</button>
+            </div>
+          </div>
           <div class="trip-grid">
             <label for="t-nights">Nights<input type="number" id="t-nights" min="1" max="21" value="7" inputmode="numeric"></label>
             <label for="t-days">Ski days<input type="number" id="t-days" min="1" max="21" value="6" inputmode="numeric"></label>

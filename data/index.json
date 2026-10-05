@@ -314,5 +314,12 @@
       "note": "Only the highest resorts are still open."
     }
   ],
-  "weeksNote": "School holiday dates for 2026/27. UK half term and Easter dates vary by council; check your school."
+  "weeksNote": "School holiday dates for 2026/27. UK half term and Easter dates vary by council; check your school.",
+  "currency": {
+    "default": "GBP",
+    "gbpPerEur": 0.85,
+    "rateDate": "2026-10-02",
+    "liveRate": "https://api.frankfurter.dev/v1/latest?base=EUR&symbols=GBP",
+    "note": "Prices are worked out in euros and shown in pounds at the latest European Central Bank rate."
+  }
 }

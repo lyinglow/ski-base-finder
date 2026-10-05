@@ -261,6 +261,10 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
   vertical-align: 1px; font-variant-numeric: tabular-nums;
 }
 .field .toggle { display: flex; justify-content: flex-start; text-transform: none; letter-spacing: 0; font-size: 14px; font-weight: 400; color: var(--ink); }
+.trip-head { display: flex; justify-content: space-between; align-items: center; }
+.currency { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; background: var(--panel-2); }
+.currency button { border: 0; background: transparent; border-radius: 999px; padding: 2px 10px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.currency button[aria-pressed="true"] { background: var(--panel); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 .segmented.three { grid-template-columns: repeat(3, 1fr); }
 .segmented.three button { padding-inline: 4px; font-size: 13px; }
 .week-note { margin: -2px 0 0; font-size: 12px; color: var(--muted); }

@@ -24,6 +24,9 @@ const state = {
   carFree: false,
   months: new Set(["jan", "feb", "mar"]),
   snowSure: false,
+  currency: "GBP",
+  gbpPerEur: 0.85,
+  rateDate: null,
   origin: "GVA",
   beginner: false,
   vibes: new Set(), // empty means any vibe
@@ -52,6 +55,7 @@ async function init() {
   $("#origin").innerHTML = model.origins.map((o) =>
     `<option value="${o.id}"${o.id === state.origin ? " selected" : ""}>${esc(o.name)} (${o.id})</option>`).join("");
   $("#country-list").textContent = model.countries.map((c) => c.name).join(", ");
+  setupCurrency();
   renderDataNote();
   loadShortlist();
 
@@ -72,7 +76,7 @@ async function init() {
 /* ---------- formatting ---------- */
 
 const mins = (m) => (m < 60 ? `${m} min` : `${Math.floor(m / 60)}h${String(m % 60).padStart(2, "0")}`);
-const price = (p) => model.priceBands[p].symbol;
+const price = (p) => curSymbol().repeat(Number(p));
 const travel = (l) => l.fromOrigin[state.origin];
 const originName = () => model.origins.find((o) => o.id === state.origin).name;
 const typeLabel = (l) => (l.type === "resort" ? "Resort" : "Feeder town");
@@ -135,7 +139,10 @@ function snowMonths(l) {
 
 /* ---------- trip cost ---------- */
 
-const money = (n) => "€" + (Math.round(n / 10) * 10).toLocaleString("en-GB");
+// All prices are held in euros; show them in the chosen currency.
+const toShown = (eur) => (state.currency === "GBP" ? eur * state.gbpPerEur : eur);
+const curSymbol = () => (state.currency === "GBP" ? "£" : "€");
+const money = (n) => curSymbol() + (Math.round(toShown(n) / 10) * 10).toLocaleString("en-GB");
 const tripOf = () => ({ ...state.trip, months: tripMonths(), origin: state.origin });
 const kidsText = (ages) => ages.length === 1 ? `1 child aged ${ages[0]}` : `${ages.length} children aged ${ages.slice(0, -1).join(", ")} and ${ages[ages.length - 1]}`;
 
@@ -1132,7 +1139,45 @@ function tripChanged() {
 }
 
 function renderDataNote() {
-  const bands = Object.values(model.priceBands).map((b) => `<li><b>${b.symbol}</b> ${b.label}: ${b.guide}</li>`).join("");
+  // Band guides are written in euros; convert the figures for display.
+  const guide = (g) => g.replace(/€(\d+)/g, (_, n) => curSymbol() + Math.round(toShown(Number(n)) / 5) * 5);
+  const bands = Object.entries(model.priceBands).map(([k, b]) => `<li><b>${price(k)}</b> ${b.label}: ${guide(b.guide)}</li>`).join("");
+  const rate = state.currency === "GBP"
+    ? `<p>£ at €1 = £${state.gbpPerEur.toFixed(3)} (European Central Bank${state.rateDate ? `, ${fmtDay(state.rateDate)}` : ""}).</p>` : "";
   $("#data-note").innerHTML = `<ul class="bands">${bands}</ul>
-    <p>${esc(model.index.costs.note)} ${model.notes.map(esc).join(" ")}</p>`;
+    <p>${esc(model.index.costs.note)} ${model.notes.map(esc).join(" ")}</p>${rate}`;
+}
+
+/* ---------- currency ---------- */
+
+function setupCurrency() {
+  const cfg = model.index.currency;
+  state.gbpPerEur = cfg.gbpPerEur;
+  state.rateDate = cfg.rateDate;
+  let saved = null;
+  try { saved = localStorage.getItem("skibase.currency"); } catch { /* storage blocked */ }
+  state.currency = saved === "EUR" || saved === "GBP" ? saved : cfg.default;
+  $$("#currency button").forEach((b) => b.addEventListener("click", () => {
+    state.currency = b.dataset.v;
+    try { localStorage.setItem("skibase.currency", state.currency); } catch { /* not saved */ }
+    currencyChanged();
+  }));
+  currencyChanged(false);
+  // Fetch today's rate; keep the saved one if this fails.
+  fetch(cfg.liveRate).then((r) => (r.ok ? r.json() : null)).then((j) => {
+    if (j?.rates?.GBP) {
+      state.gbpPerEur = j.rates.GBP;
+      state.rateDate = j.date;
+      currencyChanged();
+    }
+  }).catch(() => {});
+}
+
+function currencyChanged(rerender = true) {
+  $$("#currency button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === state.currency));
+  const labels = { 1: "Budget", 2: "Mid", 3: "High" };
+  for (const k of [1, 2, 3]) $(`#f-price-${k}`).textContent = `${price(k)} ${labels[k]}`;
+  if (!rerender) return;
+  renderDataNote();
+  tripChanged();
 }
