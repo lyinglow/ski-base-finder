@@ -32,6 +32,14 @@
         "pisteKm": 150,
         "pass6": 340
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-05-09"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
       "character": "Busy mountaineering town under Mont Blanc. Steep, high terrain and huge off-piste, spread over separate areas joined by bus.",
       "fromOrigin": {
         "GVA": {
@@ -84,6 +92,14 @@
         "name": "Les Houches",
         "pisteKm": 55,
         "pass6": 230
+      },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-04"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 4
       },
       "character": "Quiet village with tree-lined slopes, the sheltered choice on stormy days. Ten minutes from Chamonix.",
       "fromOrigin": {
@@ -148,6 +164,15 @@
         "pisteKm": 445,
         "pass6": 335
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Smart medieval village with fur coats and fine dining. Gentle, scenic cruising across a very large area.",
       "fromOrigin": {
         "GVA": {
@@ -200,6 +225,15 @@
         "name": "Évasion Mont-Blanc",
         "pisteKm": 445,
         "pass6": 335
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Old spa town with a gondola straight into the Megève ski area. Real town life, lower prices than Megève.",
       "fromOrigin": {
@@ -271,6 +305,15 @@
         "pisteKm": 445,
         "pass6": 335
       },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-04"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Sunny little village with the best Mont Blanc view in the area. Linked by lift to Megève.",
       "fromOrigin": {
         "GVA": {
@@ -333,6 +376,15 @@
         "pisteKm": 120,
         "pass6": 280
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "snowAdjust": 200,
       "snowNote": "Holds snow well for its height.",
       "character": "Traditional village at the end of a valley. Holds snow well for its height and stays calm at weekends.",
@@ -390,6 +442,15 @@
         "pisteKm": 600,
         "pass6": 340
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Lively market town that works all year. Big chalet scene, lots of English spoken, gateway to Avoriaz and Les Gets.",
       "fromOrigin": {
         "GVA": {
@@ -443,6 +504,15 @@
         "name": "Portes du Soleil",
         "pisteKm": 600,
         "pass6": 340
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "snowAdjust": 100,
       "snowNote": "High village, ski to the door.",
@@ -509,6 +579,15 @@
         "pisteKm": 600,
         "pass6": 340
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Pretty, family-minded village with easy slopes on both sides. Linked to Morzine.",
       "fromOrigin": {
         "GVA": {
@@ -572,6 +651,15 @@
         "pisteKm": 600,
         "pass6": 340
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Working farm village with direct lifts into the Swiss side of the Portes du Soleil.",
       "fromOrigin": {
         "GVA": {
@@ -625,6 +713,15 @@
         "name": "Portes du Soleil",
         "pisteKm": 600,
         "pass6": 340
+      },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-04"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Quiet valley village with its own slopes and a free bus to Châtel.",
       "fromOrigin": {
@@ -687,6 +784,14 @@
         "pisteKm": 50,
         "pass6": 170
       },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-04"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "character": "Small, wild area loved by locals. No crowds and cheap passes. Morzine is 15 minutes up the road.",
       "fromOrigin": {
         "GVA": {
@@ -748,6 +853,14 @@
         "pisteKm": 50,
         "pass6": 160
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "character": "Balcony above Lake Geneva with views across to Switzerland. Simple, friendly and cheap.",
       "fromOrigin": {
         "GVA": {
@@ -798,6 +911,14 @@
         "name": "Bernex Dent d'Oche",
         "pisteKm": 25,
         "pass6": 130
+      },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-04"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
       },
       "character": "Tiny family hill above Évian. Good for a first week on skis.",
       "fromOrigin": {
@@ -853,6 +974,15 @@
         "pisteKm": 265,
         "pass6": 320
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "snowAdjust": 200,
       "snowNote": "High north-facing bowl that holds snow well.",
       "character": "Car-free Bauhaus-designed resort in a high, snowy bowl. Ski to the door, little to do at night.",
@@ -907,6 +1037,15 @@
         "name": "Grand Massif",
         "pisteKm": 265,
         "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Listed stone village with shops and restaurants. Gondola up into the Grand Massif.",
       "fromOrigin": {
@@ -970,6 +1109,15 @@
         "pisteKm": 265,
         "pass6": 320
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Friendly wooded village, the quickest road access to the Grand Massif.",
       "fromOrigin": {
         "GVA": {
@@ -1030,6 +1178,15 @@
         "name": "Grand Massif",
         "pisteKm": 265,
         "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Valley village with a gondola to a sunny beginner plateau. Cheapest way into the Grand Massif.",
       "fromOrigin": {
@@ -1102,6 +1259,15 @@
         "pisteKm": 265,
         "pass6": 320
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Remote village at the head of the Giffre valley, linked to the Grand Massif by a long scenic run.",
       "fromOrigin": {
         "GVA": {
@@ -1165,6 +1331,15 @@
         "pisteKm": 125,
         "pass6": 270
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Lively Aravis village with five connected mountains. Busy with Annecy and Geneva locals at weekends.",
       "fromOrigin": {
         "GVA": {
@@ -1217,6 +1392,15 @@
         "name": "Le Grand-Bornand",
         "pisteKm": 90,
         "pass6": 245
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Working farm village in Reblochon country. Very family-focused with good beginner zones.",
       "fromOrigin": {
@@ -1281,6 +1465,14 @@
         "pisteKm": 50,
         "pass6": 180
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "snowAdjust": 100,
       "snowNote": "High plateau.",
       "character": "High, snow-sure plateau with easy slopes and long cross-country loops.",
@@ -1335,6 +1527,14 @@
         "pisteKm": 50,
         "pass6": 150
       },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-03-21"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "character": "Low, local family area 40 minutes from Geneva. Best after a fresh fall.",
       "fromOrigin": {
         "GVA": {
@@ -1386,6 +1586,14 @@
         "name": "Hirmentaz–Les Habères",
         "pisteKm": 50,
         "pass6": 150
+      },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-03-21"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
       },
       "character": "Nearest real slopes to Geneva. Ideal for a day trip or a first week.",
       "fromOrigin": {
@@ -1439,6 +1647,14 @@
         "pisteKm": 15,
         "pass6": 110
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "character": "Small summit area above Annecy with lake and Mont Blanc views. A day-trip hill.",
       "fromOrigin": {
         "GVA": {
@@ -1491,6 +1707,15 @@
         "name": "Espace Diamant",
         "pisteKm": 192,
         "pass6": 265
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "snowAdjust": 150,
       "snowNote": "Open plateau with reliable snow.",
@@ -1547,6 +1772,15 @@
         "name": "Espace Diamant",
         "pisteKm": 192,
         "pass6": 265
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Small family village, a cheaper door into the Espace Diamant.",
       "fromOrigin": {
@@ -1608,6 +1842,15 @@
         "name": "Espace Diamant",
         "pisteKm": 192,
         "pass6": 265
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Valley village five minutes below Megève, linked by lift to the Espace Diamant.",
       "fromOrigin": {
@@ -1680,6 +1923,14 @@
         "pisteKm": 50,
         "pass6": 190
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "character": "Unspoilt Beaufortain village. Great off-piste and almost no new building.",
       "fromOrigin": {
         "GVA": {
@@ -1733,6 +1984,14 @@
         "pisteKm": 50,
         "pass6": 175
       },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-04"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "snowAdjust": 100,
       "snowNote": "Cold Jura climate.",
       "character": "Jura ridge looking straight down on Geneva and across to Mont Blanc. Thirty minutes from the airport.",
@@ -1785,6 +2044,14 @@
         "name": "Les Rousses",
         "pisteKm": 40,
         "pass6": 170
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
       },
       "snowAdjust": 150,
       "snowNote": "Cold Jura climate.",
@@ -1840,6 +2107,14 @@
         "pisteKm": 50,
         "pass6": 130
       },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-04"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "character": "Plateau above Chambéry and Aix-les-Bains. Mostly cross-country with some easy downhill.",
       "fromOrigin": {
         "GVA": {
@@ -1892,6 +2167,14 @@
         "name": "Aillons-Margériaz",
         "pisteKm": 50,
         "pass6": 150
+      },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-04"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
       },
       "character": "Small, low-key area in the Bauges nature park.",
       "fromOrigin": {
@@ -1946,6 +2229,15 @@
         "name": "Paradiski",
         "pisteKm": 425,
         "pass6": 375
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Ten villages spread across a huge, mostly intermediate area. Built for skiing first.",
       "fromOrigin": {
@@ -2002,6 +2294,15 @@
         "pisteKm": 425,
         "pass6": 375
       },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Purpose-built villages with a funicular from Bourg-Saint-Maurice station. Steep terrain up top.",
       "fromOrigin": {
         "GVA": {
@@ -2055,6 +2356,15 @@
         "name": "Paradiski",
         "pisteKm": 425,
         "pass6": 375
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Wooded, quieter corner of Paradiski. The Vanoise Express links Les Arcs and La Plagne here.",
       "fromOrigin": {
@@ -2128,6 +2438,15 @@
         "pisteKm": 425,
         "pass6": 375
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Old hamlet turned family resort on the La Plagne side of Paradiski.",
       "fromOrigin": {
         "GVA": {
@@ -2188,6 +2507,15 @@
         "name": "Paradiski",
         "pisteKm": 425,
         "pass6": 375
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Sunny, authentic back door into La Plagne. Much cheaper than the main resort.",
       "fromOrigin": {
@@ -2253,6 +2581,14 @@
         "pisteKm": 300,
         "pass6": 380
       },
+      "season": {
+        "open": "2026-11-28",
+        "close": "2027-05-02"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
       "snowAdjust": 150,
       "snowNote": "High, cold valley.",
       "character": "Big-name resort with serious terrain, late snow and a strong après scene.",
@@ -2308,6 +2644,15 @@
         "name": "Espace Killy",
         "pisteKm": 300,
         "pass6": 380
+      },
+      "season": {
+        "open": "2026-11-28",
+        "close": "2027-05-02"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "snowAdjust": 300,
       "snowNote": "Grande Motte glacier.",
@@ -2376,6 +2721,15 @@
         "pisteKm": 600,
         "pass6": 420
       },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Very smart, very expensive. Perfect grooming and the gateway to the world's largest linked area.",
       "fromOrigin": {
         "GVA": {
@@ -2430,6 +2784,15 @@
         "name": "Les 3 Vallées",
         "pisteKm": 600,
         "pass6": 420
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Chalet-style village in the middle of the 3 Vallées. Strong British presence.",
       "fromOrigin": {
@@ -2486,6 +2849,14 @@
         "pisteKm": 600,
         "pass6": 420
       },
+      "season": {
+        "open": "2026-11-21",
+        "close": "2027-05-09"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
       "character": "Highest resort in Europe. Reliable snow, big parties, little charm.",
       "fromOrigin": {
         "GVA": {
@@ -2539,6 +2910,15 @@
         "name": "Les 3 Vallées",
         "pisteKm": 600,
         "pass6": 420
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Practical, value base in the 3 Vallées. Ski to Val Thorens in minutes.",
       "fromOrigin": {
@@ -2603,6 +2983,15 @@
         "pisteKm": 165,
         "pass6": 290
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 6
+      },
       "character": "Car-free family village built around one pedestrian street.",
       "fromOrigin": {
         "GVA": {
@@ -2658,6 +3047,15 @@
         "pisteKm": 160,
         "pass6": 290
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Sunny balcony facing the sun, linked over the border to La Thuile in Italy.",
       "fromOrigin": {
         "GVA": {
@@ -2709,6 +3107,14 @@
         "name": "Sainte-Foy",
         "pisteKm": 70,
         "pass6": 230
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
       },
       "snowAdjust": 100,
       "snowNote": "North-east facing slopes.",
@@ -2765,6 +3171,15 @@
         "pisteKm": 150,
         "pass6": 245
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Lively, real village with a church square and shops. Linked to Valmeinier.",
       "fromOrigin": {
         "GVA": {
@@ -2818,6 +3233,15 @@
         "name": "Galibier-Thabor",
         "pisteKm": 150,
         "pass6": 245
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Quiet, high station on the cheaper side of Galibier-Thabor.",
       "fromOrigin": {
@@ -2879,6 +3303,15 @@
         "name": "Les 3 Vallées",
         "pisteKm": 600,
         "pass6": 420
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Tiny valley village with a long gondola up to Val Thorens. The cheapest door into the 3 Vallées.",
       "fromOrigin": {
@@ -2942,6 +3375,15 @@
         "pisteKm": 60,
         "pass6": 185
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "snowAdjust": 100,
       "snowNote": "North-facing slopes that hold snow well.",
       "character": "Friendly, family-run resort high above the valley. No through traffic.",
@@ -2997,6 +3439,15 @@
         "pisteKm": 310,
         "pass6": 255
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Big, open, sunny area. Good value family skiing.",
       "fromOrigin": {
         "GVA": {
@@ -3049,6 +3500,15 @@
         "name": "Les Sybelles",
         "pisteKm": 310,
         "pass6": 255
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Car-free, ski-in ski-out blocks in the middle of Les Sybelles.",
       "fromOrigin": {
@@ -3113,6 +3573,14 @@
         "pisteKm": 55,
         "pass6": 175
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
       "character": "Sunny, authentic village facing the Vanoise peaks.",
       "fromOrigin": {
         "GVA": {
@@ -3166,6 +3634,15 @@
         "name": "La Norma",
         "pisteKm": 65,
         "pass6": 180
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Car-free family resort in a forest bowl above Modane.",
       "fromOrigin": {
@@ -3222,6 +3699,15 @@
         "pisteKm": 125,
         "pass6": 225
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Chain of old villages in the upper Maurienne. Long, easy runs and few crowds.",
       "fromOrigin": {
         "GVA": {
@@ -3274,6 +3760,14 @@
         "name": "Bonneval-sur-Arc",
         "pisteKm": 25,
         "pass6": 150
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
       },
       "character": "One of France's prettiest stone villages. High, snowy and tiny.",
       "fromOrigin": {
@@ -3330,6 +3824,15 @@
         "pisteKm": 250,
         "pass6": 340
       },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Huge, sunny area with very long runs, including the 16 km Sarenne. Lively at night.",
       "fromOrigin": {
         "GVA": {
@@ -3383,6 +3886,15 @@
         "name": "Alpe d'Huez Grand Domaine",
         "pisteKm": 250,
         "pass6": 340
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Quiet village with a big cable car straight into the Alpe d'Huez area.",
       "fromOrigin": {
@@ -3447,6 +3959,14 @@
         "pisteKm": 200,
         "pass6": 320
       },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
       "snowAdjust": 200,
       "snowNote": "Glacier skiing above 3000 m.",
       "character": "Long, narrow ski area topped by a glacier. Big party scene.",
@@ -3501,6 +4021,14 @@
         "pisteKm": 10,
         "pass6": 280
       },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
       "character": "Legendary off-piste with one lift and almost no grooming. For strong skiers with a guide.",
       "fromOrigin": {
         "GVA": {
@@ -3553,6 +4081,15 @@
         "name": "Chamrousse",
         "pisteKm": 90,
         "pass6": 200
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Grenoble's local resort with Olympic history and big views.",
       "fromOrigin": {
@@ -3607,6 +4144,15 @@
         "pisteKm": 120,
         "pass6": 200
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Good value area between Grenoble and Chambéry, busy at weekends.",
       "fromOrigin": {
         "GVA": {
@@ -3658,6 +4204,15 @@
         "name": "Villard-Corrençon",
         "pisteKm": 125,
         "pass6": 170
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Family town on the Vercors plateau with big cross-country trails.",
       "fromOrigin": {
@@ -3714,6 +4269,15 @@
         "pisteKm": 250,
         "pass6": 300
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "Long valley of villages and larch forests. Good skiing in bad weather.",
       "fromOrigin": {
         "GVA": {
@@ -3767,6 +4331,15 @@
         "name": "Voie Lactée (Milky Way)",
         "pisteKm": 400,
         "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "snowAdjust": 150,
       "snowNote": "Catches storms coming from Italy.",
@@ -3824,6 +4397,15 @@
         "pisteKm": 75,
         "pass6": 190
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "snowAdjust": 100,
       "snowNote": "North-facing slopes that hold snow well.",
       "character": "Quiet family resort at the gate of the Écrins park. Great value and good snow.",
@@ -3880,6 +4462,15 @@
         "pisteKm": 185,
         "pass6": 250
       },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
       "character": "High, sunny resort in the southern Alps, linked to Risoul.",
       "fromOrigin": {
         "GVA": {
@@ -3932,6 +4523,15 @@
         "name": "Forêt Blanche",
         "pisteKm": 185,
         "pass6": 250
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Car-free, purpose-built village among larch trees. Good value.",
       "fromOrigin": {
@@ -3995,6 +4595,15 @@
         "name": "Les Orres",
         "pisteKm": 100,
         "pass6": 220
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
       },
       "character": "Sunny family resort above Lake Serre-Ponçon.",
       "fromOrigin": {

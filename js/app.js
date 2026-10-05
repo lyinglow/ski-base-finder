@@ -1,5 +1,6 @@
 import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
 import { tripCost, skiTarget } from "./cost.js";
+import { fitScore, seasonState } from "./fit.js";
 import { createMap, setBasemap, setTerrain, setLinks, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
@@ -26,9 +27,9 @@ const state = {
   origin: "GVA",
   beginner: false,
   vibes: new Set(), // empty means any vibe
-  trip: { nights: 7, skiDays: 6, adults: 2, children: 0, transport: "shuttle" },
+  trip: { nights: 7, skiDays: 6, adults: 2, childAges: [], transport: "shuttle", lessons: "all", hire: true, week: null },
   skiAt: {},
-  sort: "time",
+  sort: "fit",
   selected: null,
   related: new Set(),
   detailMin: false,
@@ -136,6 +137,18 @@ function snowMonths(l) {
 
 const money = (n) => "€" + (Math.round(n / 10) * 10).toLocaleString("en-GB");
 const tripOf = () => ({ ...state.trip, months: tripMonths(), origin: state.origin });
+const kidsText = (ages) => ages.length === 1 ? `1 child aged ${ages[0]}` : `${ages.length} children aged ${ages.slice(0, -1).join(", ")} and ${ages[ages.length - 1]}`;
+
+// Fit score for the current trip. Season dates only count once a specific week is chosen.
+function fitOf(l) {
+  return fitScore(l, {
+    model,
+    childAges: state.trip.childAges,
+    snowOf,
+    travel,
+    dates: state.trip.week ? stayDates() : null,
+  });
+}
 // stay in `place`, ski `ski` (defaults to itself, or the chosen or nearest resort for a town).
 const costOf = (place, ski) => tripCost(place, ski || skiTarget(place, model, state.skiAt[place.id]), tripOf(), model);
 
@@ -145,7 +158,10 @@ function costBreakdown(cost) {
   const t = state.trip;
   return `<ul class="cost-lines">
     ${row("Accommodation", p.accommodation, `${t.nights} nights`)}
-    ${row("Lift passes", p.liftPasses, `${t.skiDays} days, ${esc(cost.ski.skiArea.name)}`)}
+    ${row("Lift passes", p.liftPasses, `${t.skiDays} days, ${esc(cost.ski.skiArea.name)}${t.childAges.some((a) => a < 5) ? ", under-5s free" : ""}`)}
+    ${t.lessons !== "none" && (t.lessons === "all" || t.childAges.some((a) => a >= 3)) ? row("Ski lessons", p.lessons, t.lessons === "all" ? "Group lessons for everyone, 6 half days" : "Group lessons for the kids, 6 half days") : ""}
+    ${t.hire ? row("Ski hire", p.hire, "Skis, boots and helmets") : ""}
+    ${p.childcare ? row("Childcare", p.childcare, "Crèche for under-3s") : ""}
     ${row("Airport transfers", p.airport, state.trip.transport === "car" || cost.needsCar ? "Hire car, fuel and tolls" : "Shared shuttle, return")}
     ${row("Daily trips to the slopes", p.daily, cost.dailyHow)}
   </ul>`;
@@ -215,6 +231,7 @@ function passes(l) {
   if (state.vibes.size && !l.vibes.some((v) => state.vibes.has(v))) return false;
   if (state.carFree && !l.carFree) return false;
   if (state.snowSure && snowOf(l) !== "good") return false;
+  if (state.trip.week && fitOf(l)?.closed) return false; // closed for the chosen week
   if (l.type === "resort") return state.sizes.has(l.skiSize);
   return reachable(l, model.byId).some((r) => state.sizes.has(r.place.skiSize));
 }
@@ -223,6 +240,7 @@ function sortKey(l) {
   switch (state.sort) {
     case "price": return [l.price, travel(l).min];
     case "altitude": return [-l.altitude, travel(l).min];
+    case "fit": return [-fitOf(l).score, costOf(l).total];
     case "cost": return [costOf(l).total, travel(l).min];
     case "snow": return [-SNOW_RANK[snowOf(l)], -(l.type === "resort" ? snowAltitude(l) : snowAltitude(bestSnowFrom(l).place))];
     case "ski": return [-(l.skiArea?.pisteKm ?? bestSkiFrom(l)?.place.skiArea.pisteKm ?? 0), travel(l).min];
@@ -264,7 +282,7 @@ function resultItem(l) {
   }
   return `<li><button type="button" class="result ${l.type}${l.id === state.selected ? " is-active" : ""}" data-id="${l.id}">
     <i class="dot ${l.type}"></i>
-    <span class="r-main"><span class="r-name">${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
+    <span class="r-main"><span class="r-name"><b class="fit-pill" title="Beginner and family fit">${fitOf(l).score}</b>${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
     <span class="r-side"><span class="r-time">${mins(t.min)}</span><span class="r-price" title="Trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
   </button></li>`;
 }
@@ -411,7 +429,7 @@ function defaultArrive() {
 }
 
 function stayDates() {
-  const arrive = state.trip.arrive || defaultArrive();
+  const arrive = state.trip.week || defaultArrive();
   const out = new Date(arrive + "T12:00:00");
   out.setDate(out.getDate() + state.trip.nights);
   return { arrive, leave: isoDate(out) };
@@ -422,15 +440,15 @@ function staySection(l) {
   const t = state.trip;
   const town = l.searchName || l.name;
   const where = encodeURIComponent(`${town}, France`);
-  const guests = t.adults + t.children;
-  const kids = Array.from({ length: t.children }, () => "age=8").join("&");
+  const guests = t.adults + t.childAges.length;
+  const kids = t.childAges.map((a) => `age=${a}`).join("&");
   const when = new Date(arrive + "T12:00:00").toLocaleDateString("en-GB", { month: "long", year: "numeric" });
   const g = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
   const links = [
     ["Booking.com", "Hotels and apartments",
-      `https://www.booking.com/searchresults.html?ss=${where}&checkin=${arrive}&checkout=${leave}&group_adults=${t.adults}&group_children=${t.children}&no_rooms=1${kids ? "&" + kids : ""}`],
+      `https://www.booking.com/searchresults.html?ss=${where}&checkin=${arrive}&checkout=${leave}&group_adults=${t.adults}&group_children=${t.childAges.length}&no_rooms=1${kids ? "&" + kids : ""}`],
     ["Airbnb", "Homes and chalets",
-      `https://www.airbnb.com/s/${encodeURIComponent(`${town}--France`)}/homes?checkin=${arrive}&checkout=${leave}&adults=${t.adults}&children=${t.children}`],
+      `https://www.airbnb.com/s/${encodeURIComponent(`${town}--France`)}/homes?checkin=${arrive}&checkout=${leave}&adults=${t.adults}&children=${t.childAges.length}`],
     ["Abritel", "French holiday rentals (Vrbo)",
       `https://www.abritel.fr/search?destination=${where}&startDate=${arrive}&endDate=${leave}&adults=${guests}`],
     ["Ski apartment deals", "Pierre & Vacances, Maeva and others (web search)",
@@ -448,6 +466,41 @@ function staySection(l) {
 }
 
 /* ---------- trip sheet: slides over the place panel ---------- */
+
+/* ---------- fit and ski school ---------- */
+
+const fmtDay = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+const seasonText = (r) => `${fmtDay(r.season.open)} to ${fmtDay(r.season.close)} (typical dates)`;
+
+function seasonWarn(r) {
+  const { arrive, leave } = stayDates();
+  const s = seasonState(r, arrive, leave);
+  return s === "closed" ? `. <strong class="warn">Closed for your week.</strong>` : s === "partial" ? `. <strong class="warn">Opens or closes during your week.</strong>` : ".";
+}
+
+function schoolText(r) {
+  const s = r.school;
+  const english = { many: "ESF plus several English-speaking schools, many British-run.",
+    some: "ESF, with some English-speaking instructors. Ask for an English group when booking.",
+    few: "ESF or a small local school. English may be limited." }[s.english];
+  const kids = `Children's ski school from age ${s.skiFrom}.`;
+  const creche = s.crecheFromMonths ? ` Crèche from ${s.crecheFromMonths} months.` : " No crèche listed.";
+  return `${english} ${kids}${creche}`;
+}
+
+function fitBand(score) {
+  return score >= 75 ? "Great fit" : score >= 55 ? "Good fit" : score >= 35 ? "OK fit" : "Weak fit";
+}
+
+function fitSection(l) {
+  const f = fitOf(l);
+  const who = state.trip.childAges.length ? `beginners with ${kidsText(state.trip.childAges)}` : "beginners";
+  return `<section class="fit">
+      <span class="s-label">Beginner and family fit</span>
+      <p class="fit-head"><b class="fit-score">${f.score}</b><span><strong>${fitBand(f.score)}</strong> for ${who}${l.type === "base" ? `, skiing ${esc(f.resort.name)}` : ""}</span></p>
+      <ul class="fit-reasons">${f.reasons.map((r) => `<li class="${r.ok ? "ok" : "no"}">${esc(r.text)}</li>`).join("")}</ul>
+    </section>`;
+}
 
 function tripTeaser(l) {
   const cost = costOf(l);
@@ -491,7 +544,7 @@ function closeTripSheet() {
 function tripSection(l) {
   const cost = costOf(l);
   const t = state.trip;
-  const who = `${t.adults} adult${t.adults === 1 ? "" : "s"}${t.children ? `, ${t.children} child${t.children === 1 ? "" : "ren"}` : ""}`;
+  const who = `${t.adults} adult${t.adults === 1 ? "" : "s"}${t.childAges.length ? `, ${kidsText(t.childAges)}` : ""}`;
   let picker = "";
   if (l.type === "base") {
     const options = reachable(l, model.byId);
@@ -504,7 +557,7 @@ function tripSection(l) {
   return `<section class="trip">
       <span class="s-label">Trip cost</span>
       <p class="trip-total"><strong>${money(cost.total)}</strong> <span>${money(cost.perPerson)} per person</span></p>
-      <p class="trip-who">${who}, ${t.nights} nights, ${t.skiDays} ski days, ${monthNames()}</p>
+      <p class="trip-who">${who}, ${t.nights} nights, ${t.skiDays} ski days, ${cost.week ? `week of ${new Date(cost.week.start + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" })} (${esc(cost.week.label)})` : monthNames()}</p>
       ${picker}
       ${costBreakdown(cost)}
       ${cost.needsCar && t.transport !== "car" ? `<p class="snow-note">No bus to ${esc(cost.ski.name)} from here, so this includes a hire car.</p>` : ""}
@@ -544,7 +597,7 @@ function renderDetail(l) {
 
   const getting = `<p class="getting"><span class="s-label">Getting there from Geneva</span>${esc(l.transfer)}${l.rail ? ` <span class="badge">${esc(l.rail)}</span>` : ""}${l.carFree ? ` <span class="badge good">No car needed</span>` : ""}</p>`;
 
-  let body = tripTeaser(l);
+  let body = tripTeaser(l) + fitSection(l);
   if (l.type === "resort") {
     const cheaper = cheaperStays(l, model.byId);
     body += `<section class="ski">
@@ -552,6 +605,11 @@ function renderDetail(l) {
         <p><strong>${esc(l.skiArea.name)}</strong> · ${l.skiArea.pisteKm} km · ${SIZE_LABEL[l.skiSize]}</p>
         <p class="suits">Suits ${levelDots(l.levels)} ${l.levels.map((v) => LEVEL_LABEL[v]).join(", ")}</p>
         ${l.easyStart ? `<p class="easy-start"><strong>Good for first-timers.</strong> ${esc(l.easyStart)}</p>` : ""}
+        <p class="season-line">Usually open ${seasonText(l)}${state.trip.week ? seasonWarn(l) : ""}</p>
+      </section>
+      <section class="school">
+        <span class="s-label">Ski school</span>
+        <p>${schoolText(l)}</p>
       </section>`;
     const s = snowOf(l);
     body += `<section class="snow">
@@ -722,6 +780,20 @@ function renderCompareTable() {
       win: Math.max,
       cell: (l) => (l.type === "base" ? String(reachable(l, model.byId).filter((x) => x.link.min <= 30).length) : "—"),
     },
+    {
+      label: "Beginner fit",
+      vals: cols.map((l) => fitOf(l).score),
+      win: Math.max,
+      cell: (l) => `${fitOf(l).score}<small>${fitBand(fitOf(l).score)}</small>`,
+    },
+    {
+      label: "Ski school",
+      cell: (l) => {
+        const r = l.type === "resort" ? l : fitOf(l).resort;
+        const e = { many: "Several English-speaking", some: "Some English", few: "English limited" }[r.school.english];
+        return `${e}<small>Kids from ${r.school.skiFrom}${r.school.crecheFromMonths ? `, crèche from ${r.school.crecheFromMonths} months` : ""}</small>`;
+      },
+    },
     { label: "Suits", cell: (l) => (l.levels ? levelDots(l.levels) : l.type === "base" ? "Depends on the resort" : "—") },
     {
       label: "Snow, your months",
@@ -815,7 +887,7 @@ function bindControls() {
     if (state.selected) renderDetail(model.byId.get(state.selected));
     if (!$("#compare").hidden) renderCompareTable();
   });
-  const tripInputs = { nights: "#t-nights", skiDays: "#t-days", adults: "#t-adults", children: "#t-children" };
+  const tripInputs = { nights: "#t-nights", skiDays: "#t-days", adults: "#t-adults" };
   for (const [key, sel] of Object.entries(tripInputs)) {
     $(sel).addEventListener("input", (e) => {
       const el = e.target;
@@ -826,16 +898,44 @@ function bindControls() {
       tripChanged();
     });
   }
-  const arriveInput = $("#t-arrive");
-  arriveInput.value = defaultArrive();
-  arriveInput.addEventListener("change", () => {
-    state.trip.arrive = arriveInput.value || null; // empty goes back to the default
-    if (!arriveInput.value) arriveInput.value = defaultArrive();
+  $("#t-kids").addEventListener("input", (e) => {
+    state.trip.childAges = (e.target.value.match(/\d+/g) || []).map(Number).filter((a) => a <= 17).slice(0, 8);
     tripChanged();
   });
-  $("#f-months").addEventListener("click", () => {
-    if (!state.trip.arrive) arriveInput.value = defaultArrive(); // follow the months until a date is picked
+
+  // Week picker: Saturdays across the season, labelled with school holidays.
+  const weekSel = $("#t-week");
+  const shortDate = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  weekSel.innerHTML = `<option value="">Any week in my months</option>` + model.index.weeks.map((w) =>
+    `<option value="${w.start}">${shortDate(w.start)} · ${esc(w.label)} · ${w.crowd}</option>`).join("");
+  const showWeekNote = () => {
+    const w = model.index.weeks.find((x) => x.start === state.trip.week);
+    $("#week-note").textContent = w
+      ? `${w.note} Prices about ${Math.round(w.factor * 100)}% of a normal week.`
+      : "Pick a week to see school holidays, crowds and which resorts are open.";
+    $("#week-note").dataset.crowd = w ? w.crowd : "";
+  };
+  showWeekNote();
+  weekSel.addEventListener("change", () => {
+    state.trip.week = weekSel.value || null;
+    if (state.trip.week) {
+      // The week decides the snow month too.
+      const key = MONTHS[[11, 0, 1, 2, 3].indexOf(new Date(state.trip.week + "T12:00:00").getMonth())]?.key;
+      if (key) {
+        state.months = new Set([key]);
+        $$("#f-months button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === key));
+      }
+    }
+    showWeekNote();
+    tripChanged();
   });
+
+  $$("#t-lessons button").forEach((b) => b.addEventListener("click", () => {
+    state.trip.lessons = b.dataset.v;
+    $$("#t-lessons button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    tripChanged();
+  }));
+  $("#t-hire").addEventListener("change", (e) => { state.trip.hire = e.target.checked; tripChanged(); });
   for (const panel of [$("#detail"), $("#tripsheet")]) {
     panel.addEventListener("scroll", (e) => e.currentTarget.classList.toggle("scrolled", e.currentTarget.scrollTop > 4));
   }

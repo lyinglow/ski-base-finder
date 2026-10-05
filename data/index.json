@@ -85,7 +85,7 @@
   },
   "priceNote": "Guide price for a double room or small apartment in peak season. Indicative only.",
   "costs": {
-    "note": "Estimates for budgeting. Peak-season stays, 2025/26 lift pass prices, typical winter transfers. Flights, ski hire and food not included.",
+    "note": "Estimates for budgeting. Typical 2026/27 prices for stays, lift passes, group lessons and ski hire, and typical winter transfers. Flights and food not included.",
     "seasonFactor": {
       "dec": 0.9,
       "jan": 0.85,
@@ -109,6 +109,27 @@
     "bus": {
       "freeWithinMin": 20,
       "farePerDay": 6
+    },
+    "passFreeUnder": 5,
+    "childPassTo": 12,
+    "teenPass": 0.9,
+    "lessons": {
+      "adult6": 240,
+      "child6": 220,
+      "kindergarten6": 260,
+      "note": "Six half-day group lessons. Ski kindergarten for ages 3 to 4."
+    },
+    "childcare6": 330,
+    "hirePerDay": {
+      "adult": 28,
+      "teen": 22,
+      "child": 16,
+      "small": 12
+    },
+    "resortPriceFactor": {
+      "1": 0.9,
+      "2": 1.0,
+      "3": 1.25
     }
   },
   "vibes": {
@@ -136,5 +157,162 @@
       "label": "Town life",
       "hint": "Real shops, restaurants and everyday prices"
     }
-  }
+  },
+  "weeks": [
+    {
+      "start": "2026-11-28",
+      "label": "Early season",
+      "factor": 0.7,
+      "crowd": "quiet",
+      "note": "Only the highest resorts are open."
+    },
+    {
+      "start": "2026-12-05",
+      "label": "Early season",
+      "factor": 0.7,
+      "crowd": "quiet",
+      "note": "High resorts open; snow can be thin lower down."
+    },
+    {
+      "start": "2026-12-12",
+      "label": "Before Christmas",
+      "factor": 0.75,
+      "crowd": "quiet",
+      "note": "Most resorts open. Quiet and good value."
+    },
+    {
+      "start": "2026-12-19",
+      "label": "Christmas week",
+      "factor": 1.35,
+      "crowd": "busy",
+      "note": "UK and French Christmas holidays."
+    },
+    {
+      "start": "2026-12-26",
+      "label": "New Year week",
+      "factor": 1.5,
+      "crowd": "very busy",
+      "note": "Peak prices and full resorts."
+    },
+    {
+      "start": "2027-01-02",
+      "label": "Early January",
+      "factor": 0.85,
+      "crowd": "quiet",
+      "note": "French schools go back on 4 January."
+    },
+    {
+      "start": "2027-01-09",
+      "label": "January low season",
+      "factor": 0.75,
+      "crowd": "quiet",
+      "note": "Cheapest weeks of the main season."
+    },
+    {
+      "start": "2027-01-16",
+      "label": "January low season",
+      "factor": 0.75,
+      "crowd": "quiet",
+      "note": "Cheapest weeks of the main season."
+    },
+    {
+      "start": "2027-01-23",
+      "label": "January low season",
+      "factor": 0.75,
+      "crowd": "quiet",
+      "note": "Cheapest weeks of the main season."
+    },
+    {
+      "start": "2027-01-30",
+      "label": "Late January",
+      "factor": 0.8,
+      "crowd": "quiet",
+      "note": "Good value before the February holidays."
+    },
+    {
+      "start": "2027-02-06",
+      "label": "French holidays begin",
+      "factor": 1.15,
+      "crowd": "busy",
+      "note": "French zone C (Paris) holidays."
+    },
+    {
+      "start": "2027-02-13",
+      "label": "UK half term",
+      "factor": 1.45,
+      "crowd": "very busy",
+      "note": "UK half term (15 to 19 Feb) plus French zones A and C. The most expensive week."
+    },
+    {
+      "start": "2027-02-20",
+      "label": "French holidays",
+      "factor": 1.35,
+      "crowd": "very busy",
+      "note": "French zones A and B. Some UK schools are off this week too."
+    },
+    {
+      "start": "2027-02-27",
+      "label": "French holidays end",
+      "factor": 1.15,
+      "crowd": "busy",
+      "note": "French zone B holidays."
+    },
+    {
+      "start": "2027-03-06",
+      "label": "Early March",
+      "factor": 0.95,
+      "crowd": "normal",
+      "note": "French holidays end on 8 March."
+    },
+    {
+      "start": "2027-03-13",
+      "label": "March value",
+      "factor": 0.85,
+      "crowd": "quiet",
+      "note": "Long days, good snow up high, lower prices."
+    },
+    {
+      "start": "2027-03-20",
+      "label": "March value",
+      "factor": 0.85,
+      "crowd": "quiet",
+      "note": "Long days, good snow up high, lower prices."
+    },
+    {
+      "start": "2027-03-27",
+      "label": "Easter",
+      "factor": 1.1,
+      "crowd": "busy",
+      "note": "Easter Sunday is 28 March. UK Easter holidays begin."
+    },
+    {
+      "start": "2027-04-03",
+      "label": "Easter holidays",
+      "factor": 1.05,
+      "crowd": "busy",
+      "note": "UK Easter holidays and French zone C."
+    },
+    {
+      "start": "2027-04-10",
+      "label": "Spring",
+      "factor": 0.9,
+      "crowd": "normal",
+      "note": "French zone A holidays. Lower resorts start to close."
+    },
+    {
+      "start": "2027-04-17",
+      "label": "Late season",
+      "factor": 0.8,
+      "crowd": "quiet",
+      "note": "French zone B holidays. Many resorts close this weekend."
+    },
+    {
+      "start": "2027-04-24",
+      "label": "Late season",
+      "factor": 0.7,
+      "crowd": "quiet",
+      "note": "Only the highest resorts are still open."
+    }
+  ],
+  "weeksNote": "School holiday dates for 2026/27. UK half term and Easter dates vary by council; check your school."
 }

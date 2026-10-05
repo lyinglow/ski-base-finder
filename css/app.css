@@ -240,6 +240,32 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .tt-go { font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; }
 .tt-go i { font-style: normal; font-size: 18px; line-height: 1; }
 .stay { display: grid; gap: 8px; }
+/* fit and school */
+.fit, .school { display: grid; gap: 8px; }
+.school p, .season-line { margin: 0; font-size: 14px; }
+.season-line { color: var(--muted); margin-top: 4px; }
+.warn { color: var(--snow-poor); }
+.fit-head { margin: 0; display: flex; align-items: center; gap: 12px; }
+.fit-score {
+  width: 48px; height: 48px; flex: none; display: grid; place-items: center; border-radius: 50%;
+  border: 3px solid var(--good); font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.fit-reasons { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 14px; }
+.fit-reasons li { display: flex; gap: 8px; }
+.fit-reasons li::before { content: "✓"; color: var(--good); font-weight: 700; width: 12px; flex: none; }
+.fit-reasons li.no::before { content: "✗"; color: var(--snow-poor); }
+.fit-reasons li.no { color: var(--muted); }
+.fit-pill {
+  display: inline-grid; place-items: center; min-width: 24px; height: 18px; margin-right: 6px; padding: 0 4px;
+  border-radius: 999px; background: var(--good-soft); color: var(--good); font-size: 11px; font-weight: 700;
+  vertical-align: 1px; font-variant-numeric: tabular-nums;
+}
+.field .toggle { display: flex; justify-content: flex-start; text-transform: none; letter-spacing: 0; font-size: 14px; font-weight: 400; color: var(--ink); }
+.segmented.three { grid-template-columns: repeat(3, 1fr); }
+.segmented.three button { padding-inline: 4px; font-size: 13px; }
+.week-note { margin: -2px 0 0; font-size: 12px; color: var(--muted); }
+.week-note[data-crowd="very busy"], .week-note[data-crowd="busy"] { color: var(--snow-fair); }
+.field .arrive select { padding: 6px 8px; font-size: 14px; font-weight: 500; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); }
 .stay-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
 .stay-links a {
   display: grid; grid-template-columns: 1fr auto; grid-template-areas: "name go" "what go"; gap: 1px 10px; align-items: center;
