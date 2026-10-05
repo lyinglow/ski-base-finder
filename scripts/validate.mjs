@@ -39,6 +39,11 @@ for (const c of index.countries) {
     need(Array.isArray(l.vibes) && l.vibes.length > 0 && l.vibes.every((v) => v in (index.vibes || {})),
       `vibes must list one or more of: ${Object.keys(index.vibes || {}).join(", ")}`);
     need(l.character, "character missing");
+    for (const [area, months] of Object.entries(l.snowYears || {})) {
+      need(["slopes", "village", "town"].includes(area) &&
+        Object.values(months).every((v) => Array.isArray(v) && v[0] >= 0 && v[0] <= v[1]),
+        `snowYears.${area} must hold [winters with snow, winters] per month`);
+    }
     const fromKeys = Object.keys(l.fromOrigin || {});
     need(fromKeys.length > 0, "fromOrigin missing");
     for (const k of fromKeys) {

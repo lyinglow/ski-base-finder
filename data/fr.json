@@ -64,7 +64,53 @@
         }
       },
       "transfer": "Shared shuttle about 1h15. Train via Saint-Gervais–Le Fayet.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-houches",
@@ -134,7 +180,53 @@
             "train"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-megeve",
@@ -197,7 +289,53 @@
         }
       },
       "transfer": "Shared shuttle about 1h10. Bus from Sallanches station.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-saint-gervais",
@@ -276,7 +414,53 @@
             "train"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-combloux",
@@ -347,7 +531,53 @@
           ],
           "note": "Ski across to Megève"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-contamines",
@@ -411,7 +641,53 @@
         }
       },
       "transfer": "Shared shuttle about 1h15. Bus from Le Fayet station.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-morzine",
@@ -475,7 +751,53 @@
         }
       },
       "transfer": "Shared shuttle about 1h15. Bus from Thonon or Cluses stations.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-avoriaz",
@@ -549,7 +871,53 @@
           ],
           "note": "Prodains cable car or Super-Morzine gondola"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-gets",
@@ -622,7 +990,53 @@
           ],
           "note": "Chairlifts over Le Pléney, or the shuttle bus"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-chatel",
@@ -684,7 +1098,53 @@
         }
       },
       "transfer": "Shared shuttle about 1h30. Bus from Thonon station.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-chapelle",
@@ -755,7 +1215,53 @@
             "bus"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-roc-denfer",
@@ -825,7 +1331,53 @@
             "bus"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-thollon",
@@ -885,7 +1437,53 @@
         }
       },
       "transfer": "Train to Évian, then bus or taxi.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-bernex",
@@ -944,7 +1542,53 @@
         }
       },
       "transfer": "Train to Évian, then taxi.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-flaine",
@@ -1009,7 +1653,53 @@
         }
       },
       "transfer": "Shared shuttle about 1h10. Bus from Cluses station.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-samoens",
@@ -1080,7 +1770,53 @@
           ],
           "note": "Gondola then skiing across the Grand Massif"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            3,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-carroz",
@@ -1151,7 +1887,53 @@
           ],
           "note": "Skiable link to Flaine"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-morillon",
@@ -1229,7 +2011,53 @@
             "bus"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-sixt",
@@ -1301,7 +2129,53 @@
             "bus"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            4,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-clusaz",
@@ -1364,7 +2238,53 @@
         }
       },
       "transfer": "Bus from Annecy station about 50 min.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-grand-bornand",
@@ -1435,7 +2355,53 @@
             "bus"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-praz-de-lys",
@@ -1499,7 +2465,53 @@
         }
       },
       "transfer": "Car recommended.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-brasses",
@@ -1559,7 +2571,53 @@
         }
       },
       "transfer": "Car recommended.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-hirmentaz",
@@ -1619,7 +2677,53 @@
         }
       },
       "transfer": "Car recommended.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            5,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-semnoz",
@@ -1679,7 +2783,53 @@
         }
       },
       "transfer": "Car from Annecy, 30 min.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-saisies",
@@ -1743,7 +2893,53 @@
         }
       },
       "transfer": "Shared shuttle about 1h30. Bus from Albertville station.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-crest-voland",
@@ -1815,7 +3011,53 @@
           ],
           "note": "Chairlifts and pistes across the Espace Diamant"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-praz-sur-arly",
@@ -1893,7 +3135,53 @@
           ],
           "note": "Chairlifts and pistes across the Espace Diamant"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-areches",
@@ -1955,7 +3243,53 @@
         }
       },
       "transfer": "Car recommended. Bus from Albertville.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-monts-jura",
@@ -2018,7 +3352,53 @@
         }
       },
       "transfer": "Car or taxi, 30 min.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            0,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-rousses",
@@ -2079,7 +3459,53 @@
         }
       },
       "transfer": "Car recommended. Train to La Cure from Nyon.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            4,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-feclaz",
@@ -2139,7 +3565,53 @@
         }
       },
       "transfer": "Car from Chambéry, 30 min.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-aillons",
@@ -2200,7 +3672,53 @@
         }
       },
       "transfer": "Car from Chambéry, 40 min.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            5,
+            10
+          ],
+          "feb": [
+            4,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-plagne",
@@ -2263,7 +3781,53 @@
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Aime, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-arcs",
@@ -2327,7 +3891,53 @@
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Bourg-Saint-Maurice, then funicular.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-peisey",
@@ -2407,7 +4017,53 @@
           ],
           "note": "Vanoise Express cable car"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-montchavin",
@@ -2480,7 +4136,53 @@
           ],
           "note": "Chairlifts and pistes over to Plagne Bellecôte"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-champagny",
@@ -2550,7 +4252,53 @@
           ],
           "note": "Gondola up to La Plagne"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-val-disere",
@@ -2615,7 +4363,53 @@
         }
       },
       "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-tignes",
@@ -2689,7 +4483,53 @@
           ],
           "note": "Chairlifts and pistes over the Tovière ridge"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-courchevel",
@@ -2754,7 +4594,53 @@
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-meribel",
@@ -2818,7 +4704,53 @@
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-val-thorens",
@@ -2881,7 +4813,53 @@
         }
       },
       "transfer": "Shared shuttle about 2h45. Train to Moûtiers, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-menuires",
@@ -2953,7 +4931,53 @@
           ],
           "note": "Chairlifts and pistes up the valley"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-valmorel",
@@ -3016,7 +5040,53 @@
         }
       },
       "transfer": "Train to Moûtiers, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-rosiere",
@@ -3080,7 +5150,53 @@
         }
       },
       "transfer": "Train to Bourg-Saint-Maurice, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-sainte-foy",
@@ -3142,7 +5258,53 @@
         }
       },
       "transfer": "Train to Bourg-Saint-Maurice, then taxi.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-valloire",
@@ -3204,7 +5366,53 @@
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-valmeinier",
@@ -3276,7 +5484,53 @@
           ],
           "note": "Chairlifts and pistes over the Crey du Quart"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-orelle",
@@ -3346,7 +5600,53 @@
           ],
           "note": "Orelle gondola"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            5,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-karellis",
@@ -3410,7 +5710,53 @@
         }
       },
       "transfer": "Car recommended. Bus from Saint-Jean-de-Maurienne.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-toussuire",
@@ -3472,7 +5818,53 @@
         }
       },
       "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-le-corbier",
@@ -3543,7 +5935,53 @@
           ],
           "note": "Chairlifts and pistes across Les Sybelles"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-aussois",
@@ -3605,7 +6043,53 @@
         }
       },
       "transfer": "Train to Modane, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-norma",
@@ -3668,7 +6152,53 @@
         }
       },
       "transfer": "Train to Modane, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            5,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-val-cenis",
@@ -3732,7 +6262,53 @@
         }
       },
       "transfer": "Train to Modane, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-bonneval",
@@ -3793,7 +6369,53 @@
         }
       },
       "transfer": "Train to Modane, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-alpe-dhuez",
@@ -3857,7 +6479,53 @@
         }
       },
       "transfer": "Train to Grenoble, then bus about 1h30.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-vaujany",
@@ -3929,7 +6597,53 @@
           ],
           "note": "Vaujany cable car"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-2-alpes",
@@ -3993,7 +6707,53 @@
         }
       },
       "transfer": "Train to Grenoble, then bus about 1h45.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-grave",
@@ -4053,7 +6813,53 @@
         }
       },
       "transfer": "Car recommended.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-chamrousse",
@@ -4115,7 +6921,53 @@
         }
       },
       "transfer": "Train to Grenoble, then bus 1h.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-sept-laux",
@@ -4177,7 +7029,53 @@
         }
       },
       "transfer": "Car recommended. Bus from Grenoble.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-villard-de-lans",
@@ -4238,7 +7136,53 @@
         }
       },
       "transfer": "Train to Grenoble, then bus 1h.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            3,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-serre-chevalier",
@@ -4302,7 +7246,53 @@
         }
       },
       "transfer": "Train to Briançon, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-montgenevre",
@@ -4367,7 +7357,53 @@
         }
       },
       "transfer": "Train to Oulx in Italy, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-puy-saint-vincent",
@@ -4432,7 +7468,53 @@
         }
       },
       "transfer": "Train to L'Argentière-les-Écrins, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-vars",
@@ -4495,7 +7577,53 @@
         }
       },
       "transfer": "Train to Embrun or Montdauphin, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-risoul",
@@ -4566,7 +7694,53 @@
           ],
           "note": "Chairlifts and pistes across the Forêt Blanche"
         }
-      ]
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-les-orres",
@@ -4629,7 +7803,53 @@
         }
       },
       "transfer": "Train to Embrun, then bus.",
-      "links": []
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-annecy",
@@ -4704,7 +7924,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-thones",
@@ -4764,7 +8008,31 @@
             "bus"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-sallanches",
@@ -4868,7 +8136,31 @@
           ]
         }
       ],
-      "rail": "Léman Express L3"
+      "rail": "Léman Express L3",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-le-fayet",
@@ -4960,7 +8252,31 @@
           ]
         }
       ],
-      "rail": "Léman Express L3"
+      "rail": "Léman Express L3",
+      "snowYears": {
+        "town": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            3,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-cluses",
@@ -5051,7 +8367,31 @@
           ]
         }
       ],
-      "rail": "Léman Express L3"
+      "rail": "Léman Express L3",
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-taninges",
@@ -5130,7 +8470,31 @@
             "car"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-montriond",
@@ -5199,7 +8563,31 @@
             "bus"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-thonon",
@@ -5303,7 +8691,31 @@
           ]
         }
       ],
-      "rail": "Léman Express L1"
+      "rail": "Léman Express L1",
+      "snowYears": {
+        "town": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-evian",
@@ -5379,7 +8791,31 @@
           ]
         }
       ],
-      "rail": "Léman Express L1"
+      "rail": "Léman Express L1",
+      "snowYears": {
+        "town": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            0,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-annemasse",
@@ -5458,7 +8894,31 @@
           ]
         }
       ],
-      "rail": "Léman Express hub"
+      "rail": "Léman Express hub",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-bonneville",
@@ -5530,7 +8990,31 @@
           ]
         }
       ],
-      "rail": "Léman Express L3"
+      "rail": "Léman Express L3",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            0,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-la-roche",
@@ -5603,7 +9087,31 @@
           ]
         }
       ],
-      "rail": "Léman Express L2 and L3"
+      "rail": "Léman Express L2 and L3",
+      "snowYears": {
+        "town": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-gex",
@@ -5662,7 +9170,31 @@
             "car"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-divonne",
@@ -5720,7 +9252,31 @@
             "car"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            0,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-albertville",
@@ -5808,7 +9364,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            0,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-moutiers",
@@ -5908,7 +9488,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-brides",
@@ -5966,7 +9570,31 @@
             "car"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            0,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-aime",
@@ -6039,7 +9667,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-bourg",
@@ -6131,7 +9783,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-chambery",
@@ -6190,7 +9866,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-saint-jean-maurienne",
@@ -6271,7 +9971,31 @@
           ]
         }
       ],
-      "rail": "TER and TGV trains"
+      "rail": "TER and TGV trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-saint-michel",
@@ -6345,7 +10069,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-modane",
@@ -6420,7 +10168,31 @@
           ]
         }
       ],
-      "rail": "TER and TGV trains"
+      "rail": "TER and TGV trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-grenoble",
@@ -6512,7 +10284,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-bourg-doisans",
@@ -6586,7 +10382,31 @@
             "car"
           ]
         }
-      ]
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-briancon",
@@ -6654,7 +10474,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-argentiere",
@@ -6713,7 +10557,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "fr-embrun",
@@ -6782,7 +10650,31 @@
           ]
         }
       ],
-      "rail": "TER trains"
+      "rail": "TER trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
     }
   ]
 }

@@ -173,7 +173,18 @@
           <button type="button" id="style-topo" class="tool" aria-pressed="false">Topo</button>
         </div>
         <button type="button" id="toggle-3d" class="tool" aria-pressed="true">3D</button>
+        <button type="button" id="toggle-snow" class="tool" aria-pressed="false">Snow</button>
         <button type="button" id="reset-view" class="tool">Reset view</button>
+      </div>
+
+      <div class="snow-legend" id="snow-legend" hidden>
+        <p class="sl-title">Snow on the ground, mid <span id="snow-month-name">January</span></p>
+        <div class="sl-months" id="snow-months" role="group" aria-label="Snow month">
+          <button type="button" data-v="dec">Dec</button><button type="button" data-v="jan">Jan</button><button type="button" data-v="feb">Feb</button><button type="button" data-v="mar">Mar</button><button type="button" data-v="apr">Apr</button>
+        </div>
+        <div class="sl-ramp" aria-hidden="true"></div>
+        <p class="sl-ends"><span>Sometimes</span><span>Nearly every winter</span></p>
+        <p class="sl-note">Last 10 winters, NASA satellite record.</p>
       </div>
 
       <div class="legend" aria-label="Legend">

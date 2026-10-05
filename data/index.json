@@ -321,5 +321,29 @@
     "rateDate": "2026-10-02",
     "liveRate": "https://api.frankfurter.dev/v1/latest?base=EUR&symbols=GBP",
     "note": "Prices are worked out in euros and shown in pounds at the latest European Central Bank rate."
+  },
+  "snowLayer": {
+    "path": "data/snow/{month}.png",
+    "coordinates": [
+      [
+        4.21875,
+        47.04018214480666
+      ],
+      [
+        8.4375,
+        47.04018214480666
+      ],
+      [
+        8.4375,
+        44.087585028245165
+      ],
+      [
+        4.21875,
+        44.087585028245165
+      ]
+    ],
+    "winters": "2015/16 to 2024/25",
+    "source": "NASA MODIS Terra 8-day snow extent (MOD10A2), via NASA GIBS",
+    "note": "How often snow was seen on the ground around the 8th and 22nd of the month, over the last 10 winters. Satellite pixels are about 500 m, so narrow pistes and snow-making do not show."
   }
 }

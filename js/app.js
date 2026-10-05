@@ -1,7 +1,7 @@
 import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
 import { tripCost, skiTarget } from "./cost.js";
 import { fitScore, seasonState } from "./fit.js";
-import { createMap, setBasemap, setTerrain, setLinks, setReach, HOME_VIEW } from "./map.js";
+import { createMap, setBasemap, setTerrain, setLinks, setReach, setSnowLayer, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
 const $ = (s) => document.querySelector(s);
@@ -29,6 +29,8 @@ const state = {
   rateDate: null,
   origin: "GVA",
   beginner: false,
+  snowLayer: false,
+  snowMonth: null, // month shown on the snow layer; null follows the trip
   vibes: new Set(), // empty means any vibe
   trip: { nights: 7, skiDays: 6, adults: 2, childAges: [], transport: "shuttle", lessons: "all", hire: true, week: null },
   skiAt: {},
@@ -67,7 +69,7 @@ async function init() {
   map.on("zoom", updateLabelMode);
   updateLabelMode();
 
-  map.once("load", () => { if (!state.selected) airportView(); updateReach(lastVisible); });
+  map.once("load", () => { if (!state.selected) airportView(); updateReach(lastVisible); updateSnowLayer(); });
   syncControls();
   bindControls();
   syncControls(); // again for controls that bindControls builds (vibes, weeks)
@@ -133,6 +135,26 @@ function bestSnowFrom(place) {
     const a = SNOW_RANK[snowOf(r.place)], b = best ? SNOW_RANK[snowOf(best.place)] : -1;
     return a > b || (a === b && r.link.min < best.link.min) ? r : best;
   }, null);
+}
+
+const MONTH_LONG = { dec: "December", jan: "January", feb: "February", mar: "March", apr: "April" };
+
+// Satellite record: winters (of the last 10) with snow lying, per month.
+function snowHistory(l) {
+  const h = l.snowYears;
+  if (!h) return "";
+  const rows = { slopes: "Upper slopes", village: "Village", town: "In town" };
+  const cell = ([yes, n], key) => {
+    const share = yes / n;
+    const tone = share >= 0.8 ? "good" : share >= 0.5 ? "fair" : "poor";
+    return `<td class="${tone}${state.months.has(key) ? " picked" : ""}" title="${yes} of ${n} winters">${yes}</td>`;
+  };
+  return `<table class="snow-hist">
+      <thead><tr><th scope="col"><span class="sr-only">Where</span></th>${MONTHS.map((m) => `<th scope="col">${m.label}</th>`).join("")}</tr></thead>
+      <tbody>${Object.entries(h).map(([area, months]) =>
+        `<tr><th scope="row">${rows[area]}</th>${MONTHS.map((m) => cell(months[m.key], m.key)).join("")}</tr>`).join("")}</tbody>
+    </table>
+    <p class="snow-note">Winters out of the last 10 with snow lying in the middle of the month, from NASA satellite images. Snow-making is not included.</p>`;
 }
 
 function snowMonths(l) {
@@ -212,6 +234,21 @@ function setOrigin(id) {
   if (!state.selected) airportView(1400);
 }
 
+/* ---------- snow layer ---------- */
+
+// The snow layer follows the trip (the chosen week, else the first chosen month) until a month is picked on it.
+function updateSnowLayer() {
+  const tripMonth = state.trip.week
+    ? MONTHS[[11, 0, 1, 2, 3].indexOf(new Date(state.trip.week + "T12:00:00").getMonth())]?.key
+    : tripMonths()[0];
+  const month = state.snowMonth || tripMonth || "jan";
+  $("#toggle-snow").setAttribute("aria-pressed", state.snowLayer);
+  $("#snow-legend").hidden = !state.snowLayer;
+  $("#snow-month-name").textContent = MONTH_LONG[month];
+  $$("#snow-months button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === month));
+  if (map) setSnowLayer(map, model.index.snowLayer, state.snowLayer ? month : null);
+}
+
 /* ---------- airport view: airport at the bottom, everywhere you can reach above it ---------- */
 
 let lastVisible = [];
@@ -247,7 +284,8 @@ function updateReach(visible) {
   setReach(map, [{ type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: [origin.coords, far.coords] } }]);
   const el = document.createElement("span");
   el.className = "minutes reach";
-  el.textContent = `Furthest: ${far.name} · ${mins(travel(far).min)}`;
+  el.textContent = mins(travel(far).min);
+  el.title = `Furthest place on show: ${far.name}`;
   const mid = [0, 1].map((i) => origin.coords[i] + (far.coords[i] - origin.coords[i]) * 0.55);
   reachMarker = new maplibregl.Marker({ element: el }).setLngLat(mid).addTo(map);
 }
@@ -672,7 +710,9 @@ function renderDetail(l) {
         <span class="s-label">Snow</span>
         <p class="snow-verdict ${s}">${flake(s)} <strong>${SNOW_LABEL[s]}</strong> for ${monthNames()}</p>
         ${snowMonths(l)}
-        <p class="snow-note">Estimated from altitude: skiing up to ${l.topAltitude} m, village at ${l.altitude} m.${l.snowNote ? ` ${esc(l.snowNote)}` : ""}</p>
+        <p class="snow-note">Rating estimated from altitude: skiing up to ${l.topAltitude} m, village at ${l.altitude} m.${l.snowNote ? ` ${esc(l.snowNote)}` : ""}</p>
+        <span class="s-label">Snow in past winters</span>
+        ${snowHistory(l)}
       </section>`;
     body += `<section class="alt">
         <h3>Stay lower, ski here</h3>
@@ -696,6 +736,8 @@ function renderDetail(l) {
         <p class="snow-verdict ${sr}">${flake(sr)} <strong>${SNOW_LABEL[sr]}</strong> for ${monthNames()} at
           <button type="button" class="link" data-select="${bs.place.id}">${esc(bs.place.name)}</button>, ${mins(bs.link.min)} away</p>
         ${snowMonths(bs.place)}
+        <span class="s-label">Snow in past winters, ${esc(l.name)}</span>
+        ${snowHistory(l)}
       </section>`;
     body += `<section class="alt">
         <h3>Resorts within reach</h3>
@@ -954,6 +996,7 @@ function bindControls() {
   chipSet("#f-size", "sizes", String);
   chipSet("#f-months", "months", String);
   $("#f-months").addEventListener("click", () => {
+    if (state.snowLayer) updateSnowLayer();
     // Month choice changes every snow rating, so redraw open panels too.
     if (state.selected) renderDetail(model.byId.get(state.selected));
     if (!$("#compare").hidden) renderCompareTable();
@@ -1107,6 +1150,16 @@ function bindControls() {
 
   $("#reset-view").addEventListener("click", () => airportView(1400));
 
+  $("#toggle-snow").addEventListener("click", () => {
+    state.snowLayer = !state.snowLayer;
+    updateSnowLayer();
+    savePlan();
+  });
+  $$("#snow-months button").forEach((b) => b.addEventListener("click", () => {
+    state.snowMonth = b.dataset.v;
+    updateSnowLayer();
+  }));
+
   $("#sidebar-toggle").addEventListener("click", () => setSidebar(!sidebarOpen()));
   $("#sidebar-hide").addEventListener("click", () => setSidebar(false));
   // Switching between phone and desktop layouts starts with the panel in its default state.
@@ -1219,6 +1272,7 @@ function planOf() {
     carFree: state.carFree,
     snowSure: state.snowSure,
     beginner: state.beginner,
+    snowLayer: state.snowLayer,
     sort: state.sort,
     saved: [...state.saved],
     selected: state.selected,
@@ -1271,6 +1325,7 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   state.carFree = p.carFree === true;
   state.snowSure = p.snowSure === true;
   state.beginner = p.beginner === true;
+  state.snowLayer = p.snowLayer === true;
   if (["fit", "time", "cost", "price", "altitude", "ski", "snow"].includes(p.sort)) state.sort = p.sort;
   if (mergeSaved) for (const id of ids(p.saved)) state.saved.add(id);
   else state.saved = new Set(ids(p.saved));
@@ -1350,6 +1405,7 @@ function syncControls() {
 
 function tripChanged() {
   applyFilters();
+  if (state.snowLayer) updateSnowLayer();
   if (state.selected) {
     const top = $("#detail").scrollTop;
     renderDetail(model.byId.get(state.selected));

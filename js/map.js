@@ -107,6 +107,23 @@ export function setReach(map, features) {
   if (src) src.setData({ type: "FeatureCollection", features });
 }
 
+// Snow cover from past winters, draped over the terrain. month: "dec".."apr", or null to hide.
+export function setSnowLayer(map, cfg, month) {
+  if (!map.isStyleLoaded()) { map.once("load", () => setSnowLayer(map, cfg, month)); return; }
+  if (!month) {
+    if (map.getLayer("snow-cover")) map.setLayoutProperty("snow-cover", "visibility", "none");
+    return;
+  }
+  const url = cfg.path.replace("{month}", month);
+  const src = map.getSource("snow");
+  if (src) src.updateImage({ url, coordinates: cfg.coordinates });
+  else map.addSource("snow", { type: "image", url, coordinates: cfg.coordinates });
+  if (!map.getLayer("snow-cover")) {
+    map.addLayer({ id: "snow-cover", type: "raster", source: "snow", paint: { "raster-opacity": 0.9, "raster-fade-duration": 0 } }, "reach-line");
+  }
+  map.setLayoutProperty("snow-cover", "visibility", "visible");
+}
+
 export function setLinks(map, features) {
   const src = map.getSource("links");
   if (src) src.setData({ type: "FeatureCollection", features });
