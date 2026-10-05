@@ -223,6 +223,15 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
   font-variant-numeric: tabular-nums;
 }
 .segmented.two { grid-template-columns: 1fr 1fr; }
+.kids-field { display: grid; gap: 3px; font-size: 11px; color: var(--muted); font-weight: 500; }
+.stepper { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); height: 35px; }
+.stepper button { border: 0; background: none; font-size: 18px; line-height: 1; color: var(--ink); height: 100%; padding: 0; }
+.stepper button:disabled { color: var(--line); cursor: default; }
+.stepper output { font-size: 15px; font-weight: 600; color: var(--ink); min-width: 14px; text-align: center; font-variant-numeric: tabular-nums; }
+.kid-ages { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 6px; }
+.kid-ages:empty { display: none; }
+.field .kid-ages label { display: grid; gap: 3px; font-size: 11px; color: var(--muted); text-transform: none; letter-spacing: 0; font-weight: 500; }
+.kid-ages select { padding: 6px 6px; font-size: 14px; font-weight: 600; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); width: 100%; }
 .trip { display: grid; gap: 6px; }
 .trip-total { margin: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .trip-total strong { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }

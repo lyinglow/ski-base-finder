@@ -46,8 +46,15 @@
             <label for="t-nights">Nights<input type="number" id="t-nights" min="1" max="21" value="7" inputmode="numeric"></label>
             <label for="t-days">Ski days<input type="number" id="t-days" min="1" max="21" value="6" inputmode="numeric"></label>
             <label for="t-adults">Adults<input type="number" id="t-adults" min="1" max="12" value="2" inputmode="numeric"></label>
-            <label for="t-kids">Kids' ages<input type="text" id="t-kids" placeholder="7, 10" inputmode="numeric" autocomplete="off"></label>
+            <div class="kids-field">Children
+              <div class="stepper" role="group" aria-label="Number of children">
+                <button type="button" id="kids-minus" aria-label="One fewer child">−</button>
+                <output id="kids-count" aria-live="polite">0</output>
+                <button type="button" id="kids-plus" aria-label="One more child">+</button>
+              </div>
+            </div>
           </div>
+          <div class="kid-ages" id="kid-ages"></div>
           <label class="arrive" for="t-week">Week<select id="t-week"></select></label>
           <p class="week-note" id="week-note"></p>
           <div class="segmented three" id="t-lessons" role="group" aria-label="Ski lessons">

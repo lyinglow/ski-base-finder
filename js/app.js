@@ -969,8 +969,24 @@ function bindControls() {
       tripChanged();
     });
   }
-  $("#t-kids").addEventListener("input", (e) => {
-    state.trip.childAges = (e.target.value.match(/\d+/g) || []).map(Number).filter((a) => a <= 17).slice(0, 8);
+  // Children: a counter, then one age picker per child (no typing needed on phones).
+  $("#kids-plus").addEventListener("click", () => {
+    if (state.trip.childAges.length >= 8) return;
+    state.trip.childAges.push(8);
+    renderKidAges();
+    tripChanged();
+    $(`#kid-age-${state.trip.childAges.length - 1}`)?.focus();
+  });
+  $("#kids-minus").addEventListener("click", () => {
+    if (!state.trip.childAges.length) return;
+    state.trip.childAges.pop();
+    renderKidAges();
+    tripChanged();
+  });
+  $("#kid-ages").addEventListener("change", (e) => {
+    const i = Number(e.target.dataset.i);
+    if (!Number.isInteger(i)) return;
+    state.trip.childAges[i] = Number(e.target.value);
     tripChanged();
   });
 
@@ -1291,6 +1307,16 @@ async function copyPlanLink(btn, fallbackInput) {
   setTimeout(() => { btn.textContent = label; }, 2500);
 }
 
+function renderKidAges() {
+  const ages = state.trip.childAges;
+  $("#kids-count").textContent = ages.length;
+  $("#kids-minus").disabled = !ages.length;
+  $("#kids-plus").disabled = ages.length >= 8;
+  const opt = (a, sel) => `<option value="${a}"${a === sel ? " selected" : ""}>${a === 0 ? "Under 1" : a === 1 ? "1 year" : `${a} years`}</option>`;
+  $("#kid-ages").innerHTML = ages.map((age, i) =>
+    `<label for="kid-age-${i}">Child ${i + 1}<select id="kid-age-${i}" data-i="${i}">${Array.from({ length: 18 }, (_, a) => opt(a, age)).join("")}</select></label>`).join("");
+}
+
 // Put every control in line with the state (after restoring a plan).
 function syncControls() {
   const pressed = (sel, on) => $$(sel).forEach((b) => b.setAttribute("aria-pressed", on(b.dataset.v ?? b.dataset.show)));
@@ -1299,7 +1325,7 @@ function syncControls() {
   $("#t-nights").value = t.nights;
   $("#t-days").value = t.skiDays;
   $("#t-adults").value = t.adults;
-  $("#t-kids").value = t.childAges.join(", ");
+  renderKidAges();
   $("#t-hire").checked = t.hire;
   if ($("#t-week").options.length) $("#t-week").value = t.week || "";
   pressed("#t-lessons button", (v) => v === t.lessons);
