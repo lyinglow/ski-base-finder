@@ -61,12 +61,6 @@
         "level": "good",
         "note": "The Swiss Wall at Chavanette, one of the steepest marked runs in the Alps."
       },
-      "runShare": {
-        "green": 9,
-        "blue": 51,
-        "red": 34,
-        "black": 6
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -141,7 +135,21 @@
         "BSL": {
           "km": 225,
           "min": 145
+        },
+        "MXP": {
+          "km": 266,
+          "min": 195
+        },
+        "BGY": {
+          "km": 339,
+          "min": 235
         }
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -199,12 +207,6 @@
       "expert": {
         "level": "fair",
         "note": "Gentle home slopes, with the steeper Swiss side a few lifts away."
-      },
-      "runShare": {
-        "green": 9,
-        "blue": 51,
-        "red": 34,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -280,7 +282,21 @@
         "BSL": {
           "km": 226,
           "min": 145
+        },
+        "MXP": {
+          "km": 267,
+          "min": 195
+        },
+        "BGY": {
+          "km": 341,
+          "min": 235
         }
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -346,12 +362,6 @@
       "expert": {
         "level": "good",
         "note": "Steep runs and off-piste towards the Swiss Wall and Avoriaz."
-      },
-      "runShare": {
-        "green": 9,
-        "blue": 51,
-        "red": 34,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -427,7 +437,21 @@
         "BSL": {
           "km": 230,
           "min": 155
+        },
+        "MXP": {
+          "km": 271,
+          "min": 210
+        },
+        "BGY": {
+          "km": 344,
+          "min": 245
         }
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -484,12 +508,6 @@
       "expert": {
         "level": "fair",
         "note": "Mostly cruising, with the steeper Swiss Wall area nearby."
-      },
-      "runShare": {
-        "green": 9,
-        "blue": 51,
-        "red": 34,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -565,7 +583,21 @@
         "BSL": {
           "km": 227,
           "min": 155
+        },
+        "MXP": {
+          "km": 268,
+          "min": 205
+        },
+        "BGY": {
+          "km": 342,
+          "min": 245
         }
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -621,12 +653,6 @@
       "expert": {
         "level": "little",
         "note": "Mostly gentle and low."
-      },
-      "runShare": {
-        "green": 9,
-        "blue": 51,
-        "red": 34,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -702,7 +728,21 @@
         "BSL": {
           "km": 216,
           "min": 135
+        },
+        "MXP": {
+          "km": 270,
+          "min": 190
+        },
+        "BGY": {
+          "km": 343,
+          "min": 230
         }
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -772,12 +812,6 @@
         "note": "Some off-piste and steeper runs, with Glacier 3000 a drive away."
       },
       "searchName": "Villars-sur-Ollon",
-      "runShare": {
-        "green": 2,
-        "blue": 64,
-        "red": 32,
-        "black": 2
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -852,7 +886,21 @@
         "BSL": {
           "km": 220,
           "min": 140
+        },
+        "MXP": {
+          "km": 267,
+          "min": 195
+        },
+        "BGY": {
+          "km": 340,
+          "min": 230
         }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 64,
+        "red": 32,
+        "black": 2
       }
     },
     {
@@ -910,12 +958,6 @@
       "expert": {
         "level": "fair",
         "note": "Some steeper runs and off-piste from the Berneuse."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 71,
-        "red": 22,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -991,7 +1033,21 @@
         "BSL": {
           "km": 222,
           "min": 140
+        },
+        "MXP": {
+          "km": 276,
+          "min": 200
+        },
+        "BGY": {
+          "km": 350,
+          "min": 235
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 71,
+        "red": 22,
+        "black": 6
       }
     },
     {
@@ -1050,12 +1106,6 @@
       "expert": {
         "level": "fair",
         "note": "Some steep runs and off-piste, plus Glacier 3000."
-      },
-      "runShare": {
-        "green": 2,
-        "blue": 64,
-        "red": 32,
-        "black": 2
       },
       "snowYears": {
         "slopes": {
@@ -1131,7 +1181,21 @@
         "BSL": {
           "km": 227,
           "min": 145
+        },
+        "MXP": {
+          "km": 281,
+          "min": 200
+        },
+        "BGY": {
+          "km": 354,
+          "min": 240
         }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 64,
+        "red": 32,
+        "black": 2
       }
     },
     {
@@ -1198,12 +1262,6 @@
       "expert": {
         "level": "awesome",
         "note": "Mont Fort, the Tortin mogul field and famous off-piste."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 40,
-        "red": 50,
-        "black": 10
       },
       "snowYears": {
         "slopes": {
@@ -1279,7 +1337,21 @@
         "BSL": {
           "km": 260,
           "min": 165
+        },
+        "MXP": {
+          "km": 251,
+          "min": 180
+        },
+        "BGY": {
+          "km": 303,
+          "min": 205
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
       }
     },
     {
@@ -1348,12 +1420,6 @@
         "note": "Mont Fort and Tortin are close, with big off-piste."
       },
       "searchName": "Haute-Nendaz",
-      "runShare": {
-        "green": 0,
-        "blue": 40,
-        "red": 50,
-        "black": 10
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -1428,7 +1494,21 @@
         "BSL": {
           "km": 265,
           "min": 165
+        },
+        "MXP": {
+          "km": 220,
+          "min": 170
+        },
+        "BGY": {
+          "km": 303,
+          "min": 210
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
       }
     },
     {
@@ -1485,12 +1565,6 @@
       "expert": {
         "level": "fair",
         "note": "The steep Piste de l'Ours, with the big terrain of the 4 Vallées beyond."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 40,
-        "red": 50,
-        "black": 10
       },
       "snowYears": {
         "slopes": {
@@ -1566,7 +1640,21 @@
         "BSL": {
           "km": 267,
           "min": 165
+        },
+        "MXP": {
+          "km": 217,
+          "min": 165
+        },
+        "BGY": {
+          "km": 301,
+          "min": 205
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
       }
     },
     {
@@ -1633,12 +1721,6 @@
         "note": "Some off-piste on the open slopes."
       },
       "searchName": "Thyon 2000",
-      "runShare": {
-        "green": 0,
-        "blue": 40,
-        "red": 50,
-        "black": 10
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -1713,7 +1795,21 @@
         "BSL": {
           "km": 279,
           "min": 180
+        },
+        "MXP": {
+          "km": 226,
+          "min": 180
+        },
+        "BGY": {
+          "km": 310,
+          "min": 220
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
       }
     },
     {
@@ -1769,12 +1865,6 @@
       "expert": {
         "level": "fair",
         "note": "Tree runs locally, with Verbier's big terrain over the hill."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 40,
-        "red": 50,
-        "black": 10
       },
       "snowYears": {
         "slopes": {
@@ -1850,7 +1940,21 @@
         "BSL": {
           "km": 257,
           "min": 160
+        },
+        "MXP": {
+          "km": 234,
+          "min": 175
+        },
+        "BGY": {
+          "km": 318,
+          "min": 215
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
       }
     },
     {
@@ -1908,12 +2012,6 @@
       "expert": {
         "level": "fair",
         "note": "Mostly cruising, with steeper runs and off-piste from the Plaine Morte glacier."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 20,
-        "red": 63,
-        "black": 17
       },
       "snowYears": {
         "slopes": {
@@ -1989,7 +2087,21 @@
         "BSL": {
           "km": 280,
           "min": 180
+        },
+        "MXP": {
+          "km": 204,
+          "min": 160
+        },
+        "BGY": {
+          "km": 287,
+          "min": 200
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 20,
+        "red": 63,
+        "black": 17
       }
     },
     {
@@ -2038,12 +2150,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste on the open slopes."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 37,
-        "red": 44,
-        "black": 19
       },
       "snowYears": {
         "slopes": {
@@ -2119,7 +2225,21 @@
         "BSL": {
           "km": 273,
           "min": 170
+        },
+        "MXP": {
+          "km": 219,
+          "min": 170
+        },
+        "BGY": {
+          "km": 303,
+          "min": 210
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 37,
+        "red": 44,
+        "black": 19
       }
     },
     {
@@ -2170,12 +2290,6 @@
         "note": "Big off-piste and steep runs in a quiet valley."
       },
       "searchName": "Grimentz",
-      "runShare": {
-        "green": 0,
-        "blue": 32,
-        "red": 36,
-        "black": 32
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -2250,7 +2364,21 @@
         "BSL": {
           "km": 293,
           "min": 180
+        },
+        "MXP": {
+          "km": 209,
+          "min": 165
+        },
+        "BGY": {
+          "km": 292,
+          "min": 205
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 32,
+        "red": 36,
+        "black": 32
       }
     },
     {
@@ -2297,12 +2425,6 @@
       "expert": {
         "level": "little",
         "note": "Small and gentle."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 9,
-        "red": 72,
-        "black": 18
       },
       "snowYears": {
         "slopes": {
@@ -2378,7 +2500,21 @@
         "BSL": {
           "km": 253,
           "min": 160
+        },
+        "MXP": {
+          "km": 230,
+          "min": 175
+        },
+        "BGY": {
+          "km": 313,
+          "min": 215
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 9,
+        "red": 72,
+        "black": 18
       }
     },
     {
@@ -2426,12 +2562,6 @@
       "expert": {
         "level": "fair",
         "note": "Some steeper runs and off-piste at Torrent."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 12,
-        "red": 56,
-        "black": 32
       },
       "snowYears": {
         "slopes": {
@@ -2507,7 +2637,21 @@
         "BSL": {
           "km": 295,
           "min": 185
+        },
+        "MXP": {
+          "km": 197,
+          "min": 155
+        },
+        "BGY": {
+          "km": 281,
+          "min": 195
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 12,
+        "red": 56,
+        "black": 32
       }
     },
     {
@@ -2570,12 +2714,6 @@
       "expert": {
         "level": "good",
         "note": "High glacier terrain and off-piste, best with a guide."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 36,
-        "red": 61,
-        "black": 3
       },
       "snowYears": {
         "slopes": {
@@ -2651,7 +2789,21 @@
         "BSL": {
           "km": 325,
           "min": 205
+        },
+        "MXP": {
+          "km": 185,
+          "min": 150
+        },
+        "BGY": {
+          "km": 269,
+          "min": 190
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 36,
+        "red": 61,
+        "black": 3
       }
     },
     {
@@ -2714,12 +2866,6 @@
       "expert": {
         "level": "awesome",
         "note": "High, big terrain and famous off-piste under the Matterhorn."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 21,
-        "red": 71,
-        "black": 8
       },
       "snowYears": {
         "slopes": {
@@ -2795,7 +2941,21 @@
         "BSL": {
           "km": 329,
           "min": 225
+        },
+        "MXP": {
+          "km": 189,
+          "min": 165
+        },
+        "BGY": {
+          "km": 272,
+          "min": 205
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 21,
+        "red": 71,
+        "black": 8
       }
     },
     {
@@ -2863,12 +3023,6 @@
         "note": "Some off-piste with glacier views."
       },
       "searchName": "Bettmeralp",
-      "runShare": {
-        "green": 0,
-        "blue": 49,
-        "red": 46,
-        "black": 5
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -2943,7 +3097,21 @@
         "BSL": {
           "km": 225,
           "min": 180
+        },
+        "MXP": {
+          "km": 163,
+          "min": 145
+        },
+        "BGY": {
+          "km": 247,
+          "min": 185
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 49,
+        "red": 46,
+        "black": 5
       }
     },
     {
@@ -2993,12 +3161,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste, with Glacier 3000 a drive away."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 57,
-        "red": 25,
-        "black": 18
       },
       "snowYears": {
         "slopes": {
@@ -3074,7 +3236,21 @@
         "BSL": {
           "km": 186,
           "min": 135
+        },
+        "MXP": {
+          "km": 303,
+          "min": 225
+        },
+        "BGY": {
+          "km": 377,
+          "min": 265
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 57,
+        "red": 25,
+        "black": 18
       }
     },
     {
@@ -3132,12 +3308,6 @@
       "expert": {
         "level": "fair",
         "note": "The steep Chuenisbärgli and some off-piste."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 51,
-        "red": 42,
-        "black": 7
       },
       "snowYears": {
         "slopes": {
@@ -3213,7 +3383,21 @@
         "BSL": {
           "km": 167,
           "min": 115
+        },
+        "MXP": {
+          "km": 231,
+          "min": 185
+        },
+        "BGY": {
+          "km": 314,
+          "min": 225
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 51,
+        "red": 42,
+        "black": 7
       }
     },
     {
@@ -3272,12 +3456,6 @@
       "expert": {
         "level": "fair",
         "note": "The Lauberhorn run and some off-piste."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 39,
-        "red": 46,
-        "black": 14
       },
       "snowYears": {
         "slopes": {
@@ -3353,7 +3531,21 @@
         "BSL": {
           "km": 167,
           "min": 130
+        },
+        "MXP": {
+          "km": 432,
+          "min": 310
+        },
+        "BGY": {
+          "km": 500,
+          "min": 345
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 39,
+        "red": 46,
+        "black": 14
       }
     },
     {
@@ -3421,12 +3613,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste at First and the Lauberhorn."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 42,
-        "red": 43,
-        "black": 15
       },
       "snowYears": {
         "slopes": {
@@ -3502,7 +3688,21 @@
         "BSL": {
           "km": 175,
           "min": 120
+        },
+        "MXP": {
+          "km": 440,
+          "min": 300
+        },
+        "BGY": {
+          "km": 508,
+          "min": 335
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 42,
+        "red": 43,
+        "black": 15
       }
     },
     {
@@ -3550,12 +3750,6 @@
       "expert": {
         "level": "good",
         "note": "Steep runs from the Schilthorn, home of the Inferno race."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 41,
-        "red": 40,
-        "black": 18
       },
       "snowYears": {
         "slopes": {
@@ -3631,7 +3825,21 @@
         "BSL": {
           "km": 167,
           "min": 140
+        },
+        "MXP": {
+          "km": 432,
+          "min": 320
+        },
+        "BGY": {
+          "km": 500,
+          "min": 355
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 41,
+        "red": 40,
+        "black": 18
       }
     },
     {
@@ -3689,12 +3897,6 @@
         "note": "Small and gentle."
       },
       "searchName": "Saint-Cergue",
-      "runShare": {
-        "green": 32,
-        "blue": 43,
-        "red": 20,
-        "black": 5
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -3769,7 +3971,21 @@
         "BSL": {
           "km": 250,
           "min": 165
+        },
+        "MXP": {
+          "km": 349,
+          "min": 240
+        },
+        "BGY": {
+          "km": 401,
+          "min": 265
         }
+      },
+      "runShare": {
+        "green": 32,
+        "blue": 43,
+        "red": 20,
+        "black": 5
       }
     },
     {
@@ -3827,12 +4043,6 @@
       "expert": {
         "level": "good",
         "note": "Big off-piste and steep runs above the village."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 32,
-        "red": 36,
-        "black": 32
       },
       "snowYears": {
         "slopes": {
@@ -3908,7 +4118,21 @@
         "BSL": {
           "km": 298,
           "min": 185
+        },
+        "MXP": {
+          "km": 213,
+          "min": 165
+        },
+        "BGY": {
+          "km": 297,
+          "min": 205
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 32,
+        "red": 36,
+        "black": 32
       }
     },
     {
@@ -3966,12 +4190,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste with glacier views."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 50,
-        "red": 39,
-        "black": 11
       },
       "snowYears": {
         "slopes": {
@@ -4047,7 +4265,21 @@
         "BSL": {
           "km": 222,
           "min": 175
+        },
+        "MXP": {
+          "km": 160,
+          "min": 145
+        },
+        "BGY": {
+          "km": 244,
+          "min": 185
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 50,
+        "red": 39,
+        "black": 11
       }
     },
     {
@@ -4147,6 +4379,14 @@
         "BSL": {
           "km": 213,
           "min": 130
+        },
+        "MXP": {
+          "km": 253,
+          "min": 180
+        },
+        "BGY": {
+          "km": 326,
+          "min": 220
         }
       }
     },
@@ -4255,6 +4495,14 @@
         "BSL": {
           "km": 207,
           "min": 130
+        },
+        "MXP": {
+          "km": 261,
+          "min": 185
+        },
+        "BGY": {
+          "km": 335,
+          "min": 225
         }
       }
     },
@@ -4341,6 +4589,14 @@
         "BSL": {
           "km": 215,
           "min": 130
+        },
+        "MXP": {
+          "km": 250,
+          "min": 180
+        },
+        "BGY": {
+          "km": 323,
+          "min": 215
         }
       }
     },
@@ -4441,6 +4697,14 @@
         "BSL": {
           "km": 231,
           "min": 140
+        },
+        "MXP": {
+          "km": 234,
+          "min": 170
+        },
+        "BGY": {
+          "km": 302,
+          "min": 205
         }
       }
     },
@@ -4527,6 +4791,14 @@
         "BSL": {
           "km": 251,
           "min": 155
+        },
+        "MXP": {
+          "km": 243,
+          "min": 170
+        },
+        "BGY": {
+          "km": 294,
+          "min": 200
         }
       }
     },
@@ -4644,6 +4916,14 @@
         "BSL": {
           "km": 257,
           "min": 155
+        },
+        "MXP": {
+          "km": 207,
+          "min": 155
+        },
+        "BGY": {
+          "km": 291,
+          "min": 195
         }
       }
     },
@@ -4753,6 +5033,14 @@
         "BSL": {
           "km": 272,
           "min": 165
+        },
+        "MXP": {
+          "km": 192,
+          "min": 145
+        },
+        "BGY": {
+          "km": 275,
+          "min": 185
         }
       }
     },
@@ -4846,6 +5134,14 @@
         "BSL": {
           "km": 300,
           "min": 185
+        },
+        "MXP": {
+          "km": 160,
+          "min": 125
+        },
+        "BGY": {
+          "km": 244,
+          "min": 165
         }
       }
     },
@@ -4931,6 +5227,14 @@
         "BSL": {
           "km": 329,
           "min": 210
+        },
+        "MXP": {
+          "km": 189,
+          "min": 150
+        },
+        "BGY": {
+          "km": 272,
+          "min": 190
         }
       }
     },
@@ -5035,6 +5339,14 @@
         "BSL": {
           "km": 216,
           "min": 155
+        },
+        "MXP": {
+          "km": 152,
+          "min": 120
+        },
+        "BGY": {
+          "km": 235,
+          "min": 160
         }
       }
     },
@@ -5135,6 +5447,14 @@
         "BSL": {
           "km": 157,
           "min": 105
+        },
+        "MXP": {
+          "km": 422,
+          "min": 285
+        },
+        "BGY": {
+          "km": 490,
+          "min": 320
         }
       }
     },
@@ -5230,6 +5550,14 @@
         "BSL": {
           "km": 167,
           "min": 110
+        },
+        "MXP": {
+          "km": 432,
+          "min": 290
+        },
+        "BGY": {
+          "km": 500,
+          "min": 325
         }
       }
     },
@@ -5315,6 +5643,14 @@
         "BSL": {
           "km": 152,
           "min": 100
+        },
+        "MXP": {
+          "km": 216,
+          "min": 175
+        },
+        "BGY": {
+          "km": 299,
+          "min": 215
         }
       }
     }

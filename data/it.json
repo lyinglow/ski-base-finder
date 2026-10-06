@@ -1,0 +1,3374 @@
+{
+  "country": "IT",
+  "name": "Italy",
+  "updated": "2026-10",
+  "notes": "Italian lift passes are typical 6-day prices for the local area. Getting from Geneva to the Aosta Valley uses the Mont Blanc tunnel (toll).",
+  "locations": [
+    {
+      "id": "it-courmayeur",
+      "type": "resort",
+      "name": "Courmayeur",
+      "region": "Aosta Valley",
+      "coords": [
+        6.969,
+        45.7966
+      ],
+      "altitude": 1224,
+      "topAltitude": 2755,
+      "townSize": "medium",
+      "price": 3,
+      "stayPerPerson": 130,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "upmarket",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Courmayeur",
+        "pisteKm": 100,
+        "pass6": 310
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4,
+        "crecheFromMonths": 24
+      },
+      "character": "Smart, old mountain town under the Italian side of Mont Blanc. Long lunches, a lively evening street and big off-piste.",
+      "transfer": "Shared shuttle about 1h20 through the Mont Blanc tunnel.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Big off-piste, with the Skyway cable car to the Vallée Blanche and Toula glacier."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 39,
+        "red": 52,
+        "black": 9
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 107,
+          "min": 90
+        },
+        "LYS": {
+          "km": 233,
+          "min": 140
+        },
+        "CMF": {
+          "km": 156,
+          "min": 105
+        },
+        "GNB": {
+          "km": 236,
+          "min": 140
+        },
+        "TRN": {
+          "km": 152,
+          "min": 95
+        },
+        "ZRH": {
+          "km": 318,
+          "min": 210
+        },
+        "BSL": {
+          "km": 298,
+          "min": 200
+        },
+        "MXP": {
+          "km": 212,
+          "min": 130
+        },
+        "BGY": {
+          "km": 263,
+          "min": 155
+        }
+      }
+    },
+    {
+      "id": "it-la-thuile",
+      "type": "resort",
+      "name": "La Thuile",
+      "region": "Aosta Valley",
+      "coords": [
+        6.952,
+        45.7135
+      ],
+      "altitude": 1441,
+      "topAltitude": 2641,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "skiin"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Espace San Bernardo",
+        "pisteKm": 160,
+        "pass6": 290
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Quiet old mining village with a modern ski-in base, sharing its ski area with La Rosière in France.",
+      "transfer": "Shared shuttle about 1h40 through the Mont Blanc tunnel.",
+      "links": [
+        {
+          "to": "fr-la-rosiere",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across the Petit-Saint-Bernard to La Rosière"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park. La Rosière's park is on the same pass."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good off-piste and heli-skiing from the Rutor glacier."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 29,
+        "red": 55,
+        "black": 15
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 123,
+          "min": 110
+        },
+        "LYS": {
+          "km": 249,
+          "min": 160
+        },
+        "CMF": {
+          "km": 172,
+          "min": 125
+        },
+        "GNB": {
+          "km": 252,
+          "min": 160
+        },
+        "TRN": {
+          "km": 158,
+          "min": 110
+        },
+        "ZRH": {
+          "km": 333,
+          "min": 225
+        },
+        "BSL": {
+          "km": 313,
+          "min": 220
+        },
+        "MXP": {
+          "km": 218,
+          "min": 140
+        },
+        "BGY": {
+          "km": 270,
+          "min": 170
+        }
+      }
+    },
+    {
+      "id": "it-pila",
+      "type": "resort",
+      "name": "Pila",
+      "region": "Aosta Valley",
+      "coords": [
+        7.317,
+        45.7342
+      ],
+      "altitude": 1800,
+      "topAltitude": 2750,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Beginner slopes beside the apartments at the top of the cable car.",
+      "skiArea": {
+        "name": "Pila",
+        "pisteKm": 70,
+        "pass6": 230
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Sunny, purpose-built resort high above Aosta, reached by an 18-minute cable car from the city.",
+      "transfer": "Shared shuttle about 2h. Train to Aosta, then the cable car up.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "A well-known park with lines for beginners and improvers.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste with views of Mont Blanc and the Matterhorn."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 16,
+        "red": 69,
+        "black": 14
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            3,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 143,
+          "min": 120
+        },
+        "LYS": {
+          "km": 269,
+          "min": 170
+        },
+        "CMF": {
+          "km": 192,
+          "min": 135
+        },
+        "GNB": {
+          "km": 272,
+          "min": 170
+        },
+        "TRN": {
+          "km": 118,
+          "min": 75
+        },
+        "ZRH": {
+          "km": 328,
+          "min": 215
+        },
+        "BSL": {
+          "km": 308,
+          "min": 210
+        },
+        "MXP": {
+          "km": 179,
+          "min": 110
+        },
+        "BGY": {
+          "km": 230,
+          "min": 135
+        }
+      }
+    },
+    {
+      "id": "it-cervinia",
+      "type": "resort",
+      "name": "Cervinia",
+      "region": "Aosta Valley",
+      "coords": [
+        7.6297,
+        45.9336
+      ],
+      "altitude": 2050,
+      "topAltitude": 3480,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 110,
+      "family": true,
+      "vibes": [
+        "skiin",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Wide, gentle slopes right above the village.",
+      "skiArea": {
+        "name": "Matterhorn Ski Paradise",
+        "pisteKm": 360,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-10-31",
+        "close": "2027-05-02"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "snowAdjust": 300,
+      "snowNote": "Glacier skiing up to 3,480 m keeps snow all season.",
+      "character": "High, snow-sure resort under the Matterhorn with long, easy runs and a ski link over the glacier to Zermatt.",
+      "transfer": "Shared shuttle about 2h20. Train to Châtillon, then the bus up.",
+      "links": [
+        {
+          "to": "ch-zermatt",
+          "min": 60,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski over the Plateau Rosa glacier to Zermatt, on an international pass"
+        },
+        {
+          "to": "it-valtournenche",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski down to Valtournenche"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "High off-piste and a glacier link to Zermatt."
+      },
+      "searchName": "Breuil-Cervinia",
+      "runShare": {
+        "green": 0,
+        "blue": 21,
+        "red": 71,
+        "black": 8
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 196,
+          "min": 155
+        },
+        "LYS": {
+          "km": 322,
+          "min": 205
+        },
+        "CMF": {
+          "km": 245,
+          "min": 175
+        },
+        "GNB": {
+          "km": 325,
+          "min": 210
+        },
+        "TRN": {
+          "km": 121,
+          "min": 85
+        },
+        "ZRH": {
+          "km": 380,
+          "min": 260
+        },
+        "BSL": {
+          "km": 360,
+          "min": 255
+        },
+        "MXP": {
+          "km": 181,
+          "min": 120
+        },
+        "BGY": {
+          "km": 232,
+          "min": 145
+        }
+      }
+    },
+    {
+      "id": "it-valtournenche",
+      "type": "resort",
+      "name": "Valtournenche",
+      "region": "Aosta Valley",
+      "coords": [
+        7.6238,
+        45.877
+      ],
+      "altitude": 1524,
+      "topAltitude": 3480,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Matterhorn Ski Paradise",
+        "pisteKm": 360,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-11-28",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Real village below Cervinia, with lower prices and lifts up into the same ski area.",
+      "transfer": "Shared shuttle about 2h10. Train to Châtillon, then the bus.",
+      "links": [
+        {
+          "to": "it-cervinia",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts up to Cervinia"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "Small fun zones. Cervinia has the park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Long red runs, with Cervinia's high terrain above."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 21,
+        "red": 71,
+        "black": 8
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 187,
+          "min": 150
+        },
+        "LYS": {
+          "km": 313,
+          "min": 200
+        },
+        "CMF": {
+          "km": 236,
+          "min": 165
+        },
+        "GNB": {
+          "km": 316,
+          "min": 200
+        },
+        "TRN": {
+          "km": 112,
+          "min": 80
+        },
+        "ZRH": {
+          "km": 371,
+          "min": 255
+        },
+        "BSL": {
+          "km": 351,
+          "min": 245
+        },
+        "MXP": {
+          "km": 172,
+          "min": 110
+        },
+        "BGY": {
+          "km": 224,
+          "min": 140
+        }
+      }
+    },
+    {
+      "id": "it-champoluc",
+      "type": "resort",
+      "name": "Champoluc",
+      "region": "Aosta Valley",
+      "coords": [
+        7.7272,
+        45.8303
+      ],
+      "altitude": 1568,
+      "topAltitude": 3275,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Monterosa Ski",
+        "pisteKm": 180,
+        "pass6": 300
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Pretty old village in the Ayas valley, the western gate to the Monterosa ski area and its famous off-piste.",
+      "transfer": "Shared shuttle about 2h20. Car up the Ayas valley from Verrès.",
+      "links": [
+        {
+          "to": "it-gressoney",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts over the Colle Bettaforca"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Some of the best off-piste in the Alps, best with a guide."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 14,
+        "red": 63,
+        "black": 22
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 206,
+          "min": 160
+        },
+        "LYS": {
+          "km": 332,
+          "min": 210
+        },
+        "CMF": {
+          "km": 255,
+          "min": 175
+        },
+        "GNB": {
+          "km": 335,
+          "min": 210
+        },
+        "TRN": {
+          "km": 109,
+          "min": 80
+        },
+        "ZRH": {
+          "km": 390,
+          "min": 265
+        },
+        "BSL": {
+          "km": 370,
+          "min": 260
+        },
+        "MXP": {
+          "km": 169,
+          "min": 110
+        },
+        "BGY": {
+          "km": 220,
+          "min": 140
+        }
+      }
+    },
+    {
+      "id": "it-gressoney",
+      "type": "resort",
+      "name": "Gressoney-La-Trinité",
+      "region": "Aosta Valley",
+      "coords": [
+        7.823,
+        45.8287
+      ],
+      "altitude": 1637,
+      "topAltitude": 3275,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Monterosa Ski",
+        "pisteKm": 180,
+        "pass6": 300
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Quiet Walser village of stone and wood in the middle of the Monterosa ski area.",
+      "transfer": "Shared shuttle about 2h30. Car up the Gressoney valley from Pont-Saint-Martin.",
+      "links": [
+        {
+          "to": "it-alagna",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts over the Passo dei Salati"
+        },
+        {
+          "to": "it-champoluc",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts over the Colle Bettaforca"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Big off-piste towards Alagna and Champoluc."
+      },
+      "searchName": "Gressoney-La-Trinité",
+      "runShare": {
+        "green": 1,
+        "blue": 14,
+        "red": 63,
+        "black": 22
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 226,
+          "min": 175
+        },
+        "LYS": {
+          "km": 352,
+          "min": 225
+        },
+        "CMF": {
+          "km": 275,
+          "min": 190
+        },
+        "GNB": {
+          "km": 355,
+          "min": 225
+        },
+        "TRN": {
+          "km": 104,
+          "min": 80
+        },
+        "ZRH": {
+          "km": 410,
+          "min": 280
+        },
+        "BSL": {
+          "km": 390,
+          "min": 275
+        },
+        "MXP": {
+          "km": 164,
+          "min": 110
+        },
+        "BGY": {
+          "km": 215,
+          "min": 140
+        }
+      }
+    },
+    {
+      "id": "it-alagna",
+      "type": "resort",
+      "name": "Alagna",
+      "region": "Piedmont",
+      "coords": [
+        7.938,
+        45.8545
+      ],
+      "altitude": 1191,
+      "topAltitude": 3275,
+      "townSize": "small",
+      "price": 2,
+      "family": false,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Monterosa Ski",
+        "pisteKm": 180,
+        "pass6": 300
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 5
+      },
+      "character": "Small Walser village famous with freeriders, at the eastern end of the Monterosa ski area.",
+      "transfer": "Car about 2h from Milan Malpensa.",
+      "links": [
+        {
+          "to": "it-gressoney",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts over the Passo dei Salati"
+        }
+      ],
+      "park": {
+        "level": "none",
+        "note": "No park. Alagna is about off-piste."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Legendary freeride terrain from Punta Indren, best with a guide."
+      },
+      "searchName": "Alagna Valsesia",
+      "runShare": {
+        "green": 1,
+        "blue": 14,
+        "red": 63,
+        "black": 22
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 314,
+          "min": 250
+        },
+        "LYS": {
+          "km": 451,
+          "min": 285
+        },
+        "CMF": {
+          "km": 373,
+          "min": 250
+        },
+        "GNB": {
+          "km": 439,
+          "min": 280
+        },
+        "TRN": {
+          "km": 170,
+          "min": 120
+        },
+        "ZRH": {
+          "km": 398,
+          "min": 305
+        },
+        "BSL": {
+          "km": 378,
+          "min": 300
+        },
+        "MXP": {
+          "km": 110,
+          "min": 95
+        },
+        "BGY": {
+          "km": 192,
+          "min": 130
+        }
+      }
+    },
+    {
+      "id": "it-sestriere",
+      "type": "resort",
+      "name": "Sestriere",
+      "region": "Piedmont",
+      "coords": [
+        6.879,
+        44.9575
+      ],
+      "altitude": 2035,
+      "topAltitude": 2800,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "skiin",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Via Lattea (Milky Way)",
+        "pisteKm": 400,
+        "pass6": 265
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "High, purpose-built Olympic resort at the heart of the Milky Way. Snow-sure, with skiing from the door.",
+      "transfer": "Shared shuttle about 1h30 from Turin. Train to Oulx, then the bus.",
+      "links": [
+        {
+          "to": "it-sansicario",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across towards Sansicario"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep Olympic runs and good off-piste."
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 34,
+        "red": 52,
+        "black": 12
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 241,
+          "min": 165
+        },
+        "LYS": {
+          "km": 235,
+          "min": 150
+        },
+        "CMF": {
+          "km": 157,
+          "min": 110
+        },
+        "GNB": {
+          "km": 223,
+          "min": 145
+        },
+        "TRN": {
+          "km": 107,
+          "min": 85
+        },
+        "ZRH": {
+          "km": 512,
+          "min": 305
+        },
+        "BSL": {
+          "km": 492,
+          "min": 300
+        },
+        "MXP": {
+          "km": 229,
+          "min": 145
+        },
+        "BGY": {
+          "km": 281,
+          "min": 170
+        }
+      }
+    },
+    {
+      "id": "it-sauze-d-oulx",
+      "type": "resort",
+      "name": "Sauze d'Oulx",
+      "region": "Piedmont",
+      "coords": [
+        6.859,
+        45.0275
+      ],
+      "altitude": 1509,
+      "topAltitude": 2800,
+      "townSize": "medium",
+      "price": 1,
+      "family": false,
+      "vibes": [
+        "lively",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Via Lattea (Milky Way)",
+        "pisteKm": 400,
+        "pass6": 265
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 4
+      },
+      "character": "Old village with a famous party scene, long a British favourite, with tree-lined runs into the Milky Way.",
+      "transfer": "Shared shuttle about 1h15 from Turin. Train to Oulx, then the bus.",
+      "links": [
+        {
+          "to": "it-sestriere",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts across to Sestriere"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park with a beginner line.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Tree runs and some off-piste."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 23,
+        "red": 70,
+        "black": 6
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 226,
+          "min": 155
+        },
+        "LYS": {
+          "km": 220,
+          "min": 140
+        },
+        "CMF": {
+          "km": 142,
+          "min": 100
+        },
+        "GNB": {
+          "km": 208,
+          "min": 135
+        },
+        "TRN": {
+          "km": 91,
+          "min": 70
+        },
+        "ZRH": {
+          "km": 497,
+          "min": 295
+        },
+        "BSL": {
+          "km": 477,
+          "min": 290
+        },
+        "MXP": {
+          "km": 214,
+          "min": 130
+        },
+        "BGY": {
+          "km": 265,
+          "min": 160
+        }
+      }
+    },
+    {
+      "id": "it-sansicario",
+      "type": "resort",
+      "name": "Sansicario",
+      "region": "Piedmont",
+      "coords": [
+        6.827,
+        44.962
+      ],
+      "altitude": 1700,
+      "topAltitude": 2800,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Via Lattea (Milky Way)",
+        "pisteKm": 400,
+        "pass6": 265
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Small, quiet ski-in ski-out spot in the middle of the Milky Way.",
+      "transfer": "Car about 1h20 from Turin.",
+      "links": [
+        {
+          "to": "it-claviere",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts across to Claviere and Montgenèvre"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 17,
+        "red": 74,
+        "black": 8
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 236,
+          "min": 160
+        },
+        "LYS": {
+          "km": 230,
+          "min": 145
+        },
+        "CMF": {
+          "km": 152,
+          "min": 110
+        },
+        "GNB": {
+          "km": 218,
+          "min": 140
+        },
+        "TRN": {
+          "km": 101,
+          "min": 80
+        },
+        "ZRH": {
+          "km": 507,
+          "min": 305
+        },
+        "BSL": {
+          "km": 486,
+          "min": 300
+        },
+        "MXP": {
+          "km": 224,
+          "min": 140
+        },
+        "BGY": {
+          "km": 275,
+          "min": 170
+        }
+      }
+    },
+    {
+      "id": "it-claviere",
+      "type": "resort",
+      "name": "Claviere",
+      "region": "Piedmont",
+      "coords": [
+        6.751,
+        44.938
+      ],
+      "altitude": 1760,
+      "topAltitude": 2800,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Via Lattea (Milky Way)",
+        "pisteKm": 400,
+        "pass6": 265
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Tiny border village a short walk from Montgenèvre, with lower Italian prices.",
+      "transfer": "Car about 1h20 from Turin.",
+      "links": [
+        {
+          "to": "fr-montgenevre",
+          "min": 10,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across the border to Montgenèvre"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "Small fun zones. Montgenèvre has the park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste towards Cesana."
+      },
+      "runShare": {
+        "green": 15,
+        "blue": 42,
+        "red": 36,
+        "black": 7
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 237,
+          "min": 165
+        },
+        "LYS": {
+          "km": 231,
+          "min": 150
+        },
+        "CMF": {
+          "km": 153,
+          "min": 110
+        },
+        "GNB": {
+          "km": 219,
+          "min": 145
+        },
+        "TRN": {
+          "km": 102,
+          "min": 85
+        },
+        "ZRH": {
+          "km": 508,
+          "min": 305
+        },
+        "BSL": {
+          "km": 488,
+          "min": 300
+        },
+        "MXP": {
+          "km": 225,
+          "min": 145
+        },
+        "BGY": {
+          "km": 277,
+          "min": 170
+        }
+      }
+    },
+    {
+      "id": "it-bardonecchia",
+      "type": "resort",
+      "name": "Bardonecchia",
+      "region": "Piedmont",
+      "coords": [
+        6.704,
+        45.0786
+      ],
+      "altitude": 1312,
+      "topAltitude": 2750,
+      "townSize": "medium",
+      "price": 1,
+      "family": true,
+      "vibes": [
+        "town",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Bardonecchia",
+        "pisteKm": 100,
+        "pass6": 200
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Real mountain town with a train station, three separate ski areas and good prices.",
+      "transfer": "Shared shuttle about 1h15 from Turin. Train to the town.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "A well-known park with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste."
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 30,
+        "red": 64,
+        "black": 4
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            5,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 212,
+          "min": 140
+        },
+        "LYS": {
+          "km": 205,
+          "min": 125
+        },
+        "CMF": {
+          "km": 127,
+          "min": 85
+        },
+        "GNB": {
+          "km": 193,
+          "min": 120
+        },
+        "TRN": {
+          "km": 98,
+          "min": 75
+        },
+        "ZRH": {
+          "km": 482,
+          "min": 280
+        },
+        "BSL": {
+          "km": 462,
+          "min": 275
+        },
+        "MXP": {
+          "km": 221,
+          "min": 135
+        },
+        "BGY": {
+          "km": 272,
+          "min": 160
+        }
+      }
+    },
+    {
+      "id": "it-livigno",
+      "type": "resort",
+      "name": "Livigno",
+      "region": "Lombardy",
+      "coords": [
+        10.136,
+        46.5385
+      ],
+      "altitude": 1816,
+      "topAltitude": 2798,
+      "townSize": "large",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "lively",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Nursery slopes along the valley floor, a short walk from most hotels.",
+      "skiArea": {
+        "name": "Livigno",
+        "pisteKm": 115,
+        "pass6": 280
+      },
+      "season": {
+        "open": "2026-11-28",
+        "close": "2027-05-02"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Long, high valley town with tax-free shopping and snow-sure skiing on both sides. Host of Olympic freestyle events.",
+      "transfer": "Shared shuttle about 3h30 from Bergamo.",
+      "links": [],
+      "park": {
+        "level": "awesome",
+        "note": "Mottolino park is one of the best in Europe, with lines for every level and a halfpipe.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "halfpipe",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste and steeper runs."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 31,
+        "red": 58,
+        "black": 11
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 483,
+          "min": 320
+        },
+        "LYS": {
+          "km": 627,
+          "min": 390
+        },
+        "CMF": {
+          "km": 569,
+          "min": 365
+        },
+        "GNB": {
+          "km": 648,
+          "min": 400
+        },
+        "TRN": {
+          "km": 372,
+          "min": 275
+        },
+        "ZRH": {
+          "km": 218,
+          "min": 165
+        },
+        "BSL": {
+          "km": 298,
+          "min": 215
+        },
+        "MXP": {
+          "km": 254,
+          "min": 215
+        },
+        "BGY": {
+          "km": 186,
+          "min": 180
+        }
+      }
+    },
+    {
+      "id": "it-bormio",
+      "type": "resort",
+      "name": "Bormio",
+      "region": "Lombardy",
+      "coords": [
+        10.37,
+        46.467
+      ],
+      "altitude": 1225,
+      "topAltitude": 3012,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Alta Valtellina",
+        "pisteKm": 115,
+        "pass6": 260
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Old Roman spa town with thermal baths and the steep Stelvio World Cup downhill.",
+      "transfer": "Shared shuttle about 3h from Bergamo.",
+      "links": [
+        {
+          "to": "it-santa-caterina",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ],
+          "note": "Free ski bus up the Valfurva"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "good",
+        "note": "The steep Stelvio run and long off-piste descents."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 21,
+        "red": 75,
+        "black": 4
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 522,
+          "min": 355
+        },
+        "LYS": {
+          "km": 616,
+          "min": 400
+        },
+        "CMF": {
+          "km": 537,
+          "min": 365
+        },
+        "GNB": {
+          "km": 604,
+          "min": 395
+        },
+        "TRN": {
+          "km": 334,
+          "min": 235
+        },
+        "ZRH": {
+          "km": 257,
+          "min": 195
+        },
+        "BSL": {
+          "km": 338,
+          "min": 245
+        },
+        "MXP": {
+          "km": 216,
+          "min": 175
+        },
+        "BGY": {
+          "km": 148,
+          "min": 140
+        }
+      }
+    },
+    {
+      "id": "it-santa-caterina",
+      "type": "resort",
+      "name": "Santa Caterina",
+      "region": "Lombardy",
+      "coords": [
+        10.495,
+        46.412
+      ],
+      "altitude": 1738,
+      "topAltitude": 2725,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Alta Valtellina",
+        "pisteKm": 115,
+        "pass6": 260
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Small, quiet, snow-sure village at the end of the Valfurva, on the Bormio lift pass.",
+      "transfer": "Car about 3h15 from Bergamo.",
+      "links": [
+        {
+          "to": "it-bormio",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ],
+          "note": "Ski bus down to Bormio"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste."
+      },
+      "searchName": "Santa Caterina Valfurva",
+      "runShare": {
+        "green": 0,
+        "blue": 9,
+        "red": 76,
+        "black": 15
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 535,
+          "min": 365
+        },
+        "LYS": {
+          "km": 628,
+          "min": 410
+        },
+        "CMF": {
+          "km": 550,
+          "min": 375
+        },
+        "GNB": {
+          "km": 616,
+          "min": 410
+        },
+        "TRN": {
+          "km": 347,
+          "min": 245
+        },
+        "ZRH": {
+          "km": 269,
+          "min": 210
+        },
+        "BSL": {
+          "km": 350,
+          "min": 260
+        },
+        "MXP": {
+          "km": 229,
+          "min": 185
+        },
+        "BGY": {
+          "km": 160,
+          "min": 150
+        }
+      }
+    },
+    {
+      "id": "it-madesimo",
+      "type": "resort",
+      "name": "Madesimo",
+      "region": "Lombardy",
+      "coords": [
+        9.357,
+        46.437
+      ],
+      "altitude": 1550,
+      "topAltitude": 2948,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Madesimo",
+        "pisteKm": 60,
+        "pass6": 220
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Quiet village near the Swiss border, with the famous Canalone off-piste run.",
+      "transfer": "Car about 2h15 from Bergamo or Milan.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "good",
+        "note": "The steep Canalone and good off-piste."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 47,
+        "red": 45,
+        "black": 8
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 456,
+          "min": 330
+        },
+        "LYS": {
+          "km": 558,
+          "min": 365
+        },
+        "CMF": {
+          "km": 480,
+          "min": 325
+        },
+        "GNB": {
+          "km": 546,
+          "min": 360
+        },
+        "TRN": {
+          "km": 277,
+          "min": 195
+        },
+        "ZRH": {
+          "km": 379,
+          "min": 305
+        },
+        "BSL": {
+          "km": 459,
+          "min": 355
+        },
+        "MXP": {
+          "km": 160,
+          "min": 140
+        },
+        "BGY": {
+          "km": 125,
+          "min": 125
+        }
+      }
+    },
+    {
+      "id": "it-aosta",
+      "type": "base",
+      "name": "Aosta",
+      "region": "Aosta Valley",
+      "coords": [
+        7.3201,
+        45.7372
+      ],
+      "altitude": 583,
+      "townSize": "large",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
+      "character": "Roman city with an old town, real shops and everyday prices. A cable car climbs from the station area to Pila.",
+      "transfer": "Shared shuttle about 1h45 from Geneva through the Mont Blanc tunnel.",
+      "links": [
+        {
+          "to": "it-pila",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Cable car straight up to Pila"
+        },
+        {
+          "to": "it-courmayeur",
+          "min": 35,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "it-la-thuile",
+          "min": 40,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "it-cervinia",
+          "min": 60,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Trenitalia",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            3,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 144,
+          "min": 120
+        },
+        "LYS": {
+          "km": 269,
+          "min": 170
+        },
+        "CMF": {
+          "km": 193,
+          "min": 135
+        },
+        "GNB": {
+          "km": 273,
+          "min": 170
+        },
+        "TRN": {
+          "km": 118,
+          "min": 75
+        },
+        "ZRH": {
+          "km": 327,
+          "min": 215
+        },
+        "BSL": {
+          "km": 307,
+          "min": 210
+        },
+        "MXP": {
+          "km": 178,
+          "min": 110
+        },
+        "BGY": {
+          "km": 229,
+          "min": 135
+        }
+      }
+    },
+    {
+      "id": "it-pre-saint-didier",
+      "type": "base",
+      "name": "Pré-Saint-Didier",
+      "region": "Aosta Valley",
+      "coords": [
+        6.986,
+        45.764
+      ],
+      "altitude": 1004,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Small village with famous thermal baths, between Courmayeur and La Thuile.",
+      "transfer": "Shared shuttle about 1h30 from Geneva.",
+      "links": [
+        {
+          "to": "it-courmayeur",
+          "min": 10,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "it-la-thuile",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 113,
+          "min": 95
+        },
+        "LYS": {
+          "km": 239,
+          "min": 145
+        },
+        "CMF": {
+          "km": 162,
+          "min": 110
+        },
+        "GNB": {
+          "km": 242,
+          "min": 145
+        },
+        "TRN": {
+          "km": 148,
+          "min": 95
+        },
+        "ZRH": {
+          "km": 323,
+          "min": 215
+        },
+        "BSL": {
+          "km": 303,
+          "min": 210
+        },
+        "MXP": {
+          "km": 208,
+          "min": 130
+        },
+        "BGY": {
+          "km": 259,
+          "min": 155
+        }
+      }
+    },
+    {
+      "id": "it-morgex",
+      "type": "base",
+      "name": "Morgex",
+      "region": "Aosta Valley",
+      "coords": [
+        7.039,
+        45.757
+      ],
+      "altitude": 1002,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "character": "Quiet wine village below Courmayeur, with lower prices.",
+      "transfer": "Shared shuttle about 1h30 from Geneva.",
+      "links": [
+        {
+          "to": "it-courmayeur",
+          "min": 15,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "it-la-thuile",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            3,
+            10
+          ],
+          "feb": [
+            4,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 117,
+          "min": 100
+        },
+        "LYS": {
+          "km": 243,
+          "min": 150
+        },
+        "CMF": {
+          "km": 166,
+          "min": 115
+        },
+        "GNB": {
+          "km": 246,
+          "min": 150
+        },
+        "TRN": {
+          "km": 144,
+          "min": 90
+        },
+        "ZRH": {
+          "km": 328,
+          "min": 220
+        },
+        "BSL": {
+          "km": 308,
+          "min": 215
+        },
+        "MXP": {
+          "km": 204,
+          "min": 125
+        },
+        "BGY": {
+          "km": 255,
+          "min": 150
+        }
+      }
+    },
+    {
+      "id": "it-chatillon",
+      "type": "base",
+      "name": "Châtillon",
+      "region": "Aosta Valley",
+      "coords": [
+        7.615,
+        45.75
+      ],
+      "altitude": 549,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "town"
+      ],
+      "character": "Valley town with a train station and buses up to Cervinia.",
+      "transfer": "Shared shuttle about 2h from Geneva.",
+      "links": [
+        {
+          "to": "it-valtournenche",
+          "min": 30,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-cervinia",
+          "min": 45,
+          "by": [
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Trenitalia",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            0,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 169,
+          "min": 130
+        },
+        "LYS": {
+          "km": 294,
+          "min": 180
+        },
+        "CMF": {
+          "km": 218,
+          "min": 145
+        },
+        "GNB": {
+          "km": 298,
+          "min": 180
+        },
+        "TRN": {
+          "km": 94,
+          "min": 60
+        },
+        "ZRH": {
+          "km": 353,
+          "min": 235
+        },
+        "BSL": {
+          "km": 333,
+          "min": 230
+        },
+        "MXP": {
+          "km": 154,
+          "min": 90
+        },
+        "BGY": {
+          "km": 205,
+          "min": 120
+        }
+      }
+    },
+    {
+      "id": "it-pont-saint-martin",
+      "type": "base",
+      "name": "Pont-Saint-Martin",
+      "region": "Aosta Valley",
+      "coords": [
+        7.795,
+        45.6
+      ],
+      "altitude": 345,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 50,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Small town with a Roman bridge at the mouth of the Gressoney valley.",
+      "transfer": "Car about 1h45 from Milan Malpensa or Turin.",
+      "links": [
+        {
+          "to": "it-gressoney",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "it-champoluc",
+          "min": 50,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Trenitalia",
+      "snowYears": {
+        "town": {
+          "dec": [
+            0,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 192,
+          "min": 140
+        },
+        "LYS": {
+          "km": 318,
+          "min": 190
+        },
+        "CMF": {
+          "km": 241,
+          "min": 160
+        },
+        "GNB": {
+          "km": 321,
+          "min": 195
+        },
+        "TRN": {
+          "km": 70,
+          "min": 45
+        },
+        "ZRH": {
+          "km": 377,
+          "min": 245
+        },
+        "BSL": {
+          "km": 357,
+          "min": 240
+        },
+        "MXP": {
+          "km": 130,
+          "min": 80
+        },
+        "BGY": {
+          "km": 182,
+          "min": 110
+        }
+      }
+    },
+    {
+      "id": "it-oulx",
+      "type": "base",
+      "name": "Oulx",
+      "region": "Piedmont",
+      "coords": [
+        6.834,
+        45.033
+      ],
+      "altitude": 1100,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "town"
+      ],
+      "character": "Small town with the main station of the Milky Way, where the Paris to Milan TGV stops.",
+      "transfer": "Train from Turin about 1h. Car 1h.",
+      "links": [
+        {
+          "to": "it-sauze-d-oulx",
+          "min": 15,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-sestriere",
+          "min": 30,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-bardonecchia",
+          "min": 15,
+          "by": [
+            "train"
+          ]
+        },
+        {
+          "to": "it-sansicario",
+          "min": 20,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Trenitalia and TGV",
+      "snowYears": {
+        "town": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 221,
+          "min": 145
+        },
+        "LYS": {
+          "km": 215,
+          "min": 130
+        },
+        "CMF": {
+          "km": 137,
+          "min": 90
+        },
+        "GNB": {
+          "km": 203,
+          "min": 125
+        },
+        "TRN": {
+          "km": 85,
+          "min": 65
+        },
+        "ZRH": {
+          "km": 492,
+          "min": 285
+        },
+        "BSL": {
+          "km": 472,
+          "min": 280
+        },
+        "MXP": {
+          "km": 208,
+          "min": 125
+        },
+        "BGY": {
+          "km": 260,
+          "min": 150
+        }
+      }
+    },
+    {
+      "id": "it-susa",
+      "type": "base",
+      "name": "Susa",
+      "region": "Piedmont",
+      "coords": [
+        7.05,
+        45.138
+      ],
+      "altitude": 503,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 50,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
+      "character": "Old Roman town lower down the valley, with low prices and trains to Turin.",
+      "transfer": "Train from Turin about 1h. Car 50 min.",
+      "links": [
+        {
+          "to": "it-sauze-d-oulx",
+          "min": 35,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "it-bardonecchia",
+          "min": 35,
+          "by": [
+            "train",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Trenitalia",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 243,
+          "min": 160
+        },
+        "LYS": {
+          "km": 237,
+          "min": 145
+        },
+        "CMF": {
+          "km": 159,
+          "min": 105
+        },
+        "GNB": {
+          "km": 225,
+          "min": 140
+        },
+        "TRN": {
+          "km": 62,
+          "min": 50
+        },
+        "ZRH": {
+          "km": 515,
+          "min": 305
+        },
+        "BSL": {
+          "km": 494,
+          "min": 295
+        },
+        "MXP": {
+          "km": 185,
+          "min": 110
+        },
+        "BGY": {
+          "km": 236,
+          "min": 135
+        }
+      }
+    },
+    {
+      "id": "it-tirano",
+      "type": "base",
+      "name": "Tirano",
+      "region": "Lombardy",
+      "coords": [
+        10.169,
+        46.216
+      ],
+      "altitude": 441,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
+      "character": "Valley town where the Bernina Express starts, with lower prices than Bormio and Livigno.",
+      "transfer": "Train from Milan about 2h30. Car from Bergamo 2h30.",
+      "links": [
+        {
+          "to": "it-bormio",
+          "min": 45,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-santa-caterina",
+          "min": 70,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "it-livigno",
+          "min": 90,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Trenitalia and Bernina Express",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 477,
+          "min": 340
+        },
+        "LYS": {
+          "km": 579,
+          "min": 375
+        },
+        "CMF": {
+          "km": 501,
+          "min": 335
+        },
+        "GNB": {
+          "km": 567,
+          "min": 370
+        },
+        "TRN": {
+          "km": 298,
+          "min": 205
+        },
+        "ZRH": {
+          "km": 268,
+          "min": 195
+        },
+        "BSL": {
+          "km": 348,
+          "min": 245
+        },
+        "MXP": {
+          "km": 180,
+          "min": 145
+        },
+        "BGY": {
+          "km": 128,
+          "min": 120
+        }
+      }
+    }
+  ]
+}

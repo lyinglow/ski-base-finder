@@ -69,6 +69,14 @@
         "BSL": {
           "km": 276,
           "min": 180
+        },
+        "MXP": {
+          "km": 234,
+          "min": 150
+        },
+        "BGY": {
+          "km": 286,
+          "min": 180
         }
       },
       "transfer": "Shared shuttle about 1h15. Train via Saint-Gervais–Le Fayet.",
@@ -198,6 +206,14 @@
         "BSL": {
           "km": 284,
           "min": 190
+        },
+        "MXP": {
+          "km": 238,
+          "min": 150
+        },
+        "BGY": {
+          "km": 289,
+          "min": 180
         }
       },
       "transfer": "Shared shuttle about 1h. Mont-Blanc Express train stops here.",
@@ -338,6 +354,14 @@
         "BSL": {
           "km": 327,
           "min": 210
+        },
+        "MXP": {
+          "km": 264,
+          "min": 175
+        },
+        "BGY": {
+          "km": 315,
+          "min": 200
         }
       },
       "transfer": "Shared shuttle about 1h10. Bus from Sallanches station.",
@@ -468,6 +492,14 @@
         "BSL": {
           "km": 300,
           "min": 200
+        },
+        "MXP": {
+          "km": 254,
+          "min": 165
+        },
+        "BGY": {
+          "km": 305,
+          "min": 195
         }
       },
       "transfer": "Léman Express train to Le Fayet, then bus.",
@@ -615,6 +647,14 @@
         "BSL": {
           "km": 322,
           "min": 205
+        },
+        "MXP": {
+          "km": 260,
+          "min": 170
+        },
+        "BGY": {
+          "km": 311,
+          "min": 200
         }
       },
       "transfer": "Shared shuttle about 1h. Bus from Sallanches.",
@@ -756,6 +796,14 @@
         "BSL": {
           "km": 308,
           "min": 215
+        },
+        "MXP": {
+          "km": 262,
+          "min": 175
+        },
+        "BGY": {
+          "km": 313,
+          "min": 205
         }
       },
       "transfer": "Shared shuttle about 1h15. Bus from Le Fayet station.",
@@ -888,6 +936,14 @@
         "BSL": {
           "km": 267,
           "min": 190
+        },
+        "MXP": {
+          "km": 298,
+          "min": 200
+        },
+        "BGY": {
+          "km": 350,
+          "min": 230
         }
       },
       "transfer": "Shared shuttle about 1h15. Bus from Thonon or Cluses stations.",
@@ -1021,6 +1077,14 @@
         "BSL": {
           "km": 279,
           "min": 205
+        },
+        "MXP": {
+          "km": 311,
+          "min": 215
+        },
+        "BGY": {
+          "km": 362,
+          "min": 245
         }
       },
       "transfer": "Shuttle to Morzine, then cable car or road up.",
@@ -1172,6 +1236,14 @@
         "BSL": {
           "km": 271,
           "min": 195
+        },
+        "MXP": {
+          "km": 292,
+          "min": 195
+        },
+        "BGY": {
+          "km": 343,
+          "min": 220
         }
       },
       "transfer": "Shared shuttle about 1h. Bus from Cluses station.",
@@ -1320,6 +1392,14 @@
         "BSL": {
           "km": 232,
           "min": 150
+        },
+        "MXP": {
+          "km": 273,
+          "min": 200
+        },
+        "BGY": {
+          "km": 346,
+          "min": 240
         }
       },
       "transfer": "Shared shuttle about 1h30. Bus from Thonon station.",
@@ -1461,6 +1541,14 @@
         "BSL": {
           "km": 237,
           "min": 155
+        },
+        "MXP": {
+          "km": 278,
+          "min": 205
+        },
+        "BGY": {
+          "km": 351,
+          "min": 245
         }
       },
       "transfer": "Shared shuttle about 1h20. Bus from Thonon or Évian.",
@@ -1598,6 +1686,14 @@
         "BSL": {
           "km": 259,
           "min": 180
+        },
+        "MXP": {
+          "km": 304,
+          "min": 205
+        },
+        "BGY": {
+          "km": 356,
+          "min": 235
         }
       },
       "transfer": "Bus from Thonon station.",
@@ -1735,6 +1831,14 @@
         "BSL": {
           "km": 231,
           "min": 155
+        },
+        "MXP": {
+          "km": 300,
+          "min": 220
+        },
+        "BGY": {
+          "km": 373,
+          "min": 255
         }
       },
       "transfer": "Train to Évian, then bus or taxi.",
@@ -1862,6 +1966,14 @@
         "BSL": {
           "km": 234,
           "min": 160
+        },
+        "MXP": {
+          "km": 303,
+          "min": 225
+        },
+        "BGY": {
+          "km": 381,
+          "min": 260
         }
       },
       "transfer": "Train to Évian, then taxi.",
@@ -1995,6 +2107,14 @@
         "BSL": {
           "km": 329,
           "min": 215
+        },
+        "MXP": {
+          "km": 292,
+          "min": 200
+        },
+        "BGY": {
+          "km": 343,
+          "min": 225
         }
       },
       "transfer": "Shared shuttle about 1h10. Bus from Cluses station.",
@@ -2134,6 +2254,14 @@
         "BSL": {
           "km": 316,
           "min": 205
+        },
+        "MXP": {
+          "km": 289,
+          "min": 190
+        },
+        "BGY": {
+          "km": 341,
+          "min": 220
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -2273,6 +2401,14 @@
         "BSL": {
           "km": 314,
           "min": 195
+        },
+        "MXP": {
+          "km": 276,
+          "min": 180
+        },
+        "BGY": {
+          "km": 328,
+          "min": 210
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -2411,6 +2547,14 @@
         "BSL": {
           "km": 312,
           "min": 200
+        },
+        "MXP": {
+          "km": 285,
+          "min": 185
+        },
+        "BGY": {
+          "km": 336,
+          "min": 215
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -2559,6 +2703,14 @@
         "BSL": {
           "km": 322,
           "min": 210
+        },
+        "MXP": {
+          "km": 295,
+          "min": 195
+        },
+        "BGY": {
+          "km": 346,
+          "min": 225
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -2699,6 +2851,14 @@
         "BSL": {
           "km": 307,
           "min": 200
+        },
+        "MXP": {
+          "km": 308,
+          "min": 200
+        },
+        "BGY": {
+          "km": 360,
+          "min": 230
         }
       },
       "transfer": "Bus from Annecy station about 50 min.",
@@ -2837,6 +2997,14 @@
         "BSL": {
           "km": 305,
           "min": 200
+        },
+        "MXP": {
+          "km": 306,
+          "min": 200
+        },
+        "BGY": {
+          "km": 357,
+          "min": 230
         }
       },
       "transfer": "Bus from Annecy station about 50 min.",
@@ -2985,6 +3153,14 @@
         "BSL": {
           "km": 282,
           "min": 205
+        },
+        "MXP": {
+          "km": 294,
+          "min": 195
+        },
+        "BGY": {
+          "km": 345,
+          "min": 225
         }
       },
       "transfer": "Car recommended.",
@@ -3113,6 +3289,14 @@
         "BSL": {
           "km": 297,
           "min": 195
+        },
+        "MXP": {
+          "km": 295,
+          "min": 195
+        },
+        "BGY": {
+          "km": 347,
+          "min": 225
         }
       },
       "transfer": "Car recommended.",
@@ -3241,6 +3425,14 @@
         "BSL": {
           "km": 256,
           "min": 180
+        },
+        "MXP": {
+          "km": 313,
+          "min": 200
+        },
+        "BGY": {
+          "km": 364,
+          "min": 230
         }
       },
       "transfer": "Car recommended.",
@@ -3369,6 +3561,14 @@
         "BSL": {
           "km": 320,
           "min": 200
+        },
+        "MXP": {
+          "km": 351,
+          "min": 220
+        },
+        "BGY": {
+          "km": 403,
+          "min": 250
         }
       },
       "transfer": "Car from Annecy, 30 min.",
@@ -3501,6 +3701,14 @@
         "BSL": {
           "km": 350,
           "min": 230
+        },
+        "MXP": {
+          "km": 286,
+          "min": 195
+        },
+        "BGY": {
+          "km": 338,
+          "min": 225
         }
       },
       "transfer": "Shared shuttle about 1h30. Bus from Albertville station.",
@@ -3640,6 +3848,14 @@
         "BSL": {
           "km": 341,
           "min": 225
+        },
+        "MXP": {
+          "km": 277,
+          "min": 190
+        },
+        "BGY": {
+          "km": 329,
+          "min": 215
         }
       },
       "transfer": "Bus from Albertville station.",
@@ -3778,6 +3994,14 @@
         "BSL": {
           "km": 332,
           "min": 215
+        },
+        "MXP": {
+          "km": 268,
+          "min": 180
+        },
+        "BGY": {
+          "km": 320,
+          "min": 210
         }
       },
       "transfer": "Bus from Sallanches station.",
@@ -3925,6 +4149,14 @@
         "BSL": {
           "km": 373,
           "min": 255
+        },
+        "MXP": {
+          "km": 347,
+          "min": 215
+        },
+        "BGY": {
+          "km": 398,
+          "min": 240
         }
       },
       "transfer": "Car recommended. Bus from Albertville.",
@@ -4056,6 +4288,14 @@
         "BSL": {
           "km": 268,
           "min": 170
+        },
+        "MXP": {
+          "km": 329,
+          "min": 220
+        },
+        "BGY": {
+          "km": 381,
+          "min": 245
         }
       },
       "transfer": "Car or taxi, 30 min.",
@@ -4185,6 +4425,14 @@
         "BSL": {
           "km": 257,
           "min": 160
+        },
+        "MXP": {
+          "km": 357,
+          "min": 235
+        },
+        "BGY": {
+          "km": 409,
+          "min": 260
         }
       },
       "transfer": "Car recommended. Train to La Cure from Nyon.",
@@ -4313,6 +4561,14 @@
         "BSL": {
           "km": 348,
           "min": 215
+        },
+        "MXP": {
+          "km": 351,
+          "min": 210
+        },
+        "BGY": {
+          "km": 403,
+          "min": 240
         }
       },
       "transfer": "Car from Chambéry, 30 min.",
@@ -4442,6 +4698,14 @@
         "BSL": {
           "km": 338,
           "min": 215
+        },
+        "MXP": {
+          "km": 349,
+          "min": 215
+        },
+        "BGY": {
+          "km": 401,
+          "min": 240
         }
       },
       "transfer": "Car from Chambéry, 40 min.",
@@ -4573,6 +4837,14 @@
         "BSL": {
           "km": 407,
           "min": 275
+        },
+        "MXP": {
+          "km": 379,
+          "min": 235
+        },
+        "BGY": {
+          "km": 431,
+          "min": 260
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Aime, then bus.",
@@ -4714,6 +4986,14 @@
         "BSL": {
           "km": 426,
           "min": 295
+        },
+        "MXP": {
+          "km": 398,
+          "min": 250
+        },
+        "BGY": {
+          "km": 449,
+          "min": 280
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Bourg-Saint-Maurice, then funicular.",
@@ -4855,6 +5135,14 @@
         "BSL": {
           "km": 407,
           "min": 275
+        },
+        "MXP": {
+          "km": 379,
+          "min": 230
+        },
+        "BGY": {
+          "km": 430,
+          "min": 260
         }
       },
       "transfer": "Train to Landry, then bus.",
@@ -5004,6 +5292,14 @@
         "BSL": {
           "km": 403,
           "min": 270
+        },
+        "MXP": {
+          "km": 375,
+          "min": 230
+        },
+        "BGY": {
+          "km": 426,
+          "min": 255
         }
       },
       "transfer": "Train to Aime, then bus.",
@@ -5142,6 +5438,14 @@
         "BSL": {
           "km": 393,
           "min": 265
+        },
+        "MXP": {
+          "km": 365,
+          "min": 220
+        },
+        "BGY": {
+          "km": 416,
+          "min": 250
         }
       },
       "transfer": "Train to Moûtiers, then bus.",
@@ -5284,6 +5588,14 @@
         "BSL": {
           "km": 433,
           "min": 305
+        },
+        "MXP": {
+          "km": 405,
+          "min": 265
+        },
+        "BGY": {
+          "km": 457,
+          "min": 290
         }
       },
       "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
@@ -5427,6 +5739,14 @@
         "BSL": {
           "km": 432,
           "min": 300
+        },
+        "MXP": {
+          "km": 404,
+          "min": 255
+        },
+        "BGY": {
+          "km": 455,
+          "min": 285
         }
       },
       "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
@@ -5580,6 +5900,14 @@
         "BSL": {
           "km": 398,
           "min": 270
+        },
+        "MXP": {
+          "km": 370,
+          "min": 225
+        },
+        "BGY": {
+          "km": 422,
+          "min": 255
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -5720,6 +6048,14 @@
         "BSL": {
           "km": 391,
           "min": 260
+        },
+        "MXP": {
+          "km": 363,
+          "min": 220
+        },
+        "BGY": {
+          "km": 414,
+          "min": 245
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -5860,6 +6196,14 @@
         "BSL": {
           "km": 411,
           "min": 280
+        },
+        "MXP": {
+          "km": 383,
+          "min": 235
+        },
+        "BGY": {
+          "km": 434,
+          "min": 260
         }
       },
       "transfer": "Shared shuttle about 2h45. Train to Moûtiers, then bus.",
@@ -6000,6 +6344,14 @@
         "BSL": {
           "km": 402,
           "min": 270
+        },
+        "MXP": {
+          "km": 374,
+          "min": 225
+        },
+        "BGY": {
+          "km": 425,
+          "min": 255
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -6148,6 +6500,14 @@
         "BSL": {
           "km": 384,
           "min": 260
+        },
+        "MXP": {
+          "km": 356,
+          "min": 215
+        },
+        "BGY": {
+          "km": 408,
+          "min": 240
         }
       },
       "transfer": "Train to Moûtiers, then bus.",
@@ -6280,6 +6640,14 @@
         "BSL": {
           "km": 424,
           "min": 295
+        },
+        "MXP": {
+          "km": 396,
+          "min": 250
+        },
+        "BGY": {
+          "km": 448,
+          "min": 280
         }
       },
       "transfer": "Train to Bourg-Saint-Maurice, then bus.",
@@ -6419,6 +6787,14 @@
         "BSL": {
           "km": 419,
           "min": 295
+        },
+        "MXP": {
+          "km": 391,
+          "min": 255
+        },
+        "BGY": {
+          "km": 442,
+          "min": 280
         }
       },
       "transfer": "Train to Bourg-Saint-Maurice, then taxi.",
@@ -6549,6 +6925,14 @@
         "BSL": {
           "km": 446,
           "min": 265
+        },
+        "MXP": {
+          "km": 267,
+          "min": 165
+        },
+        "BGY": {
+          "km": 318,
+          "min": 195
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
@@ -6687,6 +7071,14 @@
         "BSL": {
           "km": 442,
           "min": 265
+        },
+        "MXP": {
+          "km": 263,
+          "min": 165
+        },
+        "BGY": {
+          "km": 315,
+          "min": 195
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
@@ -6825,6 +7217,14 @@
         "BSL": {
           "km": 436,
           "min": 255
+        },
+        "MXP": {
+          "km": 245,
+          "min": 150
+        },
+        "BGY": {
+          "km": 297,
+          "min": 175
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then taxi.",
@@ -6966,6 +7366,14 @@
         "BSL": {
           "km": 433,
           "min": 260
+        },
+        "MXP": {
+          "km": 272,
+          "min": 165
+        },
+        "BGY": {
+          "km": 324,
+          "min": 195
         }
       },
       "transfer": "Car recommended. Bus from Saint-Jean-de-Maurienne.",
@@ -7096,6 +7504,14 @@
         "BSL": {
           "km": 433,
           "min": 260
+        },
+        "MXP": {
+          "km": 279,
+          "min": 175
+        },
+        "BGY": {
+          "km": 330,
+          "min": 205
         }
       },
       "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
@@ -7233,6 +7649,14 @@
         "BSL": {
           "km": 438,
           "min": 280
+        },
+        "MXP": {
+          "km": 284,
+          "min": 195
+        },
+        "BGY": {
+          "km": 336,
+          "min": 220
         }
       },
       "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
@@ -7372,6 +7796,14 @@
         "BSL": {
           "km": 453,
           "min": 270
+        },
+        "MXP": {
+          "km": 246,
+          "min": 150
+        },
+        "BGY": {
+          "km": 297,
+          "min": 180
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -7503,6 +7935,14 @@
         "BSL": {
           "km": 451,
           "min": 270
+        },
+        "MXP": {
+          "km": 244,
+          "min": 150
+        },
+        "BGY": {
+          "km": 295,
+          "min": 180
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -7635,6 +8075,14 @@
         "BSL": {
           "km": 469,
           "min": 280
+        },
+        "MXP": {
+          "km": 264,
+          "min": 165
+        },
+        "BGY": {
+          "km": 316,
+          "min": 195
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -7764,6 +8212,14 @@
         "BSL": {
           "km": 488,
           "min": 300
+        },
+        "MXP": {
+          "km": 283,
+          "min": 185
+        },
+        "BGY": {
+          "km": 335,
+          "min": 210
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -7896,6 +8352,14 @@
         "BSL": {
           "km": 466,
           "min": 295
+        },
+        "MXP": {
+          "km": 434,
+          "min": 270
+        },
+        "BGY": {
+          "km": 486,
+          "min": 300
         }
       },
       "transfer": "Train to Grenoble, then bus about 1h30.",
@@ -8036,6 +8500,14 @@
         "BSL": {
           "km": 455,
           "min": 290
+        },
+        "MXP": {
+          "km": 420,
+          "min": 265
+        },
+        "BGY": {
+          "km": 471,
+          "min": 295
         }
       },
       "transfer": "Train to Grenoble, then bus.",
@@ -8177,6 +8649,14 @@
         "BSL": {
           "km": 470,
           "min": 295
+        },
+        "MXP": {
+          "km": 438,
+          "min": 275
+        },
+        "BGY": {
+          "km": 490,
+          "min": 305
         }
       },
       "transfer": "Train to Grenoble, then bus about 1h45.",
@@ -8316,6 +8796,14 @@
         "BSL": {
           "km": 540,
           "min": 345
+        },
+        "MXP": {
+          "km": 277,
+          "min": 190
+        },
+        "BGY": {
+          "km": 328,
+          "min": 215
         }
       },
       "transfer": "Car recommended.",
@@ -8446,6 +8934,14 @@
         "BSL": {
           "km": 424,
           "min": 260
+        },
+        "MXP": {
+          "km": 389,
+          "min": 235
+        },
+        "BGY": {
+          "km": 440,
+          "min": 265
         }
       },
       "transfer": "Train to Grenoble, then bus 1h.",
@@ -8584,6 +9080,14 @@
         "BSL": {
           "km": 392,
           "min": 240
+        },
+        "MXP": {
+          "km": 357,
+          "min": 215
+        },
+        "BGY": {
+          "km": 408,
+          "min": 240
         }
       },
       "transfer": "Car recommended. Bus from Grenoble.",
@@ -8713,6 +9217,14 @@
         "BSL": {
           "km": 435,
           "min": 270
+        },
+        "MXP": {
+          "km": 399,
+          "min": 245
+        },
+        "BGY": {
+          "km": 451,
+          "min": 275
         }
       },
       "transfer": "Train to Grenoble, then bus 1h.",
@@ -8839,6 +9351,14 @@
         "BSL": {
           "km": 512,
           "min": 325
+        },
+        "MXP": {
+          "km": 248,
+          "min": 165
+        },
+        "BGY": {
+          "km": 300,
+          "min": 195
         }
       },
       "transfer": "Train to Briançon, then bus.",
@@ -8982,6 +9502,14 @@
         "BSL": {
           "km": 490,
           "min": 305
+        },
+        "MXP": {
+          "km": 227,
+          "min": 145
+        },
+        "BGY": {
+          "km": 279,
+          "min": 175
         }
       },
       "transfer": "Train to Oulx in Italy, then bus.",
@@ -9123,6 +9651,14 @@
         "BSL": {
           "km": 525,
           "min": 340
+        },
+        "MXP": {
+          "km": 263,
+          "min": 180
+        },
+        "BGY": {
+          "km": 314,
+          "min": 210
         }
       },
       "transfer": "Train to L'Argentière-les-Écrins, then bus.",
@@ -9254,6 +9790,14 @@
         "BSL": {
           "km": 553,
           "min": 375
+        },
+        "MXP": {
+          "km": 291,
+          "min": 215
+        },
+        "BGY": {
+          "km": 342,
+          "min": 245
         }
       },
       "transfer": "Train to Embrun or Montdauphin, then bus.",
@@ -9394,6 +9938,14 @@
         "BSL": {
           "km": 548,
           "min": 355
+        },
+        "MXP": {
+          "km": 286,
+          "min": 195
+        },
+        "BGY": {
+          "km": 337,
+          "min": 225
         }
       },
       "transfer": "Train to Montdauphin, then bus.",
@@ -9541,6 +10093,14 @@
         "BSL": {
           "km": 547,
           "min": 370
+        },
+        "MXP": {
+          "km": 303,
+          "min": 210
+        },
+        "BGY": {
+          "km": 354,
+          "min": 240
         }
       },
       "transfer": "Train to Embrun, then bus.",
@@ -9661,6 +10221,14 @@
         "BSL": {
           "km": 300,
           "min": 185
+        },
+        "MXP": {
+          "km": 331,
+          "min": 205
+        },
+        "BGY": {
+          "km": 382,
+          "min": 235
         }
       },
       "transfer": "Bus from the airport about 1h. Car 45 min.",
@@ -9768,6 +10336,14 @@
         "BSL": {
           "km": 315,
           "min": 195
+        },
+        "MXP": {
+          "km": 314,
+          "min": 210
+        },
+        "BGY": {
+          "km": 366,
+          "min": 235
         }
       },
       "transfer": "Car 50 min. Bus from Annecy.",
@@ -9858,6 +10434,14 @@
         },
         "BSL": {
           "km": 315,
+          "min": 195
+        },
+        "MXP": {
+          "km": 257,
+          "min": 165
+        },
+        "BGY": {
+          "km": 308,
           "min": 195
         }
       },
@@ -9996,6 +10580,14 @@
         "BSL": {
           "km": 295,
           "min": 195
+        },
+        "MXP": {
+          "km": 249,
+          "min": 160
+        },
+        "BGY": {
+          "km": 300,
+          "min": 190
         }
       },
       "transfer": "Léman Express L3 terminus, about 1h30 from Geneva.",
@@ -10119,6 +10711,14 @@
         "BSL": {
           "km": 303,
           "min": 185
+        },
+        "MXP": {
+          "km": 270,
+          "min": 170
+        },
+        "BGY": {
+          "km": 322,
+          "min": 200
         }
       },
       "transfer": "Léman Express L3 from Geneva about 1h.",
@@ -10243,6 +10843,14 @@
         "BSL": {
           "km": 301,
           "min": 195
+        },
+        "MXP": {
+          "km": 280,
+          "min": 185
+        },
+        "BGY": {
+          "km": 332,
+          "min": 210
         }
       },
       "transfer": "Car 45 min.",
@@ -10354,6 +10962,14 @@
         "BSL": {
           "km": 264,
           "min": 190
+        },
+        "MXP": {
+          "km": 300,
+          "min": 205
+        },
+        "BGY": {
+          "km": 352,
+          "min": 230
         }
       },
       "transfer": "Shuttle to Morzine about 1h15.",
@@ -10454,6 +11070,14 @@
         "BSL": {
           "km": 238,
           "min": 165
+        },
+        "MXP": {
+          "km": 329,
+          "min": 215
+        },
+        "BGY": {
+          "km": 380,
+          "min": 245
         }
       },
       "transfer": "Léman Express L1 direct from Geneva about 50 min.",
@@ -10591,6 +11215,14 @@
         "BSL": {
           "km": 228,
           "min": 155
+        },
+        "MXP": {
+          "km": 296,
+          "min": 215
+        },
+        "BGY": {
+          "km": 393,
+          "min": 250
         }
       },
       "transfer": "Léman Express L1 direct from Geneva about 1h.",
@@ -10698,6 +11330,14 @@
         "BSL": {
           "km": 266,
           "min": 170
+        },
+        "MXP": {
+          "km": 305,
+          "min": 190
+        },
+        "BGY": {
+          "km": 357,
+          "min": 220
         }
       },
       "transfer": "Léman Express from Geneva about 20 min.",
@@ -10809,6 +11449,14 @@
         "BSL": {
           "km": 286,
           "min": 180
+        },
+        "MXP": {
+          "km": 285,
+          "min": 180
+        },
+        "BGY": {
+          "km": 336,
+          "min": 205
         }
       },
       "transfer": "Léman Express L3 from Geneva about 45 min.",
@@ -10914,6 +11562,14 @@
         "BSL": {
           "km": 286,
           "min": 180
+        },
+        "MXP": {
+          "km": 292,
+          "min": 185
+        },
+        "BGY": {
+          "km": 343,
+          "min": 210
         }
       },
       "transfer": "Léman Express from Geneva about 35 min.",
@@ -11019,6 +11675,14 @@
         "BSL": {
           "km": 253,
           "min": 155
+        },
+        "MXP": {
+          "km": 330,
+          "min": 220
+        },
+        "BGY": {
+          "km": 381,
+          "min": 245
         }
       },
       "transfer": "Car or bus 25 min.",
@@ -11110,6 +11774,14 @@
         "BSL": {
           "km": 245,
           "min": 150
+        },
+        "MXP": {
+          "km": 330,
+          "min": 215
+        },
+        "BGY": {
+          "km": 382,
+          "min": 240
         }
       },
       "transfer": "Car 20 min.",
@@ -11199,6 +11871,14 @@
         "BSL": {
           "km": 347,
           "min": 230
+        },
+        "MXP": {
+          "km": 322,
+          "min": 190
+        },
+        "BGY": {
+          "km": 374,
+          "min": 215
         }
       },
       "transfer": "Train via Annecy or Chambéry about 2h. Car 1h15.",
@@ -11319,6 +11999,14 @@
         "BSL": {
           "km": 375,
           "min": 245
+        },
+        "MXP": {
+          "km": 347,
+          "min": 205
+        },
+        "BGY": {
+          "km": 398,
+          "min": 230
         }
       },
       "transfer": "Train via Annecy or Chambéry about 2h30. Car 2h.",
@@ -11451,6 +12139,14 @@
         "BSL": {
           "km": 380,
           "min": 250
+        },
+        "MXP": {
+          "km": 352,
+          "min": 210
+        },
+        "BGY": {
+          "km": 404,
+          "min": 235
         }
       },
       "transfer": "Train to Moûtiers, then bus 15 min.",
@@ -11541,6 +12237,14 @@
         "BSL": {
           "km": 389,
           "min": 260
+        },
+        "MXP": {
+          "km": 361,
+          "min": 215
+        },
+        "BGY": {
+          "km": 412,
+          "min": 245
         }
       },
       "transfer": "Train via Chambéry about 2h45. Car 2h.",
@@ -11648,6 +12352,14 @@
         "BSL": {
           "km": 402,
           "min": 270
+        },
+        "MXP": {
+          "km": 374,
+          "min": 230
+        },
+        "BGY": {
+          "km": 425,
+          "min": 255
         }
       },
       "transfer": "Train via Chambéry about 3h. Car 2h15.",
@@ -11771,6 +12483,14 @@
         "BSL": {
           "km": 346,
           "min": 210
+        },
+        "MXP": {
+          "km": 336,
+          "min": 200
+        },
+        "BGY": {
+          "km": 388,
+          "min": 225
         }
       },
       "transfer": "Car 1h05. Train via Annecy.",
@@ -11861,6 +12581,14 @@
         "BSL": {
           "km": 417,
           "min": 245
+        },
+        "MXP": {
+          "km": 263,
+          "min": 160
+        },
+        "BGY": {
+          "km": 315,
+          "min": 185
         }
       },
       "transfer": "Train via Chambéry about 2h30. Car 2h05.",
@@ -11974,6 +12702,14 @@
         "BSL": {
           "km": 429,
           "min": 250
+        },
+        "MXP": {
+          "km": 252,
+          "min": 150
+        },
+        "BGY": {
+          "km": 304,
+          "min": 180
         }
       },
       "transfer": "Train via Chambéry about 2h45. Car 2h15.",
@@ -12080,6 +12816,14 @@
         "BSL": {
           "km": 445,
           "min": 260
+        },
+        "MXP": {
+          "km": 239,
+          "min": 145
+        },
+        "BGY": {
+          "km": 290,
+          "min": 175
         }
       },
       "transfer": "Train via Chambéry about 3h. Car 2h40.",
@@ -12187,6 +12931,14 @@
         },
         "BSL": {
           "km": 401,
+          "min": 240
+        },
+        "MXP": {
+          "km": 366,
+          "min": 210
+        },
+        "BGY": {
+          "km": 417,
           "min": 240
         }
       },
@@ -12312,6 +13064,14 @@
         "BSL": {
           "km": 453,
           "min": 280
+        },
+        "MXP": {
+          "km": 421,
+          "min": 260
+        },
+        "BGY": {
+          "km": 472,
+          "min": 285
         }
       },
       "transfer": "Bus from Grenoble 1h. Car 2h35.",
@@ -12418,6 +13178,14 @@
         "BSL": {
           "km": 501,
           "min": 315
+        },
+        "MXP": {
+          "km": 239,
+          "min": 155
+        },
+        "BGY": {
+          "km": 290,
+          "min": 185
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 3h45.",
@@ -12517,6 +13285,14 @@
         "BSL": {
           "km": 517,
           "min": 330
+        },
+        "MXP": {
+          "km": 255,
+          "min": 170
+        },
+        "BGY": {
+          "km": 306,
+          "min": 200
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 4h.",
@@ -12609,6 +13385,14 @@
         "BSL": {
           "km": 549,
           "min": 355
+        },
+        "MXP": {
+          "km": 286,
+          "min": 200
+        },
+        "BGY": {
+          "km": 338,
+          "min": 225
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 4h20.",

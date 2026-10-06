@@ -56,6 +56,22 @@
         7.529,
         47.5896
       ]
+    },
+    {
+      "id": "MXP",
+      "name": "Milan Malpensa",
+      "coords": [
+        8.7231,
+        45.6301
+      ]
+    },
+    {
+      "id": "BGY",
+      "name": "Milan Bergamo",
+      "coords": [
+        9.7042,
+        45.6739
+      ]
     }
   ],
   "defaultOrigin": "GVA",
@@ -78,7 +94,7 @@
       "code": "IT",
       "name": "Italy",
       "file": "it.json",
-      "status": "planned",
+      "status": "live",
       "costFactor": 0.95
     },
     {

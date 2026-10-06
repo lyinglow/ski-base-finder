@@ -36,12 +36,13 @@ The app never names a country in code. It loads whatever `data/index.json` marks
   Switzerland suits the feeder-town idea well: valley towns with a train, funicular or gondola straight up (Le Châble to Verbier, Sierre to Crans-Montana, Täsch to Zermatt, Lauterbrunnen to Wengen and Mürren).
 - **Cross-border links:** Châtel and Morgins, Avoriaz and Champéry (Portes du Soleil).
 
-## Step 2: Italy
+## Step 2: Italy (live)
 
-- **Resorts:** Courmayeur, La Thuile, Pila, Cervinia, Valtournenche, Champoluc, Gressoney, Alagna. Later, if wanted: Sestriere and the Milky Way (from Turin), the Dolomites.
-- **Feeder towns:** Aosta (cable car to Pila), Pré-Saint-Didier, Morgex, Châtillon, Pont-Saint-Martin.
-- **Cross-border links:** La Thuile and La Rosière share a ski area; Cervinia and Zermatt.
-- **Airports:** Turin is in. Add Milan.
+- **Resorts (17):** Aosta Valley (Courmayeur, La Thuile, Pila, Cervinia, Valtournenche, Champoluc, Gressoney), Alagna, the Milky Way (Sestriere, Sauze d'Oulx, Sansicario, Claviere), Bardonecchia, and Lombardy (Livigno, Bormio, Santa Caterina, Madesimo).
+- **Feeder towns (8):** Aosta (cable car to Pila), Pré-Saint-Didier, Morgex, Châtillon, Pont-Saint-Martin, Oulx, Susa, Tirano.
+- **Cross-border links:** La Thuile and La Rosière, Cervinia and Zermatt, Claviere and Montgenèvre.
+- **Airports:** Milan Malpensa and Bergamo added; Turin already in.
+- **Later, with Austria:** the Dolomites (Cortina, Val Gardena, Alta Badia, Madonna di Campiglio), flown into from Verona or Innsbruck.
 
 ## Step 3: Austria
 
