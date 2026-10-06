@@ -438,7 +438,19 @@ function sortKey(l) {
   }
 }
 
+// How many filters are set, shown on the Filters button so a narrowed list is never a mystery.
+function filterCount() {
+  return [
+    state.maxTime < 300, state.maxHop < 60, state.prices.size < 3, state.sizes.size < 4,
+    state.vibes.size > 0, state.family, state.carFree, state.snowSure,
+    state.park !== "any", state.parkNeeds.size > 0, state.levels.includes("first"),
+  ].filter(Boolean).length;
+}
+
 function applyFilters() {
+  const set = filterCount();
+  $("#filter-count").hidden = !set;
+  $("#filter-count").textContent = set;
   const visible = model.locations.filter(passes);
   const ids = new Set(visible.map((l) => l.id));
   for (const [id, { el }] of markers) el.hidden = !ids.has(id) && !state.related.has(id);

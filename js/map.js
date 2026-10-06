@@ -115,7 +115,11 @@ export function createMap(container) {
     attributionControl: { compact: true },
   });
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
-  map.on("load", () => setTerrain(map, true));
+  map.on("load", () => {
+    setTerrain(map, true);
+    // Start the credits folded behind their "i" button, so they never cover the airport.
+    map.getContainer().querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
+  });
   return map;
 }
 

@@ -188,7 +188,8 @@ p.origin { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .field label, .label, .s-label {
   font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600;
 }
-.field label { display: flex; justify-content: space-between; }
+.field label { display: flex; align-items: center; }
+.field label output { margin-left: auto; }
 .field output { color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: 0; text-transform: none; font-size: 14px; }
 input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .range-ends { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -389,7 +390,13 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .map-tools { position: absolute; top: 12px; left: 12px; display: flex; flex-wrap: wrap; gap: 8px; z-index: 2; pointer-events: none; }
 .map-tools > * { pointer-events: auto; }
 .tool-group { display: flex; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ic {
+  width: 16px; height: 16px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
 .tool {
+  display: inline-flex; align-items: center; gap: 6px;
   border: 0; background: var(--panel); color: var(--ink);
   padding: 7px 12px; font-size: 14px; font-weight: 500;
   border-radius: 8px; box-shadow: var(--shadow);
@@ -397,6 +404,15 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .tool-group .tool { border-radius: 0; box-shadow: none; }
 .tool-group { box-shadow: var(--shadow); border-radius: 8px; overflow: hidden; }
 .tool[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+/* The way into the filters: the one coloured button on the map. */
+.tool-main { background: var(--resort); color: #fff; font-weight: 600; }
+.tool-main .count { background: #fff; color: var(--resort); border-radius: 999px; padding: 0 6px; font-size: 12px; font-weight: 700; line-height: 18px; }
+.filters-head {
+  display: flex; align-items: center; gap: 8px; font-size: 20px;
+  margin: 4px 0 -4px; padding-top: 16px; border-top: 1px solid var(--line);
+}
+.filters-head .ic { width: 20px; height: 20px; color: var(--resort); }
+.label .ic, .who-label .ic, .field label .ic { width: 15px; height: 15px; margin-right: 6px; vertical-align: -3px; color: var(--resort); }
 .only-mobile { display: none; }
 
 .snow-legend {
@@ -656,7 +672,7 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 @media (max-width: 899px) {
   .snow-legend { top: 60px; bottom: auto; width: 220px; }
   .app { grid-template-columns: 1fr; }
-  .app:not(.side-collapsed) #sidebar-toggle { display: inline-block; }
+  .app:not(.side-collapsed) #sidebar-toggle { display: inline-flex; }
   .brand #sidebar-hide svg { transform: rotate(-90deg); }
   .sidebar {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
