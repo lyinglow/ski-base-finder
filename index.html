@@ -27,6 +27,8 @@
     <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9-9-9z"/><path d="M8 8h.01"/></symbol>
     <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m3 20 7-12 4 6 2-3 5 9H3z"/></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
     <symbol id="i-park" viewBox="0 0 24 24"><path d="M3 20h18M4 20c7 0 12-4 15-12l2 1"/></symbol>
   </svg>
   <div class="app">
@@ -38,24 +40,28 @@
           <button type="button" id="show-saved" class="shortlist-btn" aria-pressed="false" title="Show your shortlist"><span aria-hidden="true">★</span> Shortlist <span class="count" id="saved-count">0</span></button>
           <button type="button" id="share-plan" class="share-btn" title="Copy a link to this plan: shortlist, trip and filters">Share plan</button>
         </div>
-        <div class="who" id="f-level" role="group" aria-label="Who's skiing">
-          <span class="who-label"><svg class="ic" aria-hidden="true"><use href="#i-people"/></svg>Who's skiing</span>
-          <button type="button" id="f-level-first" data-v="first" class="lvl-btn first" aria-pressed="false" title="Only resorts where you can walk to the beginner slopes">First time</button>
-          <button type="button" id="f-level-intermediate" data-v="intermediate" class="lvl-btn intermediate" aria-pressed="true">Intermediate</button>
-          <button type="button" id="f-level-expert" data-v="expert" class="lvl-btn expert" aria-pressed="false">Expert</button>
-        </div>
-        <p class="origin"><label for="origin">Flying into</label>
-          <select id="origin"><option value="GVA">Geneva Airport</option></select>
-          <span class="countries">· <span id="country-list">France</span></span></p>
       </header>
 
-      <div class="segmented" id="show-seg" role="radiogroup" aria-label="Show">
-        <button type="button" id="show-all" data-show="all" aria-pressed="true">All</button>
-        <button type="button" id="show-resort" data-show="resort" aria-pressed="false"><i class="dot resort"></i>Resorts</button>
-        <button type="button" id="show-base" data-show="base" aria-pressed="false"><i class="dot base"></i>Feeder towns</button>
+      <div class="tabs" role="tablist" aria-label="Panel">
+        <button type="button" role="tab" id="tab-filters" data-tab="filters" aria-selected="true" aria-controls="view-filters"><svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg>Filters</button>
+        <button type="button" role="tab" id="tab-places" data-tab="places" aria-selected="false" aria-controls="view-places"><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg>Places <span class="count" id="tab-count">0</span></button>
       </div>
 
+      <div class="view" id="view-filters" role="tabpanel" aria-labelledby="tab-filters">
+
       <section class="filters" aria-label="Filters">
+        <div class="field">
+          <div class="who" id="f-level" role="group" aria-label="Who's skiing">
+            <span class="who-label"><svg class="ic" aria-hidden="true"><use href="#i-people"/></svg>Who's skiing</span>
+            <button type="button" id="f-level-first" data-v="first" class="lvl-btn first" aria-pressed="false" title="Only resorts where you can walk to the beginner slopes">First time</button>
+            <button type="button" id="f-level-intermediate" data-v="intermediate" class="lvl-btn intermediate" aria-pressed="true">Intermediate</button>
+            <button type="button" id="f-level-expert" data-v="expert" class="lvl-btn expert" aria-pressed="false">Expert</button>
+          </div>
+          <p class="origin"><label for="origin"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg>Flying into</label>
+          <select id="origin"><option value="GVA">Geneva Airport</option></select>
+          <span class="countries">· <span id="country-list">France</span></span></p>
+        </div>
+
         <div class="field">
           <div class="trip-head">
             <span class="label"><svg class="ic" aria-hidden="true"><use href="#i-case"/></svg>Your trip</span>
@@ -91,7 +97,7 @@
           </div>
         </div>
 
-        <h2 class="filters-head"><svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg>Filters</h2>
+        <h2 class="filters-head">Narrow it down</h2>
         <div class="field">
           <label for="f-time"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg>Max time from airport <output id="f-time-out">Any</output></label>
           <input type="range" id="f-time" min="20" max="300" step="10" value="300">
@@ -154,49 +160,61 @@
           </div>
         </div>
 
-        <label class="toggle" for="f-snow">
-          <input type="checkbox" id="f-snow">
-          <span>Snow-sure for my months</span>
-        </label>
-        <label class="toggle" for="f-family">
-          <input type="checkbox" id="f-family">
-          <span>Family-friendly only</span>
-        </label>
-        <label class="toggle" for="f-carfree">
-          <input type="checkbox" id="f-carfree">
-          <span>Works without a car</span>
-        </label>
-      </section>
-
-      <div class="shortlist-tools" id="shortlist-tools" hidden>
-        <p>Your shortlist and trip are saved in this browser. Use the plan link to open them on another device or share them.</p>
-        <div class="tool-row">
-          <button type="button" id="saved-compare" class="primary">Compare</button>
-          <button type="button" id="saved-share" class="secondary">Copy plan link</button>
-          <button type="button" id="saved-clear" class="ghost">Clear</button>
+        <div class="field toggles">
+          <span class="label"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Must have</span>
+          <label class="toggle" for="f-snow">
+            <input type="checkbox" id="f-snow">
+            <span>Snow-sure for my months</span>
+          </label>
+          <label class="toggle" for="f-family">
+            <input type="checkbox" id="f-family">
+            <span>Family-friendly only</span>
+          </label>
+          <label class="toggle" for="f-carfree">
+            <input type="checkbox" id="f-carfree">
+            <span>Works without a car</span>
+          </label>
         </div>
-        <input type="text" id="saved-link" readonly hidden aria-label="Shortlist link">
+      </section>
+        <div class="show-places">
+          <button type="button" id="show-places" class="primary wide">Show <span id="show-places-n">places</span></button>
+        </div>
       </div>
 
-      <div class="list-head">
-        <span id="result-count">0 places</span>
-        <label class="sort" for="sort">Sort
-          <select id="sort">
-            <option value="fit">Best match</option>
-            <option value="time">Time from airport</option>
-            <option value="cost">Trip cost</option>
-            <option value="price">Price</option>
-            <option value="altitude">Altitude</option>
-            <option value="ski">Ski area size</option>
-            <option value="snow">Snow reliability</option>
-          </select>
-        </label>
+      <div class="view" id="view-places" role="tabpanel" aria-labelledby="tab-places" hidden>
+        <div class="shortlist-tools" id="shortlist-tools" hidden>
+          <p>Your shortlist and trip are saved in this browser. Use the plan link to open them on another device or share them.</p>
+          <div class="tool-row">
+            <button type="button" id="saved-compare" class="primary">Compare</button>
+            <button type="button" id="saved-share" class="secondary">Copy plan link</button>
+            <button type="button" id="saved-clear" class="ghost">Clear</button>
+          </div>
+          <input type="text" id="saved-link" readonly hidden aria-label="Shortlist link">
+        </div>
+        <div class="segmented" id="show-seg" role="radiogroup" aria-label="Show">
+          <button type="button" id="show-all" data-show="all" aria-pressed="true">All</button>
+          <button type="button" id="show-resort" data-show="resort" aria-pressed="false"><i class="dot resort"></i>Resorts</button>
+          <button type="button" id="show-base" data-show="base" aria-pressed="false"><i class="dot base"></i>Feeder towns</button>
+        </div>
+        <div class="list-head">
+          <span id="result-count">0 places</span>
+          <label class="sort" for="sort">Sort
+            <select id="sort">
+              <option value="fit">Best match</option>
+              <option value="time">Time from airport</option>
+              <option value="cost">Trip cost</option>
+              <option value="price">Price</option>
+              <option value="altitude">Altitude</option>
+              <option value="ski">Ski area size</option>
+              <option value="snow">Snow reliability</option>
+            </select>
+          </label>
+        </div>
+        <ol class="results" id="results"></ol>
+        <footer class="data-note" id="data-note"></footer>
+        <p class="plan-note">Your plan is saved in this browser. <button type="button" id="plan-reset" class="link">Start a new plan</button></p>
+        <input type="text" id="plan-link" readonly hidden aria-label="Plan link">
       </div>
-      <ol class="results" id="results"></ol>
-
-      <footer class="data-note" id="data-note"></footer>
-      <p class="plan-note">Your plan is saved in this browser. <button type="button" id="plan-reset" class="link">Start a new plan</button></p>
-      <input type="text" id="plan-link" readonly hidden aria-label="Plan link">
     </aside>
 
     <main class="stage">

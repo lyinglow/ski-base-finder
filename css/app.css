@@ -18,6 +18,8 @@
   --snow-poor: #c2412d;
   --star: #e0a400;
   --star-soft: #fdf4d6;
+  --sep: #dbe6f7;
+  --resort-soft: #e8effc;
   --run-green: #2e9e5b;
   --run-blue: #2f6fd6;
   --run-red: #d9372b;
@@ -39,6 +41,8 @@
     --muted: #92a1af;
     --line: #26333f;
     --resort: #6f9ff2;
+    --sep: #1d2f48;
+    --resort-soft: #18263a;
     --base: #f0a83a;
     --base-soft: #3a2a10;
     --good: #6fd19a;
@@ -55,6 +59,8 @@
   }
 }
 :root[data-theme="dark"] {
+  --sep: #1d2f48;
+  --resort-soft: #18263a;
   --icon-filter: invert(1);
   --bg: #0d141b;
   --panel: #141d26;
@@ -183,7 +189,13 @@ p.origin { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .dot.resort { background: var(--resort); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
 .dot.base { background: var(--base); border-radius: 50%; }
 
-.filters { display: grid; gap: 14px; }
+.filters { display: grid; gap: 0; }
+/* Each section sits apart, split by a faint blue rule. */
+.filters > .field, .filters > .filters-head { padding: 22px 0; border-top: 1px solid var(--sep); }
+.filters > .field:first-child { border-top: 0; padding-top: 4px; }
+.filters > .filters-head + .field { border-top: 0; padding-top: 4px; }
+.field { gap: 8px; }
+.toggles { gap: 10px; }
 .field { display: grid; gap: 6px; }
 .field label, .label, .s-label {
   font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600;
@@ -407,10 +419,26 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 /* The way into the filters: the one coloured button on the map. */
 .tool-main { background: var(--resort); color: #fff; font-weight: 600; }
 .tool-main .count { background: #fff; color: var(--resort); border-radius: 999px; padding: 0 6px; font-size: 12px; font-weight: 700; line-height: 18px; }
-.filters-head {
-  display: flex; align-items: center; gap: 8px; font-size: 20px;
-  margin: 4px 0 -4px; padding-top: 16px; border-top: 1px solid var(--line);
+.filters-head { font-size: 20px; margin: 0; padding-bottom: 14px !important; }
+
+/* Two tabs: set up the search, then look at the places it finds. */
+.tabs {
+  position: sticky; top: -20px; z-index: 3; margin: 0 -18px; padding: 8px 18px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: var(--panel);
+  border-bottom: 1px solid var(--sep);
 }
+.tabs button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border: 0; background: transparent; color: var(--muted); padding: 9px 8px; border-radius: 8px;
+  font-size: 15px; font-weight: 600;
+}
+.tabs button[aria-selected="true"] { background: var(--resort-soft); color: var(--resort); }
+.tabs .count { background: var(--panel-2); color: var(--ink); border-radius: 999px; padding: 0 7px; font-size: 12px; line-height: 18px; }
+.view { display: grid; gap: 16px; }
+.view[hidden] { display: none; }
+.view .list-head { border-top: 0; padding-top: 0; }
+.show-places { position: sticky; bottom: -16px; margin: 0 -18px; padding: 12px 18px 16px; background: linear-gradient(transparent, var(--panel) 30%); }
+.show-places .primary { background: var(--resort); color: #fff; padding: 12px; font-size: 16px; }
 .filters-head .ic { width: 20px; height: 20px; color: var(--resort); }
 .label .ic, .who-label .ic, .field label .ic { width: 15px; height: 15px; margin-right: 6px; vertical-align: -3px; color: var(--resort); }
 .only-mobile { display: none; }
@@ -670,6 +698,7 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 
 /* ---------- phones and small tablets ---------- */
 @media (max-width: 899px) {
+  .origin .countries { display: none; }
   /* Phones: a slim strip at the bottom, clear of the wrapped map buttons and the credits button. */
   .snow-legend { left: 12px; right: 52px; bottom: 12px; width: auto; gap: 6px; padding: 10px 12px; }
   .snow-legend .sl-note { display: none; }

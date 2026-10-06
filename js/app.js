@@ -466,6 +466,8 @@ function applyFilters() {
   const n = visible.length;
   const nb = visible.filter((l) => l.type === "base").length;
   $("#result-count").textContent = `${n} place${n === 1 ? "" : "s"} · ${nb} feeder town${nb === 1 ? "" : "s"}`;
+  $("#tab-count").textContent = n;
+  $("#show-places-n").textContent = n === 1 ? "1 place" : `${n} places`;
   const emptyText = state.show === "saved"
     ? "Nothing saved yet. Open a resort or town and tap Save."
     : "Nothing matches. Try a longer travel time or more price levels.";
@@ -1368,7 +1370,12 @@ function bindControls() {
     updateSnowLayer();
   }));
 
-  $("#sidebar-toggle").addEventListener("click", () => setSidebar(!sidebarOpen()));
+  $("#sidebar-toggle").addEventListener("click", () => {
+    if (!sidebarOpen()) setTab("filters");
+    setSidebar(!sidebarOpen());
+  });
+  $$(".tabs button").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
+  $("#show-places").addEventListener("click", () => setTab("places"));
   $("#sidebar-hide").addEventListener("click", () => setSidebar(false));
   // Switching between phone and desktop layouts starts with the panel in its default state.
   matchMedia("(max-width: 899px)").addEventListener("change", () => {
@@ -1403,9 +1410,19 @@ function setShow(show) {
   $$("#show-seg button").forEach((x) => x.setAttribute("aria-pressed", x.dataset.show === show));
   const saved = show === "saved";
   $("#show-saved").setAttribute("aria-pressed", saved);
-  $(".filters").hidden = saved;
   $("#shortlist-tools").hidden = !saved;
+  if (saved) setTab("places");
   applyFilters();
+}
+
+// The panel has two tabs: Filters to set up the search, Places to see what it finds.
+function setTab(tab) {
+  if (tab === "filters" && state.show === "saved") setShow("all"); // filters never apply to the shortlist
+  for (const t of ["filters", "places"]) {
+    $(`#tab-${t}`).setAttribute("aria-selected", t === tab);
+    $(`#view-${t}`).hidden = t !== tab;
+  }
+  $("#sidebar").scrollTop = 0;
 }
 
 function loadShortlist() {
@@ -1636,7 +1653,6 @@ function syncControls() {
   pressed("#f-park-needs button", (v) => state.parkNeeds.has(v));
   $("#sort").value = state.sort;
   $("#show-saved").setAttribute("aria-pressed", state.show === "saved");
-  $(".filters").hidden = state.show === "saved";
   $("#shortlist-tools").hidden = state.show !== "saved";
   currencyChanged(false);
 }
