@@ -1,6 +1,6 @@
 import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
 import { tripCost, skiTarget } from "./cost.js";
-import { fitScore, seasonState } from "./fit.js";
+import { fitScore, seasonState, runKm, LEVELS } from "./fit.js";
 import { createMap, setBasemap, setTerrain, setLinks, setLifts, setParks, setReach, setSnowLayer, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
@@ -28,7 +28,7 @@ const state = {
   gbpPerEur: 0.85,
   rateDate: null,
   origin: "GVA",
-  beginner: false,
+  levels: ["intermediate"], // who's skiing: any of "first", "intermediate", "expert"
   park: "any", // "any", "good" (good or better) or "awesome"
   parkNeeds: new Set(), // park features that must be there, e.g. "beginner"
   snowLayer: false,
@@ -186,6 +186,7 @@ const kidsText = (ages) => ages.length === 1 ? `1 child aged ${ages[0]}` : `${ag
 function fitOf(l) {
   return fitScore(l, {
     model,
+    levels: state.levels,
     childAges: state.trip.childAges,
     snowOf,
     travel,
@@ -257,7 +258,7 @@ function clearMap() {
   Object.assign(state, {
     show: "all", maxTime: 300, maxHop: 60,
     prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(),
-    family: false, carFree: false, snowSure: false, beginner: false, park: "any", parkNeeds: new Set(),
+    family: false, carFree: false, snowSure: false, park: "any", parkNeeds: new Set(),
     snowLayer: false, snowMonth: null, sort: "fit", compare: [],
   });
   syncControls();
@@ -411,7 +412,7 @@ function passes(l) {
   // The shortlist ignores the filters so saved places never disappear.
   if (state.show === "saved") return state.saved.has(l.id);
   if (state.show !== "all" && l.type !== state.show) return false;
-  if (state.beginner && !l.easyStart) return false; // resorts only, walk to the beginner slopes
+  if (state.levels.includes("first") && !l.easyStart) return false; // resorts only, walk to the beginner slopes
   if (state.maxTime < 300 && travel(l).min > state.maxTime) return false; // the top of the slider means any time
   if (l.type === "base" && reachable(l, model.byId)[0].link.min > state.maxHop) return false;
   if (!state.prices.has(l.price)) return false;
@@ -473,7 +474,7 @@ function resultItem(l) {
   }
   return `<li><button type="button" class="result ${l.type}${l.id === state.selected ? " is-active" : ""}" data-id="${l.id}">
     <i class="dot ${l.type}"></i>
-    <span class="r-main"><span class="r-name"><b class="fit-pill" title="Beginner and family fit">${fitOf(l).score}</b>${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
+    <span class="r-main"><span class="r-name"><b class="fit-pill" title="Fit for your group">${fitOf(l).score}</b>${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
     <span class="r-side"><span class="r-time">${mins(t.min)}</span><span class="r-price" title="Trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
   </button></li>`;
 }
@@ -726,14 +727,37 @@ function fitBand(score) {
   return score >= 75 ? "Great fit" : score >= 55 ? "Good fit" : score >= 35 ? "OK fit" : "Weak fit";
 }
 
+const LEVEL_ORDER = ["first", "intermediate", "expert"];
+
+function groupText() {
+  const names = state.levels.map((v) => LEVELS[v]);
+  const who = names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}` : names[0];
+  return state.trip.childAges.length ? `${who}, with ${kidsText(state.trip.childAges)}` : who;
+}
+
 function fitSection(l) {
   const f = fitOf(l);
-  const who = state.trip.childAges.length ? `beginners with ${kidsText(state.trip.childAges)}` : "beginners";
+  const li = (r) => `<li class="${r.ok ? "ok" : "no"}">${esc(r.text)}</li>`;
+  const several = f.levels.length > 1;
+  const byLevel = f.levels.map((x) => `${several ? `<p class="fit-group">For ${LEVELS[x.level]} <b>${x.score}</b></p>` : ""}
+      <ul class="fit-reasons">${x.reasons.map(li).join("")}</ul>`).join("");
   return `<section class="fit">
-      <span class="s-label">Beginner and family fit</span>
-      <p class="fit-head"><b class="fit-score">${f.score}</b><span><strong>${fitBand(f.score)}</strong> for ${who}${l.type === "base" ? `, skiing ${esc(f.resort.name)}` : ""}</span></p>
-      <ul class="fit-reasons">${f.reasons.map((r) => `<li class="${r.ok ? "ok" : "no"}">${esc(r.text)}</li>`).join("")}</ul>
+      <span class="s-label">Fit for your group</span>
+      <p class="fit-head"><b class="fit-score">${f.score}</b><span><strong>${fitBand(f.score)}</strong> for ${esc(groupText())}${l.type === "base" ? `, skiing ${esc(f.resort.name)}` : ""}</span></p>
+      ${byLevel}
+      ${several ? `<p class="fit-group">For everyone</p>` : ""}
+      <ul class="fit-reasons">${f.shared.map(li).join("")}</ul>
     </section>`;
+}
+
+// Bar of green, blue, red and black runs, as a share of the published piste km.
+function runMix(r) {
+  const km = runKm(r);
+  if (!km) return "";
+  const names = { green: "Green", blue: "Blue", red: "Red", black: "Black" };
+  const cols = Object.keys(names);
+  return `<div class="run-mix" role="img" aria-label="Run mix: ${cols.map((c) => `${r.runShare[c]}% ${c}`).join(", ")}">${cols.map((c) => `<i class="${c}" style="width:${r.runShare[c]}%"></i>`).join("")}</div>
+    <p class="run-key">${cols.map((c) => `<span class="${c}">${names[c]} ${km[c]} km</span>`).join("")}</p>`;
 }
 
 function tripTeaser(l) {
@@ -838,6 +862,8 @@ function renderDetail(l) {
         <span class="s-label">Ski area</span>
         <p><strong>${esc(l.skiArea.name)}</strong> · ${l.skiArea.pisteKm} km · ${SIZE_LABEL[l.skiSize]}</p>
         <p class="suits">Suits ${levelDots(l.levels)} ${l.levels.map((v) => LEVEL_LABEL[v]).join(", ")}</p>
+        ${runMix(l)}
+        <p class="expert-line"><strong>Expert terrain: ${model.index.expertLevels[l.expert.level]}.</strong> ${esc(l.expert.note)}</p>
         ${l.easyStart ? `<p class="easy-start"><strong>Good for first-timers.</strong> ${esc(l.easyStart)}</p>` : ""}
         <p class="season-line">Usually open ${seasonText(l)}${state.trip.week ? seasonWarn(l) : ""}</p>
       </section>
@@ -1030,7 +1056,7 @@ function renderCompareTable() {
       cell: (l) => (l.type === "base" ? String(reachable(l, model.byId).filter((x) => x.link.min <= 30).length) : "—"),
     },
     {
-      label: "Beginner fit",
+      label: "Group fit",
       vals: cols.map((l) => fitOf(l).score),
       win: Math.max,
       cell: (l) => `${fitOf(l).score}<small>${fitBand(fitOf(l).score)}</small>`,
@@ -1251,11 +1277,14 @@ function bindControls() {
     b.setAttribute("aria-pressed", state.parkNeeds.has(v));
     applyFilters();
   }));
-  $("#f-beginner").addEventListener("click", (e) => {
-    state.beginner = !state.beginner;
-    e.currentTarget.setAttribute("aria-pressed", state.beginner);
-    applyFilters();
-  });
+  $$("#f-level button").forEach((b) => b.addEventListener("click", () => {
+    const v = b.dataset.v;
+    const on = state.levels.includes(v);
+    if (on && state.levels.length === 1) return; // someone is always skiing
+    state.levels = LEVEL_ORDER.filter((x) => (x === v ? !on : state.levels.includes(x)));
+    syncLevels();
+    tripChanged();
+  }));
   $("#origin").addEventListener("change", (e) => setOrigin(e.target.value));
   $("#f-snow").addEventListener("change", (e) => { state.snowSure = e.target.checked; applyFilters(); });
 
@@ -1433,7 +1462,7 @@ function planOf() {
     family: state.family,
     carFree: state.carFree,
     snowSure: state.snowSure,
-    beginner: state.beginner,
+    levels: state.levels,
     park: state.park,
     parkNeeds: [...state.parkNeeds],
     snowLayer: state.snowLayer,
@@ -1488,7 +1517,9 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   state.family = p.family === true;
   state.carFree = p.carFree === true;
   state.snowSure = p.snowSure === true;
-  state.beginner = p.beginner === true;
+  // Older plans had a single "absolute beginner" switch.
+  const levels = LEVEL_ORDER.filter((v) => (p.levels || []).includes(v) || (v === "first" && p.beginner === true));
+  if (levels.length) state.levels = levels;
   state.park = ["good", "awesome"].includes(p.park) ? p.park : "any";
   state.parkNeeds = new Set((p.parkNeeds || []).filter((f) => f in model.index.parkFeatures));
   state.snowLayer = p.snowLayer === true;
@@ -1583,7 +1614,7 @@ function syncControls() {
   $("#f-family").checked = state.family;
   $("#f-carfree").checked = state.carFree;
   $("#f-snow").checked = state.snowSure;
-  $("#f-beginner").setAttribute("aria-pressed", state.beginner);
+  syncLevels();
   pressed("#f-park button", (v) => v === state.park);
   pressed("#f-park-needs button", (v) => state.parkNeeds.has(v));
   $("#sort").value = state.sort;
@@ -1591,6 +1622,10 @@ function syncControls() {
   $(".filters").hidden = state.show === "saved";
   $("#shortlist-tools").hidden = state.show !== "saved";
   currencyChanged(false);
+}
+
+function syncLevels() {
+  $$("#f-level button").forEach((b) => b.setAttribute("aria-pressed", state.levels.includes(b.dataset.v)));
 }
 
 function tripChanged() {

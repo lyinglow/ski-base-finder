@@ -114,6 +114,16 @@
       "park": {
         "level": "fair",
         "note": "Small parks at Les Grands Montets and Le Brévent. Chamonix is about steep terrain, not freestyle."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Big steep terrain and famous off-piste: Les Grands Montets and the Vallée Blanche."
+      },
+      "runShare": {
+        "green": 12,
+        "blue": 27,
+        "red": 30,
+        "black": 31
       }
     },
     {
@@ -234,6 +244,16 @@
       "park": {
         "level": "fair",
         "note": "A small park with a few jumps and rails."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Steep tree runs on the Kandahar side. Chamonix's big terrain is close."
+      },
+      "runShare": {
+        "green": 4,
+        "blue": 46,
+        "red": 37,
+        "black": 13
       }
     },
     {
@@ -347,6 +367,16 @@
       "park": {
         "level": "fair",
         "note": "A small park and a boardercross. Saint-Gervais has more."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs and tree skiing, but mostly gentle cruising."
+      },
+      "runShare": {
+        "green": 13,
+        "blue": 35,
+        "red": 40,
+        "black": 12
       }
     },
     {
@@ -476,6 +506,16 @@
       "park": {
         "level": "fair",
         "note": "A small park on the Mont d'Arbois side."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste above the village."
+      },
+      "runShare": {
+        "green": 12,
+        "blue": 36,
+        "red": 39,
+        "black": 13
       }
     },
     {
@@ -597,6 +637,16 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone for children."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Gentle terrain. Experts will ski the wider Évasion area."
+      },
+      "runShare": {
+        "green": 13,
+        "blue": 35,
+        "red": 40,
+        "black": 12
       }
     },
     {
@@ -711,6 +761,16 @@
       "park": {
         "level": "fair",
         "note": "A small park with a few jumps and rails."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some good off-piste on the high slopes."
+      },
+      "runShare": {
+        "green": 5,
+        "blue": 33,
+        "red": 44,
+        "black": 18
       }
     },
     {
@@ -825,6 +885,16 @@
       "park": {
         "level": "fair",
         "note": "Only a small kids' park in Morzine. The Stash at Avoriaz and the parks at Les Gets are a lift away."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising. The Swiss side of the Portes du Soleil has steeper runs."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -960,6 +1030,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep runs and off-piste, with the Swiss Wall a short ride away."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -1091,6 +1171,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising, with a few steeper runs."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -1213,6 +1303,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste and a link to the steeper Swiss side."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -1334,6 +1434,16 @@
       "park": {
         "level": "none",
         "note": "No park of its own. Châtel's Smooth Park is close by."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Gentle village skiing."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
       }
     },
     {
@@ -1454,6 +1564,16 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "A few steeper runs, but small."
+      },
+      "runShare": {
+        "green": 11,
+        "blue": 36,
+        "red": 53,
+        "black": 0
       }
     },
     {
@@ -1564,6 +1684,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 16,
+        "blue": 16,
+        "red": 56,
+        "black": 12
       }
     },
     {
@@ -1673,6 +1803,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 46,
+        "red": 43,
+        "black": 9
       }
     },
     {
@@ -1797,6 +1937,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good off-piste in big open bowls and some steep runs."
+      },
+      "runShare": {
+        "green": 11,
+        "blue": 46,
+        "red": 34,
+        "black": 9
       }
     },
     {
@@ -1918,6 +2068,16 @@
       "park": {
         "level": "fair",
         "note": "Small fun zones. The Flaine park is on the same pass."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some tree skiing. Flaine's bigger terrain is on the same pass."
+      },
+      "runShare": {
+        "green": 11,
+        "blue": 46,
+        "red": 34,
+        "black": 9
       }
     },
     {
@@ -2039,6 +2199,16 @@
       "park": {
         "level": "fair",
         "note": "Small fun zones. The Flaine park is on the same pass."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some tree skiing. Flaine's bigger terrain is on the same pass."
+      },
+      "runShare": {
+        "green": 11,
+        "blue": 46,
+        "red": 34,
+        "black": 9
       }
     },
     {
@@ -2167,6 +2337,16 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone for children."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly gentle. Flaine's bigger terrain is on the same pass."
+      },
+      "runShare": {
+        "green": 11,
+        "blue": 46,
+        "red": 34,
+        "black": 9
       }
     },
     {
@@ -2289,6 +2469,16 @@
       "park": {
         "level": "none",
         "note": "No park. Quiet village skiing."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "A few steep runs and quiet off-piste in the valley."
+      },
+      "runShare": {
+        "green": 11,
+        "blue": 46,
+        "red": 34,
+        "black": 9
       }
     },
     {
@@ -2410,6 +2600,16 @@
           "rails"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good off-piste and steeper runs, especially on the Balme side."
+      },
+      "runShare": {
+        "green": 8,
+        "blue": 50,
+        "red": 33,
+        "black": 9
       }
     },
     {
@@ -2538,6 +2738,16 @@
           "rails"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste."
+      },
+      "runShare": {
+        "green": 35,
+        "blue": 33,
+        "red": 27,
+        "black": 5
       }
     },
     {
@@ -2652,6 +2862,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 27,
+        "black": 13
       }
     },
     {
@@ -2762,6 +2982,16 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 6,
+        "blue": 46,
+        "red": 37,
+        "black": 11
       }
     },
     {
@@ -2872,6 +3102,16 @@
       "park": {
         "level": "fair",
         "note": "A small park and a boardercross."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 13,
+        "blue": 48,
+        "red": 36,
+        "black": 3
       }
     },
     {
@@ -2982,6 +3222,16 @@
       "park": {
         "level": "fair",
         "note": "A small slopestyle area."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 49,
+        "blue": 19,
+        "red": 32,
+        "black": 0
       }
     },
     {
@@ -3104,6 +3354,16 @@
           "cross"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly gentle, with some off-piste between the trees."
+      },
+      "runShare": {
+        "green": 15,
+        "blue": 54,
+        "red": 25,
+        "black": 6
       }
     },
     {
@@ -3226,6 +3486,16 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone. Les Saisies has the bigger park."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Mostly gentle."
+      },
+      "runShare": {
+        "green": 15,
+        "blue": 54,
+        "red": 25,
+        "black": 6
       }
     },
     {
@@ -3354,6 +3624,16 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Mostly gentle."
+      },
+      "runShare": {
+        "green": 15,
+        "blue": 54,
+        "red": 25,
+        "black": 6
       }
     },
     {
@@ -3466,6 +3746,16 @@
       "park": {
         "level": "fair",
         "note": "Small fun zones in the trees."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Known for off-piste and ski touring in quiet surroundings."
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 56,
+        "red": 35,
+        "black": 7
       }
     },
     {
@@ -3579,6 +3869,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "little",
+        "note": "A few steeper runs, but small."
+      },
+      "runShare": {
+        "green": 31,
+        "blue": 35,
+        "red": 29,
+        "black": 5
       }
     },
     {
@@ -3690,6 +3990,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 32,
+        "blue": 44,
+        "red": 19,
+        "black": 5
       }
     },
     {
@@ -3800,6 +4110,16 @@
       "park": {
         "level": "none",
         "note": "No park. Mostly cross-country and gentle slopes."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Gentle slopes, mostly cross-country."
+      },
+      "runShare": {
+        "green": 16,
+        "blue": 44,
+        "red": 29,
+        "black": 11
       }
     },
     {
@@ -3911,6 +4231,16 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 7,
+        "blue": 68,
+        "red": 18,
+        "black": 7
       }
     },
     {
@@ -4033,6 +4363,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good off-piste, including the Bellecôte north face."
+      },
+      "runShare": {
+        "green": 3,
+        "blue": 59,
+        "red": 25,
+        "black": 13
       }
     },
     {
@@ -4157,6 +4497,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Steep runs and big off-piste from the Aiguille Rouge."
+      },
+      "runShare": {
+        "green": 3,
+        "blue": 59,
+        "red": 25,
+        "black": 13
       }
     },
     {
@@ -4287,6 +4637,16 @@
       "park": {
         "level": "fair",
         "note": "Fun zones only. The Les Arcs park is a short ride away."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Tree runs locally, with Les Arcs' steeper terrain a lift away."
+      },
+      "runShare": {
+        "green": 3,
+        "blue": 59,
+        "red": 25,
+        "black": 13
       }
     },
     {
@@ -4410,6 +4770,16 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone and boardercross."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising, with La Plagne's bigger terrain on the same pass."
+      },
+      "runShare": {
+        "green": 3,
+        "blue": 59,
+        "red": 25,
+        "black": 13
       }
     },
     {
@@ -4530,6 +4900,16 @@
       "park": {
         "level": "fair",
         "note": "A small boardercross and fun zone."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs, with La Plagne's bigger terrain on the same pass."
+      },
+      "runShare": {
+        "green": 3,
+        "blue": 59,
+        "red": 25,
+        "black": 13
       }
     },
     {
@@ -4655,6 +5035,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Steep runs, the Face de Bellevarde and huge off-piste."
+      },
+      "runShare": {
+        "green": 11,
+        "blue": 44,
+        "red": 34,
+        "black": 11
       }
     },
     {
@@ -4790,6 +5180,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "High, steep terrain and big off-piste, with the Grande Motte glacier."
+      },
+      "runShare": {
+        "green": 11,
+        "blue": 44,
+        "red": 34,
+        "black": 11
       }
     },
     {
@@ -4913,6 +5313,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep couloirs and good off-piste for experts."
+      },
+      "runShare": {
+        "green": 14,
+        "blue": 48,
+        "red": 29,
+        "black": 9
       }
     },
     {
@@ -5036,6 +5446,16 @@
           "rails"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep runs and off-piste in the middle of the 3 Vallées."
+      },
+      "runShare": {
+        "green": 14,
+        "blue": 48,
+        "red": 29,
+        "black": 9
       }
     },
     {
@@ -5158,6 +5578,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "High, steep terrain and good off-piste across the top of the 3 Vallées."
+      },
+      "runShare": {
+        "green": 14,
+        "blue": 48,
+        "red": 29,
+        "black": 9
       }
     },
     {
@@ -5288,6 +5718,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good off-piste on the La Masse side."
+      },
+      "runShare": {
+        "green": 14,
+        "blue": 48,
+        "red": 29,
+        "black": 9
       }
     },
     {
@@ -5401,6 +5841,16 @@
       "park": {
         "level": "fair",
         "note": "A small park and a boardercross."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising, with some off-piste."
+      },
+      "runShare": {
+        "green": 22,
+        "blue": 52,
+        "red": 19,
+        "black": 7
       }
     },
     {
@@ -5524,6 +5974,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good off-piste, with heli-skiing on the Italian side."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 44,
+        "red": 39,
+        "black": 8
       }
     },
     {
@@ -5636,6 +6096,16 @@
       "park": {
         "level": "none",
         "note": "No park. Sainte-Foy is about off-piste and quiet slopes."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Famous for quiet, big off-piste."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 47,
+        "red": 41,
+        "black": 11
       }
     },
     {
@@ -5755,6 +6225,16 @@
           "rails"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising, with some off-piste."
+      },
+      "runShare": {
+        "green": 16,
+        "blue": 45,
+        "red": 31,
+        "black": 8
       }
     },
     {
@@ -5877,6 +6357,16 @@
       "park": {
         "level": "fair",
         "note": "A small park. Valloire's park is on the same pass."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising, with some off-piste."
+      },
+      "runShare": {
+        "green": 16,
+        "blue": 45,
+        "red": 31,
+        "black": 8
       }
     },
     {
@@ -5997,6 +6487,16 @@
       "park": {
         "level": "none",
         "note": "No park of its own. Val Thorens is a gondola ride away."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "A quiet way into the high terrain of Val Thorens."
+      },
+      "runShare": {
+        "green": 14,
+        "blue": 48,
+        "red": 29,
+        "black": 9
       }
     },
     {
@@ -6111,6 +6611,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste."
+      },
+      "runShare": {
+        "green": 30,
+        "blue": 25,
+        "red": 36,
+        "black": 9
       }
     },
     {
@@ -6230,6 +6740,16 @@
           "rails"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising, with some off-piste."
+      },
+      "runShare": {
+        "green": 14,
+        "blue": 51,
+        "red": 26,
+        "black": 9
       }
     },
     {
@@ -6351,6 +6871,16 @@
       "park": {
         "level": "fair",
         "note": "A small park. La Toussuire's park is on the same pass."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising."
+      },
+      "runShare": {
+        "green": 14,
+        "blue": 51,
+        "red": 26,
+        "black": 9
       }
     },
     {
@@ -6463,6 +6993,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste."
+      },
+      "runShare": {
+        "green": 33,
+        "blue": 25,
+        "red": 27,
+        "black": 15
       }
     },
     {
@@ -6576,6 +7116,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs and off-piste."
+      },
+      "runShare": {
+        "green": 28,
+        "blue": 27,
+        "red": 41,
+        "black": 4
       }
     },
     {
@@ -6690,6 +7240,16 @@
       "park": {
         "level": "fair",
         "note": "Small fun zones, mostly for children."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste and long runs."
+      },
+      "runShare": {
+        "green": 28,
+        "blue": 44,
+        "red": 25,
+        "black": 3
       }
     },
     {
@@ -6801,6 +7361,16 @@
       "park": {
         "level": "none",
         "note": "No park. A small, high, natural resort."
+      },
+      "expert": {
+        "level": "good",
+        "note": "High, wild off-piste in a small resort."
+      },
+      "runShare": {
+        "green": 17,
+        "blue": 49,
+        "red": 23,
+        "black": 11
       }
     },
     {
@@ -6924,6 +7494,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep runs and off-piste from the Pic Blanc, including the long Sarenne."
+      },
+      "runShare": {
+        "green": 25,
+        "blue": 30,
+        "red": 28,
+        "black": 17
       }
     },
     {
@@ -7046,6 +7626,16 @@
       "park": {
         "level": "fair",
         "note": "A small park. Alpe d'Huez's park is on the same pass."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Alpe d'Huez's steep terrain is on the same pass."
+      },
+      "runShare": {
+        "green": 25,
+        "blue": 30,
+        "red": 28,
+        "black": 17
       }
     },
     {
@@ -7171,6 +7761,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good off-piste, with La Grave next door."
+      },
+      "runShare": {
+        "green": 19,
+        "blue": 59,
+        "red": 15,
+        "black": 7
       }
     },
     {
@@ -7281,6 +7881,16 @@
       "park": {
         "level": "none",
         "note": "No park. La Grave is off-piste only."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Big, wild off-piste with no groomed pistes. For experts only, ideally with a guide."
+      },
+      "runShare": {
+        "green": 18,
+        "blue": 43,
+        "red": 26,
+        "black": 13
       }
     },
     {
@@ -7401,6 +8011,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 43,
+        "red": 36,
+        "black": 12
       }
     },
     {
@@ -7513,6 +8133,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste and steeper runs."
+      },
+      "runShare": {
+        "green": 19,
+        "blue": 31,
+        "red": 30,
+        "black": 20
       }
     },
     {
@@ -7624,6 +8254,10 @@
       "park": {
         "level": "fair",
         "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Mostly gentle."
       }
     },
     {
@@ -7748,6 +8382,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good tree skiing and off-piste, plus steep runs."
+      },
+      "runShare": {
+        "green": 27,
+        "blue": 33,
+        "red": 30,
+        "black": 10
       }
     },
     {
@@ -7871,6 +8515,16 @@
           "cross"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Good off-piste across the Milky Way area."
+      },
+      "runShare": {
+        "green": 15,
+        "blue": 42,
+        "red": 36,
+        "black": 7
       }
     },
     {
@@ -7986,6 +8640,16 @@
       "park": {
         "level": "fair",
         "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs and tree skiing."
+      },
+      "runShare": {
+        "green": 16,
+        "blue": 48,
+        "red": 31,
+        "black": 5
       }
     },
     {
@@ -8109,6 +8773,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste and steeper runs."
+      },
+      "runShare": {
+        "green": 17,
+        "blue": 50,
+        "red": 27,
+        "black": 6
       }
     },
     {
@@ -8237,6 +8911,16 @@
           "rails"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste and tree skiing."
+      },
+      "runShare": {
+        "green": 17,
+        "blue": 50,
+        "red": 27,
+        "black": 6
       }
     },
     {
@@ -8359,6 +9043,16 @@
           "kids"
         ],
         "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste."
+      },
+      "runShare": {
+        "green": 25,
+        "blue": 16,
+        "red": 51,
+        "black": 8
       }
     },
     {

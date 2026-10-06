@@ -20,7 +20,12 @@
         <div class="header-btns">
           <button type="button" id="show-saved" class="shortlist-btn" aria-pressed="false" title="Show your shortlist"><span aria-hidden="true">★</span> Shortlist <span class="count" id="saved-count">0</span></button>
           <button type="button" id="share-plan" class="share-btn" title="Copy a link to this plan: shortlist, trip and filters">Share plan</button>
-          <button type="button" id="f-beginner" class="beginner-btn" aria-pressed="false" title="Only resorts where you can walk to the beginner slopes">Absolute beginner</button>
+        </div>
+        <div class="who" id="f-level" role="group" aria-label="Who's skiing">
+          <span class="who-label">Who's skiing</span>
+          <button type="button" id="f-level-first" data-v="first" class="lvl-btn first" aria-pressed="false" title="Only resorts where you can walk to the beginner slopes">First time</button>
+          <button type="button" id="f-level-intermediate" data-v="intermediate" class="lvl-btn intermediate" aria-pressed="true">Intermediate</button>
+          <button type="button" id="f-level-expert" data-v="expert" class="lvl-btn expert" aria-pressed="false">Expert</button>
         </div>
         <p class="origin"><label for="origin">Flying into</label>
           <select id="origin"><option value="GVA">Geneva Airport</option></select>

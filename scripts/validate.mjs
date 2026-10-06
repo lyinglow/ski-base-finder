@@ -56,6 +56,10 @@ for (const c of index.countries) {
       need(l.levels?.length && l.levels.every((v) => LEVELS.includes(v)), "levels invalid");
       need(l.park && l.park.level in (index.parkLevels || {}) && typeof l.park.note === "string" && l.park.note.length > 0,
         `park must have a level (${Object.keys(index.parkLevels || {}).join(", ")}) and a note`);
+      need(l.expert && l.expert.level in (index.expertLevels || {}) && typeof l.expert.note === "string" && l.expert.note.length > 0,
+        `expert must have a level (${Object.keys(index.expertLevels || {}).join(", ")}) and a note`);
+      need(!l.runShare || ["green", "blue", "red", "black"].reduce((s, c) => s + (l.runShare[c] || 0), 0) === 100,
+        "runShare must add up to 100");
       need(!l.park?.features || l.park.features.every((f) => f in (index.parkFeatures || {})),
         `park.features must list only: ${Object.keys(index.parkFeatures || {}).join(", ")}`);
       need(/^\d{4}-\d{2}-\d{2}$/.test(l.season?.open) && /^\d{4}-\d{2}-\d{2}$/.test(l.season?.close) && l.season.open < l.season.close,

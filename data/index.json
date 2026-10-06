@@ -363,5 +363,11 @@
     "airbag": "Airbag",
     "cross": "Boardercross",
     "kids": "Kids' fun zone"
+  },
+  "expertLevels": {
+    "awesome": "Awesome",
+    "good": "Good",
+    "fair": "Fair",
+    "little": "Little"
   }
 }
