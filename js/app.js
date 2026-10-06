@@ -243,6 +243,28 @@ function setOrigin(id) {
   if (!state.selected) airportView(1400);
 }
 
+/* ---------- clear map ---------- */
+
+// Back to a fresh map: no filters, nothing selected, no snow layer, airport view.
+// The trip (dates, people, airport) and the shortlist stay, because they are the user's plan.
+function clearMap() {
+  clearSelection();
+  $("#compare").hidden = true;
+  Object.assign(state, {
+    show: "all", maxTime: 300, maxHop: 60,
+    prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(),
+    family: false, carFree: false, snowSure: false, beginner: false,
+    snowLayer: false, snowMonth: null, sort: "fit", compare: [],
+  });
+  syncControls();
+  ["#f-time", "#f-hop"].forEach((id) => $(id).dispatchEvent(new Event("input"))); // refresh their labels
+  renderCompareBar();
+  updateSnowLayer();
+  applyFilters();
+  if (!$("#toggle-3d").matches("[aria-pressed=true]")) $("#toggle-3d").click();
+  airportView(1400);
+}
+
 /* ---------- snow layer ---------- */
 
 // The snow layer follows the trip (the chosen week, else the first chosen month) until a month is picked on it.
@@ -1208,7 +1230,7 @@ function bindControls() {
     map.easeTo({ pitch: on ? 58 : 0, duration: 800 });
   });
 
-  $("#reset-view").addEventListener("click", () => airportView(1400));
+  $("#clear-map").addEventListener("click", clearMap);
 
   $("#toggle-snow").addEventListener("click", () => {
     state.snowLayer = !state.snowLayer;

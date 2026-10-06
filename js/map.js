@@ -126,11 +126,12 @@ export function setReach(map, features) {
 
 // Snow cover from past winters, draped over the terrain. month: "dec".."apr", or null to hide.
 export function setSnowLayer(map, cfg, month) {
-  if (!map.isStyleLoaded()) { map.once("load", () => setSnowLayer(map, cfg, month)); return; }
   if (!month) {
     if (map.getLayer("snow-cover")) map.setLayoutProperty("snow-cover", "visibility", "none");
     return;
   }
+  // Before the first load, wait for it. After that the style is always there, even while tiles load.
+  if (!map.loaded() && !map.getSource("links")) { map.once("load", () => setSnowLayer(map, cfg, month)); return; }
   const url = cfg.path.replace("{month}", month);
   const src = map.getSource("snow");
   if (src) src.updateImage({ url, coordinates: cfg.coordinates });
