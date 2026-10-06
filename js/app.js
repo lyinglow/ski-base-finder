@@ -351,7 +351,10 @@ function airportView(duration = 0) {
   const tools = document.querySelector(".map-tools")?.getBoundingClientRect();
   const mapTop = map.getContainer().getBoundingClientRect().top;
   const top = Math.max(h * 0.14, tools ? tools.bottom - mapTop + 36 : 0); // far place, clear of the buttons
-  const bottom = h * 0.86; // airport
+  // Airport near the bottom, but above the snow key when that is showing.
+  const key = $("#snow-legend");
+  const keyTop = key.hidden ? h : key.getBoundingClientRect().top - mapTop;
+  const bottom = Math.min(h * 0.86, keyTop - 40);
   let view = { center: [(far.coords[0] + origin.coords[0]) / 2, (far.coords[1] + origin.coords[1]) / 2], zoom: 8, bearing, pitch: 35 };
   for (let i = 0; i < 6; i++) {
     map.jumpTo(view);
@@ -1356,6 +1359,8 @@ function bindControls() {
   $("#toggle-snow").addEventListener("click", () => {
     state.snowLayer = !state.snowLayer;
     updateSnowLayer();
+    // On a phone the key sits at the bottom, so lift the airport clear of it (or back down).
+    if (!state.selected && matchMedia("(max-width: 899px)").matches) airportView(800);
     savePlan();
   });
   $$("#snow-months button").forEach((b) => b.addEventListener("click", () => {
