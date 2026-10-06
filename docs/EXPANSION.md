@@ -1,57 +1,63 @@
-# Adding Switzerland and Italy
+# Adding countries
 
-The app never names a country in code. It loads whatever `data/index.json` marks as live. So adding a country is a data job.
+Order: **Switzerland, then Italy, then Austria.** One country at a time, each one live before the next starts.
+
+The app never names a country in code. It loads whatever `data/index.json` marks as live, so most of the work is data. Each country gets its own file (`data/ch.json`, `data/it.json`, `data/at.json`) in the same shape as `fr.json`, with ids starting `ch-`, `it-`, `at-`.
+
+## What every place needs
+
+| Part | Made by | Notes |
+|---|---|---|
+| Name, position, altitude, top altitude, ski area and km, price band, 6-day pass, season dates, character, transfer, access ("Getting up") | Hand | Resort websites. Most of the work. |
+| Ski school, crèche, `easyStart`, `family`, `levels` | Hand | |
+| `vibes`, `park` (level, note, features), `expert` (level, note) | Hand, our judgement | Marked "to check" until reviewed against the season's info. |
+| Links between towns and resorts (bus, train, lift, car, minutes) | Hand | The heart of the feeder-town idea. |
+| `fromOrigin` drive times from every airport | Script | Same route-planner method as France: avoid passes closed in winter, scale by 0.85. |
+| `snowYears` | `scripts/snow/` | The NASA snow images must cover the new area first. |
+| Lifts, parks on the map, `runShare` | `scripts/lifts/build.py` | Widen the region box first. |
+
+## Changes to make once, before Switzerland
+
+1. **Cost adjustment per country.** Lift passes, lessons, hire and childcare differ a lot (Switzerland about 30 to 40% above France, Italy a little below, Austria close to France). Add a factor per country in `index.json` and apply it in `js/cost.js`.
+2. **Widen the map data.** Snow layer, lifts, parks and run mix currently stop at about 8.2° east. Switzerland needs to about 10.5° east. Austria needs to about 13.5° east, which roughly triples the snow images.
+3. **Country filter** (France, Switzerland, Italy, Austria) in the Filters tab.
+4. **New airports:** Zurich and Basel for Switzerland, Milan for Italy, then Innsbruck, Salzburg and Munich for Austria. Each new airport needs drive times to every place.
 
 ## Step 1: Switzerland
 
-Close to Geneva and the natural next step.
-
-1. **Make `data/ch.json`** in the same format as `fr.json`. Ids start with `ch-`.
-2. **Resorts to start with**, grouped by area:
-   - Portes du Soleil Swiss side: Champéry, Morgins, Les Crosets, Champoussin, Torgon
-   - Vaud Alps: Villars, Leysin, Les Diablerets, Les Mosses
-   - 4 Vallées: Verbier, Nendaz, Veysonnaz, Thyon, La Tzoumaz
-   - Valais: Crans-Montana, Anzère, Grimentz-Zinal, Saas-Fee, Zermatt
-   - Jura: La Dôle, Saint-Cergue
-3. **Feeder towns**: Monthey, Aigle, Martigny, Le Châble, Sion, Sierre, Visp, Nyon.
-   The Swiss story is strong here: valley towns with trains and gondolas straight up, like Le Châble to Verbier.
-4. **Cross-border links.** Edit the French file too: Châtel links to Morgins, Avoriaz to Les Crosets. The app shows them both ways.
-5. **Price bands.** Switzerland costs more across the board. Keep one shared scale so a € in Italy and a € in Switzerland mean the same, and adjust the guide text in `index.json` if needed. Price is about where to stay, so a cheap Swiss town may still be €€.
-6. Set `"status": "live"` for CH in `index.json`, run `npm run validate`, and check it on the map.
+- **Resorts (about 30):**
+  - Portes du Soleil Swiss side: Champéry, Morgins, Les Crosets, Champoussin, Torgon
+  - Vaud Alps: Villars, Leysin, Les Diablerets
+  - 4 Vallées: Verbier, Nendaz, Veysonnaz, Thyon, La Tzoumaz
+  - Valais: Crans-Montana, Anzère, Grimentz-Zinal, Ovronnaz, Leukerbad, Saas-Fee, Zermatt, Aletsch Arena (Riederalp, Bettmeralp)
+  - Bernese Oberland: Gstaad, Adelboden, Wengen, Grindelwald, Mürren
+  - Jura: La Dôle
+- **Feeder towns (about 13):** Monthey, Aigle, Bex, Martigny, Le Châble, Sion, Sierre, Visp, Täsch, Brig, Interlaken, Lauterbrunnen, Frutigen.
+  Switzerland suits the feeder-town idea well: valley towns with a train, funicular or gondola straight up (Le Châble to Verbier, Sierre to Crans-Montana, Täsch to Zermatt, Lauterbrunnen to Wengen and Mürren).
+- **Cross-border links:** Châtel and Morgins, Avoriaz and Champéry (Portes du Soleil).
 
 ## Step 2: Italy
 
-1. **Make `data/it.json`**, ids start with `it-`.
-2. **Resorts**: Courmayeur, La Thuile, Pila, Cervinia, Valtournenche, Champoluc, Gressoney, Alagna.
-3. **Feeder towns**: Aosta (cable car to Pila), Pré-Saint-Didier, Morgex, Châtillon.
-4. **Cross-border links**: La Thuile and La Rosière share a ski area. Cervinia and Zermatt too.
-5. Travel from Geneva goes through the Mont Blanc tunnel. Note the tunnel toll in `transfer`.
+- **Resorts:** Courmayeur, La Thuile, Pila, Cervinia, Valtournenche, Champoluc, Gressoney, Alagna. Later, if wanted: Sestriere and the Milky Way (from Turin), the Dolomites.
+- **Feeder towns:** Aosta (cable car to Pila), Pré-Saint-Didier, Morgex, Châtillon, Pont-Saint-Martin.
+- **Cross-border links:** La Thuile and La Rosière share a ski area; Cervinia and Zermatt.
+- **Airports:** Turin is in. Add Milan.
 
-## Step 3: More airports (done)
+## Step 3: Austria
 
-Geneva, Lyon, Chambéry, Grenoble and Turin are in. To add another (Zurich, Milan):
+A different region, flown into from Innsbruck, Salzburg or Munich rather than Geneva. The map will open on the airport you pick, so it can still feel local.
 
-1. Add it to `origins` in `index.json`.
-2. Work out winter drive times from it to every place and add them to each `fromOrigin`. The same route-planner method used for the current five works: take the planner's time, avoid passes closed in winter, scale by 0.85.
+- **Resorts to start:** St Anton, Lech, Ischgl, Sölden, Obergurgl, Mayrhofen, Kitzbühel, Saalbach, Zell am See, Bad Gastein, Obertauern, Schladming.
+- **Feeder towns:** Landeck, Imst, Innsbruck, Zell am Ziller, Kirchberg, Bruck, Bischofshofen.
+- **School holidays:** add the German and Dutch holiday weeks, which fill Austrian resorts.
 
 ## Keeping the data fresh
 
-- **One owner per country** who checks it before each season (October).
-- **Update `updated`** in the country file when you check it.
-- **Use pull requests** for data changes. A JSON diff is easy to review, and the validator catches broken links.
-- **Sources to check against**: resort websites for piste km and lift altitudes, Google Maps or ViaMichelin for winter drive times, sbb.ch and sncf-connect.com for trains, and booking sites in a fixed week of February for price bands.
-
-## When it outgrows JSON
-
-JSON files are right up to a few hundred places. Move on when you need:
-
-- **Live prices or snow** from an outside service. Add a small server or a scheduled script that writes the same JSON, so the front end does not change.
-- **Many editors.** Put the records in a spreadsheet or a simple CMS and export to this JSON format in a build step.
+- Check every country each October and update `updated` in its file.
+- Re-run the scripts: drive times when roads change, `scripts/lifts/build.py` each autumn, the snow build once a year.
+- Use pull requests for data changes. The validator catches broken links and bad values.
 
 ## Going to production
 
-The free tile sources are fine for a prototype. For public launch:
-
-- **Swap to a paid tile provider** in `js/map.js`. MapTiler and Mapbox both give satellite, terrain and a generous free tier. With Mapbox, the Mapbox GL JS library works with the same code.
-- **Keep the attribution** the provider asks for.
-- **Host on any static host** with a custom domain.
+- Swap to a paid map tile provider in `js/map.js` (MapTiler or Mapbox) before a public launch, and keep their attribution.
+- Pushes to `main` deploy to Vercel automatically.
