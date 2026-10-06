@@ -123,13 +123,26 @@ npm run validate
 
 It checks ids, required fields, coordinates, price bands, and that every link points at a real resort. Run it before every commit.
 
+## Snow parks
+
+Every resort has a `park` rating. It is our own judgement from what the resort publishes, not measured data, so check it each autumn and update `parkChecked` in `data/index.json`.
+
+| Field | Meaning |
+|---|---|
+| `park.level` | `awesome` (several lines for every level, big jumps, often a halfpipe), `good` (a proper park with a beginner line), `fair` (a small park or fun zone), `none`. |
+| `park.note` | One or two short sentences, shown in the place panel. |
+| `park.name` | Optional. The park's own name, only when it is well known. |
+
+A feeder town takes the best park among the resorts it reaches. The pink park shapes on the map come from OpenStreetMap through `scripts/lifts/build.py` (see below) and are often incomplete.
+
 ## Ski lifts
 
 `data/lifts.json` holds the working lifts shown when a place is tapped. It is built, not edited by hand:
 
 ```
 curl -o lifts.geojson https://tiles.openskimap.org/geojson/lifts.geojson
-python3 scripts/lifts/build.py lifts.geojson
+curl -o runs.geojson https://tiles.openskimap.org/geojson/runs.geojson   # about 850 MB, for snow parks
+python3 scripts/lifts/build.py lifts.geojson runs.geojson
 ```
 
 Each resort gets every lift in the ski areas within 2.5 km of it, so a linked area shows whole. A feeder town shows the lifts of the resorts it reaches. Data from OpenSkiMap, © OpenStreetMap contributors (ODbL). Rebuild it each autumn, or after adding resorts.

@@ -19,6 +19,7 @@ const BASEMAPS = {
 // Looking south-east from above Geneva toward Mont Blanc.
 export const HOME_VIEW = { center: [6.45, 45.55], zoom: 8.05, pitch: 52, bearing: 140 };
 const EXAGGERATION = 1.35;
+const PARK_COLOR = "#ff5fa2";
 
 function style() {
   const dem = {
@@ -38,7 +39,8 @@ function style() {
       hillshadeDem: { type: "raster-dem", tiles: [TERRAIN_TILES], encoding: "terrarium", tileSize: 256, maxzoom: 14 },
       links: { type: "geojson", data: empty() },
       reach: { type: "geojson", data: empty() },
-      lifts: { type: "geojson", data: empty(), attribution: "Lifts: OpenSkiMap, © OpenStreetMap contributors" },
+      lifts: { type: "geojson", data: empty(), attribution: "Lifts and parks: OpenSkiMap, © OpenStreetMap contributors" },
+      parks: { type: "geojson", data: empty() },
     },
     layers: [
       { id: "satellite", type: "raster", source: "satellite" },
@@ -51,6 +53,15 @@ function style() {
         id: "reach-line", type: "line", source: "reach",
         layout: { "line-cap": "round" },
         paint: { "line-color": "#ffffff", "line-width": 2, "line-opacity": 0.85, "line-dasharray": [2, 2] },
+      },
+      {
+        id: "parks-fill", type: "fill", source: "parks", filter: ["==", ["geometry-type"], "Polygon"],
+        paint: { "fill-color": PARK_COLOR, "fill-opacity": 0.35 },
+      },
+      {
+        id: "parks-line", type: "line", source: "parks",
+        layout: { "line-cap": "round", "line-join": "round" },
+        paint: { "line-color": PARK_COLOR, "line-width": ["interpolate", ["linear"], ["zoom"], 10, 2, 14, 5] },
       },
       {
         id: "lifts-casing", type: "line", source: "lifts",
@@ -145,6 +156,12 @@ export function setSnowLayer(map, cfg, month) {
 // Ski lifts for the place in focus. features: GeoJSON LineStrings with name and kind.
 export function setLifts(map, features) {
   const src = map.getSource("lifts");
+  if (src) src.setData({ type: "FeatureCollection", features });
+}
+
+// Snow parks for the place in focus: areas and lines from OpenStreetMap.
+export function setParks(map, features) {
+  const src = map.getSource("parks");
   if (src) src.setData({ type: "FeatureCollection", features });
 }
 

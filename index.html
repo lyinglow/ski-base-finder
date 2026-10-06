@@ -118,6 +118,15 @@
           <div class="chips" id="f-vibe"></div>
         </div>
 
+        <div class="field">
+          <span class="label">Snow park</span>
+          <div class="chips" id="f-park" role="radiogroup" aria-label="Snow park">
+            <button type="button" id="f-park-any" data-v="any" aria-pressed="true">Any</button>
+            <button type="button" id="f-park-good" data-v="good" aria-pressed="false" title="Good or Awesome park">Good or better</button>
+            <button type="button" id="f-park-awesome" data-v="awesome" aria-pressed="false">Awesome</button>
+          </div>
+        </div>
+
         <label class="toggle" for="f-snow">
           <input type="checkbox" id="f-snow">
           <span>Snow-sure for my months</span>
@@ -194,6 +203,7 @@
         <span><i class="ln road"></i>Drive</span>
         <span><i class="ln lift"></i>Bus, train or lift</span>
         <span><i class="ln ski"></i>Ski lift</span>
+        <span><i class="ln park"></i>Snow park</span>
       </div>
 
       <article class="detail" id="detail" hidden aria-live="polite"></article>

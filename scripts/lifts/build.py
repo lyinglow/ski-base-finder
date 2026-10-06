@@ -1,7 +1,10 @@
-"""Build data/lifts.json from OpenSkiMap's lift export (OpenStreetMap data, ODbL).
+"""Build data/lifts.json and data/parks.json from OpenSkiMap's exports (OpenStreetMap data, ODbL).
 
     curl -o lifts.geojson https://tiles.openskimap.org/geojson/lifts.geojson
-    python3 scripts/lifts/build.py lifts.geojson
+    curl -o runs.geojson https://tiles.openskimap.org/geojson/runs.geojson   # about 850 MB
+    python3 scripts/lifts/build.py lifts.geojson runs.geojson
+
+The runs file is only read for snow parks; leave it out to rebuild the lifts alone.
 
 A resort gets every working lift in the ski areas found within 2.5 km of it
 (6 km if none are that close), so a linked area like the Portes du Soleil shows whole.
@@ -23,7 +26,23 @@ def km(a, b):
     return math.hypot((a[0] - b[0]) * math.cos(math.radians(a[1])) * 111.3, (a[1] - b[1]) * 111.3)
 
 
-def main(src):
+def in_region(c):
+    while isinstance(c[0], list):
+        c = c[0]
+    return 4.8 < c[0] < 8.2 and 43.9 < c[1] < 46.7
+
+
+def area_ids(f):
+    return {s["properties"]["id"] for s in f["properties"]["skiAreas"]}
+
+
+def rounded(c):
+    if isinstance(c[0], list):
+        return [rounded(x) for x in c]
+    return [round(c[0], 5), round(c[1], 5)]
+
+
+def main(src, runs_src=None):
     locs = [l for l in json.load(open(ROOT / "data/fr.json"))["locations"] if l["type"] == "resort"]
     lifts = []
     for f in json.load(open(src))["features"]:
@@ -35,15 +54,16 @@ def main(src):
             continue
         lifts.append(f)
 
-    out, used, by_resort = [], {}, {}
+    out, used, by_resort, resort_areas = [], {}, {}, {}
     for r in locs:
         ends = lambda f: (f["geometry"]["coordinates"][0], f["geometry"]["coordinates"][-1])
         for radius in NEAR_KM:
             near = [f for f in lifts if min(km(r["coords"], e) for e in ends(f)) < radius]
             if near:
                 break
-        areas = {s["properties"]["id"] for f in near for s in f["properties"]["skiAreas"]}
-        mine = [f for f in lifts if areas & {s["properties"]["id"] for s in f["properties"]["skiAreas"]}]
+        areas = {a for f in near for a in area_ids(f)}
+        resort_areas[r["id"]] = areas
+        mine = [f for f in lifts if areas & area_ids(f)]
         ids = []
         for f in mine:
             key = f["properties"]["id"]
@@ -64,7 +84,45 @@ def main(src):
     }
     (ROOT / "data/lifts.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
     print(len(out), "lifts written")
+    if runs_src:
+        build_parks(runs_src, locs, resort_areas)
+
+
+# Snow parks: the same ski areas as the lifts, or within 3 km for parks not tied to an area.
+# Race courses tagged as parks ("stade", "slalom") are left out.
+def build_parks(src, locs, resort_areas):
+    parks = []
+    for f in json.load(open(src))["features"]:
+        p, g = f["properties"], f["geometry"]
+        if "snow_park" not in (p.get("uses") or []) or p["status"] != "operating":
+            continue
+        if g["type"] not in ("LineString", "Polygon") or not in_region(g["coordinates"]):
+            continue
+        if any(w in (p["name"] or "").lower() for w in ("stade", "slalom")):
+            continue
+        parks.append(f)
+
+    out, used, by_resort = [], {}, {}
+    for r in locs:
+        def near(f):
+            c = f["geometry"]["coordinates"]
+            pts = c[0] if f["geometry"]["type"] == "Polygon" else c
+            return min(km(r["coords"], x) for x in pts) < 3
+        mine = [f for f in parks if (area_ids(f) & resort_areas[r["id"]]) or (not f["properties"]["skiAreas"] and near(f))]
+        ids = []
+        for f in mine:
+            key = f["properties"]["id"]
+            if key not in used:
+                used[key] = len(used)
+                g = f["geometry"]
+                out.append([f["properties"]["name"] or "", "area" if g["type"] == "Polygon" else "line", rounded(g["coordinates"])])
+            ids.append(used[key])
+        by_resort[r["id"]] = sorted(ids)
+
+    data = {"source": "OpenSkiMap.org, from OpenStreetMap contributors (ODbL)", "parks": out, "byResort": by_resort}
+    (ROOT / "data/parks.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+    print(len(out), "snow parks written")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(*sys.argv[1:3])

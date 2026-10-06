@@ -110,6 +110,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "Small parks at Les Grands Montets and Le Brévent. Chamonix is about steep terrain, not freestyle."
       }
     },
     {
@@ -226,6 +230,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park with a few jumps and rails."
       }
     },
     {
@@ -335,6 +343,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park and a boardercross. Saint-Gervais has more."
       }
     },
     {
@@ -460,6 +472,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park on the Mont d'Arbois side."
       }
     },
     {
@@ -577,6 +593,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone for children."
       }
     },
     {
@@ -687,6 +707,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park with a few jumps and rails."
       }
     },
     {
@@ -797,6 +821,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "Only a small kids' park in Morzine. The Stash at Avoriaz and the parks at Les Gets are a lift away."
       }
     },
     {
@@ -917,6 +945,11 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "awesome",
+        "note": "Several parks from first jumps to big kickers, including The Stash tree park and Lil' Stash for children.",
+        "name": "Arare park and The Stash"
       }
     },
     {
@@ -1036,6 +1069,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with a beginner line, plus fun zones."
       }
     },
     {
@@ -1144,6 +1181,11 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "awesome",
+        "note": "One of the best-known parks in France, with lines for every level.",
+        "name": "Smooth Park"
       }
     },
     {
@@ -1261,6 +1303,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park of its own. Châtel's Smooth Park is close by."
       }
     },
     {
@@ -1377,6 +1423,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
       }
     },
     {
@@ -1483,6 +1533,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -1588,6 +1642,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -1699,6 +1757,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with easy and medium lines, a boardercross and a fun zone."
       }
     },
     {
@@ -1816,6 +1878,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "Small fun zones. The Flaine park is on the same pass."
       }
     },
     {
@@ -1933,6 +1999,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "Small fun zones. The Flaine park is on the same pass."
       }
     },
     {
@@ -2057,6 +2127,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone for children."
       }
     },
     {
@@ -2175,6 +2249,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park. Quiet village skiing."
       }
     },
     {
@@ -2284,6 +2362,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with a slopestyle line and easier features."
       }
     },
     {
@@ -2401,6 +2483,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with a beginner line."
       }
     },
     {
@@ -2511,6 +2597,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -2617,6 +2707,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
       }
     },
     {
@@ -2723,6 +2817,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park and a boardercross."
       }
     },
     {
@@ -2829,6 +2927,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small slopestyle area."
       }
     },
     {
@@ -2939,6 +3041,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for beginners and improvers."
       }
     },
     {
@@ -3057,6 +3163,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone. Les Saisies has the bigger park."
       }
     },
     {
@@ -3181,6 +3291,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
       }
     },
     {
@@ -3289,6 +3403,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "Small fun zones in the trees."
       }
     },
     {
@@ -3398,6 +3516,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -3505,6 +3627,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -3611,6 +3737,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park. Mostly cross-country and gentle slopes."
       }
     },
     {
@@ -3718,6 +3848,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
       }
     },
     {
@@ -3827,6 +3961,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with a beginner line, plus boardercross and fun zones."
       }
     },
     {
@@ -3937,6 +4075,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "awesome",
+        "note": "A big park with lines for every level, among the best in the Tarentaise."
       }
     },
     {
@@ -4063,6 +4205,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "Fun zones only. The Les Arcs park is a short ride away."
       }
     },
     {
@@ -4182,6 +4328,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone and boardercross."
       }
     },
     {
@@ -4298,6 +4448,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small boardercross and fun zone."
       }
     },
     {
@@ -4409,6 +4563,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for each level, plus boardercross."
       }
     },
     {
@@ -4529,6 +4687,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "awesome",
+        "note": "A big park with lines for every level and a halfpipe."
       }
     },
     {
@@ -4640,6 +4802,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "Several parks and fun zones, including a family park and a beginner park."
       }
     },
     {
@@ -4750,6 +4916,11 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for each level, plus fun runs.",
+        "name": "Moonpark"
       }
     },
     {
@@ -4859,6 +5030,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for each level, plus fun zones."
       }
     },
     {
@@ -4977,6 +5152,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park, plus fun zones for children."
       }
     },
     {
@@ -5086,6 +5265,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park and a boardercross."
       }
     },
     {
@@ -5196,6 +5379,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with easy and medium lines, plus boardercross."
       }
     },
     {
@@ -5304,6 +5491,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park. Sainte-Foy is about off-piste and quiet slopes."
       }
     },
     {
@@ -5412,6 +5603,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with a beginner line."
       }
     },
     {
@@ -5530,6 +5725,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park. Valloire's park is on the same pass."
       }
     },
     {
@@ -5646,6 +5845,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park of its own. Val Thorens is a gondola ride away."
       }
     },
     {
@@ -5756,6 +5959,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -5864,6 +6071,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for beginners and improvers."
       }
     },
     {
@@ -5981,6 +6192,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park. La Toussuire's park is on the same pass."
       }
     },
     {
@@ -6089,6 +6304,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -6198,6 +6417,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -6308,6 +6531,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "Small fun zones, mostly for children."
       }
     },
     {
@@ -6415,6 +6642,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park. A small, high, natural resort."
       }
     },
     {
@@ -6525,6 +6756,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for each level, plus boardercross."
       }
     },
     {
@@ -6643,6 +6878,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park. Alpe d'Huez's park is on the same pass."
       }
     },
     {
@@ -6753,6 +6992,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "awesome",
+        "note": "A big park high on the glacier with lines for every level, often open into spring."
       }
     },
     {
@@ -6859,6 +7102,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park. La Grave is off-piste only."
       }
     },
     {
@@ -6967,6 +7214,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with a beginner park and a kids' park."
       }
     },
     {
@@ -7075,6 +7326,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -7182,6 +7437,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
       }
     },
     {
@@ -7292,6 +7551,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park, plus a boardercross, fun zones and an airbag."
       }
     },
     {
@@ -7403,6 +7666,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with a beginner line, plus boardercross."
       }
     },
     {
@@ -7514,6 +7781,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park."
       }
     },
     {
@@ -7623,6 +7894,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "awesome",
+        "note": "A big park with lines for every level, among the best in the southern Alps."
       }
     },
     {
@@ -7740,6 +8015,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for beginners and improvers."
       }
     },
     {
@@ -7849,6 +8128,10 @@
             10
           ]
         }
+      },
+      "park": {
+        "level": "good",
+        "note": "Two parks, one easy and one for experienced riders."
       }
     },
     {

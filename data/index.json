@@ -345,5 +345,12 @@
     "winters": "2015/16 to 2024/25",
     "source": "NASA MODIS Terra 8-day snow extent (MOD10A2), via NASA GIBS",
     "note": "How often snow was seen on the ground around the 8th and 22nd of the month, over the last 10 winters. Satellite pixels are about 500 m, so narrow pistes and snow-making do not show."
-  }
+  },
+  "parkLevels": {
+    "awesome": "Awesome",
+    "good": "Good",
+    "fair": "Fair",
+    "none": "No park"
+  },
+  "parkChecked": "2026/27"
 }

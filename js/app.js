@@ -1,7 +1,7 @@
 import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
 import { tripCost, skiTarget } from "./cost.js";
 import { fitScore, seasonState } from "./fit.js";
-import { createMap, setBasemap, setTerrain, setLinks, setLifts, setReach, setSnowLayer, HOME_VIEW } from "./map.js";
+import { createMap, setBasemap, setTerrain, setLinks, setLifts, setParks, setReach, setSnowLayer, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
 const $ = (s) => document.querySelector(s);
@@ -29,6 +29,7 @@ const state = {
   rateDate: null,
   origin: "GVA",
   beginner: false,
+  park: "any", // "any", "good" (good or better) or "awesome"
   snowLayer: false,
   snowMonth: null, // month shown on the snow layer; null follows the trip
   vibes: new Set(), // empty means any vibe
@@ -68,9 +69,11 @@ async function init() {
   updateOriginMarkers();
   for (const l of model.locations) addMarker(l);
   map.on("zoom", updateLabelMode);
-  map.on("click", "lifts-line", showLiftName);
-  map.on("mouseenter", "lifts-line", () => { map.getCanvas().style.cursor = "pointer"; });
-  map.on("mouseleave", "lifts-line", () => { map.getCanvas().style.cursor = ""; });
+  for (const layer of ["lifts-line", "parks-fill", "parks-line"]) {
+    map.on("click", layer, showLiftName);
+    map.on("mouseenter", layer, () => { map.getCanvas().style.cursor = "pointer"; });
+    map.on("mouseleave", layer, () => { map.getCanvas().style.cursor = ""; });
+  }
   updateLabelMode();
 
   map.once("load", () => { if (!state.selected) airportView(); updateReach(lastVisible); updateSnowLayer(); });
@@ -253,7 +256,7 @@ function clearMap() {
   Object.assign(state, {
     show: "all", maxTime: 300, maxHop: 60,
     prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(),
-    family: false, carFree: false, snowSure: false, beginner: false,
+    family: false, carFree: false, snowSure: false, beginner: false, park: "any",
     snowLayer: false, snowMonth: null, sort: "fit", compare: [],
   });
   syncControls();
@@ -263,6 +266,37 @@ function clearMap() {
   applyFilters();
   if (!$("#toggle-3d").matches("[aria-pressed=true]")) $("#toggle-3d").click();
   airportView(1400);
+}
+
+/* ---------- snow parks ---------- */
+
+const PARK_RANK = { none: 0, fair: 1, good: 2, awesome: 3 };
+
+// A resort's own park, or for a feeder town the best park it reaches (nearest when tied).
+function parkOf(l) {
+  if (l.type === "resort") return { level: l.park.level, place: l, link: null };
+  let best = null;
+  for (const { place, link } of reachable(l, model.byId)) {
+    const rank = PARK_RANK[place.park.level];
+    if (!best || rank > PARK_RANK[best.level] || (rank === PARK_RANK[best.level] && link.min < best.link.min)) {
+      best = { level: place.park.level, place, link };
+    }
+  }
+  return best;
+}
+
+function parkSection(l) {
+  const k = parkOf(l);
+  const r = k.place;
+  const where = k.link
+    ? ` at <button type="button" class="link" data-select="${r.id}">${esc(r.name)}</button>, ${mins(k.link.min)} away`
+    : r.park.name ? `<span>${esc(r.park.name)}</span>` : "";
+  return `<section class="park">
+      <span class="s-label">${k.link ? "Best snow park nearby" : "Snow park"}</span>
+      <p class="park-verdict"><b class="park-pill ${k.level}">${model.index.parkLevels[k.level]}</b>${where}</p>
+      <p>${esc(r.park.note)}</p>
+      <p class="snow-note">Our rating for ${model.index.parkChecked}. Parks are rebuilt every winter, so check the resort's site before you go. Parks on the map are from OpenStreetMap and may be missing.</p>
+    </section>`;
 }
 
 /* ---------- snow layer ---------- */
@@ -369,6 +403,7 @@ function passes(l) {
   if (state.family && !l.family) return false;
   if (state.vibes.size && !l.vibes.some((v) => state.vibes.has(v))) return false;
   if (state.carFree && !l.carFree) return false;
+  if (state.park !== "any" && PARK_RANK[parkOf(l).level] < PARK_RANK[state.park]) return false;
   if (state.snowSure && snowOf(l) !== "good") return false;
   if (state.trip.week && fitOf(l)?.closed) return false; // closed for the chosen week
   if (l.type === "resort") return state.sizes.has(l.skiSize);
@@ -487,23 +522,31 @@ function clearSelection() {
 
 // Lifts of the selected resort, or of every resort a feeder town reaches. Loaded on first use.
 let liftData = null;
+let parkData = null;
 let liftPopup = null;
-const LIFT_KIND = { cabin: "Gondola or cable car", chair: "Chairlift", surface: "Drag lift" };
+const LIFT_KIND = { cabin: "Gondola or cable car", chair: "Chairlift", surface: "Drag lift", park: "Snow park" };
 
 async function drawLifts(place) {
   liftPopup?.remove();
-  if (!place) { setLifts(map, []); return; }
+  if (!place) { setLifts(map, []); setParks(map, []); return; }
   try {
-    liftData ||= await fetch("data/lifts.json").then((r) => r.json());
+    [liftData, parkData] = await Promise.all([
+      liftData || fetch("data/lifts.json").then((r) => r.json()),
+      parkData || fetch("data/parks.json").then((r) => r.json()),
+    ]);
   } catch {
     return; // no lifts is fine; the rest of the map still works
   }
   if (state.selected !== place.id) return; // another place was picked while loading
   const resorts = place.type === "resort" ? [place.id] : (place.links || []).map((k) => k.to);
-  const ids = new Set(resorts.flatMap((r) => liftData.byResort[r] || []));
-  setLifts(map, [...ids].map((i) => {
+  const pick = (data) => [...new Set(resorts.flatMap((r) => data.byResort[r] || []))];
+  setLifts(map, pick(liftData).map((i) => {
     const [name, kind, coordinates] = liftData.lifts[i];
     return { type: "Feature", properties: { name, kind }, geometry: { type: "LineString", coordinates } };
+  }));
+  setParks(map, pick(parkData).map((i) => {
+    const [name, shape, coordinates] = parkData.parks[i];
+    return { type: "Feature", properties: { name, kind: "park" }, geometry: { type: shape === "area" ? "Polygon" : "LineString", coordinates } };
   }));
 }
 
@@ -786,7 +829,8 @@ function renderDetail(l) {
       <section class="school">
         <span class="s-label">Ski school</span>
         <p>${schoolText(l)}</p>
-      </section>`;
+      </section>
+      ${parkSection(l)}`;
     const s = snowOf(l);
     body += `<section class="snow">
         <span class="s-label">Snow</span>
@@ -821,6 +865,7 @@ function renderDetail(l) {
         <span class="s-label">Snow in past winters, ${esc(l.name)}</span>
         ${snowHistory(l)}
       </section>`;
+    body += parkSection(l);
     body += `<section class="alt">
         <h3>Resorts within reach</h3>
         <p class="hint">${r.length} resort${r.length === 1 ? "" : "s"}, nearest in ${mins(r[0].link.min)}.${savings.length ? ` Cheaper than staying in ${savings.length} of them.` : ""}</p>
@@ -942,6 +987,15 @@ function renderCompareTable() {
         if (l.skiArea) return `${l.skiArea.pisteKm} km<small>${esc(l.skiArea.name)}</small>`;
         const b = bestSkiFrom(l);
         return `${b.place.skiArea.pisteKm} km<small>${esc(b.place.skiArea.name)}, ${mins(b.link.min)} away</small>`;
+      },
+    },
+    {
+      label: "Snow park",
+      vals: cols.map((l) => PARK_RANK[parkOf(l).level]),
+      win: Math.max,
+      cell: (l) => {
+        const k = parkOf(l);
+        return `${model.index.parkLevels[k.level]}${k.link ? `<small>at ${esc(k.place.name)}, ${mins(k.link.min)} away</small>` : ""}`;
       },
     },
     {
@@ -1171,6 +1225,11 @@ function bindControls() {
     applyFilters();
     if (state.selected) renderDetail(model.byId.get(state.selected));
   }));
+  $$("#f-park button").forEach((b) => b.addEventListener("click", () => {
+    state.park = b.dataset.v;
+    $$("#f-park button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    applyFilters();
+  }));
   $("#f-beginner").addEventListener("click", (e) => {
     state.beginner = !state.beginner;
     e.currentTarget.setAttribute("aria-pressed", state.beginner);
@@ -1354,6 +1413,7 @@ function planOf() {
     carFree: state.carFree,
     snowSure: state.snowSure,
     beginner: state.beginner,
+    park: state.park,
     snowLayer: state.snowLayer,
     sort: state.sort,
     saved: [...state.saved],
@@ -1407,6 +1467,7 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   state.carFree = p.carFree === true;
   state.snowSure = p.snowSure === true;
   state.beginner = p.beginner === true;
+  state.park = ["good", "awesome"].includes(p.park) ? p.park : "any";
   state.snowLayer = p.snowLayer === true;
   if (["fit", "time", "cost", "price", "altitude", "ski", "snow"].includes(p.sort)) state.sort = p.sort;
   if (mergeSaved) for (const id of ids(p.saved)) state.saved.add(id);
@@ -1500,6 +1561,7 @@ function syncControls() {
   $("#f-carfree").checked = state.carFree;
   $("#f-snow").checked = state.snowSure;
   $("#f-beginner").setAttribute("aria-pressed", state.beginner);
+  pressed("#f-park button", (v) => v === state.park);
   $("#sort").value = state.sort;
   $("#show-saved").setAttribute("aria-pressed", state.show === "saved");
   $(".filters").hidden = state.show === "saved";

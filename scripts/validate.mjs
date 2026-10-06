@@ -54,6 +54,8 @@ for (const c of index.countries) {
       need(l.topAltitude >= l.altitude, "topAltitude must be at or above altitude");
       need(l.skiArea?.name && l.skiArea.pisteKm > 0, "skiArea needs name and pisteKm");
       need(l.levels?.length && l.levels.every((v) => LEVELS.includes(v)), "levels invalid");
+      need(l.park && l.park.level in (index.parkLevels || {}) && typeof l.park.note === "string" && l.park.note.length > 0,
+        `park must have a level (${Object.keys(index.parkLevels || {}).join(", ")}) and a note`);
       need(/^\d{4}-\d{2}-\d{2}$/.test(l.season?.open) && /^\d{4}-\d{2}-\d{2}$/.test(l.season?.close) && l.season.open < l.season.close,
         "season needs open and close dates (YYYY-MM-DD), open first");
       need(["many", "some", "few"].includes(l.school?.english) && l.school.skiFrom >= 2 && l.school.skiFrom <= 6,
