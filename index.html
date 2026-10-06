@@ -70,6 +70,7 @@
               <button type="button" id="cur-eur" data-v="EUR" aria-pressed="false">€</button>
             </div>
           </div>
+          <div class="trip-group">
           <div class="trip-grid">
             <label for="t-nights">Nights<input type="number" id="t-nights" min="1" max="21" value="7" inputmode="numeric"></label>
             <label for="t-days">Ski days<input type="number" id="t-days" min="1" max="21" value="6" inputmode="numeric"></label>
@@ -83,17 +84,26 @@
             </div>
           </div>
           <div class="kid-ages" id="kid-ages"></div>
-          <label class="arrive" for="t-week">Week<select id="t-week"></select></label>
-          <p class="week-note" id="week-note"></p>
-          <div class="segmented three" id="t-lessons" role="group" aria-label="Ski lessons">
-            <button type="button" id="t-lessons-none" data-v="none" aria-pressed="false">No lessons</button>
-            <button type="button" id="t-lessons-kids" data-v="kids" aria-pressed="false">Kids' lessons</button>
-            <button type="button" id="t-lessons-all" data-v="all" aria-pressed="true">Everyone</button>
           </div>
-          <label class="toggle" for="t-hire"><input type="checkbox" id="t-hire" checked><span>Include ski hire</span></label>
-          <div class="segmented two" id="t-transport" role="group" aria-label="Getting around">
-            <button type="button" id="t-shuttle" data-v="shuttle" aria-pressed="true">Shuttle and bus</button>
-            <button type="button" id="t-car" data-v="car" aria-pressed="false">Hire car</button>
+          <div class="trip-group">
+            <label class="arrive" for="t-week">Week<select id="t-week"></select></label>
+            <p class="week-note" id="week-note"></p>
+          </div>
+          <div class="trip-group">
+            <span class="sub-label">Ski lessons</span>
+            <div class="segmented three" id="t-lessons" role="group" aria-label="Ski lessons">
+              <button type="button" id="t-lessons-none" data-v="none" aria-pressed="false">No lessons</button>
+              <button type="button" id="t-lessons-kids" data-v="kids" aria-pressed="false">Kids' lessons</button>
+              <button type="button" id="t-lessons-all" data-v="all" aria-pressed="true">Everyone</button>
+            </div>
+            <label class="toggle" for="t-hire"><input type="checkbox" id="t-hire" checked><span>Include ski hire</span></label>
+          </div>
+          <div class="trip-group">
+            <span class="sub-label">Getting around</span>
+            <div class="segmented two" id="t-transport" role="group" aria-label="Getting around">
+              <button type="button" id="t-shuttle" data-v="shuttle" aria-pressed="true">Shuttle and bus</button>
+              <button type="button" id="t-car" data-v="car" aria-pressed="false">Hire car</button>
+            </div>
           </div>
         </div>
 
