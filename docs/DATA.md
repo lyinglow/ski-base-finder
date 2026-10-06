@@ -122,3 +122,14 @@ npm run validate
 ```
 
 It checks ids, required fields, coordinates, price bands, and that every link points at a real resort. Run it before every commit.
+
+## Ski lifts
+
+`data/lifts.json` holds the working lifts shown when a place is tapped. It is built, not edited by hand:
+
+```
+curl -o lifts.geojson https://tiles.openskimap.org/geojson/lifts.geojson
+python3 scripts/lifts/build.py lifts.geojson
+```
+
+Each resort gets every lift in the ski areas within 2.5 km of it, so a linked area shows whole. A feeder town shows the lifts of the resorts it reaches. Data from OpenSkiMap, © OpenStreetMap contributors (ODbL). Rebuild it each autumn, or after adding resorts.

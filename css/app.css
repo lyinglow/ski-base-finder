@@ -428,6 +428,14 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .mk.origin { background: var(--ink); border-radius: 3px; }
 .ln { display: inline-block; width: 20px; height: 0; border-top: 3px solid var(--base); }
 .ln.road { border-top-style: dashed; }
+.ln.ski { border-top: 2px solid #fff; box-shadow: 0 0 0 1px rgba(11, 21, 32, 0.5); }
+.lift-pop .maplibregl-popup-content {
+  padding: 6px 10px; border-radius: 8px; font: 13px/1.3 var(--font-body);
+  background: var(--panel); color: var(--ink); box-shadow: var(--shadow);
+}
+.lift-pop .maplibregl-popup-content b { display: block; font-weight: 600; }
+.lift-pop .maplibregl-popup-content span { color: var(--muted); }
+.lift-pop .maplibregl-popup-tip { display: none; }
 
 /* markers */
 .marker {

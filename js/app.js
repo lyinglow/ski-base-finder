@@ -1,7 +1,7 @@
 import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
 import { tripCost, skiTarget } from "./cost.js";
 import { fitScore, seasonState } from "./fit.js";
-import { createMap, setBasemap, setTerrain, setLinks, setReach, setSnowLayer, HOME_VIEW } from "./map.js";
+import { createMap, setBasemap, setTerrain, setLinks, setLifts, setReach, setSnowLayer, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
 const $ = (s) => document.querySelector(s);
@@ -68,6 +68,9 @@ async function init() {
   updateOriginMarkers();
   for (const l of model.locations) addMarker(l);
   map.on("zoom", updateLabelMode);
+  map.on("click", "lifts-line", showLiftName);
+  map.on("mouseenter", "lifts-line", () => { map.getCanvas().style.cursor = "pointer"; });
+  map.on("mouseleave", "lifts-line", () => { map.getCanvas().style.cursor = ""; });
   updateLabelMode();
 
   map.once("load", () => { if (!state.selected) airportView(); updateReach(lastVisible); updateSnowLayer(); });
@@ -425,6 +428,7 @@ function select(id) {
   }
   $("#map").classList.add("has-selection");
   drawLinks(pairs, id);
+  drawLifts(l);
   state.detailMin = false;
   closeTripSheet();
   renderDetail(l);
@@ -455,7 +459,41 @@ function clearSelection() {
   $("#map").classList.remove("has-selection");
   for (const { el } of markers.values()) el.classList.remove("is-selected", "is-related");
   drawLinks([]);
+  drawLifts(null);
   applyFilters();
+}
+
+// Lifts of the selected resort, or of every resort a feeder town reaches. Loaded on first use.
+let liftData = null;
+let liftPopup = null;
+const LIFT_KIND = { cabin: "Gondola or cable car", chair: "Chairlift", surface: "Drag lift" };
+
+async function drawLifts(place) {
+  liftPopup?.remove();
+  if (!place) { setLifts(map, []); return; }
+  try {
+    liftData ||= await fetch("data/lifts.json").then((r) => r.json());
+  } catch {
+    return; // no lifts is fine; the rest of the map still works
+  }
+  if (state.selected !== place.id) return; // another place was picked while loading
+  const resorts = place.type === "resort" ? [place.id] : (place.links || []).map((k) => k.to);
+  const ids = new Set(resorts.flatMap((r) => liftData.byResort[r] || []));
+  setLifts(map, [...ids].map((i) => {
+    const [name, kind, coordinates] = liftData.lifts[i];
+    return { type: "Feature", properties: { name, kind }, geometry: { type: "LineString", coordinates } };
+  }));
+}
+
+function showLiftName(e) {
+  const f = e.features?.[0];
+  if (!f) return;
+  liftPopup?.remove();
+  const { name, kind } = f.properties;
+  liftPopup = new maplibregl.Popup({ closeButton: false, className: "lift-pop", offset: 8 })
+    .setLngLat(e.lngLat)
+    .setHTML(`${name ? `<b>${esc(name)}</b>` : ""}<span>${LIFT_KIND[kind]}</span>`)
+    .addTo(map);
 }
 
 function drawLinks(pairs, selectedId) {

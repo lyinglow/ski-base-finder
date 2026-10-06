@@ -38,6 +38,7 @@ function style() {
       hillshadeDem: { type: "raster-dem", tiles: [TERRAIN_TILES], encoding: "terrarium", tileSize: 256, maxzoom: 14 },
       links: { type: "geojson", data: empty() },
       reach: { type: "geojson", data: empty() },
+      lifts: { type: "geojson", data: empty(), attribution: "Lifts: OpenSkiMap, © OpenStreetMap contributors" },
     },
     layers: [
       { id: "satellite", type: "raster", source: "satellite" },
@@ -50,6 +51,22 @@ function style() {
         id: "reach-line", type: "line", source: "reach",
         layout: { "line-cap": "round" },
         paint: { "line-color": "#ffffff", "line-width": 2, "line-opacity": 0.85, "line-dasharray": [2, 2] },
+      },
+      {
+        id: "lifts-casing", type: "line", source: "lifts",
+        layout: { "line-cap": "round" },
+        paint: { "line-color": "#0b1520", "line-opacity": 0.5, "line-width": ["interpolate", ["linear"], ["zoom"], 10, 2.5, 14, 5] },
+      },
+      {
+        id: "lifts-line", type: "line", source: "lifts",
+        layout: { "line-cap": "round" },
+        paint: {
+          "line-color": "#ffffff",
+          // Cabins thickest, chairs next, drags and tows thin.
+          "line-width": ["interpolate", ["linear"], ["zoom"], 10,
+            ["match", ["get", "kind"], "cabin", 1.6, "chair", 1.2, 0.7], 14,
+            ["match", ["get", "kind"], "cabin", 3.2, "chair", 2.4, 1.4]],
+        },
       },
       {
         id: "links-casing", type: "line", source: "links",
@@ -122,6 +139,12 @@ export function setSnowLayer(map, cfg, month) {
     map.addLayer({ id: "snow-cover", type: "raster", source: "snow", paint: { "raster-opacity": 0.9, "raster-fade-duration": 0 } }, "reach-line");
   }
   map.setLayoutProperty("snow-cover", "visibility", "visible");
+}
+
+// Ski lifts for the place in focus. features: GeoJSON LineStrings with name and kind.
+export function setLifts(map, features) {
+  const src = map.getSource("lifts");
+  if (src) src.setData({ type: "FeatureCollection", features });
 }
 
 export function setLinks(map, features) {
