@@ -30,8 +30,9 @@ export function tripCost(stay, ski, trip, model) {
   const passShare = (age) => (age < c.passFreeUnder ? 0 : age <= c.childPassTo ? c.childPass : c.teenPass);
   const liftPasses = passDay * trip.skiDays * (trip.adults + kids.reduce((s, a) => s + passShare(a), 0));
 
-  // Lessons and hire are bought where you ski, and cost more in pricier resorts.
-  const local = c.resortPriceFactor[ski.price] ?? 1;
+  // Lessons and hire are bought where you ski, and cost more in pricier resorts and dearer countries.
+  const countryFactor = (place) => model.countries.find((k) => k.code === place.country)?.costFactor ?? 1;
+  const local = (c.resortPriceFactor[ski.price] ?? 1) * countryFactor(ski);
   const dayShare = trip.skiDays / 6;
   let lessons = 0;
   let childcare = 0;
@@ -61,7 +62,7 @@ export function tripCost(stay, ski, trip, model) {
     dailyHow = "Lift from the door";
   } else if (link && !usesCar && hopBy.includes("bus")) {
     const free = link.min <= c.bus.freeWithinMin;
-    daily = free ? 0 : people * c.bus.farePerDay * trip.skiDays;
+    daily = free ? 0 : people * c.bus.farePerDay * trip.skiDays * countryFactor(stay);
     dailyHow = free ? "Free ski bus" : "Bus";
   } else if (link) {
     const km = link.min * c.car.mountainKmPerMin;

@@ -1,0 +1,5322 @@
+{
+  "country": "CH",
+  "name": "Switzerland",
+  "updated": "2026-10",
+  "notes": "Swiss prices are worked out in euros. Lift passes are typical 6-day prices; many Swiss resorts now use dynamic pricing, so booking early is cheaper.",
+  "locations": [
+    {
+      "id": "ch-champery",
+      "type": "resort",
+      "name": "Champéry",
+      "region": "Valais",
+      "coords": [
+        6.8703,
+        46.1775
+      ],
+      "altitude": 1050,
+      "topAltitude": 2277,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "character": "Chalet village with a lively main street. A cable car climbs to the Swiss side of the Portes du Soleil.",
+      "transfer": "Shared shuttle about 1h30. Train from Aigle or Monthey to the village.",
+      "links": [
+        {
+          "to": "ch-les-crosets",
+          "min": 10,
+          "by": [
+            "lift"
+          ],
+          "note": "Cable car up to Planachaux, ski to Les Crosets"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "Small fun zones. The bigger parks are at Les Crosets and Avoriaz."
+      },
+      "expert": {
+        "level": "good",
+        "note": "The Swiss Wall at Chavanette, one of the steepest marked runs in the Alps."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 127,
+          "min": 90
+        },
+        "LYS": {
+          "km": 271,
+          "min": 160
+        },
+        "CMF": {
+          "km": 212,
+          "min": 135
+        },
+        "GNB": {
+          "km": 292,
+          "min": 170
+        },
+        "TRN": {
+          "km": 227,
+          "min": 170
+        },
+        "ZRH": {
+          "km": 245,
+          "min": 150
+        },
+        "BSL": {
+          "km": 225,
+          "min": 145
+        }
+      }
+    },
+    {
+      "id": "ch-morgins",
+      "type": "resort",
+      "name": "Morgins",
+      "region": "Valais",
+      "coords": [
+        6.8577,
+        46.2378
+      ],
+      "altitude": 1350,
+      "topAltitude": 2000,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Beginner area beside the village, with a short walk from most chalets.",
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Quiet family village on the Swiss side of the pass, linked by lift and piste to Châtel.",
+      "transfer": "Shared shuttle about 1h30. Bus from Monthey or Troistorrents station.",
+      "links": [
+        {
+          "to": "fr-chatel",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across to Châtel and the French side"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park with a few jumps and rails."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Gentle home slopes, with the steeper Swiss side a few lifts away."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 128,
+          "min": 90
+        },
+        "LYS": {
+          "km": 223,
+          "min": 155
+        },
+        "CMF": {
+          "km": 164,
+          "min": 125
+        },
+        "GNB": {
+          "km": 244,
+          "min": 160
+        },
+        "TRN": {
+          "km": 229,
+          "min": 175
+        },
+        "ZRH": {
+          "km": 246,
+          "min": 150
+        },
+        "BSL": {
+          "km": 226,
+          "min": 145
+        }
+      }
+    },
+    {
+      "id": "ch-les-crosets",
+      "type": "resort",
+      "name": "Les Crosets",
+      "region": "Valais",
+      "coords": [
+        6.8336,
+        46.1842
+      ],
+      "altitude": 1660,
+      "topAltitude": 2277,
+      "townSize": "small",
+      "price": 2,
+      "family": false,
+      "vibes": [
+        "skiin",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Small ski-in ski-out hamlet in the middle of the Swiss Portes du Soleil. Big après-ski bar, little else.",
+      "transfer": "Shared shuttle about 1h40. Bus from Val-d'Illiez.",
+      "links": [
+        {
+          "to": "fr-avoriaz",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski over Chavanette to Avoriaz"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park with easy and medium lines, close to the hamlet.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep runs and off-piste towards the Swiss Wall and Avoriaz."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 132,
+          "min": 105
+        },
+        "LYS": {
+          "km": 276,
+          "min": 175
+        },
+        "CMF": {
+          "km": 218,
+          "min": 150
+        },
+        "GNB": {
+          "km": 298,
+          "min": 185
+        },
+        "TRN": {
+          "km": 233,
+          "min": 185
+        },
+        "ZRH": {
+          "km": 250,
+          "min": 165
+        },
+        "BSL": {
+          "km": 230,
+          "min": 155
+        }
+      }
+    },
+    {
+      "id": "ch-champoussin",
+      "type": "resort",
+      "name": "Champoussin",
+      "region": "Valais",
+      "coords": [
+        6.8656,
+        46.2083
+      ],
+      "altitude": 1580,
+      "topAltitude": 2277,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "skiin"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Small, quiet ski-in ski-out spot above Val-d'Illiez, on the lift link to Les Crosets.",
+      "transfer": "Car about 1h40. Bus from Val-d'Illiez in season.",
+      "links": [
+        {
+          "to": "ch-les-crosets",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts and pistes to Les Crosets"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "Only small fun zones nearby. Les Crosets has the park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising, with the steeper Swiss Wall area nearby."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 129,
+          "min": 100
+        },
+        "LYS": {
+          "km": 273,
+          "min": 170
+        },
+        "CMF": {
+          "km": 215,
+          "min": 145
+        },
+        "GNB": {
+          "km": 295,
+          "min": 180
+        },
+        "TRN": {
+          "km": 230,
+          "min": 180
+        },
+        "ZRH": {
+          "km": 247,
+          "min": 160
+        },
+        "BSL": {
+          "km": 227,
+          "min": 155
+        }
+      }
+    },
+    {
+      "id": "ch-torgon",
+      "type": "resort",
+      "name": "Torgon",
+      "region": "Valais",
+      "coords": [
+        6.8744,
+        46.3164
+      ],
+      "altitude": 1100,
+      "topAltitude": 2000,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Portes du Soleil",
+        "pisteKm": 600,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-03-28"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Small, low and quiet village at the northern tip of the Portes du Soleil, linked to La Chapelle-d'Abondance.",
+      "transfer": "Car about 1h20. Bus from Vionnaz station.",
+      "links": [
+        {
+          "to": "fr-la-chapelle",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts over to La Chapelle-d'Abondance"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Mostly gentle and low."
+      },
+      "runShare": {
+        "green": 9,
+        "blue": 51,
+        "red": 34,
+        "black": 6
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 118,
+          "min": 85
+        },
+        "LYS": {
+          "km": 262,
+          "min": 155
+        },
+        "CMF": {
+          "km": 204,
+          "min": 130
+        },
+        "GNB": {
+          "km": 284,
+          "min": 165
+        },
+        "TRN": {
+          "km": 232,
+          "min": 170
+        },
+        "ZRH": {
+          "km": 236,
+          "min": 140
+        },
+        "BSL": {
+          "km": 216,
+          "min": 135
+        }
+      }
+    },
+    {
+      "id": "ch-villars",
+      "type": "resort",
+      "name": "Villars",
+      "region": "Vaud",
+      "coords": [
+        7.0558,
+        46.2989
+      ],
+      "altitude": 1250,
+      "topAltitude": 2120,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 110,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Rack railway from the village straight to the gentle Bretaye bowl.",
+      "skiArea": {
+        "name": "Villars-Gryon-Les Diablerets",
+        "pisteKm": 125,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
+      "character": "Year-round village with international schools, shops and a rack railway up to Bretaye. Easy, sunny skiing.",
+      "transfer": "Shared shuttle about 1h20. Train to Bex, then rack railway to the village.",
+      "links": [
+        {
+          "to": "ch-les-diablerets",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across via Meilleret"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park at Bretaye with a beginner line.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste and steeper runs, with Glacier 3000 a drive away."
+      },
+      "searchName": "Villars-sur-Ollon",
+      "runShare": {
+        "green": 2,
+        "blue": 64,
+        "red": 32,
+        "black": 2
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 122,
+          "min": 90
+        },
+        "LYS": {
+          "km": 266,
+          "min": 160
+        },
+        "CMF": {
+          "km": 208,
+          "min": 135
+        },
+        "GNB": {
+          "km": 288,
+          "min": 170
+        },
+        "TRN": {
+          "km": 228,
+          "min": 170
+        },
+        "ZRH": {
+          "km": 240,
+          "min": 145
+        },
+        "BSL": {
+          "km": 220,
+          "min": 140
+        }
+      }
+    },
+    {
+      "id": "ch-leysin",
+      "type": "resort",
+      "name": "Leysin",
+      "region": "Vaud",
+      "coords": [
+        7.0125,
+        46.3436
+      ],
+      "altitude": 1260,
+      "topAltitude": 2205,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 75,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Leysin-Les Mosses",
+        "pisteKm": 60,
+        "pass6": 260
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Sunny balcony village with international schools and a long freestyle history. Good value for Switzerland.",
+      "transfer": "Shared shuttle about 1h20. Train to Aigle, then the rack railway up.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "A well-known freestyle park with a beginner line.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste from the Berneuse."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 71,
+        "red": 22,
+        "black": 6
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 124,
+          "min": 90
+        },
+        "LYS": {
+          "km": 268,
+          "min": 160
+        },
+        "CMF": {
+          "km": 210,
+          "min": 135
+        },
+        "GNB": {
+          "km": 290,
+          "min": 170
+        },
+        "TRN": {
+          "km": 238,
+          "min": 175
+        },
+        "ZRH": {
+          "km": 242,
+          "min": 145
+        },
+        "BSL": {
+          "km": 222,
+          "min": 140
+        }
+      }
+    },
+    {
+      "id": "ch-les-diablerets",
+      "type": "resort",
+      "name": "Les Diablerets",
+      "region": "Vaud",
+      "coords": [
+        7.1588,
+        46.3497
+      ],
+      "altitude": 1150,
+      "topAltitude": 2971,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Villars-Gryon-Les Diablerets",
+        "pisteKm": 125,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "snowAdjust": 200,
+      "snowNote": "Glacier 3000 nearby keeps snow late in the season.",
+      "character": "Traditional chalet village under the cliffs of the Diablerets, with Glacier 3000 above for high snow.",
+      "transfer": "Shared shuttle about 1h30. Train from Aigle to the village.",
+      "links": [
+        {
+          "to": "ch-villars",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across to Villars"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs and off-piste, plus Glacier 3000."
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 64,
+        "red": 32,
+        "black": 2
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 129,
+          "min": 95
+        },
+        "LYS": {
+          "km": 273,
+          "min": 165
+        },
+        "CMF": {
+          "km": 215,
+          "min": 140
+        },
+        "GNB": {
+          "km": 295,
+          "min": 175
+        },
+        "TRN": {
+          "km": 243,
+          "min": 180
+        },
+        "ZRH": {
+          "km": 247,
+          "min": 150
+        },
+        "BSL": {
+          "km": 227,
+          "min": 145
+        }
+      }
+    },
+    {
+      "id": "ch-verbier",
+      "type": "resort",
+      "name": "Verbier",
+      "region": "Valais",
+      "coords": [
+        7.2286,
+        46.0961
+      ],
+      "altitude": 1500,
+      "topAltitude": 3330,
+      "townSize": "medium",
+      "price": 3,
+      "stayPerPerson": 200,
+      "family": false,
+      "vibes": [
+        "lively",
+        "upmarket"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "4 Vallées",
+        "pisteKm": 410,
+        "pass6": 445
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 18
+      },
+      "character": "Famous freeride resort on a sunny shelf, with big nightlife and big prices. The heart of the 4 Vallées.",
+      "transfer": "Shared shuttle about 2h. Train to Le Châble, then the gondola up.",
+      "links": [
+        {
+          "to": "ch-nendaz",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts over Les Attelas and Tortin"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park at La Chaux with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Mont Fort, the Tortin mogul field and famous off-piste."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 162,
+          "min": 115
+        },
+        "LYS": {
+          "km": 306,
+          "min": 185
+        },
+        "CMF": {
+          "km": 200,
+          "min": 150
+        },
+        "GNB": {
+          "km": 280,
+          "min": 185
+        },
+        "TRN": {
+          "km": 191,
+          "min": 145
+        },
+        "ZRH": {
+          "km": 280,
+          "min": 170
+        },
+        "BSL": {
+          "km": 260,
+          "min": 165
+        }
+      }
+    },
+    {
+      "id": "ch-nendaz",
+      "type": "resort",
+      "name": "Nendaz",
+      "region": "Valais",
+      "coords": [
+        7.2967,
+        46.1867
+      ],
+      "altitude": 1365,
+      "topAltitude": 3330,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "4 Vallées",
+        "pisteKm": 410,
+        "pass6": 445
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Big, sunny village above Sion with real shops and calmer prices, linked to the whole 4 Vallées.",
+      "transfer": "Shared shuttle about 2h. Bus from Sion.",
+      "links": [
+        {
+          "to": "ch-verbier",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts over Tortin to Verbier"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for beginners and improvers.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Mont Fort and Tortin are close, with big off-piste."
+      },
+      "searchName": "Haute-Nendaz",
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 167,
+          "min": 115
+        },
+        "LYS": {
+          "km": 311,
+          "min": 185
+        },
+        "CMF": {
+          "km": 218,
+          "min": 155
+        },
+        "GNB": {
+          "km": 298,
+          "min": 190
+        },
+        "TRN": {
+          "km": 226,
+          "min": 170
+        },
+        "ZRH": {
+          "km": 285,
+          "min": 170
+        },
+        "BSL": {
+          "km": 265,
+          "min": 165
+        }
+      }
+    },
+    {
+      "id": "ch-veysonnaz",
+      "type": "resort",
+      "name": "Veysonnaz",
+      "region": "Valais",
+      "coords": [
+        7.3353,
+        46.1958
+      ],
+      "altitude": 1400,
+      "topAltitude": 3330,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "4 Vallées",
+        "pisteKm": 410,
+        "pass6": 445
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 3
+      },
+      "character": "Small, quiet village with a famous World Cup run down to it, linked to the 4 Vallées.",
+      "transfer": "Shared shuttle about 2h. Bus from Sion.",
+      "links": [
+        {
+          "to": "ch-thyon",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts up to Thyon"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "The steep Piste de l'Ours, with the big terrain of the 4 Vallées beyond."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 169,
+          "min": 115
+        },
+        "LYS": {
+          "km": 313,
+          "min": 185
+        },
+        "CMF": {
+          "km": 219,
+          "min": 160
+        },
+        "GNB": {
+          "km": 299,
+          "min": 195
+        },
+        "TRN": {
+          "km": 228,
+          "min": 170
+        },
+        "ZRH": {
+          "km": 287,
+          "min": 170
+        },
+        "BSL": {
+          "km": 267,
+          "min": 165
+        }
+      }
+    },
+    {
+      "id": "ch-thyon",
+      "type": "resort",
+      "name": "Thyon",
+      "region": "Valais",
+      "coords": [
+        7.3728,
+        46.1817
+      ],
+      "altitude": 2100,
+      "topAltitude": 2900,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Beginner slopes right outside the apartments.",
+      "skiArea": {
+        "name": "4 Vallées",
+        "pisteKm": 410,
+        "pass6": 445
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "High, purpose-built ski-in ski-out spot with wide views, on the quiet side of the 4 Vallées.",
+      "transfer": "Shared shuttle about 2h10. Bus from Sion.",
+      "links": [
+        {
+          "to": "ch-veysonnaz",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski down to Veysonnaz"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A well-known park with lines for beginners and improvers.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste on the open slopes."
+      },
+      "searchName": "Thyon 2000",
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 182,
+          "min": 125
+        },
+        "LYS": {
+          "km": 325,
+          "min": 200
+        },
+        "CMF": {
+          "km": 232,
+          "min": 170
+        },
+        "GNB": {
+          "km": 312,
+          "min": 205
+        },
+        "TRN": {
+          "km": 240,
+          "min": 185
+        },
+        "ZRH": {
+          "km": 299,
+          "min": 185
+        },
+        "BSL": {
+          "km": 279,
+          "min": 180
+        }
+      }
+    },
+    {
+      "id": "ch-la-tzoumaz",
+      "type": "resort",
+      "name": "La Tzoumaz",
+      "region": "Valais",
+      "coords": [
+        7.2361,
+        46.1442
+      ],
+      "altitude": 1500,
+      "topAltitude": 3330,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "4 Vallées",
+        "pisteKm": 410,
+        "pass6": 445
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 3
+      },
+      "character": "Quiet village in the trees on the Savoleyres side of Verbier, at lower prices.",
+      "transfer": "Car about 1h50. Bus from Riddes.",
+      "links": [
+        {
+          "to": "ch-verbier",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski over Savoleyres to Verbier"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Tree runs locally, with Verbier's big terrain over the hill."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 40,
+        "red": 50,
+        "black": 10
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 160,
+          "min": 105
+        },
+        "LYS": {
+          "km": 303,
+          "min": 180
+        },
+        "CMF": {
+          "km": 210,
+          "min": 150
+        },
+        "GNB": {
+          "km": 290,
+          "min": 185
+        },
+        "TRN": {
+          "km": 219,
+          "min": 165
+        },
+        "ZRH": {
+          "km": 278,
+          "min": 165
+        },
+        "BSL": {
+          "km": 257,
+          "min": 160
+        }
+      }
+    },
+    {
+      "id": "ch-crans-montana",
+      "type": "resort",
+      "name": "Crans-Montana",
+      "region": "Valais",
+      "coords": [
+        7.4808,
+        46.3111
+      ],
+      "altitude": 1500,
+      "topAltitude": 3000,
+      "townSize": "large",
+      "price": 3,
+      "stayPerPerson": 150,
+      "family": true,
+      "vibes": [
+        "upmarket",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Crans-Montana",
+        "pisteKm": 140,
+        "pass6": 380
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "character": "Large, sunny resort town on a plateau with smart shops, golf-course views and long, easy runs.",
+      "transfer": "Shared shuttle about 2h. Train to Sierre, then the funicular up.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Mostly cruising, with steeper runs and off-piste from the Plaine Morte glacier."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 20,
+        "red": 63,
+        "black": 17
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 182,
+          "min": 125
+        },
+        "LYS": {
+          "km": 326,
+          "min": 195
+        },
+        "CMF": {
+          "km": 233,
+          "min": 170
+        },
+        "GNB": {
+          "km": 313,
+          "min": 205
+        },
+        "TRN": {
+          "km": 241,
+          "min": 185
+        },
+        "ZRH": {
+          "km": 300,
+          "min": 185
+        },
+        "BSL": {
+          "km": 280,
+          "min": 180
+        }
+      }
+    },
+    {
+      "id": "ch-anzere",
+      "type": "resort",
+      "name": "Anzère",
+      "region": "Valais",
+      "coords": [
+        7.3983,
+        46.2958
+      ],
+      "altitude": 1500,
+      "topAltitude": 2420,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Car-free village square with the nursery slope beside it.",
+      "skiArea": {
+        "name": "Anzère",
+        "pisteKm": 58,
+        "pass6": 290
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 3
+      },
+      "character": "Small, car-free sunny village above Sion with a compact ski area. Calm and easy.",
+      "transfer": "Shared shuttle about 2h. Bus from Sion.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste on the open slopes."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 37,
+        "red": 44,
+        "black": 19
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 175,
+          "min": 120
+        },
+        "LYS": {
+          "km": 319,
+          "min": 190
+        },
+        "CMF": {
+          "km": 226,
+          "min": 160
+        },
+        "GNB": {
+          "km": 306,
+          "min": 195
+        },
+        "TRN": {
+          "km": 234,
+          "min": 175
+        },
+        "ZRH": {
+          "km": 293,
+          "min": 175
+        },
+        "BSL": {
+          "km": 273,
+          "min": 170
+        }
+      }
+    },
+    {
+      "id": "ch-grimentz",
+      "type": "resort",
+      "name": "Grimentz-Zinal",
+      "region": "Valais",
+      "coords": [
+        7.5761,
+        46.1797
+      ],
+      "altitude": 1570,
+      "topAltitude": 2900,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Grimentz-Zinal",
+        "pisteKm": 115,
+        "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Old wooden village with flower boxes and dark larch chalets, linked by cable car to Zinal. Big off-piste.",
+      "transfer": "Car about 2h20. Bus from Sierre.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Big off-piste and steep runs in a quiet valley."
+      },
+      "searchName": "Grimentz",
+      "runShare": {
+        "green": 0,
+        "blue": 32,
+        "red": 36,
+        "black": 32
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 195,
+          "min": 130
+        },
+        "LYS": {
+          "km": 339,
+          "min": 200
+        },
+        "CMF": {
+          "km": 246,
+          "min": 175
+        },
+        "GNB": {
+          "km": 326,
+          "min": 210
+        },
+        "TRN": {
+          "km": 254,
+          "min": 185
+        },
+        "ZRH": {
+          "km": 313,
+          "min": 185
+        },
+        "BSL": {
+          "km": 293,
+          "min": 180
+        }
+      }
+    },
+    {
+      "id": "ch-ovronnaz",
+      "type": "resort",
+      "name": "Ovronnaz",
+      "region": "Valais",
+      "coords": [
+        7.1683,
+        46.1992
+      ],
+      "altitude": 1350,
+      "topAltitude": 2500,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Ovronnaz",
+        "pisteKm": 30,
+        "pass6": 220
+      },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-03-28"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 3
+      },
+      "character": "Small, sunny village with thermal baths. Gentle skiing for families on a budget.",
+      "transfer": "Car about 1h40. Bus from Leytron.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 9,
+        "red": 72,
+        "black": 18
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 155,
+          "min": 105
+        },
+        "LYS": {
+          "km": 299,
+          "min": 180
+        },
+        "CMF": {
+          "km": 206,
+          "min": 150
+        },
+        "GNB": {
+          "km": 286,
+          "min": 185
+        },
+        "TRN": {
+          "km": 214,
+          "min": 165
+        },
+        "ZRH": {
+          "km": 273,
+          "min": 165
+        },
+        "BSL": {
+          "km": 253,
+          "min": 160
+        }
+      }
+    },
+    {
+      "id": "ch-leukerbad",
+      "type": "resort",
+      "name": "Leukerbad",
+      "region": "Valais",
+      "coords": [
+        7.6272,
+        46.3794
+      ],
+      "altitude": 1400,
+      "topAltitude": 2700,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Torrent",
+        "pisteKm": 50,
+        "pass6": 260
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Spa town under huge cliffs, with Europe's largest Alpine thermal baths. Skiing across the valley at Torrent.",
+      "transfer": "Shared shuttle about 2h20. Bus from Leuk station.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs and off-piste at Torrent."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 12,
+        "red": 56,
+        "black": 32
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 198,
+          "min": 130
+        },
+        "LYS": {
+          "km": 341,
+          "min": 205
+        },
+        "CMF": {
+          "km": 248,
+          "min": 175
+        },
+        "GNB": {
+          "km": 328,
+          "min": 210
+        },
+        "TRN": {
+          "km": 256,
+          "min": 190
+        },
+        "ZRH": {
+          "km": 315,
+          "min": 190
+        },
+        "BSL": {
+          "km": 295,
+          "min": 185
+        }
+      }
+    },
+    {
+      "id": "ch-saas-fee",
+      "type": "resort",
+      "name": "Saas-Fee",
+      "region": "Valais",
+      "coords": [
+        7.9281,
+        46.1083
+      ],
+      "altitude": 1800,
+      "topAltitude": 3600,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 110,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Saas-Fee",
+        "pisteKm": 100,
+        "pass6": 350
+      },
+      "season": {
+        "open": "2026-11-07",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "snowAdjust": 300,
+      "snowNote": "Glacier skiing up to 3,600 m keeps snow all season.",
+      "character": "Car-free glacier village ringed by 4,000 m peaks. Snow-sure, with skiing high on the Allalin glacier.",
+      "transfer": "Shared shuttle about 2h45. Train to Visp, then the bus up.",
+      "links": [],
+      "park": {
+        "level": "awesome",
+        "note": "A big glacier park, one of the best in the Alps, with lines for every level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "halfpipe",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "High glacier terrain and off-piste, best with a guide."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 36,
+        "red": 61,
+        "black": 3
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 227,
+          "min": 155
+        },
+        "LYS": {
+          "km": 371,
+          "min": 225
+        },
+        "CMF": {
+          "km": 278,
+          "min": 195
+        },
+        "GNB": {
+          "km": 358,
+          "min": 230
+        },
+        "TRN": {
+          "km": 278,
+          "min": 195
+        },
+        "ZRH": {
+          "km": 249,
+          "min": 175
+        },
+        "BSL": {
+          "km": 325,
+          "min": 205
+        }
+      }
+    },
+    {
+      "id": "ch-zermatt",
+      "type": "resort",
+      "name": "Zermatt",
+      "region": "Valais",
+      "coords": [
+        7.7491,
+        46.0207
+      ],
+      "altitude": 1620,
+      "topAltitude": 3883,
+      "townSize": "large",
+      "price": 3,
+      "stayPerPerson": 190,
+      "family": false,
+      "vibes": [
+        "upmarket",
+        "lively",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Matterhorn Ski Paradise",
+        "pisteKm": 360,
+        "pass6": 500
+      },
+      "season": {
+        "open": "2026-11-14",
+        "close": "2027-05-02"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "snowAdjust": 300,
+      "snowNote": "Glacier skiing up to 3,883 m keeps snow all season.",
+      "character": "Car-free town under the Matterhorn, linked to Cervinia in Italy. The highest skiing in the Alps.",
+      "transfer": "Shared shuttle about 3h15. Train via Visp to Täsch, then the shuttle train.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "A proper park on the glacier with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "High, big terrain and famous off-piste under the Matterhorn."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 21,
+        "red": 71,
+        "black": 8
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 231,
+          "min": 170
+        },
+        "LYS": {
+          "km": 374,
+          "min": 240
+        },
+        "CMF": {
+          "km": 281,
+          "min": 215
+        },
+        "GNB": {
+          "km": 361,
+          "min": 250
+        },
+        "TRN": {
+          "km": 282,
+          "min": 210
+        },
+        "ZRH": {
+          "km": 253,
+          "min": 195
+        },
+        "BSL": {
+          "km": 329,
+          "min": 225
+        }
+      }
+    },
+    {
+      "id": "ch-bettmeralp",
+      "type": "resort",
+      "name": "Bettmeralp",
+      "region": "Valais",
+      "coords": [
+        8.0628,
+        46.3917
+      ],
+      "altitude": 1950,
+      "topAltitude": 2869,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Car-free village with the beginner slopes at the door.",
+      "skiArea": {
+        "name": "Aletsch Arena",
+        "pisteKm": 104,
+        "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Car-free village in the Aletsch Arena, high above the Aletsch glacier. Reached by cable car from Betten.",
+      "transfer": "Shared shuttle about 3h. Train to Betten, then the cable car up.",
+      "links": [
+        {
+          "to": "ch-riederalp",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across to Riederalp"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for beginners and improvers.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste with glacier views."
+      },
+      "searchName": "Bettmeralp",
+      "runShare": {
+        "green": 0,
+        "blue": 49,
+        "red": 46,
+        "black": 5
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 223,
+          "min": 160
+        },
+        "LYS": {
+          "km": 367,
+          "min": 230
+        },
+        "CMF": {
+          "km": 274,
+          "min": 205
+        },
+        "GNB": {
+          "km": 354,
+          "min": 240
+        },
+        "TRN": {
+          "km": 257,
+          "min": 190
+        },
+        "ZRH": {
+          "km": 245,
+          "min": 185
+        },
+        "BSL": {
+          "km": 225,
+          "min": 180
+        }
+      }
+    },
+    {
+      "id": "ch-gstaad",
+      "type": "resort",
+      "name": "Gstaad",
+      "region": "Bern",
+      "coords": [
+        7.2864,
+        46.4747
+      ],
+      "altitude": 1050,
+      "topAltitude": 2200,
+      "townSize": "medium",
+      "price": 3,
+      "stayPerPerson": 210,
+      "family": true,
+      "vibes": [
+        "upmarket",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Gstaad Mountain Rides",
+        "pisteKm": 200,
+        "pass6": 390
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "character": "Smart chalet town with luxury shops and quiet, scattered ski areas. Glacier 3000 is nearby.",
+      "transfer": "Shared shuttle about 2h. Train via Montreux on the scenic GoldenPass line.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste, with Glacier 3000 a drive away."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 57,
+        "red": 25,
+        "black": 18
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 152,
+          "min": 115
+        },
+        "LYS": {
+          "km": 295,
+          "min": 185
+        },
+        "CMF": {
+          "km": 237,
+          "min": 160
+        },
+        "GNB": {
+          "km": 317,
+          "min": 195
+        },
+        "TRN": {
+          "km": 265,
+          "min": 200
+        },
+        "ZRH": {
+          "km": 207,
+          "min": 140
+        },
+        "BSL": {
+          "km": 186,
+          "min": 135
+        }
+      }
+    },
+    {
+      "id": "ch-adelboden",
+      "type": "resort",
+      "name": "Adelboden",
+      "region": "Bern",
+      "coords": [
+        7.5597,
+        46.4928
+      ],
+      "altitude": 1350,
+      "topAltitude": 2362,
+      "townSize": "medium",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Adelboden-Lenk",
+        "pisteKm": 185,
+        "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Traditional village at the end of a valley, home of the Chuenisbärgli World Cup slope. Linked to Lenk.",
+      "transfer": "Shared shuttle about 2h30. Train to Frutigen, then the bus.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "A well-known park with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "The steep Chuenisbärgli and some off-piste."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 51,
+        "red": 42,
+        "black": 7
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 226,
+          "min": 150
+        },
+        "LYS": {
+          "km": 369,
+          "min": 220
+        },
+        "CMF": {
+          "km": 311,
+          "min": 195
+        },
+        "GNB": {
+          "km": 391,
+          "min": 230
+        },
+        "TRN": {
+          "km": 391,
+          "min": 265
+        },
+        "ZRH": {
+          "km": 187,
+          "min": 120
+        },
+        "BSL": {
+          "km": 167,
+          "min": 115
+        }
+      }
+    },
+    {
+      "id": "ch-wengen",
+      "type": "resort",
+      "name": "Wengen",
+      "region": "Bern",
+      "coords": [
+        7.9222,
+        46.6058
+      ],
+      "altitude": 1275,
+      "topAltitude": 2500,
+      "townSize": "small",
+      "price": 3,
+      "stayPerPerson": 140,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Jungfrau Ski Region",
+        "pisteKm": 213,
+        "pass6": 380
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Car-free village on a sunny ledge under the Eiger, reached by train. Long-time British favourite.",
+      "transfer": "Shared shuttle about 2h45. Train via Interlaken and Lauterbrunnen.",
+      "links": [
+        {
+          "to": "ch-grindelwald",
+          "min": 25,
+          "by": [
+            "lift",
+            "train"
+          ],
+          "note": "Train or lifts via Kleine Scheidegg"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "The Lauberhorn run and some off-piste."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 39,
+        "red": 46,
+        "black": 14
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 226,
+          "min": 170
+        },
+        "LYS": {
+          "km": 369,
+          "min": 240
+        },
+        "CMF": {
+          "km": 311,
+          "min": 215
+        },
+        "GNB": {
+          "km": 391,
+          "min": 250
+        },
+        "TRN": {
+          "km": 389,
+          "min": 285
+        },
+        "ZRH": {
+          "km": 142,
+          "min": 125
+        },
+        "BSL": {
+          "km": 167,
+          "min": 130
+        }
+      }
+    },
+    {
+      "id": "ch-grindelwald",
+      "type": "resort",
+      "name": "Grindelwald",
+      "region": "Bern",
+      "coords": [
+        8.0414,
+        46.6242
+      ],
+      "altitude": 1034,
+      "topAltitude": 2501,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 120,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Jungfrau Ski Region",
+        "pisteKm": 213,
+        "pass6": 380
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Busy village under the Eiger north face, with skiing at First and over to Wengen.",
+      "transfer": "Shared shuttle about 2h45. Train via Interlaken.",
+      "links": [
+        {
+          "to": "ch-wengen",
+          "min": 25,
+          "by": [
+            "lift",
+            "train"
+          ],
+          "note": "Lifts or train via Kleine Scheidegg"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "A proper park at First with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste at First and the Lauberhorn."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 42,
+        "red": 43,
+        "black": 15
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 233,
+          "min": 155
+        },
+        "LYS": {
+          "km": 377,
+          "min": 225
+        },
+        "CMF": {
+          "km": 319,
+          "min": 200
+        },
+        "GNB": {
+          "km": 399,
+          "min": 235
+        },
+        "TRN": {
+          "km": 396,
+          "min": 275
+        },
+        "ZRH": {
+          "km": 149,
+          "min": 110
+        },
+        "BSL": {
+          "km": 175,
+          "min": 120
+        }
+      }
+    },
+    {
+      "id": "ch-murren",
+      "type": "resort",
+      "name": "Mürren",
+      "region": "Bern",
+      "coords": [
+        7.8925,
+        46.5592
+      ],
+      "altitude": 1650,
+      "topAltitude": 2970,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Jungfrau Ski Region",
+        "pisteKm": 213,
+        "pass6": 380
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Tiny car-free village on a cliff top, with the Schilthorn above. Quiet and dramatic.",
+      "transfer": "Shared shuttle about 3h. Train via Lauterbrunnen, then cable car or mountain railway.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep runs from the Schilthorn, home of the Inferno race."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 41,
+        "red": 40,
+        "black": 18
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 226,
+          "min": 180
+        },
+        "LYS": {
+          "km": 369,
+          "min": 250
+        },
+        "CMF": {
+          "km": 311,
+          "min": 225
+        },
+        "GNB": {
+          "km": 391,
+          "min": 260
+        },
+        "TRN": {
+          "km": 389,
+          "min": 295
+        },
+        "ZRH": {
+          "km": 142,
+          "min": 135
+        },
+        "BSL": {
+          "km": 167,
+          "min": 140
+        }
+      }
+    },
+    {
+      "id": "ch-la-dole",
+      "type": "resort",
+      "name": "La Dôle",
+      "region": "Vaud",
+      "coords": [
+        6.0997,
+        46.4253
+      ],
+      "altitude": 1220,
+      "topAltitude": 1677,
+      "townSize": "small",
+      "price": 1,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Dôle-Tuffes",
+        "pisteKm": 40,
+        "pass6": 170
+      },
+      "season": {
+        "open": "2026-12-19",
+        "close": "2027-03-14"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Small, low ski area on the Jura ridge with views over Lake Geneva and Mont Blanc. Day trips from Geneva.",
+      "transfer": "Car about 45 min from Geneva.",
+      "links": [
+        {
+          "to": "fr-les-rousses",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Same lift pass as Les Rousses"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small and gentle."
+      },
+      "searchName": "Saint-Cergue",
+      "runShare": {
+        "green": 32,
+        "blue": 43,
+        "red": 20,
+        "black": 5
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 38,
+          "min": 50
+        },
+        "LYS": {
+          "km": 182,
+          "min": 120
+        },
+        "CMF": {
+          "km": 124,
+          "min": 100
+        },
+        "GNB": {
+          "km": 204,
+          "min": 130
+        },
+        "TRN": {
+          "km": 289,
+          "min": 205
+        },
+        "ZRH": {
+          "km": 270,
+          "min": 170
+        },
+        "BSL": {
+          "km": 250,
+          "min": 165
+        }
+      }
+    },
+    {
+      "id": "ch-zinal",
+      "type": "resort",
+      "name": "Zinal",
+      "region": "Valais",
+      "coords": [
+        7.6236,
+        46.1347
+      ],
+      "altitude": 1670,
+      "topAltitude": 2900,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Grimentz-Zinal",
+        "pisteKm": 115,
+        "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 3
+      },
+      "character": "Small village at the head of the Val d'Anniviers, linked by cable car to Grimentz.",
+      "transfer": "Car about 2h30. Bus from Sierre.",
+      "links": [
+        {
+          "to": "ch-grimentz",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Cable car across to Grimentz"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Big off-piste and steep runs above the village."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 32,
+        "red": 36,
+        "black": 32
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 200,
+          "min": 130
+        },
+        "LYS": {
+          "km": 344,
+          "min": 205
+        },
+        "CMF": {
+          "km": 250,
+          "min": 175
+        },
+        "GNB": {
+          "km": 330,
+          "min": 210
+        },
+        "TRN": {
+          "km": 259,
+          "min": 190
+        },
+        "ZRH": {
+          "km": 318,
+          "min": 190
+        },
+        "BSL": {
+          "km": 298,
+          "min": 185
+        }
+      }
+    },
+    {
+      "id": "ch-riederalp",
+      "type": "resort",
+      "name": "Riederalp",
+      "region": "Valais",
+      "coords": [
+        8.0258,
+        46.3811
+      ],
+      "altitude": 1925,
+      "topAltitude": 2869,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Car-free village with the beginner slopes at the door.",
+      "skiArea": {
+        "name": "Aletsch Arena",
+        "pisteKm": 104,
+        "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Car-free village of the Aletsch Arena, reached by cable car from Mörel. Gentle and sunny.",
+      "transfer": "Shared shuttle about 3h. Train to Mörel, then the cable car up.",
+      "links": [
+        {
+          "to": "ch-bettmeralp",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski across to Bettmeralp"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "Small fun zones. The main park is at Bettmeralp."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste with glacier views."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 50,
+        "red": 39,
+        "black": 11
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 220,
+          "min": 155
+        },
+        "LYS": {
+          "km": 364,
+          "min": 230
+        },
+        "CMF": {
+          "km": 271,
+          "min": 200
+        },
+        "GNB": {
+          "km": 351,
+          "min": 235
+        },
+        "TRN": {
+          "km": 253,
+          "min": 185
+        },
+        "ZRH": {
+          "km": 242,
+          "min": 180
+        },
+        "BSL": {
+          "km": 222,
+          "min": 175
+        }
+      }
+    },
+    {
+      "id": "ch-monthey",
+      "type": "base",
+      "name": "Monthey",
+      "region": "Valais",
+      "coords": [
+        6.9542,
+        46.2547
+      ],
+      "altitude": 420,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 60,
+      "family": true,
+      "vibes": [
+        "town"
+      ],
+      "character": "Down-to-earth valley town with everyday prices and a mountain railway up to Champéry.",
+      "transfer": "Train from Geneva Airport about 1h15. Car 1h10.",
+      "links": [
+        {
+          "to": "ch-champery",
+          "min": 30,
+          "by": [
+            "train"
+          ],
+          "note": "AOMC mountain railway"
+        },
+        {
+          "to": "ch-morgins",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "ch-champoussin",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 115,
+          "min": 80
+        },
+        "LYS": {
+          "km": 259,
+          "min": 150
+        },
+        "CMF": {
+          "km": 201,
+          "min": 125
+        },
+        "GNB": {
+          "km": 281,
+          "min": 160
+        },
+        "TRN": {
+          "km": 215,
+          "min": 160
+        },
+        "ZRH": {
+          "km": 233,
+          "min": 135
+        },
+        "BSL": {
+          "km": 213,
+          "min": 130
+        }
+      }
+    },
+    {
+      "id": "ch-aigle",
+      "type": "base",
+      "name": "Aigle",
+      "region": "Vaud",
+      "coords": [
+        6.9681,
+        46.3181
+      ],
+      "altitude": 417,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 60,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Wine town with a castle among the vineyards. Three mountain railways start at the station.",
+      "transfer": "Train from Geneva Airport about 1h15. Car 1h05.",
+      "links": [
+        {
+          "to": "ch-leysin",
+          "min": 30,
+          "by": [
+            "train"
+          ],
+          "note": "Rack railway up to Leysin"
+        },
+        {
+          "to": "ch-les-diablerets",
+          "min": 50,
+          "by": [
+            "train"
+          ]
+        },
+        {
+          "to": "ch-villars",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "ch-champery",
+          "min": 55,
+          "by": [
+            "train"
+          ]
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 110,
+          "min": 75
+        },
+        "LYS": {
+          "km": 253,
+          "min": 145
+        },
+        "CMF": {
+          "km": 195,
+          "min": 120
+        },
+        "GNB": {
+          "km": 275,
+          "min": 155
+        },
+        "TRN": {
+          "km": 223,
+          "min": 160
+        },
+        "ZRH": {
+          "km": 227,
+          "min": 135
+        },
+        "BSL": {
+          "km": 207,
+          "min": 130
+        }
+      }
+    },
+    {
+      "id": "ch-bex",
+      "type": "base",
+      "name": "Bex",
+      "region": "Vaud",
+      "coords": [
+        7.0097,
+        46.2506
+      ],
+      "altitude": 411,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Small, quiet town at the foot of the Villars railway, with lower prices than the resort.",
+      "transfer": "Train from Geneva Airport about 1h20. Car 1h10.",
+      "links": [
+        {
+          "to": "ch-villars",
+          "min": 40,
+          "by": [
+            "train"
+          ],
+          "note": "Rack railway up to Villars"
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 117,
+          "min": 80
+        },
+        "LYS": {
+          "km": 261,
+          "min": 150
+        },
+        "CMF": {
+          "km": 203,
+          "min": 125
+        },
+        "GNB": {
+          "km": 283,
+          "min": 160
+        },
+        "TRN": {
+          "km": 211,
+          "min": 155
+        },
+        "ZRH": {
+          "km": 235,
+          "min": 140
+        },
+        "BSL": {
+          "km": 215,
+          "min": 130
+        }
+      }
+    },
+    {
+      "id": "ch-martigny",
+      "type": "base",
+      "name": "Martigny",
+      "region": "Valais",
+      "coords": [
+        7.0717,
+        46.1028
+      ],
+      "altitude": 470,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 60,
+      "family": true,
+      "vibes": [
+        "town"
+      ],
+      "character": "Roman town at the bend of the Rhône, a train hub with easy access to the 4 Vallées.",
+      "transfer": "Train from Geneva Airport about 1h40. Car 1h25.",
+      "links": [
+        {
+          "to": "ch-verbier",
+          "min": 45,
+          "by": [
+            "train",
+            "lift"
+          ],
+          "note": "Train to Le Châble, then gondola"
+        },
+        {
+          "to": "ch-la-tzoumaz",
+          "min": 25,
+          "by": [
+            "car"
+          ]
+        },
+        {
+          "to": "ch-ovronnaz",
+          "min": 30,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 133,
+          "min": 90
+        },
+        "LYS": {
+          "km": 277,
+          "min": 160
+        },
+        "CMF": {
+          "km": 182,
+          "min": 130
+        },
+        "GNB": {
+          "km": 262,
+          "min": 165
+        },
+        "TRN": {
+          "km": 190,
+          "min": 145
+        },
+        "ZRH": {
+          "km": 251,
+          "min": 145
+        },
+        "BSL": {
+          "km": 231,
+          "min": 140
+        }
+      }
+    },
+    {
+      "id": "ch-le-chable",
+      "type": "base",
+      "name": "Le Châble",
+      "region": "Valais",
+      "coords": [
+        7.2119,
+        46.0828
+      ],
+      "altitude": 820,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 75,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Village at the bottom of the Verbier gondola. Verbier's skiing at a lower price.",
+      "transfer": "Train from Geneva Airport about 2h. Car 1h50.",
+      "links": [
+        {
+          "to": "ch-verbier",
+          "min": 10,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondola straight up to Verbier"
+        }
+      ],
+      "rail": "St-Bernard Express",
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            5,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 154,
+          "min": 105
+        },
+        "LYS": {
+          "km": 297,
+          "min": 175
+        },
+        "CMF": {
+          "km": 191,
+          "min": 140
+        },
+        "GNB": {
+          "km": 271,
+          "min": 175
+        },
+        "TRN": {
+          "km": 183,
+          "min": 135
+        },
+        "ZRH": {
+          "km": 271,
+          "min": 160
+        },
+        "BSL": {
+          "km": 251,
+          "min": 155
+        }
+      }
+    },
+    {
+      "id": "ch-sion",
+      "type": "base",
+      "name": "Sion",
+      "region": "Valais",
+      "coords": [
+        7.36,
+        46.2331
+      ],
+      "altitude": 500,
+      "townSize": "large",
+      "price": 1,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
+      "character": "Capital of the Valais, with two castles on hills, an old town and everyday prices.",
+      "transfer": "Train from Geneva Airport about 2h. Car 1h40.",
+      "links": [
+        {
+          "to": "ch-veysonnaz",
+          "min": 25,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "ch-nendaz",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "ch-thyon",
+          "min": 35,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "ch-anzere",
+          "min": 30,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "ch-crans-montana",
+          "min": 40,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            3,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 159,
+          "min": 105
+        },
+        "LYS": {
+          "km": 303,
+          "min": 175
+        },
+        "CMF": {
+          "km": 210,
+          "min": 145
+        },
+        "GNB": {
+          "km": 290,
+          "min": 180
+        },
+        "TRN": {
+          "km": 218,
+          "min": 160
+        },
+        "ZRH": {
+          "km": 277,
+          "min": 160
+        },
+        "BSL": {
+          "km": 257,
+          "min": 155
+        }
+      }
+    },
+    {
+      "id": "ch-sierre",
+      "type": "base",
+      "name": "Sierre",
+      "region": "Valais",
+      "coords": [
+        7.5353,
+        46.2919
+      ],
+      "altitude": 530,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 60,
+      "family": true,
+      "vibes": [
+        "town"
+      ],
+      "character": "Sunny wine town with a funicular straight up to Crans-Montana.",
+      "transfer": "Train from Geneva Airport about 2h10. Car 1h50.",
+      "links": [
+        {
+          "to": "ch-crans-montana",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Funicular straight up"
+        },
+        {
+          "to": "ch-grimentz",
+          "min": 40,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "ch-zinal",
+          "min": 45,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "ch-leukerbad",
+          "min": 35,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            1,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 174,
+          "min": 110
+        },
+        "LYS": {
+          "km": 318,
+          "min": 180
+        },
+        "CMF": {
+          "km": 225,
+          "min": 155
+        },
+        "GNB": {
+          "km": 305,
+          "min": 190
+        },
+        "TRN": {
+          "km": 233,
+          "min": 170
+        },
+        "ZRH": {
+          "km": 292,
+          "min": 170
+        },
+        "BSL": {
+          "km": 272,
+          "min": 165
+        }
+      }
+    },
+    {
+      "id": "ch-visp",
+      "type": "base",
+      "name": "Visp",
+      "region": "Valais",
+      "coords": [
+        7.8822,
+        46.2939
+      ],
+      "altitude": 650,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "town"
+      ],
+      "character": "Rail junction town at the entrance to the Zermatt and Saas valleys.",
+      "transfer": "Train from Geneva Airport about 2h30. Car 2h20.",
+      "links": [
+        {
+          "to": "ch-saas-fee",
+          "min": 45,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "ch-zermatt",
+          "min": 65,
+          "by": [
+            "train"
+          ],
+          "note": "Train up the valley to Zermatt"
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 202,
+          "min": 130
+        },
+        "LYS": {
+          "km": 346,
+          "min": 200
+        },
+        "CMF": {
+          "km": 253,
+          "min": 175
+        },
+        "GNB": {
+          "km": 333,
+          "min": 210
+        },
+        "TRN": {
+          "km": 253,
+          "min": 170
+        },
+        "ZRH": {
+          "km": 224,
+          "min": 155
+        },
+        "BSL": {
+          "km": 300,
+          "min": 185
+        }
+      }
+    },
+    {
+      "id": "ch-tasch",
+      "type": "base",
+      "name": "Täsch",
+      "region": "Valais",
+      "coords": [
+        7.7786,
+        46.0697
+      ],
+      "altitude": 1450,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 75,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "character": "Last village you can drive to before Zermatt. Cheaper beds and a 12-minute shuttle train.",
+      "transfer": "Train from Geneva Airport about 3h. Car 2h50.",
+      "links": [
+        {
+          "to": "ch-zermatt",
+          "min": 15,
+          "by": [
+            "train"
+          ],
+          "note": "Shuttle train every 20 minutes"
+        }
+      ],
+      "rail": "Matterhorn Gotthard Bahn",
+      "snowYears": {
+        "town": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 231,
+          "min": 155
+        },
+        "LYS": {
+          "km": 374,
+          "min": 225
+        },
+        "CMF": {
+          "km": 281,
+          "min": 200
+        },
+        "GNB": {
+          "km": 361,
+          "min": 235
+        },
+        "TRN": {
+          "km": 282,
+          "min": 195
+        },
+        "ZRH": {
+          "km": 253,
+          "min": 180
+        },
+        "BSL": {
+          "km": 329,
+          "min": 210
+        }
+      }
+    },
+    {
+      "id": "ch-brig",
+      "type": "base",
+      "name": "Brig",
+      "region": "Valais",
+      "coords": [
+        7.9881,
+        46.3158
+      ],
+      "altitude": 680,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 60,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Old trading town with a baroque castle, close to the Aletsch Arena cable cars.",
+      "transfer": "Train from Geneva Airport about 2h40. Car 2h30.",
+      "links": [
+        {
+          "to": "ch-riederalp",
+          "min": 25,
+          "by": [
+            "train",
+            "lift"
+          ],
+          "note": "Train to Mörel, then cable car"
+        },
+        {
+          "to": "ch-bettmeralp",
+          "min": 30,
+          "by": [
+            "train",
+            "lift"
+          ],
+          "note": "Train to Betten, then cable car"
+        },
+        {
+          "to": "ch-saas-fee",
+          "min": 50,
+          "by": [
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 214,
+          "min": 135
+        },
+        "LYS": {
+          "km": 357,
+          "min": 205
+        },
+        "CMF": {
+          "km": 264,
+          "min": 180
+        },
+        "GNB": {
+          "km": 344,
+          "min": 215
+        },
+        "TRN": {
+          "km": 245,
+          "min": 165
+        },
+        "ZRH": {
+          "km": 236,
+          "min": 160
+        },
+        "BSL": {
+          "km": 216,
+          "min": 155
+        }
+      }
+    },
+    {
+      "id": "ch-interlaken",
+      "type": "base",
+      "name": "Interlaken",
+      "region": "Bern",
+      "coords": [
+        7.8632,
+        46.6863
+      ],
+      "altitude": 570,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 80,
+      "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
+      "character": "Busy lakeside town between two lakes, with trains up to the Jungfrau ski region.",
+      "transfer": "Train from Geneva Airport about 2h50. Car 2h30.",
+      "links": [
+        {
+          "to": "ch-grindelwald",
+          "min": 35,
+          "by": [
+            "train"
+          ]
+        },
+        {
+          "to": "ch-wengen",
+          "min": 45,
+          "by": [
+            "train"
+          ]
+        },
+        {
+          "to": "ch-murren",
+          "min": 55,
+          "by": [
+            "train",
+            "lift"
+          ]
+        }
+      ],
+      "rail": "SBB trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 215,
+          "min": 140
+        },
+        "LYS": {
+          "km": 359,
+          "min": 210
+        },
+        "CMF": {
+          "km": 301,
+          "min": 185
+        },
+        "GNB": {
+          "km": 381,
+          "min": 220
+        },
+        "TRN": {
+          "km": 378,
+          "min": 255
+        },
+        "ZRH": {
+          "km": 131,
+          "min": 95
+        },
+        "BSL": {
+          "km": 157,
+          "min": 105
+        }
+      }
+    },
+    {
+      "id": "ch-lauterbrunnen",
+      "type": "base",
+      "name": "Lauterbrunnen",
+      "region": "Bern",
+      "coords": [
+        7.9091,
+        46.5935
+      ],
+      "altitude": 800,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 80,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Valley village of waterfalls and cliffs, with trains to Wengen and a cable car to Mürren.",
+      "transfer": "Train from Geneva Airport about 3h10. Car 2h45.",
+      "links": [
+        {
+          "to": "ch-wengen",
+          "min": 15,
+          "by": [
+            "train"
+          ],
+          "note": "Mountain railway up to Wengen"
+        },
+        {
+          "to": "ch-murren",
+          "min": 25,
+          "by": [
+            "lift",
+            "train"
+          ],
+          "note": "Cable car to Grütschalp, then train"
+        }
+      ],
+      "rail": "Bernese Oberland Railway",
+      "snowYears": {
+        "town": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 226,
+          "min": 150
+        },
+        "LYS": {
+          "km": 369,
+          "min": 220
+        },
+        "CMF": {
+          "km": 311,
+          "min": 195
+        },
+        "GNB": {
+          "km": 391,
+          "min": 230
+        },
+        "TRN": {
+          "km": 389,
+          "min": 265
+        },
+        "ZRH": {
+          "km": 142,
+          "min": 105
+        },
+        "BSL": {
+          "km": 167,
+          "min": 110
+        }
+      }
+    },
+    {
+      "id": "ch-frutigen",
+      "type": "base",
+      "name": "Frutigen",
+      "region": "Bern",
+      "coords": [
+        7.6477,
+        46.5878
+      ],
+      "altitude": 800,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 60,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "character": "Small valley town below Adelboden, with lower prices and a direct bus up.",
+      "transfer": "Train from Geneva Airport about 2h40. Car 2h20.",
+      "links": [
+        {
+          "to": "ch-adelboden",
+          "min": 30,
+          "by": [
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "rail": "BLS trains",
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 210,
+          "min": 135
+        },
+        "LYS": {
+          "km": 354,
+          "min": 205
+        },
+        "CMF": {
+          "km": 296,
+          "min": 180
+        },
+        "GNB": {
+          "km": 376,
+          "min": 215
+        },
+        "TRN": {
+          "km": 375,
+          "min": 250
+        },
+        "ZRH": {
+          "km": 172,
+          "min": 105
+        },
+        "BSL": {
+          "km": 152,
+          "min": 100
+        }
+      }
+    }
+  ]
+}

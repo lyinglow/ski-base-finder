@@ -3,7 +3,7 @@
 import json, os, math, sys
 import numpy as np
 from PIL import Image
-T, OUT, FR = sys.argv[1], sys.argv[2], sys.argv[3]
+T, OUT, *FILES = sys.argv[1:]  # tiles, map output folder, then one or more country files
 meta = json.load(open(os.path.join(T, "meta.json")))
 Z = meta["z"]; x0, x1 = meta["xs"]; y0, y1 = meta["ys"]
 W_PX, H_PX = (x1 - x0 + 1) * 256, (y1 - y0 + 1) * 256
@@ -55,39 +55,40 @@ for mon, key in MONTHS.items():
     Image.fromarray(rgba, "RGBA").save(os.path.join(OUT, f"{key}.png"), optimize=True)
 
 # Per place: winters with snow on the ground (best pixel near a resort, the town itself for a base).
-d = json.load(open(FR))
 px_m = 156543.03 / 2**Z
-for l in d["locations"]:
-    lo, la = l["coords"]
-    gx = (lo + 180) / 360 * 2**Z * 256 - x0 * 256
-    r = math.radians(la)
-    gy = (1 - math.log(math.tan(r) + 1 / math.cos(r)) / math.pi) / 2 * 2**Z * 256 - y0 * 256
-    ix, iy = int(gx), int(gy)
-    def window(radius_m):
-        rad = max(1, int(round(radius_m / (px_m * math.cos(r)))))
-        return slice(max(0, iy - rad), iy + rad + 1), slice(max(0, ix - rad), ix + rad + 1)
-    # The place itself: within about 500 m.
-    near = window(500)
-    areas = {"village" if l["type"] == "resort" else "town": np.ones_like(elev[near], dtype=bool)}
-    if l["type"] == "resort":
-        # Upper slopes: ground within 6 km, above halfway between village and top lift.
-        wide = window(6000)
-        e = elev[wide]
-        mid = (l["altitude"] + l["topAltitude"]) / 2
-        mask = (e >= mid) & (e <= l["topAltitude"] + 300)
-        if mask.sum() < 4:  # small or steep areas: take the highest quarter instead
-            mask = e >= np.percentile(e, 75)
-        areas = {"slopes": mask, **areas}
-    hist = {}
-    for area, mask in areas.items():
-        sl = wide if area == "slopes" else near
-        hist[area] = {}
-        for mon, key in MONTHS.items():
-            winters = [v for (w, m), v in wm.items() if m == mon]
-            # A winter counts if at least half the ground looked at had snow in both of the month's snapshots.
-            yes = sum(1 for v in winters if ((v[sl] >= 1)[mask]).mean() >= 0.5)
-            hist[area][key] = [yes, len(winters)]
-    l["snowYears"] = hist
-json.dump(d, open(FR, "w"), ensure_ascii=False, indent=2); open(FR, "a").write("\n")
+for FR in FILES:
+  d = json.load(open(FR))
+  for l in d["locations"]:
+      lo, la = l["coords"]
+      gx = (lo + 180) / 360 * 2**Z * 256 - x0 * 256
+      r = math.radians(la)
+      gy = (1 - math.log(math.tan(r) + 1 / math.cos(r)) / math.pi) / 2 * 2**Z * 256 - y0 * 256
+      ix, iy = int(gx), int(gy)
+      def window(radius_m):
+          rad = max(1, int(round(radius_m / (px_m * math.cos(r)))))
+          return slice(max(0, iy - rad), iy + rad + 1), slice(max(0, ix - rad), ix + rad + 1)
+      # The place itself: within about 500 m.
+      near = window(500)
+      areas = {"village" if l["type"] == "resort" else "town": np.ones_like(elev[near], dtype=bool)}
+      if l["type"] == "resort":
+          # Upper slopes: ground within 6 km, above halfway between village and top lift.
+          wide = window(6000)
+          e = elev[wide]
+          mid = (l["altitude"] + l["topAltitude"]) / 2
+          mask = (e >= mid) & (e <= l["topAltitude"] + 300)
+          if mask.sum() < 4:  # small or steep areas: take the highest quarter instead
+              mask = e >= np.percentile(e, 75)
+          areas = {"slopes": mask, **areas}
+      hist = {}
+      for area, mask in areas.items():
+          sl = wide if area == "slopes" else near
+          hist[area] = {}
+          for mon, key in MONTHS.items():
+              winters = [v for (w, m), v in wm.items() if m == mon]
+              # A winter counts if at least half the ground looked at had snow in both of the month's snapshots.
+              yes = sum(1 for v in winters if ((v[sl] >= 1)[mask]).mean() >= 0.5)
+              hist[area][key] = [yes, len(winters)]
+      l["snowYears"] = hist
+  json.dump(d, open(FR, "w"), ensure_ascii=False, indent=2); open(FR, "a").write("\n")
 json.dump({"bounds": bounds, "winters": stats}, open(os.path.join(OUT, "meta.json"), "w"), indent=2)
 print("bounds", bounds, "winters per month", stats)

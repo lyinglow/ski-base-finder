@@ -16,14 +16,14 @@ The app never names a country in code. It loads whatever `data/index.json` marks
 | `snowYears` | `scripts/snow/` | The NASA snow images must cover the new area first. |
 | Lifts, parks on the map, `runShare` | `scripts/lifts/build.py` | Widen the region box first. |
 
-## Changes to make once, before Switzerland
+## Changes made once, with Switzerland (done)
 
 1. **Cost adjustment per country.** Lift passes, lessons, hire and childcare differ a lot (Switzerland about 30 to 40% above France, Italy a little below, Austria close to France). Add a factor per country in `index.json` and apply it in `js/cost.js`.
 2. **Widen the map data.** Snow layer, lifts, parks and run mix currently stop at about 8.2° east. Switzerland needs to about 10.5° east. Austria needs to about 13.5° east, which roughly triples the snow images.
 3. **Country filter** (France, Switzerland, Italy, Austria) in the Filters tab.
 4. **New airports:** Zurich and Basel for Switzerland, Milan for Italy, then Innsbruck, Salzburg and Munich for Austria. Each new airport needs drive times to every place.
 
-## Step 1: Switzerland
+## Step 1: Switzerland (live)
 
 - **Resorts (about 30):**
   - Portes du Soleil Swiss side: Champéry, Morgins, Les Crosets, Champoussin, Torgon

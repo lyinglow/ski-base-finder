@@ -4,7 +4,7 @@ A 3D map that helps you choose where to stay for a ski trip from Geneva.
 
 It shows ski resorts and the cheaper, lower towns around them on the same map. Click a resort and it shows you where else you could stay, how long the daily hop is, and how much you save. Click a town and it shows which resorts you can reach from it.
 
-France is live: 70 ski areas and 28 feeder towns, from Haute-Savoie down to the Hautes-Alpes, big names and small local hills alike. Switzerland and Italy are planned.
+France and Switzerland are live: 99 ski areas and 41 feeder towns, from the Hautes-Alpes to the Bernese Oberland, big names and small local hills alike. Italy and Austria are next (see `docs/EXPANSION.md`).
 
 ## Run it
 
@@ -23,7 +23,7 @@ The live site (https://ski-base-finder.vercel.app) deploys itself from GitHub: e
 
 - **See the land.** Satellite or topo map draped over real elevation. Drag to pan, right-drag or two-finger drag to tilt and rotate.
 - **Tell the two kinds of place apart.** Blue triangles are resorts. Amber circles are feeder towns.
-- **Pick your airport.** Geneva, Lyon, Chambéry, Grenoble or Turin. Every drive time, filter and trip cost follows. Times are winter routes from a route planner, avoiding passes that close in winter (Iseran, Galibier, Petit-Saint-Bernard, Mont-Cenis and others).
+- **Pick your airport.** Geneva, Lyon, Chambéry, Grenoble, Turin, Zurich or Basel. Every drive time, filter and trip cost follows. Times are winter routes from a route planner, avoiding passes that close in winter (Iseran, Galibier, Petit-Saint-Bernard, Mont-Cenis, Furka, Grimsel and others). Car-free resorts such as Zermatt and Wengen include the last train or lift.
 - **Filter** by time from the airport (up to 5 hours), the daily hop from a feeder town to the slopes, price to stay, ski area size, family-friendly, and whether it works without a car.
 - **Click a resort** to see "Stay lower, ski here": every cheaper place with quick access, how many minutes away, by car, bus, train or lift, how many price bands cheaper, and how many metres lower.
 - **Click a feeder town** to see every resort within reach, nearest first.
@@ -66,6 +66,7 @@ js/data.js          loads every live country and works out the links
 js/map.js           map, terrain and tile sources
 data/index.json     origins (airports), countries, price bands
 data/fr.json        every French resort and feeder town
+data/ch.json        every Swiss resort and feeder town
 scripts/validate.mjs  data checks
 docs/DATA.md        the data format, field by field
 docs/EXPANSION.md   how to add Switzerland and Italy

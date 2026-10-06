@@ -40,6 +40,22 @@
         7.6497,
         45.2008
       ]
+    },
+    {
+      "id": "ZRH",
+      "name": "Zurich Airport",
+      "coords": [
+        8.5492,
+        47.4502
+      ]
+    },
+    {
+      "id": "BSL",
+      "name": "EuroAirport Basel",
+      "coords": [
+        7.529,
+        47.5896
+      ]
     }
   ],
   "defaultOrigin": "GVA",
@@ -48,19 +64,29 @@
       "code": "FR",
       "name": "France",
       "file": "fr.json",
-      "status": "live"
+      "status": "live",
+      "costFactor": 1.0
     },
     {
       "code": "CH",
       "name": "Switzerland",
       "file": "ch.json",
-      "status": "planned"
+      "status": "live",
+      "costFactor": 1.35
     },
     {
       "code": "IT",
       "name": "Italy",
       "file": "it.json",
-      "status": "planned"
+      "status": "planned",
+      "costFactor": 0.95
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "file": "at.json",
+      "status": "planned",
+      "costFactor": 1.0
     }
   ],
   "priceBands": {
@@ -130,7 +156,8 @@
       "1": 0.9,
       "2": 1.0,
       "3": 1.25
-    }
+    },
+    "countryNote": "costFactor in countries scales lessons, ski hire, childcare and local buses against France. Lift passes and stays have their own prices."
   },
   "vibes": {
     "lively": {
@@ -327,14 +354,14 @@
     "coordinates": [
       [
         4.21875,
-        47.04018214480666
+        47.98992166741417
       ],
       [
-        8.4375,
-        47.04018214480666
+        14.0625,
+        47.98992166741417
       ],
       [
-        8.4375,
+        14.0625,
         44.087585028245165
       ],
       [

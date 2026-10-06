@@ -34,6 +34,7 @@ const state = {
   snowLayer: false,
   snowMonth: null, // month shown on the snow layer; null follows the trip
   vibes: new Set(), // empty means any vibe
+  countries: new Set(), // empty means every country
   trip: { nights: 7, skiDays: 6, adults: 2, childAges: [], transport: "shuttle", lessons: "all", hire: true, week: null },
   skiAt: {},
   sort: "fit",
@@ -257,7 +258,7 @@ function clearMap() {
   $("#compare").hidden = true;
   Object.assign(state, {
     show: "all", maxTime: 300, maxHop: 60,
-    prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(),
+    prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(), countries: new Set(),
     family: false, carFree: false, snowSure: false, park: "any", parkNeeds: new Set(),
     snowLayer: false, snowMonth: null, sort: "fit", compare: [],
   });
@@ -420,6 +421,7 @@ function passes(l) {
   if (l.type === "base" && reachable(l, model.byId)[0].link.min > state.maxHop) return false;
   if (!state.prices.has(l.price)) return false;
   if (state.family && !l.family) return false;
+  if (state.countries.size && !state.countries.has(l.country)) return false;
   if (state.vibes.size && !l.vibes.some((v) => state.vibes.has(v))) return false;
   if (state.carFree && !l.carFree) return false;
   if ((state.park !== "any" || state.parkNeeds.size) && !parkMatch(l)) return false;
@@ -445,7 +447,7 @@ function sortKey(l) {
 function filterCount() {
   return [
     state.maxTime < 300, state.maxHop < 60, state.prices.size < 3, state.sizes.size < 4,
-    state.vibes.size > 0, state.family, state.carFree, state.snowSure,
+    state.vibes.size > 0, state.countries.size > 0, state.family, state.carFree, state.snowSure,
     state.park !== "any", state.parkNeeds.size > 0, state.levels.includes("first"),
   ].filter(Boolean).length;
 }
@@ -1274,6 +1276,16 @@ function bindControls() {
     state.skiAt[e.target.dataset.base] = e.target.value;
     tripChanged();
   });
+  // Country chips, shown once more than one country is live. None picked means all.
+  $("#f-country-field").hidden = model.countries.length < 2;
+  $("#f-country").innerHTML = model.countries.map((c) =>
+    `<button type="button" id="f-country-${c.code.toLowerCase()}" data-v="${c.code}" aria-pressed="false">${esc(c.name)}</button>`).join("");
+  $$("#f-country button").forEach((b) => b.addEventListener("click", () => {
+    const v = b.dataset.v;
+    state.countries.has(v) ? state.countries.delete(v) : state.countries.add(v);
+    b.setAttribute("aria-pressed", state.countries.has(v));
+    applyFilters();
+  }));
   // Vibe chips start all off: no choice means any vibe.
   $("#f-vibe").innerHTML = Object.entries(model.index.vibes).map(([key, v]) =>
     `<button type="button" id="f-vibe-${key}" data-v="${key}" aria-pressed="false" title="${esc(v.hint)}">${esc(v.label)}</button>`).join("");
@@ -1494,6 +1506,7 @@ function planOf() {
     prices: [...state.prices],
     sizes: [...state.sizes],
     vibes: [...state.vibes],
+    countries: [...state.countries],
     family: state.family,
     carFree: state.carFree,
     snowSure: state.snowSure,
@@ -1549,6 +1562,7 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   const sizes = (p.sizes || []).filter((x) => ["small", "medium", "large", "huge"].includes(x));
   if (sizes.length) state.sizes = new Set(sizes);
   state.vibes = new Set((p.vibes || []).filter((v) => v in model.index.vibes));
+  state.countries = new Set((p.countries || []).filter((c) => model.countries.some((k) => k.code === c)));
   state.family = p.family === true;
   state.carFree = p.carFree === true;
   state.snowSure = p.snowSure === true;
@@ -1643,6 +1657,7 @@ function syncControls() {
   pressed("#f-price button", (v) => state.prices.has(Number(v)));
   pressed("#f-size button", (v) => state.sizes.has(v));
   pressed("#f-vibe button", (v) => state.vibes.has(v));
+  pressed("#f-country button", (v) => state.countries.has(v));
   pressed("#show-seg button", (v) => v === state.show);
   $("#f-time").value = state.maxTime;
   $("#f-hop").value = state.maxHop;

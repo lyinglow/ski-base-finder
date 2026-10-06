@@ -61,6 +61,14 @@
         "TRN": {
           "km": 174,
           "min": 115
+        },
+        "ZRH": {
+          "km": 296,
+          "min": 185
+        },
+        "BSL": {
+          "km": 276,
+          "min": 180
         }
       },
       "transfer": "Shared shuttle about 1h15. Train via Saint-Gervais–Le Fayet.",
@@ -182,6 +190,14 @@
         "TRN": {
           "km": 178,
           "min": 120
+        },
+        "ZRH": {
+          "km": 304,
+          "min": 195
+        },
+        "BSL": {
+          "km": 284,
+          "min": 190
         }
       },
       "transfer": "Shared shuttle about 1h. Mont-Blanc Express train stops here.",
@@ -314,6 +330,14 @@
         "TRN": {
           "km": 203,
           "min": 140
+        },
+        "ZRH": {
+          "km": 348,
+          "min": 215
+        },
+        "BSL": {
+          "km": 327,
+          "min": 210
         }
       },
       "transfer": "Shared shuttle about 1h10. Bus from Sallanches station.",
@@ -436,6 +460,14 @@
         "TRN": {
           "km": 193,
           "min": 130
+        },
+        "ZRH": {
+          "km": 320,
+          "min": 205
+        },
+        "BSL": {
+          "km": 300,
+          "min": 200
         }
       },
       "transfer": "Léman Express train to Le Fayet, then bus.",
@@ -575,6 +607,14 @@
         "TRN": {
           "km": 200,
           "min": 135
+        },
+        "ZRH": {
+          "km": 342,
+          "min": 210
+        },
+        "BSL": {
+          "km": 322,
+          "min": 205
         }
       },
       "transfer": "Shared shuttle about 1h. Bus from Sallanches.",
@@ -708,6 +748,14 @@
         "TRN": {
           "km": 202,
           "min": 145
+        },
+        "ZRH": {
+          "km": 329,
+          "min": 220
+        },
+        "BSL": {
+          "km": 308,
+          "min": 215
         }
       },
       "transfer": "Shared shuttle about 1h15. Bus from Le Fayet station.",
@@ -832,6 +880,14 @@
         "TRN": {
           "km": 238,
           "min": 170
+        },
+        "ZRH": {
+          "km": 287,
+          "min": 195
+        },
+        "BSL": {
+          "km": 267,
+          "min": 190
         }
       },
       "transfer": "Shared shuttle about 1h15. Bus from Thonon or Cluses stations.",
@@ -957,6 +1013,14 @@
         "TRN": {
           "km": 251,
           "min": 185
+        },
+        "ZRH": {
+          "km": 299,
+          "min": 210
+        },
+        "BSL": {
+          "km": 279,
+          "min": 205
         }
       },
       "transfer": "Shuttle to Morzine, then cable car or road up.",
@@ -1100,6 +1164,14 @@
         "TRN": {
           "km": 231,
           "min": 160
+        },
+        "ZRH": {
+          "km": 291,
+          "min": 200
+        },
+        "BSL": {
+          "km": 271,
+          "min": 195
         }
       },
       "transfer": "Shared shuttle about 1h. Bus from Cluses station.",
@@ -1240,6 +1312,14 @@
         "TRN": {
           "km": 261,
           "min": 195
+        },
+        "ZRH": {
+          "km": 252,
+          "min": 155
+        },
+        "BSL": {
+          "km": 232,
+          "min": 150
         }
       },
       "transfer": "Shared shuttle about 1h30. Bus from Thonon station.",
@@ -1373,6 +1453,14 @@
         "TRN": {
           "km": 266,
           "min": 200
+        },
+        "ZRH": {
+          "km": 257,
+          "min": 160
+        },
+        "BSL": {
+          "km": 237,
+          "min": 155
         }
       },
       "transfer": "Shared shuttle about 1h20. Bus from Thonon or Évian.",
@@ -1502,6 +1590,14 @@
         "TRN": {
           "km": 244,
           "min": 175
+        },
+        "ZRH": {
+          "km": 279,
+          "min": 185
+        },
+        "BSL": {
+          "km": 259,
+          "min": 180
         }
       },
       "transfer": "Bus from Thonon station.",
@@ -1631,6 +1727,14 @@
         "TRN": {
           "km": 292,
           "min": 200
+        },
+        "ZRH": {
+          "km": 252,
+          "min": 160
+        },
+        "BSL": {
+          "km": 231,
+          "min": 155
         }
       },
       "transfer": "Train to Évian, then bus or taxi.",
@@ -1750,6 +1854,14 @@
         "TRN": {
           "km": 269,
           "min": 200
+        },
+        "ZRH": {
+          "km": 254,
+          "min": 165
+        },
+        "BSL": {
+          "km": 234,
+          "min": 160
         }
       },
       "transfer": "Train to Évian, then taxi.",
@@ -1875,6 +1987,14 @@
         "TRN": {
           "km": 232,
           "min": 165
+        },
+        "ZRH": {
+          "km": 349,
+          "min": 220
+        },
+        "BSL": {
+          "km": 329,
+          "min": 215
         }
       },
       "transfer": "Shared shuttle about 1h10. Bus from Cluses station.",
@@ -2006,6 +2126,14 @@
         "TRN": {
           "km": 229,
           "min": 160
+        },
+        "ZRH": {
+          "km": 336,
+          "min": 210
+        },
+        "BSL": {
+          "km": 316,
+          "min": 205
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -2137,6 +2265,14 @@
         "TRN": {
           "km": 216,
           "min": 150
+        },
+        "ZRH": {
+          "km": 334,
+          "min": 205
+        },
+        "BSL": {
+          "km": 314,
+          "min": 195
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -2267,6 +2403,14 @@
         "TRN": {
           "km": 225,
           "min": 155
+        },
+        "ZRH": {
+          "km": 332,
+          "min": 205
+        },
+        "BSL": {
+          "km": 312,
+          "min": 200
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -2407,6 +2551,14 @@
         "TRN": {
           "km": 234,
           "min": 165
+        },
+        "ZRH": {
+          "km": 342,
+          "min": 215
+        },
+        "BSL": {
+          "km": 322,
+          "min": 210
         }
       },
       "transfer": "Bus from Cluses station.",
@@ -2539,6 +2691,14 @@
         "TRN": {
           "km": 241,
           "min": 165
+        },
+        "ZRH": {
+          "km": 327,
+          "min": 205
+        },
+        "BSL": {
+          "km": 307,
+          "min": 200
         }
       },
       "transfer": "Bus from Annecy station about 50 min.",
@@ -2669,6 +2829,14 @@
         "TRN": {
           "km": 246,
           "min": 170
+        },
+        "ZRH": {
+          "km": 325,
+          "min": 205
+        },
+        "BSL": {
+          "km": 305,
+          "min": 200
         }
       },
       "transfer": "Bus from Annecy station about 50 min.",
@@ -2809,6 +2977,14 @@
         "TRN": {
           "km": 234,
           "min": 165
+        },
+        "ZRH": {
+          "km": 302,
+          "min": 210
+        },
+        "BSL": {
+          "km": 282,
+          "min": 205
         }
       },
       "transfer": "Car recommended.",
@@ -2929,6 +3105,14 @@
         "TRN": {
           "km": 235,
           "min": 165
+        },
+        "ZRH": {
+          "km": 317,
+          "min": 200
+        },
+        "BSL": {
+          "km": 297,
+          "min": 195
         }
       },
       "transfer": "Car recommended.",
@@ -3049,6 +3233,14 @@
         "TRN": {
           "km": 253,
           "min": 170
+        },
+        "ZRH": {
+          "km": 276,
+          "min": 185
+        },
+        "BSL": {
+          "km": 256,
+          "min": 180
         }
       },
       "transfer": "Car recommended.",
@@ -3169,6 +3361,14 @@
         "TRN": {
           "km": 235,
           "min": 170
+        },
+        "ZRH": {
+          "km": 340,
+          "min": 205
+        },
+        "BSL": {
+          "km": 320,
+          "min": 200
         }
       },
       "transfer": "Car from Annecy, 30 min.",
@@ -3293,6 +3493,14 @@
         "TRN": {
           "km": 231,
           "min": 160
+        },
+        "ZRH": {
+          "km": 370,
+          "min": 235
+        },
+        "BSL": {
+          "km": 350,
+          "min": 230
         }
       },
       "transfer": "Shared shuttle about 1h30. Bus from Albertville station.",
@@ -3424,6 +3632,14 @@
         "TRN": {
           "km": 223,
           "min": 150
+        },
+        "ZRH": {
+          "km": 361,
+          "min": 230
+        },
+        "BSL": {
+          "km": 341,
+          "min": 225
         }
       },
       "transfer": "Bus from Albertville station.",
@@ -3554,6 +3770,14 @@
         "TRN": {
           "km": 208,
           "min": 145
+        },
+        "ZRH": {
+          "km": 352,
+          "min": 220
+        },
+        "BSL": {
+          "km": 332,
+          "min": 215
         }
       },
       "transfer": "Bus from Sallanches station.",
@@ -3693,6 +3917,14 @@
         "TRN": {
           "km": 224,
           "min": 155
+        },
+        "ZRH": {
+          "km": 393,
+          "min": 260
+        },
+        "BSL": {
+          "km": 373,
+          "min": 255
         }
       },
       "transfer": "Car recommended. Bus from Albertville.",
@@ -3816,6 +4048,14 @@
         "TRN": {
           "km": 269,
           "min": 185
+        },
+        "ZRH": {
+          "km": 288,
+          "min": 175
+        },
+        "BSL": {
+          "km": 268,
+          "min": 170
         }
       },
       "transfer": "Car or taxi, 30 min.",
@@ -3937,6 +4177,14 @@
         "TRN": {
           "km": 297,
           "min": 200
+        },
+        "ZRH": {
+          "km": 278,
+          "min": 170
+        },
+        "BSL": {
+          "km": 257,
+          "min": 160
         }
       },
       "transfer": "Car recommended. Train to La Cure from Nyon.",
@@ -4057,6 +4305,14 @@
         "TRN": {
           "km": 228,
           "min": 150
+        },
+        "ZRH": {
+          "km": 368,
+          "min": 220
+        },
+        "BSL": {
+          "km": 348,
+          "min": 215
         }
       },
       "transfer": "Car from Chambéry, 30 min.",
@@ -4178,6 +4434,14 @@
         "TRN": {
           "km": 226,
           "min": 155
+        },
+        "ZRH": {
+          "km": 358,
+          "min": 220
+        },
+        "BSL": {
+          "km": 338,
+          "min": 215
         }
       },
       "transfer": "Car from Chambéry, 40 min.",
@@ -4301,6 +4565,14 @@
         "TRN": {
           "km": 256,
           "min": 170
+        },
+        "ZRH": {
+          "km": 427,
+          "min": 280
+        },
+        "BSL": {
+          "km": 407,
+          "min": 275
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Aime, then bus.",
@@ -4434,6 +4706,14 @@
         "TRN": {
           "km": 275,
           "min": 190
+        },
+        "ZRH": {
+          "km": 446,
+          "min": 300
+        },
+        "BSL": {
+          "km": 426,
+          "min": 295
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Bourg-Saint-Maurice, then funicular.",
@@ -4567,6 +4847,14 @@
         "TRN": {
           "km": 256,
           "min": 170
+        },
+        "ZRH": {
+          "km": 427,
+          "min": 280
+        },
+        "BSL": {
+          "km": 407,
+          "min": 275
         }
       },
       "transfer": "Train to Landry, then bus.",
@@ -4708,6 +4996,14 @@
         "TRN": {
           "km": 252,
           "min": 165
+        },
+        "ZRH": {
+          "km": 423,
+          "min": 275
+        },
+        "BSL": {
+          "km": 403,
+          "min": 270
         }
       },
       "transfer": "Train to Aime, then bus.",
@@ -4838,6 +5134,14 @@
         "TRN": {
           "km": 242,
           "min": 160
+        },
+        "ZRH": {
+          "km": 413,
+          "min": 270
+        },
+        "BSL": {
+          "km": 393,
+          "min": 265
         }
       },
       "transfer": "Train to Moûtiers, then bus.",
@@ -4972,6 +5276,14 @@
         "TRN": {
           "km": 283,
           "min": 205
+        },
+        "ZRH": {
+          "km": 454,
+          "min": 310
+        },
+        "BSL": {
+          "km": 433,
+          "min": 305
         }
       },
       "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
@@ -5107,6 +5419,14 @@
         "TRN": {
           "km": 281,
           "min": 195
+        },
+        "ZRH": {
+          "km": 452,
+          "min": 305
+        },
+        "BSL": {
+          "km": 432,
+          "min": 300
         }
       },
       "transfer": "Shared shuttle about 3h. Train to Bourg-Saint-Maurice, then bus.",
@@ -5252,6 +5572,14 @@
         "TRN": {
           "km": 248,
           "min": 165
+        },
+        "ZRH": {
+          "km": 418,
+          "min": 275
+        },
+        "BSL": {
+          "km": 398,
+          "min": 270
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -5384,6 +5712,14 @@
         "TRN": {
           "km": 240,
           "min": 160
+        },
+        "ZRH": {
+          "km": 411,
+          "min": 265
+        },
+        "BSL": {
+          "km": 391,
+          "min": 260
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -5516,6 +5852,14 @@
         "TRN": {
           "km": 260,
           "min": 175
+        },
+        "ZRH": {
+          "km": 431,
+          "min": 285
+        },
+        "BSL": {
+          "km": 411,
+          "min": 280
         }
       },
       "transfer": "Shared shuttle about 2h45. Train to Moûtiers, then bus.",
@@ -5648,6 +5992,14 @@
         "TRN": {
           "km": 251,
           "min": 165
+        },
+        "ZRH": {
+          "km": 422,
+          "min": 275
+        },
+        "BSL": {
+          "km": 402,
+          "min": 270
         }
       },
       "transfer": "Shared shuttle about 2h30. Train to Moûtiers, then bus.",
@@ -5788,6 +6140,14 @@
         "TRN": {
           "km": 233,
           "min": 155
+        },
+        "ZRH": {
+          "km": 404,
+          "min": 265
+        },
+        "BSL": {
+          "km": 384,
+          "min": 260
         }
       },
       "transfer": "Train to Moûtiers, then bus.",
@@ -5912,6 +6272,14 @@
         "TRN": {
           "km": 273,
           "min": 190
+        },
+        "ZRH": {
+          "km": 444,
+          "min": 300
+        },
+        "BSL": {
+          "km": 424,
+          "min": 295
         }
       },
       "transfer": "Train to Bourg-Saint-Maurice, then bus.",
@@ -6043,6 +6411,14 @@
         "TRN": {
           "km": 268,
           "min": 195
+        },
+        "ZRH": {
+          "km": 439,
+          "min": 300
+        },
+        "BSL": {
+          "km": 419,
+          "min": 295
         }
       },
       "transfer": "Train to Bourg-Saint-Maurice, then taxi.",
@@ -6165,6 +6541,14 @@
         "TRN": {
           "km": 144,
           "min": 105
+        },
+        "ZRH": {
+          "km": 466,
+          "min": 270
+        },
+        "BSL": {
+          "km": 446,
+          "min": 265
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
@@ -6295,6 +6679,14 @@
         "TRN": {
           "km": 140,
           "min": 105
+        },
+        "ZRH": {
+          "km": 462,
+          "min": 270
+        },
+        "BSL": {
+          "km": 442,
+          "min": 265
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then bus.",
@@ -6425,6 +6817,14 @@
         "TRN": {
           "km": 123,
           "min": 90
+        },
+        "ZRH": {
+          "km": 456,
+          "min": 260
+        },
+        "BSL": {
+          "km": 436,
+          "min": 255
         }
       },
       "transfer": "Train to Saint-Michel-de-Maurienne, then taxi.",
@@ -6558,6 +6958,14 @@
         "TRN": {
           "km": 150,
           "min": 110
+        },
+        "ZRH": {
+          "km": 453,
+          "min": 265
+        },
+        "BSL": {
+          "km": 433,
+          "min": 260
         }
       },
       "transfer": "Car recommended. Bus from Saint-Jean-de-Maurienne.",
@@ -6680,6 +7088,14 @@
         "TRN": {
           "km": 156,
           "min": 115
+        },
+        "ZRH": {
+          "km": 453,
+          "min": 265
+        },
+        "BSL": {
+          "km": 433,
+          "min": 260
         }
       },
       "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
@@ -6809,6 +7225,14 @@
         "TRN": {
           "km": 161,
           "min": 135
+        },
+        "ZRH": {
+          "km": 458,
+          "min": 285
+        },
+        "BSL": {
+          "km": 438,
+          "min": 280
         }
       },
       "transfer": "Train to Saint-Jean-de-Maurienne, then bus.",
@@ -6940,6 +7364,14 @@
         "TRN": {
           "km": 123,
           "min": 90
+        },
+        "ZRH": {
+          "km": 473,
+          "min": 275
+        },
+        "BSL": {
+          "km": 453,
+          "min": 270
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -7063,6 +7495,14 @@
         "TRN": {
           "km": 121,
           "min": 90
+        },
+        "ZRH": {
+          "km": 471,
+          "min": 275
+        },
+        "BSL": {
+          "km": 451,
+          "min": 270
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -7187,6 +7627,14 @@
         "TRN": {
           "km": 142,
           "min": 110
+        },
+        "ZRH": {
+          "km": 489,
+          "min": 285
+        },
+        "BSL": {
+          "km": 469,
+          "min": 280
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -7308,6 +7756,14 @@
         "TRN": {
           "km": 160,
           "min": 125
+        },
+        "ZRH": {
+          "km": 508,
+          "min": 305
+        },
+        "BSL": {
+          "km": 488,
+          "min": 300
         }
       },
       "transfer": "Train to Modane, then bus.",
@@ -7432,6 +7888,14 @@
         "TRN": {
           "km": 195,
           "min": 165
+        },
+        "ZRH": {
+          "km": 486,
+          "min": 300
+        },
+        "BSL": {
+          "km": 466,
+          "min": 295
         }
       },
       "transfer": "Train to Grenoble, then bus about 1h30.",
@@ -7564,6 +8028,14 @@
         "TRN": {
           "km": 297,
           "min": 205
+        },
+        "ZRH": {
+          "km": 475,
+          "min": 295
+        },
+        "BSL": {
+          "km": 455,
+          "min": 290
         }
       },
       "transfer": "Train to Grenoble, then bus.",
@@ -7697,6 +8169,14 @@
         "TRN": {
           "km": 178,
           "min": 150
+        },
+        "ZRH": {
+          "km": 490,
+          "min": 300
+        },
+        "BSL": {
+          "km": 470,
+          "min": 295
         }
       },
       "transfer": "Train to Grenoble, then bus about 1h45.",
@@ -7828,6 +8308,14 @@
         "TRN": {
           "km": 154,
           "min": 130
+        },
+        "ZRH": {
+          "km": 560,
+          "min": 350
+        },
+        "BSL": {
+          "km": 540,
+          "min": 345
         }
       },
       "transfer": "Car recommended.",
@@ -7950,6 +8438,14 @@
         "TRN": {
           "km": 266,
           "min": 175
+        },
+        "ZRH": {
+          "km": 445,
+          "min": 265
+        },
+        "BSL": {
+          "km": 424,
+          "min": 260
         }
       },
       "transfer": "Train to Grenoble, then bus 1h.",
@@ -8080,6 +8576,14 @@
         "TRN": {
           "km": 234,
           "min": 155
+        },
+        "ZRH": {
+          "km": 412,
+          "min": 245
+        },
+        "BSL": {
+          "km": 392,
+          "min": 240
         }
       },
       "transfer": "Car recommended. Bus from Grenoble.",
@@ -8201,6 +8705,14 @@
         "TRN": {
           "km": 276,
           "min": 185
+        },
+        "ZRH": {
+          "km": 455,
+          "min": 275
+        },
+        "BSL": {
+          "km": 435,
+          "min": 270
         }
       },
       "transfer": "Train to Grenoble, then bus 1h.",
@@ -8319,6 +8831,14 @@
         "TRN": {
           "km": 125,
           "min": 105
+        },
+        "ZRH": {
+          "km": 532,
+          "min": 330
+        },
+        "BSL": {
+          "km": 512,
+          "min": 325
         }
       },
       "transfer": "Train to Briançon, then bus.",
@@ -8454,6 +8974,14 @@
         "TRN": {
           "km": 105,
           "min": 85
+        },
+        "ZRH": {
+          "km": 510,
+          "min": 310
+        },
+        "BSL": {
+          "km": 490,
+          "min": 305
         }
       },
       "transfer": "Train to Oulx in Italy, then bus.",
@@ -8587,6 +9115,14 @@
         "TRN": {
           "km": 140,
           "min": 120
+        },
+        "ZRH": {
+          "km": 545,
+          "min": 345
+        },
+        "BSL": {
+          "km": 525,
+          "min": 340
         }
       },
       "transfer": "Train to L'Argentière-les-Écrins, then bus.",
@@ -8710,6 +9246,14 @@
         "TRN": {
           "km": 168,
           "min": 155
+        },
+        "ZRH": {
+          "km": 573,
+          "min": 380
+        },
+        "BSL": {
+          "km": 553,
+          "min": 375
         }
       },
       "transfer": "Train to Embrun or Montdauphin, then bus.",
@@ -8842,6 +9386,14 @@
         "TRN": {
           "km": 163,
           "min": 140
+        },
+        "ZRH": {
+          "km": 568,
+          "min": 360
+        },
+        "BSL": {
+          "km": 548,
+          "min": 355
         }
       },
       "transfer": "Train to Montdauphin, then bus.",
@@ -8981,6 +9533,14 @@
         "TRN": {
           "km": 180,
           "min": 150
+        },
+        "ZRH": {
+          "km": 567,
+          "min": 375
+        },
+        "BSL": {
+          "km": 547,
+          "min": 370
         }
       },
       "transfer": "Train to Embrun, then bus.",
@@ -9093,6 +9653,14 @@
         "TRN": {
           "km": 261,
           "min": 165
+        },
+        "ZRH": {
+          "km": 320,
+          "min": 190
+        },
+        "BSL": {
+          "km": 300,
+          "min": 185
         }
       },
       "transfer": "Bus from the airport about 1h. Car 45 min.",
@@ -9192,6 +9760,14 @@
         "TRN": {
           "km": 235,
           "min": 160
+        },
+        "ZRH": {
+          "km": 335,
+          "min": 200
+        },
+        "BSL": {
+          "km": 315,
+          "min": 195
         }
       },
       "transfer": "Car 50 min. Bus from Annecy.",
@@ -9275,6 +9851,14 @@
         "TRN": {
           "km": 197,
           "min": 135
+        },
+        "ZRH": {
+          "km": 335,
+          "min": 200
+        },
+        "BSL": {
+          "km": 315,
+          "min": 195
         }
       },
       "transfer": "Léman Express L3 from Geneva about 1h20.",
@@ -9404,6 +9988,14 @@
         "TRN": {
           "km": 189,
           "min": 125
+        },
+        "ZRH": {
+          "km": 316,
+          "min": 200
+        },
+        "BSL": {
+          "km": 295,
+          "min": 195
         }
       },
       "transfer": "Léman Express L3 terminus, about 1h30 from Geneva.",
@@ -9519,6 +10111,14 @@
         "TRN": {
           "km": 210,
           "min": 140
+        },
+        "ZRH": {
+          "km": 323,
+          "min": 195
+        },
+        "BSL": {
+          "km": 303,
+          "min": 185
         }
       },
       "transfer": "Léman Express L3 from Geneva about 1h.",
@@ -9635,6 +10235,14 @@
         "TRN": {
           "km": 220,
           "min": 150
+        },
+        "ZRH": {
+          "km": 321,
+          "min": 200
+        },
+        "BSL": {
+          "km": 301,
+          "min": 195
         }
       },
       "transfer": "Car 45 min.",
@@ -9738,6 +10346,14 @@
         "TRN": {
           "km": 240,
           "min": 170
+        },
+        "ZRH": {
+          "km": 285,
+          "min": 195
+        },
+        "BSL": {
+          "km": 264,
+          "min": 190
         }
       },
       "transfer": "Shuttle to Morzine about 1h15.",
@@ -9830,6 +10446,14 @@
         "TRN": {
           "km": 269,
           "min": 180
+        },
+        "ZRH": {
+          "km": 258,
+          "min": 170
+        },
+        "BSL": {
+          "km": 238,
+          "min": 165
         }
       },
       "transfer": "Léman Express L1 direct from Geneva about 50 min.",
@@ -9959,6 +10583,14 @@
         "TRN": {
           "km": 282,
           "min": 190
+        },
+        "ZRH": {
+          "km": 248,
+          "min": 160
+        },
+        "BSL": {
+          "km": 228,
+          "min": 155
         }
       },
       "transfer": "Léman Express L1 direct from Geneva about 1h.",
@@ -10058,6 +10690,14 @@
         "TRN": {
           "km": 245,
           "min": 160
+        },
+        "ZRH": {
+          "km": 287,
+          "min": 175
+        },
+        "BSL": {
+          "km": 266,
+          "min": 170
         }
       },
       "transfer": "Léman Express from Geneva about 20 min.",
@@ -10161,6 +10801,14 @@
         "TRN": {
           "km": 224,
           "min": 145
+        },
+        "ZRH": {
+          "km": 306,
+          "min": 185
+        },
+        "BSL": {
+          "km": 286,
+          "min": 180
         }
       },
       "transfer": "Léman Express L3 from Geneva about 45 min.",
@@ -10258,6 +10906,14 @@
         "TRN": {
           "km": 232,
           "min": 150
+        },
+        "ZRH": {
+          "km": 306,
+          "min": 185
+        },
+        "BSL": {
+          "km": 286,
+          "min": 180
         }
       },
       "transfer": "Léman Express from Geneva about 35 min.",
@@ -10355,6 +11011,14 @@
         "TRN": {
           "km": 270,
           "min": 185
+        },
+        "ZRH": {
+          "km": 273,
+          "min": 165
+        },
+        "BSL": {
+          "km": 253,
+          "min": 155
         }
       },
       "transfer": "Car or bus 25 min.",
@@ -10438,6 +11102,14 @@
         "TRN": {
           "km": 270,
           "min": 180
+        },
+        "ZRH": {
+          "km": 265,
+          "min": 155
+        },
+        "BSL": {
+          "km": 245,
+          "min": 150
         }
       },
       "transfer": "Car 20 min.",
@@ -10519,6 +11191,14 @@
         "TRN": {
           "km": 200,
           "min": 130
+        },
+        "ZRH": {
+          "km": 367,
+          "min": 235
+        },
+        "BSL": {
+          "km": 347,
+          "min": 230
         }
       },
       "transfer": "Train via Annecy or Chambéry about 2h. Car 1h15.",
@@ -10631,6 +11311,14 @@
         "TRN": {
           "km": 224,
           "min": 145
+        },
+        "ZRH": {
+          "km": 395,
+          "min": 250
+        },
+        "BSL": {
+          "km": 375,
+          "min": 245
         }
       },
       "transfer": "Train via Annecy or Chambéry about 2h30. Car 2h.",
@@ -10755,6 +11443,14 @@
         "TRN": {
           "km": 230,
           "min": 150
+        },
+        "ZRH": {
+          "km": 400,
+          "min": 260
+        },
+        "BSL": {
+          "km": 380,
+          "min": 250
         }
       },
       "transfer": "Train to Moûtiers, then bus 15 min.",
@@ -10837,6 +11533,14 @@
         "TRN": {
           "km": 238,
           "min": 155
+        },
+        "ZRH": {
+          "km": 409,
+          "min": 265
+        },
+        "BSL": {
+          "km": 389,
+          "min": 260
         }
       },
       "transfer": "Train via Chambéry about 2h45. Car 2h.",
@@ -10936,6 +11640,14 @@
         "TRN": {
           "km": 251,
           "min": 170
+        },
+        "ZRH": {
+          "km": 422,
+          "min": 275
+        },
+        "BSL": {
+          "km": 402,
+          "min": 270
         }
       },
       "transfer": "Train via Chambéry about 3h. Car 2h15.",
@@ -11051,6 +11763,14 @@
         "TRN": {
           "km": 214,
           "min": 140
+        },
+        "ZRH": {
+          "km": 366,
+          "min": 215
+        },
+        "BSL": {
+          "km": 346,
+          "min": 210
         }
       },
       "transfer": "Car 1h05. Train via Annecy.",
@@ -11133,6 +11853,14 @@
         "TRN": {
           "km": 140,
           "min": 100
+        },
+        "ZRH": {
+          "km": 437,
+          "min": 250
+        },
+        "BSL": {
+          "km": 417,
+          "min": 245
         }
       },
       "transfer": "Train via Chambéry about 2h30. Car 2h05.",
@@ -11238,6 +11966,14 @@
         "TRN": {
           "km": 130,
           "min": 90
+        },
+        "ZRH": {
+          "km": 449,
+          "min": 255
+        },
+        "BSL": {
+          "km": 429,
+          "min": 250
         }
       },
       "transfer": "Train via Chambéry about 2h45. Car 2h15.",
@@ -11336,6 +12072,14 @@
         "TRN": {
           "km": 116,
           "min": 85
+        },
+        "ZRH": {
+          "km": 465,
+          "min": 265
+        },
+        "BSL": {
+          "km": 445,
+          "min": 260
         }
       },
       "transfer": "Train via Chambéry about 3h. Car 2h40.",
@@ -11436,6 +12180,14 @@
         "TRN": {
           "km": 243,
           "min": 150
+        },
+        "ZRH": {
+          "km": 421,
+          "min": 245
+        },
+        "BSL": {
+          "km": 401,
+          "min": 240
         }
       },
       "transfer": "Train or bus about 2h. Car 1h50.",
@@ -11552,6 +12304,14 @@
         "TRN": {
           "km": 182,
           "min": 150
+        },
+        "ZRH": {
+          "km": 473,
+          "min": 285
+        },
+        "BSL": {
+          "km": 453,
+          "min": 280
         }
       },
       "transfer": "Bus from Grenoble 1h. Car 2h35.",
@@ -11650,6 +12410,14 @@
         "TRN": {
           "km": 116,
           "min": 95
+        },
+        "ZRH": {
+          "km": 521,
+          "min": 320
+        },
+        "BSL": {
+          "km": 501,
+          "min": 315
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 3h45.",
@@ -11741,6 +12509,14 @@
         "TRN": {
           "km": 132,
           "min": 110
+        },
+        "ZRH": {
+          "km": 538,
+          "min": 335
+        },
+        "BSL": {
+          "km": 517,
+          "min": 330
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 4h.",
@@ -11825,6 +12601,14 @@
         "TRN": {
           "km": 163,
           "min": 140
+        },
+        "ZRH": {
+          "km": 569,
+          "min": 360
+        },
+        "BSL": {
+          "km": 549,
+          "min": 355
         }
       },
       "transfer": "Train via Grenoble about 5h. Car 4h20.",

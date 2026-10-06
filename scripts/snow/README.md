@@ -1,6 +1,6 @@
 # Snow history
 
-Builds the snow cover maps in `data/snow/` and the `snowYears` counts in `data/fr.json`
+Builds the snow cover maps in `data/snow/` and the `snowYears` counts in each country file
 from ten winters of NASA MODIS Terra 8-day snow extent (MOD10A2), served by NASA GIBS.
 
 ```
@@ -9,7 +9,7 @@ python3 scripts/snow/fetch.py /tmp/snow/tiles        # about 900 images, a few m
 # elevation tiles for the same area, used to find each resort's upper slopes:
 #   save https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/{x}/{y}.png
 #   as /tmp/snow/dem/{x}_{y}.png for the x and y ranges in /tmp/snow/tiles/meta.json
-python3 scripts/snow/build.py /tmp/snow/tiles data/snow data/fr.json
+python3 scripts/snow/build.py /tmp/snow/tiles data/snow data/fr.json data/ch.json   # every live country file
 ```
 
 Rules:

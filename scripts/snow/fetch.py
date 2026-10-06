@@ -1,8 +1,8 @@
-# Download MODIS 8-day snow extent tiles (NASA GIBS) for 10 winters over the French Alps.
+# Download MODIS 8-day snow extent tiles (NASA GIBS) for 10 winters over the Alps, France to Austria.
 import math, os, datetime, urllib.request, time, json, sys
 OUT = sys.argv[1]
 Z = 8
-W, E, S, N = 4.9, 7.9, 44.3, 46.7
+W, E, S, N = 4.9, 13.6, 44.3, 47.8
 def tx(lon): return int((lon + 180) / 360 * 2**Z)
 def ty(lat):
     r = math.radians(lat); return int((1 - math.log(math.tan(r) + 1 / math.cos(r)) / math.pi) / 2 * 2**Z)

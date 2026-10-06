@@ -27,10 +27,16 @@ def km(a, b):
     return math.hypot((a[0] - b[0]) * math.cos(math.radians(a[1])) * 111.3, (a[1] - b[1]) * 111.3)
 
 
+# Every country file that exists, live or still being prepared.
+def country_files():
+    index = json.load(open(ROOT / "data/index.json"))
+    return [ROOT / "data" / c["file"] for c in index["countries"] if (ROOT / "data" / c["file"]).exists()]
+
+
 def in_region(c):
     while isinstance(c[0], list):
         c = c[0]
-    return 4.8 < c[0] < 8.2 and 43.9 < c[1] < 46.7
+    return 4.8 < c[0] < 13.6 and 43.9 < c[1] < 47.8
 
 
 def area_ids(f):
@@ -44,14 +50,14 @@ def rounded(c):
 
 
 def main(src, runs_src=None):
-    locs = [l for l in json.load(open(ROOT / "data/fr.json"))["locations"] if l["type"] == "resort"]
+    locs = [l for f in country_files() for l in json.load(open(f))["locations"] if l["type"] == "resort"]
     lifts = []
     for f in json.load(open(src))["features"]:
         p, g = f["properties"], f["geometry"]
         if g["type"] != "LineString" or p["status"] != "operating" or p["liftType"] not in KIND or not p["skiAreas"]:
             continue
         lng, lat = g["coordinates"][0][:2]
-        if not (4.8 < lng < 8.2 and 43.9 < lat < 46.7):
+        if not (4.8 < lng < 13.6 and 43.9 < lat < 47.8):
             continue
         lifts.append(f)
 
@@ -144,7 +150,12 @@ def build_run_share(runs, resort_areas):
         c = g["coordinates"]
         pistes.append((area_ids(f), COLOUR[p["difficulty"]], c[0], sum(km(c[i], c[i + 1]) for i in range(len(c) - 1))))
 
-    path = ROOT / "data/fr.json"
+    for path in country_files():
+        build_share_for(path, pistes, resort_areas)
+    print("run shares written")
+
+
+def build_share_for(path, pistes, resort_areas):
     data = json.load(open(path))
     for r in data["locations"]:
         if r["type"] != "resort":
@@ -161,7 +172,6 @@ def build_run_share(runs, resort_areas):
         share["blue"] += 100 - sum(share.values())  # rounding
         r["runShare"] = share
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
-    print("run shares written to data/fr.json")
 
 
 if __name__ == "__main__":
