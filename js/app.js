@@ -986,6 +986,7 @@ function renderCompareBar() {
 }
 
 function openCompare() {
+  if (isNarrow()) setSidebar(false); // on a phone the panel would sit on top of the table
   renderCompareTable();
   $("#compare").hidden = false;
 }
