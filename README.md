@@ -17,6 +17,8 @@ npm run validate   # checks the data files
 
 Any static host works (GitHub Pages, Netlify, Vercel, an S3 bucket). Opening `index.html` straight from disk will not work, because the browser blocks loading the data files that way.
 
+The live site (https://ski-base-finder.vercel.app) deploys itself from GitHub: every push to `main` goes live within a minute or so, and other branches get a preview link.
+
 ## What you can do
 
 - **See the land.** Satellite or topo map draped over real elevation. Drag to pan, right-drag or two-finger drag to tilt and rotate.
