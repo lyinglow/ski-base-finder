@@ -56,6 +56,8 @@ for (const c of index.countries) {
       need(l.levels?.length && l.levels.every((v) => LEVELS.includes(v)), "levels invalid");
       need(l.park && l.park.level in (index.parkLevels || {}) && typeof l.park.note === "string" && l.park.note.length > 0,
         `park must have a level (${Object.keys(index.parkLevels || {}).join(", ")}) and a note`);
+      need(!l.park?.features || l.park.features.every((f) => f in (index.parkFeatures || {})),
+        `park.features must list only: ${Object.keys(index.parkFeatures || {}).join(", ")}`);
       need(/^\d{4}-\d{2}-\d{2}$/.test(l.season?.open) && /^\d{4}-\d{2}-\d{2}$/.test(l.season?.close) && l.season.open < l.season.close,
         "season needs open and close dates (YYYY-MM-DD), open first");
       need(["many", "some", "few"].includes(l.school?.english) && l.school.skiFrom >= 2 && l.school.skiFrom <= 6,

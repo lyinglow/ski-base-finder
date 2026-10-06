@@ -352,5 +352,16 @@
     "fair": "Fair",
     "none": "No park"
   },
-  "parkChecked": "2026/27"
+  "parkChecked": "2026/27",
+  "parkFeatures": {
+    "beginner": "Beginner line",
+    "small": "Small jumps",
+    "medium": "Medium jumps",
+    "big": "Big jumps",
+    "rails": "Rails and boxes",
+    "halfpipe": "Halfpipe",
+    "airbag": "Airbag",
+    "cross": "Boardercross",
+    "kids": "Kids' fun zone"
+  }
 }

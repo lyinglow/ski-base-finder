@@ -132,6 +132,8 @@ Every resort has a `park` rating. It is our own judgement from what the resort p
 | `park.level` | `awesome` (several lines for every level, big jumps, often a halfpipe), `good` (a proper park with a beginner line), `fair` (a small park or fun zone), `none`. |
 | `park.note` | One or two short sentences, shown in the place panel. |
 | `park.name` | Optional. The park's own name, only when it is well known. |
+| `park.features` | Optional. Any of `beginner`, `small`, `medium`, `big`, `rails`, `halfpipe`, `airbag`, `cross`, `kids` (labels in `parkFeatures` in `data/index.json`). |
+| `park.featuresChecked` | `false` until the features have been checked against the season's park map, then `true`. |
 
 A feeder town takes the best park among the resorts it reaches. The pink park shapes on the map come from OpenStreetMap through `scripts/lifts/build.py` (see below) and are often incomplete.
 

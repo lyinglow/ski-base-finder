@@ -30,6 +30,7 @@ const state = {
   origin: "GVA",
   beginner: false,
   park: "any", // "any", "good" (good or better) or "awesome"
+  parkNeeds: new Set(), // park features that must be there, e.g. "beginner"
   snowLayer: false,
   snowMonth: null, // month shown on the snow layer; null follows the trip
   vibes: new Set(), // empty means any vibe
@@ -256,7 +257,7 @@ function clearMap() {
   Object.assign(state, {
     show: "all", maxTime: 300, maxHop: 60,
     prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(),
-    family: false, carFree: false, snowSure: false, beginner: false, park: "any",
+    family: false, carFree: false, snowSure: false, beginner: false, park: "any", parkNeeds: new Set(),
     snowLayer: false, snowMonth: null, sort: "fit", compare: [],
   });
   syncControls();
@@ -285,6 +286,19 @@ function parkOf(l) {
   return best;
 }
 
+// Does this resort, or any resort a feeder town reaches, have the park asked for?
+function parkMatch(l) {
+  const resorts = l.type === "resort" ? [l] : reachable(l, model.byId).map((x) => x.place);
+  const min = state.park === "any" ? 0 : PARK_RANK[state.park];
+  return resorts.some((r) => PARK_RANK[r.park.level] >= min && [...state.parkNeeds].every((f) => r.park.features?.includes(f)));
+}
+
+function parkFeatures(park) {
+  if (!park.features?.length) return "";
+  const labels = model.index.parkFeatures;
+  return `<ul class="park-features">${park.features.map((f) => `<li>${esc(labels[f])}</li>`).join("")}</ul>`;
+}
+
 function parkSection(l) {
   const k = parkOf(l);
   const r = k.place;
@@ -295,7 +309,8 @@ function parkSection(l) {
       <span class="s-label">${k.link ? "Best snow park nearby" : "Snow park"}</span>
       <p class="park-verdict"><b class="park-pill ${k.level}">${model.index.parkLevels[k.level]}</b>${where}</p>
       <p>${esc(r.park.note)}</p>
-      <p class="snow-note">Our rating for ${model.index.parkChecked}. Parks are rebuilt every winter, so check the resort's site before you go. Parks on the map are from OpenStreetMap and may be missing.</p>
+      ${parkFeatures(r.park)}
+      <p class="snow-note">Our rating for ${model.index.parkChecked}.${r.park.features && !r.park.featuresChecked ? " Features are from our first pass, not yet checked against this season's park map." : ""} Parks are rebuilt every winter, so check the resort's site before you go. Parks on the map are from OpenStreetMap and may be missing.</p>
     </section>`;
 }
 
@@ -403,7 +418,7 @@ function passes(l) {
   if (state.family && !l.family) return false;
   if (state.vibes.size && !l.vibes.some((v) => state.vibes.has(v))) return false;
   if (state.carFree && !l.carFree) return false;
-  if (state.park !== "any" && PARK_RANK[parkOf(l).level] < PARK_RANK[state.park]) return false;
+  if ((state.park !== "any" || state.parkNeeds.size) && !parkMatch(l)) return false;
   if (state.snowSure && snowOf(l) !== "good") return false;
   if (state.trip.week && fitOf(l)?.closed) return false; // closed for the chosen week
   if (l.type === "resort") return state.sizes.has(l.skiSize);
@@ -1230,6 +1245,12 @@ function bindControls() {
     $$("#f-park button").forEach((x) => x.setAttribute("aria-pressed", x === b));
     applyFilters();
   }));
+  $$("#f-park-needs button").forEach((b) => b.addEventListener("click", () => {
+    const v = b.dataset.v;
+    state.parkNeeds.has(v) ? state.parkNeeds.delete(v) : state.parkNeeds.add(v);
+    b.setAttribute("aria-pressed", state.parkNeeds.has(v));
+    applyFilters();
+  }));
   $("#f-beginner").addEventListener("click", (e) => {
     state.beginner = !state.beginner;
     e.currentTarget.setAttribute("aria-pressed", state.beginner);
@@ -1414,6 +1435,7 @@ function planOf() {
     snowSure: state.snowSure,
     beginner: state.beginner,
     park: state.park,
+    parkNeeds: [...state.parkNeeds],
     snowLayer: state.snowLayer,
     sort: state.sort,
     saved: [...state.saved],
@@ -1468,6 +1490,7 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   state.snowSure = p.snowSure === true;
   state.beginner = p.beginner === true;
   state.park = ["good", "awesome"].includes(p.park) ? p.park : "any";
+  state.parkNeeds = new Set((p.parkNeeds || []).filter((f) => f in model.index.parkFeatures));
   state.snowLayer = p.snowLayer === true;
   if (["fit", "time", "cost", "price", "altitude", "ski", "snow"].includes(p.sort)) state.sort = p.sort;
   if (mergeSaved) for (const id of ids(p.saved)) state.saved.add(id);
@@ -1562,6 +1585,7 @@ function syncControls() {
   $("#f-snow").checked = state.snowSure;
   $("#f-beginner").setAttribute("aria-pressed", state.beginner);
   pressed("#f-park button", (v) => v === state.park);
+  pressed("#f-park-needs button", (v) => state.parkNeeds.has(v));
   $("#sort").value = state.sort;
   $("#show-saved").setAttribute("aria-pressed", state.show === "saved");
   $(".filters").hidden = state.show === "saved";

@@ -949,7 +949,17 @@
       "park": {
         "level": "awesome",
         "note": "Several parks from first jumps to big kickers, including The Stash tree park and Lil' Stash for children.",
-        "name": "Arare park and The Stash"
+        "name": "Arare park and The Stash",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -1072,7 +1082,15 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with a beginner line, plus fun zones."
+        "note": "A proper park with a beginner line, plus fun zones.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -1185,7 +1203,16 @@
       "park": {
         "level": "awesome",
         "note": "One of the best-known parks in France, with lines for every level.",
-        "name": "Smooth Park"
+        "name": "Smooth Park",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -1760,7 +1787,16 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with easy and medium lines, a boardercross and a fun zone."
+        "note": "A proper park with easy and medium lines, a boardercross and a fun zone.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -2365,7 +2401,15 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with a slopestyle line and easier features."
+        "note": "A proper park with a slopestyle line and easier features.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -2486,7 +2530,14 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with a beginner line."
+        "note": "A proper park with a beginner line.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -3044,7 +3095,15 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with lines for beginners and improvers."
+        "note": "A proper park with lines for beginners and improvers.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "cross"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -3964,7 +4023,16 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with a beginner line, plus boardercross and fun zones."
+        "note": "A proper park with a beginner line, plus boardercross and fun zones.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -4078,7 +4146,17 @@
       },
       "park": {
         "level": "awesome",
-        "note": "A big park with lines for every level, among the best in the Tarentaise."
+        "note": "A big park with lines for every level, among the best in the Tarentaise.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -4566,7 +4644,17 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with lines for each level, plus boardercross."
+        "note": "A proper park with lines for each level, plus boardercross.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -4690,7 +4778,18 @@
       },
       "park": {
         "level": "awesome",
-        "note": "A big park with lines for every level and a halfpipe."
+        "note": "A big park with lines for every level and a halfpipe.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "halfpipe",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -4805,7 +4904,15 @@
       },
       "park": {
         "level": "good",
-        "note": "Several parks and fun zones, including a family park and a beginner park."
+        "note": "Several parks and fun zones, including a family park and a beginner park.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -4920,7 +5027,15 @@
       "park": {
         "level": "good",
         "note": "A proper park with lines for each level, plus fun runs.",
-        "name": "Moonpark"
+        "name": "Moonpark",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -5033,7 +5148,16 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with lines for each level, plus fun zones."
+        "note": "A proper park with lines for each level, plus fun zones.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -5155,7 +5279,15 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park, plus fun zones for children."
+        "note": "A proper park, plus fun zones for children.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -5382,7 +5514,16 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with easy and medium lines, plus boardercross."
+        "note": "A proper park with easy and medium lines, plus boardercross.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -5606,7 +5747,14 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with a beginner line."
+        "note": "A proper park with a beginner line.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -6074,7 +6222,14 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with lines for beginners and improvers."
+        "note": "A proper park with lines for beginners and improvers.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -6759,7 +6914,16 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with lines for each level, plus boardercross."
+        "note": "A proper park with lines for each level, plus boardercross.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -6995,7 +7159,18 @@
       },
       "park": {
         "level": "awesome",
-        "note": "A big park high on the glacier with lines for every level, often open into spring."
+        "note": "A big park high on the glacier with lines for every level, often open into spring.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "halfpipe",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -7217,7 +7392,15 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with a beginner park and a kids' park."
+        "note": "A proper park with a beginner park and a kids' park.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -7554,7 +7737,17 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park, plus a boardercross, fun zones and an airbag."
+        "note": "A proper park, plus a boardercross, fun zones and an airbag.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "airbag",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -7669,7 +7862,15 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with a beginner line, plus boardercross."
+        "note": "A proper park with a beginner line, plus boardercross.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "cross"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -7897,7 +8098,17 @@
       },
       "park": {
         "level": "awesome",
-        "note": "A big park with lines for every level, among the best in the southern Alps."
+        "note": "A big park with lines for every level, among the best in the southern Alps.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -8018,7 +8229,14 @@
       },
       "park": {
         "level": "good",
-        "note": "A proper park with lines for beginners and improvers."
+        "note": "A proper park with lines for beginners and improvers.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails"
+        ],
+        "featuresChecked": false
       }
     },
     {
@@ -8131,7 +8349,16 @@
       },
       "park": {
         "level": "good",
-        "note": "Two parks, one easy and one for experienced riders."
+        "note": "Two parks, one easy and one for experienced riders.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "big",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
       }
     },
     {

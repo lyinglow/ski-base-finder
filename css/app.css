@@ -431,6 +431,9 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .ln.ski { border-top: 2px solid #fff; box-shadow: 0 0 0 1px rgba(11, 21, 32, 0.5); }
 .ln.park { border-top: 4px solid #ff5fa2; }
 .park-verdict { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.park-features { list-style: none; padding: 0; margin: 8px 0 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+.park-features li { padding: 2px 9px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; }
+#f-park-needs { margin-top: 8px; }
 .park-pill { padding: 2px 10px; border-radius: 999px; font-weight: 600; font-size: 14px; background: var(--panel-2); color: var(--ink); }
 .park-pill.awesome { background: #ff5fa2; color: #fff; }
 .park-pill.good { background: var(--good-soft); color: var(--good); }
