@@ -50,9 +50,11 @@
     --run-black: #e6edf3;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     color-scheme: dark;
+    --icon-filter: invert(1);
   }
 }
 :root[data-theme="dark"] {
+  --icon-filter: invert(1);
   --bg: #0d141b;
   --panel: #141d26;
   --panel-2: #1a2531;
@@ -379,7 +381,8 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .stage { position: relative; min-width: 0; min-height: 0; }
 #map { position: absolute; inset: 0; background: #b9c9d6; }
 
-.map-tools { position: absolute; top: 12px; left: 12px; display: flex; flex-wrap: wrap; gap: 8px; z-index: 2; }
+.map-tools { position: absolute; top: 12px; left: 12px; display: flex; flex-wrap: wrap; gap: 8px; z-index: 2; pointer-events: none; }
+.map-tools > * { pointer-events: auto; }
 .tool-group { display: flex; }
 .tool {
   border: 0; background: var(--panel); color: var(--ink);
@@ -603,7 +606,17 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 /* MapLibre controls inherit the theme */
 .maplibregl-ctrl-group { background: var(--panel); box-shadow: var(--shadow) !important; }
 .maplibregl-ctrl-group button + button { border-top-color: var(--line); }
-.maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: none; }
+.maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: var(--icon-filter, none); }
+.save-ctrl { position: relative; }
+.save-ctrl button { display: grid; place-items: center; color: var(--ink); }
+.save-ctrl svg { width: 18px; height: 18px; }
+.save-tip {
+  position: absolute; right: calc(100% + 8px); top: 50%; transform: translateY(-50%);
+  white-space: nowrap; padding: 6px 10px; border-radius: 8px; font-size: 13px;
+  background: var(--panel); color: var(--ink); box-shadow: var(--shadow);
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+.save-ctrl.show-tip .save-tip { opacity: 1; }
 
 /* ---------- phones and small tablets ---------- */
 @media (max-width: 899px) {
@@ -624,7 +637,8 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
     max-height: 58%; border-radius: 16px 16px 0 0;
     padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   }
-  .legend, .maplibregl-ctrl-top-right { display: none; }
+  .legend, .maplibregl-ctrl-top-right .maplibregl-ctrl-group:not(.save-ctrl) { display: none; }
+  .maplibregl-ctrl-top-right { top: 48px; }
   .compare-bar { bottom: 16px; }
   .detail.is-min { bottom: 0; padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
   .detail:not([hidden]):not(.is-min) ~ .compare-bar { bottom: calc(58% + 10px); }

@@ -63,6 +63,7 @@ async function init() {
   loadShortlist();
 
   map = createMap("map");
+  map.addControl(savePlanControl(), "top-right");
   for (const o of model.origins) addOriginMarker(o);
   updateOriginMarkers();
   for (const l of model.locations) addMarker(l);
@@ -1366,6 +1367,28 @@ function restorePlan() {
 
 const encodePlan = (p) => btoa(unescape(encodeURIComponent(JSON.stringify(p)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 const decodePlan = (s) => JSON.parse(decodeURIComponent(escape(atob(s.replace(/-/g, "+").replace(/_/g, "/")))));
+
+// Floppy disc under the zoom buttons: the plan already saves itself, so this confirms it and copies the link.
+function savePlanControl() {
+  const box = document.createElement("div");
+  box.className = "maplibregl-ctrl maplibregl-ctrl-group save-ctrl";
+  box.innerHTML = `<button type="button" id="save-plan" title="Save plan and copy its link" aria-label="Save plan and copy its link">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h11l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 3v5h7V3M8 21v-7h8v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+  </button><span class="save-tip" role="status"></span>`;
+  const tip = box.querySelector(".save-tip");
+  let timer;
+  box.querySelector("button").addEventListener("click", async () => {
+    savePlan();
+    const url = `${location.origin}${location.pathname}?plan=${encodePlan(planOf())}`;
+    let copied = true;
+    try { await navigator.clipboard.writeText(url); } catch { copied = false; }
+    tip.textContent = copied ? "Plan saved. Link copied." : "Plan saved in this browser.";
+    box.classList.add("show-tip");
+    clearTimeout(timer);
+    timer = setTimeout(() => box.classList.remove("show-tip"), 2500);
+  });
+  return { onAdd: () => box, onRemove: () => box.remove() };
+}
 
 async function copyPlanLink(btn, fallbackInput) {
   const label = btn.textContent;
