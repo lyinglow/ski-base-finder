@@ -269,21 +269,28 @@ function airportView(duration = 0) {
   const lat = (origin.coords[1] * Math.PI) / 180;
   const bearing = (Math.atan2((far.coords[0] - origin.coords[0]) * Math.cos(lat), far.coords[1] - origin.coords[1]) * 180) / Math.PI;
 
-  // Find the zoom that puts the airport near the bottom edge, by trying it out without drawing.
+  // Put the far place at the top middle and the airport at the bottom middle, by trying views out without drawing.
   const start = { center: map.getCenter(), zoom: map.getZoom(), bearing: map.getBearing(), pitch: map.getPitch() };
-  const { clientHeight: h } = map.getContainer();
-  const target = h * 0.86; // airport this far down the screen
-  let zoom = 8;
-  for (let i = 0; i < 4; i++) {
-    map.jumpTo({ center: far.coords, zoom, bearing, pitch: 35 });
-    const y = map.project(origin.coords).y;
-    const drop = y - h / 2; // how far below the centre the airport lands
-    if (drop <= 0) break;
-    zoom += Math.log2((target - h / 2) / drop);
+  const { clientWidth: w, clientHeight: h } = map.getContainer();
+  const tools = document.querySelector(".map-tools")?.getBoundingClientRect();
+  const mapTop = map.getContainer().getBoundingClientRect().top;
+  const top = Math.max(h * 0.14, tools ? tools.bottom - mapTop + 36 : 0); // far place, clear of the buttons
+  const bottom = h * 0.86; // airport
+  let view = { center: [(far.coords[0] + origin.coords[0]) / 2, (far.coords[1] + origin.coords[1]) / 2], zoom: 8, bearing, pitch: 35 };
+  for (let i = 0; i < 6; i++) {
+    map.jumpTo(view);
+    const a = map.project(far.coords);
+    const b = map.project(origin.coords);
+    const span = b.y - a.y;
+    if (span <= 0) break;
+    const zoom = Math.max(6, Math.min(11, view.zoom + Math.log2((bottom - top) / span)));
+    map.jumpTo({ ...view, zoom });
+    // Slide the map so the far place lands where we want it.
+    const p = map.project(far.coords);
+    const c = map.unproject([w / 2 + (p.x - w / 2), h / 2 + (p.y - top)]);
+    view = { ...view, zoom, center: [c.lng, c.lat] };
   }
-  zoom = Math.max(6, Math.min(11, zoom));
   map.jumpTo(start);
-  const view = { center: far.coords, zoom, bearing, pitch: 35 };
   duration ? map.flyTo({ ...view, duration }) : map.jumpTo(view);
 }
 
