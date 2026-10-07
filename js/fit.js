@@ -96,6 +96,7 @@ function levelParts(level, r, fromTown) {
 }
 
 function transferPart(place, ctx) {
+  if (ctx.travel(place).none) return part(0, 0, true, null); // no airport picked yet
   const min = ctx.travel(place).min;
   if (min <= 90) return part(10, 10, true, "Under 1h30 from the airport");
   if (min <= 150) return part(5, 10, true, "Under 2h30 from the airport");

@@ -27,7 +27,7 @@ const state = {
   currency: "GBP",
   gbpPerEur: 0.85,
   rateDate: null,
-  origin: "GVA",
+  origin: null, // no airport until a country or an airport is picked
   levels: ["intermediate"], // who's skiing: any of "first", "intermediate", "expert"
   park: "any", // "any", "good" (good or better) or "awesome"
   parkNeeds: new Set(), // park features that must be there, e.g. "beginner"
@@ -57,8 +57,8 @@ init().catch((err) => {
 
 async function init() {
   model = await loadData();
-  $("#origin").innerHTML = model.origins.map((o) =>
-    `<option value="${o.id}"${o.id === state.origin ? " selected" : ""}>${esc(o.name)} (${o.id})</option>`).join("");
+  $("#origin").innerHTML = `<option value="">Pick an airport</option>` + model.origins.map((o) =>
+    `<option value="${o.id}">${esc(o.name)} (${o.id})</option>`).join("");
   $("#country-list").textContent = model.countries.map((c) => c.name).join(", ");
   setupCurrency();
   restorePlan(); // last visit, or a shared plan link
@@ -94,7 +94,9 @@ async function init() {
 
 const mins = (m) => (m < 60 ? `${m} min` : `${Math.floor(m / 60)}h${String(m % 60).padStart(2, "0")}`);
 const price = (p) => curSymbol().repeat(Number(p));
-const travel = (l) => l.fromOrigin[state.origin];
+// With no airport picked there are no drive times yet, so every place passes through with an empty trip.
+const NO_TRIP = { km: 0, min: 0, none: true };
+const travel = (l) => (state.origin ? l.fromOrigin[state.origin] : NO_TRIP);
 const originName = () => model.origins.find((o) => o.id === state.origin).name;
 const typeLabel = (l) => (l.type === "resort" ? "Resort" : "Feeder town");
 const modes = (by) => by.map((m) => MODE_LABEL[m]).join(" or ");
@@ -242,18 +244,41 @@ function updateOriginMarkers() {
 }
 
 function setOrigin(id) {
-  state.origin = id;
-  $("#origin").value = id;
+  state.origin = id || null;
+  $("#origin").value = id || "";
   updateOriginMarkers();
   tripChanged();
   if (!state.selected) airportView(1400);
+}
+
+/* ---------- countries and the first screen ---------- */
+
+// Choose which countries are on show. Picking one flies in from its main airport; the airport can
+// then be changed on its own. Taking the last country away goes back to no airport, unless the
+// airport was changed by hand.
+function pickCountries(next, { added, removed } = {}) {
+  state.countries = new Set(next);
+  $$("#f-country button").forEach((b) => b.setAttribute("aria-pressed", state.countries.has(b.dataset.v)));
+  const primary = (code) => model.countries.find((c) => c.code === code)?.primaryAirport;
+  let airport = state.origin;
+  if (added) airport = primary(added);
+  else if (state.countries.size === 1) airport = primary([...state.countries][0]);
+  else if (state.countries.size === 0 && state.origin === primary(removed)) airport = null;
+  if (airport && !model.origins.some((o) => o.id === airport)) airport = state.origin;
+  state.origin = airport;
+  $("#origin").value = airport || "";
+  updateOriginMarkers();
+  if (state.selected) clearSelection();
+  tripChanged();
+  fullView(1400);
 }
 
 /* ---------- clear map ---------- */
 
 // Back to a fresh map: every filter off, nothing selected, satellite in 3D, no snow layer,
 // and a view that takes in every place from the airport.
-// The trip (airport, nights, people) and the shortlist stay, because they are the user's plan.
+// The airport goes too, so the first screen asks where you are skiing. The trip (nights, people)
+// and the shortlist stay, because they are the user's plan.
 function clearMap() {
   clearSelection();
   $("#compare").hidden = true;
@@ -261,9 +286,10 @@ function clearMap() {
     show: "all", maxTime: 300, maxHop: 60, months: new Set(["jan", "feb", "mar"]),
     prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(), countries: new Set(),
     family: false, carFree: false, snowSure: false, park: "any", parkNeeds: new Set(), levels: ["intermediate"],
-    snowLayer: false, snowMonth: null, sort: "fit", compare: [],
+    snowLayer: false, snowMonth: null, sort: "fit", compare: [], origin: null,
   });
   state.trip.week = null; // a week pick overrides the months, so it goes too
+  updateOriginMarkers();
   syncControls();
   ["#f-time", "#f-hop"].forEach((id) => $(id).dispatchEvent(new Event("input"))); // refresh their labels
   renderCompareBar();
@@ -278,18 +304,19 @@ function clearMap() {
 // Everything on show, seen from the airport: the airport near the bottom, every place above it.
 // Fitted by trying views out without drawing, because a turned, tilted map does not fit a north-up box.
 function fullView(duration = 0) {
-  const origin = model.origins.find((o) => o.id === state.origin);
+  const origin = model.origins.find((o) => o.id === state.origin) || null;
   const places = lastVisible.length ? lastVisible : model.locations.filter((l) => travel(l));
   if (!places.length) return;
-  const pts = [origin.coords, ...places.map((l) => l.coords)];
+  const pts = [...(origin ? [origin.coords] : []), ...places.map((l) => l.coords)];
   const mid = places.reduce((a, l) => [a[0] + l.coords[0] / places.length, a[1] + l.coords[1] / places.length], [0, 0]);
-  const lat = (origin.coords[1] * Math.PI) / 180;
-  const toward = (Math.atan2((mid[0] - origin.coords[0]) * Math.cos(lat), mid[1] - origin.coords[1]) * 180) / Math.PI;
+  const from = origin ? origin.coords : [mid[0], mid[1] - 1]; // with no airport, look north-up
+  const lat = (from[1] * Math.PI) / 180;
+  const toward = origin ? (Math.atan2((mid[0] - from[0]) * Math.cos(lat), mid[1] - from[1]) * 180) / Math.PI : 0;
   const { clientWidth: w, clientHeight: h } = map.getContainer();
   // On a tall screen, turn the map so the group's long side runs top to bottom,
   // choosing the way round that keeps the airport at the bottom.
   let bearing = toward;
-  if (h > w) {
+  if (h > w && origin) {
     const k = Math.cos(lat);
     const dx = pts.map((p) => (p[0] - mid[0]) * k), dy = pts.map((p) => p[1] - mid[1]);
     const sxx = dx.reduce((t, v) => t + v * v, 0), syy = dy.reduce((t, v) => t + v * v, 0);
@@ -303,7 +330,7 @@ function fullView(duration = 0) {
   const mapTop = map.getContainer().getBoundingClientRect().top;
   const box = { left: 30, right: w - 30, top: Math.max(60, tools ? tools.bottom - mapTop + 30 : 60), bottom: h - 50 };
   const start = { center: map.getCenter(), zoom: map.getZoom(), bearing: map.getBearing(), pitch: map.getPitch() };
-  let view = { center: [(mid[0] + origin.coords[0]) / 2, (mid[1] + origin.coords[1]) / 2], zoom: 7, bearing, pitch: 30 };
+  let view = { center: origin ? [(mid[0] + origin.coords[0]) / 2, (mid[1] + origin.coords[1]) / 2] : mid, zoom: 7, bearing, pitch: origin ? 30 : 25 };
   for (let i = 0; i < 6; i++) {
     map.jumpTo(view);
     const xy = pts.map((p) => map.project(p));
@@ -391,6 +418,7 @@ let reachMarker = null;
 // Look along the line from the airport to the furthest place on show:
 // the furthest place in the middle of the screen, the airport straight below it at the bottom centre.
 function airportView(duration = 0) {
+  if (!state.origin) return fullView(duration);
   const origin = model.origins.find((o) => o.id === state.origin);
   const places = lastVisible.length ? lastVisible : model.locations.filter((l) => travel(l));
   if (!places.length) return;
@@ -431,7 +459,7 @@ function updateReach(visible) {
   lastVisible = visible;
   reachMarker?.remove();
   reachMarker = null;
-  if (!map || state.selected || !visible.length) { if (map) setReach(map, []); return; }
+  if (!map || state.selected || !visible.length || !state.origin) { if (map) setReach(map, []); return; }
   const origin = model.origins.find((o) => o.id === state.origin);
   const far = visible.reduce((a, b) => (travel(b).min > travel(a).min ? b : a));
   setReach(map, [{ type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: [origin.coords, far.coords] } }]);
@@ -505,6 +533,8 @@ function filterCount() {
 }
 
 function applyFilters() {
+  $("#welcome").hidden = Boolean(state.origin) || Boolean(state.selected);
+  $("#f-time-field").hidden = !state.origin; // drive times need an airport
   const set = filterCount();
   $("#filter-count").hidden = !set;
   $("#filter-count").textContent = set;
@@ -546,7 +576,7 @@ function resultItem(l) {
   return `<li><button type="button" class="result ${l.type}${l.id === state.selected ? " is-active" : ""}" data-id="${l.id}">
     <i class="dot ${l.type}"></i>
     <span class="r-main"><span class="r-name"><b class="fit-pill" title="Fit for your group">${fitOf(l).score}</b>${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
-    <span class="r-side"><span class="r-time">${mins(t.min)}</span><span class="r-price" title="Trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
+    <span class="r-side"><span class="r-time">${t.none ? "" : mins(t.min)}</span><span class="r-price" title="Trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
   </button></li>`;
 }
 
@@ -918,7 +948,7 @@ function renderDetail(l) {
     </div>`;
 
   const stats = `<div class="stats">
-      ${stat(`From ${state.origin}`, mins(t.min), `${t.km} km`)}
+      ${t.none ? stat("From airport", "Not set", "pick a country") : stat(`From ${state.origin}`, mins(t.min), `${t.km} km`)}
       ${stat("Altitude", `${l.altitude} m`, l.topAltitude ? `top ${l.topAltitude} m` : "village")}
       ${stat("Price to stay", band.symbol, band.label)}
       ${stat("Town", SIZE_LABEL[l.townSize], l.family ? "Family-friendly" : "Better for adults")}
@@ -1078,7 +1108,7 @@ function renderCompareTable() {
       label: "From airport",
       vals: cols.map((l) => travel(l).min),
       win: Math.min,
-      cell: (l) => `${mins(travel(l).min)}<small>${travel(l).km} km</small>`,
+      cell: (l) => (travel(l).none ? "Not set" : `${mins(travel(l).min)}<small>${travel(l).km} km</small>`),
     },
     {
       label: "Price to stay",
@@ -1328,30 +1358,23 @@ function bindControls() {
     state.skiAt[e.target.dataset.base] = e.target.value;
     tripChanged();
   });
+  // First screen: one card per country.
+  $("#welcome-countries").innerHTML = model.countries.map((c) => {
+    const n = model.locations.filter((l) => l.country === c.code && l.type === "resort").length;
+    const airport = model.origins.find((o) => o.id === c.primaryAirport);
+    return `<button type="button" data-v="${c.code}"><b>${esc(c.name)}</b><span>${n} resorts · from ${esc(airport?.name || "")}</span></button>`;
+  }).join("");
+  $$("#welcome-countries button").forEach((b) => b.addEventListener("click", () => pickCountries([b.dataset.v], { added: b.dataset.v })));
   // Country chips, shown once more than one country is live. None picked means all.
   $("#f-country-field").hidden = model.countries.length < 2;
   $("#f-country").innerHTML = model.countries.map((c) =>
     `<button type="button" id="f-country-${c.code.toLowerCase()}" data-v="${c.code}" aria-pressed="false">${esc(c.name)}</button>`).join("");
   $$("#f-country button").forEach((b) => b.addEventListener("click", () => {
     const v = b.dataset.v;
-    const on = !state.countries.has(v);
-    on ? state.countries.add(v) : state.countries.delete(v);
-    b.setAttribute("aria-pressed", on);
-    // Fly in from the country's main airport: the one just picked, or the one left on its own.
-    // Picking an airport afterwards overrides it until the countries change again.
-    const only = state.countries.size === 1 ? [...state.countries][0] : null;
-    const code = on ? v : only;
-    const airport = code ? model.countries.find((c) => c.code === code)?.primaryAirport : model.index.defaultOrigin;
-    if (airport && airport !== state.origin && model.origins.some((o) => o.id === airport)) {
-      state.origin = airport;
-      $("#origin").value = airport;
-      updateOriginMarkers();
-      tripChanged();
-    } else {
-      applyFilters();
-    }
-    if (state.selected) clearSelection();
-    fullView(1400);
+    const next = new Set(state.countries);
+    const on = !next.has(v);
+    on ? next.add(v) : next.delete(v);
+    pickCountries(next, on ? { added: v } : { removed: v });
   }));
   // Vibe chips start all off: no choice means any vibe.
   $("#f-vibe").innerHTML = Object.entries(model.index.vibes).map(([key, v]) =>
@@ -1711,7 +1734,7 @@ function renderKidAges() {
 function syncControls() {
   const pressed = (sel, on) => $$(sel).forEach((b) => b.setAttribute("aria-pressed", on(b.dataset.v ?? b.dataset.show)));
   const t = state.trip;
-  $("#origin").value = state.origin;
+  $("#origin").value = state.origin || "";
   $("#t-nights").value = t.nights;
   $("#t-days").value = t.skiDays;
   $("#t-adults").value = t.adults;

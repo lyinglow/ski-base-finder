@@ -116,7 +116,7 @@
         </div>
 
         <h2 class="filters-head">Narrow it down</h2>
-        <div class="field">
+        <div class="field" id="f-time-field">
           <label for="f-time"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg>Max time from airport <output id="f-time-out">Any</output></label>
           <input type="range" id="f-time" min="20" max="300" step="10" value="300">
           <div class="range-ends"><span>20 min</span><span>5h</span></div>
@@ -257,6 +257,12 @@
         <p class="sl-scale"><span>Sometimes</span><i class="sl-ramp" aria-hidden="true"></i><span>Nearly every winter</span></p>
         <p class="sl-note">Last 10 winters, NASA satellite record.</p>
       </div>
+
+      <section class="welcome" id="welcome" aria-labelledby="welcome-title" hidden>
+        <h2 id="welcome-title">Where are you skiing?</h2>
+        <p>Pick a country. We start from its main airport, and you can change the airport any time.</p>
+        <div class="welcome-countries" id="welcome-countries"></div>
+      </section>
 
       <div class="legend" aria-label="Legend">
         <span><i class="mk resort"></i>Resort</span>

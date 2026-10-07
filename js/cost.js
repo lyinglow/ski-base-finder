@@ -10,7 +10,7 @@ export function tripCost(stay, ski, trip, model) {
   const c = model.index.costs;
   const kids = trip.childAges;
   const people = trip.adults + kids.length;
-  const fromAirport = stay.fromOrigin[trip.origin];
+  const fromAirport = stay.fromOrigin[trip.origin] || { km: 0 }; // no airport picked: no transfer counted
 
   // How you get from bed to lifts. A lift or same place costs nothing.
   const link = stay.id === ski.id ? null : (stay.links || []).find((k) => k.to === ski.id);
@@ -48,7 +48,9 @@ export function tripCost(stay, ski, trip, model) {
 
   // Airport there and back.
   let airport;
-  if (usesCar) {
+  if (!trip.origin) {
+    airport = 0;
+  } else if (usesCar) {
     const days = trip.nights + 1;
     airport = cars * (days * c.car.hirePerDay + 2 * fromAirport.km * (c.car.fuelPerKm + c.car.tollPerKm));
   } else {
