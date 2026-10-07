@@ -680,8 +680,13 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 }
 .compare header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--line); }
 .compare h2 { font-size: 24px; }
-.compare-scroll { overflow: auto; padding: 0 20px 16px; }
+.compare-scroll { overflow: auto; padding: 0 20px 16px 0; }
 .compare table { border-collapse: collapse; width: 100%; min-width: 560px; font-variant-numeric: tabular-nums; }
+/* Many places: each column keeps a readable width and the row labels stay in view while it scrolls sideways. */
+.compare td, .compare thead th:not(:first-child) { min-width: 170px; }
+.compare tbody th, .compare thead th:first-child { position: sticky; left: 0; background: var(--panel); z-index: 2; box-shadow: 1px 0 0 var(--line); }
+.compare thead th:first-child { z-index: 3; }
+.compare tbody th, .compare thead th:first-child { min-width: 150px; padding-left: 20px; }
 .compare th, .compare td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
 .compare thead th { position: sticky; top: 0; background: var(--panel); padding-top: 16px; z-index: 1; }
 .compare tbody th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; width: 150px; }
@@ -742,6 +747,8 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
   .detail:not([hidden]):not(.is-min) ~ .compare-bar { bottom: calc(58% + 10px); }
   .detail.is-min:not([hidden]) ~ .compare-bar { bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
   .compare { inset: 0; border-radius: 0; }
+  .compare tbody th, .compare thead th:first-child { min-width: 92px; width: 92px; padding-left: 14px; padding-right: 8px; font-size: 10.5px; }
+  .compare td, .compare thead th:not(:first-child) { min-width: 150px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .d-head h2 { font-size: 24px; }
 }

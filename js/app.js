@@ -12,7 +12,7 @@ const SNOW_LABEL = { good: "Snow-sure", fair: "Usually fine", poor: "Risky" };
 const LEVEL_LABEL = { beginner: "Beginner", intermediate: "Intermediate", expert: "Expert" };
 const SIZE_LABEL = { small: "Small", medium: "Medium", large: "Large", huge: "Huge" };
 const MODE_LABEL = { car: "car", bus: "bus", train: "train", lift: "lift" };
-const MAX_COMPARE = 4;
+const MAX_COMPARE = Infinity; // compare as many places as you like
 
 const state = {
   show: "all",
@@ -1065,7 +1065,7 @@ function renderCompareBar() {
     const l = model.byId.get(id);
     return `<span class="chip ${l.type}"><i class="dot ${l.type}"></i>${esc(l.name)}<button type="button" data-compare="${id}" aria-label="Remove ${esc(l.name)}">×</button></span>`;
   }).join("");
-  $("#compare-open").textContent = `Compare ${state.compare.length}`;
+  $("#compare-open").textContent = state.compare.length > 1 ? `Compare all ${state.compare.length}` : "Compare";
   $("#compare-open").disabled = state.compare.length < 2;
 }
 
@@ -1562,7 +1562,7 @@ function shortlistChanged(persist = true) {
   const n = state.saved.size;
   $("#saved-count").textContent = n;
   $("#saved-compare").disabled = n < 2;
-  $("#saved-compare").textContent = n > MAX_COMPARE ? `Compare first ${MAX_COMPARE}` : "Compare";
+  $("#saved-compare").textContent = n > 1 ? `Compare all ${n}` : "Compare";
   $("#saved-share").disabled = n === 0;
   $("#saved-link").hidden = true;
   for (const [id, { el }] of markers) el.classList.toggle("is-saved", state.saved.has(id));
