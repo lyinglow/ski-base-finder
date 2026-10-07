@@ -1285,9 +1285,11 @@ function bindControls() {
     $(sel).addEventListener("input", (e) => {
       const el = e.target;
       const v = Math.round(Number(el.value));
-      if (!Number.isFinite(v) || v < +el.min || v > +el.max) return; // wait for a valid number
+      // The ski days box is capped at the nights, but a bigger number should be pulled down, not ignored.
+      const top = key === "skiDays" ? 21 : +el.max;
+      if (!Number.isFinite(v) || v < +el.min || v > top) return; // wait for a valid number
       state.trip[key] = v;
-      if (key === "nights" && state.trip.skiDays > v) { state.trip.skiDays = v; $("#t-days").value = v; }
+      keepDaysWithinNights();
       tripChanged();
     });
   }
@@ -1635,7 +1637,7 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   const t = p.trip || {};
   state.trip = {
     nights: num(t.nights, 1, 21, 7),
-    skiDays: num(t.skiDays, 1, 21, 6),
+    skiDays: Math.min(num(t.skiDays, 1, 21, 6), num(t.nights, 1, 21, 7)),
     adults: num(t.adults, 1, 12, 2),
     childAges: (Array.isArray(t.childAges) ? t.childAges : []).filter((a) => Number.isInteger(a) && a >= 0 && a <= 17).slice(0, 8),
     transport: t.transport === "car" ? "car" : "shuttle",
@@ -1730,12 +1732,22 @@ function renderKidAges() {
     `<label for="kid-age-${i}">Child ${i + 1}<select id="kid-age-${i}" data-i="${i}">${Array.from({ length: 18 }, (_, a) => opt(a, age)).join("")}</select></label>`).join("");
 }
 
+// You can't ski more days than you stay nights: pull the ski days down, in the data and in the box,
+// and stop the box going higher.
+function keepDaysWithinNights() {
+  const t = state.trip;
+  if (t.skiDays > t.nights) t.skiDays = t.nights;
+  if (Number($("#t-days").value) !== t.skiDays && $("#t-days").value !== "") $("#t-days").value = t.skiDays;
+  $("#t-days").max = t.nights;
+}
+
 // Put every control in line with the state (after restoring a plan).
 function syncControls() {
   const pressed = (sel, on) => $$(sel).forEach((b) => b.setAttribute("aria-pressed", on(b.dataset.v ?? b.dataset.show)));
   const t = state.trip;
   $("#origin").value = state.origin || "";
   $("#t-nights").value = t.nights;
+  keepDaysWithinNights();
   $("#t-days").value = t.skiDays;
   $("#t-adults").value = t.adults;
   renderKidAges();
