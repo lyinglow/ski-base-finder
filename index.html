@@ -50,6 +50,11 @@
       <div class="view" id="view-filters" role="tabpanel" aria-labelledby="tab-filters">
 
       <section class="filters" aria-label="Filters">
+        <div class="field" id="f-country-field" hidden>
+          <span class="label"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Where to? <small class="label-note">pick any, or none for all</small></span>
+          <div class="chips" id="f-country"></div>
+        </div>
+
         <div class="field">
           <div class="who" id="f-level" role="group" aria-label="Who's skiing">
             <span class="who-label"><svg class="ic" aria-hidden="true"><use href="#i-people"/></svg>Who's skiing</span>
@@ -108,10 +113,6 @@
         </div>
 
         <h2 class="filters-head">Narrow it down</h2>
-        <div class="field" id="f-country-field" hidden>
-          <span class="label"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Country <small class="label-note">pick any, or none for all</small></span>
-          <div class="chips" id="f-country"></div>
-        </div>
         <div class="field">
           <label for="f-time"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg>Max time from airport <output id="f-time-out">Any</output></label>
           <input type="range" id="f-time" min="20" max="300" step="10" value="300">

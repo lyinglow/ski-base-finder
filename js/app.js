@@ -1334,9 +1334,24 @@ function bindControls() {
     `<button type="button" id="f-country-${c.code.toLowerCase()}" data-v="${c.code}" aria-pressed="false">${esc(c.name)}</button>`).join("");
   $$("#f-country button").forEach((b) => b.addEventListener("click", () => {
     const v = b.dataset.v;
-    state.countries.has(v) ? state.countries.delete(v) : state.countries.add(v);
-    b.setAttribute("aria-pressed", state.countries.has(v));
-    applyFilters();
+    const on = !state.countries.has(v);
+    on ? state.countries.add(v) : state.countries.delete(v);
+    b.setAttribute("aria-pressed", on);
+    // Fly in from the country's main airport: the one just picked, or the one left on its own.
+    // Picking an airport afterwards overrides it until the countries change again.
+    const only = state.countries.size === 1 ? [...state.countries][0] : null;
+    const code = on ? v : only;
+    const airport = code ? model.countries.find((c) => c.code === code)?.primaryAirport : model.index.defaultOrigin;
+    if (airport && airport !== state.origin && model.origins.some((o) => o.id === airport)) {
+      state.origin = airport;
+      $("#origin").value = airport;
+      updateOriginMarkers();
+      tripChanged();
+    } else {
+      applyFilters();
+    }
+    if (state.selected) clearSelection();
+    fullView(1400);
   }));
   // Vibe chips start all off: no choice means any vibe.
   $("#f-vibe").innerHTML = Object.entries(model.index.vibes).map(([key, v]) =>

@@ -81,28 +81,32 @@
       "name": "France",
       "file": "fr.json",
       "status": "live",
-      "costFactor": 1.0
+      "costFactor": 1.0,
+      "primaryAirport": "GVA"
     },
     {
       "code": "CH",
       "name": "Switzerland",
       "file": "ch.json",
       "status": "live",
-      "costFactor": 1.35
+      "costFactor": 1.35,
+      "primaryAirport": "GVA"
     },
     {
       "code": "IT",
       "name": "Italy",
       "file": "it.json",
       "status": "live",
-      "costFactor": 0.95
+      "costFactor": 0.95,
+      "primaryAirport": "TRN"
     },
     {
       "code": "AT",
       "name": "Austria",
       "file": "at.json",
       "status": "planned",
-      "costFactor": 1.0
+      "costFactor": 1.0,
+      "primaryAirport": "INN"
     }
   ],
   "priceBands": {
