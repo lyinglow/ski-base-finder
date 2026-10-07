@@ -251,24 +251,76 @@ function setOrigin(id) {
 
 /* ---------- clear map ---------- */
 
-// Back to a fresh map: no filters, nothing selected, no snow layer, airport view.
-// The trip (dates, people, airport) and the shortlist stay, because they are the user's plan.
+// Back to a fresh map: every filter off, nothing selected, satellite in 3D, no snow layer,
+// and a view that takes in every place from the airport.
+// The trip (airport, nights, people) and the shortlist stay, because they are the user's plan.
 function clearMap() {
   clearSelection();
   $("#compare").hidden = true;
   Object.assign(state, {
-    show: "all", maxTime: 300, maxHop: 60,
+    show: "all", maxTime: 300, maxHop: 60, months: new Set(["jan", "feb", "mar"]),
     prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(), countries: new Set(),
-    family: false, carFree: false, snowSure: false, park: "any", parkNeeds: new Set(),
+    family: false, carFree: false, snowSure: false, park: "any", parkNeeds: new Set(), levels: ["intermediate"],
     snowLayer: false, snowMonth: null, sort: "fit", compare: [],
   });
+  state.trip.week = null; // a week pick overrides the months, so it goes too
   syncControls();
   ["#f-time", "#f-hop"].forEach((id) => $(id).dispatchEvent(new Event("input"))); // refresh their labels
   renderCompareBar();
   updateSnowLayer();
-  applyFilters();
+  tripChanged();
+  if ($("#style-topo").getAttribute("aria-pressed") === "true") $("#style-sat").click();
   if (!$("#toggle-3d").matches("[aria-pressed=true]")) $("#toggle-3d").click();
-  airportView(1400);
+  setTab("filters");
+  fullView(1400);
+}
+
+// Everything on show, seen from the airport: the airport near the bottom, every place above it.
+// Fitted by trying views out without drawing, because a turned, tilted map does not fit a north-up box.
+function fullView(duration = 0) {
+  const origin = model.origins.find((o) => o.id === state.origin);
+  const places = lastVisible.length ? lastVisible : model.locations.filter((l) => travel(l));
+  if (!places.length) return;
+  const pts = [origin.coords, ...places.map((l) => l.coords)];
+  const mid = places.reduce((a, l) => [a[0] + l.coords[0] / places.length, a[1] + l.coords[1] / places.length], [0, 0]);
+  const lat = (origin.coords[1] * Math.PI) / 180;
+  const toward = (Math.atan2((mid[0] - origin.coords[0]) * Math.cos(lat), mid[1] - origin.coords[1]) * 180) / Math.PI;
+  const { clientWidth: w, clientHeight: h } = map.getContainer();
+  // On a tall screen, turn the map so the group's long side runs top to bottom,
+  // choosing the way round that keeps the airport at the bottom.
+  let bearing = toward;
+  if (h > w) {
+    const k = Math.cos(lat);
+    const dx = pts.map((p) => (p[0] - mid[0]) * k), dy = pts.map((p) => p[1] - mid[1]);
+    const sxx = dx.reduce((t, v) => t + v * v, 0), syy = dy.reduce((t, v) => t + v * v, 0);
+    const sxy = dx.reduce((t, v, i) => t + v * dy[i], 0);
+    const axis = (Math.atan2(2 * sxy, syy - sxx) / 2) * 180 / Math.PI; // bearing of the long side
+    const gap = (b) => Math.abs(((b - toward + 540) % 360) - 180);
+    bearing = gap(axis) <= gap(axis + 180) ? axis : axis + 180;
+  }
+
+  const tools = document.querySelector(".map-tools")?.getBoundingClientRect();
+  const mapTop = map.getContainer().getBoundingClientRect().top;
+  const box = { left: 30, right: w - 30, top: Math.max(60, tools ? tools.bottom - mapTop + 30 : 60), bottom: h - 50 };
+  const start = { center: map.getCenter(), zoom: map.getZoom(), bearing: map.getBearing(), pitch: map.getPitch() };
+  let view = { center: [(mid[0] + origin.coords[0]) / 2, (mid[1] + origin.coords[1]) / 2], zoom: 7, bearing, pitch: 30 };
+  for (let i = 0; i < 6; i++) {
+    map.jumpTo(view);
+    const xy = pts.map((p) => map.project(p));
+    const xs = xy.map((p) => p.x), ys = xy.map((p) => p.y);
+    const bw = Math.max(...xs) - Math.min(...xs), bh = Math.max(...ys) - Math.min(...ys);
+    const scale = Math.min((box.right - box.left) / Math.max(bw, 1), (box.bottom - box.top) / Math.max(bh, 1));
+    const zoom = Math.max(5, Math.min(10, view.zoom + Math.log2(scale)));
+    map.jumpTo({ ...view, zoom });
+    // Slide the map so the group sits in the middle of the free space.
+    const xy2 = pts.map((p) => map.project(p));
+    const cx = (Math.min(...xy2.map((p) => p.x)) + Math.max(...xy2.map((p) => p.x))) / 2;
+    const cy = (Math.min(...xy2.map((p) => p.y)) + Math.max(...xy2.map((p) => p.y))) / 2;
+    const c = map.unproject([w / 2 + (cx - (box.left + box.right) / 2), h / 2 + (cy - (box.top + box.bottom) / 2)]);
+    view = { ...view, zoom, center: [c.lng, c.lat] };
+  }
+  map.jumpTo(start);
+  duration ? map.flyTo({ ...view, duration }) : map.jumpTo(view);
 }
 
 /* ---------- snow parks ---------- */
