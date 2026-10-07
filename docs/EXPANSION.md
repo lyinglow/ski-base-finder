@@ -44,13 +44,20 @@ The app never names a country in code. It loads whatever `data/index.json` marks
 - **Airports:** Milan Malpensa and Bergamo added; Turin already in.
 - **Later, with Austria:** the Dolomites (Cortina, Val Gardena, Alta Badia, Madonna di Campiglio), flown into from Verona or Innsbruck.
 
-## Step 3: Austria
+## Step 3: Austria (live)
 
-A different region, flown into from Innsbruck, Salzburg or Munich rather than Geneva. The map will open on the airport you pick, so it can still feel local.
+- **Resorts (16):** St Anton, Lech, Ischgl, Sölden, Obergurgl, Mayrhofen, Kitzbühel, Saalbach, Zell am See, Bad Gastein, Obertauern, Schladming, Serfaus-Fiss-Ladis, Ellmau, Alpbach, Hintertux.
+- **Feeder towns (7):** Landeck, Imst, Innsbruck, Zell am Ziller, Kirchberg, Bruck, Bischofshofen.
+- **Airports:** Innsbruck (main), Salzburg and Munich. Drive times from them cover Austria, Switzerland and Italy; French places are too far and are left out.
+- **Still to add:** German and Dutch school holiday weeks, which fill Austrian resorts.
 
-- **Resorts to start:** St Anton, Lech, Ischgl, Sölden, Obergurgl, Mayrhofen, Kitzbühel, Saalbach, Zell am See, Bad Gastein, Obertauern, Schladming.
-- **Feeder towns:** Landeck, Imst, Innsbruck, Zell am Ziller, Kirchberg, Bruck, Bischofshofen.
-- **School holidays:** add the German and Dutch holiday weeks, which fill Austrian resorts.
+## Step 4: the Dolomites
+
+Cortina, Val Gardena, Alta Badia, Madonna di Campiglio and Kronplatz, flown into from Verona, Venice or Innsbruck. Widen the snow layer east to about 12.5° (already covered) and add Verona and Venice airports.
+
+## Each country's main airport
+
+`primaryAirport` in `index.json`: Geneva for France and Switzerland, Turin for Italy, Innsbruck for Austria. Picking a country under Where to? switches to it.
 
 ## Keeping the data fresh
 

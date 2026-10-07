@@ -54,12 +54,6 @@
         "level": "awesome",
         "note": "Big off-piste, with the Skyway cable car to the Vallée Blanche and Toula glacier."
       },
-      "runShare": {
-        "green": 0,
-        "blue": 39,
-        "red": 52,
-        "black": 9
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -142,7 +136,25 @@
         "BGY": {
           "km": 263,
           "min": 155
+        },
+        "INN": {
+          "km": 608,
+          "min": 345
+        },
+        "SZG": {
+          "km": 777,
+          "min": 445
+        },
+        "MUC": {
+          "km": 657,
+          "min": 390
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 39,
+        "red": 52,
+        "black": 9
       }
     },
     {
@@ -200,12 +212,6 @@
       "expert": {
         "level": "good",
         "note": "Good off-piste and heli-skiing from the Rutor glacier."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 29,
-        "red": 55,
-        "black": 15
       },
       "snowYears": {
         "slopes": {
@@ -289,7 +295,25 @@
         "BGY": {
           "km": 270,
           "min": 170
+        },
+        "INN": {
+          "km": 615,
+          "min": 360
+        },
+        "SZG": {
+          "km": 783,
+          "min": 455
+        },
+        "MUC": {
+          "km": 673,
+          "min": 405
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 29,
+        "red": 55,
+        "black": 15
       }
     },
     {
@@ -346,12 +370,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste with views of Mont Blanc and the Matterhorn."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 16,
-        "red": 69,
-        "black": 14
       },
       "snowYears": {
         "slopes": {
@@ -435,7 +453,25 @@
         "BGY": {
           "km": 230,
           "min": 135
+        },
+        "INN": {
+          "km": 575,
+          "min": 325
+        },
+        "SZG": {
+          "km": 744,
+          "min": 425
+        },
+        "MUC": {
+          "km": 683,
+          "min": 395
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 16,
+        "red": 69,
+        "black": 14
       }
     },
     {
@@ -515,12 +551,6 @@
         "note": "High off-piste and a glacier link to Zermatt."
       },
       "searchName": "Breuil-Cervinia",
-      "runShare": {
-        "green": 0,
-        "blue": 21,
-        "red": 71,
-        "black": 8
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -603,7 +633,25 @@
         "BGY": {
           "km": 232,
           "min": 145
+        },
+        "INN": {
+          "km": 577,
+          "min": 335
+        },
+        "SZG": {
+          "km": 746,
+          "min": 430
+        },
+        "MUC": {
+          "km": 685,
+          "min": 400
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 21,
+        "red": 71,
+        "black": 8
       }
     },
     {
@@ -660,12 +708,6 @@
       "expert": {
         "level": "fair",
         "note": "Long red runs, with Cervinia's high terrain above."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 21,
-        "red": 71,
-        "black": 8
       },
       "snowYears": {
         "slopes": {
@@ -749,7 +791,25 @@
         "BGY": {
           "km": 224,
           "min": 140
+        },
+        "INN": {
+          "km": 569,
+          "min": 330
+        },
+        "SZG": {
+          "km": 737,
+          "min": 425
+        },
+        "MUC": {
+          "km": 677,
+          "min": 395
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 21,
+        "red": 71,
+        "black": 8
       }
     },
     {
@@ -806,12 +866,6 @@
       "expert": {
         "level": "awesome",
         "note": "Some of the best off-piste in the Alps, best with a guide."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 14,
-        "red": 63,
-        "black": 22
       },
       "snowYears": {
         "slopes": {
@@ -895,7 +949,25 @@
         "BGY": {
           "km": 220,
           "min": 140
+        },
+        "INN": {
+          "km": 565,
+          "min": 330
+        },
+        "SZG": {
+          "km": 734,
+          "min": 425
+        },
+        "MUC": {
+          "km": 673,
+          "min": 395
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 14,
+        "red": 63,
+        "black": 22
       }
     },
     {
@@ -963,12 +1035,6 @@
         "note": "Big off-piste towards Alagna and Champoluc."
       },
       "searchName": "Gressoney-La-Trinité",
-      "runShare": {
-        "green": 1,
-        "blue": 14,
-        "red": 63,
-        "black": 22
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -1051,7 +1117,25 @@
         "BGY": {
           "km": 215,
           "min": 140
+        },
+        "INN": {
+          "km": 560,
+          "min": 330
+        },
+        "SZG": {
+          "km": 729,
+          "min": 425
+        },
+        "MUC": {
+          "km": 668,
+          "min": 395
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 14,
+        "red": 63,
+        "black": 22
       }
     },
     {
@@ -1110,12 +1194,6 @@
         "note": "Legendary freeride terrain from Punta Indren, best with a guide."
       },
       "searchName": "Alagna Valsesia",
-      "runShare": {
-        "green": 1,
-        "blue": 14,
-        "red": 63,
-        "black": 22
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -1198,7 +1276,25 @@
         "BGY": {
           "km": 192,
           "min": 130
+        },
+        "INN": {
+          "km": 537,
+          "min": 320
+        },
+        "SZG": {
+          "km": 706,
+          "min": 415
+        },
+        "MUC": {
+          "km": 604,
+          "min": 370
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 14,
+        "red": 63,
+        "black": 22
       }
     },
     {
@@ -1264,12 +1360,6 @@
       "expert": {
         "level": "good",
         "note": "Steep Olympic runs and good off-piste."
-      },
-      "runShare": {
-        "green": 2,
-        "blue": 34,
-        "red": 52,
-        "black": 12
       },
       "snowYears": {
         "slopes": {
@@ -1353,7 +1443,25 @@
         "BGY": {
           "km": 281,
           "min": 170
+        },
+        "INN": {
+          "km": 626,
+          "min": 360
+        },
+        "SZG": {
+          "km": 795,
+          "min": 455
+        },
+        "MUC": {
+          "km": 734,
+          "min": 425
         }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 34,
+        "red": 52,
+        "black": 12
       }
     },
     {
@@ -1417,12 +1525,6 @@
       "expert": {
         "level": "fair",
         "note": "Tree runs and some off-piste."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 23,
-        "red": 70,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -1506,7 +1608,25 @@
         "BGY": {
           "km": 265,
           "min": 160
+        },
+        "INN": {
+          "km": 610,
+          "min": 350
+        },
+        "SZG": {
+          "km": 779,
+          "min": 445
+        },
+        "MUC": {
+          "km": 718,
+          "min": 415
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 23,
+        "red": 70,
+        "black": 6
       }
     },
     {
@@ -1563,12 +1683,6 @@
       "expert": {
         "level": "fair",
         "note": "Some steeper runs and off-piste."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 17,
-        "red": 74,
-        "black": 8
       },
       "snowYears": {
         "slopes": {
@@ -1652,7 +1766,25 @@
         "BGY": {
           "km": 275,
           "min": 170
+        },
+        "INN": {
+          "km": 621,
+          "min": 360
+        },
+        "SZG": {
+          "km": 789,
+          "min": 455
+        },
+        "MUC": {
+          "km": 728,
+          "min": 425
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 17,
+        "red": 74,
+        "black": 8
       }
     },
     {
@@ -1708,12 +1840,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste towards Cesana."
-      },
-      "runShare": {
-        "green": 15,
-        "blue": 42,
-        "red": 36,
-        "black": 7
       },
       "snowYears": {
         "slopes": {
@@ -1797,7 +1923,25 @@
         "BGY": {
           "km": 277,
           "min": 170
+        },
+        "INN": {
+          "km": 622,
+          "min": 360
+        },
+        "SZG": {
+          "km": 790,
+          "min": 455
+        },
+        "MUC": {
+          "km": 729,
+          "min": 425
         }
+      },
+      "runShare": {
+        "green": 15,
+        "blue": 42,
+        "red": 36,
+        "black": 7
       }
     },
     {
@@ -1854,12 +1998,6 @@
       "expert": {
         "level": "fair",
         "note": "Some steeper runs and off-piste."
-      },
-      "runShare": {
-        "green": 2,
-        "blue": 30,
-        "red": 64,
-        "black": 4
       },
       "snowYears": {
         "slopes": {
@@ -1943,7 +2081,25 @@
         "BGY": {
           "km": 272,
           "min": 160
+        },
+        "INN": {
+          "km": 617,
+          "min": 350
+        },
+        "SZG": {
+          "km": 786,
+          "min": 450
+        },
+        "MUC": {
+          "km": 725,
+          "min": 420
         }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 30,
+        "red": 64,
+        "black": 4
       }
     },
     {
@@ -2003,12 +2159,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste and steeper runs."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 31,
-        "red": 58,
-        "black": 11
       },
       "snowYears": {
         "slopes": {
@@ -2092,7 +2242,25 @@
         "BGY": {
           "km": 186,
           "min": 180
+        },
+        "INN": {
+          "km": 176,
+          "min": 130
+        },
+        "SZG": {
+          "km": 357,
+          "min": 235
+        },
+        "MUC": {
+          "km": 317,
+          "min": 235
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 31,
+        "red": 58,
+        "black": 11
       }
     },
     {
@@ -2150,12 +2318,6 @@
       "expert": {
         "level": "good",
         "note": "The steep Stelvio run and long off-piste descents."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 21,
-        "red": 75,
-        "black": 4
       },
       "snowYears": {
         "slopes": {
@@ -2239,7 +2401,25 @@
         "BGY": {
           "km": 148,
           "min": 140
+        },
+        "INN": {
+          "km": 178,
+          "min": 140
+        },
+        "SZG": {
+          "km": 360,
+          "min": 240
+        },
+        "MUC": {
+          "km": 319,
+          "min": 240
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 21,
+        "red": 75,
+        "black": 4
       }
     },
     {
@@ -2299,12 +2479,6 @@
         "note": "Some steeper runs and off-piste."
       },
       "searchName": "Santa Caterina Valfurva",
-      "runShare": {
-        "green": 0,
-        "blue": 9,
-        "red": 76,
-        "black": 15
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -2387,7 +2561,25 @@
         "BGY": {
           "km": 160,
           "min": 150
+        },
+        "INN": {
+          "km": 191,
+          "min": 150
+        },
+        "SZG": {
+          "km": 372,
+          "min": 255
+        },
+        "MUC": {
+          "km": 332,
+          "min": 250
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 9,
+        "red": 76,
+        "black": 15
       }
     },
     {
@@ -2436,12 +2628,6 @@
       "expert": {
         "level": "good",
         "note": "The steep Canalone and good off-piste."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 47,
-        "red": 45,
-        "black": 8
       },
       "snowYears": {
         "slopes": {
@@ -2525,7 +2711,25 @@
         "BGY": {
           "km": 125,
           "min": 125
+        },
+        "INN": {
+          "km": 251,
+          "min": 200
+        },
+        "SZG": {
+          "km": 432,
+          "min": 305
+        },
+        "MUC": {
+          "km": 465,
+          "min": 375
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 47,
+        "red": 45,
+        "black": 8
       }
     },
     {
@@ -2641,6 +2845,18 @@
         "BGY": {
           "km": 229,
           "min": 135
+        },
+        "INN": {
+          "km": 574,
+          "min": 325
+        },
+        "SZG": {
+          "km": 743,
+          "min": 420
+        },
+        "MUC": {
+          "km": 682,
+          "min": 390
         }
       }
     },
@@ -2742,6 +2958,18 @@
         "BGY": {
           "km": 259,
           "min": 155
+        },
+        "INN": {
+          "km": 604,
+          "min": 345
+        },
+        "SZG": {
+          "km": 773,
+          "min": 445
+        },
+        "MUC": {
+          "km": 663,
+          "min": 395
         }
       }
     },
@@ -2841,6 +3069,18 @@
         "BGY": {
           "km": 255,
           "min": 150
+        },
+        "INN": {
+          "km": 600,
+          "min": 340
+        },
+        "SZG": {
+          "km": 769,
+          "min": 435
+        },
+        "MUC": {
+          "km": 667,
+          "min": 400
         }
       }
     },
@@ -2942,6 +3182,18 @@
         "BGY": {
           "km": 205,
           "min": 120
+        },
+        "INN": {
+          "km": 550,
+          "min": 310
+        },
+        "SZG": {
+          "km": 719,
+          "min": 405
+        },
+        "MUC": {
+          "km": 658,
+          "min": 375
         }
       }
     },
@@ -3043,6 +3295,18 @@
         "BGY": {
           "km": 182,
           "min": 110
+        },
+        "INN": {
+          "km": 527,
+          "min": 295
+        },
+        "SZG": {
+          "km": 695,
+          "min": 395
+        },
+        "MUC": {
+          "km": 634,
+          "min": 365
         }
       }
     },
@@ -3158,6 +3422,18 @@
         "BGY": {
           "km": 260,
           "min": 150
+        },
+        "INN": {
+          "km": 605,
+          "min": 340
+        },
+        "SZG": {
+          "km": 773,
+          "min": 435
+        },
+        "MUC": {
+          "km": 712,
+          "min": 405
         }
       }
     },
@@ -3259,6 +3535,18 @@
         "BGY": {
           "km": 236,
           "min": 135
+        },
+        "INN": {
+          "km": 581,
+          "min": 325
+        },
+        "SZG": {
+          "km": 750,
+          "min": 425
+        },
+        "MUC": {
+          "km": 689,
+          "min": 395
         }
       }
     },
@@ -3367,6 +3655,18 @@
         "BGY": {
           "km": 128,
           "min": 120
+        },
+        "INN": {
+          "km": 216,
+          "min": 165
+        },
+        "SZG": {
+          "km": 397,
+          "min": 270
+        },
+        "MUC": {
+          "km": 357,
+          "min": 270
         }
       }
     }

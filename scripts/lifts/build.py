@@ -36,7 +36,7 @@ def country_files():
 def in_region(c):
     while isinstance(c[0], list):
         c = c[0]
-    return 4.8 < c[0] < 13.6 and 43.9 < c[1] < 47.8
+    return 4.8 < c[0] < 14.0 and 43.9 < c[1] < 47.8
 
 
 def area_ids(f):
@@ -57,7 +57,7 @@ def main(src, runs_src=None):
         if g["type"] != "LineString" or p["status"] != "operating" or p["liftType"] not in KIND or not p["skiAreas"]:
             continue
         lng, lat = g["coordinates"][0][:2]
-        if not (4.8 < lng < 13.6 and 43.9 < lat < 47.8):
+        if not (4.8 < lng < 14.0 and 43.9 < lat < 47.8):
             continue
         lifts.append(f)
 

@@ -72,6 +72,30 @@
         9.7042,
         45.6739
       ]
+    },
+    {
+      "id": "INN",
+      "name": "Innsbruck Airport",
+      "coords": [
+        11.344,
+        47.2602
+      ]
+    },
+    {
+      "id": "SZG",
+      "name": "Salzburg Airport",
+      "coords": [
+        12.978,
+        47.7933
+      ]
+    },
+    {
+      "id": "MUC",
+      "name": "Munich Airport",
+      "coords": [
+        11.7861,
+        48.3538
+      ]
     }
   ],
   "defaultOrigin": "GVA",
@@ -104,7 +128,7 @@
       "code": "AT",
       "name": "Austria",
       "file": "at.json",
-      "status": "planned",
+      "status": "live",
       "costFactor": 1.0,
       "primaryAirport": "INN"
     }
