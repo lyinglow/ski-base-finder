@@ -1034,6 +1034,8 @@ function renderDetail(l) {
 
 /* ---------- compare ---------- */
 
+let removedFromCompare = null;
+
 function toggleCompare(id, force) {
   const has = state.compare.includes(id);
   const want = force ?? !has;
@@ -1041,6 +1043,12 @@ function toggleCompare(id, force) {
     if (state.compare.length >= MAX_COMPARE) state.compare.shift();
     state.compare.push(id);
   } else if (!want && has) {
+    // Taking a place out of an open comparison can be undone; the shortlist is never touched.
+    if (!$("#compare").hidden) {
+      removedFromCompare = { id, at: state.compare.indexOf(id) };
+      $("#compare-undo-text").textContent = `Removed ${model.byId.get(id).name}.`;
+      $("#compare-undo").hidden = false;
+    }
     state.compare = state.compare.filter((x) => x !== id);
   }
   renderCompareBar();
@@ -1070,6 +1078,8 @@ function renderCompareBar() {
 }
 
 function openCompare() {
+  removedFromCompare = null;
+  $("#compare-undo").hidden = true;
   if (isNarrow()) setSidebar(false); // on a phone the panel would sit on top of the table
   renderCompareTable();
   $("#compare").hidden = false;
@@ -1192,7 +1202,7 @@ function renderCompareTable() {
   const headRow = `<tr><th scope="col"></th>${cols.map((l) => `<th scope="col" class="${l.type}">
       <span class="eyebrow"><i class="dot ${l.type}"></i>${typeLabel(l)}</span>
       <button type="button" class="col-name" data-select="${l.id}">${esc(l.name)}</button>
-      <button type="button" class="col-x" data-compare="${l.id}" aria-label="Remove ${esc(l.name)}">Remove</button>
+      <button type="button" class="col-x" data-compare="${l.id}" aria-label="Remove ${esc(l.name)} from this comparison" title="Take out of this comparison. Your shortlist stays as it is."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Remove</button>
     </th>`).join("")}</tr>`;
 
   const body = rows.map((r) => {
@@ -1438,6 +1448,16 @@ function bindControls() {
   });
 
   $("#compare-open").addEventListener("click", openCompare);
+  $("#compare-undo-btn").addEventListener("click", () => {
+    if (!removedFromCompare) return;
+    const { id, at } = removedFromCompare;
+    removedFromCompare = null;
+    $("#compare-undo").hidden = true;
+    if (!state.compare.includes(id)) state.compare.splice(Math.min(at, state.compare.length), 0, id);
+    renderCompareBar();
+    renderCompareTable();
+    $("#compare").hidden = false;
+  });
   $("#compare-close").addEventListener("click", () => { $("#compare").hidden = true; });
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
