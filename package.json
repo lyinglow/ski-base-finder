@@ -1,5 +1,5 @@
 {
-  "name": "alps-ski-base-finder",
+  "name": "base-finder",
   "private": true,
   "type": "module",
   "scripts": {

@@ -4,7 +4,8 @@ Things we have talked about and not yet done. Newest thinking first within each 
 
 ## Decide first
 
-- [ ] **Pick a new name.** "Ski Base Finder" leaves out summer, and the tool may grow to the Nordics and Japan. Shortlist: Lowbase (favourite), Foothill, Stay Low, Valley Base, Base Finder. Check web addresses are free first. Renaming touches the page title, header, link preview, README and web address, and the old address should forward to the new one.
+- [x] **Name: Base Finder** (for now, owner's choice). The `.com` and `.net` are taken (registered 2000). `basefinder.app`, `.io`, `.co`, `.co.uk` and `.ski` looked unregistered, so register one and point the site at it. Other things use the name (Septentrio survey software, a TradingView indicator, Clash of Clans and Minecraft tools), so keep the sport in the page title. Do a trademark search (UK IPO, EUIPO, USPTO; classes 39 and 42) before spending on branding. Not yet moved: the web address is still `ski-base-finder.vercel.app`.
+- [ ] Register a domain and move the site to it, with the old address forwarding.
 
 ## Fixes from the health check
 

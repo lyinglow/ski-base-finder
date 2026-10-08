@@ -1,6 +1,6 @@
-# Ski Base Finder
+# Base Finder
 
-A 3D map that helps you choose where to stay for a ski trip from Geneva.
+A 3D map that helps you choose where to stay for a ski or mountain bike trip in the Alps, and what it will cost. The idea: stay in a cheaper town lower down and go up to the lifts.
 
 It shows ski resorts and the cheaper, lower towns around them on the same map. Click a resort and it shows you where else you could stay, how long the daily hop is, and how much you save. Click a town and it shows which resorts you can reach from it.
 

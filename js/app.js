@@ -1837,7 +1837,7 @@ function setSidebar(open) {
 
 /* ---------- shortlist ---------- */
 
-const SAVED_KEY = "skibase.shortlist";
+const SAVED_KEY = "skibase.shortlist"; // storage keys keep their old prefix so saved plans survive the rename
 
 function setShow(show) {
   state.show = show;
