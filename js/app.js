@@ -879,17 +879,43 @@ function staySection(l) {
     ["Abritel", "French holiday rentals (Vrbo)",
       `https://www.abritel.fr/search?destination=${where}&startDate=${arrive}&endDate=${leave}&adults=${guests}`],
     ...(summer()
-      ? [["Bike holiday deals", "Chalets with bike storage, and packages (web search)", g(`${town} mountain bike holiday ${when}`)],
-         ["Bike hire and guides", "Hire shops and guided rides (web search)", g(`${town} mountain bike hire and guides`)]]
-      : [["Ski apartment deals", "Pierre & Vacances, Maeva and others (web search)", g(`${town} ski apartment and lift pass deal ${when}`)],
-         ["Package holidays", "Tour operators with flights or transfers (web search)", g(`${town} ski package holiday ${when}`)]]),
+      ? [["Bike hire and guides", "Hire shops and guided rides (web search)", g(`${town} mountain bike hire and guides`)]]
+      : [["Ski apartment deals", "Pierre & Vacances, Maeva and others (web search)", g(`${town} ski apartment and lift pass deal ${when}`)]]),
+  ];
+  // Package holiday sites: a web search limited to each site, so the link keeps working if the site changes its addresses.
+  const site = (host, q) => g(`site:${host} ${q}`);
+  const sport = summer() ? "mountain bike holiday" : "ski holiday";
+  const packages = summer()
+    ? [["Bike holiday deals", "Chalets with bike storage, and packages (web search)", g(`${town} mountain bike holiday ${when}`)],
+       ["Mountain bike tour operators", "Guided weeks and transfers (web search)", g(`${town} mountain bike holiday package guided week ${when}`)]]
+    : [["Igluski", "Compares ski holiday and chalet prices (web search)", site("igluski.com", `${town} ${sport}`)],
+       ["Crystal Ski", "Packages with flights and transfers (web search)", site("crystalski.co.uk", `${town} ${sport}`)],
+       ["Ski Solutions", "Tailor-made trips (web search)", site("skisolutions.com", `${town} ${sport}`)],
+       ["Inghams", "Catered chalets and hotels (web search)", site("inghams.co.uk", `${town} ${sport}`)],
+       ["Package holidays", "Any other tour operator (web search)", g(`${town} ski package holiday ${when}`)]];
+  const airport = state.origin ? model.origins.find((o) => o.id === state.origin) : null;
+  const flights = [
+    ["Google Flights", airport ? `Flights to ${airport.name} (${airport.id}) on your dates` : "Flights near your dates (pick an airport for a match)",
+      `https://www.google.com/travel/flights?q=${encodeURIComponent(airport ? `Flights to ${airport.id} on ${arrive} returning ${leave} for ${guests} passenger${guests === 1 ? "" : "s"}` : `Flights to ${town} on ${arrive} returning ${leave}`)}`],
+    ["Skyscanner", "Compare airlines and dates", airport ? `https://www.skyscanner.net/transport/flights-to/${airport.id.toLowerCase()}/` : "https://www.skyscanner.net/"],
   ];
   const fmt = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  const list = (items) => `<ul class="stay-links">${items.map(([name, what, url]) =>
+    `<li><a href="${url}" target="_blank" rel="noopener"><b>${esc(name)}</b><span>${esc(what)}</span><i aria-hidden="true">↗</i></a></li>`).join("")}</ul>`;
   return `<section class="stay">
       <span class="s-label">Places to stay</span>
       <p class="hint">${esc(town)}, ${fmt(arrive)} to ${fmt(leave)}, ${guests} guest${guests === 1 ? "" : "s"}. Opens in a new tab.</p>
-      <ul class="stay-links">${links.map(([name, what, url]) =>
-        `<li><a href="${url}" target="_blank" rel="noopener"><b>${esc(name)}</b><span>${esc(what)}</span><i aria-hidden="true">↗</i></a></li>`).join("")}</ul>
+      ${list(links)}
+    </section>
+    <section class="stay">
+      <span class="s-label">Package holidays</span>
+      <p class="hint">Flights, transfers and stay in one price. Compare a few.</p>
+      ${list(packages)}
+    </section>
+    <section class="stay">
+      <span class="s-label">Flights</span>
+      <p class="hint">Flights are not in the trip cost above.</p>
+      ${list(flights)}
     </section>`;
 }
 
