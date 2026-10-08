@@ -807,3 +807,15 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
   :root[data-season="summer"]:not([data-theme="light"]) { --resort: #5fcf8c; --resort-soft: #143224; --sep: #1d3a2b; }
 }
 :root[data-season="summer"][data-theme="dark"] { --resort: #5fcf8c; --resort-soft: #143224; --sep: #1d3a2b; }
+
+/* A place hovered in the list: bigger, ringed in yellow, with its name showing, above its neighbours. */
+.marker.is-hover { z-index: 5; opacity: 1 !important; }
+.marker.is-hover .pin { transform: scale(1.7); }
+.marker.is-hover .tag { opacity: 1 !important; background: #15202b; box-shadow: 0 0 0 2px #ffd400; }
+.marker.is-hover::before {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 38px; height: 38px; margin: -19px 0 0 -19px;
+  border-radius: 50%; border: 4px solid #ffd400; box-shadow: 0 0 0 2px rgba(13, 20, 27, .8), 0 0 16px rgba(255, 212, 0, .9);
+  animation: hover-ring 1s ease-in-out infinite; pointer-events: none;
+}
+@keyframes hover-ring { 0%, 100% { transform: scale(.85); } 50% { transform: scale(1.15); } }
+@media (prefers-reduced-motion: reduce) { .marker.is-hover::before { animation: none; } }

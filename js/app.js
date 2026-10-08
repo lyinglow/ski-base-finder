@@ -1737,6 +1737,32 @@ function bindControls() {
     const b = e.target.closest("[data-id]");
     if (b) select(b.dataset.id);
   });
+  // Hover or keyboard focus on a place in the list lights it up on the map, and brings it into view if it is off screen.
+  const list = $("#results");
+  let hoverId = null, hoverTimer = null;
+  const hoverPlace = (id) => {
+    if (id === hoverId) return;
+    clearTimeout(hoverTimer);
+    if (hoverId) markers.get(hoverId)?.el.classList.remove("is-hover");
+    hoverId = id;
+    if (!id) return;
+    const m = markers.get(id);
+    if (!m) return;
+    m.el.classList.add("is-hover");
+    // Wait a moment so sweeping the mouse down the list does not make the map jump about.
+    hoverTimer = setTimeout(() => {
+      const p = map.project(m.marker.getLngLat());
+      const { clientWidth: w, clientHeight: h } = map.getContainer();
+      const tools = document.querySelector(".map-tools")?.getBoundingClientRect();
+      const top = tools ? tools.bottom - map.getContainer().getBoundingClientRect().top + 20 : 70;
+      const inView = p.x > 40 && p.x < w - 40 && p.y > top && p.y < h - 60;
+      if (!inView && !state.selected) map.easeTo({ center: m.marker.getLngLat(), duration: 600 });
+    }, 350);
+  };
+  list.addEventListener("mouseover", (e) => hoverPlace(e.target.closest("[data-id]")?.dataset.id ?? null));
+  list.addEventListener("mouseleave", () => hoverPlace(null));
+  list.addEventListener("focusin", (e) => hoverPlace(e.target.closest("[data-id]")?.dataset.id ?? null));
+  list.addEventListener("focusout", () => hoverPlace(null));
 
   // Delegated actions used by the detail panel, compare bar and table.
   document.addEventListener("click", (e) => {
