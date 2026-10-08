@@ -699,13 +699,14 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .col-name:hover { text-decoration: underline; }
 .compare thead th.base { box-shadow: inset 0 3px 0 var(--base); }
 .compare thead th.resort { box-shadow: inset 0 3px 0 var(--resort); }
-.col-x {
+.col-x, .col-save {
   display: inline-flex; align-items: center; gap: 4px; margin-top: 8px;
   border: 1px solid var(--line); background: var(--panel-2); color: var(--ink);
   border-radius: 999px; padding: 3px 10px 3px 7px; font-size: 12.5px; font-weight: 500;
 }
 .col-x svg { width: 11px; height: 11px; }
-.col-x:hover, .col-x:focus-visible { border-color: var(--ink); }
+.col-x:hover, .col-x:focus-visible, .col-save:hover, .col-save:focus-visible { border-color: var(--ink); }
+.col-save { margin-left: 6px; padding-left: 10px; }
 .compare-undo { margin-right: auto; margin-left: 16px; font-size: 14px; color: var(--muted); }
 .compare-undo .link { color: var(--resort); font-weight: 600; }
 .compare-note { color: var(--muted); font-size: 12px; margin: 12px 0 0; }

@@ -50,6 +50,7 @@ const state = {
   tripOpen: false,
   saved: new Set(), // this season's shortlist; the other season's waits in otherSaved
   otherSaved: new Set(),
+  pairIds: null, // a one-off comparison opened from a place panel (a resort and its cheaper stays); null means the shortlist
   get compare() { return [...this.saved]; }, // the comparison is always the shortlist
 };
 
@@ -1082,7 +1083,7 @@ function bikeBody(l) {
         ${cheaper.length
           ? `<p class="hint">${cheaper.length} cheaper place${cheaper.length === 1 ? "" : "s"} to stay with quick access to ${esc(l.name)}.</p>
              <ul class="link-list">${cheaper.map((c) => placeRow(c, l, { vsResort: l })).join("")}</ul>
-             <button type="button" class="primary wide" data-pair="${l.id}">Save ${esc(l.name)} and these, then compare</button>`
+             <button type="button" class="primary wide" data-pair="${l.id}">Compare ${esc(l.name)} with these</button>`
           : `<p class="hint">No cheaper base within easy reach. Staying in the resort is the simple choice here.</p>`}
       </section>`;
     const linked = reachable(l, model.byId).filter((c) => inSeason(c.place, "summer", model.byId));
@@ -1104,7 +1105,7 @@ function bikeBody(l) {
       <h3>Bike parks within reach</h3>
       <p class="hint">${r.length} place${r.length === 1 ? "" : "s"}, nearest in ${mins(r[0].link.min)}.${savings.length ? ` Cheaper than staying in ${savings.length} of them.` : ""}</p>
       <ul class="link-list">${r.map((c) => placeRow(c, null, { fromBase: l })).join("")}</ul>
-      <button type="button" class="primary wide" data-pair="${l.id}">Save these and compare</button>
+      <button type="button" class="primary wide" data-pair="${l.id}">Compare with nearest ones</button>
     </section>`;
 }
 
@@ -1167,7 +1168,7 @@ function renderDetail(l) {
         ${cheaper.length
           ? `<p class="hint">${cheaper.length} cheaper place${cheaper.length === 1 ? "" : "s"} to stay with quick access to ${esc(l.name)}.</p>
              <ul class="link-list">${cheaper.map((c) => placeRow(c, l, { vsResort: l })).join("")}</ul>
-             <button type="button" class="primary wide" data-pair="${l.id}">Save ${esc(l.name)} and these, then compare</button>`
+             <button type="button" class="primary wide" data-pair="${l.id}">Compare ${esc(l.name)} with these</button>`
           : `<p class="hint">No cheaper base within easy reach. Staying in the resort is the simple choice here.</p>`}
       </section>`;
     const linked = reachable(l, model.byId);
@@ -1192,7 +1193,7 @@ function renderDetail(l) {
         <h3>Resorts within reach</h3>
         <p class="hint">${r.length} resort${r.length === 1 ? "" : "s"}, nearest in ${mins(r[0].link.min)}.${savings.length ? ` Cheaper than staying in ${savings.length} of them.` : ""}</p>
         <ul class="link-list">${r.map((c) => placeRow(c, null, { fromBase: l })).join("")}</ul>
-        <button type="button" class="primary wide" data-pair="${l.id}">Save these and compare</button>
+        <button type="button" class="primary wide" data-pair="${l.id}">Compare with nearest ones</button>
       </section>`;
   }
 
@@ -1216,6 +1217,17 @@ let removedFromCompare = null;
 
 // The comparison is the shortlist, so adding or taking out a place here changes the shortlist.
 function toggleCompare(id, force) {
+  if (state.pairIds) {
+    // In a one-off comparison, taking a column out leaves the shortlist alone.
+    if (state.pairIds.includes(id)) {
+      removedFromCompare = { id, pair: true };
+      $("#compare-undo-text").textContent = `Removed ${model.byId.get(id).name} from this comparison.`;
+      $("#compare-undo").hidden = false;
+      state.pairIds = state.pairIds.filter((x) => x !== id);
+      renderCompareTable();
+    }
+    return;
+  }
   const has = state.saved.has(id);
   const want = force ?? !has;
   if (!want && has && !$("#compare").hidden) {
@@ -1235,10 +1247,7 @@ function pairUp(id) {
     ? cheaperStays(l, model.byId).map((x) => x.place.id)
     : (summer() ? bikeLinks(l, model.byId) : reachable(l, model.byId)).map((x) => x.place.id))
     .filter((x) => inSeason(model.byId.get(x), state.season, model.byId));
-  // Saves this place and its alternatives to the shortlist, then compares the shortlist.
-  for (const x of [id, ...others]) state.saved.add(x);
-  shortlistChanged();
-  openCompare();
+  openCompare([id, ...others]); // a one-off comparison; the shortlist is not touched
 }
 
 function renderCompareBar() {
@@ -1252,7 +1261,9 @@ function renderCompareBar() {
   $("#compare-open").disabled = state.compare.length < 2;
 }
 
-function openCompare() {
+function openCompare(pair = null) {
+  state.pairIds = pair;
+  $("#compare h2").textContent = pair ? `${model.byId.get(pair[0]).name} and its cheaper places` : "Your shortlist";
   removedFromCompare = null;
   $("#compare-undo").hidden = true;
   if (isNarrow()) setSidebar(false); // on a phone the panel would sit on top of the table
@@ -1269,7 +1280,7 @@ function compareCost(l, cols) {
 }
 
 function renderCompareTable() {
-  const cols = state.compare.map((id) => model.byId.get(id));
+  const cols = (state.pairIds || state.compare).map((id) => model.byId.get(id));
   if (!cols.length) { $("#compare").hidden = true; return; }
 
   const best = (vals, pick) => {
@@ -1421,7 +1432,8 @@ function renderCompareTable() {
   const headRow = `<tr><th scope="col"></th>${cols.map((l) => `<th scope="col" class="${l.type}">
       <span class="eyebrow"><i class="dot ${l.type}"></i>${typeLabel(l)}</span>
       <button type="button" class="col-name" data-select="${l.id}">${esc(l.name)}</button>
-      <button type="button" class="col-x" data-compare="${l.id}" aria-label="Take ${esc(l.name)} off your shortlist" title="Take off your shortlist. You can undo it."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Remove</button>
+      <button type="button" class="col-x" data-compare="${l.id}" aria-label="Take ${esc(l.name)} out of this comparison" title="${state.pairIds ? "Take out of this comparison. Your shortlist stays as it is." : "Take off your shortlist. You can undo it."}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Remove</button>
+      ${state.pairIds ? `<button type="button" class="col-save save-btn" data-save="${l.id}" aria-pressed="${state.saved.has(l.id)}">${state.saved.has(l.id) ? "Saved" : "Save"}</button>` : ""}
     </th>`).join("")}</tr>`;
 
   const body = rows.map((r) => {
@@ -1493,6 +1505,8 @@ function setSeason(next) {
   [state.trip.lessons, state.otherLessons] = [state.otherLessons, state.trip.lessons]; // and its own lessons
   state.season = next;
   [state.saved, state.otherSaved] = [state.otherSaved, state.saved]; // each season has its own shortlist
+  $("#compare").hidden = true; // an open comparison belongs to the other season
+  state.pairIds = null;
   applySeasonUI();
   renderCompareBar();
   shortlistChanged();
@@ -1773,17 +1787,22 @@ function bindControls() {
     if (t.dataset.pair) return pairUp(t.dataset.pair);
   });
 
-  $("#compare-open").addEventListener("click", openCompare);
+  $("#compare-open").addEventListener("click", () => openCompare());
   $("#compare-undo-btn").addEventListener("click", () => {
     if (!removedFromCompare) return;
-    const { id } = removedFromCompare;
+    const { id, pair } = removedFromCompare;
     removedFromCompare = null;
     $("#compare-undo").hidden = true;
-    state.saved.add(id);
-    shortlistChanged();
+    if (pair) {
+      if (state.pairIds && !state.pairIds.includes(id)) state.pairIds.push(id);
+      renderCompareTable();
+    } else {
+      state.saved.add(id);
+      shortlistChanged();
+    }
     $("#compare").hidden = false;
   });
-  $("#compare-close").addEventListener("click", () => { $("#compare").hidden = true; });
+  $("#compare-close").addEventListener("click", () => { $("#compare").hidden = true; state.pairIds = null; });
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
     if (!$("#compare").hidden) $("#compare").hidden = true;
