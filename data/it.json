@@ -148,6 +148,14 @@
         "MUC": {
           "km": 657,
           "min": 390
+        },
+        "VRN": {
+          "km": 363,
+          "min": 215
+        },
+        "VCE": {
+          "km": 485,
+          "min": 270
         }
       },
       "runShare": {
@@ -307,6 +315,14 @@
         "MUC": {
           "km": 673,
           "min": 405
+        },
+        "VRN": {
+          "km": 369,
+          "min": 230
+        },
+        "VCE": {
+          "km": 491,
+          "min": 280
         }
       },
       "runShare": {
@@ -465,6 +481,14 @@
         "MUC": {
           "km": 683,
           "min": 395
+        },
+        "VRN": {
+          "km": 330,
+          "min": 195
+        },
+        "VCE": {
+          "km": 452,
+          "min": 250
         }
       },
       "runShare": {
@@ -645,6 +669,14 @@
         "MUC": {
           "km": 685,
           "min": 400
+        },
+        "VRN": {
+          "km": 332,
+          "min": 205
+        },
+        "VCE": {
+          "km": 454,
+          "min": 255
         }
       },
       "runShare": {
@@ -803,6 +835,14 @@
         "MUC": {
           "km": 677,
           "min": 395
+        },
+        "VRN": {
+          "km": 324,
+          "min": 200
+        },
+        "VCE": {
+          "km": 445,
+          "min": 250
         }
       },
       "runShare": {
@@ -961,6 +1001,14 @@
         "MUC": {
           "km": 673,
           "min": 395
+        },
+        "VRN": {
+          "km": 320,
+          "min": 200
+        },
+        "VCE": {
+          "km": 442,
+          "min": 250
         }
       },
       "runShare": {
@@ -1129,6 +1177,14 @@
         "MUC": {
           "km": 668,
           "min": 395
+        },
+        "VRN": {
+          "km": 315,
+          "min": 200
+        },
+        "VCE": {
+          "km": 437,
+          "min": 250
         }
       },
       "runShare": {
@@ -1288,6 +1344,14 @@
         "MUC": {
           "km": 604,
           "min": 370
+        },
+        "VRN": {
+          "km": 292,
+          "min": 190
+        },
+        "VCE": {
+          "km": 414,
+          "min": 240
         }
       },
       "runShare": {
@@ -1455,6 +1519,14 @@
         "MUC": {
           "km": 734,
           "min": 425
+        },
+        "VRN": {
+          "km": 381,
+          "min": 230
+        },
+        "VCE": {
+          "km": 502,
+          "min": 280
         }
       },
       "runShare": {
@@ -1620,6 +1692,14 @@
         "MUC": {
           "km": 718,
           "min": 415
+        },
+        "VRN": {
+          "km": 365,
+          "min": 220
+        },
+        "VCE": {
+          "km": 487,
+          "min": 270
         }
       },
       "runShare": {
@@ -1778,6 +1858,14 @@
         "MUC": {
           "km": 728,
           "min": 425
+        },
+        "VRN": {
+          "km": 375,
+          "min": 230
+        },
+        "VCE": {
+          "km": 497,
+          "min": 280
         }
       },
       "runShare": {
@@ -1935,6 +2023,14 @@
         "MUC": {
           "km": 729,
           "min": 425
+        },
+        "VRN": {
+          "km": 376,
+          "min": 230
+        },
+        "VCE": {
+          "km": 498,
+          "min": 280
         }
       },
       "runShare": {
@@ -2093,6 +2189,14 @@
         "MUC": {
           "km": 725,
           "min": 420
+        },
+        "VRN": {
+          "km": 372,
+          "min": 220
+        },
+        "VCE": {
+          "km": 494,
+          "min": 270
         }
       },
       "runShare": {
@@ -2254,6 +2358,14 @@
         "MUC": {
           "km": 317,
           "min": 235
+        },
+        "VRN": {
+          "km": 248,
+          "min": 215
+        },
+        "VCE": {
+          "km": 370,
+          "min": 265
         }
       },
       "runShare": {
@@ -2413,6 +2525,14 @@
         "MUC": {
           "km": 319,
           "min": 240
+        },
+        "VRN": {
+          "km": 210,
+          "min": 175
+        },
+        "VCE": {
+          "km": 332,
+          "min": 225
         }
       },
       "runShare": {
@@ -2573,6 +2693,14 @@
         "MUC": {
           "km": 332,
           "min": 250
+        },
+        "VRN": {
+          "km": 222,
+          "min": 185
+        },
+        "VCE": {
+          "km": 344,
+          "min": 235
         }
       },
       "runShare": {
@@ -2723,6 +2851,14 @@
         "MUC": {
           "km": 465,
           "min": 375
+        },
+        "VRN": {
+          "km": 227,
+          "min": 190
+        },
+        "VCE": {
+          "km": 349,
+          "min": 240
         }
       },
       "runShare": {
@@ -2857,6 +2993,14 @@
         "MUC": {
           "km": 682,
           "min": 390
+        },
+        "VRN": {
+          "km": 329,
+          "min": 195
+        },
+        "VCE": {
+          "km": 451,
+          "min": 245
         }
       }
     },
@@ -2970,6 +3114,14 @@
         "MUC": {
           "km": 663,
           "min": 395
+        },
+        "VRN": {
+          "km": 359,
+          "min": 215
+        },
+        "VCE": {
+          "km": 481,
+          "min": 265
         }
       }
     },
@@ -3081,6 +3233,14 @@
         "MUC": {
           "km": 667,
           "min": 400
+        },
+        "VRN": {
+          "km": 355,
+          "min": 210
+        },
+        "VCE": {
+          "km": 477,
+          "min": 260
         }
       }
     },
@@ -3194,6 +3354,14 @@
         "MUC": {
           "km": 658,
           "min": 375
+        },
+        "VRN": {
+          "km": 305,
+          "min": 180
+        },
+        "VCE": {
+          "km": 427,
+          "min": 230
         }
       }
     },
@@ -3307,6 +3475,14 @@
         "MUC": {
           "km": 634,
           "min": 365
+        },
+        "VRN": {
+          "km": 281,
+          "min": 170
+        },
+        "VCE": {
+          "km": 403,
+          "min": 220
         }
       }
     },
@@ -3434,6 +3610,14 @@
         "MUC": {
           "km": 712,
           "min": 405
+        },
+        "VRN": {
+          "km": 359,
+          "min": 210
+        },
+        "VCE": {
+          "km": 481,
+          "min": 260
         }
       }
     },
@@ -3547,6 +3731,14 @@
         "MUC": {
           "km": 689,
           "min": 395
+        },
+        "VRN": {
+          "km": 336,
+          "min": 195
+        },
+        "VCE": {
+          "km": 458,
+          "min": 250
         }
       }
     },
@@ -3667,6 +3859,3598 @@
         "MUC": {
           "km": 357,
           "min": 270
+        },
+        "VRN": {
+          "km": 190,
+          "min": 155
+        },
+        "VCE": {
+          "km": 312,
+          "min": 205
+        }
+      }
+    },
+    {
+      "id": "it-cortina",
+      "type": "resort",
+      "name": "Cortina d'Ampezzo",
+      "region": "Veneto",
+      "coords": [
+        12.1357,
+        46.5405
+      ],
+      "altitude": 1224,
+      "topAltitude": 3244,
+      "townSize": "medium",
+      "price": 3,
+      "stayPerPerson": 150,
+      "family": true,
+      "vibes": [
+        "upmarket",
+        "lively",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Cortina d'Ampezzo",
+        "pisteKm": 115,
+        "pass6": 305
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4,
+        "crecheFromMonths": 24
+      },
+      "character": "Elegant mountain town in a bowl of pale peaks, the Queen of the Dolomites. Smart shops, a busy evening walk and a 2026 Winter Olympics host.",
+      "transfer": "Cortina Express bus from Venice Airport about 2h. From Verona Airport about 3h30 by car.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park and some fun zones."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep Tofana runs, the Staunies and Lagazuoi, with guided off-piste."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 729,
+          "min": 440
+        },
+        "LYS": {
+          "km": 831,
+          "min": 470
+        },
+        "CMF": {
+          "km": 753,
+          "min": 435
+        },
+        "GNB": {
+          "km": 819,
+          "min": 465
+        },
+        "TRN": {
+          "km": 550,
+          "min": 305
+        },
+        "ZRH": {
+          "km": 447,
+          "min": 295
+        },
+        "BSL": {
+          "km": 536,
+          "min": 350
+        },
+        "MXP": {
+          "km": 452,
+          "min": 255
+        },
+        "BGY": {
+          "km": 365,
+          "min": 205
+        },
+        "INN": {
+          "km": 166,
+          "min": 125
+        },
+        "SZG": {
+          "km": 263,
+          "min": 195
+        },
+        "MUC": {
+          "km": 361,
+          "min": 235
+        },
+        "VRN": {
+          "km": 275,
+          "min": 170
+        },
+        "VCE": {
+          "km": 147,
+          "min": 95
+        }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 56,
+        "red": 26,
+        "black": 16
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-ortisei",
+      "type": "resort",
+      "name": "Ortisei",
+      "region": "South Tyrol",
+      "coords": [
+        11.671,
+        46.5745
+      ],
+      "altitude": 1236,
+      "topAltitude": 2518,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 110,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Sella Ronda / Dolomiti Superski",
+        "pisteKm": 1200,
+        "pass6": 350
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4,
+        "crecheFromMonths": 24
+      },
+      "character": "Pretty, car-light Ladin town with wood carvers and a pedestrian centre. Gondolas leave right from the village to Seceda and Alpe di Siusi.",
+      "transfer": "Shared shuttle about 2h30 from Verona Airport. About 3h15 from Venice Airport.",
+      "links": [
+        {
+          "to": "it-alpe-di-siusi",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Cable car up to the Alpe di Siusi meadows"
+        },
+        {
+          "to": "it-selva",
+          "min": 25,
+          "by": [
+            "bus"
+          ],
+          "note": "Ski bus up the valley, or the lifts and pistes"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park and fun zones above Seceda."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Seceda and Sella Ronda runs, with guided itineraries nearby."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 630,
+          "min": 390
+        },
+        "LYS": {
+          "km": 732,
+          "min": 420
+        },
+        "CMF": {
+          "km": 654,
+          "min": 385
+        },
+        "GNB": {
+          "km": 720,
+          "min": 415
+        },
+        "TRN": {
+          "km": 451,
+          "min": 255
+        },
+        "ZRH": {
+          "km": 395,
+          "min": 250
+        },
+        "BSL": {
+          "km": 483,
+          "min": 305
+        },
+        "MXP": {
+          "km": 353,
+          "min": 205
+        },
+        "BGY": {
+          "km": 266,
+          "min": 155
+        },
+        "INN": {
+          "km": 114,
+          "min": 80
+        },
+        "SZG": {
+          "km": 283,
+          "min": 175
+        },
+        "MUC": {
+          "km": 309,
+          "min": 185
+        },
+        "VRN": {
+          "km": 189,
+          "min": 120
+        },
+        "VCE": {
+          "km": 203,
+          "min": 155
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-selva",
+      "type": "resort",
+      "name": "Selva di Val Gardena",
+      "region": "South Tyrol",
+      "coords": [
+        11.764,
+        46.5563
+      ],
+      "altitude": 1563,
+      "topAltitude": 2684,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 105,
+      "family": true,
+      "vibes": [
+        "lively",
+        "skiin"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "easyStart": "Nursery slopes in the village, a short walk from most hotels.",
+      "skiArea": {
+        "name": "Sella Ronda / Dolomiti Superski",
+        "pisteKm": 1200,
+        "pass6": 350
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4,
+        "crecheFromMonths": 24
+      },
+      "character": "Livelier village at the top of Val Gardena, with the Saslong World Cup downhill and the start of the Sella Ronda in either direction.",
+      "transfer": "Shared shuttle about 2h45 from Verona Airport. About 3h15 from Venice Airport.",
+      "links": [
+        {
+          "to": "it-corvara",
+          "min": 50,
+          "by": [
+            "lift"
+          ],
+          "note": "Sella Ronda by lift, over the Gardena pass"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park and fun zones."
+      },
+      "expert": {
+        "level": "good",
+        "note": "The Saslong run, Sassolungo off-piste and the Sella itineraries."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 639,
+          "min": 400
+        },
+        "LYS": {
+          "km": 741,
+          "min": 430
+        },
+        "CMF": {
+          "km": 663,
+          "min": 395
+        },
+        "GNB": {
+          "km": 729,
+          "min": 425
+        },
+        "TRN": {
+          "km": 460,
+          "min": 265
+        },
+        "ZRH": {
+          "km": 403,
+          "min": 260
+        },
+        "BSL": {
+          "km": 492,
+          "min": 315
+        },
+        "MXP": {
+          "km": 362,
+          "min": 215
+        },
+        "BGY": {
+          "km": 275,
+          "min": 165
+        },
+        "INN": {
+          "km": 123,
+          "min": 90
+        },
+        "SZG": {
+          "km": 291,
+          "min": 185
+        },
+        "MUC": {
+          "km": 318,
+          "min": 200
+        },
+        "VRN": {
+          "km": 197,
+          "min": 135
+        },
+        "VCE": {
+          "km": 194,
+          "min": 145
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-corvara",
+      "type": "resort",
+      "name": "Corvara",
+      "region": "South Tyrol",
+      "coords": [
+        11.875,
+        46.551
+      ],
+      "altitude": 1568,
+      "topAltitude": 2778,
+      "townSize": "small",
+      "price": 3,
+      "stayPerPerson": 135,
+      "family": true,
+      "vibes": [
+        "upmarket",
+        "skiin"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "easyStart": "Nursery slopes by the village centre and the Col Alto gondola.",
+      "skiArea": {
+        "name": "Sella Ronda / Dolomiti Superski",
+        "pisteKm": 1200,
+        "pass6": 350
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4,
+        "crecheFromMonths": 24
+      },
+      "character": "Small, smart village in the middle of the Sella Ronda, with the Boè cable car and skiing from the door.",
+      "transfer": "Shared shuttle about 3h from Verona Airport. About 3h from Venice Airport.",
+      "links": [
+        {
+          "to": "it-arabba",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski over the Campolongo pass to Arabba on the Sella Ronda"
+        },
+        {
+          "to": "it-la-villa",
+          "min": 20,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts down the Alta Badia valley"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "Fun zones and a small park."
+      },
+      "expert": {
+        "level": "good",
+        "note": "The Gardenaccia and Boè descents, and the steep Sella itineraries."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 658,
+          "min": 420
+        },
+        "LYS": {
+          "km": 760,
+          "min": 450
+        },
+        "CMF": {
+          "km": 682,
+          "min": 415
+        },
+        "GNB": {
+          "km": 748,
+          "min": 450
+        },
+        "TRN": {
+          "km": 479,
+          "min": 285
+        },
+        "ZRH": {
+          "km": 416,
+          "min": 270
+        },
+        "BSL": {
+          "km": 505,
+          "min": 330
+        },
+        "MXP": {
+          "km": 381,
+          "min": 235
+        },
+        "BGY": {
+          "km": 294,
+          "min": 190
+        },
+        "INN": {
+          "km": 136,
+          "min": 100
+        },
+        "SZG": {
+          "km": 304,
+          "min": 200
+        },
+        "MUC": {
+          "km": 331,
+          "min": 210
+        },
+        "VRN": {
+          "km": 217,
+          "min": 155
+        },
+        "VCE": {
+          "km": 172,
+          "min": 125
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-la-villa",
+      "type": "resort",
+      "name": "La Villa",
+      "region": "South Tyrol",
+      "coords": [
+        11.924,
+        46.553
+      ],
+      "altitude": 1484,
+      "topAltitude": 2778,
+      "townSize": "small",
+      "price": 3,
+      "stayPerPerson": 115,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "upmarket"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Sella Ronda / Dolomiti Superski",
+        "pisteKm": 1200,
+        "pass6": 350
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4,
+        "crecheFromMonths": 24
+      },
+      "character": "Quiet Alta Badia village with fine restaurants. Home of the Gran Risa giant slalom, with the Stria slopes beside it.",
+      "transfer": "Shared shuttle about 3h from Verona Airport. About 3h from Venice Airport.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A fun zone and small kickers."
+      },
+      "expert": {
+        "level": "good",
+        "note": "The Gran Risa and Lagazuoi runs. Fine off-piste with a guide."
+      },
+      "searchName": "La Villa Alta Badia",
+      "fromOrigin": {
+        "GVA": {
+          "km": 670,
+          "min": 475
+        },
+        "LYS": {
+          "km": 772,
+          "min": 510
+        },
+        "CMF": {
+          "km": 694,
+          "min": 470
+        },
+        "GNB": {
+          "km": 760,
+          "min": 505
+        },
+        "TRN": {
+          "km": 491,
+          "min": 340
+        },
+        "ZRH": {
+          "km": 419,
+          "min": 320
+        },
+        "BSL": {
+          "km": 508,
+          "min": 375
+        },
+        "MXP": {
+          "km": 393,
+          "min": 290
+        },
+        "BGY": {
+          "km": 305,
+          "min": 245
+        },
+        "INN": {
+          "km": 138,
+          "min": 150
+        },
+        "SZG": {
+          "km": 307,
+          "min": 245
+        },
+        "MUC": {
+          "km": 334,
+          "min": 260
+        },
+        "VRN": {
+          "km": 228,
+          "min": 210
+        },
+        "VCE": {
+          "km": 181,
+          "min": 170
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-arabba",
+      "type": "resort",
+      "name": "Arabba",
+      "region": "Veneto",
+      "coords": [
+        11.8714,
+        46.4966
+      ],
+      "altitude": 1602,
+      "topAltitude": 2950,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 100,
+      "family": false,
+      "vibes": [
+        "skiin",
+        "quiet"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Sella Ronda / Dolomiti Superski",
+        "pisteKm": 1200,
+        "pass6": 350
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 5
+      },
+      "character": "Small high-up village with steep runs on Porta Vescovo and the Marmolada glacier nearby. A skier's base rather than a party town.",
+      "transfer": "Shared shuttle about 3h from Verona Airport. About 2h45 from Venice Airport.",
+      "links": [
+        {
+          "to": "it-canazei",
+          "min": 40,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski over the Pordoi pass to Canazei"
+        },
+        {
+          "to": "it-corvara",
+          "min": 25,
+          "by": [
+            "lift"
+          ],
+          "note": "Ski over the Campolongo pass to Corvara"
+        }
+      ],
+      "park": {
+        "level": "none",
+        "note": "No park. Arabba is about steep runs and the Sella Ronda."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Porta Vescovo, the Sass Pordoi couloirs and the Marmolada. Big steeps in every direction."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 669,
+          "min": 430
+        },
+        "LYS": {
+          "km": 771,
+          "min": 460
+        },
+        "CMF": {
+          "km": 693,
+          "min": 425
+        },
+        "GNB": {
+          "km": 759,
+          "min": 455
+        },
+        "TRN": {
+          "km": 490,
+          "min": 295
+        },
+        "ZRH": {
+          "km": 426,
+          "min": 280
+        },
+        "BSL": {
+          "km": 515,
+          "min": 340
+        },
+        "MXP": {
+          "km": 392,
+          "min": 245
+        },
+        "BGY": {
+          "km": 305,
+          "min": 195
+        },
+        "INN": {
+          "km": 146,
+          "min": 115
+        },
+        "SZG": {
+          "km": 314,
+          "min": 210
+        },
+        "MUC": {
+          "km": 341,
+          "min": 220
+        },
+        "VRN": {
+          "km": 228,
+          "min": 165
+        },
+        "VCE": {
+          "km": 163,
+          "min": 115
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-canazei",
+      "type": "resort",
+      "name": "Canazei",
+      "region": "Trentino",
+      "coords": [
+        11.77,
+        46.4772
+      ],
+      "altitude": 1465,
+      "topAltitude": 2950,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "lively",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Sella Ronda / Dolomiti Superski",
+        "pisteKm": 1200,
+        "pass6": 350
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4,
+        "crecheFromMonths": 24
+      },
+      "character": "The main village of Val di Fassa, with a lively street, plenty of hotels and lifts to the Sella Ronda and Pordoi pass.",
+      "transfer": "Shared shuttle about 2h30 from Verona Airport. About 3h15 from Venice Airport.",
+      "links": [
+        {
+          "to": "it-selva",
+          "min": 60,
+          "by": [
+            "lift"
+          ],
+          "note": "Sella Ronda by lift via the Sella pass"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "good",
+        "note": "The Sass Pordoi runs and off-piste, with the Val Lasties itinerary."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 641,
+          "min": 410
+        },
+        "LYS": {
+          "km": 743,
+          "min": 445
+        },
+        "CMF": {
+          "km": 665,
+          "min": 405
+        },
+        "GNB": {
+          "km": 731,
+          "min": 440
+        },
+        "TRN": {
+          "km": 462,
+          "min": 275
+        },
+        "ZRH": {
+          "km": 425,
+          "min": 280
+        },
+        "BSL": {
+          "km": 513,
+          "min": 340
+        },
+        "MXP": {
+          "km": 364,
+          "min": 225
+        },
+        "BGY": {
+          "km": 277,
+          "min": 180
+        },
+        "INN": {
+          "km": 144,
+          "min": 110
+        },
+        "SZG": {
+          "km": 313,
+          "min": 210
+        },
+        "MUC": {
+          "km": 339,
+          "min": 220
+        },
+        "VRN": {
+          "km": 200,
+          "min": 145
+        },
+        "VCE": {
+          "km": 173,
+          "min": 130
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-alpe-di-siusi",
+      "type": "resort",
+      "name": "Alpe di Siusi",
+      "region": "South Tyrol",
+      "coords": [
+        11.635,
+        46.542
+      ],
+      "altitude": 1844,
+      "topAltitude": 2350,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 100,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "skiin"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Wide, easy slopes right beside the Compatsch hotels.",
+      "skiArea": {
+        "name": "Alpe di Siusi (Seiser Alm)",
+        "pisteKm": 60,
+        "pass6": 290
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Europe's biggest high alpine meadow, wide and gentle, with the Sassolungo peaks and the Sciliar as a backdrop. Few hotels and no cars on the plateau in the day.",
+      "transfer": "Shared shuttle about 2h30 from Verona Airport to Siusi, then the cable car. About 3h30 from Venice Airport.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park and kids' fun zone."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Mostly gentle, sunny slopes. Not for steeps."
+      },
+      "searchName": "Seiser Alm",
+      "fromOrigin": {
+        "GVA": {
+          "km": 630,
+          "min": 395
+        },
+        "LYS": {
+          "km": 732,
+          "min": 425
+        },
+        "CMF": {
+          "km": 654,
+          "min": 390
+        },
+        "GNB": {
+          "km": 720,
+          "min": 420
+        },
+        "TRN": {
+          "km": 450,
+          "min": 260
+        },
+        "ZRH": {
+          "km": 402,
+          "min": 260
+        },
+        "BSL": {
+          "km": 491,
+          "min": 320
+        },
+        "MXP": {
+          "km": 352,
+          "min": 210
+        },
+        "BGY": {
+          "km": 265,
+          "min": 160
+        },
+        "INN": {
+          "km": 121,
+          "min": 90
+        },
+        "SZG": {
+          "km": 290,
+          "min": 185
+        },
+        "MUC": {
+          "km": 316,
+          "min": 200
+        },
+        "VRN": {
+          "km": 188,
+          "min": 125
+        },
+        "VCE": {
+          "km": 307,
+          "min": 175
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 38,
+        "red": 57,
+        "black": 5
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-kronplatz",
+      "type": "resort",
+      "name": "Kronplatz",
+      "region": "South Tyrol",
+      "coords": [
+        11.965,
+        46.8
+      ],
+      "altitude": 970,
+      "topAltitude": 2275,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "town",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Kronplatz (Plan de Corones)",
+        "pisteKm": 120,
+        "pass6": 290
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Round, sunny hill above Riscone and Brunico, with gondolas from several sides and one of the best snow records in the Dolomites. Reached on foot from the Brunico side.",
+      "transfer": "Shared shuttle about 2h45 from Verona Airport. About 3h from Venice Airport.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "A well-known park with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Steep black runs and some off-piste."
+      },
+      "searchName": "Riscone",
+      "fromOrigin": {
+        "GVA": {
+          "km": 672,
+          "min": 415
+        },
+        "LYS": {
+          "km": 773,
+          "min": 445
+        },
+        "CMF": {
+          "km": 695,
+          "min": 410
+        },
+        "GNB": {
+          "km": 761,
+          "min": 445
+        },
+        "TRN": {
+          "km": 492,
+          "min": 280
+        },
+        "ZRH": {
+          "km": 392,
+          "min": 255
+        },
+        "BSL": {
+          "km": 481,
+          "min": 310
+        },
+        "MXP": {
+          "km": 394,
+          "min": 230
+        },
+        "BGY": {
+          "km": 307,
+          "min": 185
+        },
+        "INN": {
+          "km": 111,
+          "min": 85
+        },
+        "SZG": {
+          "km": 280,
+          "min": 180
+        },
+        "MUC": {
+          "km": 307,
+          "min": 190
+        },
+        "VRN": {
+          "km": 230,
+          "min": 150
+        },
+        "VCE": {
+          "km": 206,
+          "min": 145
+        }
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-madonna-di-campiglio",
+      "type": "resort",
+      "name": "Madonna di Campiglio",
+      "region": "Trentino",
+      "coords": [
+        10.826,
+        46.229
+      ],
+      "altitude": 1550,
+      "topAltitude": 2504,
+      "townSize": "medium",
+      "price": 3,
+      "stayPerPerson": 130,
+      "family": true,
+      "vibes": [
+        "upmarket",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Skirama Dolomiti Adamello Brenta",
+        "pisteKm": 150,
+        "pass6": 325
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "character": "Stylish resort in the Brenta Dolomites, with a famous night slalom and smart evenings. Links by gondola to Pinzolo and Folgarida-Marilleva.",
+      "transfer": "Shared shuttle about 2h30 from Verona Airport. About 3h30 from Venice Airport.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "A proper park with lines for each level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "The steep 3-Tre World Cup slalom and Grostè off-piste."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 538,
+          "min": 365
+        },
+        "LYS": {
+          "km": 640,
+          "min": 400
+        },
+        "CMF": {
+          "km": 562,
+          "min": 360
+        },
+        "GNB": {
+          "km": 628,
+          "min": 395
+        },
+        "TRN": {
+          "km": 359,
+          "min": 235
+        },
+        "ZRH": {
+          "km": 433,
+          "min": 330
+        },
+        "BSL": {
+          "km": 522,
+          "min": 385
+        },
+        "MXP": {
+          "km": 261,
+          "min": 180
+        },
+        "BGY": {
+          "km": 174,
+          "min": 135
+        },
+        "INN": {
+          "km": 227,
+          "min": 165
+        },
+        "SZG": {
+          "km": 395,
+          "min": 260
+        },
+        "MUC": {
+          "km": 422,
+          "min": 270
+        },
+        "VRN": {
+          "km": 155,
+          "min": 130
+        },
+        "VCE": {
+          "km": 273,
+          "min": 180
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 41,
+        "black": 16
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-cavalese",
+      "type": "resort",
+      "name": "Cavalese",
+      "region": "Trentino",
+      "coords": [
+        11.456,
+        46.291
+      ],
+      "altitude": 1000,
+      "topAltitude": 2200,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 80,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Val di Fiemme / Alpe Cermis",
+        "pisteKm": 100,
+        "pass6": 270
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Old valley town with a pretty centre and a gondola straight up to Alpe Cermis. Good value for the Dolomites.",
+      "transfer": "Shared shuttle about 2h15 from Verona Airport. About 3h from Venice Airport.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park on the Cermis slopes."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "A steep World Cup black run, not much more."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 602,
+          "min": 375
+        },
+        "LYS": {
+          "km": 703,
+          "min": 405
+        },
+        "CMF": {
+          "km": 625,
+          "min": 370
+        },
+        "GNB": {
+          "km": 691,
+          "min": 400
+        },
+        "TRN": {
+          "km": 422,
+          "min": 240
+        },
+        "ZRH": {
+          "km": 435,
+          "min": 280
+        },
+        "BSL": {
+          "km": 525,
+          "min": 345
+        },
+        "MXP": {
+          "km": 324,
+          "min": 190
+        },
+        "BGY": {
+          "km": 237,
+          "min": 140
+        },
+        "INN": {
+          "km": 154,
+          "min": 115
+        },
+        "SZG": {
+          "km": 323,
+          "min": 210
+        },
+        "MUC": {
+          "km": 349,
+          "min": 220
+        },
+        "VRN": {
+          "km": 160,
+          "min": 110
+        },
+        "VCE": {
+          "km": 173,
+          "min": 135
+        }
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-san-martino",
+      "type": "resort",
+      "name": "San Martino di Castrozza",
+      "region": "Trentino",
+      "coords": [
+        11.8,
+        46.2602
+      ],
+      "altitude": 1450,
+      "topAltitude": 2600,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "San Martino / Rolle Pass",
+        "pisteKm": 60,
+        "pass6": 290
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Sunny village under the Pale di San Martino, the wild side of the Dolomites. Quiet evenings and a cable car to the Rosetta plateau.",
+      "transfer": "Shared shuttle about 3h from Verona Airport. About 2h45 from Venice Airport.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park."
+      },
+      "expert": {
+        "level": "good",
+        "note": "The Rosetta cable car, the Tognola bowl and long off-piste descents."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 645,
+          "min": 410
+        },
+        "LYS": {
+          "km": 746,
+          "min": 440
+        },
+        "CMF": {
+          "km": 668,
+          "min": 405
+        },
+        "GNB": {
+          "km": 735,
+          "min": 435
+        },
+        "TRN": {
+          "km": 465,
+          "min": 275
+        },
+        "ZRH": {
+          "km": 473,
+          "min": 310
+        },
+        "BSL": {
+          "km": 563,
+          "min": 375
+        },
+        "MXP": {
+          "km": 367,
+          "min": 225
+        },
+        "BGY": {
+          "km": 280,
+          "min": 175
+        },
+        "INN": {
+          "km": 192,
+          "min": 140
+        },
+        "SZG": {
+          "km": 361,
+          "min": 240
+        },
+        "MUC": {
+          "km": 388,
+          "min": 250
+        },
+        "VRN": {
+          "km": 203,
+          "min": 140
+        },
+        "VCE": {
+          "km": 134,
+          "min": 100
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 47,
+        "red": 45,
+        "black": 8
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-sesto",
+      "type": "resort",
+      "name": "Sesto",
+      "region": "South Tyrol",
+      "coords": [
+        12.355,
+        46.703
+      ],
+      "altitude": 1310,
+      "topAltitude": 2200,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Beginner slopes beside the Monte Elmo lift in Moos.",
+      "skiArea": {
+        "name": "3 Zinnen Dolomites",
+        "pisteKm": 90,
+        "pass6": 250
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-03-28"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 4
+      },
+      "character": "Quiet village below the Tre Cime di Lavaredo, with sunny pistes and a lot of cross-country trails. Hotels are family run.",
+      "transfer": "Shared shuttle about 3h30 from Verona Airport. About 3h from Venice Airport.",
+      "links": [],
+      "park": {
+        "level": "none",
+        "note": "No park."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper slopes on Monte Elmo and Croda Rossa."
+      },
+      "searchName": "Sexten",
+      "fromOrigin": {
+        "GVA": {
+          "km": 706,
+          "min": 445
+        },
+        "LYS": {
+          "km": 808,
+          "min": 475
+        },
+        "CMF": {
+          "km": 730,
+          "min": 440
+        },
+        "GNB": {
+          "km": 796,
+          "min": 470
+        },
+        "TRN": {
+          "km": 527,
+          "min": 310
+        },
+        "ZRH": {
+          "km": 427,
+          "min": 280
+        },
+        "BSL": {
+          "km": 516,
+          "min": 340
+        },
+        "MXP": {
+          "km": 429,
+          "min": 260
+        },
+        "BGY": {
+          "km": 342,
+          "min": 210
+        },
+        "INN": {
+          "km": 146,
+          "min": 110
+        },
+        "SZG": {
+          "km": 233,
+          "min": 170
+        },
+        "MUC": {
+          "km": 308,
+          "min": 215
+        },
+        "VRN": {
+          "km": 265,
+          "min": 175
+        },
+        "VCE": {
+          "km": 166,
+          "min": 115
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 44,
+        "red": 43,
+        "black": 13
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            1,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-bolzano",
+      "type": "base",
+      "name": "Bolzano",
+      "region": "South Tyrol",
+      "coords": [
+        11.3547,
+        46.4983
+      ],
+      "altitude": 262,
+      "townSize": "large",
+      "price": 2,
+      "stayPerPerson": 70,
+      "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
+      "character": "Warm, lively South Tyrol city with arcades, markets and a good old town. A base for several Dolomite valleys, not a ski town.",
+      "transfer": "Train from Verona about 1h45. Car about 1h45 from Verona Airport. About 3h from Venice Airport.",
+      "links": [
+        {
+          "to": "it-ortisei",
+          "min": 50,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "SAD bus up Val Gardena"
+        },
+        {
+          "to": "it-selva",
+          "min": 65,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "SAD bus up Val Gardena"
+        },
+        {
+          "to": "it-alpe-di-siusi",
+          "min": 45,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Bus to Siusi, then the Seiser Alm cable car"
+        },
+        {
+          "to": "it-canazei",
+          "min": 75,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "it-kronplatz",
+          "min": 75,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Trenitalia and Südtirol Bahn",
+      "fromOrigin": {
+        "GVA": {
+          "km": 596,
+          "min": 365
+        },
+        "LYS": {
+          "km": 698,
+          "min": 395
+        },
+        "CMF": {
+          "km": 620,
+          "min": 360
+        },
+        "GNB": {
+          "km": 686,
+          "min": 390
+        },
+        "TRN": {
+          "km": 417,
+          "min": 230
+        },
+        "ZRH": {
+          "km": 404,
+          "min": 250
+        },
+        "BSL": {
+          "km": 495,
+          "min": 315
+        },
+        "MXP": {
+          "km": 319,
+          "min": 180
+        },
+        "BGY": {
+          "km": 232,
+          "min": 130
+        },
+        "INN": {
+          "km": 124,
+          "min": 80
+        },
+        "SZG": {
+          "km": 292,
+          "min": 180
+        },
+        "MUC": {
+          "km": 319,
+          "min": 190
+        },
+        "VRN": {
+          "km": 155,
+          "min": 100
+        },
+        "VCE": {
+          "km": 273,
+          "min": 145
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            0,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-bressanone",
+      "type": "base",
+      "name": "Bressanone",
+      "region": "South Tyrol",
+      "coords": [
+        11.6558,
+        46.716
+      ],
+      "altitude": 559,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 75,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Old bishop's town with a fine centre and a spa. Close to Plose and a short trip to several big areas.",
+      "transfer": "Train from Verona about 2h15. Car about 2h from Verona Airport. About 3h from Venice Airport.",
+      "links": [
+        {
+          "to": "it-ortisei",
+          "min": 40,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "SAD bus via Chiusa"
+        },
+        {
+          "to": "it-kronplatz",
+          "min": 40,
+          "by": [
+            "train",
+            "bus",
+            "car"
+          ],
+          "note": "Train to Brunico, then the Riscone bus"
+        },
+        {
+          "to": "it-alpe-di-siusi",
+          "min": 50,
+          "by": [
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "it-corvara",
+          "min": 60,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "Trenitalia and Südtirol Bahn",
+      "fromOrigin": {
+        "GVA": {
+          "km": 635,
+          "min": 390
+        },
+        "LYS": {
+          "km": 737,
+          "min": 420
+        },
+        "CMF": {
+          "km": 659,
+          "min": 385
+        },
+        "GNB": {
+          "km": 725,
+          "min": 415
+        },
+        "TRN": {
+          "km": 456,
+          "min": 255
+        },
+        "ZRH": {
+          "km": 366,
+          "min": 230
+        },
+        "BSL": {
+          "km": 455,
+          "min": 290
+        },
+        "MXP": {
+          "km": 358,
+          "min": 200
+        },
+        "BGY": {
+          "km": 271,
+          "min": 155
+        },
+        "INN": {
+          "km": 86,
+          "min": 60
+        },
+        "SZG": {
+          "km": 254,
+          "min": 155
+        },
+        "MUC": {
+          "km": 281,
+          "min": 170
+        },
+        "VRN": {
+          "km": 194,
+          "min": 120
+        },
+        "VCE": {
+          "km": 312,
+          "min": 170
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-brunico",
+      "type": "base",
+      "name": "Brunico",
+      "region": "South Tyrol",
+      "coords": [
+        11.938,
+        46.796
+      ],
+      "altitude": 835,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
+      "character": "Real town with arcades, shops and a modern gondola that reaches Kronplatz in a few minutes.",
+      "transfer": "Train from Verona about 3h. Car about 2h40 from Verona Airport. About 3h from Venice Airport.",
+      "links": [
+        {
+          "to": "it-kronplatz",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondola from the Brunico side to Kronplatz"
+        },
+        {
+          "to": "it-corvara",
+          "min": 45,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "SAD bus over the Furcia and Campolongo road"
+        },
+        {
+          "to": "it-sesto",
+          "min": 50,
+          "by": [
+            "train",
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Südtirol Bahn",
+      "fromOrigin": {
+        "GVA": {
+          "km": 668,
+          "min": 410
+        },
+        "LYS": {
+          "km": 770,
+          "min": 445
+        },
+        "CMF": {
+          "km": 692,
+          "min": 405
+        },
+        "GNB": {
+          "km": 758,
+          "min": 440
+        },
+        "TRN": {
+          "km": 489,
+          "min": 275
+        },
+        "ZRH": {
+          "km": 389,
+          "min": 250
+        },
+        "BSL": {
+          "km": 477,
+          "min": 305
+        },
+        "MXP": {
+          "km": 391,
+          "min": 225
+        },
+        "BGY": {
+          "km": 304,
+          "min": 180
+        },
+        "INN": {
+          "km": 108,
+          "min": 80
+        },
+        "SZG": {
+          "km": 277,
+          "min": 175
+        },
+        "MUC": {
+          "km": 303,
+          "min": 190
+        },
+        "VRN": {
+          "km": 227,
+          "min": 145
+        },
+        "VCE": {
+          "km": 205,
+          "min": 140
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            4,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-chiusa",
+      "type": "base",
+      "name": "Chiusa",
+      "region": "South Tyrol",
+      "coords": [
+        11.57,
+        46.639
+      ],
+      "altitude": 525,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "character": "Tiny walled town of artists, at the foot of the road to Val Gardena. Cheap and calm.",
+      "transfer": "Train from Verona about 2h. Car about 2h from Verona Airport.",
+      "links": [
+        {
+          "to": "it-ortisei",
+          "min": 35,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "SAD bus up the valley"
+        },
+        {
+          "to": "it-alpe-di-siusi",
+          "min": 40,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-selva",
+          "min": 55,
+          "by": [
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Südtirol Bahn",
+      "fromOrigin": {
+        "GVA": {
+          "km": 626,
+          "min": 380
+        },
+        "LYS": {
+          "km": 728,
+          "min": 410
+        },
+        "CMF": {
+          "km": 650,
+          "min": 375
+        },
+        "GNB": {
+          "km": 716,
+          "min": 405
+        },
+        "TRN": {
+          "km": 447,
+          "min": 245
+        },
+        "ZRH": {
+          "km": 377,
+          "min": 235
+        },
+        "BSL": {
+          "km": 466,
+          "min": 290
+        },
+        "MXP": {
+          "km": 349,
+          "min": 195
+        },
+        "BGY": {
+          "km": 262,
+          "min": 145
+        },
+        "INN": {
+          "km": 96,
+          "min": 65
+        },
+        "SZG": {
+          "km": 265,
+          "min": 160
+        },
+        "MUC": {
+          "km": 292,
+          "min": 175
+        },
+        "VRN": {
+          "km": 185,
+          "min": 115
+        },
+        "VCE": {
+          "km": 303,
+          "min": 160
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-castelrotto",
+      "type": "base",
+      "name": "Castelrotto",
+      "region": "South Tyrol",
+      "coords": [
+        11.563,
+        46.57
+      ],
+      "altitude": 1060,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 70,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "character": "Painted little village on a terrace above the valley, with a bell tower and good views. A quiet way into Alpe di Siusi.",
+      "transfer": "Shared shuttle about 2h30 from Verona Airport. About 3h30 from Venice Airport.",
+      "links": [
+        {
+          "to": "it-alpe-di-siusi",
+          "min": 30,
+          "by": [
+            "bus",
+            "lift"
+          ],
+          "note": "Bus to Siusi, then the cable car to Compatsch"
+        },
+        {
+          "to": "it-ortisei",
+          "min": 25,
+          "by": [
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "fromOrigin": {
+        "GVA": {
+          "km": 622,
+          "min": 385
+        },
+        "LYS": {
+          "km": 723,
+          "min": 415
+        },
+        "CMF": {
+          "km": 645,
+          "min": 380
+        },
+        "GNB": {
+          "km": 711,
+          "min": 410
+        },
+        "TRN": {
+          "km": 442,
+          "min": 250
+        },
+        "ZRH": {
+          "km": 392,
+          "min": 250
+        },
+        "BSL": {
+          "km": 480,
+          "min": 305
+        },
+        "MXP": {
+          "km": 344,
+          "min": 200
+        },
+        "BGY": {
+          "km": 257,
+          "min": 150
+        },
+        "INN": {
+          "km": 111,
+          "min": 80
+        },
+        "SZG": {
+          "km": 279,
+          "min": 175
+        },
+        "MUC": {
+          "km": 306,
+          "min": 185
+        },
+        "VRN": {
+          "km": 180,
+          "min": 115
+        },
+        "VCE": {
+          "km": 298,
+          "min": 165
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-predazzo",
+      "type": "base",
+      "name": "Predazzo",
+      "region": "Trentino",
+      "coords": [
+        11.602,
+        46.314
+      ],
+      "altitude": 1018,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Valley town in Val di Fiemme with real shops and low prices. Handy for Cavalese, San Martino and the Fassa valley.",
+      "transfer": "Shared shuttle about 2h from Verona Airport. About 3h from Venice Airport.",
+      "links": [
+        {
+          "to": "it-cavalese",
+          "min": 25,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Trentino Trasporti bus down the valley"
+        },
+        {
+          "to": "it-canazei",
+          "min": 40,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Bus over the Fassa valley"
+        },
+        {
+          "to": "it-san-martino",
+          "min": 45,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Over the Rolle pass"
+        }
+      ],
+      "fromOrigin": {
+        "GVA": {
+          "km": 616,
+          "min": 385
+        },
+        "LYS": {
+          "km": 717,
+          "min": 420
+        },
+        "CMF": {
+          "km": 639,
+          "min": 380
+        },
+        "GNB": {
+          "km": 705,
+          "min": 415
+        },
+        "TRN": {
+          "km": 436,
+          "min": 250
+        },
+        "ZRH": {
+          "km": 444,
+          "min": 290
+        },
+        "BSL": {
+          "km": 534,
+          "min": 355
+        },
+        "MXP": {
+          "km": 338,
+          "min": 200
+        },
+        "BGY": {
+          "km": 251,
+          "min": 155
+        },
+        "INN": {
+          "km": 163,
+          "min": 120
+        },
+        "SZG": {
+          "km": 332,
+          "min": 215
+        },
+        "MUC": {
+          "km": 358,
+          "min": 230
+        },
+        "VRN": {
+          "km": 174,
+          "min": 120
+        },
+        "VCE": {
+          "km": 164,
+          "min": 125
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            4,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-pinzolo",
+      "type": "base",
+      "name": "Pinzolo",
+      "region": "Trentino",
+      "coords": [
+        10.758,
+        46.157
+      ],
+      "altitude": 770,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 55,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Valley town with its own small ski area and a gondola link towards Madonna di Campiglio, at much lower prices.",
+      "transfer": "Shared shuttle about 2h30 from Verona Airport. About 3h30 from Venice Airport.",
+      "links": [
+        {
+          "to": "it-madonna-di-campiglio",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondolas from Pinzolo up the Prà Rodont to the Campiglio slopes"
+        },
+        {
+          "to": "it-madonna-di-campiglio",
+          "min": 20,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Direct bus up the road"
+        }
+      ],
+      "fromOrigin": {
+        "GVA": {
+          "km": 525,
+          "min": 355
+        },
+        "LYS": {
+          "km": 627,
+          "min": 390
+        },
+        "CMF": {
+          "km": 549,
+          "min": 350
+        },
+        "GNB": {
+          "km": 615,
+          "min": 385
+        },
+        "TRN": {
+          "km": 346,
+          "min": 220
+        },
+        "ZRH": {
+          "km": 517,
+          "min": 335
+        },
+        "BSL": {
+          "km": 605,
+          "min": 395
+        },
+        "MXP": {
+          "km": 248,
+          "min": 170
+        },
+        "BGY": {
+          "km": 161,
+          "min": 125
+        },
+        "INN": {
+          "km": 234,
+          "min": 160
+        },
+        "SZG": {
+          "km": 403,
+          "min": 255
+        },
+        "MUC": {
+          "km": 429,
+          "min": 270
+        },
+        "VRN": {
+          "km": 142,
+          "min": 120
+        },
+        "VCE": {
+          "km": 260,
+          "min": 170
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-pieve-di-cadore",
+      "type": "base",
+      "name": "Pieve di Cadore",
+      "region": "Veneto",
+      "coords": [
+        12.364,
+        46.43
+      ],
+      "altitude": 878,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 45,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Cadore hill town, the birthplace of Titian, at much lower prices than Cortina. Trains stop at nearby Calalzo.",
+      "transfer": "Train from Venice to Calalzo about 2h15, then a short bus. Car about 2h from Venice Airport.",
+      "links": [
+        {
+          "to": "it-cortina",
+          "min": 35,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Cortina Express or local bus"
+        }
+      ],
+      "rail": "Trenitalia (Calalzo)",
+      "fromOrigin": {
+        "GVA": {
+          "km": 701,
+          "min": 415
+        },
+        "LYS": {
+          "km": 803,
+          "min": 450
+        },
+        "CMF": {
+          "km": 725,
+          "min": 410
+        },
+        "GNB": {
+          "km": 791,
+          "min": 445
+        },
+        "TRN": {
+          "km": 522,
+          "min": 280
+        },
+        "ZRH": {
+          "km": 476,
+          "min": 320
+        },
+        "BSL": {
+          "km": 565,
+          "min": 375
+        },
+        "MXP": {
+          "km": 424,
+          "min": 230
+        },
+        "BGY": {
+          "km": 337,
+          "min": 185
+        },
+        "INN": {
+          "km": 195,
+          "min": 150
+        },
+        "SZG": {
+          "km": 281,
+          "min": 210
+        },
+        "MUC": {
+          "km": 355,
+          "min": 255
+        },
+        "VRN": {
+          "km": 247,
+          "min": 150
+        },
+        "VCE": {
+          "km": 119,
+          "min": 70
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            2,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-dobbiaco",
+      "type": "base",
+      "name": "Dobbiaco",
+      "region": "South Tyrol",
+      "coords": [
+        12.223,
+        46.733
+      ],
+      "altitude": 1256,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Quiet village at the head of the Pustertal, known for cross-country skiing and flat winter walks. Good for Sesto, Cortina and Kronplatz.",
+      "transfer": "Train from Verona about 3h30. Car about 3h15 from Verona Airport. About 2h45 from Venice Airport.",
+      "links": [
+        {
+          "to": "it-sesto",
+          "min": 15,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Bus to the Monte Elmo and Croda Rossa lifts"
+        },
+        {
+          "to": "it-cortina",
+          "min": 40,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-kronplatz",
+          "min": 35,
+          "by": [
+            "train",
+            "bus",
+            "car"
+          ],
+          "note": "Train to Brunico, then the Riscone bus"
+        }
+      ],
+      "rail": "Südtirol Bahn",
+      "fromOrigin": {
+        "GVA": {
+          "km": 694,
+          "min": 430
+        },
+        "LYS": {
+          "km": 796,
+          "min": 460
+        },
+        "CMF": {
+          "km": 718,
+          "min": 425
+        },
+        "GNB": {
+          "km": 784,
+          "min": 460
+        },
+        "TRN": {
+          "km": 515,
+          "min": 295
+        },
+        "ZRH": {
+          "km": 415,
+          "min": 270
+        },
+        "BSL": {
+          "km": 504,
+          "min": 325
+        },
+        "MXP": {
+          "km": 417,
+          "min": 245
+        },
+        "BGY": {
+          "km": 330,
+          "min": 200
+        },
+        "INN": {
+          "km": 134,
+          "min": 100
+        },
+        "SZG": {
+          "km": 230,
+          "min": 165
+        },
+        "MUC": {
+          "km": 330,
+          "min": 205
+        },
+        "VRN": {
+          "km": 253,
+          "min": 165
+        },
+        "VCE": {
+          "km": 179,
+          "min": 120
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-san-candido",
+      "type": "base",
+      "name": "San Candido",
+      "region": "South Tyrol",
+      "coords": [
+        12.283,
+        46.733
+      ],
+      "altitude": 1175,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 60,
+      "family": true,
+      "vibes": [
+        "town",
+        "quiet"
+      ],
+      "character": "Small town at the end of the Pustertal line, with a handsome collegiate church. A cheaper way into Sesto and Cortina.",
+      "transfer": "Train from Verona about 3h45. Car about 3h20 from Verona Airport.",
+      "links": [
+        {
+          "to": "it-sesto",
+          "min": 10,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Bus up the Sexten valley"
+        },
+        {
+          "to": "it-cortina",
+          "min": 45,
+          "by": [
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Südtirol Bahn",
+      "fromOrigin": {
+        "GVA": {
+          "km": 699,
+          "min": 435
+        },
+        "LYS": {
+          "km": 801,
+          "min": 470
+        },
+        "CMF": {
+          "km": 723,
+          "min": 430
+        },
+        "GNB": {
+          "km": 789,
+          "min": 465
+        },
+        "TRN": {
+          "km": 520,
+          "min": 300
+        },
+        "ZRH": {
+          "km": 420,
+          "min": 275
+        },
+        "BSL": {
+          "km": 508,
+          "min": 330
+        },
+        "MXP": {
+          "km": 422,
+          "min": 250
+        },
+        "BGY": {
+          "km": 335,
+          "min": 205
+        },
+        "INN": {
+          "km": 139,
+          "min": 105
+        },
+        "SZG": {
+          "km": 225,
+          "min": 160
+        },
+        "MUC": {
+          "km": 299,
+          "min": 205
+        },
+        "VRN": {
+          "km": 258,
+          "min": 170
+        },
+        "VCE": {
+          "km": 172,
+          "min": 120
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "it-moena",
+      "type": "base",
+      "name": "Moena",
+      "region": "Trentino",
+      "coords": [
+        11.658,
+        46.377
+      ],
+      "altitude": 1184,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 60,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Pretty Ladin village known as the fairy of the Dolomites, with its own small slopes and good-value stays.",
+      "transfer": "Shared shuttle about 2h15 from Verona Airport. About 3h from Venice Airport.",
+      "links": [
+        {
+          "to": "it-canazei",
+          "min": 20,
+          "by": [
+            "bus",
+            "car"
+          ],
+          "note": "Bus up Val di Fassa"
+        },
+        {
+          "to": "it-cavalese",
+          "min": 30,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-san-martino",
+          "min": 40,
+          "by": [
+            "car",
+            "bus"
+          ],
+          "note": "Over the Valles or Rolle pass"
+        }
+      ],
+      "fromOrigin": {
+        "GVA": {
+          "km": 624,
+          "min": 395
+        },
+        "LYS": {
+          "km": 726,
+          "min": 425
+        },
+        "CMF": {
+          "km": 648,
+          "min": 390
+        },
+        "GNB": {
+          "km": 714,
+          "min": 425
+        },
+        "TRN": {
+          "km": 445,
+          "min": 260
+        },
+        "ZRH": {
+          "km": 441,
+          "min": 290
+        },
+        "BSL": {
+          "km": 531,
+          "min": 355
+        },
+        "MXP": {
+          "km": 347,
+          "min": 210
+        },
+        "BGY": {
+          "km": 260,
+          "min": 160
+        },
+        "INN": {
+          "km": 160,
+          "min": 120
+        },
+        "SZG": {
+          "km": 329,
+          "min": 215
+        },
+        "MUC": {
+          "km": 355,
+          "min": 230
+        },
+        "VRN": {
+          "km": 183,
+          "min": 130
+        },
+        "VCE": {
+          "km": 166,
+          "min": 125
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
         }
       }
     }

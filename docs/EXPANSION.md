@@ -51,7 +51,9 @@ The app never names a country in code. It loads whatever `data/index.json` marks
 - **Airports:** Innsbruck (main), Salzburg and Munich. Drive times from them cover Austria, Switzerland and Italy; French places are too far and are left out.
 - **Still to add:** German and Dutch school holiday weeks, which fill Austrian resorts.
 
-## Step 4: the Dolomites
+## Step 4: Graubünden and the Dolomites (live)
+
+Graubünden (Davos, Klosters, Lenzerheide, Arosa, Flims, Laax, St. Moritz, Scuol, Savognin, with Chur, Landquart, Ilanz, Samedan, Küblis and Thusis as bases) went into `ch.json`. The Dolomites (Cortina, Val Gardena, Alta Badia, Arabba, Val di Fassa, Alpe di Siusi, Kronplatz, Madonna di Campiglio, Val di Fiemme, San Martino, Sesto, with eleven valley bases) went into `it.json`. Verona and Venice airports were added. Prices, season dates and park ratings are a first pass to check. Original plan:
 
 Cortina, Val Gardena, Alta Badia, Madonna di Campiglio and Kronplatz, flown into from Verona, Venice or Innsbruck. Widen the snow layer east to about 12.5° (already covered) and add Verona and Venice airports.
 

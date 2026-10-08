@@ -2282,6 +2282,443 @@
    },
    "note": "Glacier valley with some lift-served bike trails."
   },
+  "ch-davos": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Bike park at Jakobshorn plus big Parsenn and Davos valley trails, with lifts for most."
+  },
+  "ch-klosters": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Quiet Prättigau trails and Madrisa, with e-bike loops. Small lift-served riding."
+  },
+  "ch-lenzerheide": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 55,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Big bike park with World Cup flow trails from the Rothorn, plus long gentler routes for families."
+  },
+  "ch-arosa": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Lake and forest routes and some lift-served trails. A small area for a day or two."
+  },
+  "ch-flims": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Flims Trails and the Laax bike park, with long lift-served descents and gentle forest tracks."
+  },
+  "ch-laax": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Bike park with flow lines from Crap Sogn Gion and links to the wider Flims trails."
+  },
+  "ch-st-moritz": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "xc"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Engadin lakeside riding, the Corviglia flow trail and big alpine routes by e-bike."
+  },
+  "ch-scuol": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Motta Naluns bike park, with flow lines and a kids' area, in the sunny Lower Engadine."
+  },
+  "ch-savognin": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "kids"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Quiet valley with a small lift-served bike area and easy rolling routes."
+  },
+  "it-cortina": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "kids"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Cortina bike park on the Mietres and Faloria side, plus long Dolomite road and trail rides. Lifts open some trails."
+  },
+  "it-ortisei": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "enduro",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 34,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Val Gardena lifts carry bikes to Seceda and Alpe di Siusi, with scenic trails and e-bike routes."
+  },
+  "it-selva": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 34,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Val Gardena bike lifts and the Sella Ronda by bike. Rocky Dolomite trails with big views."
+  },
+  "it-corvara": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 30,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Alta Badia has bike lifts and a mix of flow and enduro trails, with the Sella passes on the doorstep."
+  },
+  "it-la-villa": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 30,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Gentle Alta Badia trails and e-bike loops, with lifts nearby. More for touring than for a bike park."
+  },
+  "it-arabba": {
+   "level": "good",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "downhill",
+    "enduro",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Steep trails from Porta Vescovo, with the Pordoi and Fedaia passes close by."
+  },
+  "it-canazei": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 30,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Val di Fassa bike park at Belvedere and Col Rodella, with Pordoi pass rides close by."
+  },
+  "it-alpe-di-siusi": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Wide high meadow with gentle roads and e-bike loops. Closed to cars in the day, so quiet to ride."
+  },
+  "it-kronplatz": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 35,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Kronplatz is a well-known bike park, with long flow and downhill trails from several gondolas."
+  },
+  "it-madonna-di-campiglio": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 33,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Bike park with lift-served flow and downhill trails, in a big Brenta Dolomites setting."
+  },
+  "it-cavalese": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Val di Fiemme has forest tracks, a long valley route and some lift help from the Cermis gondola."
+  },
+  "it-san-martino": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Rocky Pale di San Martino trails and a cable car for bikes. Wild and quiet."
+  },
+  "it-sesto": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Quiet Sexten valley with scenic Tre Cime routes and long valley paths. No bike park."
+  },
   "fr-annecy": {
    "level": "good",
    "suits": [
@@ -2433,6 +2870,14 @@
     "INN": {
      "km": 582,
      "min": 325
+    },
+    "VRN": {
+     "km": 337,
+     "min": 200
+    },
+    "VCE": {
+     "km": 458,
+     "min": 250
     }
    },
    "type": "base",
@@ -2514,6 +2959,14 @@
     "MUC": {
      "km": 422,
      "min": 250
+    },
+    "VRN": {
+     "km": 88,
+     "min": 75
+    },
+    "VCE": {
+     "km": 206,
+     "min": 120
     }
    },
    "type": "base",
@@ -2609,6 +3062,14 @@
     "MUC": {
      "km": 441,
      "min": 260
+    },
+    "VRN": {
+     "km": 259,
+     "min": 165
+    },
+    "VCE": {
+     "km": 381,
+     "min": 215
     }
    },
    "type": "base",
@@ -2682,6 +3143,14 @@
     "MUC": {
      "km": 189,
      "min": 125
+    },
+    "VRN": {
+     "km": 387,
+     "min": 260
+    },
+    "VCE": {
+     "km": 328,
+     "min": 245
     }
    },
    "type": "base",

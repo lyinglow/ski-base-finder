@@ -121,3 +121,25 @@ at-serfaus|good|bix|fdxmk||Bike park at Serfaus-Fiss-Ladis, with free local tran
 at-ellmau|fair|bi|fxm||Wilder Kaiser riding, with a friendly bike park.
 at-alpbach|fair|bi|xm||Peaceful Tyrol village with cross-country and e-bike trails.
 at-hintertux|fair|bi|fx||Glacier valley with some lift-served bike trails.
+ch-davos|good|bix|fdemk||Bike park at Jakobshorn plus big Parsenn and Davos valley trails, with lifts for most.
+ch-klosters|fair|bi|xmk||Quiet Prättigau trails and Madrisa, with e-bike loops. Small lift-served riding.
+ch-lenzerheide|awesome|bix|fdemk||Big bike park with World Cup flow trails from the Rothorn, plus long gentler routes for families.
+ch-arosa|fair|bi|xmk||Lake and forest routes and some lift-served trails. A small area for a day or two.
+ch-flims|good|bix|fdemk||Flims Trails and the Laax bike park, with long lift-served descents and gentle forest tracks.
+ch-laax|good|bix|fdemk||Bike park with flow lines from Crap Sogn Gion and links to the wider Flims trails.
+ch-st-moritz|good|bix|fdemx||Engadin lakeside riding, the Corviglia flow trail and big alpine routes by e-bike.
+ch-scuol|good|bix|fdemk||Motta Naluns bike park, with flow lines and a kids' area, in the sunny Lower Engadine.
+ch-savognin|fair|bi|fxk||Quiet valley with a small lift-served bike area and easy rolling routes.
+it-cortina|good|bix|fdexk|28|Cortina bike park on the Mietres and Faloria side, plus long Dolomite road and trail rides. Lifts open some trails.
+it-ortisei|good|bix|fexmk|34|Val Gardena lifts carry bikes to Seceda and Alpe di Siusi, with scenic trails and e-bike routes.
+it-selva|good|bix|fdexmk|34|Val Gardena bike lifts and the Sella Ronda by bike. Rocky Dolomite trails with big views.
+it-corvara|good|bix|fexm|30|Alta Badia has bike lifts and a mix of flow and enduro trails, with the Sella passes on the doorstep.
+it-la-villa|fair|bi|fxmk|30|Gentle Alta Badia trails and e-bike loops, with lifts nearby. More for touring than for a bike park.
+it-arabba|good|ix|dem|28|Steep trails from Porta Vescovo, with the Pordoi and Fedaia passes close by.
+it-canazei|good|bix|fdexm|30|Val di Fassa bike park at Belvedere and Col Rodella, with Pordoi pass rides close by.
+it-alpe-di-siusi|fair|bi|xmk|0|Wide high meadow with gentle roads and e-bike loops. Closed to cars in the day, so quiet to ride.
+it-kronplatz|awesome|bix|fdemk|35|Kronplatz is a well-known bike park, with long flow and downhill trails from several gondolas.
+it-madonna-di-campiglio|awesome|bix|fdemk|33|Bike park with lift-served flow and downhill trails, in a big Brenta Dolomites setting.
+it-cavalese|fair|bi|xmk||Val di Fiemme has forest tracks, a long valley route and some lift help from the Cermis gondola.
+it-san-martino|fair|bix|exm||Rocky Pale di San Martino trails and a cable car for bikes. Wild and quiet.
+it-sesto|fair|bi|xmk|0|Quiet Sexten valley with scenic Tre Cime routes and long valley paths. No bike park.

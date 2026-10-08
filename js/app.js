@@ -48,7 +48,8 @@ const state = {
   related: new Set(),
   detailMin: false,
   tripOpen: false,
-  saved: new Set(),
+  saved: new Set(), // this season's shortlist; the other season's waits in otherSaved
+  otherSaved: new Set(),
   compare: [],
 };
 
@@ -622,7 +623,7 @@ function applyFilters() {
   $("#tab-count").textContent = n;
   $("#show-places-n").textContent = n === 1 ? "1 place" : `${n} places`;
   const emptyText = state.show === "saved"
-    ? (state.saved.size ? `Your saved places are for ${summer() ? "winter" : "summer"}. Switch to ${summer() ? "Winter" : "Summer"} to see them.` : "Nothing saved yet. Open a resort or town and tap Save.")
+    ? "Nothing saved yet. Open a resort or town and tap Save."
     : "Nothing matches. Try a longer travel time or more price levels.";
   $("#results").innerHTML = n ? visible.map(resultItem).join("") : `<li class="empty">${emptyText}</li>`;
   updateReach(visible);
@@ -1471,9 +1472,11 @@ function setSeason(next) {
   [state.trip.week, state.otherWeek] = [state.otherWeek, state.trip.week]; // each season keeps its own week
   [state.trip.lessons, state.otherLessons] = [state.otherLessons, state.trip.lessons]; // and its own lessons
   state.season = next;
+  [state.saved, state.otherSaved] = [state.otherSaved, state.saved]; // each season has its own shortlist
   state.compare = state.compare.filter((id) => inSeason(model.byId.get(id), next, model.byId));
   applySeasonUI();
   renderCompareBar();
+  shortlistChanged();
   const open = state.selected && model.byId.get(state.selected);
   if (open && !inSeason(open, next, model.byId)) clearSelection();
   tripChanged();
@@ -1832,9 +1835,12 @@ function setTab(tab) {
 
 function loadShortlist() {
   try {
-    for (const id of JSON.parse(localStorage.getItem(SAVED_KEY) || "[]")) {
-      if (model.byId.has(id)) state.saved.add(id);
-    }
+    const stored = JSON.parse(localStorage.getItem(SAVED_KEY) || "[]");
+    const other = state.season === "summer" ? "winter" : "summer";
+    // Older versions kept one list, which was the winter one.
+    const lists = Array.isArray(stored) ? { winter: stored } : stored;
+    for (const id of lists[state.season] || []) if (model.byId.has(id)) state.saved.add(id);
+    for (const id of lists[other] || []) if (model.byId.has(id)) state.otherSaved.add(id);
   } catch { /* storage blocked: start empty */ }
 
   // A shared link (?list=a,b,c) adds its places to this browser's shortlist.
@@ -1849,7 +1855,10 @@ function loadShortlist() {
 }
 
 function persistShortlist() {
-  try { localStorage.setItem(SAVED_KEY, JSON.stringify([...state.saved])); } catch { /* not saved */ }
+  try {
+    const other = state.season === "summer" ? "winter" : "summer";
+    localStorage.setItem(SAVED_KEY, JSON.stringify({ [state.season]: [...state.saved], [other]: [...state.otherSaved] }));
+  } catch { /* not saved */ }
 }
 
 function toggleSaved(id) {
@@ -1914,6 +1923,7 @@ function planOf() {
     snowLayer: state.snowLayer,
     sort: state.sort,
     saved: [...state.saved],
+    otherSaved: [...state.otherSaved],
     selected: state.selected,
   };
 }
@@ -1980,8 +1990,13 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   state.parkNeeds = new Set((p.parkNeeds || []).filter((f) => f in model.index.parkFeatures));
   state.snowLayer = p.snowLayer === true;
   if (["fit", "time", "cost", "price", "altitude", "ski", "snow", "bike"].includes(p.sort)) state.sort = p.sort;
-  if (mergeSaved) for (const id of ids(p.saved)) state.saved.add(id);
-  else state.saved = new Set(ids(p.saved));
+  if (mergeSaved) {
+    for (const id of ids(p.saved)) state.saved.add(id);
+    for (const id of ids(p.otherSaved)) state.otherSaved.add(id);
+  } else {
+    state.saved = new Set(ids(p.saved));
+    state.otherSaved = new Set(ids(p.otherSaved));
+  }
   planReopen = model.byId.has(p.selected) ? p.selected : null;
 }
 
@@ -1993,7 +2008,7 @@ function restorePlan() {
     try { applyPlan(decodePlan(shared), { mergeSaved: true }); } catch { /* bad link: keep what we have */ }
     history.replaceState(null, "", location.pathname + location.hash);
   }
-  try { localStorage.setItem(SAVED_KEY, JSON.stringify([...state.saved])); } catch { /* not saved */ }
+  persistShortlist();
 }
 
 const encodePlan = (p) => btoa(unescape(encodeURIComponent(JSON.stringify(p)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");

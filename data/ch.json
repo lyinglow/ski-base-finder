@@ -155,6 +155,14 @@
         "MUC": {
           "km": 584,
           "min": 330
+        },
+        "VRN": {
+          "km": 439,
+          "min": 295
+        },
+        "VCE": {
+          "km": 561,
+          "min": 345
         }
       },
       "runShare": {
@@ -314,6 +322,14 @@
         "MUC": {
           "km": 585,
           "min": 330
+        },
+        "VRN": {
+          "km": 440,
+          "min": 295
+        },
+        "VCE": {
+          "km": 562,
+          "min": 345
         }
       },
       "runShare": {
@@ -481,6 +497,14 @@
         "MUC": {
           "km": 589,
           "min": 345
+        },
+        "VRN": {
+          "km": 444,
+          "min": 305
+        },
+        "VCE": {
+          "km": 566,
+          "min": 360
         }
       },
       "runShare": {
@@ -639,6 +663,14 @@
         "MUC": {
           "km": 587,
           "min": 340
+        },
+        "VRN": {
+          "km": 441,
+          "min": 305
+        },
+        "VCE": {
+          "km": 563,
+          "min": 355
         }
       },
       "runShare": {
@@ -796,6 +828,14 @@
         "MUC": {
           "km": 575,
           "min": 325
+        },
+        "VRN": {
+          "km": 443,
+          "min": 290
+        },
+        "VCE": {
+          "km": 565,
+          "min": 340
         }
       },
       "runShare": {
@@ -966,6 +1006,14 @@
         "MUC": {
           "km": 579,
           "min": 325
+        },
+        "VRN": {
+          "km": 440,
+          "min": 290
+        },
+        "VCE": {
+          "km": 562,
+          "min": 340
         }
       },
       "runShare": {
@@ -1125,6 +1173,14 @@
         "MUC": {
           "km": 581,
           "min": 330
+        },
+        "VRN": {
+          "km": 449,
+          "min": 295
+        },
+        "VCE": {
+          "km": 571,
+          "min": 345
         }
       },
       "runShare": {
@@ -1285,6 +1341,14 @@
         "MUC": {
           "km": 586,
           "min": 335
+        },
+        "VRN": {
+          "km": 454,
+          "min": 300
+        },
+        "VCE": {
+          "km": 576,
+          "min": 350
         }
       },
       "runShare": {
@@ -1453,6 +1517,14 @@
         "MUC": {
           "km": 619,
           "min": 350
+        },
+        "VRN": {
+          "km": 403,
+          "min": 265
+        },
+        "VCE": {
+          "km": 524,
+          "min": 315
         }
       },
       "runShare": {
@@ -1622,6 +1694,14 @@
         "MUC": {
           "km": 624,
           "min": 350
+        },
+        "VRN": {
+          "km": 403,
+          "min": 270
+        },
+        "VCE": {
+          "km": 525,
+          "min": 320
         }
       },
       "runShare": {
@@ -1780,6 +1860,14 @@
         "MUC": {
           "km": 626,
           "min": 355
+        },
+        "VRN": {
+          "km": 400,
+          "min": 265
+        },
+        "VCE": {
+          "km": 522,
+          "min": 320
         }
       },
       "runShare": {
@@ -1947,6 +2035,14 @@
         "MUC": {
           "km": 639,
           "min": 365
+        },
+        "VRN": {
+          "km": 409,
+          "min": 280
+        },
+        "VCE": {
+          "km": 531,
+          "min": 330
         }
       },
       "runShare": {
@@ -2104,6 +2200,14 @@
         "MUC": {
           "km": 617,
           "min": 345
+        },
+        "VRN": {
+          "km": 417,
+          "min": 275
+        },
+        "VCE": {
+          "km": 539,
+          "min": 325
         }
       },
       "runShare": {
@@ -2263,6 +2367,14 @@
         "MUC": {
           "km": 583,
           "min": 355
+        },
+        "VRN": {
+          "km": 387,
+          "min": 260
+        },
+        "VCE": {
+          "km": 509,
+          "min": 310
         }
       },
       "runShare": {
@@ -2413,6 +2525,14 @@
         "MUC": {
           "km": 632,
           "min": 360
+        },
+        "VRN": {
+          "km": 402,
+          "min": 270
+        },
+        "VCE": {
+          "km": 524,
+          "min": 320
         }
       },
       "runShare": {
@@ -2564,6 +2684,14 @@
         "MUC": {
           "km": 588,
           "min": 360
+        },
+        "VRN": {
+          "km": 392,
+          "min": 265
+        },
+        "VCE": {
+          "km": 514,
+          "min": 315
         }
       },
       "runShare": {
@@ -2712,6 +2840,14 @@
         "MUC": {
           "km": 612,
           "min": 345
+        },
+        "VRN": {
+          "km": 413,
+          "min": 275
+        },
+        "VCE": {
+          "km": 535,
+          "min": 325
         }
       },
       "runShare": {
@@ -2861,6 +2997,14 @@
         "MUC": {
           "km": 576,
           "min": 350
+        },
+        "VRN": {
+          "km": 380,
+          "min": 255
+        },
+        "VCE": {
+          "km": 502,
+          "min": 305
         }
       },
       "runShare": {
@@ -3025,6 +3169,14 @@
         "MUC": {
           "km": 588,
           "min": 360
+        },
+        "VRN": {
+          "km": 368,
+          "min": 250
+        },
+        "VCE": {
+          "km": 490,
+          "min": 300
         }
       },
       "runShare": {
@@ -3189,6 +3341,14 @@
         "MUC": {
           "km": 592,
           "min": 375
+        },
+        "VRN": {
+          "km": 372,
+          "min": 265
+        },
+        "VCE": {
+          "km": 494,
+          "min": 315
         }
       },
       "runShare": {
@@ -3357,6 +3517,14 @@
         "MUC": {
           "km": 585,
           "min": 365
+        },
+        "VRN": {
+          "km": 346,
+          "min": 245
+        },
+        "VCE": {
+          "km": 468,
+          "min": 295
         }
       },
       "runShare": {
@@ -3508,6 +3676,14 @@
         "MUC": {
           "km": 546,
           "min": 320
+        },
+        "VRN": {
+          "km": 476,
+          "min": 325
+        },
+        "VCE": {
+          "km": 598,
+          "min": 375
         }
       },
       "runShare": {
@@ -3667,6 +3843,14 @@
         "MUC": {
           "km": 527,
           "min": 300
+        },
+        "VRN": {
+          "km": 414,
+          "min": 285
+        },
+        "VCE": {
+          "km": 536,
+          "min": 335
         }
       },
       "runShare": {
@@ -3827,6 +4011,14 @@
         "MUC": {
           "km": 473,
           "min": 300
+        },
+        "VRN": {
+          "km": 584,
+          "min": 400
+        },
+        "VCE": {
+          "km": 706,
+          "min": 455
         }
       },
       "runShare": {
@@ -3996,6 +4188,14 @@
         "MUC": {
           "km": 481,
           "min": 290
+        },
+        "VRN": {
+          "km": 592,
+          "min": 390
+        },
+        "VCE": {
+          "km": 714,
+          "min": 440
         }
       },
       "runShare": {
@@ -4145,6 +4345,14 @@
         "MUC": {
           "km": 473,
           "min": 310
+        },
+        "VRN": {
+          "km": 584,
+          "min": 410
+        },
+        "VCE": {
+          "km": 706,
+          "min": 465
         }
       },
       "runShare": {
@@ -4303,6 +4511,14 @@
         "MUC": {
           "km": 609,
           "min": 355
+        },
+        "VRN": {
+          "km": 501,
+          "min": 325
+        },
+        "VCE": {
+          "km": 622,
+          "min": 375
         }
       },
       "runShare": {
@@ -4462,6 +4678,14 @@
         "MUC": {
           "km": 592,
           "min": 360
+        },
+        "VRN": {
+          "km": 397,
+          "min": 265
+        },
+        "VCE": {
+          "km": 518,
+          "min": 315
         }
       },
       "runShare": {
@@ -4621,6 +4845,14 @@
         "MUC": {
           "km": 581,
           "min": 365
+        },
+        "VRN": {
+          "km": 343,
+          "min": 245
+        },
+        "VCE": {
+          "km": 465,
+          "min": 295
         }
       },
       "runShare": {
@@ -4747,6 +4979,14 @@
         "MUC": {
           "km": 572,
           "min": 320
+        },
+        "VRN": {
+          "km": 426,
+          "min": 280
+        },
+        "VCE": {
+          "km": 548,
+          "min": 330
         }
       }
     },
@@ -4875,6 +5115,14 @@
         "MUC": {
           "km": 567,
           "min": 315
+        },
+        "VRN": {
+          "km": 434,
+          "min": 285
+        },
+        "VCE": {
+          "km": 556,
+          "min": 335
         }
       }
     },
@@ -4981,6 +5229,14 @@
         "MUC": {
           "km": 574,
           "min": 320
+        },
+        "VRN": {
+          "km": 423,
+          "min": 275
+        },
+        "VCE": {
+          "km": 544,
+          "min": 325
         }
       }
     },
@@ -5101,6 +5357,14 @@
         "MUC": {
           "km": 591,
           "min": 330
+        },
+        "VRN": {
+          "km": 401,
+          "min": 265
+        },
+        "VCE": {
+          "km": 523,
+          "min": 315
         }
       }
     },
@@ -5207,6 +5471,14 @@
         "MUC": {
           "km": 611,
           "min": 345
+        },
+        "VRN": {
+          "km": 394,
+          "min": 260
+        },
+        "VCE": {
+          "km": 516,
+          "min": 310
         }
       }
     },
@@ -5344,6 +5616,14 @@
         "MUC": {
           "km": 616,
           "min": 345
+        },
+        "VRN": {
+          "km": 391,
+          "min": 255
+        },
+        "VCE": {
+          "km": 512,
+          "min": 305
         }
       }
     },
@@ -5473,6 +5753,14 @@
         "MUC": {
           "km": 570,
           "min": 340
+        },
+        "VRN": {
+          "km": 375,
+          "min": 245
+        },
+        "VCE": {
+          "km": 496,
+          "min": 295
         }
       }
     },
@@ -5586,6 +5874,14 @@
         "MUC": {
           "km": 563,
           "min": 335
+        },
+        "VRN": {
+          "km": 343,
+          "min": 225
+        },
+        "VCE": {
+          "km": 465,
+          "min": 275
         }
       }
     },
@@ -5691,6 +5987,14 @@
         "MUC": {
           "km": 592,
           "min": 360
+        },
+        "VRN": {
+          "km": 372,
+          "min": 250
+        },
+        "VCE": {
+          "km": 494,
+          "min": 300
         }
       }
     },
@@ -5815,6 +6119,14 @@
         "MUC": {
           "km": 575,
           "min": 340
+        },
+        "VRN": {
+          "km": 335,
+          "min": 220
+        },
+        "VCE": {
+          "km": 457,
+          "min": 270
         }
       }
     },
@@ -5935,6 +6247,14 @@
         "MUC": {
           "km": 462,
           "min": 270
+        },
+        "VRN": {
+          "km": 574,
+          "min": 375
+        },
+        "VCE": {
+          "km": 695,
+          "min": 425
         }
       }
     },
@@ -6050,6 +6370,14 @@
         "MUC": {
           "km": 473,
           "min": 280
+        },
+        "VRN": {
+          "km": 584,
+          "min": 380
+        },
+        "VCE": {
+          "km": 706,
+          "min": 435
         }
       }
     },
@@ -6155,6 +6483,2357 @@
         "MUC": {
           "km": 511,
           "min": 285
+        },
+        "VRN": {
+          "km": 399,
+          "min": 275
+        },
+        "VCE": {
+          "km": 520,
+          "min": 325
+        }
+      }
+    },
+    {
+      "id": "ch-davos",
+      "type": "resort",
+      "name": "Davos",
+      "region": "Graubünden",
+      "coords": [
+        9.8355,
+        46.8027
+      ],
+      "altitude": 1560,
+      "topAltitude": 2844,
+      "townSize": "large",
+      "price": 2,
+      "stayPerPerson": 120,
+      "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Davos Klosters",
+        "pisteKm": 300,
+        "pass6": 430
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "character": "Highest town in the Alps, with real shops, a big sports centre and five ski areas on its doorstep. Busy and international, with a long skiing history.",
+      "transfer": "Train from Zurich Airport via Landquart and the Rhaetian Railway, about 2h30.",
+      "links": [
+        {
+          "to": "ch-klosters",
+          "min": 25,
+          "by": [
+            "lift",
+            "train"
+          ],
+          "note": "Ski over the Parsenn to Klosters, or take the train"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "The Jakobshorn park has lines from small to big, plus a beginner line.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep Parsenn runs, long off-piste descents and the Schatzalp area. Best with a guide."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 425,
+          "min": 265
+        },
+        "LYS": {
+          "km": 568,
+          "min": 335
+        },
+        "CMF": {
+          "km": 510,
+          "min": 310
+        },
+        "GNB": {
+          "km": 590,
+          "min": 345
+        },
+        "TRN": {
+          "km": 364,
+          "min": 235
+        },
+        "ZRH": {
+          "km": 159,
+          "min": 110
+        },
+        "BSL": {
+          "km": 240,
+          "min": 160
+        },
+        "MXP": {
+          "km": 230,
+          "min": 170
+        },
+        "BGY": {
+          "km": 286,
+          "min": 195
+        },
+        "INN": {
+          "km": 267,
+          "min": 185
+        },
+        "SZG": {
+          "km": 466,
+          "min": 270
+        },
+        "MUC": {
+          "km": 333,
+          "min": 190
+        },
+        "VRN": {
+          "km": 423,
+          "min": 280
+        },
+        "VCE": {
+          "km": 545,
+          "min": 330
+        }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 38,
+        "red": 49,
+        "black": 12
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-klosters",
+      "type": "resort",
+      "name": "Klosters",
+      "region": "Graubünden",
+      "coords": [
+        9.8817,
+        46.8683
+      ],
+      "altitude": 1190,
+      "topAltitude": 2844,
+      "townSize": "small",
+      "price": 3,
+      "stayPerPerson": 160,
+      "family": true,
+      "vibes": [
+        "upmarket",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "easyStart": "Short walk or bus to the Gotschna lift and a beginner area on Madrisa.",
+      "skiArea": {
+        "name": "Davos Klosters",
+        "pisteKm": 300,
+        "pass6": 430
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Smaller, smarter village than Davos, with chalets and a quiet main street. Gotschna and Madrisa lifts leave from the edge of town.",
+      "transfer": "Train from Zurich Airport via Landquart, about 2h15. Direct to the village.",
+      "links": [
+        {
+          "to": "ch-davos",
+          "min": 25,
+          "by": [
+            "lift",
+            "train"
+          ],
+          "note": "Ski over the Parsenn to Davos, or take the train"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small fun zone at Madrisa. The bigger park is at Jakobshorn in Davos."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Famous Parsenn off-piste and the long Klosters run, with quieter Madrisa slopes."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 414,
+          "min": 260
+        },
+        "LYS": {
+          "km": 557,
+          "min": 330
+        },
+        "CMF": {
+          "km": 499,
+          "min": 305
+        },
+        "GNB": {
+          "km": 579,
+          "min": 340
+        },
+        "TRN": {
+          "km": 374,
+          "min": 250
+        },
+        "ZRH": {
+          "km": 149,
+          "min": 105
+        },
+        "BSL": {
+          "km": 229,
+          "min": 155
+        },
+        "MXP": {
+          "km": 240,
+          "min": 180
+        },
+        "BGY": {
+          "km": 296,
+          "min": 210
+        },
+        "INN": {
+          "km": 256,
+          "min": 175
+        },
+        "SZG": {
+          "km": 456,
+          "min": 260
+        },
+        "MUC": {
+          "km": 322,
+          "min": 180
+        },
+        "VRN": {
+          "km": 413,
+          "min": 275
+        },
+        "VCE": {
+          "km": 534,
+          "min": 325
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 25,
+        "red": 62,
+        "black": 13
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-lenzerheide",
+      "type": "resort",
+      "name": "Lenzerheide",
+      "region": "Graubünden",
+      "coords": [
+        9.5558,
+        46.7285
+      ],
+      "altitude": 1473,
+      "topAltitude": 2865,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 120,
+      "family": true,
+      "vibes": [
+        "lively",
+        "skiin"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "easyStart": "Beginner area and magic carpets beside the village centre.",
+      "skiArea": {
+        "name": "Arosa Lenzerheide",
+        "pisteKm": 225,
+        "pass6": 405
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "character": "Open valley village with a long, wide ski area and a gondola linking to Arosa. Good for families and for lively evenings.",
+      "transfer": "Train to Chur, then PostBus about 35 min. About 2h15 in total.",
+      "links": [
+        {
+          "to": "ch-arosa",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondola and lifts over the Urdenfürggli to Arosa"
+        }
+      ],
+      "park": {
+        "level": "good",
+        "note": "Good park at Rothorn and Piz Scalottas with lines for beginners to experts.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Steep Rothorn runs and some off-piste, though less than Davos."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 416,
+          "min": 255
+        },
+        "LYS": {
+          "km": 559,
+          "min": 330
+        },
+        "CMF": {
+          "km": 501,
+          "min": 305
+        },
+        "GNB": {
+          "km": 581,
+          "min": 340
+        },
+        "TRN": {
+          "km": 340,
+          "min": 215
+        },
+        "ZRH": {
+          "km": 150,
+          "min": 100
+        },
+        "BSL": {
+          "km": 231,
+          "min": 150
+        },
+        "MXP": {
+          "km": 206,
+          "min": 150
+        },
+        "BGY": {
+          "km": 262,
+          "min": 175
+        },
+        "INN": {
+          "km": 229,
+          "min": 155
+        },
+        "SZG": {
+          "km": 428,
+          "min": 240
+        },
+        "MUC": {
+          "km": 324,
+          "min": 180
+        },
+        "VRN": {
+          "km": 362,
+          "min": 235
+        },
+        "VCE": {
+          "km": 484,
+          "min": 285
+        }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 59,
+        "red": 31,
+        "black": 9
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-arosa",
+      "type": "resort",
+      "name": "Arosa",
+      "region": "Graubünden",
+      "coords": [
+        9.6794,
+        46.7783
+      ],
+      "altitude": 1775,
+      "topAltitude": 2653,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 130,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Beginner area in the village, a short walk from most hotels.",
+      "skiArea": {
+        "name": "Arosa Lenzerheide",
+        "pisteKm": 225,
+        "pass6": 405
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "snowAdjust": 100,
+      "snowNote": "A cold, high bowl holds snow better than the height suggests.",
+      "character": "Car-free in winter, a lake village at the end of a train line. Sunny, snowy and calm, with a linked area over to Lenzerheide.",
+      "transfer": "Train to Chur, then the Arosa railway, about 2h30 in total.",
+      "links": [
+        {
+          "to": "ch-lenzerheide",
+          "min": 30,
+          "by": [
+            "lift"
+          ],
+          "note": "Lifts over the Urdenfürggli to Lenzerheide"
+        }
+      ],
+      "park": {
+        "level": "fair",
+        "note": "A small park at the Hörnli, plus a kids' fun zone."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "The Weisshorn offers steeper runs and off-piste."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 424,
+          "min": 265
+        },
+        "LYS": {
+          "km": 568,
+          "min": 335
+        },
+        "CMF": {
+          "km": 510,
+          "min": 310
+        },
+        "GNB": {
+          "km": 590,
+          "min": 345
+        },
+        "TRN": {
+          "km": 372,
+          "min": 240
+        },
+        "ZRH": {
+          "km": 159,
+          "min": 110
+        },
+        "BSL": {
+          "km": 239,
+          "min": 160
+        },
+        "MXP": {
+          "km": 238,
+          "min": 175
+        },
+        "BGY": {
+          "km": 294,
+          "min": 200
+        },
+        "INN": {
+          "km": 237,
+          "min": 160
+        },
+        "SZG": {
+          "km": 436,
+          "min": 250
+        },
+        "MUC": {
+          "km": 333,
+          "min": 190
+        },
+        "VRN": {
+          "km": 394,
+          "min": 260
+        },
+        "VCE": {
+          "km": 516,
+          "min": 310
+        }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 59,
+        "red": 31,
+        "black": 9
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-flims",
+      "type": "resort",
+      "name": "Flims",
+      "region": "Graubünden",
+      "coords": [
+        9.2847,
+        46.8353
+      ],
+      "altitude": 1103,
+      "topAltitude": 3018,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 120,
+      "family": true,
+      "vibes": [
+        "town",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Flims Laax Falera",
+        "pisteKm": 224,
+        "pass6": 440
+      },
+      "season": {
+        "open": "2026-11-21",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "snowAdjust": 100,
+      "snowNote": "The Vorab glacier helps early and late in the season.",
+      "character": "Large village in the trees above the Rhine gorge. Skiing runs over the Crap Sogn Gion to Laax and up to the Vorab glacier.",
+      "transfer": "Train to Chur, then PostBus about 35 min. About 2h in total.",
+      "links": [
+        {
+          "to": "ch-laax",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondola to Foppa, then lifts to Laax"
+        }
+      ],
+      "park": {
+        "level": "awesome",
+        "note": "Shares Laax's park scene, the Freestyle Academy and a big halfpipe.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "halfpipe",
+          "airbag",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep runs and big off-piste from the Vorab glacier and Cassons."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 415,
+          "min": 250
+        },
+        "LYS": {
+          "km": 558,
+          "min": 325
+        },
+        "CMF": {
+          "km": 500,
+          "min": 300
+        },
+        "GNB": {
+          "km": 580,
+          "min": 335
+        },
+        "TRN": {
+          "km": 345,
+          "min": 215
+        },
+        "ZRH": {
+          "km": 149,
+          "min": 95
+        },
+        "BSL": {
+          "km": 230,
+          "min": 145
+        },
+        "MXP": {
+          "km": 211,
+          "min": 150
+        },
+        "BGY": {
+          "km": 267,
+          "min": 175
+        },
+        "INN": {
+          "km": 228,
+          "min": 150
+        },
+        "SZG": {
+          "km": 427,
+          "min": 235
+        },
+        "MUC": {
+          "km": 323,
+          "min": 175
+        },
+        "VRN": {
+          "km": 367,
+          "min": 235
+        },
+        "VCE": {
+          "km": 489,
+          "min": 290
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 47,
+        "red": 43,
+        "black": 10
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-laax",
+      "type": "resort",
+      "name": "Laax",
+      "region": "Graubünden",
+      "coords": [
+        9.2583,
+        46.8056
+      ],
+      "altitude": 1020,
+      "topAltitude": 3018,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 110,
+      "family": true,
+      "vibes": [
+        "lively",
+        "skiin"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "easyStart": "Beginner area and magic carpets right beside the lifts.",
+      "skiArea": {
+        "name": "Flims Laax Falera",
+        "pisteKm": 224,
+        "pass6": 440
+      },
+      "season": {
+        "open": "2026-11-21",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "snowAdjust": 100,
+      "snowNote": "The Vorab glacier helps early and late in the season.",
+      "character": "Modern, young resort built around the lifts. Home of the Freestyle Academy and one of the biggest park scenes in the Alps.",
+      "transfer": "Train to Chur, then bus or train to Laax, about 2h in total.",
+      "links": [
+        {
+          "to": "ch-flims",
+          "min": 15,
+          "by": [
+            "lift"
+          ],
+          "note": "Gondola to Foppa, then lifts to Flims"
+        }
+      ],
+      "park": {
+        "level": "awesome",
+        "note": "Famous Freestyle Academy and Crap Sogn Gion park with a pro halfpipe, big jumps and lines for every level.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "halfpipe",
+          "airbag",
+          "cross",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Big off-piste and steep runs from Vorab and Crap Masegn."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 419,
+          "min": 255
+        },
+        "LYS": {
+          "km": 563,
+          "min": 325
+        },
+        "CMF": {
+          "km": 505,
+          "min": 300
+        },
+        "GNB": {
+          "km": 585,
+          "min": 335
+        },
+        "TRN": {
+          "km": 349,
+          "min": 220
+        },
+        "ZRH": {
+          "km": 154,
+          "min": 100
+        },
+        "BSL": {
+          "km": 234,
+          "min": 150
+        },
+        "MXP": {
+          "km": 215,
+          "min": 155
+        },
+        "BGY": {
+          "km": 271,
+          "min": 180
+        },
+        "INN": {
+          "km": 232,
+          "min": 150
+        },
+        "SZG": {
+          "km": 431,
+          "min": 235
+        },
+        "MUC": {
+          "km": 328,
+          "min": 175
+        },
+        "VRN": {
+          "km": 371,
+          "min": 240
+        },
+        "VCE": {
+          "km": 493,
+          "min": 290
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 47,
+        "red": 43,
+        "black": 10
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-st-moritz",
+      "type": "resort",
+      "name": "St. Moritz",
+      "region": "Graubünden",
+      "coords": [
+        9.8355,
+        46.4908
+      ],
+      "altitude": 1822,
+      "topAltitude": 3303,
+      "townSize": "medium",
+      "price": 3,
+      "stayPerPerson": 250,
+      "family": false,
+      "vibes": [
+        "upmarket",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Engadin St. Moritz",
+        "pisteKm": 350,
+        "pass6": 405
+      },
+      "season": {
+        "open": "2026-11-21",
+        "close": "2027-05-02"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "snowAdjust": 150,
+      "snowNote": "High, cold slopes on Corvatsch hold snow well.",
+      "character": "Famous, expensive lake town with a high, sunny valley and fancy shops. Skiing on Corviglia, Corvatsch and Diavolezza.",
+      "transfer": "Train from Zurich Airport via Chur and the Albula line, about 3h20.",
+      "links": [],
+      "park": {
+        "level": "good",
+        "note": "Corvatsch snowpark has jumps and rails for most levels.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "halfpipe"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Piz Nair, Corvatsch glacier runs and Diavolezza off-piste."
+      },
+      "searchName": "St. Moritz",
+      "fromOrigin": {
+        "GVA": {
+          "km": 479,
+          "min": 305
+        },
+        "LYS": {
+          "km": 623,
+          "min": 375
+        },
+        "CMF": {
+          "km": 509,
+          "min": 350
+        },
+        "GNB": {
+          "km": 575,
+          "min": 380
+        },
+        "TRN": {
+          "km": 306,
+          "min": 220
+        },
+        "ZRH": {
+          "km": 214,
+          "min": 150
+        },
+        "BSL": {
+          "km": 295,
+          "min": 195
+        },
+        "MXP": {
+          "km": 188,
+          "min": 160
+        },
+        "BGY": {
+          "km": 154,
+          "min": 150
+        },
+        "INN": {
+          "km": 182,
+          "min": 130
+        },
+        "SZG": {
+          "km": 363,
+          "min": 235
+        },
+        "MUC": {
+          "km": 388,
+          "min": 225
+        },
+        "VRN": {
+          "km": 245,
+          "min": 205
+        },
+        "VCE": {
+          "km": 366,
+          "min": 255
+        }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 37,
+        "red": 47,
+        "black": 16
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-scuol",
+      "type": "resort",
+      "name": "Scuol",
+      "region": "Graubünden",
+      "coords": [
+        10.2993,
+        46.797
+      ],
+      "altitude": 1244,
+      "topAltitude": 2783,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Gondola from the village goes up to a wide beginner area.",
+      "skiArea": {
+        "name": "Scuol Motta Naluns",
+        "pisteKm": 80,
+        "pass6": 350
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4,
+        "crecheFromMonths": 24
+      },
+      "character": "Painted Engadin village with a thermal spa, in the sunny and dry Lower Engadine. Long family runs from Motta Naluns.",
+      "transfer": "Train via Landquart and the Vereina tunnel, about 3h30.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park on Motta Naluns."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some off-piste on the upper slopes. Mostly cruising."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 550,
+          "min": 350
+        },
+        "LYS": {
+          "km": 693,
+          "min": 420
+        },
+        "CMF": {
+          "km": 635,
+          "min": 395
+        },
+        "GNB": {
+          "km": 715,
+          "min": 430
+        },
+        "TRN": {
+          "km": 366,
+          "min": 270
+        },
+        "ZRH": {
+          "km": 276,
+          "min": 185
+        },
+        "BSL": {
+          "km": 365,
+          "min": 245
+        },
+        "MXP": {
+          "km": 248,
+          "min": 210
+        },
+        "BGY": {
+          "km": 215,
+          "min": 200
+        },
+        "INN": {
+          "km": 122,
+          "min": 80
+        },
+        "SZG": {
+          "km": 304,
+          "min": 185
+        },
+        "MUC": {
+          "km": 263,
+          "min": 185
+        },
+        "VRN": {
+          "km": 285,
+          "min": 205
+        },
+        "VCE": {
+          "km": 404,
+          "min": 250
+        }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 41,
+        "red": 49,
+        "black": 8
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            4,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-savognin",
+      "type": "resort",
+      "name": "Savognin",
+      "region": "Graubünden",
+      "coords": [
+        9.5983,
+        46.5965
+      ],
+      "altitude": 1210,
+      "topAltitude": 2713,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 75,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "easyStart": "Short walk to the lifts, with a wide beginner area at the base.",
+      "skiArea": {
+        "name": "Savognin Bivio",
+        "pisteKm": 80,
+        "pass6": 290
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "few",
+        "skiFrom": 3
+      },
+      "character": "Quiet village in the Surses valley with sunny, easy slopes and low prices for Switzerland.",
+      "transfer": "Train to Chur, then PostBus about 1h. About 2h30 in total.",
+      "links": [],
+      "park": {
+        "level": "fair",
+        "note": "A small park with a kids' fun zone."
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steeper runs from Piz Martegnas."
+      },
+      "fromOrigin": {
+        "GVA": {
+          "km": 441,
+          "min": 270
+        },
+        "LYS": {
+          "km": 585,
+          "min": 340
+        },
+        "CMF": {
+          "km": 527,
+          "min": 315
+        },
+        "GNB": {
+          "km": 607,
+          "min": 350
+        },
+        "TRN": {
+          "km": 339,
+          "min": 215
+        },
+        "ZRH": {
+          "km": 176,
+          "min": 115
+        },
+        "BSL": {
+          "km": 256,
+          "min": 165
+        },
+        "MXP": {
+          "km": 205,
+          "min": 145
+        },
+        "BGY": {
+          "km": 261,
+          "min": 175
+        },
+        "INN": {
+          "km": 255,
+          "min": 170
+        },
+        "SZG": {
+          "km": 453,
+          "min": 250
+        },
+        "MUC": {
+          "km": 350,
+          "min": 190
+        },
+        "VRN": {
+          "km": 361,
+          "min": 235
+        },
+        "VCE": {
+          "km": 483,
+          "min": 285
+        }
+      },
+      "runShare": {
+        "green": 5,
+        "blue": 47,
+        "red": 44,
+        "black": 4
+      },
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-chur",
+      "type": "base",
+      "name": "Chur",
+      "region": "Graubünden",
+      "coords": [
+        9.532,
+        46.8499
+      ],
+      "altitude": 593,
+      "townSize": "large",
+      "price": 1,
+      "stayPerPerson": 70,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Oldest town in Switzerland, the canton capital with a car-free old town and the rail hub for all of Graubünden.",
+      "transfer": "Train from Zurich Airport about 1h30.",
+      "links": [
+        {
+          "to": "ch-lenzerheide",
+          "min": 35,
+          "by": [
+            "bus"
+          ],
+          "note": "PostBus every 30 min"
+        },
+        {
+          "to": "ch-arosa",
+          "min": 60,
+          "by": [
+            "train"
+          ],
+          "note": "Arosa railway"
+        },
+        {
+          "to": "ch-flims",
+          "min": 35,
+          "by": [
+            "bus"
+          ],
+          "note": "PostBus"
+        },
+        {
+          "to": "ch-laax",
+          "min": 40,
+          "by": [
+            "bus"
+          ],
+          "note": "PostBus"
+        },
+        {
+          "to": "ch-klosters",
+          "min": 50,
+          "by": [
+            "train"
+          ],
+          "note": "Via Landquart"
+        },
+        {
+          "to": "ch-davos",
+          "min": 85,
+          "by": [
+            "train"
+          ],
+          "note": "Via Landquart"
+        },
+        {
+          "to": "ch-savognin",
+          "min": 75,
+          "by": [
+            "bus",
+            "train"
+          ],
+          "note": "Train to Tiefencastel, then PostBus"
+        }
+      ],
+      "rail": "SBB and Rhaetian Railway",
+      "fromOrigin": {
+        "GVA": {
+          "km": 396,
+          "min": 240
+        },
+        "LYS": {
+          "km": 539,
+          "min": 310
+        },
+        "CMF": {
+          "km": 481,
+          "min": 285
+        },
+        "GNB": {
+          "km": 561,
+          "min": 320
+        },
+        "TRN": {
+          "km": 343,
+          "min": 215
+        },
+        "ZRH": {
+          "km": 130,
+          "min": 85
+        },
+        "BSL": {
+          "km": 211,
+          "min": 130
+        },
+        "MXP": {
+          "km": 209,
+          "min": 145
+        },
+        "BGY": {
+          "km": 265,
+          "min": 175
+        },
+        "INN": {
+          "km": 209,
+          "min": 135
+        },
+        "SZG": {
+          "km": 408,
+          "min": 220
+        },
+        "MUC": {
+          "km": 304,
+          "min": 160
+        },
+        "VRN": {
+          "km": 365,
+          "min": 235
+        },
+        "VCE": {
+          "km": 487,
+          "min": 285
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            3,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-landquart",
+      "type": "base",
+      "name": "Landquart",
+      "region": "Graubünden",
+      "coords": [
+        9.5517,
+        46.9689
+      ],
+      "altitude": 523,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "town"
+      ],
+      "character": "Small railway junction on the Rhine valley road, with a big outlet shopping village.",
+      "transfer": "Train from Zurich Airport about 1h20.",
+      "links": [
+        {
+          "to": "ch-klosters",
+          "min": 30,
+          "by": [
+            "train"
+          ],
+          "note": "Rhaetian Railway"
+        },
+        {
+          "to": "ch-davos",
+          "min": 60,
+          "by": [
+            "train"
+          ],
+          "note": "Rhaetian Railway"
+        },
+        {
+          "to": "ch-lenzerheide",
+          "min": 50,
+          "by": [
+            "car",
+            "bus"
+          ]
+        }
+      ],
+      "rail": "SBB and Rhaetian Railway",
+      "fromOrigin": {
+        "GVA": {
+          "km": 381,
+          "min": 230
+        },
+        "LYS": {
+          "km": 525,
+          "min": 300
+        },
+        "CMF": {
+          "km": 467,
+          "min": 275
+        },
+        "GNB": {
+          "km": 547,
+          "min": 310
+        },
+        "TRN": {
+          "km": 358,
+          "min": 220
+        },
+        "ZRH": {
+          "km": 116,
+          "min": 75
+        },
+        "BSL": {
+          "km": 197,
+          "min": 125
+        },
+        "MXP": {
+          "km": 223,
+          "min": 155
+        },
+        "BGY": {
+          "km": 279,
+          "min": 180
+        },
+        "INN": {
+          "km": 194,
+          "min": 125
+        },
+        "SZG": {
+          "km": 393,
+          "min": 210
+        },
+        "MUC": {
+          "km": 290,
+          "min": 150
+        },
+        "VRN": {
+          "km": 379,
+          "min": 240
+        },
+        "VCE": {
+          "km": 501,
+          "min": 290
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            2,
+            10
+          ],
+          "feb": [
+            2,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-ilanz",
+      "type": "base",
+      "name": "Ilanz",
+      "region": "Graubünden",
+      "coords": [
+        9.2047,
+        46.7742
+      ],
+      "altitude": 698,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Small old town on the Rhine, the capital of the Surselva valley. Cheaper beds close to Flims and Laax.",
+      "transfer": "Train from Zurich Airport about 2h. Change at Chur.",
+      "links": [
+        {
+          "to": "ch-laax",
+          "min": 20,
+          "by": [
+            "bus"
+          ],
+          "note": "PostBus"
+        },
+        {
+          "to": "ch-flims",
+          "min": 25,
+          "by": [
+            "bus"
+          ],
+          "note": "PostBus"
+        }
+      ],
+      "rail": "Rhaetian Railway",
+      "fromOrigin": {
+        "GVA": {
+          "km": 425,
+          "min": 260
+        },
+        "LYS": {
+          "km": 569,
+          "min": 330
+        },
+        "CMF": {
+          "km": 512,
+          "min": 310
+        },
+        "GNB": {
+          "km": 592,
+          "min": 345
+        },
+        "TRN": {
+          "km": 339,
+          "min": 225
+        },
+        "ZRH": {
+          "km": 160,
+          "min": 105
+        },
+        "BSL": {
+          "km": 241,
+          "min": 155
+        },
+        "MXP": {
+          "km": 204,
+          "min": 160
+        },
+        "BGY": {
+          "km": 261,
+          "min": 185
+        },
+        "INN": {
+          "km": 238,
+          "min": 155
+        },
+        "SZG": {
+          "km": 437,
+          "min": 245
+        },
+        "MUC": {
+          "km": 334,
+          "min": 185
+        },
+        "VRN": {
+          "km": 360,
+          "min": 245
+        },
+        "VCE": {
+          "km": 482,
+          "min": 295
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            1,
+            10
+          ],
+          "jan": [
+            3,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-samedan",
+      "type": "base",
+      "name": "Samedan",
+      "region": "Graubünden",
+      "coords": [
+        9.8733,
+        46.5337
+      ],
+      "altitude": 1721,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 110,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "quiet"
+      ],
+      "character": "Old Engadin village and the valley's rail junction. A short train ride to St. Moritz at lower prices.",
+      "transfer": "Train from Zurich Airport via Chur and the Albula line, about 3h10.",
+      "links": [
+        {
+          "to": "ch-st-moritz",
+          "min": 15,
+          "by": [
+            "train",
+            "bus"
+          ],
+          "note": "Rhaetian Railway, every 30 min"
+        },
+        {
+          "to": "ch-scuol",
+          "min": 75,
+          "by": [
+            "train"
+          ],
+          "note": "Rhaetian Railway via Zernez"
+        }
+      ],
+      "rail": "Rhaetian Railway",
+      "fromOrigin": {
+        "GVA": {
+          "km": 492,
+          "min": 360
+        },
+        "LYS": {
+          "km": 594,
+          "min": 395
+        },
+        "CMF": {
+          "km": 516,
+          "min": 355
+        },
+        "GNB": {
+          "km": 582,
+          "min": 390
+        },
+        "TRN": {
+          "km": 313,
+          "min": 225
+        },
+        "ZRH": {
+          "km": 330,
+          "min": 230
+        },
+        "BSL": {
+          "km": 419,
+          "min": 290
+        },
+        "MXP": {
+          "km": 195,
+          "min": 165
+        },
+        "BGY": {
+          "km": 161,
+          "min": 155
+        },
+        "INN": {
+          "km": 177,
+          "min": 125
+        },
+        "SZG": {
+          "km": 358,
+          "min": 230
+        },
+        "MUC": {
+          "km": 323,
+          "min": 235
+        },
+        "VRN": {
+          "km": 243,
+          "min": 205
+        },
+        "VCE": {
+          "km": 365,
+          "min": 255
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            2,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-kublis",
+      "type": "base",
+      "name": "Küblis",
+      "region": "Graubünden",
+      "coords": [
+        9.7767,
+        46.91
+      ],
+      "altitude": 815,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 70,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "character": "Small village in the Prättigau, halfway up the Landquart valley. Quiet and cheap, on the train line to Klosters and Davos.",
+      "transfer": "Train from Zurich Airport about 1h50. Change at Landquart.",
+      "links": [
+        {
+          "to": "ch-klosters",
+          "min": 15,
+          "by": [
+            "train"
+          ],
+          "note": "Rhaetian Railway"
+        },
+        {
+          "to": "ch-davos",
+          "min": 35,
+          "by": [
+            "train"
+          ],
+          "note": "Rhaetian Railway"
+        }
+      ],
+      "rail": "Rhaetian Railway",
+      "fromOrigin": {
+        "GVA": {
+          "km": 404,
+          "min": 255
+        },
+        "LYS": {
+          "km": 548,
+          "min": 325
+        },
+        "CMF": {
+          "km": 490,
+          "min": 300
+        },
+        "GNB": {
+          "km": 570,
+          "min": 335
+        },
+        "TRN": {
+          "km": 380,
+          "min": 245
+        },
+        "ZRH": {
+          "km": 139,
+          "min": 100
+        },
+        "BSL": {
+          "km": 220,
+          "min": 150
+        },
+        "MXP": {
+          "km": 246,
+          "min": 180
+        },
+        "BGY": {
+          "km": 302,
+          "min": 205
+        },
+        "INN": {
+          "km": 247,
+          "min": 175
+        },
+        "SZG": {
+          "km": 416,
+          "min": 240
+        },
+        "MUC": {
+          "km": 313,
+          "min": 180
+        },
+        "VRN": {
+          "km": 403,
+          "min": 270
+        },
+        "VCE": {
+          "km": 525,
+          "min": 320
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "ch-thusis",
+      "type": "base",
+      "name": "Thusis",
+      "region": "Graubünden",
+      "coords": [
+        9.4403,
+        46.6965
+      ],
+      "altitude": 720,
+      "townSize": "small",
+      "price": 1,
+      "stayPerPerson": 70,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Gateway to the Viamala gorge and the Albula line. Small, calm and cheap, with buses into the Surses and Lenzerheide.",
+      "transfer": "Train from Zurich Airport about 2h. Change at Chur.",
+      "links": [
+        {
+          "to": "ch-savognin",
+          "min": 50,
+          "by": [
+            "train",
+            "bus"
+          ],
+          "note": "Train to Tiefencastel, then PostBus"
+        },
+        {
+          "to": "ch-lenzerheide",
+          "min": 50,
+          "by": [
+            "bus"
+          ],
+          "note": "PostBus via Tiefencastel"
+        },
+        {
+          "to": "ch-flims",
+          "min": 40,
+          "by": [
+            "car"
+          ]
+        }
+      ],
+      "rail": "Rhaetian Railway",
+      "fromOrigin": {
+        "GVA": {
+          "km": 421,
+          "min": 255
+        },
+        "LYS": {
+          "km": 564,
+          "min": 325
+        },
+        "CMF": {
+          "km": 506,
+          "min": 300
+        },
+        "GNB": {
+          "km": 586,
+          "min": 335
+        },
+        "TRN": {
+          "km": 319,
+          "min": 195
+        },
+        "ZRH": {
+          "km": 155,
+          "min": 100
+        },
+        "BSL": {
+          "km": 236,
+          "min": 145
+        },
+        "MXP": {
+          "km": 185,
+          "min": 130
+        },
+        "BGY": {
+          "km": 241,
+          "min": 155
+        },
+        "INN": {
+          "km": 234,
+          "min": 150
+        },
+        "SZG": {
+          "km": 433,
+          "min": 235
+        },
+        "MUC": {
+          "km": 329,
+          "min": 175
+        },
+        "VRN": {
+          "km": 341,
+          "min": 215
+        },
+        "VCE": {
+          "km": 463,
+          "min": 265
+        }
+      },
+      "snowYears": {
+        "town": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            0,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
         }
       }
     }

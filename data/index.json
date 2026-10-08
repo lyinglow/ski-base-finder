@@ -96,6 +96,22 @@
         11.7861,
         48.3538
       ]
+    },
+    {
+      "id": "VRN",
+      "name": "Verona Airport",
+      "coords": [
+        10.8885,
+        45.3957
+      ]
+    },
+    {
+      "id": "VCE",
+      "name": "Venice Marco Polo",
+      "coords": [
+        12.3519,
+        45.5053
+      ]
     }
   ],
   "defaultOrigin": "GVA",

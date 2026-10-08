@@ -4,7 +4,7 @@ A 3D map that helps you choose where to stay for a ski trip from Geneva.
 
 It shows ski resorts and the cheaper, lower towns around them on the same map. Click a resort and it shows you where else you could stay, how long the daily hop is, and how much you save. Click a town and it shows which resorts you can reach from it.
 
-France, Switzerland, Italy and Austria are live: 132 ski areas and 56 feeder towns, from the Hautes-Alpes to the Arlberg and Schladming, big names and small local hills alike. The Dolomites are next (see `docs/EXPANSION.md`).
+France, Switzerland, Italy and Austria are live: 154 ski areas and 73 feeder towns, from the Hautes-Alpes to the Arlberg, Graubünden and the Dolomites, big names and small local hills alike. Winter and summer (mountain biking) both work.
 
 ## Run it
 
@@ -24,7 +24,7 @@ The live site (https://ski-base-finder.vercel.app) deploys itself from GitHub: e
 - **See the land.** Satellite or topo map draped over real elevation. Drag to pan, right-drag or two-finger drag to tilt and rotate.
 - **Tell the two kinds of place apart.** Blue triangles are resorts. Amber circles are feeder towns.
 - **Start with a country.** The first screen asks where you are skiing. Picking a country starts from its main airport (Geneva for France and Switzerland, Turin for Italy, Innsbruck for Austria), and you can change the airport any time. Clear map goes back to this screen, with no airport picked and every place on show.
-- **Pick your airport.** Geneva, Lyon, Chambéry, Grenoble, Turin, Zurich, Basel, Milan Malpensa, Bergamo, Innsbruck, Salzburg or Munich. Picking a country in Where to? switches to its main airport, and you can still change it. Every drive time, filter and trip cost follows. Times are winter routes from a route planner, avoiding passes that close in winter (Iseran, Galibier, Petit-Saint-Bernard, Mont-Cenis, Furka, Grimsel, Stelvio, Timmelsjoch, Grossglockner and others). Car-free resorts such as Zermatt and Wengen include the last train or lift.
+- **Pick your airport.** Geneva, Lyon, Chambéry, Grenoble, Turin, Zurich, Basel, Milan Malpensa, Bergamo, Innsbruck, Salzburg, Munich, Verona or Venice. Picking a country in Where to? switches to its main airport, and you can still change it. Every drive time, filter and trip cost follows. Times are winter routes from a route planner, avoiding passes that close in winter (Iseran, Galibier, Petit-Saint-Bernard, Mont-Cenis, Furka, Grimsel, Stelvio, Timmelsjoch, Grossglockner and others). Car-free resorts such as Zermatt and Wengen include the last train or lift.
 - **Filter** by time from the airport (up to 5 hours), the daily hop from a feeder town to the slopes, price to stay, ski area size, family-friendly, and whether it works without a car.
 - **Click a resort** to see "Stay lower, ski here": every cheaper place with quick access, how many minutes away, by car, bus, train or lift, how many price bands cheaper, and how many metres lower.
 - **Click a feeder town** to see every resort within reach, nearest first.

@@ -69,12 +69,6 @@
         "level": "awesome",
         "note": "Steep runs, huge off-piste and ski routes across the Arlberg."
       },
-      "runShare": {
-        "green": 0,
-        "blue": 46,
-        "red": 38,
-        "black": 16
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -169,7 +163,21 @@
         "MUC": {
           "km": 233,
           "min": 160
+        },
+        "VRN": {
+          "km": 365,
+          "min": 225
+        },
+        "VCE": {
+          "km": 400,
+          "min": 270
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 46,
+        "red": 38,
+        "black": 16
       }
     },
     {
@@ -239,12 +247,6 @@
       "expert": {
         "level": "good",
         "note": "Big off-piste and ski routes across the Arlberg."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 46,
-        "red": 38,
-        "black": 16
       },
       "snowYears": {
         "slopes": {
@@ -340,7 +342,21 @@
         "MUC": {
           "km": 244,
           "min": 165
+        },
+        "VRN": {
+          "km": 385,
+          "min": 245
+        },
+        "VCE": {
+          "km": 420,
+          "min": 290
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 46,
+        "red": 38,
+        "black": 16
       }
     },
     {
@@ -399,12 +415,6 @@
       "expert": {
         "level": "good",
         "note": "High, open off-piste on the Swiss border."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 28,
-        "red": 54,
-        "black": 17
       },
       "snowYears": {
         "slopes": {
@@ -500,7 +510,21 @@
         "MUC": {
           "km": 244,
           "min": 195
+        },
+        "VRN": {
+          "km": 376,
+          "min": 260
+        },
+        "VCE": {
+          "km": 411,
+          "min": 305
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 28,
+        "red": 54,
+        "black": 17
       }
     },
     {
@@ -559,12 +583,6 @@
       "expert": {
         "level": "good",
         "note": "Glacier off-piste and long, steep runs."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 54,
-        "red": 32,
-        "black": 14
       },
       "snowYears": {
         "slopes": {
@@ -660,7 +678,21 @@
         "MUC": {
           "km": 238,
           "min": 160
+        },
+        "VRN": {
+          "km": 359,
+          "min": 235
+        },
+        "VCE": {
+          "km": 394,
+          "min": 280
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 54,
+        "red": 32,
+        "black": 14
       }
     },
     {
@@ -713,12 +745,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste on the high slopes."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 59,
-        "red": 27,
-        "black": 14
       },
       "snowYears": {
         "slopes": {
@@ -814,7 +840,21 @@
         "MUC": {
           "km": 252,
           "min": 175
+        },
+        "VRN": {
+          "km": 372,
+          "min": 245
+        },
+        "VCE": {
+          "km": 408,
+          "min": 290
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 59,
+        "red": 27,
+        "black": 14
       }
     },
     {
@@ -873,12 +913,6 @@
       "expert": {
         "level": "good",
         "note": "The steep Harakiri and some off-piste."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 45,
-        "red": 41,
-        "black": 13
       },
       "snowYears": {
         "slopes": {
@@ -974,7 +1008,21 @@
         "MUC": {
           "km": 197,
           "min": 115
+        },
+        "VRN": {
+          "km": 336,
+          "min": 215
+        },
+        "VCE": {
+          "km": 371,
+          "min": 260
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 45,
+        "red": 41,
+        "black": 13
       }
     },
     {
@@ -1026,12 +1074,6 @@
       "expert": {
         "level": "good",
         "note": "The Streif downhill and some off-piste."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 50,
-        "red": 33,
-        "black": 16
       },
       "snowYears": {
         "slopes": {
@@ -1127,7 +1169,21 @@
         "MUC": {
           "km": 166,
           "min": 100
+        },
+        "VRN": {
+          "km": 360,
+          "min": 235
+        },
+        "VCE": {
+          "km": 307,
+          "min": 225
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 50,
+        "red": 33,
+        "black": 16
       }
     },
     {
@@ -1184,12 +1240,6 @@
       "expert": {
         "level": "fair",
         "note": "Some steeper runs and off-piste."
-      },
-      "runShare": {
-        "green": 1,
-        "blue": 65,
-        "red": 31,
-        "black": 3
       },
       "snowYears": {
         "slopes": {
@@ -1285,7 +1335,21 @@
         "MUC": {
           "km": 218,
           "min": 145
+        },
+        "VRN": {
+          "km": 385,
+          "min": 275
+        },
+        "VCE": {
+          "km": 323,
+          "min": 240
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 65,
+        "red": 31,
+        "black": 3
       }
     },
     {
@@ -1344,12 +1408,6 @@
       "expert": {
         "level": "fair",
         "note": "Glacier off-piste on the Kitzsteinhorn."
-      },
-      "runShare": {
-        "green": 2,
-        "blue": 46,
-        "red": 33,
-        "black": 19
       },
       "snowYears": {
         "slopes": {
@@ -1445,7 +1503,21 @@
         "MUC": {
           "km": 208,
           "min": 135
+        },
+        "VRN": {
+          "km": 366,
+          "min": 260
+        },
+        "VCE": {
+          "km": 305,
+          "min": 220
         }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 46,
+        "red": 33,
+        "black": 19
       }
     },
     {
@@ -1495,12 +1567,6 @@
       "expert": {
         "level": "good",
         "note": "Good off-piste, especially at Sportgastein."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 44,
-        "red": 46,
-        "black": 10
       },
       "snowYears": {
         "slopes": {
@@ -1596,7 +1662,21 @@
         "MUC": {
           "km": 265,
           "min": 150
+        },
+        "VRN": {
+          "km": 409,
+          "min": 290
+        },
+        "VCE": {
+          "km": 415,
+          "min": 240
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 44,
+        "red": 46,
+        "black": 10
       }
     },
     {
@@ -1655,12 +1735,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste and steeper runs."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 56,
-        "red": 38,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -1756,7 +1830,21 @@
         "MUC": {
           "km": 262,
           "min": 140
+        },
+        "VRN": {
+          "km": 481,
+          "min": 270
+        },
+        "VCE": {
+          "km": 349,
+          "min": 195
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 56,
+        "red": 38,
+        "black": 6
       }
     },
     {
@@ -1806,12 +1894,6 @@
       "expert": {
         "level": "fair",
         "note": "Steep World Cup runs and some off-piste."
-      },
-      "runShare": {
-        "green": 2,
-        "blue": 54,
-        "red": 35,
-        "black": 9
       },
       "snowYears": {
         "slopes": {
@@ -1907,7 +1989,21 @@
         "MUC": {
           "km": 259,
           "min": 140
+        },
+        "VRN": {
+          "km": 518,
+          "min": 290
+        },
+        "VCE": {
+          "km": 387,
+          "min": 215
         }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 54,
+        "red": 35,
+        "black": 9
       }
     },
     {
@@ -1967,12 +2063,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste and long runs."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 24,
-        "red": 61,
-        "black": 15
       },
       "snowYears": {
         "slopes": {
@@ -2068,7 +2158,21 @@
         "MUC": {
           "km": 230,
           "min": 160
+        },
+        "VRN": {
+          "km": 296,
+          "min": 210
+        },
+        "VCE": {
+          "km": 415,
+          "min": 260
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 24,
+        "red": 61,
+        "black": 15
       }
     },
     {
@@ -2118,12 +2222,6 @@
       "expert": {
         "level": "fair",
         "note": "Mostly cruising."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 50,
-        "red": 46,
-        "black": 4
       },
       "snowYears": {
         "slopes": {
@@ -2219,7 +2317,21 @@
         "MUC": {
           "km": 151,
           "min": 85
+        },
+        "VRN": {
+          "km": 349,
+          "min": 220
+        },
+        "VCE": {
+          "km": 320,
+          "min": 240
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 50,
+        "red": 46,
+        "black": 4
       }
     },
     {
@@ -2268,12 +2380,6 @@
       "expert": {
         "level": "fair",
         "note": "Some off-piste and steeper runs."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 27,
-        "red": 67,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -2369,7 +2475,21 @@
         "MUC": {
           "km": 169,
           "min": 95
+        },
+        "VRN": {
+          "km": 319,
+          "min": 205
+        },
+        "VCE": {
+          "km": 354,
+          "min": 250
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 27,
+        "red": 67,
+        "black": 6
       }
     },
     {
@@ -2426,12 +2546,6 @@
       "expert": {
         "level": "good",
         "note": "High glacier skiing and off-piste."
-      },
-      "runShare": {
-        "green": 0,
-        "blue": 39,
-        "red": 55,
-        "black": 6
       },
       "snowYears": {
         "slopes": {
@@ -2527,7 +2641,21 @@
         "MUC": {
           "km": 217,
           "min": 135
+        },
+        "VRN": {
+          "km": 355,
+          "min": 235
+        },
+        "VCE": {
+          "km": 391,
+          "min": 280
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 39,
+        "red": 55,
+        "black": 6
       }
     },
     {
@@ -2648,6 +2776,14 @@
         "MUC": {
           "km": 210,
           "min": 145
+        },
+        "VRN": {
+          "km": 342,
+          "min": 210
+        },
+        "VCE": {
+          "km": 377,
+          "min": 255
         }
       }
     },
@@ -2761,6 +2897,14 @@
         "MUC": {
           "km": 192,
           "min": 130
+        },
+        "VRN": {
+          "km": 326,
+          "min": 200
+        },
+        "VCE": {
+          "km": 361,
+          "min": 245
         }
       }
     },
@@ -2889,6 +3033,14 @@
         "MUC": {
           "km": 203,
           "min": 115
+        },
+        "VRN": {
+          "km": 272,
+          "min": 170
+        },
+        "VCE": {
+          "km": 307,
+          "min": 215
         }
       }
     },
@@ -3003,6 +3155,14 @@
         "MUC": {
           "km": 189,
           "min": 110
+        },
+        "VRN": {
+          "km": 328,
+          "min": 205
+        },
+        "VCE": {
+          "km": 363,
+          "min": 255
         }
       }
     },
@@ -3110,6 +3270,14 @@
         "MUC": {
           "km": 169,
           "min": 100
+        },
+        "VRN": {
+          "km": 353,
+          "min": 225
+        },
+        "VCE": {
+          "km": 314,
+          "min": 235
         }
       }
     },
@@ -3222,6 +3390,14 @@
         "MUC": {
           "km": 214,
           "min": 140
+        },
+        "VRN": {
+          "km": 367,
+          "min": 260
+        },
+        "VCE": {
+          "km": 305,
+          "min": 220
         }
       }
     },
@@ -3341,6 +3517,14 @@
         "MUC": {
           "km": 221,
           "min": 115
+        },
+        "VRN": {
+          "km": 516,
+          "min": 290
+        },
+        "VCE": {
+          "km": 384,
+          "min": 215
         }
       }
     }
