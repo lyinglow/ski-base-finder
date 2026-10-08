@@ -50,7 +50,7 @@ const state = {
   tripOpen: false,
   saved: new Set(), // this season's shortlist; the other season's waits in otherSaved
   otherSaved: new Set(),
-  compare: [],
+  get compare() { return [...this.saved]; }, // the comparison is always the shortlist
 };
 
 let model, map;
@@ -311,7 +311,7 @@ function clearMap() {
     show: "all", maxTime: 300, maxHop: 60, months: new Set(["jan", "feb", "mar"]),
     prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(), countries: new Set(),
     family: false, carFree: false, snowSure: false, park: "any", parkNeeds: new Set(), levels: ["intermediate"],
-    snowLayer: false, snowMonth: null, sort: "fit", compare: [], origin: null,
+    snowLayer: false, snowMonth: null, sort: "fit", origin: null,
     bike: "any", bikeNeeds: new Set(), bikeMonths: new Set(["jul", "aug"]),
   });
   state.trip.week = null; // a week pick overrides the months, so it goes too
@@ -819,7 +819,7 @@ function placeRow({ place, link }, context, opts = {}) {
     : place.type === "resort"
       ? `${place.skiArea.pisteKm} km of pistes ${levelDots(place.levels)}`
       : `${typeLabel(place)} · ${place.altitude} m`;
-  const inCompare = state.compare.includes(place.id);
+  const inList = state.saved.has(place.id);
   return `<li class="link-row">
     <button type="button" class="lr-main" data-select="${place.id}">
       <i class="dot ${place.type}"></i>
@@ -827,7 +827,7 @@ function placeRow({ place, link }, context, opts = {}) {
       <span class="lr-sub">${sub}</span>${gain}${cost}</span>
     </button>
     <span class="lr-hop"><strong>${mins(link.min)}</strong><span>${esc(accessText(link))}</span></span>
-    <button type="button" class="add" data-compare="${place.id}" aria-pressed="${inCompare}" title="Add to compare">${inCompare ? "Added" : "Compare"}</button>
+    <button type="button" class="add save-btn" data-save="${place.id}" aria-pressed="${inList}" title="Add to your shortlist, which is what Compare shows">${inList ? "Saved" : "Save"}</button>
   </li>`;
 }
 
@@ -1082,7 +1082,7 @@ function bikeBody(l) {
         ${cheaper.length
           ? `<p class="hint">${cheaper.length} cheaper place${cheaper.length === 1 ? "" : "s"} to stay with quick access to ${esc(l.name)}.</p>
              <ul class="link-list">${cheaper.map((c) => placeRow(c, l, { vsResort: l })).join("")}</ul>
-             <button type="button" class="primary wide" data-pair="${l.id}">Compare ${esc(l.name)} with these</button>`
+             <button type="button" class="primary wide" data-pair="${l.id}">Save ${esc(l.name)} and these, then compare</button>`
           : `<p class="hint">No cheaper base within easy reach. Staying in the resort is the simple choice here.</p>`}
       </section>`;
     const linked = reachable(l, model.byId).filter((c) => inSeason(c.place, "summer", model.byId));
@@ -1104,7 +1104,7 @@ function bikeBody(l) {
       <h3>Bike parks within reach</h3>
       <p class="hint">${r.length} place${r.length === 1 ? "" : "s"}, nearest in ${mins(r[0].link.min)}.${savings.length ? ` Cheaper than staying in ${savings.length} of them.` : ""}</p>
       <ul class="link-list">${r.map((c) => placeRow(c, null, { fromBase: l })).join("")}</ul>
-      <button type="button" class="primary wide" data-pair="${l.id}">Compare with nearest bike parks</button>
+      <button type="button" class="primary wide" data-pair="${l.id}">Save these and compare</button>
     </section>`;
 }
 
@@ -1167,7 +1167,7 @@ function renderDetail(l) {
         ${cheaper.length
           ? `<p class="hint">${cheaper.length} cheaper place${cheaper.length === 1 ? "" : "s"} to stay with quick access to ${esc(l.name)}.</p>
              <ul class="link-list">${cheaper.map((c) => placeRow(c, l, { vsResort: l })).join("")}</ul>
-             <button type="button" class="primary wide" data-pair="${l.id}">Compare ${esc(l.name)} with these</button>`
+             <button type="button" class="primary wide" data-pair="${l.id}">Save ${esc(l.name)} and these, then compare</button>`
           : `<p class="hint">No cheaper base within easy reach. Staying in the resort is the simple choice here.</p>`}
       </section>`;
     const linked = reachable(l, model.byId);
@@ -1192,15 +1192,13 @@ function renderDetail(l) {
         <h3>Resorts within reach</h3>
         <p class="hint">${r.length} resort${r.length === 1 ? "" : "s"}, nearest in ${mins(r[0].link.min)}.${savings.length ? ` Cheaper than staying in ${savings.length} of them.` : ""}</p>
         <ul class="link-list">${r.map((c) => placeRow(c, null, { fromBase: l })).join("")}</ul>
-        <button type="button" class="primary wide" data-pair="${l.id}">Compare with nearest resorts</button>
+        <button type="button" class="primary wide" data-pair="${l.id}">Save these and compare</button>
       </section>`;
   }
 
-  const inCompare = state.compare.includes(l.id);
   const isSaved = state.saved.has(l.id);
   const foot = `<footer class="d-foot">
       <button type="button" class="secondary save-btn" data-save="${l.id}" aria-pressed="${isSaved}">${isSaved ? "Saved" : "Save"}</button>
-      <button type="button" class="secondary" data-compare="${l.id}" aria-pressed="${inCompare}">${inCompare ? "In compare" : "Add to compare"}</button>
     </footer>`;
 
   const d = $("#detail");
@@ -1216,24 +1214,19 @@ function renderDetail(l) {
 
 let removedFromCompare = null;
 
+// The comparison is the shortlist, so adding or taking out a place here changes the shortlist.
 function toggleCompare(id, force) {
-  const has = state.compare.includes(id);
+  const has = state.saved.has(id);
   const want = force ?? !has;
-  if (want && !has) {
-    if (state.compare.length >= MAX_COMPARE) state.compare.shift();
-    state.compare.push(id);
-  } else if (!want && has) {
-    // Taking a place out of an open comparison can be undone; the shortlist is never touched.
-    if (!$("#compare").hidden) {
-      removedFromCompare = { id, at: state.compare.indexOf(id) };
-      $("#compare-undo-text").textContent = `Removed ${model.byId.get(id).name}.`;
-      $("#compare-undo").hidden = false;
-    }
-    state.compare = state.compare.filter((x) => x !== id);
+  if (!want && has && !$("#compare").hidden) {
+    // Taking a place out of an open comparison can be undone.
+    removedFromCompare = { id };
+    $("#compare-undo-text").textContent = `Removed ${model.byId.get(id).name} from your shortlist.`;
+    $("#compare-undo").hidden = false;
   }
-  renderCompareBar();
+  want ? state.saved.add(id) : state.saved.delete(id);
+  shortlistChanged();
   if (state.selected) renderDetail(model.byId.get(state.selected));
-  if (!$("#compare").hidden) renderCompareTable();
 }
 
 function pairUp(id) {
@@ -1242,8 +1235,9 @@ function pairUp(id) {
     ? cheaperStays(l, model.byId).map((x) => x.place.id)
     : (summer() ? bikeLinks(l, model.byId) : reachable(l, model.byId)).map((x) => x.place.id))
     .filter((x) => inSeason(model.byId.get(x), state.season, model.byId));
-  state.compare = [id, ...others].slice(0, MAX_COMPARE);
-  renderCompareBar();
+  // Saves this place and its alternatives to the shortlist, then compares the shortlist.
+  for (const x of [id, ...others]) state.saved.add(x);
+  shortlistChanged();
   openCompare();
 }
 
@@ -1252,9 +1246,9 @@ function renderCompareBar() {
   bar.hidden = state.compare.length === 0;
   $("#compare-chips").innerHTML = state.compare.map((id) => {
     const l = model.byId.get(id);
-    return `<span class="chip ${l.type}"><i class="dot ${l.type}"></i>${esc(l.name)}<button type="button" data-compare="${id}" aria-label="Remove ${esc(l.name)}">×</button></span>`;
+    return `<span class="chip ${l.type}"><i class="dot ${l.type}"></i>${esc(l.name)}<button type="button" data-compare="${id}" aria-label="Take ${esc(l.name)} off your shortlist">×</button></span>`;
   }).join("");
-  $("#compare-open").textContent = state.compare.length > 1 ? `Compare all ${state.compare.length}` : "Compare";
+  $("#compare-open").textContent = state.compare.length > 1 ? `Compare shortlist (${state.compare.length})` : "Compare";
   $("#compare-open").disabled = state.compare.length < 2;
 }
 
@@ -1427,7 +1421,7 @@ function renderCompareTable() {
   const headRow = `<tr><th scope="col"></th>${cols.map((l) => `<th scope="col" class="${l.type}">
       <span class="eyebrow"><i class="dot ${l.type}"></i>${typeLabel(l)}</span>
       <button type="button" class="col-name" data-select="${l.id}">${esc(l.name)}</button>
-      <button type="button" class="col-x" data-compare="${l.id}" aria-label="Remove ${esc(l.name)} from this comparison" title="Take out of this comparison. Your shortlist stays as it is."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Remove</button>
+      <button type="button" class="col-x" data-compare="${l.id}" aria-label="Take ${esc(l.name)} off your shortlist" title="Take off your shortlist. You can undo it."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Remove</button>
     </th>`).join("")}</tr>`;
 
   const body = rows.map((r) => {
@@ -1499,7 +1493,6 @@ function setSeason(next) {
   [state.trip.lessons, state.otherLessons] = [state.otherLessons, state.trip.lessons]; // and its own lessons
   state.season = next;
   [state.saved, state.otherSaved] = [state.otherSaved, state.saved]; // each season has its own shortlist
-  state.compare = state.compare.filter((id) => inSeason(model.byId.get(id), next, model.byId));
   applySeasonUI();
   renderCompareBar();
   shortlistChanged();
@@ -1535,8 +1528,6 @@ function bindControls() {
   $("#show-saved").addEventListener("click", () => setShow(state.show === "saved" ? "all" : "saved"));
 
   $("#saved-compare").addEventListener("click", () => {
-    state.compare = [...state.saved].filter((id) => inSeason(model.byId.get(id), state.season, model.byId)).slice(0, MAX_COMPARE);
-    renderCompareBar();
     openCompare();
   });
   $("#saved-share").addEventListener("click", shareShortlist);
@@ -1785,12 +1776,11 @@ function bindControls() {
   $("#compare-open").addEventListener("click", openCompare);
   $("#compare-undo-btn").addEventListener("click", () => {
     if (!removedFromCompare) return;
-    const { id, at } = removedFromCompare;
+    const { id } = removedFromCompare;
     removedFromCompare = null;
     $("#compare-undo").hidden = true;
-    if (!state.compare.includes(id)) state.compare.splice(Math.min(at, state.compare.length), 0, id);
-    renderCompareBar();
-    renderCompareTable();
+    state.saved.add(id);
+    shortlistChanged();
     $("#compare").hidden = false;
   });
   $("#compare-close").addEventListener("click", () => { $("#compare").hidden = true; });
@@ -1932,6 +1922,8 @@ function shortlistChanged(persist = true) {
     b.setAttribute("aria-pressed", on);
     if (b.classList.contains("save-btn")) b.textContent = on ? "Saved" : "Save";
   }
+  renderCompareBar();
+  if (!$("#compare").hidden) renderCompareTable();
   applyFilters();
 }
 
