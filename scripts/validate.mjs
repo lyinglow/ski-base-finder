@@ -91,10 +91,55 @@ for (const l of all.values()) {
   }
 }
 
+// Summer riding: data/bike.json holds each resort's bike rating plus the valley towns with no ski area.
+const bike = existsSync(new URL("bike.json", dir)) ? read("bike.json") : null;
+if (bike) {
+  const levels = Object.keys(index.bike.levels);
+  const styles = Object.keys(index.bike.styles);
+  const date = /^\d{4}-\d{2}-\d{2}$/;
+  const check = (id, b) => {
+    const at = `bike.json ${id}`;
+    const need = (cond, msg) => cond || errors.push(`${at}: ${msg}`);
+    need(levels.includes(b.level), `level must be one of ${levels.join(", ")}`);
+    if (b.level === "none") return;
+    need(Array.isArray(b.suits) && b.suits.length > 0 && b.suits.every((v) => LEVELS.includes(v)), "suits invalid");
+    need(Array.isArray(b.styles) && b.styles.length > 0 && b.styles.every((v) => styles.includes(v)), `styles must use ${styles.join(", ")}`);
+    need(Number.isFinite(b.pass) && b.pass >= 0 && b.pass <= 100, "pass must be a day price in euros, 0 for none");
+    need(date.test(b.season?.open) && date.test(b.season?.close) && b.season.open < b.season.close, "season needs open and close dates");
+    need(typeof b.note === "string" && b.note.length > 0 && !/—/.test(b.note), "note needed, with no long dashes");
+  };
+  for (const [id, b] of Object.entries(bike.places)) {
+    if (!all.has(id)) errors.push(`bike.json ${id}: unknown place`);
+    else check(id, b);
+  }
+  for (const [id, l] of all) {
+    if (l.type === "resort" && !bike.places[id]) errors.push(`bike.json: resort ${id} has no bike entry (use level "none")`);
+  }
+  for (const t of bike.towns) {
+    const at = `bike.json town ${t.id}`;
+    const need = (cond, msg) => cond || errors.push(`${at}: ${msg}`);
+    need(!all.has(t.id), "duplicate id");
+    need(t.summerOnly === true && t.type === "base" && t.bike && t.bike.level !== "none", "summer town needs summerOnly, type base and bike data");
+    need(Array.isArray(t.coords) && t.coords.length === 2, "coords missing");
+    need([1, 2, 3].includes(t.price) && t.vibes?.every((v) => v in index.vibes) && t.character, "price, vibes and character needed");
+    need(Object.keys(t.fromOrigin || {}).length > 0 && Object.keys(t.fromOrigin).every((k) => origins.has(k)), "fromOrigin needs known airports");
+    need(index.countries.some((c) => c.code === t.country && c.status === "live"), "country must be live");
+    if (t.bike) check(t.id, t.bike);
+    all.set(t.id, t);
+  }
+  for (const [id, b] of Object.entries(bike.places)) {
+    const l = all.get(id);
+    if (l?.type === "base") {
+      if (b.level === "none") errors.push(`bike.json ${id}: a feeder town with its own riding needs a real level`);
+    }
+  }
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   console.error(`\n${errors.length} problem(s) found.`);
   process.exit(1);
 }
 const counts = [...all.values()].reduce((a, l) => ((a[l.type] = (a[l.type] || 0) + 1), a), {});
-console.log(`OK: ${counts.resort} resorts, ${counts.base} bases.`);
+const towns = bike ? bike.towns.length : 0;
+console.log(`OK: ${counts.resort} resorts, ${counts.base} bases${towns ? ` (${towns} summer valley towns)` : ""}.`);

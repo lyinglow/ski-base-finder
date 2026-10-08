@@ -5,11 +5,17 @@
 // A feeder town takes its best resort, minus the daily trip, and first-timers lose the
 // walk-to-the-slopes points, because beginners there always travel first.
 
-import { reachable } from "./data.js";
+import { reachable, ridesHere, bikeLinks } from "./data.js";
 
 export const LEVELS = {
   first: "first-timers",
   intermediate: "intermediates",
+  expert: "experts",
+};
+
+export const BIKE_LEVELS = {
+  first: "beginners",
+  intermediate: "intermediate riders",
   expert: "experts",
 };
 
@@ -138,6 +144,91 @@ export function fitScore(place, ctx) {
     const how = carOnly ? "by car" : link.by.includes("lift") ? "by lift" : "by bus";
     const extra = [part(hop, 0, hop === 0, `Stay here, ski ${r.name}: ${link.min} min ${how}`), transferPart(place, ctx)];
     const s = scoreResort(r, ctx, extra, true);
+    if (!best || s.score > best.score) best = { ...s, resort: r };
+  }
+  return best;
+}
+
+/* ---------- summer: mountain biking ---------- */
+
+const BIKE_POINTS = { awesome: 25, good: 18, fair: 8, none: 0 };
+const BIKE_WORD = { awesome: "Awesome", good: "Good", fair: "Fair", none: "No" };
+
+// What matters to everyone riding.
+function bikeShared(r, ctx) {
+  const b = r.bike;
+  const parts = [];
+  const park = b.styles.includes("flow") || b.styles.includes("downhill");
+  parts.push(part(BIKE_POINTS[b.level], 25, b.level === "awesome" || b.level === "good",
+    `${park ? "Bike park" : "Trail riding"} rated ${BIKE_WORD[b.level]}`));
+  const kids = ctx.childAges;
+  if (kids.length) {
+    parts.push(part(r.family ? 10 : 0, 10, r.family, r.family ? "Family-friendly place" : "Better for adults"));
+    const ok = b.styles.includes("kids") || kids.every((a) => a >= 10);
+    const ages = kids.join(" and ");
+    parts.push(part(ok ? 10 : 0, 10, ok, ok ? `Suits children aged ${ages}` : `For ages ${ages}: few trails and coaching for children`));
+  }
+  if (ctx.dates) {
+    const s = seasonState({ season: b.season }, ctx.dates.arrive, ctx.dates.leave);
+    if (s === "partial") parts.push(part(-10, 0, false, "Lifts open or close during your week"));
+    if (s === "closed") parts.push(part(-100, 0, false, "Closed during your week"));
+  }
+  return parts;
+}
+
+function bikeLevelParts(level, r) {
+  const b = r.bike;
+  const has = (...k) => k.some((x) => b.styles.includes(x));
+  const parts = [];
+  if (level === "first") {
+    const easy = b.suits.includes("beginner");
+    parts.push(part(easy ? 30 : 0, 30, easy, easy ? "Easy trails for beginners" : "Little for beginners"));
+    parts.push(part(has("flow") ? 15 : 0, 15, has("flow"), has("flow") ? "Flow trails: smooth and forgiving" : "No flow trails"));
+    parts.push(part(has("ebike") ? 5 : 0, 5, has("ebike"), has("ebike") ? "E-bikes make the climbs easy" : null));
+  }
+  if (level === "intermediate") {
+    const ok = b.suits.includes("intermediate");
+    parts.push(part(ok ? 30 : 0, 30, ok, ok ? "Plenty for intermediate riders" : "Little for intermediate riders"));
+    parts.push(part(has("flow", "xc") ? 15 : 0, 15, has("flow", "xc"), has("flow", "xc") ? "Flow or cross-country routes" : "No flow or cross-country routes"));
+    parts.push(part(has("enduro", "downhill") ? 10 : 0, 10, has("enduro", "downhill"), has("enduro", "downhill") ? "Enduro or downhill to grow into" : null));
+  }
+  if (level === "expert") {
+    const ok = b.suits.includes("expert");
+    parts.push(part(ok ? 30 : 0, 30, ok, ok ? "Steep, technical riding for experts" : "Little for experts"));
+    parts.push(part(has("enduro", "downhill") ? 25 : 0, 25, has("enduro", "downhill"), has("enduro", "downhill") ? "Downhill or enduro trails" : "No downhill or enduro trails"));
+    const big = b.level === "awesome" ? 10 : b.level === "good" ? 5 : 0;
+    parts.push(part(big, 10, big >= 5, big ? "Big, varied riding" : null));
+  }
+  return parts;
+}
+
+function scoreBike(r, ctx, extra) {
+  const shared = [...extra, ...bikeShared(r, ctx)];
+  const levels = ctx.levels.map((level) => {
+    const own = bikeLevelParts(level, r);
+    return { level, score: pct([...shared, ...own]), reasons: own.filter((p) => p.text) };
+  });
+  const scores = levels.map((x) => x.score);
+  const mean = scores.reduce((a, b) => a + b, 0) / scores.length;
+  return {
+    score: Math.round((Math.min(...scores) + mean) / 2),
+    levels,
+    shared: shared.filter((p) => p.text),
+    closed: shared.some((p) => p.points <= -100),
+  };
+}
+
+// Summer fit. A place that rides at home scores itself; a feeder town takes the best bike park it reaches.
+export function bikeFit(place, ctx) {
+  if (ridesHere(place)) return { ...scoreBike(place, ctx, [transferPart(place, ctx)]), resort: place };
+  let best = null;
+  for (const { place: r, link } of bikeLinks(place, ctx.model.byId)) {
+    const quickLift = link.by.includes("lift") && link.min <= 15;
+    const carOnly = !link.by.some((m) => m !== "car");
+    const hop = quickLift ? 0 : carOnly ? -10 : -5;
+    const how = carOnly ? "by car" : link.by.includes("lift") ? "by lift" : "by bus";
+    const extra = [part(hop, 0, hop === 0, `Stay here, ride ${r.name}: ${link.min} min ${how}`), transferPart(place, ctx)];
+    const s = scoreBike(r, ctx, extra);
     if (!best || s.score > best.score) best = { ...s, resort: r };
   }
   return best;

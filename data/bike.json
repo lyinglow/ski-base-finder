@@ -1,0 +1,2692 @@
+{
+ "updated": "2026-10",
+ "places": {
+  "fr-chamonix": {
+   "level": "good",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Steep, technical mountain trails with big views. More enduro than flow. Lifts at Brévent, Flégère and Les Houches."
+  },
+  "fr-les-houches": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "A small bike area above the village with a few downhill and flow trails. An easy way to try it with family."
+  },
+  "fr-megeve": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Smooth forest tracks and e-bike loops, with some lift help from Rochebrune and Mont d'Arbois."
+  },
+  "fr-saint-gervais": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Lift-served trails above the village and a long valley of cross-country routes."
+  },
+  "fr-combloux": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Quiet trails and e-bike loops. No bike park or lifts."
+  },
+  "fr-les-contamines": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A small lift-served area and wild enduro trails in the Montjoie valley."
+  },
+  "fr-morzine": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 38,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Portes du Soleil: hundreds of km of trails linked by lifts, from kids' tracks to World Cup downhill."
+  },
+  "fr-avoriaz": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "kids"
+   ],
+   "pass": 38,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A bike village at the heart of Portes du Soleil, with a big freeride park and flow trails."
+  },
+  "fr-les-gets": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 38,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "A long-running World Cup venue with a full bike park and gentler trails for families."
+  },
+  "fr-chatel": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Border village on the Portes du Soleil lifts, with its own flow and downhill tracks."
+  },
+  "fr-la-chapelle": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Quiet Abondance valley with trails and a link into Portes du Soleil."
+  },
+  "fr-flaine": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Grand Massif bike park above Flaine, with long downhills and a kids' area."
+  },
+  "fr-samoens": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Valley base for the Grand Massif bike park, with a lively bike scene in town."
+  },
+  "fr-les-carroz": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Lifts straight into Grand Massif trails. Family friendly."
+  },
+  "fr-morillon": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Gentle Grand Massif trails reached by gondola from the village."
+  },
+  "fr-sixt": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Wild valley with quiet cross-country and e-bike routes. No lifts."
+  },
+  "fr-la-clusaz": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Aravis bike park with steep forest tracks, strong on enduro and e-bike routes."
+  },
+  "fr-grand-bornand": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Family-friendly village with a good bike park and chalet trails."
+  },
+  "fr-les-brasses": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "A small bike area near Geneva. Good for a day, not a week."
+  },
+  "fr-semnoz": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "enduro"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Annecy's local hill: cross-country and enduro trails, no lifts."
+  },
+  "fr-les-saisies": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "A gentle bike area on rolling alpine pasture."
+  },
+  "fr-crest-voland": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Calm cross-country and e-bike country in the Espace Diamant."
+  },
+  "fr-praz-sur-arly": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Quiet valley riding and e-bike loops."
+  },
+  "fr-areches": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Quiet Beaufortain riding, mostly e-bike and cross-country."
+  },
+  "fr-monts-jura": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Rolling Jura hills, better for cross-country than lift-served riding."
+  },
+  "fr-les-rousses": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Jura plateau with a small bike park and long easy routes."
+  },
+  "fr-la-feclaz": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Plateau above Chambéry with quiet cross-country and e-bike routes."
+  },
+  "fr-aillons": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "A small hill with cross-country trails."
+  },
+  "fr-la-plagne": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Paradiski bike park with a wide range from flow to steep, shared with Les Arcs."
+  },
+  "fr-les-arcs": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Paradiski bike park with long descents and a big kids' area."
+  },
+  "fr-peisey": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Quiet, forested Vanoise riding linked to the Les Arcs lifts."
+  },
+  "fr-montchavin": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "La Plagne's quiet side, with a small bike area."
+  },
+  "fr-champagny": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Peaceful Vanoise valley for cross-country and e-bike routes."
+  },
+  "fr-val-disere": {
+   "level": "good",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Big mountain riding and famous road passes. The trail network is bigger than the bike park."
+  },
+  "fr-tignes": {
+   "level": "fair",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "downhill",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "High lake area with a small bike park and big-mountain trails."
+  },
+  "fr-courchevel": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "A few lift-served trails. Better known for road cycling."
+  },
+  "fr-meribel": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Three Valleys bike park with long runs and family trails."
+  },
+  "fr-val-thorens": {
+   "level": "fair",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "downhill",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "High resort with limited bike trails. More for road climbers."
+  },
+  "fr-les-menuires": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "A small bike area and quiet cross-country routes."
+  },
+  "fr-valmorel": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A well-liked family bike park in a friendly village."
+  },
+  "fr-la-rosiere": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A small bike area with views over to Italy."
+  },
+  "fr-valloire": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Bike park below the Galibier, with downhill, flow and cross-country."
+  },
+  "fr-valmeinier": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A small bike area linked to Valloire."
+  },
+  "fr-la-toussuire": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Les Sybelles bike area, mostly cross-country and easy flow."
+  },
+  "fr-le-corbier": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Les Sybelles bike area, mostly cross-country and easy flow."
+  },
+  "fr-aussois": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Quiet Haute Maurienne riding and nearby rock climbing."
+  },
+  "fr-la-norma": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A small bike park in a purpose-built resort."
+  },
+  "fr-val-cenis": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A wide bike area with long summer lifts and high cross-country."
+  },
+  "fr-alpe-dhuez": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Legendary climb, plus a big bike park and high trails."
+  },
+  "fr-vaujany": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Lifts to the Alpe d'Huez bike area, with a calm village feel."
+  },
+  "fr-les-2-alpes": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 38,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "One of the biggest bike parks in the Alps, with glacier-side riding."
+  },
+  "fr-chamrousse": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "A bike park near Grenoble, good for a short trip."
+  },
+  "fr-sept-laux": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A small bike area with views of the Belledonne range."
+  },
+  "fr-villard-de-lans": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Vercors plateau with a good bike park and gentle terrain."
+  },
+  "fr-serre-chevalier": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "kids",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A big bike park in the Hautes-Alpes, with sun and long descents."
+  },
+  "fr-montgenevre": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Summer lifts on the Via Lattea, with flow and cross-country trails."
+  },
+  "fr-puy-saint-vincent": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A small bike area under the Écrins."
+  },
+  "fr-vars": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Bike area shared with Risoul, with wide open slopes."
+  },
+  "fr-risoul": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Bike area shared with Vars, with easy flow trails."
+  },
+  "fr-les-orres": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A sunny bike park with a famous cross-country scene."
+  },
+  "ch-champery": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 55,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Swiss gateway to Portes du Soleil, with the famous Swiss Wall."
+  },
+  "ch-morgins": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Portes du Soleil village with its own trails and a family bike park."
+  },
+  "ch-les-crosets": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "High point of the Swiss Portes du Soleil, with easy access to many trails."
+  },
+  "ch-champoussin": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Quiet Portes du Soleil start point with families in mind."
+  },
+  "ch-torgon": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "A small bike area at the edge of the Portes du Soleil."
+  },
+  "ch-villars": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Bike park and lots of cross-country across the Vaud Alps."
+  },
+  "ch-leysin": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "A smaller bike park above the lake."
+  },
+  "ch-les-diablerets": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "downhill",
+    "xc"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Mountain riding and glacier views, with a modest bike park."
+  },
+  "ch-verbier": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "xc",
+    "kids"
+   ],
+   "pass": 55,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Bike park, endless enduro tracks and big mountain views. Classic Swiss riding."
+  },
+  "ch-nendaz": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "A big, well-organised bike park with Four Valleys access."
+  },
+  "ch-veysonnaz": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "ebike"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "A quiet Four Valleys village with lifts to trails."
+  },
+  "ch-thyon": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "ebike"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "High base on the Four Valleys lifts."
+  },
+  "ch-la-tzoumaz": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "A small riding area above the Rhône valley."
+  },
+  "ch-crans-montana": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Bike park, long trails and golf-resort comfort."
+  },
+  "ch-anzere": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A small lift-served area with quiet trails."
+  },
+  "ch-grimentz": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Val d'Anniviers: big views and long, wild trails."
+  },
+  "ch-ovronnaz": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Quiet Valais village for cross-country and e-bike."
+  },
+  "ch-leukerbad": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Tough mountain trails above the Rhône valley, with thermal baths to follow."
+  },
+  "ch-saas-fee": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Famous mountain scenery and high riding. Not a big bike park."
+  },
+  "ch-zermatt": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Big mountains and a car-free village. Riding is high and rugged, with a short season."
+  },
+  "ch-bettmeralp": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Car-free village with e-bike and walking routes."
+  },
+  "ch-gstaad": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Smooth Bernese Oberland riding, with a family bike park."
+  },
+  "ch-adelboden": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "A friendly valley with a bike park and quiet routes."
+  },
+  "ch-wengen": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Car-free village with railway and cable-car rides. Bike trails are limited."
+  },
+  "ch-grindelwald": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "enduro",
+    "ebike"
+   ],
+   "pass": 45,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Dramatic Eiger riding with long, scenic descents."
+  },
+  "ch-murren": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Car-free cliff village with big-mountain riding. Limited trails."
+  },
+  "ch-la-dole": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Local hill above Lake Geneva."
+  },
+  "ch-zinal": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Val d'Anniviers: big views and long, wild trails."
+  },
+  "ch-riederalp": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Car-free village with e-bike and walking routes."
+  },
+  "it-courmayeur": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Mont Blanc riding with big views. Lifts open some trails."
+  },
+  "it-la-thuile": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Quiet Aosta Valley village with a bike park and routes toward the Petit Saint-Bernard."
+  },
+  "it-pila": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Reached by gondola from Aosta. One of the better Aosta Valley bike parks."
+  },
+  "it-cervinia": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "downhill",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "High riding under the Matterhorn. Short season."
+  },
+  "it-valtournenche": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Matterhorn valley with a modest lift-served bike area."
+  },
+  "it-champoluc": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Monte Rosa valley with a small bike park."
+  },
+  "it-gressoney": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Walser valley with quiet cross-country and e-bike routes."
+  },
+  "it-alagna": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Rugged Monte Rosa trails, with a long climb to start."
+  },
+  "it-sestriere": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "ebike"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Via Lattea bike area with high flow trails and a big range."
+  },
+  "it-sauze-d-oulx": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A well-known bike park with long runs and an easy-going village."
+  },
+  "it-sansicario": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Via Lattea bike area linked to Sestriere."
+  },
+  "it-claviere": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Via Lattea bike area on the French border."
+  },
+  "it-bardonecchia": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Bike park from Jafferau with a big range and an Alpine feel."
+  },
+  "it-livigno": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-05",
+    "close": "2027-09-20"
+   },
+   "note": "Mottolino bike park: one of Italy's best, with a big range and duty-free shopping."
+  },
+  "it-bormio": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Cross-country and enduro in the Stelvio park. Road cyclists love the passes."
+  },
+  "it-santa-caterina": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Quiet Valfurva riding below the Gavia pass."
+  },
+  "it-madesimo": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A small bike park near the Spluga pass."
+  },
+  "at-st-anton": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A big range of cross-country and downhill, with lift help."
+  },
+  "at-lech": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Cross-country and e-bike routes around the Arlberg."
+  },
+  "at-ischgl": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "ebike"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Wide high-Alpine riding with bike lifts and lots of cross-country."
+  },
+  "at-soelden": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 48,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-10-03"
+   },
+   "note": "Bike Republic Sölden: a big downhill park, glacier-edge riding and a strong enduro scene."
+  },
+  "at-obergurgl": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "High mountain riding in the Ötztal. Limited lifts."
+  },
+  "at-mayrhofen": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Zillertal bike park with a strong young-rider scene."
+  },
+  "at-kitzbuehel": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "A big bike area with lifts, plus road and gravel routes."
+  },
+  "at-saalbach": {
+   "level": "awesome",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 48,
+   "season": {
+    "open": "2027-05-22",
+    "close": "2027-10-04"
+   },
+   "note": "Saalbach Hinterglemm and Leogang: a world-class lift-served riding area."
+  },
+  "at-zell-am-see": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Lake, valley and mountain riding, with a good bike park at Kaprun and the Schmittenhöhe."
+  },
+  "at-bad-gastein": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "ebike"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Alpine riding with a spa to follow. Lifts open at the Stubnerkogel."
+  },
+  "at-obertauern": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Quiet pass resort for cross-country and e-bike."
+  },
+  "at-schladming": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Planai bike park and Dachstein tracks, with a very big range."
+  },
+  "at-serfaus": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Bike park at Serfaus-Fiss-Ladis, with free local transport and family trails."
+  },
+  "at-ellmau": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Wilder Kaiser riding, with a friendly bike park."
+  },
+  "at-alpbach": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Peaceful Tyrol village with cross-country and e-bike trails."
+  },
+  "at-hintertux": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Glacier valley with some lift-served bike trails."
+  },
+  "fr-annecy": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "enduro"
+   ],
+   "pass": 0,
+   "season": {
+    "open": "2027-04-01",
+    "close": "2027-10-31"
+   },
+   "note": "Lake town with road and trail riding all around, bikes for hire on every corner, and the Semnoz hill close by."
+  },
+  "at-innsbruck": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "downhill",
+    "ebike"
+   ],
+   "pass": 25,
+   "season": {
+    "open": "2027-05-01",
+    "close": "2027-10-31"
+   },
+   "note": "Alpine city with the Nordkette singletrail, from cable car to the valley. Easy city life between rides."
+  },
+  "fr-roc-denfer": {
+   "level": "none"
+  },
+  "fr-thollon": {
+   "level": "none"
+  },
+  "fr-bernex": {
+   "level": "none"
+  },
+  "fr-praz-de-lys": {
+   "level": "none"
+  },
+  "fr-hirmentaz": {
+   "level": "none"
+  },
+  "fr-sainte-foy": {
+   "level": "none"
+  },
+  "fr-orelle": {
+   "level": "none"
+  },
+  "fr-karellis": {
+   "level": "none"
+  },
+  "fr-bonneval": {
+   "level": "none"
+  },
+  "fr-la-grave": {
+   "level": "none"
+  }
+ },
+ "towns": [
+  {
+   "id": "it-finale-ligure",
+   "country": "IT",
+   "name": "Finale Ligure",
+   "region": "Liguria",
+   "coords": [
+    8.3436,
+    44.1696
+   ],
+   "altitude": 10,
+   "townSize": "medium",
+   "price": 2,
+   "stayPerPerson": 75,
+   "family": true,
+   "vibes": [
+    "lively",
+    "town"
+   ],
+   "character": "Seaside town and the home of Italian enduro. Rocky trails run from the hills down to the beach, and shuttle vans take you up.",
+   "transfer": "Shared transfer or car. About 2h30 from Turin or Milan. Train to Finale Ligure Marina.",
+   "rail": "Trenitalia trains",
+   "searchName": "Finale Ligure",
+   "bike": {
+    "level": "awesome",
+    "suits": [
+     "intermediate",
+     "expert"
+    ],
+    "styles": [
+     "enduro",
+     "downhill",
+     "xc",
+     "ebike"
+    ],
+    "pass": 30,
+    "season": {
+     "open": "2027-03-01",
+     "close": "2027-11-30"
+    },
+    "note": "Enduro heartland. Shuttle vans take you up to long rocky trails that finish by the sea. Best in spring and autumn. Hot in July and August, so ride early."
+   },
+   "fromOrigin": {
+    "GVA": {
+     "km": 424,
+     "min": 270
+    },
+    "CMF": {
+     "km": 367,
+     "min": 230
+    },
+    "GNB": {
+     "km": 434,
+     "min": 265
+    },
+    "LYS": {
+     "km": 446,
+     "min": 270
+    },
+    "TRN": {
+     "km": 178,
+     "min": 120
+    },
+    "ZRH": {
+     "km": 483,
+     "min": 295
+    },
+    "BSL": {
+     "km": 536,
+     "min": 325
+    },
+    "MXP": {
+     "km": 239,
+     "min": 135
+    },
+    "BGY": {
+     "km": 261,
+     "min": 155
+    },
+    "INN": {
+     "km": 582,
+     "min": 325
+    }
+   },
+   "type": "base",
+   "summerOnly": true,
+   "links": []
+  },
+  {
+   "id": "it-riva-del-garda",
+   "country": "IT",
+   "name": "Riva del Garda",
+   "region": "Trentino",
+   "coords": [
+    10.841,
+    45.8858
+   ],
+   "altitude": 70,
+   "townSize": "medium",
+   "price": 2,
+   "stayPerPerson": 85,
+   "family": true,
+   "vibes": [
+    "lively",
+    "town"
+   ],
+   "character": "Lake town under steep cliffs and a big name in mountain biking. Trails start from the edge of town, with shuttles and lifts for the long ones.",
+   "transfer": "Shared transfer or car. About 1h45 from Bergamo, 2h30 from Milan. Bus to Trento for trains.",
+   "rail": "",
+   "searchName": "Riva del Garda",
+   "bike": {
+    "level": "awesome",
+    "suits": [
+     "beginner",
+     "intermediate",
+     "expert"
+    ],
+    "styles": [
+     "enduro",
+     "xc",
+     "ebike",
+     "downhill",
+     "kids"
+    ],
+    "pass": 28,
+    "season": {
+     "open": "2027-03-15",
+     "close": "2027-11-15"
+    },
+    "note": "A mountain biking capital. Rocky lake-side trails, long climbs and shuttle rides, plus easy lake paths for families. Hot in summer, so ride early."
+   },
+   "fromOrigin": {
+    "CMF": {
+     "km": 514,
+     "min": 330
+    },
+    "TRN": {
+     "km": 310,
+     "min": 200
+    },
+    "ZRH": {
+     "km": 456,
+     "min": 300
+    },
+    "MXP": {
+     "km": 212,
+     "min": 150
+    },
+    "BGY": {
+     "km": 125,
+     "min": 100
+    },
+    "INN": {
+     "km": 227,
+     "min": 140
+    },
+    "SZG": {
+     "km": 395,
+     "min": 240
+    },
+    "MUC": {
+     "km": 422,
+     "min": 250
+    }
+   },
+   "type": "base",
+   "summerOnly": true,
+   "links": []
+  },
+  {
+   "id": "ch-locarno",
+   "country": "CH",
+   "name": "Locarno and Ascona",
+   "region": "Ticino",
+   "coords": [
+    8.7957,
+    46.1708
+   ],
+   "altitude": 200,
+   "townSize": "medium",
+   "price": 3,
+   "stayPerPerson": 125,
+   "family": true,
+   "vibes": [
+    "upmarket",
+    "town"
+   ],
+   "character": "Sunny Italian-Swiss lakeside towns on Lake Maggiore. Forest trails above the lake, a cable car to Cardada, and a mild climate.",
+   "transfer": "Shared transfer or car. About 2h30 from Zurich, 1h from Milan Malpensa. Direct trains from Zurich through the Gotthard tunnel.",
+   "rail": "SBB trains",
+   "searchName": "Locarno",
+   "bike": {
+    "level": "good",
+    "suits": [
+     "beginner",
+     "intermediate",
+     "expert"
+    ],
+    "styles": [
+     "xc",
+     "enduro",
+     "ebike"
+    ],
+    "pass": 25,
+    "season": {
+     "open": "2027-04-01",
+     "close": "2027-11-15"
+    },
+    "note": "Warm, sunny riding around the lake, with trails from the Cardada cable car and long forest routes. Not a lift-served bike park."
+   },
+   "fromOrigin": {
+    "GVA": {
+     "km": 317,
+     "min": 235
+    },
+    "CMF": {
+     "km": 399,
+     "min": 270
+    },
+    "GNB": {
+     "km": 465,
+     "min": 300
+    },
+    "LYS": {
+     "km": 477,
+     "min": 305
+    },
+    "TRN": {
+     "km": 196,
+     "min": 140
+    },
+    "ZRH": {
+     "km": 211,
+     "min": 145
+    },
+    "BSL": {
+     "km": 264,
+     "min": 175
+    },
+    "MXP": {
+     "km": 103,
+     "min": 80
+    },
+    "BGY": {
+     "km": 160,
+     "min": 105
+    },
+    "INN": {
+     "km": 346,
+     "min": 235
+    },
+    "SZG": {
+     "km": 545,
+     "min": 320
+    },
+    "MUC": {
+     "km": 441,
+     "min": 260
+    }
+   },
+   "type": "base",
+   "summerOnly": true,
+   "links": []
+  },
+  {
+   "id": "at-leogang",
+   "country": "AT",
+   "name": "Leogang",
+   "region": "Salzburg",
+   "coords": [
+    12.7318,
+    47.4339
+   ],
+   "altitude": 780,
+   "townSize": "small",
+   "price": 2,
+   "stayPerPerson": 85,
+   "family": true,
+   "vibes": [
+    "traditional",
+    "quiet"
+   ],
+   "character": "Quiet farming village and the home of Bikepark Leogang, a World Cup venue with lifts almost at the door.",
+   "transfer": "Shared transfer or car. About 1h45 from Salzburg, 1h30 from Munich.",
+   "rail": "ÖBB trains",
+   "searchName": "Leogang",
+   "bike": {
+    "level": "awesome",
+    "suits": [
+     "beginner",
+     "intermediate",
+     "expert"
+    ],
+    "styles": [
+     "flow",
+     "downhill",
+     "enduro",
+     "kids",
+     "ebike"
+    ],
+    "pass": 49,
+    "season": {
+     "open": "2027-05-22",
+     "close": "2027-10-04"
+    },
+    "note": "Bikepark Leogang: a World Cup downhill venue with the widest range in Austria, from kids' tracks to steep expert lines. Joint pass with Saalbach."
+   },
+   "fromOrigin": {
+    "ZRH": {
+     "km": 408,
+     "min": 270
+    },
+    "BSL": {
+     "km": 497,
+     "min": 330
+    },
+    "BGY": {
+     "km": 465,
+     "min": 295
+    },
+    "INN": {
+     "km": 128,
+     "min": 100
+    },
+    "SZG": {
+     "km": 70,
+     "min": 60
+    },
+    "MUC": {
+     "km": 189,
+     "min": 125
+    }
+   },
+   "type": "base",
+   "summerOnly": true,
+   "links": []
+  }
+ ]
+}

@@ -440,5 +440,163 @@
     "good": "Good",
     "fair": "Fair",
     "little": "Little"
+  },
+  "bike": {
+    "checked": "2026",
+    "months": [
+      {
+        "key": "jun",
+        "label": "Jun"
+      },
+      {
+        "key": "jul",
+        "label": "Jul"
+      },
+      {
+        "key": "aug",
+        "label": "Aug"
+      },
+      {
+        "key": "sep",
+        "label": "Sep"
+      }
+    ],
+    "seasonFactor": {
+      "jun": 0.8,
+      "jul": 1.15,
+      "aug": 1.3,
+      "sep": 0.85
+    },
+    "levels": {
+      "awesome": "Awesome",
+      "good": "Good",
+      "fair": "Fair",
+      "none": "No bike park"
+    },
+    "styles": {
+      "flow": "Flow trails",
+      "downhill": "Downhill",
+      "enduro": "Enduro",
+      "xc": "Cross-country",
+      "ebike": "E-bike friendly",
+      "kids": "Kids' area"
+    },
+    "costs": {
+      "note": "Estimates for budgeting. Typical 2027 prices for stays, bike lift passes, group coaching and bike hire, and typical summer transfers. Flights and food not included.",
+      "hirePerDay": {
+        "adult": 65,
+        "teen": 50,
+        "child": 30,
+        "small": 0
+      },
+      "lessons": {
+        "adult6": 300,
+        "child6": 270,
+        "minAge": 6,
+        "note": "Six half-day group coaching sessions. From age 6."
+      },
+      "passFreeUnder": 6
+    },
+    "weeks": [
+      {
+        "start": "2027-06-12",
+        "label": "Early summer",
+        "factor": 0.75,
+        "crowd": "quiet",
+        "note": "Some lifts open at weekends only. High trails can still hold snow."
+      },
+      {
+        "start": "2027-06-19",
+        "label": "Early summer",
+        "factor": 0.8,
+        "crowd": "quiet",
+        "note": "Most bike parks are open. High trails may still be snowy."
+      },
+      {
+        "start": "2027-06-26",
+        "label": "Early summer",
+        "factor": 0.85,
+        "crowd": "quiet",
+        "note": "Bike parks open, quiet and good value."
+      },
+      {
+        "start": "2027-07-03",
+        "label": "French holidays begin",
+        "factor": 1.05,
+        "crowd": "normal",
+        "note": "French school holidays begin."
+      },
+      {
+        "start": "2027-07-10",
+        "label": "July",
+        "factor": 1.15,
+        "crowd": "busy",
+        "note": "Busy in the French and Swiss valleys."
+      },
+      {
+        "start": "2027-07-17",
+        "label": "July",
+        "factor": 1.2,
+        "crowd": "busy",
+        "note": "Italian and Swiss holidays. Book early."
+      },
+      {
+        "start": "2027-07-24",
+        "label": "UK holidays begin",
+        "factor": 1.3,
+        "crowd": "very busy",
+        "note": "UK school holidays begin. Peak season starts."
+      },
+      {
+        "start": "2027-07-31",
+        "label": "Summer peak",
+        "factor": 1.4,
+        "crowd": "very busy",
+        "note": "Full bike parks and the dearest stays."
+      },
+      {
+        "start": "2027-08-07",
+        "label": "Summer peak",
+        "factor": 1.45,
+        "crowd": "very busy",
+        "note": "Full bike parks and the dearest stays."
+      },
+      {
+        "start": "2027-08-14",
+        "label": "Mid-August",
+        "factor": 1.5,
+        "crowd": "very busy",
+        "note": "Ferragosto week, the busiest of the summer."
+      },
+      {
+        "start": "2027-08-21",
+        "label": "Late August",
+        "factor": 1.3,
+        "crowd": "busy",
+        "note": "French holidays end about 30 August."
+      },
+      {
+        "start": "2027-08-28",
+        "label": "End of August",
+        "factor": 1.05,
+        "crowd": "normal",
+        "note": "UK bank holiday weekend (28 to 30 August)."
+      },
+      {
+        "start": "2027-09-04",
+        "label": "Early September",
+        "factor": 0.9,
+        "crowd": "quiet",
+        "note": "Schools are back. Lifts still run and trails are quiet."
+      },
+      {
+        "start": "2027-09-11",
+        "label": "Mid September",
+        "factor": 0.8,
+        "crowd": "quiet",
+        "note": "Some bike parks close this weekend. Check before you book."
+      }
+    ],
+    "weeksNote": "Summer 2027 dates. School holidays vary by country and region, so check yours."
   }
 }

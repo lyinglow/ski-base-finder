@@ -1,13 +1,14 @@
 // Whole-trip cost for staying in one place and skiing one resort.
 // Every rate comes from "costs" in data/index.json, so prices can be updated without touching code.
 
-import { reachable } from "./data.js";
+import { reachable, bikeLinks } from "./data.js";
 
 // trip: { origin: airport id, nights, skiDays, adults, childAges: [7, 10], transport: "shuttle" | "car",
 //         lessons: "none" | "kids" | "all", hire: true | false, months: ["jan", ...], week: "2027-02-13" | null }
 // stay: where you sleep. ski: the resort you ski (same as stay when staying in a resort).
 export function tripCost(stay, ski, trip, model) {
-  const c = model.index.costs;
+  const summer = trip.season === "summer";
+  const c = summer ? { ...model.index.costs, ...model.index.bike.costs } : model.index.costs;
   const kids = trip.childAges;
   const people = trip.adults + kids.length;
   const fromAirport = stay.fromOrigin[trip.origin] || { km: 0 }; // no airport picked: no transfer counted
@@ -20,13 +21,15 @@ export function tripCost(stay, ski, trip, model) {
   const cars = Math.max(1, Math.ceil(people / c.car.seats));
 
   // Accommodation: per person per night, scaled for the chosen week, or the chosen months on average.
-  const week = trip.week && model.index.weeks.find((w) => w.start === trip.week);
-  const season = week ? week.factor : average(trip.months.map((m) => c.seasonFactor[m] ?? 1));
+  const weeks = summer ? model.index.bike.weeks : model.index.weeks;
+  const factors = summer ? model.index.bike.seasonFactor : c.seasonFactor;
+  const week = trip.week && weeks.find((w) => w.start === trip.week);
+  const season = week ? week.factor : average(trip.months.map((m) => factors[m] ?? 1));
   const perNight = stay.stayPerPerson ?? model.priceBands[stay.price].perPerson;
   const accommodation = perNight * season * people * trip.nights;
 
   // Lift passes: the 6-day price spread per day. Under-5s ski free; children and teens pay a share.
-  const passDay = ski.skiArea.pass6 / 6;
+  const passDay = summer ? ski.bike.pass : ski.skiArea.pass6 / 6;
   const passShare = (age) => (age < c.passFreeUnder ? 0 : age <= c.childPassTo ? c.childPass : c.teenPass);
   const liftPasses = passDay * trip.skiDays * (trip.adults + kids.reduce((s, a) => s + passShare(a), 0));
 
@@ -37,11 +40,13 @@ export function tripCost(stay, ski, trip, model) {
   let lessons = 0;
   let childcare = 0;
   for (const age of kids) {
-    if (age < 3) childcare += c.childcare6 * dayShare * local; // too young to ski
+    if (summer) {
+      if (trip.lessons !== "none" && age >= c.lessons.minAge) lessons += c.lessons.child6 * dayShare * local;
+    } else if (age < 3) childcare += c.childcare6 * dayShare * local; // too young to ski
     else if (trip.lessons !== "none") lessons += (age < 5 ? c.lessons.kindergarten6 : c.lessons.child6) * dayShare * local;
   }
   if (trip.lessons === "all") lessons += trip.adults * c.lessons.adult6 * dayShare * local;
-  const hireRate = (age) => (age < 3 ? 0 : age < 5 ? c.hirePerDay.small : age <= c.childPassTo ? c.hirePerDay.child : c.hirePerDay.teen);
+  const hireRate = (age) => (age < (summer ? 6 : 3) ? 0 : age < 5 ? c.hirePerDay.small : age <= c.childPassTo ? c.hirePerDay.child : c.hirePerDay.teen);
   const hire = trip.hire
     ? trip.skiDays * local * (trip.adults * c.hirePerDay.adult + kids.reduce((s, a) => s + hireRate(a), 0))
     : 0;
@@ -59,7 +64,7 @@ export function tripCost(stay, ski, trip, model) {
 
   // Daily trips to the slopes.
   let daily = 0;
-  let dailyHow = "On the slopes";
+  let dailyHow = summer ? "Ride from the door" : "On the slopes";
   if (link && hopBy.includes("lift")) {
     dailyHow = "Lift from the door";
   } else if (link && !usesCar && hopBy.includes("bus")) {
@@ -78,9 +83,10 @@ export function tripCost(stay, ski, trip, model) {
 }
 
 // The resort a place is costed against: itself, or a chosen or nearest resort it reaches.
-export function skiTarget(place, model, preferred) {
+export function skiTarget(place, model, preferred, season = "winter") {
   if (place.type === "resort") return place;
-  const options = reachable(place, model.byId).map((r) => r.place);
+  if (season === "summer" && place.bike) return place; // a valley town that rides at home
+  const options = (season === "summer" ? bikeLinks(place, model.byId) : reachable(place, model.byId)).map((r) => r.place);
   return options.find((r) => r.id === preferred) || options[0];
 }
 

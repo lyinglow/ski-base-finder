@@ -154,3 +154,16 @@ python3 scripts/lifts/build.py lifts.geojson runs.geojson
 ```
 
 Each resort gets every lift in the ski areas within 2.5 km of it, so a linked area shows whole. A feeder town shows the lifts of the resorts it reaches. Data from OpenSkiMap, © OpenStreetMap contributors (ODbL). Rebuild it each autumn, or after adding resorts.
+
+## Summer riding (`bike.json`)
+
+Summer mountain biking lives in `data/bike.json`, separate from the winter data. It has two parts.
+
+- `places`: a bike entry for every resort id (use `"level": "none"` where there is no riding, and the place is hidden in summer), plus feeder towns that are good to ride in their own right (Annecy, Innsbruck). Each entry has `level` (awesome, good, fair or none), `suits` (beginner, intermediate, expert), `styles` (flow, downhill, enduro, xc, ebike, kids), `pass` (day price in euros for bike lifts or uplift shuttles, 0 when no lifts are needed), `season` (typical `open` and `close` dates) and a one-sentence `note`.
+- `towns`: valley towns with no ski area. They are full places (id, coords, altitude, price, vibes, character, `fromOrigin` drive times) with `type: "base"`, `summerOnly: true`, no links and their own `bike` entry. They only show in summer.
+
+A feeder town without its own `bike` entry takes the best bike park it links to, the same way it takes a ski resort in winter.
+
+Summer costs, months and weeks are under `bike` in `index.json`. The ratings are a first pass from general knowledge of each place, not checked against each park's trail map, so treat them as a starting point.
+
+`scripts/bike/ratings.txt`, `own.py` and `towns.py` hold the hand data, and `python3 scripts/bike/build.py <routes.json>` writes `bike.json`. Drive times for the valley towns come from a route planner, scaled by 0.85 like the winter times, with no winter pass closures.

@@ -4,11 +4,17 @@
 export async function loadData() {
   const index = await getJSON("data/index.json");
   const live = index.countries.filter((c) => c.status === "live");
-  const files = await Promise.all(live.map((c) => getJSON("data/" + c.file)));
+  const [files, bike] = await Promise.all([
+    Promise.all(live.map((c) => getJSON("data/" + c.file))),
+    getJSON("data/bike.json").catch(() => ({ places: {}, towns: [] })), // summer riding is optional
+  ]);
 
   const locations = files.flatMap((f, i) =>
     f.locations.map((l) => ({ ...l, country: live[i].code }))
   );
+  // Summer: each place gets its riding, and valley towns with no ski area join the list.
+  for (const l of locations) if (bike.places[l.id]) l.bike = bike.places[l.id];
+  locations.push(...bike.towns.filter((t) => live.some((c) => c.code === t.country)));
   const byId = new Map(locations.map((l) => [l.id, l]));
 
   // Reverse links: for each resort, the places that list it as reachable.
@@ -26,11 +32,12 @@ export async function loadData() {
     // Car-free: a base needs a rail link plus bus, train or lift to a resort.
     // A resort counts unless its transfer note starts with "Car".
     const easyLinks = (l.links || []).some((k) => k.by.some((m) => m !== "car"));
-    l.carFree = l.type === "base" ? Boolean(l.rail) && easyLinks : !/^car/i.test(l.transfer || "");
+    l.carFree = l.summerOnly ? Boolean(l.rail) : l.type === "base" ? Boolean(l.rail) && easyLinks : !/^car/i.test(l.transfer || "");
   }
 
   return {
     index,
+    bike: index.bike,
     countries: live,
     notes: files.map((f) => f.notes).filter(Boolean),
     origin: index.origins.find((o) => o.id === index.defaultOrigin),
@@ -108,3 +115,23 @@ export function reachable(place, byId) {
     .filter((x) => x.place)
     .sort((a, b) => a.link.min - b.link.min);
 }
+
+/* ---------- summer ---------- */
+
+export const BIKE_RANK = { none: 0, fair: 1, good: 2, awesome: 3 };
+
+// Does this place have riding of its own? Resorts do unless their bike level is "none";
+// valley towns do when they carry bike data.
+export const ridesHere = (l) => Boolean(l.bike && l.bike.level !== "none");
+
+// Where a stay is ridden: the place itself, or for a feeder town the resorts it reaches that have a bike park.
+export function bikeLinks(l, byId) {
+  if (l.type === "resort" || l.bike) return [];
+  return reachable(l, byId).filter((x) => ridesHere(x.place));
+}
+
+// Is this place on the map in the given season?
+export const inSeason = (l, season, byId) =>
+  season === "summer"
+    ? ridesHere(l) || (l.type === "base" && !l.bike && bikeLinks(l, byId).length > 0)
+    : !l.summerOnly;

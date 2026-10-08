@@ -1,6 +1,6 @@
-import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude } from "./data.js";
+import { loadData, cheaperStays, reachable, MONTHS, SNOW_RANK, snowFor, snowAltitude, BIKE_RANK, bikeLinks, ridesHere, inSeason } from "./data.js";
 import { tripCost, skiTarget } from "./cost.js";
-import { fitScore, seasonState, runKm, LEVELS } from "./fit.js";
+import { fitScore, bikeFit, seasonState, runKm, LEVELS, BIKE_LEVELS } from "./fit.js";
 import { createMap, setBasemap, setTerrain, setLinks, setLifts, setParks, setReach, setSnowLayer, HOME_VIEW } from "./map.js";
 /* global maplibregl */
 
@@ -15,6 +15,12 @@ const MODE_LABEL = { car: "car", bus: "bus", train: "train", lift: "lift" };
 const MAX_COMPARE = Infinity; // compare as many places as you like
 
 const state = {
+  season: "winter", // "winter" for skiing, "summer" for mountain biking
+  bikeMonths: new Set(["jul", "aug"]),
+  bike: "any", // "any", "good" (good or better) or "awesome"
+  bikeNeeds: new Set(), // riding styles that must be there, e.g. "flow"
+  otherWeek: null, // the week picked in the other season, kept while you look at this one
+  otherLessons: "none", // coaching is optional in summer; each season keeps its own choice
   show: "all",
   maxTime: 300,
   maxHop: 60,
@@ -81,6 +87,7 @@ async function init() {
   map.once("load", () => { if (!state.selected) airportView(); updateReach(lastVisible); updateSnowLayer(); });
   syncControls();
   bindControls();
+  applySeasonUI();
   syncControls(); // again for controls that bindControls builds (vibes, weeks)
   applyFilters();
 
@@ -98,7 +105,7 @@ const price = (p) => curSymbol().repeat(Number(p));
 const NO_TRIP = { km: 0, min: 0, none: true };
 const travel = (l) => (state.origin ? l.fromOrigin[state.origin] : NO_TRIP);
 const originName = () => model.origins.find((o) => o.id === state.origin).name;
-const typeLabel = (l) => (l.type === "resort" ? "Resort" : "Feeder town");
+const typeLabel = (l) => (l.type === "resort" ? "Resort" : summer() ? "Valley town" : "Feeder town");
 const modes = (by) => by.map((m) => MODE_LABEL[m]).join(" or ");
 
 // How you get from a feeder town (or linked village) up to the resort, in plain words.
@@ -131,10 +138,13 @@ function levelDots(levels = []) {
 
 /* ---------- snow ---------- */
 
-const tripMonths = () => MONTHS.map((m) => m.key).filter((k) => state.months.has(k));
+const summer = () => state.season === "summer";
+const monthList = () => (summer() ? model.bike.months : MONTHS);
+const activeMonths = () => (summer() ? state.bikeMonths : state.months);
+const tripMonths = () => monthList().map((m) => m.key).filter((k) => activeMonths().has(k));
 const monthNames = () => {
   const ks = tripMonths();
-  return ks.length === MONTHS.length ? "the whole season" : ks.map((k) => MONTHS.find((m) => m.key === k).label).join(", ");
+  return ks.length === monthList().length ? (summer() ? "the whole summer" : "the whole season") : ks.map((k) => monthList().find((m) => m.key === k).label).join(", ");
 };
 const snowOf = (l) => snowFor(l, tripMonths(), model.byId);
 const flake = (rating, title = SNOW_LABEL[rating]) =>
@@ -181,13 +191,14 @@ function snowMonths(l) {
 // All prices are held in euros; show them in the chosen currency.
 const toShown = (eur) => (state.currency === "GBP" ? eur * state.gbpPerEur : eur);
 const curSymbol = () => (state.currency === "GBP" ? "£" : "€");
+const moneyExact = (n) => curSymbol() + Math.round(toShown(n)).toLocaleString("en-GB");
 const money = (n) => curSymbol() + (Math.round(toShown(n) / 10) * 10).toLocaleString("en-GB");
-const tripOf = () => ({ ...state.trip, months: tripMonths(), origin: state.origin });
+const tripOf = () => ({ ...state.trip, months: tripMonths(), origin: state.origin, season: state.season });
 const kidsText = (ages) => ages.length === 1 ? `1 child aged ${ages[0]}` : `${ages.length} children aged ${ages.slice(0, -1).join(", ")} and ${ages[ages.length - 1]}`;
 
 // Fit score for the current trip. Season dates only count once a specific week is chosen.
 function fitOf(l) {
-  return fitScore(l, {
+  return (summer() ? bikeFit : fitScore)(l, {
     model,
     levels: state.levels,
     childAges: state.trip.childAges,
@@ -197,12 +208,25 @@ function fitOf(l) {
   });
 }
 // stay in `place`, ski `ski` (defaults to itself, or the chosen or nearest resort for a town).
-const costOf = (place, ski) => tripCost(place, ski || skiTarget(place, model, state.skiAt[place.id]), tripOf(), model);
+const costOf = (place, ski) => tripCost(place, ski || skiTarget(place, model, state.skiAt[place.id], state.season), tripOf(), model);
 
 function costBreakdown(cost) {
   const p = cost.parts;
   const row = (label, v, note = "") => `<li><span>${label}${note ? `<small>${note}</small>` : ""}</span><b>${money(v)}</b></li>`;
   const t = state.trip;
+  if (summer()) {
+    const b = cost.ski.bike;
+    const park = b.styles.includes("flow") || b.styles.includes("downhill");
+    const coached = t.lessons !== "none" && (t.lessons === "all" || t.childAges.some((a) => a >= model.bike.costs.lessons.minAge));
+    return `<ul class="cost-lines">
+    ${row("Accommodation", p.accommodation, `${t.nights} nights`)}
+    ${b.pass ? row(park ? "Bike lift passes" : "Uplift and shuttles", p.liftPasses, `${t.skiDays} days, ${esc(cost.ski.name)}${t.childAges.some((a) => a < model.bike.costs.passFreeUnder) ? ", under-6s free" : ""}`) : ""}
+    ${coached ? row("Bike coaching", p.lessons, t.lessons === "all" ? "Group coaching for everyone, 6 half days" : "Group coaching for the kids, 6 half days") : ""}
+    ${t.hire ? row("Bike hire", p.hire, "Mountain bike and helmet") : ""}
+    ${row("Airport transfers", p.airport, state.trip.transport === "car" || cost.needsCar ? "Hire car, fuel and tolls" : "Shared shuttle, return")}
+    ${row("Daily trips to the trails", p.daily, cost.dailyHow)}
+  </ul>`;
+  }
   return `<ul class="cost-lines">
     ${row("Accommodation", p.accommodation, `${t.nights} nights`)}
     ${row("Lift passes", p.liftPasses, `${t.skiDays} days, ${esc(cost.ski.skiArea.name)}${t.childAges.some((a) => a < 5) ? ", under-5s free" : ""}`)}
@@ -287,8 +311,11 @@ function clearMap() {
     prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(), countries: new Set(),
     family: false, carFree: false, snowSure: false, park: "any", parkNeeds: new Set(), levels: ["intermediate"],
     snowLayer: false, snowMonth: null, sort: "fit", compare: [], origin: null,
+    bike: "any", bikeNeeds: new Set(), bikeMonths: new Set(["jul", "aug"]),
   });
   state.trip.week = null; // a week pick overrides the months, so it goes too
+  state.otherWeek = null;
+  fillWeeks();
   updateOriginMarkers();
   syncControls();
   ["#f-time", "#f-hop"].forEach((id) => $(id).dispatchEvent(new Event("input"))); // refresh their labels
@@ -399,15 +426,20 @@ function parkSection(l) {
 
 // The snow layer follows the trip (the chosen week, else the first chosen month) until a month is picked on it.
 function updateSnowLayer() {
+  if (summer()) {
+    $("#snow-legend").hidden = true;
+    if (map) setSnowLayer(map, model.index.snowLayer, null);
+    return;
+  }
   const tripMonth = state.trip.week
     ? MONTHS[[11, 0, 1, 2, 3].indexOf(new Date(state.trip.week + "T12:00:00").getMonth())]?.key
     : tripMonths()[0];
   const month = state.snowMonth || tripMonth || "jan";
   $("#toggle-snow").setAttribute("aria-pressed", state.snowLayer);
-  $("#snow-legend").hidden = !state.snowLayer;
+  $("#snow-legend").hidden = !state.snowLayer || summer();
   $("#snow-month-name").textContent = MONTH_LONG[month];
   $$("#snow-months button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === month));
-  if (map) setSnowLayer(map, model.index.snowLayer, state.snowLayer ? month : null);
+  if (map) setSnowLayer(map, model.index.snowLayer, state.snowLayer && !summer() ? month : null);
 }
 
 /* ---------- airport view: airport at the bottom, everywhere you can reach above it ---------- */
@@ -491,19 +523,52 @@ function updateLabelMode() {
 
 /* ---------- filtering ---------- */
 
+// Does this place suit riders of this level? A feeder town counts when a bike park it reaches does.
+const bikeSuits = (l, level) => (ridesHere(l) ? l.bike.suits.includes(level) : bikeLinks(l, model.byId).some((x) => x.place.bike.suits.includes(level)));
+
+// The best riding for a place: its own, or for a feeder town the best bike park it reaches (nearest when tied).
+function bikeOf(l) {
+  if (ridesHere(l)) return { level: l.bike.level, place: l, link: null };
+  let best = null;
+  for (const { place, link } of bikeLinks(l, model.byId)) {
+    const rank = BIKE_RANK[place.bike.level];
+    if (!best || rank > BIKE_RANK[best.level] || (rank === BIKE_RANK[best.level] && link.min < best.link.min)) {
+      best = { level: place.bike.level, place, link };
+    }
+  }
+  return best;
+}
+
+// Does the riding here, or at a bike park a feeder town reaches, have the rating and styles asked for?
+function bikeMatch(l) {
+  const spots = ridesHere(l) ? [l] : bikeLinks(l, model.byId).map((x) => x.place);
+  const min = state.bike === "any" ? 0 : BIKE_RANK[state.bike];
+  return spots.some((r) => BIKE_RANK[r.bike.level] >= min && [...state.bikeNeeds].every((f) => r.bike.styles.includes(f)));
+}
+
 function passes(l) {
+  if (!inSeason(l, state.season, model.byId)) return false; // summer-only valley towns have no winter, and the reverse
   if (!travel(l)) return false; // no route recorded from this airport
   // The shortlist ignores the filters so saved places never disappear.
   if (state.show === "saved") return state.saved.has(l.id);
   if (state.show !== "all" && l.type !== state.show) return false;
-  if (state.levels.includes("first") && !l.easyStart) return false; // resorts only, walk to the beginner slopes
+  if (summer()) {
+    if (state.levels.includes("first") && !bikeSuits(l, "beginner")) return false;
+  } else if (state.levels.includes("first") && !l.easyStart) return false; // resorts only, walk to the beginner slopes
   if (state.maxTime < 300 && travel(l).min > state.maxTime) return false; // the top of the slider means any time
-  if (l.type === "base" && reachable(l, model.byId)[0].link.min > state.maxHop) return false;
+  if (l.type === "base" && !l.summerOnly) {
+    const hops = summer() ? bikeLinks(l, model.byId) : reachable(l, model.byId);
+    if (hops.length && hops[0].link.min > state.maxHop) return false;
+  }
   if (!state.prices.has(l.price)) return false;
   if (state.family && !l.family) return false;
   if (state.countries.size && !state.countries.has(l.country)) return false;
   if (state.vibes.size && !l.vibes.some((v) => state.vibes.has(v))) return false;
   if (state.carFree && !l.carFree) return false;
+  if (summer()) {
+    if ((state.bike !== "any" || state.bikeNeeds.size) && !bikeMatch(l)) return false;
+    return !(state.trip.week && fitOf(l)?.closed); // closed for the chosen week
+  }
   if ((state.park !== "any" || state.parkNeeds.size) && !parkMatch(l)) return false;
   if (state.snowSure && snowOf(l) !== "good") return false;
   if (state.trip.week && fitOf(l)?.closed) return false; // closed for the chosen week
@@ -512,7 +577,9 @@ function passes(l) {
 }
 
 function sortKey(l) {
-  switch (state.sort) {
+  const sort = summer() ? (["snow", "ski"].includes(state.sort) ? "fit" : state.sort) : state.sort === "bike" ? "fit" : state.sort;
+  switch (sort) {
+    case "bike": return [-BIKE_RANK[bikeOf(l).level], travel(l).min];
     case "price": return [l.price, travel(l).min];
     case "altitude": return [-l.altitude, travel(l).min];
     case "fit": return [-fitOf(l).score, costOf(l).total];
@@ -526,9 +593,11 @@ function sortKey(l) {
 // How many filters are set, shown on the Filters button so a narrowed list is never a mystery.
 function filterCount() {
   return [
-    state.maxTime < 300, state.maxHop < 60, state.prices.size < 3, state.sizes.size < 4,
-    state.vibes.size > 0, state.countries.size > 0, state.family, state.carFree, state.snowSure,
-    state.park !== "any", state.parkNeeds.size > 0, state.levels.includes("first"),
+    state.maxTime < 300, state.maxHop < 60, state.prices.size < 3,
+    state.vibes.size > 0, state.countries.size > 0, state.family, state.carFree, state.levels.includes("first"),
+    ...(summer()
+      ? [state.bike !== "any", state.bikeNeeds.size > 0]
+      : [state.sizes.size < 4, state.snowSure, state.park !== "any", state.parkNeeds.size > 0]),
   ].filter(Boolean).length;
 }
 
@@ -549,11 +618,11 @@ function applyFilters() {
 
   const n = visible.length;
   const nb = visible.filter((l) => l.type === "base").length;
-  $("#result-count").textContent = `${n} place${n === 1 ? "" : "s"} · ${nb} feeder town${nb === 1 ? "" : "s"}`;
+  $("#result-count").textContent = `${n} place${n === 1 ? "" : "s"} · ${nb} ${summer() ? "valley" : "feeder"} town${nb === 1 ? "" : "s"}`;
   $("#tab-count").textContent = n;
   $("#show-places-n").textContent = n === 1 ? "1 place" : `${n} places`;
   const emptyText = state.show === "saved"
-    ? "Nothing saved yet. Open a resort or town and tap Save."
+    ? (state.saved.size ? `Your saved places are for ${summer() ? "winter" : "summer"}. Switch to ${summer() ? "Winter" : "Summer"} to see them.` : "Nothing saved yet. Open a resort or town and tap Save.")
     : "Nothing matches. Try a longer travel time or more price levels.";
   $("#results").innerHTML = n ? visible.map(resultItem).join("") : `<li class="empty">${emptyText}</li>`;
   updateReach(visible);
@@ -561,13 +630,24 @@ function applyFilters() {
 }
 
 function tripTitle(l) {
-  return l.type === "resort" ? `staying in ${l.name}` : `staying in ${l.name}, skiing ${skiTarget(l, model, state.skiAt[l.id]).name}`;
+  const target = skiTarget(l, model, state.skiAt[l.id], state.season);
+  return target.id === l.id ? `staying in ${l.name}` : `staying in ${l.name}, ${summer() ? "riding" : "skiing"} ${target.name}`;
 }
+
+// "Good · Flow, downhill": the rating and the main styles of a place that rides at home.
+const styleNames = (b, n = 3) => b.styles.slice(0, n).map((k) => model.bike.styles[k].replace(/ friendly$/, "").replace(/ area$/, "")).join(", ");
+const bikeBlurb = (l) => `${esc(styleNames(l.bike))}${l.bike.pass ? "" : " · no lifts"}`;
+const bikePill = (k) => `<b class="park-pill sm ${k.level}" title="${esc(`Bike riding: ${model.bike.levels[k.level]}${k.link ? ` at ${k.place.name}` : ""}`)}">${model.bike.levels[k.level]}</b>`;
 
 function resultItem(l) {
   const t = travel(l);
   let sub;
-  if (l.type === "resort") {
+  if (summer()) {
+    sub = ridesHere(l) ? bikeBlurb(l) : (() => {
+      const r = bikeLinks(l, model.byId);
+      return `${r.length} bike park${r.length === 1 ? "" : "s"} within ${mins(r[r.length - 1].link.min)}`;
+    })();
+  } else if (l.type === "resort") {
     sub = `${esc(l.skiArea.name)} · ${l.skiArea.pisteKm} km`;
   } else {
     const r = reachable(l, model.byId);
@@ -576,7 +656,7 @@ function resultItem(l) {
   return `<li><button type="button" class="result ${l.type}${l.id === state.selected ? " is-active" : ""}" data-id="${l.id}">
     <i class="dot ${l.type}"></i>
     <span class="r-main"><span class="r-name"><b class="fit-pill" title="Fit for your group">${fitOf(l).score}</b>${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
-    <span class="r-side"><span class="r-time">${t.none ? "" : mins(t.min)}</span><span class="r-price" title="Trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
+    <span class="r-side"><span class="r-time">${t.none ? "" : mins(t.min)}</span><span class="r-price" title="Trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${summer() ? bikePill(bikeOf(l)) : flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
   </button></li>`;
 }
 
@@ -595,6 +675,13 @@ function select(id) {
   }
   for (const k of l.links || []) { related.add(k.to); pairs.push([l, model.byId.get(k.to), k]); }
 
+  if (summer()) {
+    const ok = (p) => inSeason(p, "summer", model.byId);
+    for (let i = pairs.length - 1; i >= 0; i--) if (!ok(pairs[i][0]) || !ok(pairs[i][1])) pairs.splice(i, 1);
+    related.clear();
+    related.add(id);
+    for (const [a, b] of pairs) { related.add(a.id); related.add(b.id); }
+  }
   state.related = related;
   for (const [mid, { el }] of markers) {
     el.classList.toggle("is-selected", mid === id);
@@ -645,7 +732,7 @@ const LIFT_KIND = { cabin: "Gondola or cable car", chair: "Chairlift", surface: 
 
 async function drawLifts(place) {
   liftPopup?.remove();
-  if (!place) { setLifts(map, []); setParks(map, []); return; }
+  if (!place || summer()) { setLifts(map, []); setParks(map, []); return; } // the ski lift map is winter only
   try {
     [liftData, parkData] = await Promise.all([
       liftData || fetch("data/lifts.json").then((r) => r.json()),
@@ -726,9 +813,11 @@ function placeRow({ place, link }, context, opts = {}) {
     if (drop >= 150) parts.push(`${drop} m lower`);
     gain = parts.length ? `<span class="gain">${parts.join(" · ")}</span>` : "";
   }
-  const sub = place.type === "resort"
-    ? `${place.skiArea.pisteKm} km of pistes ${levelDots(place.levels)}`
-    : `${typeLabel(place)} · ${place.altitude} m`;
+  const sub = summer()
+    ? (ridesHere(place) ? `${model.bike.levels[place.bike.level]} riding ${levelDots(place.bike.suits)}` : `${typeLabel(place)} · ${place.altitude} m`)
+    : place.type === "resort"
+      ? `${place.skiArea.pisteKm} km of pistes ${levelDots(place.levels)}`
+      : `${typeLabel(place)} · ${place.altitude} m`;
   const inCompare = state.compare.includes(place.id);
   return `<li class="link-row">
     <button type="button" class="lr-main" data-select="${place.id}">
@@ -751,7 +840,7 @@ function tripLine(total, saving, vs = "") {
 /* ---------- places to stay ---------- */
 
 const isoDate = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-const MONTH_INDEX = { dec: 11, jan: 0, feb: 1, mar: 2, apr: 3 };
+const MONTH_INDEX = { dec: 11, jan: 0, feb: 1, mar: 2, apr: 3, jun: 5, jul: 6, aug: 7, sep: 8 };
 
 // First Saturday of the first chosen month, in the coming season.
 function defaultArrive() {
@@ -775,7 +864,8 @@ function staySection(l) {
   const { arrive, leave } = stayDates();
   const t = state.trip;
   const town = l.searchName || l.name;
-  const where = encodeURIComponent(`${town}, France`);
+  const country = model.countries.find((c) => c.code === l.country)?.name || "";
+  const where = encodeURIComponent(`${town}, ${country}`);
   const guests = t.adults + t.childAges.length;
   const kids = t.childAges.map((a) => `age=${a}`).join("&");
   const when = new Date(arrive + "T12:00:00").toLocaleDateString("en-GB", { month: "long", year: "numeric" });
@@ -784,13 +874,14 @@ function staySection(l) {
     ["Booking.com", "Hotels and apartments",
       `https://www.booking.com/searchresults.html?ss=${where}&checkin=${arrive}&checkout=${leave}&group_adults=${t.adults}&group_children=${t.childAges.length}&no_rooms=1${kids ? "&" + kids : ""}`],
     ["Airbnb", "Homes and chalets",
-      `https://www.airbnb.com/s/${encodeURIComponent(`${town}--France`)}/homes?checkin=${arrive}&checkout=${leave}&adults=${t.adults}&children=${t.childAges.length}`],
+      `https://www.airbnb.com/s/${encodeURIComponent(`${town}--${country}`)}/homes?checkin=${arrive}&checkout=${leave}&adults=${t.adults}&children=${t.childAges.length}`],
     ["Abritel", "French holiday rentals (Vrbo)",
       `https://www.abritel.fr/search?destination=${where}&startDate=${arrive}&endDate=${leave}&adults=${guests}`],
-    ["Ski apartment deals", "Pierre & Vacances, Maeva and others (web search)",
-      g(`${town} ski apartment and lift pass deal ${when}`)],
-    ["Package holidays", "Tour operators with flights or transfers (web search)",
-      g(`${town} ski package holiday ${when}`)],
+    ...(summer()
+      ? [["Bike holiday deals", "Chalets with bike storage, and packages (web search)", g(`${town} mountain bike holiday ${when}`)],
+         ["Bike hire and guides", "Hire shops and guided rides (web search)", g(`${town} mountain bike hire and guides`)]]
+      : [["Ski apartment deals", "Pierre & Vacances, Maeva and others (web search)", g(`${town} ski apartment and lift pass deal ${when}`)],
+         ["Package holidays", "Tour operators with flights or transfers (web search)", g(`${town} ski package holiday ${when}`)]]),
   ];
   const fmt = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
   return `<section class="stay">
@@ -831,7 +922,7 @@ function fitBand(score) {
 const LEVEL_ORDER = ["first", "intermediate", "expert"];
 
 function groupText() {
-  const names = state.levels.map((v) => LEVELS[v]);
+  const names = state.levels.map((v) => (summer() ? BIKE_LEVELS : LEVELS)[v]);
   const who = names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}` : names[0];
   return state.trip.childAges.length ? `${who}, with ${kidsText(state.trip.childAges)}` : who;
 }
@@ -840,11 +931,11 @@ function fitSection(l) {
   const f = fitOf(l);
   const li = (r) => `<li class="${r.ok ? "ok" : "no"}">${esc(r.text)}</li>`;
   const several = f.levels.length > 1;
-  const byLevel = f.levels.map((x) => `${several ? `<p class="fit-group">For ${LEVELS[x.level]} <b>${x.score}</b></p>` : ""}
+  const byLevel = f.levels.map((x) => `${several ? `<p class="fit-group">For ${(summer() ? BIKE_LEVELS : LEVELS)[x.level]} <b>${x.score}</b></p>` : ""}
       <ul class="fit-reasons">${x.reasons.map(li).join("")}</ul>`).join("");
   return `<section class="fit">
       <span class="s-label">Fit for your group</span>
-      <p class="fit-head"><b class="fit-score">${f.score}</b><span><strong>${fitBand(f.score)}</strong> for ${esc(groupText())}${l.type === "base" ? `, skiing ${esc(f.resort.name)}` : ""}</span></p>
+      <p class="fit-head"><b class="fit-score">${f.score}</b><span><strong>${fitBand(f.score)}</strong> for ${esc(groupText())}${f.resort.id !== l.id ? `, ${summer() ? "riding" : "skiing"} ${esc(f.resort.name)}` : ""}</span></p>
       ${byLevel}
       ${several ? `<p class="fit-group">For everyone</p>` : ""}
       <ul class="fit-reasons">${f.shared.map(li).join("")}</ul>
@@ -863,7 +954,7 @@ function runMix(r) {
 
 function tripTeaser(l) {
   const cost = costOf(l);
-  const skiing = l.type === "base" ? ` · skiing ${esc(cost.ski.name)}` : "";
+  const skiing = cost.ski.id !== l.id ? ` · ${summer() ? "riding" : "skiing"} ${esc(cost.ski.name)}` : "";
   return `<button type="button" class="trip-teaser" data-trip="${l.id}">
       <span class="s-label">Trip cost</span>
       <span class="tt-total"><strong>${money(cost.total)}</strong> ${money(cost.perPerson)} per person${skiing}</span>
@@ -905,9 +996,9 @@ function tripSection(l) {
   const t = state.trip;
   const who = `${t.adults} adult${t.adults === 1 ? "" : "s"}${t.childAges.length ? `, ${kidsText(t.childAges)}` : ""}`;
   let picker = "";
-  if (l.type === "base") {
-    const options = reachable(l, model.byId);
-    picker = `<label class="ski-at" for="ski-at">Skiing at
+  if (l.type === "base" && cost.ski.id !== l.id) {
+    const options = summer() ? bikeLinks(l, model.byId) : reachable(l, model.byId);
+    picker = `<label class="ski-at" for="ski-at">${summer() ? "Riding at" : "Skiing at"}
       <select id="ski-at" data-base="${l.id}">${options.map((r) =>
         `<option value="${r.place.id}"${r.place.id === cost.ski.id ? " selected" : ""}>${esc(r.place.name)} · ${mins(r.link.min)} by ${accessShort(r.link.by)}</option>`).join("")}</select></label>`;
     const link = options.find((r) => r.place.id === cost.ski.id).link;
@@ -916,7 +1007,7 @@ function tripSection(l) {
   return `<section class="trip">
       <span class="s-label">Trip cost</span>
       <p class="trip-total"><strong>${money(cost.total)}</strong> <span>${money(cost.perPerson)} per person</span></p>
-      <p class="trip-who">${who}, ${t.nights} nights, ${t.skiDays} ski days, ${cost.week ? `week of ${new Date(cost.week.start + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" })} (${esc(cost.week.label)})` : monthNames()}</p>
+      <p class="trip-who">${who}, ${t.nights} nights, ${t.skiDays} ${summer() ? "riding" : "ski"} days, ${cost.week ? `week of ${new Date(cost.week.start + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" })} (${esc(cost.week.label)})` : monthNames()}</p>
       ${picker}
       ${costBreakdown(cost)}
       ${cost.needsCar && t.transport !== "car" ? `<p class="snow-note">No bus to ${esc(cost.ski.name)} from here, so this includes a hire car.</p>` : ""}
@@ -928,6 +1019,66 @@ function vibePills(l) {
     const def = model.index.vibes[v];
     return `<span class="vibe${state.vibes.has(v) ? " on" : ""}" title="${esc(def.hint)}">${esc(def.label)}</span>`;
   }).join("")}</p>`;
+}
+
+/* ---------- summer: riding ---------- */
+
+const bikeSeasonText = (b) => `${fmtDay(b.season.open)} to ${fmtDay(b.season.close)} (typical dates)`;
+const bikeSeasonWarn = (b) => {
+  const { arrive, leave } = stayDates();
+  const s = seasonState({ season: b.season }, arrive, leave);
+  return s === "closed" ? `. <strong class="warn">Closed for your week.</strong>` : s === "partial" ? `. <strong class="warn">Lifts open or close during your week.</strong>` : ".";
+};
+
+// The riding at a place that rides at home.
+function bikeSection(l, label) {
+  const b = l.bike;
+  const cost = b.pass ? `About ${moneyExact(b.pass)} a day for ${b.styles.includes("flow") || b.styles.includes("downhill") ? "lifts" : "uplift and shuttles"}.` : "No lifts needed. Ride from the door.";
+  return `<section class="park bike">
+      <span class="s-label">${label || (l.summerOnly ? "Riding here" : "Bike park and riding")}</span>
+      <p class="park-verdict"><b class="park-pill ${b.level}">${model.bike.levels[b.level]}</b> <span>${cost}</span></p>
+      <p>${esc(b.note)}</p>
+      <ul class="park-features">${b.styles.map((k) => `<li>${esc(model.bike.styles[k])}</li>`).join("")}</ul>
+      <p class="suits">Suits ${levelDots(b.suits)} ${b.suits.map((v) => LEVEL_LABEL[v]).join(", ")}</p>
+      <p class="season-line">Usually open ${bikeSeasonText(b)}${state.trip.week ? bikeSeasonWarn(b) : ""}</p>
+      <p class="snow-note">Our rating for ${model.bike.checked}. A first pass from what we know of each place, so check the park's own site for trail maps, opening dates and prices before you go. ${l.summerOnly ? " This valley town has no ski area in the app, so it only shows in summer." : " Summer bus times differ from winter ones."}</p>
+    </section>`;
+}
+
+function bikeBody(l) {
+  if (ridesHere(l)) {
+    let body = bikeSection(l);
+    if (l.type !== "resort") return body;
+    const cheaper = cheaperStays(l, model.byId).filter((c) => inSeason(c.place, "summer", model.byId));
+    body += `<section class="alt">
+        <h3>Stay lower, ride here</h3>
+        ${cheaper.length
+          ? `<p class="hint">${cheaper.length} cheaper place${cheaper.length === 1 ? "" : "s"} to stay with quick access to ${esc(l.name)}.</p>
+             <ul class="link-list">${cheaper.map((c) => placeRow(c, l, { vsResort: l })).join("")}</ul>
+             <button type="button" class="primary wide" data-pair="${l.id}">Compare ${esc(l.name)} with these</button>`
+          : `<p class="hint">No cheaper base within easy reach. Staying in the resort is the simple choice here.</p>`}
+      </section>`;
+    const linked = reachable(l, model.byId).filter((c) => inSeason(c.place, "summer", model.byId));
+    if (linked.length) body += `<section class="alt"><h3>Also reaches</h3><ul class="link-list">${linked.map((c) => placeRow(c)).join("")}</ul></section>`;
+    return body;
+  }
+  // A feeder town: stay low, ride the bike parks it reaches.
+  const r = bikeLinks(l, model.byId);
+  const best = bikeOf(l);
+  const savings = r.filter((x) => x.place.price > l.price);
+  return `<section class="park bike">
+      <span class="s-label">Riding nearby</span>
+      <p class="park-verdict"><b class="park-pill ${best.level}">${model.bike.levels[best.level]}</b> at
+        <button type="button" class="link" data-select="${best.place.id}">${esc(best.place.name)}</button>, ${mins(best.link.min)} away</p>
+      <p>${esc(best.place.bike.note)}</p>
+      <p class="snow-note">Our rating for ${model.bike.checked}. Bus and lift links are winter times, so check summer timetables before you book.</p>
+    </section>
+    <section class="alt">
+      <h3>Bike parks within reach</h3>
+      <p class="hint">${r.length} place${r.length === 1 ? "" : "s"}, nearest in ${mins(r[0].link.min)}.${savings.length ? ` Cheaper than staying in ${savings.length} of them.` : ""}</p>
+      <ul class="link-list">${r.map((c) => placeRow(c, null, { fromBase: l })).join("")}</ul>
+      <button type="button" class="primary wide" data-pair="${l.id}">Compare with nearest bike parks</button>
+    </section>`;
 }
 
 function renderDetail(l) {
@@ -954,10 +1105,12 @@ function renderDetail(l) {
       ${stat("Town", SIZE_LABEL[l.townSize], l.family ? "Family-friendly" : "Better for adults")}
     </div>`;
 
-  const getting = `<p class="getting"><span class="s-label">Getting there from Geneva</span>${esc(l.transfer)}${l.rail ? ` <span class="badge">${esc(l.rail)}</span>` : ""}${l.carFree ? ` <span class="badge good">No car needed</span>` : ""}</p>`;
+  const getting = `<p class="getting"><span class="s-label">Getting there</span>${esc(l.transfer)}${l.rail ? ` <span class="badge">${esc(l.rail)}</span>` : ""}${l.carFree ? ` <span class="badge good">No car needed</span>` : ""}</p>`;
 
   let body = tripTeaser(l) + fitSection(l);
-  if (l.type === "resort") {
+  if (summer()) {
+    body += bikeBody(l);
+  } else if (l.type === "resort") {
     const cheaper = cheaperStays(l, model.byId);
     body += `<section class="ski">
         <span class="s-label">Ski area</span>
@@ -1058,9 +1211,10 @@ function toggleCompare(id, force) {
 
 function pairUp(id) {
   const l = model.byId.get(id);
-  const others = l.type === "resort"
+  const others = (l.type === "resort"
     ? cheaperStays(l, model.byId).map((x) => x.place.id)
-    : reachable(l, model.byId).map((x) => x.place.id);
+    : (summer() ? bikeLinks(l, model.byId) : reachable(l, model.byId)).map((x) => x.place.id))
+    .filter((x) => inSeason(model.byId.get(x), state.season, model.byId));
   state.compare = [id, ...others].slice(0, MAX_COMPARE);
   renderCompareBar();
   openCompare();
@@ -1087,7 +1241,7 @@ function openCompare() {
 
 // A town in the table is costed against a resort it reaches that is also in the table, if any.
 function compareCost(l, cols) {
-  if (l.type === "resort") return costOf(l);
+  if (l.type === "resort" || (summer() && ridesHere(l))) return costOf(l);
   const reach = new Set((l.links || []).map((k) => k.to));
   const match = cols.find((c) => c.type === "resort" && reach.has(c.id));
   return costOf(l, match);
@@ -1104,6 +1258,13 @@ function renderCompareTable() {
     return (v) => v === target && nums.some((n) => n !== target);
   };
 
+  // The nearest resort a town reaches, for this season. Places that ride or ski where they stay have none.
+  const nearbyList = (l) => {
+    const r = summer() ? (ridesHere(l) ? [] : bikeLinks(l, model.byId)) : l.type === "base" ? reachable(l, model.byId) : [];
+    return l.type === "resort" || !r.length ? null : r;
+  };
+  const dailyHop = (l) => nearbyList(l)?.[0];
+
   const rows = [
     {
       label: "Trip cost",
@@ -1111,7 +1272,7 @@ function renderCompareTable() {
       win: Math.min,
       cell: (l) => {
         const c = compareCost(l, cols);
-        return `${money(c.total)}<small>${l.type === "resort" ? "staying here" : `skiing ${esc(c.ski.name)}`}, ${money(c.perPerson)} each</small>`;
+        return `${money(c.total)}<small>${c.ski.id === l.id ? "staying here" : `${summer() ? "riding" : "skiing"} ${esc(c.ski.name)}`}, ${money(c.perPerson)} each</small>`;
       },
     },
     {
@@ -1133,6 +1294,7 @@ function renderCompareTable() {
       cell: (l) => `${l.altitude} m<small>${l.topAltitude ? `top ${l.topAltitude} m` : "village"}</small>`,
     },
     {
+      only: "winter",
       label: "Ski area",
       vals: cols.map((l) => l.skiArea?.pisteKm ?? bestSkiFrom(l)?.place.skiArea.pisteKm),
       win: Math.max,
@@ -1143,6 +1305,7 @@ function renderCompareTable() {
       },
     },
     {
+      only: "winter",
       label: "Snow park",
       vals: cols.map((l) => PARK_RANK[parkOf(l).level]),
       win: Math.max,
@@ -1152,20 +1315,53 @@ function renderCompareTable() {
       },
     },
     {
-      label: "Daily hop to the slopes",
-      vals: cols.map((l) => (l.type === "resort" ? 0 : reachable(l, model.byId)[0].link.min)),
+      only: "summer",
+      label: "Bike riding",
+      vals: cols.map((l) => BIKE_RANK[bikeOf(l).level]),
+      win: Math.max,
+      cell: (l) => {
+        const k = bikeOf(l);
+        return `${model.bike.levels[k.level]}<small>${k.link ? `at ${esc(k.place.name)}, ${mins(k.link.min)} away` : esc(styleNames(k.place.bike))}</small>`;
+      },
+    },
+    {
+      only: "summer",
+      label: "Lift pass, per day",
+      vals: cols.map((l) => bikeOf(l).place.bike.pass),
       win: Math.min,
       cell: (l) => {
-        if (l.type === "resort") return `On the slopes`;
-        const n = reachable(l, model.byId)[0];
+        const b = bikeOf(l).place.bike;
+        return b.pass ? `${moneyExact(b.pass)}<small>${b.styles.includes("flow") || b.styles.includes("downhill") ? "bike lift pass" : "uplift and shuttles"}</small>` : "None needed";
+      },
+    },
+    {
+      only: "summer",
+      label: "Riding styles",
+      cell: (l) => esc(bikeOf(l).place.bike.styles.map((k) => model.bike.styles[k]).join(", ")),
+    },
+    {
+      only: "summer",
+      label: "Usually open",
+      cell: (l) => {
+        const b = bikeOf(l).place.bike;
+        return `${fmtDay(b.season.open)} to ${fmtDay(b.season.close)}`;
+      },
+    },
+    {
+      label: "Daily hop to the slopes",
+      vals: cols.map((l) => dailyHop(l)?.link.min ?? 0),
+      win: Math.min,
+      cell: (l) => {
+        const n = dailyHop(l);
+        if (!n) return summer() ? `Ride from the door` : `On the slopes`;
         return `${mins(n.link.min)}<small>to ${esc(n.place.name)} by ${modes(n.link.by)}</small>`;
       },
     },
     {
-      label: "Resorts within 30 min",
-      vals: cols.map((l) => (l.type === "base" ? reachable(l, model.byId).filter((x) => x.link.min <= 30).length : NaN)),
+      label: summer() ? "Bike parks within 30 min" : "Resorts within 30 min",
+      vals: cols.map((l) => (nearbyList(l) ? nearbyList(l).filter((x) => x.link.min <= 30).length : NaN)),
       win: Math.max,
-      cell: (l) => (l.type === "base" ? String(reachable(l, model.byId).filter((x) => x.link.min <= 30).length) : "—"),
+      cell: (l) => (nearbyList(l) ? String(nearbyList(l).filter((x) => x.link.min <= 30).length) : "—"),
     },
     {
       label: "Group fit",
@@ -1174,6 +1370,7 @@ function renderCompareTable() {
       cell: (l) => `${fitOf(l).score}<small>${fitBand(fitOf(l).score)}</small>`,
     },
     {
+      only: "winter",
       label: "Ski school",
       cell: (l) => {
         const r = l.type === "resort" ? l : fitOf(l).resort;
@@ -1181,8 +1378,9 @@ function renderCompareTable() {
         return `${e}<small>Kids from ${r.school.skiFrom}${r.school.crecheFromMonths ? `, crèche from ${r.school.crecheFromMonths} months` : ""}</small>`;
       },
     },
-    { label: "Suits", cell: (l) => (l.levels ? levelDots(l.levels) : l.type === "base" ? "Depends on the resort" : "—") },
+    { label: "Suits", cell: (l) => (summer() ? levelDots(bikeOf(l).place.bike.suits) : l.levels ? levelDots(l.levels) : l.type === "base" ? "Depends on the resort" : "—") },
     {
+      only: "winter",
       label: "Snow, your months",
       vals: cols.map((l) => SNOW_RANK[snowOf(l)]),
       win: Math.max,
@@ -1197,7 +1395,7 @@ function renderCompareTable() {
     { label: "Family-friendly", cell: (l) => (l.family ? "Yes" : "Less so") },
     { label: "No car needed", cell: (l) => (l.carFree ? "Yes" : "Car helps") },
     { label: "Character", cell: (l) => `<span class="long">${esc(l.character)}</span>` },
-  ];
+  ].filter((r) => !r.only || r.only === state.season);
 
   const headRow = `<tr><th scope="col"></th>${cols.map((l) => `<th scope="col" class="${l.type}">
       <span class="eyebrow"><i class="dot ${l.type}"></i>${typeLabel(l)}</span>
@@ -1217,12 +1415,98 @@ function renderCompareTable() {
 
 /* ---------- controls ---------- */
 
+const shortDate = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+const weekList = () => (summer() ? model.bike.weeks : model.index.weeks);
+
+function fillWeeks() {
+  $("#t-week").innerHTML = `<option value="">Any week in my months</option>` + weekList().map((w) =>
+    `<option value="${w.start}">${shortDate(w.start)} · ${esc(w.label)} · ${w.crowd}</option>`).join("");
+  $("#t-week").value = state.trip.week || "";
+  showWeekNote();
+}
+
+function showWeekNote() {
+  const w = weekList().find((x) => x.start === state.trip.week);
+  $("#week-note").textContent = w
+    ? `${w.note} Prices about ${Math.round(w.factor * 100)}% of a normal week.`
+    : `Pick a week to see school holidays, crowds and which ${summer() ? "places" : "resorts"} are open.`;
+  $("#week-note").dataset.crowd = w ? w.crowd : "";
+}
+
+/* ---------- winter and summer ---------- */
+
+const SORTS = {
+  winter: [["fit", "Best match"], ["time", "Time from airport"], ["cost", "Trip cost"], ["price", "Price"], ["altitude", "Altitude"], ["ski", "Ski area size"], ["snow", "Snow reliability"]],
+  summer: [["fit", "Best match"], ["time", "Time from airport"], ["cost", "Trip cost"], ["price", "Price"], ["altitude", "Altitude"], ["bike", "Bike riding rating"]],
+};
+
+// First-screen cards: one per country, counting what there is to do in this season.
+function renderWelcome() {
+  $("#welcome-countries").innerHTML = model.countries.map((c) => {
+    const n = model.locations.filter((l) => l.country === c.code && (summer() ? ridesHere(l) && !(l.type === "base" && l.bike && !l.summerOnly) : l.type === "resort")).length;
+    const airport = model.origins.find((o) => o.id === c.primaryAirport);
+    return `<button type="button" data-v="${c.code}"><b>${esc(c.name)}</b><span>${n} ${summer() ? "places to ride" : "resorts"} · from ${esc(airport?.name || "")}</span></button>`;
+  }).join("");
+}
+
+// Put everything that depends on the season in line with state.season: words, lists, accent colour.
+function applySeasonUI() {
+  document.documentElement.dataset.season = state.season;
+  $$("[data-w]").forEach((el) => { el.textContent = summer() ? el.dataset.s : el.dataset.w; });
+  $$("[data-wt]").forEach((el) => { el.title = summer() ? el.dataset.st : el.dataset.wt; });
+  $$(".season-seg button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.season === state.season));
+  const sorts = SORTS[state.season];
+  if (!sorts.some(([v]) => v === state.sort)) state.sort = "fit";
+  $("#sort").innerHTML = sorts.map(([v, t]) => `<option value="${v}">${t}</option>`).join("");
+  $("#sort").value = state.sort;
+  fillWeeks();
+  renderWelcome();
+  renderDataNote();
+  $$("#f-months button").forEach((b) => b.setAttribute("aria-pressed", state.months.has(b.dataset.v)));
+  $$("#f-bmonths button").forEach((b) => b.setAttribute("aria-pressed", state.bikeMonths.has(b.dataset.v)));
+}
+
+function setSeason(next) {
+  if (next === state.season) return;
+  [state.trip.week, state.otherWeek] = [state.otherWeek, state.trip.week]; // each season keeps its own week
+  [state.trip.lessons, state.otherLessons] = [state.otherLessons, state.trip.lessons]; // and its own lessons
+  state.season = next;
+  state.compare = state.compare.filter((id) => inSeason(model.byId.get(id), next, model.byId));
+  applySeasonUI();
+  renderCompareBar();
+  const open = state.selected && model.byId.get(state.selected);
+  if (open && !inSeason(open, next, model.byId)) clearSelection();
+  tripChanged();
+  updateSnowLayer();
+  if (open && inSeason(open, next, model.byId)) select(open.id);
+  else if (!state.selected) airportView(900);
+  savePlan();
+}
+
 function bindControls() {
+  // Winter and summer switch: one in the side panel, one on the map.
+  $$(".season-seg button").forEach((b) => b.addEventListener("click", () => setSeason(b.dataset.season)));
+  // Summer controls built from the data: month chips and riding styles.
+  $("#f-bmonths").innerHTML = model.bike.months.map((m) =>
+    `<button type="button" id="f-m-${m.key}" data-v="${m.key}" aria-pressed="false">${m.label}</button>`).join("");
+  $("#f-bike-needs").innerHTML = Object.entries(model.bike.styles).map(([k, label]) =>
+    `<button type="button" id="f-bike-need-${k}" data-v="${k}" aria-pressed="false">${esc(label)}</button>`).join("");
+  $$("#f-bike button").forEach((b) => b.addEventListener("click", () => {
+    state.bike = b.dataset.v;
+    $$("#f-bike button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    applyFilters();
+  }));
+  $$("#f-bike-needs button").forEach((b) => b.addEventListener("click", () => {
+    const v = b.dataset.v;
+    state.bikeNeeds.has(v) ? state.bikeNeeds.delete(v) : state.bikeNeeds.add(v);
+    b.setAttribute("aria-pressed", state.bikeNeeds.has(v));
+    applyFilters();
+  }));
   $$("#show-seg button").forEach((b) => b.addEventListener("click", () => setShow(b.dataset.show)));
   $("#show-saved").addEventListener("click", () => setShow(state.show === "saved" ? "all" : "saved"));
 
   $("#saved-compare").addEventListener("click", () => {
-    state.compare = [...state.saved].slice(0, MAX_COMPARE);
+    state.compare = [...state.saved].filter((id) => inSeason(model.byId.get(id), state.season, model.byId)).slice(0, MAX_COMPARE);
     renderCompareBar();
     openCompare();
   });
@@ -1284,12 +1568,13 @@ function bindControls() {
   chipSet("#f-price", "prices", Number);
   chipSet("#f-size", "sizes", String);
   chipSet("#f-months", "months", String);
-  $("#f-months").addEventListener("click", () => {
+  chipSet("#f-bmonths", "bikeMonths", String);
+  $$("#f-months, #f-bmonths").forEach((el) => el.addEventListener("click", () => {
     if (state.snowLayer) updateSnowLayer();
-    // Month choice changes every snow rating, so redraw open panels too.
+    // Month choice changes every snow rating and trip cost, so redraw open panels too.
     if (state.selected) renderDetail(model.byId.get(state.selected));
     if (!$("#compare").hidden) renderCompareTable();
-  });
+  }));
   const tripInputs = { nights: "#t-nights", skiDays: "#t-days", adults: "#t-adults" };
   for (const [key, sel] of Object.entries(tripInputs)) {
     $(sel).addEventListener("input", (e) => {
@@ -1324,27 +1609,24 @@ function bindControls() {
     tripChanged();
   });
 
-  // Week picker: Saturdays across the season, labelled with school holidays.
-  const weekSel = $("#t-week");
-  const shortDate = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
-  weekSel.innerHTML = `<option value="">Any week in my months</option>` + model.index.weeks.map((w) =>
-    `<option value="${w.start}">${shortDate(w.start)} · ${esc(w.label)} · ${w.crowd}</option>`).join("");
-  const showWeekNote = () => {
-    const w = model.index.weeks.find((x) => x.start === state.trip.week);
-    $("#week-note").textContent = w
-      ? `${w.note} Prices about ${Math.round(w.factor * 100)}% of a normal week.`
-      : "Pick a week to see school holidays, crowds and which resorts are open.";
-    $("#week-note").dataset.crowd = w ? w.crowd : "";
-  };
-  showWeekNote();
-  weekSel.addEventListener("change", () => {
-    state.trip.week = weekSel.value || null;
+  // Week picker: Saturdays across the season, labelled with school holidays. fillWeeks builds the list.
+  $("#t-week").addEventListener("change", () => {
+    state.trip.week = $("#t-week").value || null;
     if (state.trip.week) {
-      // The week decides the snow month too.
-      const key = MONTHS[[11, 0, 1, 2, 3].indexOf(new Date(state.trip.week + "T12:00:00").getMonth())]?.key;
-      if (key) {
-        state.months = new Set([key]);
-        $$("#f-months button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === key));
+      // The week decides the month too.
+      const month = new Date(state.trip.week + "T12:00:00").getMonth();
+      if (summer()) {
+        const key = { 5: "jun", 6: "jul", 7: "aug", 8: "sep" }[month];
+        if (key) {
+          state.bikeMonths = new Set([key]);
+          $$("#f-bmonths button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === key));
+        }
+      } else {
+        const key = MONTHS[[11, 0, 1, 2, 3].indexOf(month)]?.key;
+        if (key) {
+          state.months = new Set([key]);
+          $$("#f-months button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === key));
+        }
       }
     }
     showWeekNote();
@@ -1371,12 +1653,10 @@ function bindControls() {
     tripChanged();
   });
   // First screen: one card per country.
-  $("#welcome-countries").innerHTML = model.countries.map((c) => {
-    const n = model.locations.filter((l) => l.country === c.code && l.type === "resort").length;
-    const airport = model.origins.find((o) => o.id === c.primaryAirport);
-    return `<button type="button" data-v="${c.code}"><b>${esc(c.name)}</b><span>${n} resorts · from ${esc(airport?.name || "")}</span></button>`;
-  }).join("");
-  $$("#welcome-countries button").forEach((b) => b.addEventListener("click", () => pickCountries([b.dataset.v], { added: b.dataset.v })));
+  $("#welcome-countries").addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (b) pickCountries([b.dataset.v], { added: b.dataset.v });
+  });
   // Country chips, shown once more than one country is live. None picked means all.
   $("#f-country-field").hidden = model.countries.length < 2;
   $("#f-country").innerHTML = model.countries.map((c) =>
@@ -1607,6 +1887,12 @@ let saveTimer = null;
 function planOf() {
   return {
     v: 1,
+    season: state.season,
+    bikeMonths: [...state.bikeMonths],
+    bike: state.bike,
+    bikeNeeds: [...state.bikeNeeds],
+    otherWeek: state.otherWeek,
+    otherLessons: state.otherLessons,
     origin: state.origin,
     currency: state.currency,
     months: [...state.months],
@@ -1651,6 +1937,13 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   const ids = (xs) => (Array.isArray(xs) ? xs.filter((id) => model.byId.has(id)) : []);
   const num = (v, lo, hi, d) => (Number.isFinite(v) && v >= lo && v <= hi ? v : d);
   if (model.origins.some((o) => o.id === p.origin)) state.origin = p.origin;
+  state.season = p.season === "summer" ? "summer" : "winter";
+  const bikeMonths = (p.bikeMonths || []).filter((m) => model.bike.months.some((x) => x.key === m));
+  if (bikeMonths.length) state.bikeMonths = new Set(bikeMonths);
+  state.bike = ["good", "awesome"].includes(p.bike) ? p.bike : "any";
+  state.bikeNeeds = new Set((p.bikeNeeds || []).filter((f) => f in model.bike.styles));
+  const [winterWeeks, summerWeeks] = [model.index.weeks, model.bike.weeks];
+  const weekIn = (list, w) => (list.some((x) => x.start === w) ? w : null);
   if (p.currency === "GBP" || p.currency === "EUR") state.currency = p.currency;
   const months = (p.months || []).filter((m) => MONTHS.some((x) => x.key === m));
   if (months.length) state.months = new Set(months);
@@ -1663,8 +1956,10 @@ function applyPlan(p, { mergeSaved = false } = {}) {
     transport: t.transport === "car" ? "car" : "shuttle",
     lessons: ["none", "kids", "all"].includes(t.lessons) ? t.lessons : "all",
     hire: t.hire !== false,
-    week: model.index.weeks.some((w) => w.start === t.week) ? t.week : null,
+    week: weekIn(state.season === "summer" ? summerWeeks : winterWeeks, t.week),
   };
+  state.otherWeek = weekIn(state.season === "summer" ? winterWeeks : summerWeeks, p.otherWeek);
+  state.otherLessons = ["none", "kids", "all"].includes(p.otherLessons) ? p.otherLessons : state.season === "summer" ? "all" : "none";
   state.skiAt = Object.fromEntries(Object.entries(p.skiAt || {}).filter(([b, r]) => model.byId.has(b) && model.byId.has(r)));
   if (["all", "resort", "base", "saved"].includes(p.show)) state.show = p.show;
   state.maxTime = num(p.maxTime, 20, 300, 300);
@@ -1684,7 +1979,7 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   state.park = ["good", "awesome"].includes(p.park) ? p.park : "any";
   state.parkNeeds = new Set((p.parkNeeds || []).filter((f) => f in model.index.parkFeatures));
   state.snowLayer = p.snowLayer === true;
-  if (["fit", "time", "cost", "price", "altitude", "ski", "snow"].includes(p.sort)) state.sort = p.sort;
+  if (["fit", "time", "cost", "price", "altitude", "ski", "snow", "bike"].includes(p.sort)) state.sort = p.sort;
   if (mergeSaved) for (const id of ids(p.saved)) state.saved.add(id);
   else state.saved = new Set(ids(p.saved));
   planReopen = model.byId.has(p.selected) ? p.selected : null;
@@ -1763,7 +2058,7 @@ function keepDaysWithinNights() {
 
 // Put every control in line with the state (after restoring a plan).
 function syncControls() {
-  const pressed = (sel, on) => $$(sel).forEach((b) => b.setAttribute("aria-pressed", on(b.dataset.v ?? b.dataset.show)));
+  const pressed = (sel, on) => $$(sel).forEach((b) => b.setAttribute("aria-pressed", on(b.dataset.v ?? b.dataset.show ?? b.dataset.season)));
   const t = state.trip;
   $("#origin").value = state.origin || "";
   $("#t-nights").value = t.nights;
@@ -1776,6 +2071,10 @@ function syncControls() {
   pressed("#t-lessons button", (v) => v === t.lessons);
   pressed("#t-transport button", (v) => v === t.transport);
   pressed("#f-months button", (v) => state.months.has(v));
+  pressed("#f-bmonths button", (v) => state.bikeMonths.has(v));
+  pressed("#f-bike button", (v) => v === state.bike);
+  pressed("#f-bike-needs button", (v) => state.bikeNeeds.has(v));
+  pressed(".season-seg button", (v) => v === state.season);
   pressed("#f-price button", (v) => state.prices.has(Number(v)));
   pressed("#f-size button", (v) => state.sizes.has(v));
   pressed("#f-vibe button", (v) => state.vibes.has(v));
@@ -1817,7 +2116,7 @@ function renderDataNote() {
   const rate = state.currency === "GBP"
     ? `<p>£ at €1 = £${state.gbpPerEur.toFixed(3)} (European Central Bank${state.rateDate ? `, ${fmtDay(state.rateDate)}` : ""}).</p>` : "";
   $("#data-note").innerHTML = `<ul class="bands">${bands}</ul>
-    <p>${esc(model.index.costs.note)} ${model.notes.map(esc).join(" ")}</p>${rate}`;
+    <p>${esc(summer() ? model.bike.costs.note : model.index.costs.note)} ${model.notes.map(esc).join(" ")}</p>${rate}`;
 }
 
 /* ---------- currency ---------- */
