@@ -876,3 +876,7 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .detail.tripsheet > section:first-of-type { border-top: 0; padding-top: 0; }
 .detail > .d-foot { margin-top: 2px; }
 .detail.is-min > .d-foot { display: none; }
+
+.hist-lead { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+.hist-lead strong { color: var(--ink); font-weight: 600; }
+.snow-hist .of { font-size: 0.72em; font-weight: 500; opacity: .6; margin-left: 1px; }

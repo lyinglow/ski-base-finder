@@ -178,14 +178,15 @@ function snowHistory(l) {
   const cell = ([yes, n], key) => {
     const share = yes / n;
     const tone = share >= 0.8 ? "good" : share >= 0.5 ? "fair" : "poor";
-    return `<td class="${tone}${state.months.has(key) ? " picked" : ""}" title="${yes} of ${n} winters">${yes}</td>`;
+    return `<td class="${tone}${state.months.has(key) ? " picked" : ""}" title="Snow lying in ${yes} of the last ${n} winters">${yes}<span class="of">/${n}</span></td>`;
   };
-  return `<table class="snow-hist">
+  return `<p class="hist-lead"><strong>Winters with snow lying</strong>, out of the last 10. Each box is a number of years: 9/10 means snow was there in 9 of the 10 winters.</p>
+    <table class="snow-hist">
       <thead><tr><th scope="col"><span class="sr-only">Where</span></th>${MONTHS.map((m) => `<th scope="col">${m.label}</th>`).join("")}</tr></thead>
       <tbody>${Object.entries(h).map(([area, months]) =>
         `<tr><th scope="row">${rows[area]}</th>${MONTHS.map((m) => cell(months[m.key], m.key)).join("")}</tr>`).join("")}</tbody>
     </table>
-    <p class="snow-note">Winters out of the last 10 with snow lying in the middle of the month, from NASA satellite images. Snow-making is not included.</p>`;
+    <p class="snow-note">Counted in the middle of each month, from NASA satellite images, 2015/16 to 2024/25. Snow-making is not included.</p>`;
 }
 
 function snowMonths(l) {
