@@ -678,6 +678,7 @@ function select(id) {
   if (!l) return;
   state.selected = id;
   history.replaceState(null, "", "#" + id);
+  for (const { el } of markers.values()) el.classList.remove("is-hover"); // a place was opened, so drop any list highlight
 
   const related = new Set([id]);
   const pairs = [];
@@ -1781,10 +1782,12 @@ function bindControls() {
       if (!inView && !state.selected) map.easeTo({ center: m.marker.getLngLat(), duration: 600 });
     }, 350);
   };
+  if (matchMedia("(hover: hover)").matches) { // a touch screen has no hover, and a tap would leave the ring stuck on
   list.addEventListener("mouseover", (e) => hoverPlace(e.target.closest("[data-id]")?.dataset.id ?? null));
   list.addEventListener("mouseleave", () => hoverPlace(null));
   list.addEventListener("focusin", (e) => hoverPlace(e.target.closest("[data-id]")?.dataset.id ?? null));
   list.addEventListener("focusout", () => hoverPlace(null));
+  }
 
   // Delegated actions used by the detail panel, compare bar and table.
   document.addEventListener("click", (e) => {
