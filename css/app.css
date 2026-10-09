@@ -890,3 +890,13 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 .info-btn:hover, .info-btn:focus-visible, .info-btn[aria-expanded="true"] { color: var(--resort); }
 .info-text { margin: -2px 0 10px; padding: 8px 10px; font-size: 13.5px; color: var(--muted); background: var(--panel-2); border-radius: 8px; }
 .info-text[hidden] { display: none; }
+
+/* (i) buttons on labels sit tight beside the text. */
+.s-label .info-btn, .label .info-btn, label .info-btn, .sl-title .info-btn { vertical-align: middle; margin-left: 4px; text-transform: none; }
+.s-label .info-btn svg, .label .info-btn svg { width: 15px; height: 15px; }
+.info-btn svg.ic { width: 17px; height: 17px; stroke-width: 1.7; }
+.hist-lead span { color: var(--muted); }
+.field-note.info-text { margin: 0; }
+.week-note:empty { display: none; }
+.data-note .hist-lead { margin-bottom: 6px; }
+.sl-note.info-text { margin: 4px 0 0; }

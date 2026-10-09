@@ -33,6 +33,7 @@
     <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
     <symbol id="i-park" viewBox="0 0 24 24"><path d="M3 20h18M4 20c7 0 12-4 15-12l2 1"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v5.5M12 7.8v.1"/></symbol>
     <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 17.5l9 5 9-5"/></symbol>
     <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l3.5-7h5.5l3 7M9.5 9 12 16M8 6h3"/></symbol>
   </svg>
@@ -61,7 +62,8 @@
 
       <section class="filters" aria-label="Filters">
         <div class="field" id="f-country-field" hidden>
-          <span class="label"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Where to? <small class="label-note">pick any, or none for all</small></span>
+          <span class="label"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Where to?<button type="button" class="info-btn" aria-expanded="false" aria-controls="i-where" aria-label="More about this"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></button></span>
+          <p class="info-text" id="i-where" hidden>Pick any, or none for all.</p>
           <div class="chips" id="f-country"></div>
         </div>
 
@@ -130,10 +132,10 @@
         </div>
 
         <div class="field">
-          <label for="f-hop"><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg><span data-w="Max daily hop to the slopes" data-s="Max daily hop to the bike park">Max daily hop to the slopes</span> <output id="f-hop-out">Any</output></label>
+          <label for="f-hop"><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg><span data-w="Max daily hop to the slopes" data-s="Max daily hop to the bike park">Max daily hop to the slopes</span> <button type="button" class="info-btn" aria-expanded="false" aria-controls="i-hop" aria-label="More about this"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></button> <output id="f-hop-out">Any</output></label>
           <input type="range" id="f-hop" min="5" max="60" step="5" value="60">
           <div class="range-ends"><span>5 min</span><span>1h</span></div>
-          <p class="field-note" data-w="For feeder towns: the trip from your bed to the lifts. Resorts count as zero." data-s="For valley towns: the trip from your bed to the bike park. Places you ride from the door count as zero.">For feeder towns: the trip from your bed to the lifts. Resorts count as zero.</p>
+          <p class="field-note info-text" id="i-hop" hidden data-w="For feeder towns: the trip from your bed to the lifts. Resorts count as zero." data-s="For valley towns: the trip from your bed to the bike park. Places you ride from the door count as zero.">For feeder towns: the trip from your bed to the lifts. Resorts count as zero.</p>
         </div>
 
         <div class="field">
@@ -169,7 +171,8 @@
         </div>
 
         <div class="field">
-          <span class="label"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Vibe <small class="label-note">pick any, or none for all</small></span>
+          <span class="label"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Vibe<button type="button" class="info-btn" aria-expanded="false" aria-controls="i-vibe" aria-label="More about this"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></button></span>
+          <p class="info-text" id="i-vibe" hidden>Pick any, or none for all.</p>
           <div class="chips" id="f-vibe"></div>
         </div>
 
@@ -220,7 +223,8 @@
 
       <div class="view" id="view-places" role="tabpanel" aria-labelledby="tab-places" hidden>
         <div class="shortlist-tools" id="shortlist-tools" hidden>
-          <p>Your winter and summer shortlists are kept apart. They and your trip are saved in this browser. Use the plan link to open them on another device or share them.</p>
+          <p class="hist-lead"><span>Saved in this browser</span><button type="button" class="info-btn" aria-expanded="false" aria-controls="i-short" aria-label="More about this"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></button></p>
+          <p class="info-text" id="i-short" hidden>Your winter and summer shortlists are kept apart. They and your trip are saved in this browser. Use the plan link to open them on another device or share them.</p>
           <div class="tool-row">
             <button type="button" id="saved-compare" class="primary">Compare</button>
             <button type="button" id="saved-share" class="secondary">Copy plan link</button>
@@ -278,12 +282,12 @@
       </div>
 
       <div class="snow-legend" id="snow-legend" hidden>
-        <p class="sl-title">Snow on the ground, mid <span id="snow-month-name">January</span></p>
+        <p class="sl-title">Snow on the ground, mid <span id="snow-month-name">January</span><button type="button" class="info-btn" aria-expanded="false" aria-controls="i-snowkey" aria-label="More about this"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></button></p>
+        <p class="sl-note info-text" id="i-snowkey" hidden>Last 10 winters, NASA satellite record.</p>
         <div class="sl-months" id="snow-months" role="group" aria-label="Snow month">
           <button type="button" data-v="dec">Dec</button><button type="button" data-v="jan">Jan</button><button type="button" data-v="feb">Feb</button><button type="button" data-v="mar">Mar</button><button type="button" data-v="apr">Apr</button>
         </div>
         <p class="sl-scale"><span>Sometimes</span><i class="sl-ramp" aria-hidden="true"></i><span>Nearly every winter</span></p>
-        <p class="sl-note">Last 10 winters, NASA satellite record.</p>
       </div>
 
       <section class="welcome" id="welcome" aria-labelledby="welcome-title" hidden>

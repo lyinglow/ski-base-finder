@@ -180,19 +180,26 @@ function snowHistory(l) {
     const tone = share >= 0.8 ? "good" : share >= 0.5 ? "fair" : "poor";
     return `<td class="${tone}${state.months.has(key) ? " picked" : ""}" title="Snow lying in ${yes} of the last ${n} winters">${yes}<span class="of">/${n}</span></td>`;
   };
-  const why = "Out of the last 10 winters. Each box is a number of years: 9/10 means snow was there in 9 of the 10 winters.";
-  return `<p class="hist-lead"><strong>Winters with snow lying</strong>${infoButton(why)}</p>
-    <p class="info-text" hidden>${esc(why)}</p>
+  const i = info("Out of the last 10 winters. Each box is a number of years: 9/10 means snow was there in 9 of the 10 winters. Counted in the middle of each month, from NASA satellite images, 2015/16 to 2024/25. Snow-making is not included.");
+  return `<p class="hist-lead"><strong>Winters with snow lying</strong>${i.btn}</p>
+    ${i.note}
     <table class="snow-hist">
       <thead><tr><th scope="col"><span class="sr-only">Where</span></th>${MONTHS.map((m) => `<th scope="col">${m.label}</th>`).join("")}</tr></thead>
       <tbody>${Object.entries(h).map(([area, months]) =>
         `<tr><th scope="row">${rows[area]}</th>${MONTHS.map((m) => cell(months[m.key], m.key)).join("")}</tr>`).join("")}</tbody>
-    </table>
-    <p class="snow-note">Counted in the middle of each month, from NASA satellite images, 2015/16 to 2024/25. Snow-making is not included.</p>`;
+    </table>`;
 }
 
-// A small (i) button: tap it to show or hide the explanation that follows it.
-const infoButton = (text) => `<button type="button" class="info-btn" aria-expanded="false" aria-label="What does this mean?" title="${esc(text)}"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 7.2v4M8 4.9v.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>`;
+// A small (i) button and its hidden note. Put the button on a label and the note straight after that line.
+// Tapping the button shows or hides the note, which keeps the explainer text out of the way until it is wanted.
+let infoSeq = 0;
+function info(text) {
+  const id = `info-${++infoSeq}`;
+  return {
+    btn: `<button type="button" class="info-btn" aria-expanded="false" aria-controls="${id}" aria-label="More about this" title="${esc(text)}"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></button>`,
+    note: `<p class="info-text" id="${id}" hidden>${esc(text)}</p>`,
+  };
+}
 
 function snowMonths(l) {
   return `<div class="snow-months" role="list">${MONTHS.map((m) => {
@@ -429,12 +436,13 @@ function parkSection(l) {
   const where = k.link
     ? ` at <button type="button" class="link" data-select="${r.id}">${esc(r.name)}</button>, ${mins(k.link.min)} away`
     : r.park.name ? `<span>${esc(r.park.name)}</span>` : "";
+  const i = info(`Our rating for ${model.index.parkChecked}.${r.park.features && !r.park.featuresChecked ? " Features are from our first pass, not yet checked against this season's park map." : ""} Parks are rebuilt every winter, so check the resort's site before you go. Parks on the map are from OpenStreetMap and may be missing.`);
   return `<section class="park">
-      <span class="s-label">${k.link ? "Best snow park nearby" : "Snow park"}</span>
+      <span class="s-label">${k.link ? "Best snow park nearby" : "Snow park"}${i.btn}</span>
+      ${i.note}
       <p class="park-verdict"><b class="park-pill ${k.level}">${model.index.parkLevels[k.level]}</b>${where}</p>
       <p>${esc(r.park.note)}</p>
       ${parkFeatures(r.park)}
-      <p class="snow-note">Our rating for ${model.index.parkChecked}.${r.park.features && !r.park.featuresChecked ? " Features are from our first pass, not yet checked against this season's park map." : ""} Parks are rebuilt every winter, so check the resort's site before you go. Parks on the map are from OpenStreetMap and may be missing.</p>
     </section>`;
 }
 
@@ -926,19 +934,22 @@ function staySection(l) {
   const fmt = (s) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
   const list = (items) => `<ul class="stay-links">${items.map(([name, what, url]) =>
     `<li><a href="${url}" target="_blank" rel="noopener"><b>${esc(name)}</b><span>${esc(what)}</span><i aria-hidden="true">↗</i></a></li>`).join("")}</ul>`;
+  const i1 = info(`${town}, ${fmt(arrive)} to ${fmt(leave)}, ${guests} guest${guests === 1 ? "" : "s"}. Opens in a new tab.`);
+  const i2 = info("Flights, transfers and stay in one price. Compare a few.");
+  const i3 = info("Flights are not in the trip cost above.");
   return `<section class="stay">
-      <span class="s-label">Places to stay</span>
-      <p class="hint">${esc(town)}, ${fmt(arrive)} to ${fmt(leave)}, ${guests} guest${guests === 1 ? "" : "s"}. Opens in a new tab.</p>
+      <span class="s-label">Places to stay${i1.btn}</span>
+      ${i1.note}
       ${list(links)}
     </section>
     <section class="stay">
-      <span class="s-label">Package holidays</span>
-      <p class="hint">Flights, transfers and stay in one price. Compare a few.</p>
+      <span class="s-label">Package holidays${i2.btn}</span>
+      ${i2.note}
       ${list(packages)}
     </section>
     <section class="stay">
-      <span class="s-label">Flights</span>
-      <p class="hint">Flights are not in the trip cost above.</p>
+      <span class="s-label">Flights${i3.btn}</span>
+      ${i3.note}
       ${list(flights)}
     </section>`;
 }
@@ -1025,8 +1036,7 @@ function renderTripSheet(l) {
       </div>
     </header>
     ${tripSection(l)}
-    ${staySection(l)}
-    <p class="snow-note">Change nights, people, dates or transport under Your trip in the side panel.</p>`;
+    ${staySection(l)}`;
   s.hidden = false;
   s.scrollTop = top;
   s.classList.toggle("scrolled", top > 4);
@@ -1055,8 +1065,10 @@ function tripSection(l) {
     const link = options.find((r) => r.place.id === cost.ski.id).link;
     picker += `<p class="access"><span class="s-label">Getting up</span>${esc(accessText(link))} · ${mins(link.min)}</p>`;
   }
+  const ti = info("Change nights, people, dates or transport under Your trip in the side panel.");
   return `<section class="trip">
-      <span class="s-label">Trip cost</span>
+      <span class="s-label">Trip cost${ti.btn}</span>
+      ${ti.note}
       <p class="trip-total"><strong>${money(cost.total)}</strong> <span>${money(cost.perPerson)} per person</span></p>
       <p class="trip-who">${who}, ${t.nights} nights, ${t.skiDays} ${summer() ? "riding" : "ski"} days, ${cost.week ? `week of ${new Date(cost.week.start + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" })} (${esc(cost.week.label)})` : monthNames()}</p>
       ${picker}
@@ -1085,14 +1097,15 @@ const bikeSeasonWarn = (b) => {
 function bikeSection(l, label) {
   const b = l.bike;
   const cost = b.pass ? `About ${moneyExact(b.pass)} a day for ${b.styles.includes("flow") || b.styles.includes("downhill") ? "lifts" : "uplift and shuttles"}.` : "No lifts needed. Ride from the door.";
+  const i = info(`Our rating for ${model.bike.checked}. A first pass from what we know of each place, so check the park's own site for trail maps, opening dates and prices before you go.${l.summerOnly ? " This valley town has no ski area in the app, so it only shows in summer." : " Summer bus times differ from winter ones."}`);
   return `<section class="park bike">
-      <span class="s-label">${label || (l.summerOnly ? "Riding here" : "Bike park and riding")}</span>
+      <span class="s-label">${label || (l.summerOnly ? "Riding here" : "Bike park and riding")}${i.btn}</span>
+      ${i.note}
       <p class="park-verdict"><b class="park-pill ${b.level}">${model.bike.levels[b.level]}</b> <span>${cost}</span></p>
       <p>${esc(b.note)}</p>
       <ul class="park-features">${b.styles.map((k) => `<li>${esc(model.bike.styles[k])}</li>`).join("")}</ul>
       <p class="suits">Suits ${levelDots(b.suits)} ${b.suits.map((v) => LEVEL_LABEL[v]).join(", ")}</p>
       <p class="season-line">Usually open ${bikeSeasonText(b)}${state.trip.week ? bikeSeasonWarn(b) : ""}</p>
-      <p class="snow-note">Our rating for ${model.bike.checked}. A first pass from what we know of each place, so check the park's own site for trail maps, opening dates and prices before you go. ${l.summerOnly ? " This valley town has no ski area in the app, so it only shows in summer." : " Summer bus times differ from winter ones."}</p>
     </section>`;
 }
 
@@ -1117,12 +1130,13 @@ function bikeBody(l) {
   const r = bikeLinks(l, model.byId);
   const best = bikeOf(l);
   const savings = r.filter((x) => x.place.price > l.price);
+  const i = info(`Our rating for ${model.bike.checked}. Bus and lift links are winter times, so check summer timetables before you book.`);
   return `<section class="park bike">
-      <span class="s-label">Riding nearby</span>
+      <span class="s-label">Riding nearby${i.btn}</span>
+      ${i.note}
       <p class="park-verdict"><b class="park-pill ${best.level}">${model.bike.levels[best.level]}</b> at
         <button type="button" class="link" data-select="${best.place.id}">${esc(best.place.name)}</button>, ${mins(best.link.min)} away</p>
       <p>${esc(best.place.bike.note)}</p>
-      <p class="snow-note">Our rating for ${model.bike.checked}. Bus and lift links are winter times, so check summer timetables before you book.</p>
     </section>
     <section class="alt">
       <h3>Bike parks within reach</h3>
@@ -1178,11 +1192,12 @@ function renderDetail(l) {
       </section>
       ${parkSection(l)}`;
     const s = snowOf(l);
+    const si = info(`Rating estimated from altitude: skiing up to ${l.topAltitude} m, village at ${l.altitude} m.${l.snowNote ? ` ${l.snowNote}` : ""}`);
     body += `<section class="snow">
-        <span class="s-label">Snow</span>
+        <span class="s-label">Snow${si.btn}</span>
+        ${si.note}
         <p class="snow-verdict ${s}">${flake(s)} <strong>${SNOW_LABEL[s]}</strong> for ${monthNames()}</p>
         ${snowMonths(l)}
-        <p class="snow-note">Rating estimated from altitude: skiing up to ${l.topAltitude} m, village at ${l.altitude} m.${l.snowNote ? ` ${esc(l.snowNote)}` : ""}</p>
         <span class="s-label">Snow in past winters</span>
         ${snowHistory(l)}
       </section>`;
@@ -1465,8 +1480,9 @@ function renderCompareTable() {
       `<td class="${isBest(r.vals?.[i]) ? "best" : ""}">${r.cell(l)}</td>`).join("")}</tr>`;
   }).join("");
 
+  const ci = info(model.index.priceNote);
   $("#compare-table").innerHTML = `<table><thead>${headRow}</thead><tbody>${body}</tbody></table>
-    <p class="compare-note">Highlighted: best in row. ${esc(model.index.priceNote)}</p>`;
+    <p class="compare-note">Highlighted: best in row.${ci.btn}</p>${ci.note}`;
 }
 
 /* ---------- controls ---------- */
@@ -1485,7 +1501,7 @@ function showWeekNote() {
   const w = weekList().find((x) => x.start === state.trip.week);
   $("#week-note").textContent = w
     ? `${w.note} Prices about ${Math.round(w.factor * 100)}% of a normal week.`
-    : `Pick a week to see school holidays, crowds and which ${summer() ? "places" : "resorts"} are open.`;
+    : "";
   $("#week-note").dataset.crowd = w ? w.crowd : "";
 }
 
@@ -1813,12 +1829,12 @@ function bindControls() {
     if (t.dataset.pair) return pairUp(t.dataset.pair);
   });
 
-  // (i) buttons show or hide the note that follows their line.
+  // (i) buttons show or hide the note they point to.
   document.addEventListener("click", (e) => {
     const b = e.target.closest(".info-btn");
     if (!b) return;
-    const note = b.closest("p")?.nextElementSibling;
-    if (!note?.classList.contains("info-text")) return;
+    const note = document.getElementById(b.getAttribute("aria-controls"));
+    if (!note) return;
     note.hidden = !note.hidden;
     b.setAttribute("aria-expanded", !note.hidden);
   });
@@ -2236,8 +2252,9 @@ function renderDataNote() {
   const bands = Object.entries(model.priceBands).map(([k, b]) => `<li><b>${price(k)}</b> ${b.label}: ${guide(b.guide)}</li>`).join("");
   const rate = state.currency === "GBP"
     ? `<p>£ at €1 = £${state.gbpPerEur.toFixed(3)} (European Central Bank${state.rateDate ? `, ${fmtDay(state.rateDate)}` : ""}).</p>` : "";
-  $("#data-note").innerHTML = `<ul class="bands">${bands}</ul>
-    <p>${esc(summer() ? model.bike.costs.note : model.index.costs.note)} ${model.notes.map(esc).join(" ")}</p>${rate}`;
+  $("#data-note").innerHTML = `<p class="hist-lead"><strong>About these prices</strong><button type="button" class="info-btn" aria-expanded="false" aria-controls="info-prices" aria-label="More about this"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></button></p>
+    <div class="info-text" id="info-prices" hidden><ul class="bands">${bands}</ul>
+    <p>${esc(summer() ? model.bike.costs.note : model.index.costs.note)} ${model.notes.map(esc).join(" ")}</p>${rate}</div>`;
 }
 
 /* ---------- currency ---------- */
