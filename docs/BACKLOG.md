@@ -29,6 +29,7 @@ Things we have talked about and not yet done. Newest thinking first within each 
 - [ ] Summer bus and lift links use winter times. Check summer timetables.
 - [ ] Kronplatz and Cavalese have too few mapped runs for a run mix.
 - [ ] Add German and Dutch school holiday weeks to the week picker.
+- [ ] Ski school note: how far the meeting point is from the village centre (for example "5 min from the centre"). Needs the minutes per resort, from each school's site. An optional `school.fromCentreMin` field and a line in the Ski school section would carry it.
 
 ## Ideas for the place panel
 
