@@ -1826,6 +1826,14 @@ function bindControls() {
   });
 
   $("#clear-map").addEventListener("click", clearMap);
+  $("#clear-filters").addEventListener("click", clearMap);
+
+  // Layers menu (phones): open and close; the options also work in the row on wide screens.
+  const layersBtn = $("#layers-btn"), layersPanel = $("#layers-panel");
+  const setLayers = (open) => { layersPanel.hidden = !open; layersBtn.setAttribute("aria-expanded", open); };
+  layersBtn.addEventListener("click", () => setLayers(layersPanel.hidden));
+  document.addEventListener("click", (e) => { if (!layersPanel.hidden && !e.target.closest("#layers")) setLayers(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !layersPanel.hidden) { setLayers(false); layersBtn.focus(); } });
 
   $("#toggle-snow").addEventListener("click", () => {
     state.snowLayer = !state.snowLayer;

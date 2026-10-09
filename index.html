@@ -33,6 +33,7 @@
     <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
     <symbol id="i-park" viewBox="0 0 24 24"><path d="M3 20h18M4 20c7 0 12-4 15-12l2 1"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 17.5l9 5 9-5"/></symbol>
     <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l3.5-7h5.5l3 7M9.5 9 12 16M8 6h3"/></symbol>
   </svg>
   <div class="app">
@@ -213,6 +214,7 @@
       </section>
         <div class="show-places">
           <button type="button" id="show-places" class="primary wide">Show <span id="show-places-n">places</span></button>
+          <button type="button" id="clear-filters" class="ghost wide" title="Clear filters, the selected place and the snow layer. Your trip and shortlist stay.">Clear map</button>
         </div>
       </div>
 
@@ -261,13 +263,18 @@
           <button type="button" class="tool" data-season="winter" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-snow"/></svg>Winter</button>
           <button type="button" class="tool" data-season="summer" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg>Summer</button>
         </div>
-        <div class="tool-group" role="group" aria-label="Map style">
-          <button type="button" id="style-sat" class="tool" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Satellite</button>
-          <button type="button" id="style-topo" class="tool" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg>Topo</button>
+        <div class="layers" id="layers">
+          <button type="button" id="layers-btn" class="tool layers-btn" aria-expanded="false" aria-controls="layers-panel" aria-label="Map layers and options"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg><span class="layers-text">Layers</span></button>
+          <div class="layers-panel" id="layers-panel" hidden>
+            <div class="tool-group" role="group" aria-label="Map style">
+              <button type="button" id="style-sat" class="tool" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Satellite</button>
+              <button type="button" id="style-topo" class="tool" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg>Topo</button>
+            </div>
+            <button type="button" id="toggle-3d" class="tool" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg>3D</button>
+            <button type="button" id="toggle-snow" class="tool winter-only" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-snow"/></svg>Snow</button>
+            <button type="button" id="clear-map" class="tool" title="Clear filters, the selected place and the snow layer. Your trip and shortlist stay."><svg class="ic" aria-hidden="true"><use href="#i-reset"/></svg>Clear map</button>
+          </div>
         </div>
-        <button type="button" id="toggle-3d" class="tool" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg>3D</button>
-        <button type="button" id="toggle-snow" class="tool winter-only" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-snow"/></svg>Snow</button>
-        <button type="button" id="clear-map" class="tool" title="Clear filters, the selected place and the snow layer. Your trip and shortlist stay."><svg class="ic" aria-hidden="true"><use href="#i-reset"/></svg>Clear map</button>
       </div>
 
       <div class="snow-legend" id="snow-legend" hidden>

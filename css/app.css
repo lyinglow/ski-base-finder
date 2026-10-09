@@ -820,3 +820,46 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 }
 @keyframes hover-ring { 0%, 100% { transform: scale(.85); } 50% { transform: scale(1.15); } }
 @media (prefers-reduced-motion: reduce) { .marker.is-hover::before { animation: none; } }
+
+/* Map toolbar: Filters, season, and a Layers menu that holds the map options. */
+.layers { position: relative; }
+.layers-panel {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 4; min-width: 210px;
+  display: grid; gap: 8px; padding: 10px; background: var(--panel); border-radius: 12px; box-shadow: var(--shadow);
+}
+.layers-panel[hidden] { display: none; }
+.layers-panel .tool { box-shadow: none; background: var(--panel-2); justify-content: flex-start; }
+.layers-panel .tool-group { box-shadow: none; background: var(--panel-2); }
+.layers-panel .tool-group .tool { flex: 1; justify-content: center; background: transparent; }
+.layers-panel #toggle-3d, .layers-panel #toggle-snow, .layers-panel #clear-map { width: 100%; }
+/* On and off is clear: the chosen one is filled in the accent colour. */
+.layers-panel .tool[aria-pressed="true"], .tool-season .tool[aria-pressed="true"] { background: var(--resort); color: #fff; }
+.season-seg button[aria-pressed="true"] { background: var(--resort) !important; color: #fff !important; box-shadow: none !important; }
+.tool-season .tool[aria-pressed="false"] { background: var(--panel); color: var(--muted); }
+.tool-season .tool { justify-content: center; }
+.show-places { display: grid; gap: 8px; }
+#clear-filters { text-align: center; }
+@media (min-width: 900px) {
+  /* Plenty of room: the layer options sit in the row, no menu. */
+  .layers-btn { display: none; }
+  .layers { position: static; display: contents; }
+  .layers-panel { display: flex !important; position: static; padding: 0; background: none; box-shadow: none; gap: 8px; min-width: 0; }
+  .layers-panel .tool { background: var(--panel); box-shadow: var(--shadow); }
+  .layers-panel .tool-group { background: var(--panel); box-shadow: var(--shadow); }
+  .layers-panel .tool-group .tool { box-shadow: none; background: transparent; }
+  .layers-panel .tool[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+  .layers-panel .tool-group .tool[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+  .layers-panel #toggle-3d, .layers-panel #toggle-snow, .layers-panel #clear-map { width: auto; }
+}
+@media (max-width: 899px) {
+  /* One even row: Filters, the season switch (takes the space left), Layers as an icon. */
+  .map-tools { right: 12px; flex-wrap: nowrap; gap: 6px; }
+  .map-tools .tool { padding: 9px 11px; font-size: 14px; }
+  .tool-main { flex: none; }
+  .tool-season { flex: 1; min-width: 0; }
+  .tool-season .tool { flex: 1; padding-inline: 6px; gap: 5px; }
+  .layers-btn { padding: 9px 11px; }
+  .layers-text { display: none; }
+  .layers-btn[aria-expanded="true"] { background: var(--resort); color: #fff; }
+  .save-ctrl { display: none; }
+}
