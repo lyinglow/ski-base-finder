@@ -79,6 +79,13 @@ async function init() {
   updateOriginMarkers();
   for (const l of model.locations) addMarker(l);
   map.on("zoom", updateLabelMode);
+  // On a phone the place card covers half the map. Tapping empty map lowers it so the map shows; tap its title to bring it back.
+  map.on("click", (e) => {
+    if (!isNarrow() || !state.selected || state.detailMin || $("#detail").hidden) return;
+    if (map.queryRenderedFeatures(e.point, { layers: ["lifts-line", "parks-fill", "parks-line"].filter((l) => map.getLayer(l)) }).length) return;
+    state.detailMin = true;
+    renderDetail(model.byId.get(state.selected));
+  });
   for (const layer of ["lifts-line", "parks-fill", "parks-line"]) {
     map.on("click", layer, showLiftName);
     map.on("mouseenter", layer, () => { map.getCanvas().style.cursor = "pointer"; });

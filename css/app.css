@@ -863,3 +863,9 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
   .layers-btn[aria-expanded="true"] { background: var(--resort); color: #fff; }
   .save-ctrl { display: none; }
 }
+
+/* The Layers menu sits above the map labels and pins while it is open. */
+.map-tools:has(.layers-btn[aria-expanded="true"]) { z-index: 6; }
+@media (max-width: 899px) {
+  .map-tools { z-index: 4; }
+}
