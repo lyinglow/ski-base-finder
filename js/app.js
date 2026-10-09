@@ -180,7 +180,9 @@ function snowHistory(l) {
     const tone = share >= 0.8 ? "good" : share >= 0.5 ? "fair" : "poor";
     return `<td class="${tone}${state.months.has(key) ? " picked" : ""}" title="Snow lying in ${yes} of the last ${n} winters">${yes}<span class="of">/${n}</span></td>`;
   };
-  return `<p class="hist-lead"><strong>Winters with snow lying</strong>, out of the last 10. Each box is a number of years: 9/10 means snow was there in 9 of the 10 winters.</p>
+  const why = "Out of the last 10 winters. Each box is a number of years: 9/10 means snow was there in 9 of the 10 winters.";
+  return `<p class="hist-lead"><strong>Winters with snow lying</strong>${infoButton(why)}</p>
+    <p class="info-text" hidden>${esc(why)}</p>
     <table class="snow-hist">
       <thead><tr><th scope="col"><span class="sr-only">Where</span></th>${MONTHS.map((m) => `<th scope="col">${m.label}</th>`).join("")}</tr></thead>
       <tbody>${Object.entries(h).map(([area, months]) =>
@@ -188,6 +190,9 @@ function snowHistory(l) {
     </table>
     <p class="snow-note">Counted in the middle of each month, from NASA satellite images, 2015/16 to 2024/25. Snow-making is not included.</p>`;
 }
+
+// A small (i) button: tap it to show or hide the explanation that follows it.
+const infoButton = (text) => `<button type="button" class="info-btn" aria-expanded="false" aria-label="What does this mean?" title="${esc(text)}"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 7.2v4M8 4.9v.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>`;
 
 function snowMonths(l) {
   return `<div class="snow-months" role="list">${MONTHS.map((m) => {
@@ -1808,6 +1813,15 @@ function bindControls() {
     if (t.dataset.pair) return pairUp(t.dataset.pair);
   });
 
+  // (i) buttons show or hide the note that follows their line.
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest(".info-btn");
+    if (!b) return;
+    const note = b.closest("p")?.nextElementSibling;
+    if (!note?.classList.contains("info-text")) return;
+    note.hidden = !note.hidden;
+    b.setAttribute("aria-expanded", !note.hidden);
+  });
   $("#compare-open").addEventListener("click", () => openCompare());
   $("#compare-undo-btn").addEventListener("click", () => {
     if (!removedFromCompare) return;
