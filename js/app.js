@@ -85,6 +85,7 @@ async function init() {
     if (map.queryRenderedFeatures(e.point, { layers: ["lifts-line", "parks-fill", "parks-line"].filter((l) => map.getLayer(l)) }).length) return;
     state.detailMin = true;
     renderDetail(model.byId.get(state.selected));
+    reframeForCard();
   });
   for (const layer of ["lifts-line", "parks-fill", "parks-line"]) {
     map.on("click", layer, showLiftName);
@@ -712,12 +713,20 @@ function select(id) {
   const bounds = pts.reduce((b, p) => b.extend(p), new maplibregl.LngLatBounds(l.coords, l.coords));
   const cam = map.cameraForBounds(bounds, {
     padding: narrow
-      ? { top: 80, bottom: window.innerHeight * 0.55, left: 40, right: 40 }
+      ? { top: 80, bottom: window.innerHeight * 0.55, left: 40, right: 110 }
       : { top: 120, bottom: 120, left: 100, right: 460 },
     maxZoom: 11.5,
     bearing: map.getBearing(),
   });
   if (cam) map.flyTo({ ...cam, pitch: 60, duration: 1600 });
+}
+
+// On a phone, keep the selected place and its name in the free part of the map, whether the card is up or lowered.
+function reframeForCard() {
+  if (!isNarrow() || !state.selected) return;
+  const l = model.byId.get(state.selected);
+  const bottom = state.detailMin ? 110 : window.innerHeight * 0.55;
+  map.easeTo({ center: l.coords, padding: { top: 80, bottom, left: 40, right: 110 }, duration: 600 });
 }
 
 function clearSelection() {
@@ -1787,7 +1796,8 @@ function bindControls() {
     if (t.id === "detail-close") return clearSelection();
     if (t.id === "detail-min" || t.classList.contains("d-head")) {
       state.detailMin = !state.detailMin;
-      return renderDetail(model.byId.get(state.selected));
+      renderDetail(model.byId.get(state.selected));
+      return reframeForCard();
     }
     if (t.dataset.select) { $("#compare").hidden = true; return select(t.dataset.select); }
     if (t.dataset.compare) return toggleCompare(t.dataset.compare);

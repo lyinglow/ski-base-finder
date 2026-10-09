@@ -869,3 +869,10 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 @media (max-width: 899px) {
   .map-tools { z-index: 4; }
 }
+
+/* Place panel: a faint line and room above each section, so the sections are easy to spot. */
+.detail { gap: 18px; }
+.detail > section, .detail > .getting, .detail > .d-foot { border-top: 1px solid var(--sep); padding-top: 18px; }
+.detail.tripsheet > section:first-of-type { border-top: 0; padding-top: 0; }
+.detail > .d-foot { margin-top: 2px; }
+.detail.is-min > .d-foot { display: none; }
