@@ -968,3 +968,13 @@ p.origin .countries { display: none; }
   .welcome-countries button:hover { border-color: var(--line); background: var(--panel-2); }
 }
 #view-map-2 { background: var(--resort); color: #fff; border-color: transparent; }
+
+/* Compact bottom bar: View map and Show places side by side; Clear map is a small link. */
+.show-places { grid-template-columns: auto 1fr; gap: 8px; align-items: stretch; }
+.show-places .primary, .show-places .secondary { padding: 11px 14px; font-size: 15px; min-height: 0; }
+.show-places #show-places { width: auto; }
+@media (min-width: 900px) { .show-places { grid-template-columns: 1fr; } }
+.clear-row { margin: 0; text-align: center; }
+.clear-row .link { font-size: 13px; color: var(--muted); }
+.places-bar { padding-top: 8px; padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px)); }
+.places-bar .primary { padding: 11px 14px; font-size: 15px; }
