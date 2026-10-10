@@ -985,3 +985,5 @@ p.origin .countries { display: none; }
 .trip-teaser .s-label, .trip-teaser .tt-total { color: rgba(255, 255, 255, 0.82); }
 .trip-teaser .tt-total strong { color: #fff; }
 .trip-teaser .tt-go { color: #fff; }
+
+.welcome-countries.fresh button:hover { border-color: var(--line); background: var(--panel-2); }

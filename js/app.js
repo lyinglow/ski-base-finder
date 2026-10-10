@@ -1535,6 +1535,9 @@ function renderQuick() {
   const opt = (v, title, sub, icon = "") => `<button type="button" data-v="${v}"><b>${icon}${esc(title)}</b><span>${esc(sub)}</span></button>`;
   const ic = (id) => `<svg class="ic" aria-hidden="true"><use href="#${id}"/></svg>`;
   const bike = kind === "summer";
+  // The pointer still sits where the last tap was, so no card shows as chosen until it moves.
+  box.classList.add("fresh");
+  box.addEventListener("pointermove", () => box.classList.remove("fresh"), { once: true });
   if (step === 0) {
     $("#welcome-title").textContent = "What are you planning?";
     $("#qs-hint").textContent = "Three quick questions, then we show you the best places.";
