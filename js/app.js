@@ -581,7 +581,9 @@ function passes(l) {
   if (state.show !== "all" && l.type !== state.show) return false;
   if (summer()) {
     if (state.levels.includes("first") && !bikeSuits(l, "beginner")) return false;
-  } else if (state.levels.includes("first") && !l.easyStart) return false; // resorts only, walk to the beginner slopes
+  } else if (state.levels.includes("first") && !(l.easyStart || (l.type === "base" && reachable(l, model.byId).some((x) => x.place.easyStart)))) {
+    return false; // walk to the beginner slopes, or for a feeder town, reach a resort where you can
+  }
   if (state.maxTime < 300 && travel(l).min > state.maxTime) return false; // the top of the slider means any time
   if (l.type === "base" && !l.summerOnly) {
     const hops = summer() ? bikeLinks(l, model.byId) : reachable(l, model.byId);
