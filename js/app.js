@@ -1800,6 +1800,8 @@ function bindControls() {
   $("#qs-back").addEventListener("click", () => { quick.step = Math.max(0, quick.step - 1); renderQuick(); });
   $("#qs-skip").addEventListener("click", () => { quickSkipped = true; applyFilters(); });
   $("#sheet-grip").addEventListener("click", () => setSidebar(!sidebarOpen()));
+  // On a phone the list and filters sit over the map, so give a clear way back to it.
+  $$("#view-map-1, #view-map-2").forEach((b) => b.addEventListener("click", () => setSidebar(false)));
   // Country chips, shown once more than one country is live. None picked means all.
   $("#f-country-field").hidden = model.countries.length < 2;
   $("#f-country").innerHTML = model.countries.map((c) =>
