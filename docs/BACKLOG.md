@@ -7,6 +7,10 @@ Things we have talked about and not yet done. Newest thinking first within each 
 - [x] **Name: Base Finder** (for now, owner's choice). The `.com` and `.net` are taken (registered 2000). `basefinder.app`, `.io`, `.co`, `.co.uk` and `.ski` looked unregistered, so register one and point the site at it. Other things use the name (Septentrio survey software, a TradingView indicator, Clash of Clans and Minecraft tools), so keep the sport in the page title. Do a trademark search (UK IPO, EUIPO, USPTO; classes 39 and 42) before spending on branding. Not yet moved: the web address is still `ski-base-finder.vercel.app`.
 - [ ] Register a domain and move the site to it, with the old address forwarding.
 
+## Done lately
+
+- [x] Three quick questions on the first screen (snow or bike, country, level) and a peeking Plan your trip panel. Watch two or three new people use it and note where they stop.
+
 ## Fixes from the health check
 
 - [ ] Add a favicon (`/favicon.ico` is a 404).

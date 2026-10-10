@@ -340,6 +340,9 @@ function clearMap() {
   state.otherWeek = null;
   fillWeeks();
   updateOriginMarkers();
+  quick = { step: 0, kind: null, country: null };
+  quickSkipped = false;
+  renderQuick();
   syncControls();
   ["#f-time", "#f-hop"].forEach((id) => $(id).dispatchEvent(new Event("input"))); // refresh their labels
   renderCompareBar();
@@ -378,7 +381,7 @@ function fullView(duration = 0) {
 
   const tools = document.querySelector(".map-tools")?.getBoundingClientRect();
   const mapTop = map.getContainer().getBoundingClientRect().top;
-  const box = { left: 30, right: w - 30, top: Math.max(60, tools ? tools.bottom - mapTop + 30 : 60), bottom: h - 50 };
+  const box = { left: 30, right: w - 30, top: Math.max(60, tools ? tools.bottom - mapTop + 30 : 60), bottom: h - (isNarrow() ? 110 : 50) };
   const start = { center: map.getCenter(), zoom: map.getZoom(), bearing: map.getBearing(), pitch: map.getPitch() };
   let view = { center: origin ? [(mid[0] + origin.coords[0]) / 2, (mid[1] + origin.coords[1]) / 2] : mid, zoom: 7, bearing, pitch: origin ? 30 : 25 };
   for (let i = 0; i < 6; i++) {
@@ -626,11 +629,13 @@ function filterCount() {
 }
 
 function applyFilters() {
-  $("#welcome").hidden = Boolean(state.origin) || Boolean(state.selected);
+  $("#welcome").hidden = Boolean(state.origin) || Boolean(state.selected) || quickSkipped;
   $("#f-time-field").hidden = !state.origin; // drive times need an airport
   const set = filterCount();
   $("#filter-count").hidden = !set;
   $("#filter-count").textContent = set;
+  $("#grip-count").hidden = !set;
+  $("#grip-count").textContent = set;
   const visible = model.locations.filter(passes);
   const ids = new Set(visible.map((l) => l.id));
   for (const [id, { el }] of markers) el.hidden = !ids.has(id) && !state.related.has(id);
@@ -690,6 +695,7 @@ function select(id) {
   const l = model.byId.get(id);
   if (!l) return;
   state.selected = id;
+  $(".app").classList.add("card-open");
   history.replaceState(null, "", "#" + id);
   for (const { el } of markers.values()) el.classList.remove("is-hover"); // a place was opened, so drop any list highlight
 
@@ -746,6 +752,7 @@ function reframeForCard() {
 
 function clearSelection() {
   state.selected = null;
+  $(".app").classList.remove("card-open");
   state.related = new Set();
   history.replaceState(null, "", location.pathname);
   $("#detail").hidden = true;
@@ -1512,13 +1519,70 @@ const SORTS = {
   summer: [["fit", "Best match"], ["time", "Time from airport"], ["cost", "Trip cost"], ["price", "Price"], ["altitude", "Altitude"], ["bike", "Bike riding rating"]],
 };
 
-// First-screen cards: one per country, counting what there is to do in this season.
-function renderWelcome() {
-  $("#welcome-countries").innerHTML = model.countries.map((c) => {
-    const n = model.locations.filter((l) => l.country === c.code && (summer() ? ridesHere(l) && !(l.type === "base" && l.bike && !l.summerOnly) : l.type === "resort")).length;
-    const airport = model.origins.find((o) => o.id === c.primaryAirport);
-    return `<button type="button" data-v="${c.code}"><b>${esc(c.name)}</b><span>${n} ${summer() ? "places to ride" : "resorts"} · from ${esc(airport?.name || "")}</span></button>`;
-  }).join("");
+// First screen: three quick questions (snow or bike, where, how good), then the map goes to that country and airport
+// and the trip panel peeks in. "Skip" leaves the whole map open for people who know what they want.
+let quick = { step: 0, kind: null, country: null };
+let quickSkipped = false;
+
+function renderQuick() {
+  const box = $("#welcome-countries");
+  const { step, kind } = quick;
+  $("#qs-step").textContent = `Step ${step + 1} of 3`;
+  $("#qs-back").hidden = step === 0;
+  const opt = (v, title, sub, icon = "") => `<button type="button" data-v="${v}"><b>${icon}${esc(title)}</b><span>${esc(sub)}</span></button>`;
+  const ic = (id) => `<svg class="ic" aria-hidden="true"><use href="#${id}"/></svg>`;
+  const bike = kind === "summer";
+  if (step === 0) {
+    $("#welcome-title").textContent = "What are you planning?";
+    $("#qs-hint").textContent = "Three quick questions, then we show you the best places.";
+    box.dataset.cols = "2";
+    box.innerHTML = opt("winter", "Ski or snowboard", "Resorts and snow", ic("i-snow")) + opt("summer", "Mountain biking", "Bike parks and trails", ic("i-bike"));
+  } else if (step === 1) {
+    $("#welcome-title").textContent = "Where do you want to go?";
+    $("#qs-hint").textContent = "We start from the main airport, and you can change it any time.";
+    box.dataset.cols = "2";
+    box.innerHTML = model.countries.map((c) => {
+      const n = model.locations.filter((l) => l.country === c.code && (bike ? ridesHere(l) && !(l.type === "base" && l.bike && !l.summerOnly) : l.type === "resort")).length;
+      const airport = model.origins.find((o) => o.id === c.primaryAirport);
+      return opt(c.code, c.name, `${n} ${bike ? "places to ride" : "resorts"} · from ${airport?.name || ""}`);
+    }).join("");
+  } else {
+    $("#welcome-title").textContent = bike ? "How do you ride?" : "How would you describe your level?";
+    $("#qs-hint").textContent = "This ranks places by what suits you. You can change it later.";
+    box.dataset.cols = "1";
+    const lv = (c) => `<i class="lv ${c}"></i>`;
+    box.innerHTML = [
+      ["first", "Beginner", bike ? "New to it, or want gentle trails" : "First time, or still learning", lv("beginner")],
+      ["intermediate", "Intermediate", bike ? "Happy on blue and red trails" : "Confident on blue and red runs", lv("intermediate")],
+      ["expert", "Expert", bike ? "Steep, technical riding" : "Black runs and off-piste", lv("expert")],
+    ].map(([v, t, s, i]) => opt(v, t, s, i)).join("");
+  }
+}
+
+function quickPick(v) {
+  if (quick.step === 0) quick.kind = v;
+  else if (quick.step === 1) quick.country = v;
+  else return finishQuick(v);
+  quick.step += 1;
+  renderQuick();
+}
+
+function finishQuick(level) {
+  const { kind, country } = quick;
+  quick = { step: 0, kind: null, country: null };
+  if (state.season !== kind) setSeason(kind);
+  state.levels = [level];
+  syncLevels();
+  pickCountries([country], { added: country }); // the map flies to the country and its main airport
+  setTab("filters");
+  // The trip panel is there with its title showing: tucked at the bottom on a phone, open on the left on a wide screen.
+  if (!isNarrow()) setSidebar(true);
+  else {
+    setSidebar(false);
+    $("#sheet-grip").classList.add("nudge");
+    setTimeout(() => $("#sheet-grip").classList.remove("nudge"), 2400);
+  }
+  renderQuick();
 }
 
 // Put everything that depends on the season in line with state.season: words, lists, accent colour.
@@ -1532,7 +1596,7 @@ function applySeasonUI() {
   $("#sort").innerHTML = sorts.map(([v, t]) => `<option value="${v}">${t}</option>`).join("");
   $("#sort").value = state.sort;
   fillWeeks();
-  renderWelcome();
+  renderQuick();
   renderDataNote();
   $$("#f-months button").forEach((b) => b.setAttribute("aria-pressed", state.months.has(b.dataset.v)));
   $$("#f-bmonths button").forEach((b) => b.setAttribute("aria-pressed", state.bikeMonths.has(b.dataset.v)));
@@ -1728,8 +1792,11 @@ function bindControls() {
   // First screen: one card per country.
   $("#welcome-countries").addEventListener("click", (e) => {
     const b = e.target.closest("button");
-    if (b) pickCountries([b.dataset.v], { added: b.dataset.v });
+    if (b) quickPick(b.dataset.v);
   });
+  $("#qs-back").addEventListener("click", () => { quick.step = Math.max(0, quick.step - 1); renderQuick(); });
+  $("#qs-skip").addEventListener("click", () => { quickSkipped = true; applyFilters(); });
+  $("#sheet-grip").addEventListener("click", () => setSidebar(!sidebarOpen()));
   // Country chips, shown once more than one country is live. None picked means all.
   $("#f-country-field").hidden = model.countries.length < 2;
   $("#f-country").innerHTML = model.countries.map((c) =>
@@ -1927,6 +1994,7 @@ function setSidebar(open) {
     map.resize();
   }
   $("#sidebar-toggle").setAttribute("aria-expanded", open);
+  $("#sheet-grip").setAttribute("aria-expanded", open);
 }
 
 /* ---------- shortlist ---------- */
