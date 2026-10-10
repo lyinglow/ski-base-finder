@@ -978,3 +978,10 @@ p.origin .countries { display: none; }
 .clear-row .link { font-size: 13px; color: var(--muted); }
 .places-bar { padding-top: 8px; padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px)); }
 .places-bar .primary { padding: 11px 14px; font-size: 15px; }
+
+/* trip cost card: the next primary action, in the accent colour */
+.trip-teaser { background: var(--resort); border-color: var(--resort); color: #fff; }
+.trip-teaser:hover { border-color: var(--resort); filter: brightness(1.08); }
+.trip-teaser .s-label, .trip-teaser .tt-total { color: rgba(255, 255, 255, 0.82); }
+.trip-teaser .tt-total strong { color: #fff; }
+.trip-teaser .tt-go { color: #fff; }
