@@ -941,3 +941,7 @@ input[type="range"] { width: 100%; accent-color: var(--resort); margin: 0; }
 }
 @keyframes grip-nudge { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-9px); } }
 @media (prefers-reduced-motion: reduce) { .sheet-grip.nudge { animation: none; } }
+
+/* The first questions come before the trip panel: it stays out of sight until they are answered or skipped. */
+.app.quick-open { grid-template-columns: 1fr; }
+.app.quick-open .sidebar, .app.quick-open #sidebar-toggle { display: none !important; }

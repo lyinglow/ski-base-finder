@@ -630,12 +630,13 @@ function filterCount() {
 
 function applyFilters() {
   $("#welcome").hidden = Boolean(state.origin) || Boolean(state.selected) || quickSkipped;
+  // While the first questions are showing, the trip panel waits. Answering or skipping brings it in.
+  const asking = !$("#welcome").hidden;
+  if ($(".app").classList.contains("quick-open") !== asking) {
+    $(".app").classList.toggle("quick-open", asking);
+    if (map) { map.resize(); setTimeout(() => map.resize(), 300); }
+  }
   $("#f-time-field").hidden = !state.origin; // drive times need an airport
-  const set = filterCount();
-  $("#filter-count").hidden = !set;
-  $("#filter-count").textContent = set;
-  $("#grip-count").hidden = !set;
-  $("#grip-count").textContent = set;
   const visible = model.locations.filter(passes);
   const ids = new Set(visible.map((l) => l.id));
   for (const [id, { el }] of markers) el.hidden = !ids.has(id) && !state.related.has(id);
