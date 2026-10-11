@@ -1969,6 +1969,30 @@ function bindControls() {
   $("#clear-map").addEventListener("click", clearMap);
   $("#clear-filters").addEventListener("click", clearMap);
 
+  // Home screen, About and Feedback.
+  const home = $("#home"), dialog = $("#info-dialog");
+  const showHome = (on) => { home.hidden = !on; if (on) $("#home-start").focus(); };
+  const seen = (() => { try { return sessionStorage.getItem("skibase.home") === "1"; } catch { return false; } })();
+  if (!seen && !location.hash && !location.search) showHome(true); // a shared link or place goes straight to the map
+  const leaveHome = () => { showHome(false); try { sessionStorage.setItem("skibase.home", "1"); } catch {} };
+  $("#home-start").addEventListener("click", leaveHome);
+  $("#home-explore").addEventListener("click", () => { leaveHome(); quickSkipped = true; applyFilters(); });
+  const openDialog = (which) => {
+    $("#dialog-about").hidden = which !== "about";
+    $("#dialog-feedback").hidden = which !== "feedback";
+    if (!dialog.open) dialog.showModal();
+    if (which === "feedback") $("#fb-msg").focus();
+  };
+  document.addEventListener("click", (e) => { const b = e.target.closest("[data-dialog]"); if (b) { setLayers?.(false); openDialog(b.dataset.dialog); } });
+  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); }); // a tap outside closes it
+  $("#dialog-feedback").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const msg = $("#fb-msg").value.trim(), mail = $("#fb-email").value.trim();
+    const body = `${msg}${mail ? `\n\nReply to: ${mail}` : ""}\n\n(${state.season}, ${location.href})`;
+    location.href = `mailto:stuart@lyinglow.co.uk?subject=${encodeURIComponent("Base Finder feedback")}&body=${encodeURIComponent(body)}`;
+    dialog.close();
+  });
+
   // Search: type a place name, pick one, and the map opens it.
   const searchBtn = $("#search-btn"), searchPanel = $("#search-panel"), searchInput = $("#search-input"), searchList = $("#search-results");
   const fold = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();

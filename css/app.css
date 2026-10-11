@@ -1028,3 +1028,29 @@ p.origin .countries { display: none; }
 }
 
 .sheet-grip { touch-action: none; }
+
+/* Home screen, About and Feedback */
+.home { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: linear-gradient(rgba(10, 20, 35, .55), rgba(10, 20, 35, .8)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3C/svg%3E"); backdrop-filter: blur(6px); }
+.home[hidden] { display: none; }
+.home-card { width: min(440px, 100%); padding: 32px 26px 22px; background: var(--panel); color: var(--ink); border-radius: 20px; box-shadow: var(--shadow); display: grid; gap: 12px; text-align: center; justify-items: center; }
+.home-eyebrow { margin: 0; display: inline-flex; gap: 8px; align-items: center; font-size: 12.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--resort); }
+.home-card .home-title { margin: 0; font-size: 40px; letter-spacing: -0.03em; }
+.home-line { margin: 0 0 6px; font-size: 17px; line-height: 1.45; color: var(--muted); }
+.home-start { width: 100%; padding: 15px; font-size: 18px; border-radius: 12px; background: var(--resort); color: #fff; }
+.home-card .link { font-size: 15px; color: var(--muted); }
+.home-foot { margin: 8px 0 0; display: flex; gap: 22px; }
+.home-foot .link { font-size: 13.5px; }
+.info-dialog { width: min(480px, calc(100vw - 24px)); max-height: 86vh; padding: 24px 22px 20px; border: 0; border-radius: 16px; background: var(--panel); color: var(--ink); box-shadow: var(--shadow); }
+.info-dialog::backdrop { background: rgba(10, 20, 35, .6); }
+.info-dialog h2 { margin: 0 0 8px; font-size: 22px; }
+.info-dialog h3 { margin: 16px 0 6px; font-size: 15px; }
+.info-dialog p, .info-dialog li { font-size: 14.5px; line-height: 1.5; color: var(--muted); }
+.info-dialog ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.info-dialog .link { font-size: 14.5px; color: var(--resort); text-decoration: underline; }
+.dialog-close { position: absolute; top: 12px; right: 12px; margin: 0; }
+.feedback { display: grid; gap: 6px; }
+.feedback label { font-size: 13.5px; font-weight: 600; margin-top: 6px; }
+.feedback label span { font-weight: 400; color: var(--muted); }
+.feedback textarea, .feedback input { padding: 10px 12px; font: inherit; font-size: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-2); color: var(--ink); resize: vertical; }
+.feedback .primary { margin-top: 10px; padding: 12px; background: var(--resort); color: #fff; font-size: 16px; }
+.feedback .fb-note { margin: 4px 0 0; font-size: 12.5px; }
