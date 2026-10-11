@@ -688,7 +688,7 @@ function resultItem(l) {
   return `<li><button type="button" class="result ${l.type}${l.id === state.selected ? " is-active" : ""}" data-id="${l.id}">
     <i class="dot ${l.type}"></i>
     <span class="r-main"><span class="r-name"><b class="fit-pill" title="Fit for your group">${fitOf(l).score}</b>${esc(l.name)}${state.saved.has(l.id) ? ` <i class="saved-star" aria-label="saved">★</i>` : ""}</span><span class="r-sub">${sub}</span></span>
-    <span class="r-side"><span class="r-time">${t.none ? "" : mins(t.min)}</span><span class="r-price" title="Trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${summer() ? bikePill(bikeOf(l)) : flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
+    <span class="r-side"><span class="r-time">${t.none ? "" : mins(t.min)}</span><span class="r-price" title="Estimated trip cost: ${esc(tripTitle(l))}">${money(costOf(l).total)} ${summer() ? bikePill(bikeOf(l)) : flake(snowOf(l), l.type === "resort" ? `${SNOW_LABEL[snowOf(l)]} for ${monthNames()}` : `Best nearby: ${SNOW_LABEL[snowOf(l)]}`)}</span></span>
   </button></li>`;
 }
 
@@ -1028,10 +1028,11 @@ function tripTeaser(l) {
   const cost = costOf(l);
   const skiing = cost.ski.id !== l.id ? ` · ${summer() ? "riding" : "skiing"} ${esc(cost.ski.name)}` : "";
   return `<button type="button" class="trip-teaser" data-trip="${l.id}">
-      <span class="s-label">Trip cost</span>
+      <span class="s-label">Estimated trip cost</span>
       <span class="tt-total"><strong>${money(cost.total)}</strong> ${money(cost.perPerson)} per person${skiing}</span>
       <span class="tt-go">Cost breakdown and places to stay <i aria-hidden="true">›</i></span>
-    </button>`;
+    </button>
+    <p class="est-note">Estimates only. Check prices with the seller before you book.</p>`;
 }
 
 function renderTripSheet(l) {
@@ -1077,9 +1078,10 @@ function tripSection(l) {
   }
   const ti = info("Change nights, people, dates or transport under Your trip in the side panel.");
   return `<section class="trip">
-      <span class="s-label">Trip cost${ti.btn}</span>
+      <span class="s-label">Estimated trip cost${ti.btn}</span>
       ${ti.note}
       <p class="trip-total"><strong>${money(cost.total)}</strong> <span>${money(cost.perPerson)} per person</span></p>
+      <p class="est-note">Estimates only, based on typical prices. Check each price with the seller before you book.</p>
       <p class="trip-who">${who}, ${t.nights} nights, ${t.skiDays} ${summer() ? "riding" : "ski"} days, ${cost.week ? `week of ${new Date(cost.week.start + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" })} (${esc(cost.week.label)})` : monthNames()}</p>
       ${picker}
       ${costBreakdown(cost)}
@@ -1953,6 +1955,43 @@ function bindControls() {
 
   $("#clear-map").addEventListener("click", clearMap);
   $("#clear-filters").addEventListener("click", clearMap);
+
+  // Search: type a place name, pick one, and the map opens it.
+  const searchBtn = $("#search-btn"), searchPanel = $("#search-panel"), searchInput = $("#search-input"), searchList = $("#search-results");
+  const fold = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const setSearch = (open) => {
+    searchPanel.hidden = !open;
+    searchBtn.setAttribute("aria-expanded", open);
+    if (open) { searchInput.value = ""; renderSearch(); searchInput.focus(); }
+  };
+  function renderSearch() {
+    const q = fold(searchInput.value.trim());
+    const pool = model.locations.filter((l) => inSeason(l, state.season, model.byId));
+    const hits = q
+      ? pool.map((l) => {
+          const n = fold(l.name), at = n.indexOf(q);
+          const where = fold(`${l.region || ""} ${model.countries.find((c) => c.code === l.country)?.name || ""}`);
+          return { l, rank: n.startsWith(q) ? 0 : at > 0 ? 1 : where.includes(q) ? 2 : 9 };
+        }).filter((h) => h.rank < 9).sort((a, b) => a.rank - b.rank || a.l.name.localeCompare(b.l.name)).slice(0, 8).map((h) => h.l)
+      : [];
+    searchList.innerHTML = hits.length
+      ? hits.map((l) => `<li><button type="button" role="option" data-id="${l.id}"><b>${esc(l.name)}</b><span>${l.type === "resort" ? (summer() ? "Bike resort" : "Ski resort") : (summer() ? "Valley town" : "Feeder town")} · ${esc(l.region || "")}</span></button></li>`).join("")
+      : q ? `<li class="none">No place called that.</li>` : "";
+  }
+  searchBtn.addEventListener("click", () => setSearch(searchPanel.hidden));
+  searchInput.addEventListener("input", renderSearch);
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") searchList.querySelector("button")?.click();
+    if (e.key === "Escape") { setSearch(false); searchBtn.focus(); }
+  });
+  searchList.addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-id]");
+    if (!b) return;
+    setSearch(false);
+    quickSkipped = true; // a person who searches knows where they are going
+    select(b.dataset.id);
+  });
+  document.addEventListener("click", (e) => { if (!searchPanel.hidden && !e.target.closest("#search")) setSearch(false); });
 
   // Layers menu (phones): open and close; the options also work in the row on wide screens.
   const layersBtn = $("#layers-btn"), layersPanel = $("#layers-panel");
