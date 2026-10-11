@@ -1997,6 +1997,7 @@ function bindControls() {
   const searchBtn = $("#search-btn"), searchPanel = $("#search-panel"), searchInput = $("#search-input"), searchList = $("#search-results");
   const fold = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   const setSearch = (open) => {
+    if (open && isNarrow()) setSidebar(false);
     searchPanel.hidden = !open;
     searchBtn.setAttribute("aria-expanded", open);
     if (open) { searchInput.value = ""; renderSearch(); searchInput.focus(); }
@@ -2032,7 +2033,7 @@ function bindControls() {
 
   // Layers menu (phones): open and close; the options also work in the row on wide screens.
   const layersBtn = $("#layers-btn"), layersPanel = $("#layers-panel");
-  const setLayers = (open) => { layersPanel.hidden = !open; layersBtn.setAttribute("aria-expanded", open); };
+  const setLayers = (open) => { if (open && isNarrow()) setSidebar(false); layersPanel.hidden = !open; layersBtn.setAttribute("aria-expanded", open); };
   layersBtn.addEventListener("click", () => setLayers(layersPanel.hidden));
   document.addEventListener("click", (e) => { if (!layersPanel.hidden && !e.target.closest("#layers")) setLayers(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !layersPanel.hidden) { setLayers(false); layersBtn.focus(); } });
@@ -2071,6 +2072,12 @@ const sidebarOpen = () => (isNarrow()
   : !$(".app").classList.contains("side-collapsed"));
 
 function setSidebar(open) {
+  if (open && isNarrow()) { // the toolbar menus would sit behind the panel, so close them first
+    for (const [btn, panel] of [["#layers-btn", "#layers-panel"], ["#search-btn", "#search-panel"]]) {
+      $(panel).hidden = true;
+      $(btn).setAttribute("aria-expanded", "false");
+    }
+  }
   if (isNarrow()) {
     $("#sidebar").classList.toggle("open", open);
   } else {
