@@ -1012,3 +1012,17 @@ p.origin .countries { display: none; }
 }
 
 .est-note { margin: 6px 2px 0; font-size: 12.5px; color: var(--muted); }
+
+/* Plan your trip and Places are the two main steps, so they carry the accent colour. */
+.tabs { background: var(--panel); }
+.tabs button { background: var(--resort-soft); color: var(--resort); font-size: 16px; padding: 12px 8px; }
+.tabs button[aria-selected="true"] { background: var(--resort); color: #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, .18); }
+.tabs button[aria-selected="true"] .count { background: #fff; color: var(--resort); font-weight: 700; }
+.tabs .count { background: var(--resort); color: #fff; }
+.tool-main { padding-block: 11px; font-size: 16px; box-shadow: 0 3px 12px rgba(0, 0, 0, .3); }
+@media (max-width: 899px) {
+  .sheet-grip { background: var(--resort); color: #fff; font-size: 18px; box-shadow: 0 -4px 16px rgba(0, 0, 0, .25); }
+  .sheet-grip .grip-bar { background: rgba(255, 255, 255, .6); }
+  .sheet-grip .grip-chev { color: #fff; }
+  .map-tools .tool-main { padding: 11px 13px; }
+}
