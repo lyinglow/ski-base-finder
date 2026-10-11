@@ -1804,7 +1804,20 @@ function bindControls() {
   });
   $("#qs-back").addEventListener("click", () => { quick.step = Math.max(0, quick.step - 1); renderQuick(); });
   $("#qs-skip").addEventListener("click", () => { quickSkipped = true; applyFilters(); });
-  $("#sheet-grip").addEventListener("click", () => setSidebar(!sidebarOpen()));
+  // Tap the bar to open or close the panel, or swipe it: up opens, down closes.
+  const grip = $("#sheet-grip");
+  let gripY = null, swiped = false;
+  grip.addEventListener("pointerdown", (e) => { gripY = e.clientY; swiped = false; grip.setPointerCapture?.(e.pointerId); });
+  grip.addEventListener("pointerup", (e) => {
+    if (gripY === null) return;
+    const dy = e.clientY - gripY;
+    gripY = null;
+    if (Math.abs(dy) < 24) return;
+    swiped = true;
+    setSidebar(dy < 0);
+  });
+  grip.addEventListener("pointercancel", () => { gripY = null; });
+  grip.addEventListener("click", () => { if (swiped) { swiped = false; return; } setSidebar(!sidebarOpen()); });
   // On a phone the list and filters sit over the map, so give a clear way back to it.
   $$("#view-map-1, #view-map-2").forEach((b) => b.addEventListener("click", () => setSidebar(false)));
   // Country chips, shown once more than one country is live. None picked means all.

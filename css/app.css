@@ -1026,3 +1026,5 @@ p.origin .countries { display: none; }
   .sheet-grip .grip-chev { color: #fff; }
   .map-tools .tool-main { padding: 11px 13px; }
 }
+
+.sheet-grip { touch-action: none; }
