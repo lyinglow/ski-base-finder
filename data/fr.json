@@ -13447,6 +13447,210 @@
           ]
         }
       }
+    },
+    {
+      "id": "fr-vallorcine",
+      "type": "base",
+      "name": "Vallorcine",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.9317,
+        46.0333
+      ],
+      "altitude": 1260,
+      "townSize": "small",
+      "price": 2,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Quiet village at the head of the Chamonix valley, on the Swiss border. Its own small ski area, snow that holds well, and the Mont-Blanc Express train to Chamonix.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 106,
+          "min": 90
+        },
+        "LYS": {
+          "km": 232,
+          "min": 140
+        },
+        "CMF": {
+          "km": 155,
+          "min": 105
+        },
+        "GNB": {
+          "km": 235,
+          "min": 140
+        },
+        "TRN": {
+          "km": 190,
+          "min": 135
+        },
+        "ZRH": {
+          "km": 280,
+          "min": 170
+        },
+        "BSL": {
+          "km": 260,
+          "min": 165
+        },
+        "MXP": {
+          "km": 250,
+          "min": 165
+        },
+        "BGY": {
+          "km": 301,
+          "min": 195
+        }
+      },
+      "transfer": "Shared shuttle to Chamonix about 1h15, then the Mont-Blanc Express about 25 min. Direct trains from Saint-Gervais–Le Fayet.",
+      "links": [
+        {
+          "to": "fr-chamonix",
+          "min": 25,
+          "by": [
+            "train",
+            "car",
+            "bus"
+          ]
+        },
+        {
+          "to": "fr-les-houches",
+          "min": 40,
+          "by": [
+            "train",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Mont-Blanc Express",
+      "snowYears": {
+        "town": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "fr-argentiere-chamonix",
+      "type": "base",
+      "name": "Argentière",
+      "region": "Haute-Savoie",
+      "coords": [
+        6.9283,
+        46.0
+      ],
+      "altitude": 1250,
+      "townSize": "small",
+      "price": 2,
+      "family": false,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "character": "Village at the foot of Les Grands Montets, the steepest and highest lifts in the Chamonix valley. Quieter and cheaper than Chamonix, with a train and bus into town.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 101,
+          "min": 85
+        },
+        "LYS": {
+          "km": 227,
+          "min": 135
+        },
+        "CMF": {
+          "km": 150,
+          "min": 100
+        },
+        "GNB": {
+          "km": 230,
+          "min": 135
+        },
+        "TRN": {
+          "km": 185,
+          "min": 130
+        },
+        "ZRH": {
+          "km": 285,
+          "min": 175
+        },
+        "BSL": {
+          "km": 265,
+          "min": 170
+        },
+        "MXP": {
+          "km": 245,
+          "min": 160
+        },
+        "BGY": {
+          "km": 297,
+          "min": 190
+        }
+      },
+      "transfer": "Shared shuttle to Chamonix about 1h15, then the Mont-Blanc Express about 15 min.",
+      "links": [
+        {
+          "to": "fr-chamonix",
+          "min": 15,
+          "by": [
+            "train",
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "fr-les-houches",
+          "min": 30,
+          "by": [
+            "train",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Mont-Blanc Express",
+      "snowYears": {
+        "town": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        }
+      }
     }
   ]
 }
