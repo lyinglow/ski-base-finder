@@ -1004,9 +1004,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -1165,9 +1165,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -1322,9 +1322,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -1470,9 +1470,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -1617,9 +1617,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -2183,9 +2183,9 @@
         "note": "Good off-piste in big open bowls and some steep runs."
       },
       "runShare": {
-        "green": 11,
+        "green": 12,
         "blue": 46,
-        "red": 34,
+        "red": 33,
         "black": 9
       }
     },
@@ -2330,9 +2330,9 @@
         "note": "Some tree skiing. Flaine's bigger terrain is on the same pass."
       },
       "runShare": {
-        "green": 11,
+        "green": 12,
         "blue": 46,
-        "red": 34,
+        "red": 33,
         "black": 9
       }
     },
@@ -2477,9 +2477,9 @@
         "note": "Some tree skiing. Flaine's bigger terrain is on the same pass."
       },
       "runShare": {
-        "green": 11,
+        "green": 12,
         "blue": 46,
-        "red": 34,
+        "red": 33,
         "black": 9
       }
     },
@@ -2631,9 +2631,9 @@
         "note": "Mostly gentle. Flaine's bigger terrain is on the same pass."
       },
       "runShare": {
-        "green": 11,
+        "green": 12,
         "blue": 46,
-        "red": 34,
+        "red": 33,
         "black": 9
       }
     },
@@ -2779,9 +2779,9 @@
         "note": "A few steep runs and quiet off-piste in the valley."
       },
       "runShare": {
-        "green": 11,
+        "green": 12,
         "blue": 46,
-        "red": 34,
+        "red": 33,
         "black": 9
       }
     },
@@ -4492,9 +4492,9 @@
         "note": "Small and gentle."
       },
       "runShare": {
-        "green": 32,
-        "blue": 44,
-        "red": 19,
+        "green": 30,
+        "blue": 41,
+        "red": 24,
         "black": 5
       }
     },

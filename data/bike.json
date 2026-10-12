@@ -2719,6 +2719,211 @@
    },
    "note": "Quiet Sexten valley with scenic Tre Cime routes and long valley paths. No bike park."
   },
+  "ch-engelberg": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Trails around the Trübsee and Titlis area, plus lakeside e-bike loops. Mostly hiking country."
+  },
+  "ch-andermatt": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Gotthard and Oberalp mountain trails with big views. A few lift-served routes and a wild, remote feel."
+  },
+  "ch-kandersteg": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 28,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Easy valley and lake routes, with the Oeschinensee for a family day. No bike park."
+  },
+  "at-silvretta-montafon": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A large area with bike park runs at Golm and Silvretta, flow trails and long mountain tours."
+  },
+  "at-nauders": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "A lift-served bike park above the village, with flow and downhill lines and long routes over three borders."
+  },
+  "at-pitztal": {
+   "level": "fair",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "High glacier valley with demanding tours and e-bike routes. Few lift-served trails."
+  },
+  "at-stubai": {
+   "level": "fair",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "xc",
+    "ebike"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "Valley and high alpine routes, with e-bike rentals in Neustift. No bike park."
+  },
+  "at-flachau": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Ski amadé flow and family trails, with a lift-served bike area and long valley routes."
+  },
+  "at-wagrain": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Linked to the Ski amadé trail network, with family flow trails and valley loops."
+  },
+  "at-westendorf": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 40,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "SkiWelt bike routes and the Hohe Salve trails. Plenty of flow and family riding."
+  },
+  "at-gerlos": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Mountain roads, the Gerlos pass and e-bike loops. Lifts in the Zillertal Arena help with the climbs."
+  },
   "fr-annecy": {
    "level": "good",
    "suits": [

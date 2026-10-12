@@ -3978,12 +3978,6 @@
           "min": 95
         }
       },
-      "runShare": {
-        "green": 2,
-        "blue": 56,
-        "red": 26,
-        "black": 16
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -4029,6 +4023,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 56,
+        "red": 26,
+        "black": 16
       }
     },
     {
@@ -4155,12 +4155,6 @@
           "min": 155
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 43,
-        "red": 46,
-        "black": 11
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -4206,6 +4200,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
       }
     },
     {
@@ -4325,12 +4325,6 @@
           "min": 145
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 43,
-        "red": 46,
-        "black": 11
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -4376,6 +4370,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
       }
     },
     {
@@ -4503,12 +4503,6 @@
           "min": 125
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 43,
-        "red": 46,
-        "black": 11
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -4554,6 +4548,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
       }
     },
     {
@@ -4664,12 +4664,6 @@
           "min": 170
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 43,
-        "red": 46,
-        "black": 11
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -4715,6 +4709,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
       }
     },
     {
@@ -4839,12 +4839,6 @@
           "min": 115
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 43,
-        "red": 46,
-        "black": 11
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -4890,6 +4884,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
       }
     },
     {
@@ -5008,12 +5008,6 @@
           "min": 130
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 43,
-        "red": 46,
-        "black": 11
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -5059,6 +5053,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 46,
+        "black": 11
       }
     },
     {
@@ -5168,12 +5168,6 @@
           "min": 175
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 38,
-        "red": 57,
-        "black": 5
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -5219,6 +5213,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 38,
+        "red": 57,
+        "black": 5
       }
     },
     {
@@ -5500,12 +5500,6 @@
           "min": 180
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 43,
-        "red": 41,
-        "black": 16
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -5551,6 +5545,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 43,
+        "red": 41,
+        "black": 16
       }
     },
     {
@@ -5811,12 +5811,6 @@
           "min": 100
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 47,
-        "red": 45,
-        "black": 8
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -5862,6 +5856,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 47,
+        "red": 45,
+        "black": 8
       }
     },
     {
@@ -5971,12 +5971,6 @@
           "min": 115
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 44,
-        "red": 43,
-        "black": 13
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -6022,6 +6016,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 44,
+        "red": 43,
+        "black": 13
       }
     },
     {

@@ -143,3 +143,14 @@ it-madonna-di-campiglio|awesome|bix|fdemk|33|Bike park with lift-served flow and
 it-cavalese|fair|bi|xmk||Val di Fiemme has forest tracks, a long valley route and some lift help from the Cermis gondola.
 it-san-martino|fair|bix|exm||Rocky Pale di San Martino trails and a cable car for bikes. Wild and quiet.
 it-sesto|fair|bi|xmk|0|Quiet Sexten valley with scenic Tre Cime routes and long valley paths. No bike park.
+ch-engelberg|fair|bi|exm||Trails around the Trübsee and Titlis area, plus lakeside e-bike loops. Mostly hiking country.
+ch-andermatt|fair|bix|exm||Gotthard and Oberalp mountain trails with big views. A few lift-served routes and a wild, remote feel.
+ch-kandersteg|fair|bi|xmk||Easy valley and lake routes, with the Oeschinensee for a family day. No bike park.
+at-silvretta-montafon|good|bix|fdemk||A large area with bike park runs at Golm and Silvretta, flow trails and long mountain tours.
+at-nauders|good|bix|fdem||A lift-served bike park above the village, with flow and downhill lines and long routes over three borders.
+at-pitztal|fair|ix|xm||High glacier valley with demanding tours and e-bike routes. Few lift-served trails.
+at-stubai|fair|ix|xm||Valley and high alpine routes, with e-bike rentals in Neustift. No bike park.
+at-flachau|good|bi|fxmk||Ski amadé flow and family trails, with a lift-served bike area and long valley routes.
+at-wagrain|good|bi|fxmk||Linked to the Ski amadé trail network, with family flow trails and valley loops.
+at-westendorf|good|bi|fxmk||SkiWelt bike routes and the Hohe Salve trails. Plenty of flow and family riding.
+at-gerlos|fair|bi|xmk||Mountain roads, the Gerlos pass and e-bike loops. Lifts in the Zillertal Arena help with the climbs.

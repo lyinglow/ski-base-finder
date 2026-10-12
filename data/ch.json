@@ -167,9 +167,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -334,9 +334,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -509,9 +509,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -675,9 +675,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -840,9 +840,9 @@
       },
       "runShare": {
         "green": 9,
-        "blue": 51,
+        "blue": 52,
         "red": 34,
-        "black": 6
+        "black": 5
       }
     },
     {
@@ -3181,9 +3181,9 @@
       },
       "runShare": {
         "green": 0,
-        "blue": 36,
-        "red": 61,
-        "black": 3
+        "blue": 38,
+        "red": 58,
+        "black": 4
       }
     },
     {
@@ -6620,12 +6620,6 @@
           "min": 330
         }
       },
-      "runShare": {
-        "green": 1,
-        "blue": 38,
-        "red": 49,
-        "black": 12
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -6671,6 +6665,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 38,
+        "red": 49,
+        "black": 12
       }
     },
     {
@@ -6790,12 +6790,6 @@
           "min": 325
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 25,
-        "red": 62,
-        "black": 13
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -6841,6 +6835,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 25,
+        "red": 62,
+        "black": 13
       }
     },
     {
@@ -6969,12 +6969,6 @@
           "min": 285
         }
       },
-      "runShare": {
-        "green": 1,
-        "blue": 59,
-        "red": 31,
-        "black": 9
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -7020,6 +7014,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 59,
+        "red": 31,
+        "black": 9
       }
     },
     {
@@ -7139,12 +7139,6 @@
           "min": 310
         }
       },
-      "runShare": {
-        "green": 1,
-        "blue": 59,
-        "red": 31,
-        "black": 9
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -7190,6 +7184,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 59,
+        "red": 31,
+        "black": 9
       }
     },
     {
@@ -7321,12 +7321,6 @@
           "min": 290
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 47,
-        "red": 43,
-        "black": 10
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -7372,6 +7366,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 47,
+        "red": 43,
+        "black": 10
       }
     },
     {
@@ -7505,12 +7505,6 @@
           "min": 290
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 47,
-        "red": 43,
-        "black": 10
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -7556,6 +7550,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 47,
+        "red": 43,
+        "black": 10
       }
     },
     {
@@ -7677,12 +7677,6 @@
           "min": 255
         }
       },
-      "runShare": {
-        "green": 0,
-        "blue": 37,
-        "red": 47,
-        "black": 16
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -7728,6 +7722,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 37,
+        "red": 47,
+        "black": 16
       }
     },
     {
@@ -7837,12 +7837,6 @@
           "min": 250
         }
       },
-      "runShare": {
-        "green": 2,
-        "blue": 41,
-        "red": 49,
-        "black": 8
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -7888,6 +7882,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 41,
+        "red": 49,
+        "black": 8
       }
     },
     {
@@ -7996,12 +7996,6 @@
           "min": 285
         }
       },
-      "runShare": {
-        "green": 5,
-        "blue": 47,
-        "red": 44,
-        "black": 4
-      },
       "snowYears": {
         "slopes": {
           "dec": [
@@ -8047,6 +8041,12 @@
             10
           ]
         }
+      },
+      "runShare": {
+        "green": 5,
+        "blue": 47,
+        "red": 44,
+        "black": 4
       }
     },
     {
@@ -8835,6 +8835,475 @@
             10
           ]
         }
+      }
+    },
+    {
+      "id": "ch-engelberg",
+      "type": "resort",
+      "name": "Engelberg",
+      "region": "Central Switzerland",
+      "coords": [
+        8.4036,
+        46.8205
+      ],
+      "altitude": 1000,
+      "topAltitude": 3238,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 105,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "town"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Titlis Engelberg",
+        "pisteKm": 82,
+        "pass6": 340
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-25"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3,
+        "crecheFromMonths": 24
+      },
+      "character": "Monastery town under the Titlis glacier, reached by train from Lucerne. Famous for big off-piste, with a rotating cable car up to 3,020 m.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 299,
+          "min": 190
+        },
+        "LYS": {
+          "km": 442,
+          "min": 260
+        },
+        "CMF": {
+          "km": 384,
+          "min": 235
+        },
+        "GNB": {
+          "km": 464,
+          "min": 270
+        },
+        "TRN": {
+          "km": 462,
+          "min": 310
+        },
+        "ZRH": {
+          "km": 99,
+          "min": 70
+        },
+        "BSL": {
+          "km": 139,
+          "min": 95
+        },
+        "MXP": {
+          "km": 386,
+          "min": 265
+        },
+        "BGY": {
+          "km": 442,
+          "min": 290
+        },
+        "INN": {
+          "km": 335,
+          "min": 220
+        },
+        "SZG": {
+          "km": 534,
+          "min": 305
+        },
+        "MUC": {
+          "km": 430,
+          "min": 245
+        },
+        "VRN": {
+          "km": 541,
+          "min": 350
+        },
+        "VCE": {
+          "km": 663,
+          "min": 400
+        }
+      },
+      "transfer": "Train from Zurich Airport via Lucerne, about 2h.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park at Gerschnialp. Engelberg is better known for off-piste than freestyle."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Famous freeride terrain: Laub, Steinberg and the Titlis glacier. Best with a guide."
+      },
+      "runShare": {
+        "green": 3,
+        "blue": 39,
+        "red": 48,
+        "black": 10
+      }
+    },
+    {
+      "id": "ch-andermatt",
+      "type": "resort",
+      "name": "Andermatt",
+      "region": "Uri",
+      "coords": [
+        8.5958,
+        46.635
+      ],
+      "altitude": 1444,
+      "topAltitude": 2961,
+      "townSize": "small",
+      "price": 3,
+      "stayPerPerson": 140,
+      "family": true,
+      "vibes": [
+        "upmarket",
+        "quiet"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Andermatt-Sedrun-Disentis",
+        "pisteKm": 120,
+        "pass6": 360
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Old Gotthard village with new smart hotels, a quiet main street and a linked area that runs over to Sedrun. Snow-sure for its height and big for off-piste.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 337,
+          "min": 215
+        },
+        "LYS": {
+          "km": 481,
+          "min": 285
+        },
+        "CMF": {
+          "km": 423,
+          "min": 260
+        },
+        "GNB": {
+          "km": 503,
+          "min": 295
+        },
+        "TRN": {
+          "km": 307,
+          "min": 185
+        },
+        "ZRH": {
+          "km": 122,
+          "min": 85
+        },
+        "BSL": {
+          "km": 175,
+          "min": 115
+        },
+        "MXP": {
+          "km": 173,
+          "min": 115
+        },
+        "BGY": {
+          "km": 229,
+          "min": 145
+        },
+        "INN": {
+          "km": 373,
+          "min": 245
+        },
+        "SZG": {
+          "km": 573,
+          "min": 330
+        },
+        "MUC": {
+          "km": 469,
+          "min": 270
+        },
+        "VRN": {
+          "km": 329,
+          "min": 205
+        },
+        "VCE": {
+          "km": 451,
+          "min": 255
+        }
+      },
+      "transfer": "Train from Zurich Airport about 2h, on the Gotthard line and the Glacier Express.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park on the Gurschen side. The area is better known for off-piste."
+      },
+      "expert": {
+        "level": "awesome",
+        "note": "Steep Gemsstock runs and easy-to-reach off-piste. Best with a guide."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 48,
+        "red": 37,
+        "black": 14
+      }
+    },
+    {
+      "id": "ch-kandersteg",
+      "type": "resort",
+      "name": "Kandersteg",
+      "region": "Bernese Oberland",
+      "coords": [
+        7.673,
+        46.4955
+      ],
+      "altitude": 1176,
+      "topAltitude": 2000,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Kandersteg",
+        "pisteKm": 25,
+        "pass6": 190
+      },
+      "season": {
+        "open": "2026-12-12",
+        "close": "2027-03-28"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Small village at the foot of the Blüemlisalp. A gentle family area with a long toboggan run and plenty of cross-country trails.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 222,
+          "min": 150
+        },
+        "LYS": {
+          "km": 365,
+          "min": 220
+        },
+        "CMF": {
+          "km": 307,
+          "min": 195
+        },
+        "GNB": {
+          "km": 387,
+          "min": 230
+        },
+        "TRN": {
+          "km": 387,
+          "min": 265
+        },
+        "ZRH": {
+          "km": 184,
+          "min": 115
+        },
+        "BSL": {
+          "km": 163,
+          "min": 110
+        },
+        "MXP": {
+          "km": 204,
+          "min": 160
+        },
+        "BGY": {
+          "km": 287,
+          "min": 200
+        },
+        "INN": {
+          "km": 410,
+          "min": 280
+        },
+        "SZG": {
+          "km": 626,
+          "min": 360
+        },
+        "MUC": {
+          "km": 523,
+          "min": 300
+        },
+        "VRN": {
+          "km": 387,
+          "min": 260
+        },
+        "VCE": {
+          "km": 509,
+          "min": 310
+        }
+      },
+      "transfer": "Train from Zurich Airport via Bern and the Lötschberg tunnel, about 2h.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small, mostly easy area."
       }
     }
   ]

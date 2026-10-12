@@ -2701,6 +2701,14 @@
             "bus",
             "car"
           ]
+        },
+        {
+          "to": "at-nauders",
+          "min": 55,
+          "by": [
+            "bus",
+            "car"
+          ]
         }
       ],
       "rail": "ÖBB trains",
@@ -2818,6 +2826,14 @@
         {
           "to": "at-obergurgl",
           "min": 65,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "at-pitztal",
+          "min": 35,
           "by": [
             "bus",
             "car"
@@ -2958,6 +2974,14 @@
           "by": [
             "car"
           ]
+        },
+        {
+          "to": "at-stubai",
+          "min": 50,
+          "by": [
+            "bus",
+            "car"
+          ]
         }
       ],
       "rail": "ÖBB trains",
@@ -3080,6 +3104,14 @@
             "bus",
             "car"
           ]
+        },
+        {
+          "to": "at-gerlos",
+          "min": 20,
+          "by": [
+            "bus",
+            "car"
+          ]
         }
       ],
       "rail": "Zillertal railway",
@@ -3195,6 +3227,14 @@
             "bus"
           ],
           "note": "Lifts straight into the KitzSki area"
+        },
+        {
+          "to": "at-westendorf",
+          "min": 15,
+          "by": [
+            "bus",
+            "car"
+          ]
         }
       ],
       "rail": "ÖBB trains",
@@ -3442,6 +3482,22 @@
           "by": [
             "car"
           ]
+        },
+        {
+          "to": "at-flachau",
+          "min": 30,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "at-wagrain",
+          "min": 35,
+          "by": [
+            "bus",
+            "car"
+          ]
         }
       ],
       "rail": "ÖBB trains",
@@ -3525,6 +3581,1467 @@
         "VCE": {
           "km": 384,
           "min": 215
+        }
+      }
+    },
+    {
+      "id": "at-silvretta-montafon",
+      "type": "resort",
+      "name": "Silvretta Montafon",
+      "region": "Vorarlberg",
+      "coords": [
+        10.0258,
+        46.9983
+      ],
+      "altitude": 980,
+      "topAltitude": 2430,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "lively",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Silvretta Montafon",
+        "pisteKm": 140,
+        "pass6": 320
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "High valley with the big, snow-sure Silvretta area at its head and a long run of villages below. Good value for the height.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 456,
+          "min": 285
+        },
+        "LYS": {
+          "km": 599,
+          "min": 355
+        },
+        "CMF": {
+          "km": 541,
+          "min": 330
+        },
+        "GNB": {
+          "km": 621,
+          "min": 365
+        },
+        "TRN": {
+          "km": 448,
+          "min": 290
+        },
+        "ZRH": {
+          "km": 182,
+          "min": 120
+        },
+        "BSL": {
+          "km": 271,
+          "min": 180
+        },
+        "MXP": {
+          "km": 314,
+          "min": 225
+        },
+        "BGY": {
+          "km": 370,
+          "min": 250
+        },
+        "INN": {
+          "km": 151,
+          "min": 110
+        },
+        "SZG": {
+          "km": 332,
+          "min": 215
+        },
+        "MUC": {
+          "km": 294,
+          "min": 165
+        },
+        "VRN": {
+          "km": 423,
+          "min": 275
+        },
+        "VCE": {
+          "km": 459,
+          "min": 325
+        }
+      },
+      "transfer": "Train from Zurich Airport via Bludenz about 3h, then a bus up the valley.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            7,
+            10
+          ],
+          "mar": [
+            5,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "good",
+        "note": "The Silvretta Montafon park has lines for most levels, with a beginner line and a kids area.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep Hochjoch and Nova runs and good off-piste above the village. Best with a guide."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 53,
+        "red": 32,
+        "black": 15
+      }
+    },
+    {
+      "id": "at-nauders",
+      "type": "resort",
+      "name": "Nauders",
+      "region": "Tyrol",
+      "coords": [
+        10.5017,
+        46.887
+      ],
+      "altitude": 1400,
+      "topAltitude": 2750,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Nauders Bergkastel",
+        "pisteKm": 110,
+        "pass6": 290
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-18"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Quiet border village near the Swiss and Italian frontiers. Sunny, uncrowded slopes and an easy day trip into the neighbouring areas.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 533,
+          "min": 340
+        },
+        "LYS": {
+          "km": 676,
+          "min": 410
+        },
+        "CMF": {
+          "km": 618,
+          "min": 385
+        },
+        "GNB": {
+          "km": 698,
+          "min": 420
+        },
+        "TRN": {
+          "km": 392,
+          "min": 290
+        },
+        "ZRH": {
+          "km": 259,
+          "min": 175
+        },
+        "BSL": {
+          "km": 348,
+          "min": 230
+        },
+        "MXP": {
+          "km": 273,
+          "min": 230
+        },
+        "BGY": {
+          "km": 221,
+          "min": 205
+        },
+        "INN": {
+          "km": 105,
+          "min": 70
+        },
+        "SZG": {
+          "km": 287,
+          "min": 175
+        },
+        "MUC": {
+          "km": 246,
+          "min": 170
+        },
+        "VRN": {
+          "km": 260,
+          "min": 180
+        },
+        "VCE": {
+          "km": 378,
+          "min": 230
+        }
+      },
+      "transfer": "Shared shuttle about 1h45 from Innsbruck, or train to Landeck and a bus.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            4,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small family park and a few features.",
+        "features": [
+          "beginner",
+          "small",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs and easy off-piste. A calm area for most abilities."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 29,
+        "red": 58,
+        "black": 13
+      }
+    },
+    {
+      "id": "at-pitztal",
+      "type": "resort",
+      "name": "Pitztal Glacier",
+      "region": "Tyrol",
+      "coords": [
+        10.8686,
+        46.93
+      ],
+      "altitude": 1740,
+      "topAltitude": 3440,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "skiin"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Pitztal Glacier",
+        "pisteKm": 45,
+        "pass6": 285
+      },
+      "season": {
+        "open": "2026-09-19",
+        "close": "2027-05-16"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Austria's highest glacier road. Snow from early autumn into May, a ski-to-the-door lodge scene and a fast cable car to 3,440 m.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 547,
+          "min": 365
+        },
+        "LYS": {
+          "km": 691,
+          "min": 435
+        },
+        "CMF": {
+          "km": 633,
+          "min": 410
+        },
+        "GNB": {
+          "km": 713,
+          "min": 445
+        },
+        "TRN": {
+          "km": 464,
+          "min": 370
+        },
+        "ZRH": {
+          "km": 274,
+          "min": 200
+        },
+        "BSL": {
+          "km": 363,
+          "min": 255
+        },
+        "MXP": {
+          "km": 406,
+          "min": 305
+        },
+        "BGY": {
+          "km": 436,
+          "min": 280
+        },
+        "INN": {
+          "km": 86,
+          "min": 80
+        },
+        "SZG": {
+          "km": 267,
+          "min": 185
+        },
+        "MUC": {
+          "km": 231,
+          "min": 185
+        },
+        "VRN": {
+          "km": 359,
+          "min": 245
+        },
+        "VCE": {
+          "km": 394,
+          "min": 295
+        }
+      },
+      "transfer": "Shared shuttle about 1h15 from Innsbruck.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park on the glacier.",
+        "features": [
+          "small",
+          "medium",
+          "rails"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "High glacier runs and some off-piste. Good for confident skiers."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 25,
+        "red": 72,
+        "black": 3
+      }
+    },
+    {
+      "id": "at-stubai",
+      "type": "resort",
+      "name": "Stubai Glacier",
+      "region": "Tyrol",
+      "coords": [
+        11.128,
+        47.002
+      ],
+      "altitude": 1750,
+      "topAltitude": 3210,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "quiet"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Stubai Glacier",
+        "pisteKm": 64,
+        "pass6": 300
+      },
+      "season": {
+        "open": "2026-09-19",
+        "close": "2027-06-13"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Big glacier area above Neustift, 45 minutes from Innsbruck. Reliable snow, mostly red runs and a Wilde Wasser area for freeride.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 603,
+          "min": 415
+        },
+        "LYS": {
+          "km": 747,
+          "min": 485
+        },
+        "CMF": {
+          "km": 689,
+          "min": 460
+        },
+        "GNB": {
+          "km": 769,
+          "min": 495
+        },
+        "TRN": {
+          "km": 556,
+          "min": 360
+        },
+        "ZRH": {
+          "km": 330,
+          "min": 250
+        },
+        "BSL": {
+          "km": 418,
+          "min": 310
+        },
+        "MXP": {
+          "km": 458,
+          "min": 310
+        },
+        "BGY": {
+          "km": 371,
+          "min": 265
+        },
+        "INN": {
+          "km": 49,
+          "min": 80
+        },
+        "SZG": {
+          "km": 218,
+          "min": 175
+        },
+        "MUC": {
+          "km": 244,
+          "min": 190
+        },
+        "VRN": {
+          "km": 294,
+          "min": 230
+        },
+        "VCE": {
+          "km": 329,
+          "min": 275
+        }
+      },
+      "transfer": "Shared shuttle about 1h from Innsbruck. Stay in Neustift and use the ski bus.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            10,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "good",
+        "note": "The Stubai Zoo park is one of the biggest in Austria.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Glacier runs, steep cliffs and a freeride area. Best with a guide."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 48,
+        "red": 44,
+        "black": 7
+      }
+    },
+    {
+      "id": "at-flachau",
+      "type": "resort",
+      "name": "Flachau",
+      "region": "Salzburgerland",
+      "coords": [
+        13.39,
+        47.35
+      ],
+      "altitude": 925,
+      "topAltitude": 2188,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 100,
+      "family": true,
+      "vibes": [
+        "lively",
+        "town"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Snow Space Salzburg (Ski amadé)",
+        "pisteKm": 120,
+        "pass6": 325
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Lively valley village at the heart of Ski amadé, with the Snow Space Salzburg lifts running to Wagrain and Flachauwinkl. Home of a World Cup women's race.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 786,
+          "min": 445
+        },
+        "LYS": {
+          "km": 929,
+          "min": 515
+        },
+        "CMF": {
+          "km": 871,
+          "min": 490
+        },
+        "GNB": {
+          "km": 951,
+          "min": 525
+        },
+        "TRN": {
+          "km": 767,
+          "min": 405
+        },
+        "ZRH": {
+          "km": 512,
+          "min": 280
+        },
+        "BSL": {
+          "km": 601,
+          "min": 340
+        },
+        "MXP": {
+          "km": 669,
+          "min": 355
+        },
+        "BGY": {
+          "km": 582,
+          "min": 305
+        },
+        "INN": {
+          "km": 249,
+          "min": 145
+        },
+        "SZG": {
+          "km": 70,
+          "min": 40
+        },
+        "MUC": {
+          "km": 240,
+          "min": 125
+        },
+        "VRN": {
+          "km": 492,
+          "min": 275
+        },
+        "VCE": {
+          "km": 361,
+          "min": 200
+        }
+      },
+      "transfer": "Shared shuttle about 1h15 from Salzburg Airport.",
+      "links": [
+        {
+          "to": "at-wagrain",
+          "min": 15,
+          "by": [
+            "lift",
+            "car"
+          ],
+          "note": "Ski over to Wagrain"
+        }
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            3,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "good",
+        "note": "A snow park and kids' area in the Snow Space Salzburg area.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep World Cup runs. Little off-piste."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 33,
+        "red": 65,
+        "black": 2
+      }
+    },
+    {
+      "id": "at-wagrain",
+      "type": "resort",
+      "name": "Wagrain",
+      "region": "Salzburgerland",
+      "coords": [
+        13.3,
+        47.335
+      ],
+      "altitude": 840,
+      "topAltitude": 2188,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Snow Space Salzburg (Ski amadé)",
+        "pisteKm": 120,
+        "pass6": 325
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Pretty village in the same Snow Space Salzburg area as Flachau, known for the Silent Night chapel and a traditional main street.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 784,
+          "min": 450
+        },
+        "LYS": {
+          "km": 927,
+          "min": 520
+        },
+        "CMF": {
+          "km": 869,
+          "min": 495
+        },
+        "GNB": {
+          "km": 949,
+          "min": 530
+        },
+        "TRN": {
+          "km": 773,
+          "min": 410
+        },
+        "ZRH": {
+          "km": 511,
+          "min": 285
+        },
+        "BSL": {
+          "km": 599,
+          "min": 340
+        },
+        "MXP": {
+          "km": 675,
+          "min": 360
+        },
+        "BGY": {
+          "km": 588,
+          "min": 310
+        },
+        "INN": {
+          "km": 247,
+          "min": 145
+        },
+        "SZG": {
+          "km": 68,
+          "min": 45
+        },
+        "MUC": {
+          "km": 238,
+          "min": 130
+        },
+        "VRN": {
+          "km": 499,
+          "min": 280
+        },
+        "VCE": {
+          "km": 367,
+          "min": 205
+        }
+      },
+      "transfer": "Shared shuttle about 1h20 from Salzburg Airport.",
+      "links": [
+        {
+          "to": "at-flachau",
+          "min": 15,
+          "by": [
+            "lift",
+            "car"
+          ],
+          "note": "Ski over to Flachau"
+        }
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            5,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "good",
+        "note": "Part of the Snow Space Salzburg park offer.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs. Little off-piste."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 25,
+        "red": 74,
+        "black": 1
+      }
+    },
+    {
+      "id": "at-westendorf",
+      "type": "resort",
+      "name": "Westendorf",
+      "region": "Tyrol",
+      "coords": [
+        12.205,
+        47.435
+      ],
+      "altitude": 800,
+      "topAltitude": 1960,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 100,
+      "family": true,
+      "vibes": [
+        "traditional",
+        "lively"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "SkiWelt Wilder Kaiser-Brixental",
+        "pisteKm": 284,
+        "pass6": 335
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "Friendly Brixental village on the SkiWelt lifts. Cheaper than Ellmau, with a relaxed après scene and an easy gondola to the slopes.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 638,
+          "min": 395
+        },
+        "LYS": {
+          "km": 781,
+          "min": 465
+        },
+        "CMF": {
+          "km": 723,
+          "min": 440
+        },
+        "GNB": {
+          "km": 803,
+          "min": 475
+        },
+        "TRN": {
+          "km": 606,
+          "min": 350
+        },
+        "ZRH": {
+          "km": 364,
+          "min": 230
+        },
+        "BSL": {
+          "km": 453,
+          "min": 285
+        },
+        "MXP": {
+          "km": 508,
+          "min": 295
+        },
+        "BGY": {
+          "km": 421,
+          "min": 250
+        },
+        "INN": {
+          "km": 84,
+          "min": 60
+        },
+        "SZG": {
+          "km": 132,
+          "min": 80
+        },
+        "MUC": {
+          "km": 159,
+          "min": 90
+        },
+        "VRN": {
+          "km": 343,
+          "min": 215
+        },
+        "VCE": {
+          "km": 323,
+          "min": 240
+        }
+      },
+      "transfer": "Shared shuttle about 1h20 from Innsbruck. Trains on the Salzburg to Innsbruck line stop at Brixen.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            4,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "good",
+        "note": "Park on the Hohe Salve side and a kids area in the SkiWelt.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs and a little off-piste. Not an expert area."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 50,
+        "red": 46,
+        "black": 4
+      }
+    },
+    {
+      "id": "at-gerlos",
+      "type": "resort",
+      "name": "Gerlos",
+      "region": "Tyrol",
+      "coords": [
+        12.02,
+        47.225
+      ],
+      "altitude": 1250,
+      "topAltitude": 2500,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 100,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Zillertal Arena",
+        "pisteKm": 166,
+        "pass6": 330
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-11"
+      },
+      "school": {
+        "english": "many",
+        "skiFrom": 3
+      },
+      "character": "High village on the Gerlos pass, linked by lifts to Königsleiten and Zell am Ziller in the Zillertal Arena. Reliable snow and quieter than Mayrhofen.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 642,
+          "min": 440
+        },
+        "LYS": {
+          "km": 785,
+          "min": 515
+        },
+        "CMF": {
+          "km": 727,
+          "min": 490
+        },
+        "GNB": {
+          "km": 807,
+          "min": 525
+        },
+        "TRN": {
+          "km": 610,
+          "min": 400
+        },
+        "ZRH": {
+          "km": 368,
+          "min": 275
+        },
+        "BSL": {
+          "km": 457,
+          "min": 335
+        },
+        "MXP": {
+          "km": 512,
+          "min": 345
+        },
+        "BGY": {
+          "km": 425,
+          "min": 300
+        },
+        "INN": {
+          "km": 88,
+          "min": 110
+        },
+        "SZG": {
+          "km": 182,
+          "min": 155
+        },
+        "MUC": {
+          "km": 209,
+          "min": 170
+        },
+        "VRN": {
+          "km": 348,
+          "min": 265
+        },
+        "VCE": {
+          "km": 330,
+          "min": 285
+        }
+      },
+      "transfer": "Shared shuttle about 1h30 from Innsbruck.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            6,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park near the top of the Arena.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "The Gerlosstein and Karspitze steep runs, and the Arena's long descents."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 36,
+        "red": 55,
+        "black": 8
+      }
+    },
+    {
+      "id": "at-schruns",
+      "type": "base",
+      "name": "Schruns",
+      "region": "Vorarlberg",
+      "coords": [
+        9.9133,
+        47.0786
+      ],
+      "altitude": 690,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Main town of the Montafon valley, with a train to Bludenz and everyday prices. Its own Hochjoch lifts link into the Silvretta Montafon area.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 441,
+          "min": 270
+        },
+        "LYS": {
+          "km": 585,
+          "min": 340
+        },
+        "CMF": {
+          "km": 527,
+          "min": 315
+        },
+        "GNB": {
+          "km": 607,
+          "min": 350
+        },
+        "TRN": {
+          "km": 434,
+          "min": 275
+        },
+        "ZRH": {
+          "km": 168,
+          "min": 105
+        },
+        "BSL": {
+          "km": 257,
+          "min": 160
+        },
+        "MXP": {
+          "km": 300,
+          "min": 210
+        },
+        "BGY": {
+          "km": 356,
+          "min": 235
+        },
+        "INN": {
+          "km": 137,
+          "min": 95
+        },
+        "SZG": {
+          "km": 318,
+          "min": 200
+        },
+        "MUC": {
+          "km": 280,
+          "min": 150
+        },
+        "VRN": {
+          "km": 409,
+          "min": 260
+        },
+        "VCE": {
+          "km": 444,
+          "min": 305
+        }
+      },
+      "transfer": "Train from Zurich Airport via Bludenz about 2h40.",
+      "links": [
+        {
+          "to": "at-silvretta-montafon",
+          "min": 30,
+          "by": [
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Montafonerbahn",
+      "snowYears": {
+        "town": {
+          "dec": [
+            3,
+            10
+          ],
+          "jan": [
+            4,
+            10
+          ],
+          "feb": [
+            1,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
         }
       }
     }

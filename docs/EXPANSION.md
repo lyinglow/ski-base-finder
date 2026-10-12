@@ -71,3 +71,7 @@ Cortina, Val Gardena, Alta Badia, Madonna di Campiglio and Kronplatz, flown into
 
 - Swap to a paid map tile provider in `js/map.js` (MapTiler or Mapbox) before a public launch, and keep their attribution.
 - Pushes to `main` deploy to Vercel automatically.
+
+## Step 5: more names (live)
+
+Added after launch: Vallorcine and Argentière (Chamonix valley, `fr.json`); Engelberg, Andermatt and Kandersteg (`ch.json`); Silvretta Montafon, Nauders, Pitztal Glacier, Stubai Glacier, Flachau, Wagrain, Westendorf and Gerlos, with Schruns as a feeder town (`at.json`). Prices, season dates, ratings and bike notes are first-pass estimates. Still missing, in rough order: Saint-Martin-de-Belleville, La Tania, Pralognan, Oz-en-Oisans, the southern French Alps, Fiesch and Bellwald, Zweisimmen, Passo Tonale, Seefeld, Katschberg and Nassfeld.
