@@ -82,6 +82,8 @@ async function init() {
   updateOriginMarkers();
   for (const l of model.locations) addMarker(l);
   map.on("zoom", updateLabelMode);
+  // Note when the person has moved the map themselves, so a recentre never fights them.
+  for (const ev of ["dragstart", "zoomstart", "rotatestart", "pitchstart"]) map.on(ev, (e) => { if (e.originalEvent) userMoved = true; });
   // On a phone the place card covers half the map. Tapping empty map lowers it so the map shows; tap its title to bring it back.
   map.on("click", (e) => {
     if (!isNarrow() || !state.selected || state.detailMin || $("#detail").hidden) return;
@@ -475,6 +477,7 @@ function updateSnowLayer() {
 /* ---------- airport view: airport at the bottom, everywhere you can reach above it ---------- */
 
 let lastVisible = [];
+let userMoved = false, framedFar = null, reframeTimer = null;
 let reachMarker = null;
 
 // Look along the line from the airport to the furthest place on show:
@@ -485,6 +488,8 @@ function airportView(duration = 0) {
   const places = lastVisible.length ? lastVisible : model.locations.filter((l) => travel(l));
   if (!places.length) return;
   const far = places.reduce((a, b) => (travel(b).min > travel(a).min ? b : a));
+  userMoved = false;
+  framedFar = `${state.origin}|${far.id}`;
   const lat = (origin.coords[1] * Math.PI) / 180;
   const bearing = (Math.atan2((far.coords[0] - origin.coords[0]) * Math.cos(lat), far.coords[1] - origin.coords[1]) * 180) / Math.PI;
 
@@ -525,6 +530,16 @@ function updateReach(visible) {
   const origin = model.origins.find((o) => o.id === state.origin);
   const far = visible.reduce((a, b) => (travel(b).min > travel(a).min ? b : a));
   setReach(map, [{ type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: [origin.coords, far.coords] } }]);
+  // When a filter changes which place is furthest, bring it back to the top middle.
+  // Leave the map alone if the person moved it, unless the furthest place has slipped off screen.
+  clearTimeout(reframeTimer);
+  reframeTimer = setTimeout(() => {
+    if (state.selected || !state.origin || framedFar === `${state.origin}|${far.id}`) return;
+    const p = map.project(far.coords), { clientWidth: w, clientHeight: h } = map.getContainer();
+    const offscreen = p.x < 0 || p.y < 0 || p.x > w || p.y > h * 0.9;
+    if (!userMoved || offscreen) airportView(900);
+    else framedFar = `${state.origin}|${far.id}`;
+  }, 350);
   const el = document.createElement("span");
   el.className = "minutes reach";
   el.textContent = mins(travel(far).min);
@@ -2085,6 +2100,10 @@ function bindControls() {
   document.addEventListener("click", (e) => { if (!layersPanel.hidden && !e.target.closest("#layers")) setLayers(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !layersPanel.hidden) { setLayers(false); layersBtn.focus(); } });
 
+  $("#recentre").addEventListener("click", () => {
+    setLayers(false);
+    state.selected ? select(state.selected) : airportView(1000);
+  });
   $("#toggle-snow").addEventListener("click", () => {
     state.snowLayer = !state.snowLayer;
     updateSnowLayer();
