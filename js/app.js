@@ -1543,7 +1543,7 @@ const QUESTIONS = {
 };
 function quickSteps() {
   const steps = ["kind", "country"];
-  if (quick.country === "any") steps.push("budget", "vibe", "who", ...(quick.kind === "summer" ? [] : ["snow"]));
+  if (quick.country === "any") steps.push("airport", "budget", "vibe", "who", ...(quick.kind === "summer" ? [] : ["snow"]));
   return [...steps, "level"];
 }
 
@@ -1573,6 +1573,11 @@ function renderQuick() {
       const airport = model.origins.find((o) => o.id === c.primaryAirport);
       return opt(c.code, c.name, `${n} ${bike ? "places to ride" : "resorts"} · from ${airport?.name || ""}`);
     }).join("") + opt("any", "Not sure", "A few more questions to narrow it down");
+  } else if (name === "airport") {
+    $("#welcome-title").textContent = "Do you have an airport in mind?";
+    $("#qs-hint").textContent = "We measure every drive from it. You can change it any time.";
+    box.dataset.cols = "2";
+    box.innerHTML = opt("any", "No airport yet", "Choose later, we show every country") + model.origins.map((o) => `<button type="button" class="compact" data-v="${o.id}"><b>${esc(o.name)}</b></button>`).join("");
   } else if (QUESTIONS[name]) {
     const [title, hint, , options] = QUESTIONS[name];
     $("#welcome-title").textContent = title;
@@ -1617,8 +1622,9 @@ function finishQuick(level) {
   }
   syncLevels();
   if (country === "any") {
-    quickSkipped = true; // no airport yet, so keep the first questions from coming back
+    quickSkipped = true; // possibly no airport yet, so keep the first questions from coming back
     pickCountries([]);
+    if (answers.airport && answers.airport !== "any") setOrigin(answers.airport);
   } else pickCountries([country], { added: country }); // the map flies to the country and its main airport
   setTab("filters");
   // The trip panel is there with its title showing: tucked at the bottom on a phone, open on the left on a wide screen.

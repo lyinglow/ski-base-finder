@@ -1056,3 +1056,8 @@ p.origin .countries { display: none; }
 .feedback .fb-note { margin: 4px 0 0; font-size: 12.5px; }
 
 .welcome-countries button[data-v="any"] { grid-column: 1 / -1; background: transparent; border-style: dashed; }
+
+.welcome-countries:has(.compact) { max-height: 46vh; overflow-y: auto; }
+.welcome-countries button.compact { padding: 11px 12px; }
+.welcome-countries button.compact b { font-size: 15px; }
+.welcome-countries button[data-v="any"]:first-child { position: sticky; top: 0; z-index: 1; }
