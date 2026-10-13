@@ -340,7 +340,7 @@ function clearMap() {
   state.otherWeek = null;
   fillWeeks();
   updateOriginMarkers();
-  quick = { step: 0, kind: null, country: null };
+  quick = { step: 0, kind: null, country: null, answers: {} };
   quickSkipped = false;
   renderQuick();
   syncControls();
@@ -1526,13 +1526,32 @@ const SORTS = {
 
 // First screen: three quick questions (snow or bike, where, how good), then the map goes to that country and airport
 // and the trip panel peeks in. "Skip" leaves the whole map open for people who know what they want.
-let quick = { step: 0, kind: null, country: null };
+let quick = { step: 0, kind: null, country: null, answers: {} };
 let quickSkipped = false;
+
+// The questions, in order. "Not sure" for the country adds a few that narrow the choice.
+const QUESTIONS = {
+  budget: ["What do you want to spend on where you stay?", "Prices run from budget to expensive. This hides the levels you don't want.", "1", [
+    ["cheap", "Keep it cheap", "Budget and mid-priced places"], ["any", "Flexible", "Every price level"], ["treat", "Treat ourselves", "Mid-priced and upmarket places"]]],
+  vibe: ["What kind of place do you like?", "Pick the feel of the village.", "1", [
+    ["lively", "Lively", "Après-ski, bars and nightlife"], ["quiet", "Quiet", "Calm evenings, early nights"],
+    ["traditional", "Traditional", "Old village of stone and wood"], ["skiin", "Ski-in ski-out", "Purpose-built, skis on at the door"], ["any", "No preference", "Show every kind of place"]]],
+  who: ["Who is coming?", "Family places have easy slopes, children's classes and a short walk to the lifts.", "1", [
+    ["family", "A family with young children", "Family-friendly places first"], ["adults", "Adults or friends", "Any place"]]],
+  snow: ["How much do you need the snow?", "We check ten winters of satellite snow images for your months.", "1", [
+    ["sure", "Snow-sure only", "Places with snow in most winters"], ["any", "Not fussed", "Show every place"]]],
+};
+function quickSteps() {
+  const steps = ["kind", "country"];
+  if (quick.country === "any") steps.push("budget", "vibe", "who", ...(quick.kind === "summer" ? [] : ["snow"]));
+  return [...steps, "level"];
+}
 
 function renderQuick() {
   const box = $("#welcome-countries");
   const { step, kind } = quick;
-  $("#qs-step").textContent = `Step ${step + 1} of 3`;
+  const steps = quickSteps(), name = steps[step] || "kind";
+  $("#qs-step").textContent = `Step ${step + 1} of ${steps.length}`;
   $("#qs-back").hidden = step === 0;
   const opt = (v, title, sub, icon = "") => `<button type="button" data-v="${v}"><b>${icon}${esc(title)}</b><span>${esc(sub)}</span></button>`;
   const ic = (id) => `<svg class="ic" aria-hidden="true"><use href="#${id}"/></svg>`;
@@ -1540,12 +1559,12 @@ function renderQuick() {
   // The pointer still sits where the last tap was, so no card shows as chosen until it moves.
   box.classList.add("fresh");
   box.addEventListener("pointermove", () => box.classList.remove("fresh"), { once: true });
-  if (step === 0) {
+  if (name === "kind") {
     $("#welcome-title").textContent = "What are you planning?";
-    $("#qs-hint").textContent = "Three quick questions, then we show you the best places.";
+    $("#qs-hint").textContent = "A few quick questions, then we show you the best places.";
     box.dataset.cols = "2";
     box.innerHTML = opt("winter", "Ski or snowboard", "Resorts and snow", ic("i-snow")) + opt("summer", "Mountain biking", "Bike parks and trails", ic("i-bike"));
-  } else if (step === 1) {
+  } else if (name === "country") {
     $("#welcome-title").textContent = "Where do you want to go?";
     $("#qs-hint").textContent = "We start from the main airport, and you can change it any time.";
     box.dataset.cols = "2";
@@ -1553,7 +1572,13 @@ function renderQuick() {
       const n = model.locations.filter((l) => l.country === c.code && (bike ? ridesHere(l) && !(l.type === "base" && l.bike && !l.summerOnly) : l.type === "resort")).length;
       const airport = model.origins.find((o) => o.id === c.primaryAirport);
       return opt(c.code, c.name, `${n} ${bike ? "places to ride" : "resorts"} · from ${airport?.name || ""}`);
-    }).join("") + opt("any", "Not sure", "See every country and choose your airport later");
+    }).join("") + opt("any", "Not sure", "A few more questions to narrow it down");
+  } else if (QUESTIONS[name]) {
+    const [title, hint, , options] = QUESTIONS[name];
+    $("#welcome-title").textContent = title;
+    $("#qs-hint").textContent = hint;
+    box.dataset.cols = "1";
+    box.innerHTML = options.map(([v, t, sub]) => opt(v, t, sub)).join("");
   } else {
     $("#welcome-title").textContent = bike ? "How do you ride?" : "How would you describe your level?";
     $("#qs-hint").textContent = "This ranks places by what suits you. You can change it later.";
@@ -1568,18 +1593,28 @@ function renderQuick() {
 }
 
 function quickPick(v) {
-  if (quick.step === 0) quick.kind = v;
-  else if (quick.step === 1) quick.country = v;
-  else return finishQuick(v);
+  const name = quickSteps()[quick.step];
+  if (name === "kind") quick.kind = v;
+  else if (name === "country") quick.country = v;
+  else if (name === "level") return finishQuick(v);
+  else quick.answers[name] = v;
   quick.step += 1;
   renderQuick();
 }
 
 function finishQuick(level) {
-  const { kind, country } = quick;
-  quick = { step: 0, kind: null, country: null };
+  const { kind, country, answers } = quick;
+  quick = { step: 0, kind: null, country: null, answers: {} };
   if (state.season !== kind) setSeason(kind);
   state.levels = [level];
+  if (country === "any") {
+    // The extra questions set the matching filters.
+    state.prices = new Set({ cheap: [1, 2], treat: [2, 3] }[answers.budget] || [1, 2, 3]);
+    state.vibes = new Set(answers.vibe && answers.vibe !== "any" ? [answers.vibe] : []);
+    state.family = answers.who === "family";
+    state.snowSure = answers.snow === "sure";
+    syncControls();
+  }
   syncLevels();
   if (country === "any") {
     quickSkipped = true; // no airport yet, so keep the first questions from coming back
