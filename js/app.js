@@ -1553,7 +1553,7 @@ function renderQuick() {
       const n = model.locations.filter((l) => l.country === c.code && (bike ? ridesHere(l) && !(l.type === "base" && l.bike && !l.summerOnly) : l.type === "resort")).length;
       const airport = model.origins.find((o) => o.id === c.primaryAirport);
       return opt(c.code, c.name, `${n} ${bike ? "places to ride" : "resorts"} · from ${airport?.name || ""}`);
-    }).join("");
+    }).join("") + opt("any", "Not sure", "See every country and choose your airport later");
   } else {
     $("#welcome-title").textContent = bike ? "How do you ride?" : "How would you describe your level?";
     $("#qs-hint").textContent = "This ranks places by what suits you. You can change it later.";
@@ -1581,7 +1581,10 @@ function finishQuick(level) {
   if (state.season !== kind) setSeason(kind);
   state.levels = [level];
   syncLevels();
-  pickCountries([country], { added: country }); // the map flies to the country and its main airport
+  if (country === "any") {
+    quickSkipped = true; // no airport yet, so keep the first questions from coming back
+    pickCountries([]);
+  } else pickCountries([country], { added: country }); // the map flies to the country and its main airport
   setTab("filters");
   // The trip panel is there with its title showing: tucked at the bottom on a phone, open on the left on a wide screen.
   if (!isNarrow()) setSidebar(true);

@@ -1054,3 +1054,5 @@ p.origin .countries { display: none; }
 .feedback textarea, .feedback input { padding: 10px 12px; font: inherit; font-size: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-2); color: var(--ink); resize: vertical; }
 .feedback .primary { margin-top: 10px; padding: 12px; background: var(--resort); color: #fff; font-size: 16px; }
 .feedback .fb-note { margin: 4px 0 0; font-size: 12.5px; }
+
+.welcome-countries button[data-v="any"] { grid-column: 1 / -1; background: transparent; border-style: dashed; }

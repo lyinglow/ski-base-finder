@@ -6086,6 +6086,14 @@
           "by": [
             "car"
           ]
+        },
+        {
+          "to": "it-obereggen",
+          "min": 35,
+          "by": [
+            "bus",
+            "car"
+          ]
         }
       ],
       "rail": "Trenitalia and Südtirol Bahn",
@@ -6227,6 +6235,23 @@
             "car",
             "bus"
           ]
+        },
+        {
+          "to": "it-gitschberg-jochtal",
+          "min": 25,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-plose",
+          "min": 25,
+          "by": [
+            "lift",
+            "bus"
+          ],
+          "note": "Plose gondola from the edge of town"
         }
       ],
       "rail": "Trenitalia and Südtirol Bahn",
@@ -6356,6 +6381,14 @@
           "min": 50,
           "by": [
             "train",
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "it-gitschberg-jochtal",
+          "min": 35,
+          "by": [
             "bus",
             "car"
           ]
@@ -6745,6 +6778,14 @@
             "car"
           ],
           "note": "Over the Rolle pass"
+        },
+        {
+          "to": "it-obereggen",
+          "min": 30,
+          "by": [
+            "bus",
+            "car"
+          ]
         }
       ],
       "fromOrigin": {
@@ -7452,6 +7493,827 @@
             10
           ]
         }
+      }
+    },
+    {
+      "id": "it-gitschberg-jochtal",
+      "type": "resort",
+      "name": "Gitschberg Jochtal",
+      "region": "South Tyrol",
+      "coords": [
+        11.662,
+        46.8134
+      ],
+      "altitude": 1400,
+      "topAltitude": 2510,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Gitschberg Jochtal",
+        "pisteKm": 55,
+        "pass6": 260
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Family area above Meransen and Vals, with two gondolas from the Rio di Pusteria valley floor. Sunny, gentle runs and a quiet village feel.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 653,
+          "min": 400
+        },
+        "LYS": {
+          "km": 754,
+          "min": 430
+        },
+        "CMF": {
+          "km": 676,
+          "min": 395
+        },
+        "GNB": {
+          "km": 742,
+          "min": 425
+        },
+        "TRN": {
+          "km": 473,
+          "min": 265
+        },
+        "ZRH": {
+          "km": 373,
+          "min": 235
+        },
+        "BSL": {
+          "km": 462,
+          "min": 295
+        },
+        "MXP": {
+          "km": 375,
+          "min": 215
+        },
+        "BGY": {
+          "km": 288,
+          "min": 165
+        },
+        "INN": {
+          "km": 93,
+          "min": 65
+        },
+        "SZG": {
+          "km": 261,
+          "min": 165
+        },
+        "MUC": {
+          "km": 288,
+          "min": 175
+        },
+        "VRN": {
+          "km": 211,
+          "min": 130
+        },
+        "VCE": {
+          "km": 236,
+          "min": 170
+        }
+      },
+      "transfer": "Shared shuttle about 2h15 from Innsbruck or Verona. Train to Rio di Pusteria, then the gondola.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            4,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            5,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small family park and a kids' area.",
+        "features": [
+          "beginner",
+          "small",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "little",
+        "note": "A small area. Mostly blue and red runs."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 52,
+        "red": 38,
+        "black": 10
+      }
+    },
+    {
+      "id": "it-plose",
+      "type": "resort",
+      "name": "Plose",
+      "region": "South Tyrol",
+      "coords": [
+        11.6994,
+        46.6882
+      ],
+      "altitude": 1800,
+      "topAltitude": 2504,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Plose",
+        "pisteKm": 40,
+        "pass6": 270
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "The ski mountain above Bressanone, reached by a gondola from the town. Long runs with big views of the Dolomites. Stay in the town, ski on the Plose.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 648,
+          "min": 435
+        },
+        "LYS": {
+          "km": 749,
+          "min": 470
+        },
+        "CMF": {
+          "km": 671,
+          "min": 430
+        },
+        "GNB": {
+          "km": 737,
+          "min": 465
+        },
+        "TRN": {
+          "km": 468,
+          "min": 305
+        },
+        "ZRH": {
+          "km": 380,
+          "min": 280
+        },
+        "BSL": {
+          "km": 469,
+          "min": 340
+        },
+        "MXP": {
+          "km": 370,
+          "min": 250
+        },
+        "BGY": {
+          "km": 283,
+          "min": 205
+        },
+        "INN": {
+          "km": 99,
+          "min": 110
+        },
+        "SZG": {
+          "km": 268,
+          "min": 210
+        },
+        "MUC": {
+          "km": 295,
+          "min": 220
+        },
+        "VRN": {
+          "km": 206,
+          "min": 170
+        },
+        "VCE": {
+          "km": 232,
+          "min": 205
+        }
+      },
+      "transfer": "Train from Verona or Innsbruck to Bressanone, then the Plose gondola and a bus.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park and a kids' area.",
+        "features": [
+          "beginner",
+          "small",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs and a quieter side for off-piste."
+      },
+      "runShare": {
+        "green": 3,
+        "blue": 50,
+        "red": 21,
+        "black": 26
+      }
+    },
+    {
+      "id": "it-obereggen",
+      "type": "resort",
+      "name": "Obereggen",
+      "region": "South Tyrol",
+      "coords": [
+        11.526,
+        46.385
+      ],
+      "altitude": 1550,
+      "topAltitude": 2350,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Latemar (Obereggen-Pampeago-Predazzo)",
+        "pisteKm": 48,
+        "pass6": 280
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Sunny family area under the Latemar peaks, linked to Pampeago and Predazzo. Easy blue runs, good for beginners and a cheaper alternative to the big Dolomites villages.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 620,
+          "min": 380
+        },
+        "LYS": {
+          "km": 722,
+          "min": 415
+        },
+        "CMF": {
+          "km": 643,
+          "min": 375
+        },
+        "GNB": {
+          "km": 710,
+          "min": 410
+        },
+        "TRN": {
+          "km": 440,
+          "min": 245
+        },
+        "ZRH": {
+          "km": 419,
+          "min": 265
+        },
+        "BSL": {
+          "km": 510,
+          "min": 330
+        },
+        "MXP": {
+          "km": 342,
+          "min": 195
+        },
+        "BGY": {
+          "km": 255,
+          "min": 150
+        },
+        "INN": {
+          "km": 139,
+          "min": 95
+        },
+        "SZG": {
+          "km": 307,
+          "min": 190
+        },
+        "MUC": {
+          "km": 334,
+          "min": 205
+        },
+        "VRN": {
+          "km": 178,
+          "min": 115
+        },
+        "VCE": {
+          "km": 192,
+          "min": 155
+        }
+      },
+      "transfer": "Shared shuttle about 1h from Bolzano. Train to Bolzano, then a bus up the valley.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            8,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            7,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "good",
+        "note": "A snow park and a kids' area on the Obereggen side.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs. Mostly gentle terrain."
+      },
+      "runShare": {
+        "green": 1,
+        "blue": 29,
+        "red": 70,
+        "black": 0
+      }
+    },
+    {
+      "id": "it-val-senales",
+      "type": "resort",
+      "name": "Val Senales",
+      "region": "South Tyrol",
+      "coords": [
+        10.7827,
+        46.7565
+      ],
+      "altitude": 2011,
+      "topAltitude": 3212,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "skiin"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Val Senales Glacier",
+        "pisteKm": 40,
+        "pass6": 290
+      },
+      "season": {
+        "open": "2026-09-12",
+        "close": "2027-05-09"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "Snow-sure glacier area at the head of the Schnals valley, from early autumn until May. A small ski-to-the-door village and a cable car to 3,200 m.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 658,
+          "min": 410
+        },
+        "LYS": {
+          "km": 759,
+          "min": 440
+        },
+        "CMF": {
+          "km": 681,
+          "min": 405
+        },
+        "GNB": {
+          "km": 747,
+          "min": 440
+        },
+        "TRN": {
+          "km": 478,
+          "min": 275
+        },
+        "ZRH": {
+          "km": 350,
+          "min": 250
+        },
+        "BSL": {
+          "km": 438,
+          "min": 310
+        },
+        "MXP": {
+          "km": 380,
+          "min": 225
+        },
+        "BGY": {
+          "km": 293,
+          "min": 180
+        },
+        "INN": {
+          "km": 156,
+          "min": 130
+        },
+        "SZG": {
+          "km": 324,
+          "min": 225
+        },
+        "MUC": {
+          "km": 351,
+          "min": 240
+        },
+        "VRN": {
+          "km": 216,
+          "min": 145
+        },
+        "VCE": {
+          "km": 334,
+          "min": 190
+        }
+      },
+      "transfer": "Shared shuttle about 2h from Innsbruck or Verona. Train to Naturno, then a bus.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            3,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "good",
+        "note": "The Schnalstal park has lines from small to big.",
+        "features": [
+          "beginner",
+          "small",
+          "medium",
+          "rails",
+          "big"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep glacier runs and some off-piste. Best with a guide."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 28,
+        "red": 50,
+        "black": 22
+      }
+    },
+    {
+      "id": "it-solda",
+      "type": "resort",
+      "name": "Solda",
+      "region": "South Tyrol",
+      "coords": [
+        10.5843,
+        46.528
+      ],
+      "altitude": 1900,
+      "topAltitude": 3250,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Solda (Sulden am Ortler)",
+        "pisteKm": 44,
+        "pass6": 250
+      },
+      "season": {
+        "open": "2026-11-21",
+        "close": "2027-05-02"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 3
+      },
+      "character": "High village at the foot of the Ortler, the tallest peak in South Tyrol. Reliable snow into May, steep runs and a quiet mountain feel.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 588,
+          "min": 385
+        },
+        "LYS": {
+          "km": 731,
+          "min": 455
+        },
+        "CMF": {
+          "km": 673,
+          "min": 430
+        },
+        "GNB": {
+          "km": 753,
+          "min": 465
+        },
+        "TRN": {
+          "km": 507,
+          "min": 305
+        },
+        "ZRH": {
+          "km": 314,
+          "min": 220
+        },
+        "BSL": {
+          "km": 403,
+          "min": 280
+        },
+        "MXP": {
+          "km": 293,
+          "min": 250
+        },
+        "BGY": {
+          "km": 321,
+          "min": 210
+        },
+        "INN": {
+          "km": 160,
+          "min": 115
+        },
+        "SZG": {
+          "km": 341,
+          "min": 220
+        },
+        "MUC": {
+          "km": 301,
+          "min": 220
+        },
+        "VRN": {
+          "km": 242,
+          "min": 165
+        },
+        "VCE": {
+          "km": 360,
+          "min": 215
+        }
+      },
+      "transfer": "Shared shuttle about 2h15 from Innsbruck or Verona. Train to Spondigna, then a bus.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            10,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            9,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            10,
+            10
+          ],
+          "mar": [
+            10,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park."
+      },
+      "expert": {
+        "level": "good",
+        "note": "Steep runs and off-piste under the Ortler. Best with a guide."
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 42,
+        "red": 34,
+        "black": 22
       }
     }
   ]

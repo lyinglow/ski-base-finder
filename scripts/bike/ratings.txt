@@ -154,3 +154,8 @@ at-flachau|good|bi|fxmk||Ski amadé flow and family trails, with a lift-served b
 at-wagrain|good|bi|fxmk||Linked to the Ski amadé trail network, with family flow trails and valley loops.
 at-westendorf|good|bi|fxmk||SkiWelt bike routes and the Hohe Salve trails. Plenty of flow and family riding.
 at-gerlos|fair|bi|xmk||Mountain roads, the Gerlos pass and e-bike loops. Lifts in the Zillertal Arena help with the climbs.
+it-gitschberg-jochtal|fair|bi|fxmk||Easy lift-served trails and family routes in the Eisack valley. Gondolas help with the climbs.
+it-plose|fair|bi|fxm||Panoramic forest and mountain trails above Bressanone, with the gondola for the climb.
+it-obereggen|good|bix|fdemk||Latemar bike area with flow and downhill trails, linked by lifts to Pampeago.
+it-val-senales|fair|ix|exm||High glacier valley with tough mountain routes and lifts that help with the first climb.
+it-solda|fair|ix|exm||High routes under the Ortler for fit riders. Few lift-served trails.

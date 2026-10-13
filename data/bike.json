@@ -2924,6 +2924,100 @@
    },
    "note": "Mountain roads, the Gerlos pass and e-bike loops. Lifts in the Zillertal Arena help with the climbs."
   },
+  "it-gitschberg-jochtal": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Easy lift-served trails and family routes in the Eisack valley. Gondolas help with the climbs."
+  },
+  "it-plose": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "flow",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-12",
+    "close": "2027-09-13"
+   },
+   "note": "Panoramic forest and mountain trails above Bressanone, with the gondola for the climb."
+  },
+  "it-obereggen": {
+   "level": "good",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "flow",
+    "downhill",
+    "enduro",
+    "ebike",
+    "kids"
+   ],
+   "pass": 32,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Latemar bike area with flow and downhill trails, linked by lifts to Pampeago."
+  },
+  "it-val-senales": {
+   "level": "fair",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "High glacier valley with tough mountain routes and lifts that help with the first climb."
+  },
+  "it-solda": {
+   "level": "fair",
+   "suits": [
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 18,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-20"
+   },
+   "note": "High routes under the Ortler for fit riders. Few lift-served trails."
+  },
   "fr-annecy": {
    "level": "good",
    "suits": [
