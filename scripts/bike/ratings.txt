@@ -159,3 +159,7 @@ it-plose|fair|bi|fxm||Panoramic forest and mountain trails above Bressanone, wit
 it-obereggen|good|bix|fdemk||Latemar bike area with flow and downhill trails, linked by lifts to Pampeago.
 it-val-senales|fair|ix|exm||High glacier valley with tough mountain routes and lifts that help with the first climb.
 it-solda|fair|ix|exm||High routes under the Ortler for fit riders. Few lift-served trails.
+at-ehrwald|fair|bix|exm||Mountain routes and e-bike tours around the Zugspitze. Cable cars and lifts help with the climbs.
+at-lermoos|fair|bi|xmk||Gentle valley and forest routes, with the Fern pass for longer rides. No bike park.
+at-berwang|fair|bi|xmk||Easy mountain roads and family e-bike routes around Berwang and Bichlbach.
+at-biberwier|fair|bi|xmk||Quiet forest and valley routes, with the Marienberg for an easy day out.

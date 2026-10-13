@@ -3018,6 +3018,79 @@
    },
    "note": "High routes under the Ortler for fit riders. Few lift-served trails."
   },
+  "at-ehrwald": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate",
+    "expert"
+   ],
+   "styles": [
+    "enduro",
+    "xc",
+    "ebike"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Mountain routes and e-bike tours around the Zugspitze. Cable cars and lifts help with the climbs."
+  },
+  "at-lermoos": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-19",
+    "close": "2027-09-06"
+   },
+   "note": "Gentle valley and forest routes, with the Fern pass for longer rides. No bike park."
+  },
+  "at-berwang": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Easy mountain roads and family e-bike routes around Berwang and Bichlbach."
+  },
+  "at-biberwier": {
+   "level": "fair",
+   "suits": [
+    "beginner",
+    "intermediate"
+   ],
+   "styles": [
+    "xc",
+    "ebike",
+    "kids"
+   ],
+   "pass": 26,
+   "season": {
+    "open": "2027-06-26",
+    "close": "2027-09-05"
+   },
+   "note": "Quiet forest and valley routes, with the Marienberg for an easy day out."
+  },
   "fr-annecy": {
    "level": "good",
    "suits": [

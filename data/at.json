@@ -2838,6 +2838,14 @@
             "bus",
             "car"
           ]
+        },
+        {
+          "to": "at-lermoos",
+          "min": 40,
+          "by": [
+            "bus",
+            "car"
+          ]
         }
       ],
       "rail": "ÖBB trains",
@@ -5036,6 +5044,836 @@
           ],
           "mar": [
             1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "at-ehrwald",
+      "type": "resort",
+      "name": "Ehrwald",
+      "region": "Tyrol",
+      "coords": [
+        10.9205,
+        47.3987
+      ],
+      "altitude": 995,
+      "topAltitude": 2000,
+      "townSize": "medium",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Tiroler Zugspitz Arena",
+        "pisteKm": 40,
+        "pass6": 270
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Village directly under the Zugspitze, Germany's highest mountain, with the Zugspitze cable car and the Ehrwalder Alm lifts. A train station in the village and a traditional main street.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 541,
+          "min": 340
+        },
+        "LYS": {
+          "km": 685,
+          "min": 410
+        },
+        "CMF": {
+          "km": 627,
+          "min": 385
+        },
+        "GNB": {
+          "km": 707,
+          "min": 420
+        },
+        "TRN": {
+          "km": 534,
+          "min": 345
+        },
+        "ZRH": {
+          "km": 268,
+          "min": 175
+        },
+        "BSL": {
+          "km": 356,
+          "min": 235
+        },
+        "MXP": {
+          "km": 400,
+          "min": 280
+        },
+        "BGY": {
+          "km": 421,
+          "min": 250
+        },
+        "INN": {
+          "km": 71,
+          "min": 50
+        },
+        "SZG": {
+          "km": 207,
+          "min": 135
+        },
+        "MUC": {
+          "km": 159,
+          "min": 100
+        },
+        "VRN": {
+          "km": 344,
+          "min": 215
+        },
+        "VCE": {
+          "km": 379,
+          "min": 265
+        }
+      },
+      "transfer": "Train from Munich Airport via Garmisch, about 2h30. Ehrwald Zugspitzbahn station is in the village.",
+      "links": [
+        {
+          "to": "at-lermoos",
+          "min": 10,
+          "by": [
+            "bus",
+            "train"
+          ],
+          "note": "Ski bus and train"
+        }
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            1,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park on the Ehrwalder Alm.",
+        "features": [
+          "beginner",
+          "small",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "fair",
+        "note": "Some steep runs and Zugspitze off-piste. Best with a guide."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 72,
+        "red": 17,
+        "black": 11
+      }
+    },
+    {
+      "id": "at-lermoos",
+      "type": "resort",
+      "name": "Lermoos",
+      "region": "Tyrol",
+      "coords": [
+        10.8878,
+        47.3989
+      ],
+      "altitude": 995,
+      "topAltitude": 2100,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 95,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Tiroler Zugspitz Arena",
+        "pisteKm": 40,
+        "pass6": 270
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Quiet village below the Grubigstein with a train station on the Innsbruck to Garmisch line. A sunny family area with gentle runs.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 535,
+          "min": 340
+        },
+        "LYS": {
+          "km": 679,
+          "min": 410
+        },
+        "CMF": {
+          "km": 621,
+          "min": 385
+        },
+        "GNB": {
+          "km": 701,
+          "min": 420
+        },
+        "TRN": {
+          "km": 533,
+          "min": 345
+        },
+        "ZRH": {
+          "km": 262,
+          "min": 175
+        },
+        "BSL": {
+          "km": 351,
+          "min": 230
+        },
+        "MXP": {
+          "km": 399,
+          "min": 280
+        },
+        "BGY": {
+          "km": 420,
+          "min": 250
+        },
+        "INN": {
+          "km": 70,
+          "min": 50
+        },
+        "SZG": {
+          "km": 208,
+          "min": 135
+        },
+        "MUC": {
+          "km": 159,
+          "min": 100
+        },
+        "VRN": {
+          "km": 343,
+          "min": 215
+        },
+        "VCE": {
+          "km": 378,
+          "min": 265
+        }
+      },
+      "transfer": "Train from Munich Airport via Garmisch, about 2h30.",
+      "links": [
+        {
+          "to": "at-ehrwald",
+          "min": 10,
+          "by": [
+            "bus",
+            "train"
+          ],
+          "note": "Ski bus and train"
+        },
+        {
+          "to": "at-biberwier",
+          "min": 10,
+          "by": [
+            "bus"
+          ],
+          "note": "Ski bus"
+        }
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            10,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            8,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            7,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park on the Grubigstein.",
+        "features": [
+          "beginner",
+          "small",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "little",
+        "note": "Mostly blue and red runs."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 55,
+        "red": 40,
+        "black": 5
+      }
+    },
+    {
+      "id": "at-berwang",
+      "type": "resort",
+      "name": "Berwang",
+      "region": "Tyrol",
+      "coords": [
+        10.7551,
+        47.3909
+      ],
+      "altitude": 1336,
+      "topAltitude": 1900,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "skiArea": {
+        "name": "Berwang-Bichlbach (Almkopf)",
+        "pisteKm": 60,
+        "pass6": 250
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "High village with its own family ski area, linked to Bichlbach and Rinnen. Reliable snow for its height and a cheaper, quieter alternative to the Arlberg.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 532,
+          "min": 335
+        },
+        "LYS": {
+          "km": 675,
+          "min": 405
+        },
+        "CMF": {
+          "km": 617,
+          "min": 380
+        },
+        "GNB": {
+          "km": 697,
+          "min": 415
+        },
+        "TRN": {
+          "km": 560,
+          "min": 355
+        },
+        "ZRH": {
+          "km": 258,
+          "min": 170
+        },
+        "BSL": {
+          "km": 347,
+          "min": 230
+        },
+        "MXP": {
+          "km": 426,
+          "min": 285
+        },
+        "BGY": {
+          "km": 432,
+          "min": 260
+        },
+        "INN": {
+          "km": 82,
+          "min": 60
+        },
+        "SZG": {
+          "km": 222,
+          "min": 150
+        },
+        "MUC": {
+          "km": 173,
+          "min": 115
+        },
+        "VRN": {
+          "km": 355,
+          "min": 230
+        },
+        "VCE": {
+          "km": 390,
+          "min": 275
+        }
+      },
+      "transfer": "Shared shuttle about 2h from Munich Airport or Innsbruck. Train to Reutte, then a bus.",
+      "links": [],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            7,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            7,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            8,
+            10
+          ],
+          "apr": [
+            6,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "fair",
+        "note": "A small park and a kids' area.",
+        "features": [
+          "beginner",
+          "small",
+          "kids"
+        ],
+        "featuresChecked": false
+      },
+      "expert": {
+        "level": "little",
+        "note": "Mostly easy and mid-level runs."
+      },
+      "runShare": {
+        "green": 2,
+        "blue": 58,
+        "red": 35,
+        "black": 5
+      }
+    },
+    {
+      "id": "at-biberwier",
+      "type": "resort",
+      "name": "Biberwier",
+      "region": "Tyrol",
+      "coords": [
+        10.8915,
+        47.3824
+      ],
+      "altitude": 995,
+      "topAltitude": 1800,
+      "townSize": "small",
+      "price": 2,
+      "stayPerPerson": 90,
+      "family": true,
+      "vibes": [
+        "quiet",
+        "traditional"
+      ],
+      "levels": [
+        "beginner",
+        "intermediate"
+      ],
+      "skiArea": {
+        "name": "Tiroler Zugspitz Arena",
+        "pisteKm": 25,
+        "pass6": 260
+      },
+      "season": {
+        "open": "2026-12-05",
+        "close": "2027-04-05"
+      },
+      "school": {
+        "english": "some",
+        "skiFrom": 4
+      },
+      "character": "Small village at the foot of the Marienberg, one of the quiet corners of the Zugspitz Arena. Gentle slopes, long toboggan runs and cross-country trails.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 537,
+          "min": 340
+        },
+        "LYS": {
+          "km": 681,
+          "min": 410
+        },
+        "CMF": {
+          "km": 623,
+          "min": 385
+        },
+        "GNB": {
+          "km": 703,
+          "min": 420
+        },
+        "TRN": {
+          "km": 530,
+          "min": 340
+        },
+        "ZRH": {
+          "km": 264,
+          "min": 175
+        },
+        "BSL": {
+          "km": 353,
+          "min": 230
+        },
+        "MXP": {
+          "km": 396,
+          "min": 275
+        },
+        "BGY": {
+          "km": 417,
+          "min": 245
+        },
+        "INN": {
+          "km": 68,
+          "min": 45
+        },
+        "SZG": {
+          "km": 210,
+          "min": 135
+        },
+        "MUC": {
+          "km": 162,
+          "min": 105
+        },
+        "VRN": {
+          "km": 340,
+          "min": 215
+        },
+        "VCE": {
+          "km": 375,
+          "min": 260
+        }
+      },
+      "transfer": "Train from Munich Airport via Garmisch to Lermoos, then a short bus.",
+      "links": [
+        {
+          "to": "at-lermoos",
+          "min": 10,
+          "by": [
+            "bus"
+          ],
+          "note": "Ski bus"
+        }
+      ],
+      "snowYears": {
+        "slopes": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            9,
+            10
+          ],
+          "feb": [
+            9,
+            10
+          ],
+          "mar": [
+            9,
+            10
+          ],
+          "apr": [
+            5,
+            10
+          ]
+        },
+        "village": {
+          "dec": [
+            9,
+            10
+          ],
+          "jan": [
+            8,
+            10
+          ],
+          "feb": [
+            8,
+            10
+          ],
+          "mar": [
+            2,
+            10
+          ],
+          "apr": [
+            0,
+            10
+          ]
+        }
+      },
+      "park": {
+        "level": "none",
+        "note": "No park."
+      },
+      "expert": {
+        "level": "little",
+        "note": "Small, easy area."
+      },
+      "runShare": {
+        "green": 0,
+        "blue": 60,
+        "red": 34,
+        "black": 6
+      }
+    },
+    {
+      "id": "at-reutte",
+      "type": "base",
+      "name": "Reutte",
+      "region": "Tyrol",
+      "coords": [
+        10.7188,
+        47.4891
+      ],
+      "altitude": 855,
+      "townSize": "medium",
+      "price": 1,
+      "stayPerPerson": 65,
+      "family": true,
+      "vibes": [
+        "town",
+        "traditional"
+      ],
+      "character": "Main town of the Außerfern with everyday prices, a train station and Neuschwanstein just over the border. A good base for Berwang, Lermoos and Ehrwald.",
+      "fromOrigin": {
+        "GVA": {
+          "km": 518,
+          "min": 325
+        },
+        "LYS": {
+          "km": 662,
+          "min": 395
+        },
+        "CMF": {
+          "km": 604,
+          "min": 370
+        },
+        "GNB": {
+          "km": 684,
+          "min": 405
+        },
+        "TRN": {
+          "km": 546,
+          "min": 340
+        },
+        "ZRH": {
+          "km": 245,
+          "min": 160
+        },
+        "BSL": {
+          "km": 334,
+          "min": 220
+        },
+        "MXP": {
+          "km": 412,
+          "min": 275
+        },
+        "BGY": {
+          "km": 438,
+          "min": 265
+        },
+        "INN": {
+          "km": 88,
+          "min": 65
+        },
+        "SZG": {
+          "km": 218,
+          "min": 150
+        },
+        "MUC": {
+          "km": 180,
+          "min": 110
+        },
+        "VRN": {
+          "km": 361,
+          "min": 230
+        },
+        "VCE": {
+          "km": 396,
+          "min": 275
+        }
+      },
+      "transfer": "Train from Munich Airport via Garmisch, about 2h.",
+      "links": [
+        {
+          "to": "at-berwang",
+          "min": 30,
+          "by": [
+            "bus",
+            "car"
+          ]
+        },
+        {
+          "to": "at-ehrwald",
+          "min": 40,
+          "by": [
+            "bus",
+            "car",
+            "train"
+          ]
+        },
+        {
+          "to": "at-lermoos",
+          "min": 40,
+          "by": [
+            "bus",
+            "car",
+            "train"
+          ]
+        },
+        {
+          "to": "at-biberwier",
+          "min": 45,
+          "by": [
+            "bus",
+            "car"
+          ]
+        }
+      ],
+      "rail": "Außerfernbahn",
+      "snowYears": {
+        "town": {
+          "dec": [
+            6,
+            10
+          ],
+          "jan": [
+            6,
+            10
+          ],
+          "feb": [
+            6,
+            10
+          ],
+          "mar": [
+            0,
             10
           ],
           "apr": [
