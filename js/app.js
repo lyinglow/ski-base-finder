@@ -63,10 +63,13 @@ init().catch((err) => {
   $("#results").innerHTML = `<li class="empty">Could not load the data. Serve this folder over http (for example <code>npm start</code>) and reload.</li>`;
 });
 
+// Flag emoji from a two-letter country code.
+const flag = (cc) => (cc ? String.fromCodePoint(...[...cc.toUpperCase()].map((c) => 0x1f1a5 + c.charCodeAt(0))) : "");
+
 async function init() {
   model = await loadData();
   $("#origin").innerHTML = `<option value="">Pick an airport</option>` + model.origins.map((o) =>
-    `<option value="${o.id}">${esc(o.name)} (${o.id})</option>`).join("");
+    `<option value="${o.id}">${flag(o.country)} ${esc(o.name)} (${o.id})</option>`).join("");
   $("#country-list").textContent = model.countries.map((c) => c.name).join(", ");
   setupCurrency();
   restorePlan(); // last visit, or a shared plan link
@@ -1577,7 +1580,7 @@ function renderQuick() {
     $("#welcome-title").textContent = "Do you have an airport in mind?";
     $("#qs-hint").textContent = "We measure every drive from it. You can change it any time.";
     box.dataset.cols = "2";
-    box.innerHTML = opt("any", "No airport yet", "Choose later, we show every country") + model.origins.map((o) => `<button type="button" class="compact" data-v="${o.id}"><b>${esc(o.name)}</b></button>`).join("");
+    box.innerHTML = opt("any", "No airport yet", "Choose later, we show every country") + model.origins.map((o) => `<button type="button" class="compact" data-v="${o.id}"><b><span class="flag" aria-hidden="true">${flag(o.country)}</span>${esc(o.name)}</b></button>`).join("");
   } else if (QUESTIONS[name]) {
     const [title, hint, , options] = QUESTIONS[name];
     $("#welcome-title").textContent = title;
