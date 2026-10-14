@@ -1549,7 +1549,7 @@ let quickSkipped = false;
 
 // The questions, in order. "Not sure" for the country adds a few that narrow the choice.
 const QUESTIONS = {
-  budget: ["What accommodation costs suit you?", "Prices run from budget to expensive. This hides the levels you don't want.", "1", [
+  budget: ["What is your accommodation budget?", "Prices run from budget to expensive. This hides the levels you don't want.", "1", [
     ["cheap", "Keep it cheap", "Budget and mid-priced places"], ["any", "Flexible", "Every price level"], ["treat", "Treat ourselves", "Mid-priced and upmarket places"]]],
   vibe: ["What kind of place do you like?", "Pick the feel of the village.", "1", [
     ["lively", "Lively", "Après-ski, bars and nightlife"], ["quiet", "Quiet", "Calm evenings, early nights"],
@@ -1644,6 +1644,8 @@ function finishQuick(level) {
     pickCountries([]);
     if (answers.airport && answers.airport !== "any") setOrigin(answers.airport);
   } else pickCountries([country], { added: country }); // the map flies to the country and its main airport
+  // The questions leave and the map grows into their space, so frame the places again once it has settled.
+  setTimeout(() => { if (!state.selected) (state.origin ? airportView(900) : fullView(900)); }, 380);
   setTab("filters");
   // The trip panel is there with its title showing: tucked at the bottom on a phone, open on the left on a wide screen.
   if (!isNarrow()) setSidebar(true);
