@@ -1062,3 +1062,8 @@ p.origin .countries { display: none; }
 .welcome-countries button.compact b { font-size: 15px; }
 .welcome-countries .flag { font-size: 20px; line-height: 1; margin-right: 8px; }
 .welcome-countries button.compact b { display: flex; align-items: center; }
+
+/* On phones the shortlist bar and the snow key both sit above the bottom panel: stack them instead of overlapping. */
+@media (max-width: 899px) {
+  .stage:has(.compare-bar:not([hidden])) .snow-legend { bottom: calc(var(--peek) + 86px); }
+}
