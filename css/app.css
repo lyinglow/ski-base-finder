@@ -1060,6 +1060,5 @@ p.origin .countries { display: none; }
 .welcome-countries:has(.compact) { max-height: 46vh; overflow-y: auto; }
 .welcome-countries button.compact { padding: 11px 12px; }
 .welcome-countries button.compact b { font-size: 15px; }
-.welcome-countries button[data-v="any"]:first-child { position: sticky; top: 0; z-index: 1; }
 .welcome-countries .flag { font-size: 20px; line-height: 1; margin-right: 8px; }
 .welcome-countries button.compact b { display: flex; align-items: center; }

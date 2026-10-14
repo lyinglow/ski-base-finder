@@ -1549,7 +1549,7 @@ let quickSkipped = false;
 
 // The questions, in order. "Not sure" for the country adds a few that narrow the choice.
 const QUESTIONS = {
-  budget: ["What do you want to spend on where you stay?", "Prices run from budget to expensive. This hides the levels you don't want.", "1", [
+  budget: ["What accommodation costs suit you?", "Prices run from budget to expensive. This hides the levels you don't want.", "1", [
     ["cheap", "Keep it cheap", "Budget and mid-priced places"], ["any", "Flexible", "Every price level"], ["treat", "Treat ourselves", "Mid-priced and upmarket places"]]],
   vibe: ["What kind of place do you like?", "Pick the feel of the village.", "1", [
     ["lively", "Lively", "Après-ski, bars and nightlife"], ["quiet", "Quiet", "Calm evenings, early nights"],
