@@ -3356,7 +3356,10 @@
         "blue": 21,
         "red": 71,
         "black": 8
-      }
+      },
+      "aka": [
+        "Matterhorn"
+      ]
     },
     {
       "id": "ch-bettmeralp",
@@ -9152,7 +9155,12 @@
         "blue": 48,
         "red": 37,
         "black": 14
-      }
+      },
+      "aka": [
+        "Sedrun",
+        "Disentis",
+        "Gemsstock"
+      ]
     },
     {
       "id": "ch-kandersteg",

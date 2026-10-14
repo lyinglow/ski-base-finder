@@ -684,7 +684,11 @@
         "blue": 21,
         "red": 71,
         "black": 8
-      }
+      },
+      "aka": [
+        "Breuil-Cervinia",
+        "Matterhorn"
+      ]
     },
     {
       "id": "it-valtournenche",
@@ -1534,7 +1538,11 @@
         "blue": 34,
         "red": 52,
         "black": 12
-      }
+      },
+      "aka": [
+        "Via Lattea",
+        "Milky Way"
+      ]
     },
     {
       "id": "it-sauze-d-oulx",
@@ -4206,7 +4214,11 @@
         "blue": 43,
         "red": 46,
         "black": 11
-      }
+      },
+      "aka": [
+        "St Ulrich",
+        "Val Gardena"
+      ]
     },
     {
       "id": "it-selva",
@@ -4376,7 +4388,11 @@
         "blue": 43,
         "red": 46,
         "black": 11
-      }
+      },
+      "aka": [
+        "Wolkenstein",
+        "Val Gardena"
+      ]
     },
     {
       "id": "it-corvara",
@@ -4554,7 +4570,10 @@
         "blue": 43,
         "red": 46,
         "black": 11
-      }
+      },
+      "aka": [
+        "Alta Badia"
+      ]
     },
     {
       "id": "it-la-villa",
@@ -4715,7 +4734,10 @@
         "blue": 43,
         "red": 46,
         "black": 11
-      }
+      },
+      "aka": [
+        "Alta Badia"
+      ]
     },
     {
       "id": "it-arabba",
@@ -5382,7 +5404,11 @@
             10
           ]
         }
-      }
+      },
+      "aka": [
+        "Plan de Corones",
+        "Kronplatz"
+      ]
     },
     {
       "id": "it-madonna-di-campiglio",
@@ -5703,7 +5729,11 @@
             10
           ]
         }
-      }
+      },
+      "aka": [
+        "Val di Fiemme",
+        "Alpe Cermis"
+      ]
     },
     {
       "id": "it-san-martino",

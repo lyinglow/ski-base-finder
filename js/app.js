@@ -2069,15 +2069,27 @@ function bindControls() {
   function renderSearch() {
     const q = fold(searchInput.value.trim());
     const pool = model.locations.filter((l) => inSeason(l, state.season, model.byId));
+    // A place can be found by its name, any part of a joined name (Serfaus-Fiss-Ladis), another name it goes by,
+    // its ski area, its region or its country, in that order of preference.
+    const rankOf = (l) => {
+      const parts = l.name.split(/[-–\/]/).map((t) => fold(t.trim())).filter(Boolean);
+      const names = [fold(l.name), ...parts, ...(l.aka || []).map(fold)];
+      if (names.some((n) => n.startsWith(q))) return 0;
+      if (names.some((n) => n.split(/[\s-]+/).some((w) => w.startsWith(q)))) return 1;
+      if (names.some((n) => n.includes(q))) return 2;
+      if (fold(l.skiArea?.name || "").includes(q)) return 3;
+      const where = fold(`${l.region || ""} ${model.countries.find((c) => c.code === l.country)?.name || ""}`);
+      return where.includes(q) ? 4 : 9;
+    };
     const hits = q
-      ? pool.map((l) => {
-          const n = fold(l.name), at = n.indexOf(q);
-          const where = fold(`${l.region || ""} ${model.countries.find((c) => c.code === l.country)?.name || ""}`);
-          return { l, rank: n.startsWith(q) ? 0 : at > 0 ? 1 : where.includes(q) ? 2 : 9 };
-        }).filter((h) => h.rank < 9).sort((a, b) => a.rank - b.rank || a.l.name.localeCompare(b.l.name)).slice(0, 8).map((h) => h.l)
+      ? pool.map((l) => ({ l, rank: rankOf(l) })).filter((h) => h.rank < 9).sort((a, b) => a.rank - b.rank || a.l.name.localeCompare(b.l.name)).slice(0, 8).map((h) => h.l)
       : [];
+    const note = (l) => {
+      const hit = (l.aka || []).find((a) => fold(a).includes(q));
+      return hit && !fold(l.name).includes(q) ? ` · also ${esc(hit)}` : "";
+    };
     searchList.innerHTML = hits.length
-      ? hits.map((l) => `<li><button type="button" role="option" data-id="${l.id}"><b>${esc(l.name)}</b><span>${l.type === "resort" ? (summer() ? "Bike resort" : "Ski resort") : (summer() ? "Valley town" : "Feeder town")} · ${esc(l.region || "")}</span></button></li>`).join("")
+      ? hits.map((l) => `<li><button type="button" role="option" data-id="${l.id}"><b>${esc(l.name)}</b><span>${l.type === "resort" ? (summer() ? "Bike resort" : "Ski resort") : (summer() ? "Valley town" : "Feeder town")} · ${esc(l.region || "")}${note(l)}</span></button></li>`).join("")
       : q ? `<li class="none">No place called that.</li>` : "";
   }
   searchBtn.addEventListener("click", () => setSearch(searchPanel.hidden));
