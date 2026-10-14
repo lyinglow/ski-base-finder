@@ -55,6 +55,10 @@ Bigger:
 - [ ] Live accommodation and package prices on the page (needs a partner feed).
 - [ ] Accounts so plans sync across devices.
 
+## Family score (idea)
+
+- [ ] A visible family score for each place, built from facts we already hold: share of green and blue runs, creche and its minimum age, ski school English level and starting age, ski-in ski-out, walking distance to the lifts, and the family flag. Rank by it and show it beside the fit score. Use old surveys only as a sense check: a 2015 SnowTrex vote (Zillertal Arena, Les 3 Vallées, Livigno), 2015/16 SnowTrex bookings (Chamrousse, Valmeinier, Valfréjus) and a Club Med family index (Tignes, Baqueira Beret, La Plagne). No current public dataset of family popularity was found. Also worth checking: skiresort.info ratings and tour operator booking data (Inghams, Crystal).
+
 ## Money
 
 - [ ] Join affiliate programmes (Igluski, Booking.com, Skyscanner) and swap in tracked links. Say so in the footer.
