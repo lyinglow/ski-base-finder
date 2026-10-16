@@ -59,6 +59,22 @@ Bigger:
 
 - [ ] A visible family score for each place, built from facts we already hold: share of green and blue runs, creche and its minimum age, ski school English level and starting age, ski-in ski-out, walking distance to the lifts, and the family flag. Rank by it and show it beside the fit score. Use old surveys only as a sense check: a 2015 SnowTrex vote (Zillertal Arena, Les 3 Vallées, Livigno), 2015/16 SnowTrex bookings (Chamrousse, Valmeinier, Valfréjus) and a Club Med family index (Tignes, Baqueira Beret, La Plagne). No current public dataset of family popularity was found. Also worth checking: skiresort.info ratings and tour operator booking data (Inghams, Crystal).
 
+## App Store (idea)
+
+Steps, lightest first:
+- [ ] **Home-screen web app.** Add an icon, a manifest file and offline support so people can use "Add to Home Screen" from Safari. Free, about a day, and a good test of demand.
+- [ ] **Wrapped app.** Package the site with Capacitor for the iPhone App Store (Apple Developer account about $99 a year, a Mac with Xcode, icon, launch screen and screenshots for each iPhone size). Apple can reject a plain website in a frame, so add something app-like first: a saved shortlist and plan on the phone, offline data, and share and open links. Allow a few days to a couple of weeks for the first build and review.
+- [ ] **Google Play.** One-off $25 and often easier. The same wrapped app works.
+- [ ] Native rebuild (Swift or React Native). Big job and not needed to start.
+
+Before launch:
+- [ ] A privacy policy page and the store privacy answers (feedback form and any analytics must be declared).
+- [ ] Support contact details.
+- [ ] Check the satellite map tile terms: they may need a licence for use inside a store app.
+- [ ] Keep the OpenStreetMap credit visible in the app.
+- [ ] Keep the "prices are estimates" wording, and say so honestly if affiliate links are added.
+- [ ] Confirm the name Base Finder is free in the App Store, and register the domain.
+
 ## Money
 
 - [ ] Join affiliate programmes (Igluski, Booking.com, Skyscanner) and swap in tracked links. Say so in the footer.
