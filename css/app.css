@@ -1067,3 +1067,9 @@ p.origin .countries { display: none; }
 @media (max-width: 899px) {
   .stage:has(.compare-bar:not([hidden])) .snow-legend { bottom: calc(var(--peek) + 86px); }
 }
+
+/* Things to do */
+.act-list { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px; }
+.act-list li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 10px; background: var(--panel-2); border-radius: 8px; font-size: 14px; }
+.act-list b { font-weight: 600; }
+.act-list span { color: var(--muted); text-align: right; }

@@ -679,16 +679,16 @@
           "min": 255
         }
       },
+      "aka": [
+        "Breuil-Cervinia",
+        "Matterhorn"
+      ],
       "runShare": {
         "green": 0,
         "blue": 21,
         "red": 71,
         "black": 8
-      },
-      "aka": [
-        "Breuil-Cervinia",
-        "Matterhorn"
-      ]
+      }
     },
     {
       "id": "it-valtournenche",
@@ -1533,16 +1533,16 @@
           "min": 280
         }
       },
+      "aka": [
+        "Via Lattea",
+        "Milky Way"
+      ],
       "runShare": {
         "green": 2,
         "blue": 34,
         "red": 52,
         "black": 12
-      },
-      "aka": [
-        "Via Lattea",
-        "Milky Way"
-      ]
+      }
     },
     {
       "id": "it-sauze-d-oulx",
@@ -4209,16 +4209,16 @@
           ]
         }
       },
+      "aka": [
+        "St Ulrich",
+        "Val Gardena"
+      ],
       "runShare": {
         "green": 0,
         "blue": 43,
         "red": 46,
         "black": 11
-      },
-      "aka": [
-        "St Ulrich",
-        "Val Gardena"
-      ]
+      }
     },
     {
       "id": "it-selva",
@@ -4383,16 +4383,16 @@
           ]
         }
       },
+      "aka": [
+        "Wolkenstein",
+        "Val Gardena"
+      ],
       "runShare": {
         "green": 0,
         "blue": 43,
         "red": 46,
         "black": 11
-      },
-      "aka": [
-        "Wolkenstein",
-        "Val Gardena"
-      ]
+      }
     },
     {
       "id": "it-corvara",
@@ -4565,15 +4565,15 @@
           ]
         }
       },
+      "aka": [
+        "Alta Badia"
+      ],
       "runShare": {
         "green": 0,
         "blue": 43,
         "red": 46,
         "black": 11
-      },
-      "aka": [
-        "Alta Badia"
-      ]
+      }
     },
     {
       "id": "it-la-villa",
@@ -4729,15 +4729,15 @@
           ]
         }
       },
+      "aka": [
+        "Alta Badia"
+      ],
       "runShare": {
         "green": 0,
         "blue": 43,
         "red": 46,
         "black": 11
-      },
-      "aka": [
-        "Alta Badia"
-      ]
+      }
     },
     {
       "id": "it-arabba",

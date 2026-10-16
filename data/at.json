@@ -173,16 +173,16 @@
           "min": 270
         }
       },
+      "aka": [
+        "St. Anton",
+        "Arlberg"
+      ],
       "runShare": {
         "green": 0,
         "blue": 46,
         "red": 38,
         "black": 16
-      },
-      "aka": [
-        "St. Anton",
-        "Arlberg"
-      ]
+      }
     },
     {
       "id": "at-lech",
@@ -356,17 +356,17 @@
           "min": 290
         }
       },
+      "aka": [
+        "Zürs",
+        "Zuers",
+        "Arlberg"
+      ],
       "runShare": {
         "green": 0,
         "blue": 46,
         "red": 38,
         "black": 16
-      },
-      "aka": [
-        "Zürs",
-        "Zuers",
-        "Arlberg"
-      ]
+      }
     },
     {
       "id": "at-ischgl",
@@ -697,16 +697,16 @@
           "min": 280
         }
       },
+      "aka": [
+        "Soelden",
+        "Ötztal"
+      ],
       "runShare": {
         "green": 0,
         "blue": 54,
         "red": 32,
         "black": 14
-      },
-      "aka": [
-        "Soelden",
-        "Ötztal"
-      ]
+      }
     },
     {
       "id": "at-obergurgl",
@@ -1031,15 +1031,15 @@
           "min": 260
         }
       },
+      "aka": [
+        "Zillertal"
+      ],
       "runShare": {
         "green": 1,
         "blue": 45,
         "red": 41,
         "black": 13
-      },
-      "aka": [
-        "Zillertal"
-      ]
+      }
     },
     {
       "id": "at-kitzbuehel",
@@ -1195,15 +1195,15 @@
           "min": 225
         }
       },
+      "aka": [
+        "Kitz"
+      ],
       "runShare": {
         "green": 1,
         "blue": 50,
         "red": 33,
         "black": 16
-      },
-      "aka": [
-        "Kitz"
-      ]
+      }
     },
     {
       "id": "at-saalbach",
@@ -1364,16 +1364,16 @@
           "min": 240
         }
       },
+      "aka": [
+        "Hinterglemm",
+        "Leogang"
+      ],
       "runShare": {
         "green": 1,
         "blue": 65,
         "red": 31,
         "black": 3
-      },
-      "aka": [
-        "Hinterglemm",
-        "Leogang"
-      ]
+      }
     },
     {
       "id": "at-zell-am-see",
@@ -1536,15 +1536,15 @@
           "min": 220
         }
       },
+      "aka": [
+        "Kaprun"
+      ],
       "runShare": {
         "green": 2,
         "blue": 46,
         "red": 33,
         "black": 19
-      },
-      "aka": [
-        "Kaprun"
-      ]
+      }
     },
     {
       "id": "at-bad-gastein",
@@ -1698,15 +1698,15 @@
           "min": 240
         }
       },
+      "aka": [
+        "Gastein"
+      ],
       "runShare": {
         "green": 0,
         "blue": 44,
         "red": 46,
         "black": 10
-      },
-      "aka": [
-        "Gastein"
-      ]
+      }
     },
     {
       "id": "at-obertauern",
@@ -2197,17 +2197,17 @@
           "min": 260
         }
       },
+      "aka": [
+        "Serfaus",
+        "Fiss",
+        "Ladis"
+      ],
       "runShare": {
         "green": 0,
         "blue": 24,
         "red": 61,
         "black": 15
-      },
-      "aka": [
-        "Serfaus",
-        "Fiss",
-        "Ladis"
-      ]
+      }
     },
     {
       "id": "at-ellmau",
@@ -2361,16 +2361,16 @@
           "min": 240
         }
       },
+      "aka": [
+        "SkiWelt",
+        "Wilder Kaiser"
+      ],
       "runShare": {
         "green": 0,
         "blue": 50,
         "red": 46,
         "black": 4
-      },
-      "aka": [
-        "SkiWelt",
-        "Wilder Kaiser"
-      ]
+      }
     },
     {
       "id": "at-alpbach",
@@ -3790,18 +3790,18 @@
         "level": "good",
         "note": "Steep Hochjoch and Nova runs and good off-piste above the village. Best with a guide."
       },
-      "runShare": {
-        "green": 0,
-        "blue": 53,
-        "red": 32,
-        "black": 15
-      },
       "aka": [
         "Gaschurn",
         "Partenen",
         "Montafon",
         "Silvretta"
-      ]
+      ],
+      "runShare": {
+        "green": 0,
+        "blue": 53,
+        "red": 32,
+        "black": 15
+      }
     },
     {
       "id": "at-nauders",

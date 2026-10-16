@@ -167,3 +167,7 @@ A feeder town without its own `bike` entry takes the best bike park it links to,
 Summer costs, months and weeks are under `bike` in `index.json`. The ratings are a first pass from general knowledge of each place, not checked against each park's trail map, so treat them as a starting point.
 
 `scripts/bike/ratings.txt`, `own.py` and `towns.py` hold the hand data, and `python3 scripts/bike/build.py <routes.json>` writes `bike.json`. Drive times for the valley towns come from a route planner, scaled by 0.85 like the winter times, with no winter pass closures.
+
+## Things to do (winter)
+
+`data/activities.json` is built by `scripts/lifts/build.py` from the same OpenSkiMap runs file as the parks. For each place it counts night skiing (lit downhill runs in the place's ski area), sledging runs, cross-country trails (10 km or more), winter walking (5 km or more), ski-touring routes, fat-bike trails, ice rinks, horse sleighs and children's snow play areas. Everything except night skiing must lie within 4 km of the place (6 km for touring routes). A valley town shares night skiing and ski touring with the resorts it reaches. Spa and thermal baths are a short hand-written list in the build script. The maps are volunteer made and can be incomplete, so the app says so, and opening days and hours must be checked with the resort.

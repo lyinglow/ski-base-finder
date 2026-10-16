@@ -95,6 +95,7 @@ def main(src, runs_src=None):
         runs = json.load(open(runs_src))["features"]
         build_parks(runs, locs, resort_areas)
         build_run_share(runs, resort_areas)
+        build_activities(runs, [l for f in country_files() for l in json.load(open(f))["locations"]], resort_areas)
 
 
 # Snow parks: the same ski areas as the lifts, or within 3 km for parks not tied to an area.
@@ -172,6 +173,77 @@ def build_share_for(path, pistes, resort_areas):
         share["blue"] += 100 - sum(share.values())  # rounding
         r["runShare"] = share
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+
+
+# Winter activities mapped on OpenStreetMap near each place: night skiing (lit downhill runs), sledging runs,
+# cross-country trails, winter walking, ski-touring routes, fat-bike trails, ice rinks, horse sleighs and
+# children's snow play areas. Night skiing counts when the lit run is in the place's ski area; everything else
+# has to be within 4 km of the place (6 km for touring routes).
+# The maps are volunteer made and can be incomplete, so the app says so. Spa and thermal baths are hand data.
+ACTIVITY_NEAR_KM = 4
+SPA = {  # places with a well-known thermal bath or spa complex in or next to the village
+    "ch-leukerbad": "Leukerbad thermal baths", "it-bormio": "Bormio thermal baths", "at-bad-gastein": "Gastein thermal baths",
+    "fr-brides": "Brides-les-Bains thermal spa", "fr-saint-gervais": "Saint-Gervais thermal baths",
+    "it-pre-saint-didier": "Pré-Saint-Didier thermal baths", "fr-courchevel": "Aquamotion water park and spa",
+    "ch-scuol": "Bogn Engiadina thermal baths", "at-zell-am-see": "TauernSpa at Kaprun", "it-livigno": "Aquagranda wellness centre",
+    "fr-evian": "Évian thermal baths",
+}
+
+
+def build_activities(runs, places, resort_areas):
+    kinds = {"sled": "sled", "nordic": "nordic", "hike": "hike", "skitour": "skitour", "fatbike": "fatbike",
+             "ice_skate": "skate", "sleigh": "sleigh", "playground": "play"}
+    feats = []
+    for f in runs:
+        p, g = f["properties"], f["geometry"]
+        if p["status"] != "operating" or g["type"] not in ("LineString", "Polygon"):
+            continue
+        uses = p.get("uses") or []
+        coords = g["coordinates"][0] if g["type"] == "Polygon" else g["coordinates"]
+        if not coords or not in_region(coords):
+            continue
+        length = sum(km(coords[i], coords[i + 1]) for i in range(len(coords) - 1)) if g["type"] == "LineString" else 0
+        pts = [coords[0], coords[len(coords) // 2], coords[-1]]
+        lit = p.get("lit") is True
+        tags = {kinds[u] for u in uses if u in kinds}
+        if lit and "downhill" in uses:
+            tags.add("night")
+        if lit and "sled" in uses:
+            tags.add("nightsled")
+        if tags:
+            feats.append((tags, pts, length, area_ids(f)))
+
+    out = {}
+    for pl in places:
+        areas = resort_areas.get(pl["id"], set())
+        acc = {}
+        for tags, pts, length, fareas in feats:
+            for t in tags:
+                # Night skiing is about the ski area, so a lit run in the same area counts. Everything else
+                # has to be close to the place itself: 4 km, or 6 km for touring routes.
+                near = t == "night" and bool(areas & fareas)
+                if not near:
+                    radius = 6 if t == "skitour" else ACTIVITY_NEAR_KM
+                    if all(abs(x[1] - pl["coords"][1]) > 0.1 for x in pts):
+                        continue
+                    near = min(km(pl["coords"], x) for x in pts) < radius
+                if not near:
+                    continue
+                n, total = acc.get(t, (0, 0.0))
+                acc[t] = (n + 1, total + length)
+        rec = {}
+        for t, (n, total) in acc.items():
+            if t == "night" and total >= 1: rec["night"] = round(total, 1)
+            elif t == "nightsled" and n >= 1: rec["nightSled"] = n
+            elif t == "sled" and n >= 1: rec["sled"] = [n, round(total, 1)]
+            elif t == "nordic" and total >= 10: rec["nordic"] = round(total)
+            elif t == "hike" and total >= 5: rec["hike"] = round(total)
+            elif t in ("skitour", "fatbike", "skate", "sleigh", "play") and n >= 1: rec[t] = n
+        if pl["id"] in SPA: rec["spa"] = SPA[pl["id"]]
+        if rec: out[pl["id"]] = rec
+    data = {"source": "OpenSkiMap.org, from OpenStreetMap contributors (ODbL), plus hand-checked spas", "places": out}
+    (ROOT / "data/activities.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+    print(len(out), "places with activities written")
 
 
 if __name__ == "__main__":

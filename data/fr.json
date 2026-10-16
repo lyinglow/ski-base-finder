@@ -135,16 +135,16 @@
         "level": "awesome",
         "note": "Big steep terrain and famous off-piste: Les Grands Montets and the Vallée Blanche."
       },
+      "aka": [
+        "Mont Blanc",
+        "Mont-Blanc"
+      ],
       "runShare": {
         "green": 12,
         "blue": 27,
         "red": 30,
         "black": 31
-      },
-      "aka": [
-        "Mont Blanc",
-        "Mont-Blanc"
-      ]
+      }
     },
     {
       "id": "fr-les-houches",
@@ -8431,16 +8431,16 @@
         "level": "good",
         "note": "Steep runs and off-piste from the Pic Blanc, including the long Sarenne."
       },
+      "aka": [
+        "Huez",
+        "Alpe d'Huez"
+      ],
       "runShare": {
         "green": 25,
         "blue": 30,
         "red": 28,
         "black": 17
-      },
-      "aka": [
-        "Huez",
-        "Alpe d'Huez"
-      ]
+      }
     },
     {
       "id": "fr-vaujany",
@@ -8734,16 +8734,16 @@
         "level": "good",
         "note": "Good off-piste, with La Grave next door."
       },
+      "aka": [
+        "Deux Alpes",
+        "2 Alpes"
+      ],
       "runShare": {
         "green": 19,
         "blue": 59,
         "red": 15,
         "black": 7
-      },
-      "aka": [
-        "Deux Alpes",
-        "2 Alpes"
-      ]
+      }
     },
     {
       "id": "fr-la-grave",

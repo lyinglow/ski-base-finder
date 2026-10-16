@@ -4,9 +4,10 @@
 export async function loadData() {
   const index = await getJSON("data/index.json");
   const live = index.countries.filter((c) => c.status === "live");
-  const [files, bike] = await Promise.all([
+  const [files, bike, acts] = await Promise.all([
     Promise.all(live.map((c) => getJSON("data/" + c.file))),
     getJSON("data/bike.json").catch(() => ({ places: {}, towns: [] })), // summer riding is optional
+    getJSON("data/activities.json").catch(() => ({ places: {} })), // winter extras are optional
   ]);
 
   const locations = files.flatMap((f, i) =>
@@ -15,6 +16,7 @@ export async function loadData() {
   // Summer: each place gets its riding, and valley towns with no ski area join the list.
   for (const l of locations) if (bike.places[l.id]) l.bike = bike.places[l.id];
   locations.push(...bike.towns.filter((t) => live.some((c) => c.code === t.country)));
+  for (const l of locations) if (acts.places[l.id]) l.act = acts.places[l.id];
   const byId = new Map(locations.map((l) => [l.id, l]));
 
   // Reverse links: for each resort, the places that list it as reachable.

@@ -40,6 +40,7 @@ const state = {
   snowLayer: false,
   snowMonth: null, // month shown on the snow layer; null follows the trip
   vibes: new Set(), // empty means any vibe
+  acts: new Set(), // winter activities the place must have
   countries: new Set(), // empty means every country
   trip: { nights: 7, skiDays: 6, adults: 2, childAges: [], transport: "shuttle", lessons: "all", hire: true, week: null },
   skiAt: {},
@@ -336,7 +337,7 @@ function clearMap() {
   $("#compare").hidden = true;
   Object.assign(state, {
     show: "all", maxTime: 300, maxHop: 60, months: new Set(["jan", "feb", "mar"]),
-    prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(), countries: new Set(),
+    prices: new Set([1, 2, 3]), sizes: new Set(["small", "medium", "large", "huge"]), vibes: new Set(), acts: new Set(), countries: new Set(),
     family: false, carFree: false, snowSure: false, park: "any", parkNeeds: new Set(), levels: ["intermediate"],
     snowLayer: false, snowMonth: null, sort: "fit", origin: null,
     bike: "any", bikeNeeds: new Set(), bikeMonths: new Set(["jul", "aug"]),
@@ -611,6 +612,7 @@ function passes(l) {
   if (state.family && !l.family) return false;
   if (state.countries.size && !state.countries.has(l.country)) return false;
   if (state.vibes.size && !l.vibes.some((v) => state.vibes.has(v))) return false;
+  if (!summer() && state.acts.size && ![...state.acts].every((k) => hasAct(l, k))) return false;
   if (state.carFree && !l.carFree) return false;
   if (summer()) {
     if ((state.bike !== "any" || state.bikeNeeds.size) && !bikeMatch(l)) return false;
@@ -641,7 +643,7 @@ function sortKey(l) {
 function filterCount() {
   return [
     state.maxTime < 300, state.maxHop < 60, state.prices.size < 3,
-    state.vibes.size > 0, state.countries.size > 0, state.family, state.carFree, state.levels.includes("first"),
+    state.vibes.size > 0, !summer() && state.acts.size > 0, state.countries.size > 0, state.family, state.carFree, state.levels.includes("first"),
     ...(summer()
       ? [state.bike !== "any", state.bikeNeeds.size > 0]
       : [state.sizes.size < 4, state.snowSure, state.park !== "any", state.parkNeeds.size > 0]),
@@ -1042,6 +1044,51 @@ function runMix(r) {
     <p class="run-key">${cols.map((c) => `<span class="${c}">${names[c]} ${km[c]} km</span>`).join("")}</p>`;
 }
 
+/* ---------- winter activities ---------- */
+
+// Winter extras mapped near a place. Night skiing and touring belong to the ski area, so a valley town
+// shares those with the resorts it reaches; sledging, trails, walks, rinks and spas are about the place itself.
+const ACTS = {
+  night: ["Night skiing", "Lit runs for evening skiing"],
+  sled: ["Sledging", "A marked toboggan run"],
+  nordic: ["Cross-country skiing", "10 km or more of trails"],
+  hike: ["Winter walking", "Cleared winter paths"],
+  skitour: ["Ski touring", "Marked touring routes"],
+  skate: ["Ice skating", "An ice rink"],
+  spa: ["Spa and thermal baths", "A thermal bath or spa"],
+};
+const SHARED_ACTS = new Set(["night", "skitour"]);
+function hasAct(l, k) {
+  if (l.act?.[k]) return true;
+  return SHARED_ACTS.has(k) && l.type === "base" && reachable(l, model.byId).some((r) => r.place.act?.[k]);
+}
+
+function activitiesSection(l) {
+  const a = l.act || {};
+  const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+  const rows = [];
+  if (hasAct(l, "night")) {
+    rows.push(["Night skiing", a.night ? `${a.night} km of lit runs` : "At a resort you can reach"]);
+  }
+  if (a.nightSled) rows.push(["Night sledging", plural(a.nightSled, "lit run")]);
+  if (a.sled) rows.push(["Sledging", a.sled[1] >= 0.1 ? `${plural(a.sled[0], "run")}, ${a.sled[1]} km` : plural(a.sled[0], "run")]);
+  if (a.nordic) rows.push(["Cross-country skiing", `${a.nordic} km of trails`]);
+  if (a.hike) rows.push(["Winter walking", `${a.hike} km of paths`]);
+  if (hasAct(l, "skitour")) rows.push(["Ski touring", a.skitour ? plural(a.skitour, "marked route") : "At a resort you can reach"]);
+  if (a.fatbike) rows.push(["Fat biking", plural(a.fatbike, "snow trail")]);
+  if (a.skate) rows.push(["Ice skating", plural(a.skate, "rink")]);
+  if (a.sleigh) rows.push(["Horse sleigh rides", "Mapped nearby"]);
+  if (a.play) rows.push(["Children's snow play", plural(a.play, "play area")]);
+  if (a.spa) rows.push(["Spa and thermal baths", a.spa]);
+  if (!rows.length) return "";
+  const i = info("From OpenStreetMap, which volunteers map and which can be incomplete. Check opening days and hours with the resort, especially for night skiing.");
+  return `<section class="acts">
+      <span class="s-label">Things to do${i.btn}</span>
+      ${i.note}
+      <ul class="act-list">${rows.map(([t, d]) => `<li><b>${esc(t)}</b><span>${esc(d)}</span></li>`).join("")}</ul>
+    </section>`;
+}
+
 function tripTeaser(l) {
   const cost = costOf(l);
   const skiing = cost.ski.id !== l.id ? ` · ${summer() ? "riding" : "skiing"} ${esc(cost.ski.name)}` : "";
@@ -1220,7 +1267,8 @@ function renderDetail(l) {
         <span class="s-label">Ski school</span>
         <p>${schoolText(l)}</p>
       </section>
-      ${parkSection(l)}`;
+      ${parkSection(l)}
+      ${activitiesSection(l)}`;
     const s = snowOf(l);
     const si = info(`Rating estimated from altitude: skiing up to ${l.topAltitude} m, village at ${l.altitude} m.${l.snowNote ? ` ${l.snowNote}` : ""}`);
     body += `<section class="snow">
@@ -1898,6 +1946,14 @@ function bindControls() {
   // Vibe chips start all off: no choice means any vibe.
   $("#f-vibe").innerHTML = Object.entries(model.index.vibes).map(([key, v]) =>
     `<button type="button" id="f-vibe-${key}" data-v="${key}" aria-pressed="false" title="${esc(v.hint)}">${esc(v.label)}</button>`).join("");
+  $("#f-acts").innerHTML = Object.entries(ACTS).map(([key, [label, hint]]) =>
+    `<button type="button" data-v="${key}" aria-pressed="false" title="${esc(hint)}">${esc(label)}</button>`).join("");
+  $$("#f-acts button").forEach((b) => b.addEventListener("click", () => {
+    const v = b.dataset.v;
+    state.acts.has(v) ? state.acts.delete(v) : state.acts.add(v);
+    b.setAttribute("aria-pressed", state.acts.has(v));
+    applyFilters();
+  }));
   $$("#f-vibe button").forEach((b) => b.addEventListener("click", () => {
     const v = b.dataset.v;
     state.vibes.has(v) ? state.vibes.delete(v) : state.vibes.add(v);
@@ -2274,6 +2330,7 @@ function planOf() {
     prices: [...state.prices],
     sizes: [...state.sizes],
     vibes: [...state.vibes],
+    acts: [...state.acts],
     countries: [...state.countries],
     family: state.family,
     carFree: state.carFree,
@@ -2340,6 +2397,7 @@ function applyPlan(p, { mergeSaved = false } = {}) {
   const sizes = (p.sizes || []).filter((x) => ["small", "medium", "large", "huge"].includes(x));
   if (sizes.length) state.sizes = new Set(sizes);
   state.vibes = new Set((p.vibes || []).filter((v) => v in model.index.vibes));
+  state.acts = new Set((p.acts || []).filter((k) => k in ACTS));
   state.countries = new Set((p.countries || []).filter((c) => model.countries.some((k) => k.code === c)));
   state.family = p.family === true;
   state.carFree = p.carFree === true;
@@ -2454,6 +2512,7 @@ function syncControls() {
   pressed("#f-price button", (v) => state.prices.has(Number(v)));
   pressed("#f-size button", (v) => state.sizes.has(v));
   pressed("#f-vibe button", (v) => state.vibes.has(v));
+  pressed("#f-acts button", (v) => state.acts.has(v));
   pressed("#f-country button", (v) => state.countries.has(v));
   pressed("#show-seg button", (v) => v === state.show);
   $("#f-time").value = state.maxTime;
